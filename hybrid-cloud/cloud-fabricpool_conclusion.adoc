@@ -1,0 +1,15 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-fabricpool_conclusion.html 
+keywords: cloud, fabricpool, flexpod, conclusion 
+summary: クラウドへの移行は、組織ごと、ビジネスユニットごと、組織内のビジネスユニット間で異なります。 
+---
+= まとめ
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+クラウドへの移行は、組織ごと、ビジネスユニットごと、組織内のビジネスユニット間で異なります。一部は急速な導入を選択し、その他はより控えめなアプローチを採用しています。FabricPool は、組織の規模やクラウドの導入速度に関係なく、組織のクラウド戦略に適合し、 FlexPod インフラの効率性と拡張性のメリットをさらに実証します。

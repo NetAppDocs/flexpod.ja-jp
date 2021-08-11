@@ -1,0 +1,98 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-deploy_meditech_modules_and_components.html 
+keywords: meditech, modules, components, application, function, type 
+summary: MEDITECH アプリケーションは複数のモジュールとコンポーネントに対応しています。 
+---
+= MEDITECH のモジュールとコンポーネント
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+MEDITECH アプリケーションは複数のモジュールとコンポーネントに対応しています。次の表に、これらのモジュールでカバーされる機能を示します。これらのモジュールの設定と導入については、 MEDITECH のマニュアルを参照してください。追加情報
+
+|===
+| 機能 | を入力します 
+
+
+| 接続性  a| 
+* Web サーバ
+* ライブアプリケーションサーバー (Wi-Fi – Web 統合 )
+* アプリケーションサーバーのテスト (WI)
+* SAML 認証サーバ（ Wi-Fi ）
+* SAML プロキシサーバ（ Wi-Fi ）
+* データベースサーバ
+
+
+
+
+| インフラ  a| 
+* ファイルサーバ
+* バックグラウンドジョブクライアント
+* 接続サーバ
+* トランザクションサーバ
+
+
+
+
+| スキャンとアーカイブ  a| 
+* イメージサーバ
+
+
+
+
+| データリポジトリ  a| 
+* SQL サーバ
+
+
+
+
+| ビジネス分析と臨床分析  a| 
+* ライブインテリジェンスサーバ（ BCA ）
+* Test Intelligence Server （ BCA ；テストインテリジェンスサーバ）
+* データベースサーバ（ BCA ）
+
+
+
+
+| 家の心配  a| 
+* リモートサイトの解決策
+* 接続性
+* インフラ
+* 印刷
+* フィールドデバイス
+* スキャン中です
+* ホストされたサイトの要件
+* ファイアウォールの設定
+
+
+
+
+| サポート  a| 
+* バックグラウンドジョブクライアント（ CAL - クライアントアクセスライセンス）
+
+
+
+
+| ユーザーデバイス  a| 
+* タブレット
+* 固定デバイス
+
+
+
+
+| 印刷  a| 
+* ライブネットワークプリントサーバー（必須、既に存在する場合があります）
+* ネットワークプリントサーバーのテスト（必須、既に存在する場合があります）
+
+
+
+
+| サードパーティの要件  a| 
+* First Databank (FDB) MedKnowledge Framework v4.3
+
+
+|===

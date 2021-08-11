@@ -1,0 +1,51 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-deploy_deployment_and_configuration_overview.html 
+keywords: ontap, cisco, blade, ucs, rack, mount, server, cabling, diagram 
+summary: このセクションでは、 ONTAP または Cisco UCS ブレードサーバとラックマウントサーバを使用する環境での FlexPod の導入に関するストレージガイダンスについて説明します。 
+---
+= 概要
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+本ドキュメントでは、 FlexPod 導入に関するネットアップストレージのガイダンスに以下の内容を記載します。
+
+* ONTAP を使用する環境
+* Cisco UCS ブレードサーバとラックマウントサーバを使用する環境
+
+
+本ドキュメントの内容は以下のとおりです。
+
+* FlexPod データセンター環境の詳細な導入
++
+詳細については、を参照してください https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi65u1_n9fc.html["FlexPod データセンターと FC の Cisco Validated Design の 2 つの機能があります"^] （ CVD ）。
+
+* MEDITECH ソフトウェア環境、リファレンス・アーキテクチャ、統合に関するベスト・プラクティス・ガイダンスの概要
++
+詳細については、を参照してください https://fieldportal.netapp.com/content/310932["TR-4300i ：『 NetApp FAS and All-Flash Storage Systems for MEDITECH Environments Best Practices Guide 』"^] （ネットアップログインが必要です）。
+
+* パフォーマンス要件とサイジングガイダンスを定量化
++
+詳細については、を参照してください https://fieldportal.netapp.com/content/198446["TR-4190 ：『 NetApp Sizing Guidelines for MEDITECH Environments 』"^]。
+
+* バックアップとディザスタリカバリの要件を満たすためにネットアップの SnapMirror テクノロジを使用する。
+* ネットアップストレージの一般的な導入ガイダンス
+
+
+ここでは、インフラ導入のベストプラクティスを含む構成例を示し、インフラのハードウェア / ソフトウェアのさまざまなコンポーネントと使用可能なバージョンを示します。
+
+
+
+== ケーブル配線図
+
+次の図は、 MEDITECH 環境の 32Gb FC / 40GbE トポロジを示しています。
+
+image:ehr-meditech-deploy_image5.png["エラー：グラフィックイメージがありません"]
+
+必ずを使用してください http://mysupport.netapp.com/matrix/["Interoperability Matrix Tool （ IMT ）"^] ソフトウェアとファームウェアのすべてのバージョンがサポートされていることを検証します。セクションの表 link:ehr-meditech-deploy_meditech_modules_and_components.html["MEDITECH のモジュールとコンポーネント"] に、解決策テストで使用したインフラのハードウェアコンポーネントとソフトウェアコンポーネントを示します。
+
+link:ehr-meditech-deploy_base_infrastructure_configuration.html["次のステップ：基本インフラの構成。"]

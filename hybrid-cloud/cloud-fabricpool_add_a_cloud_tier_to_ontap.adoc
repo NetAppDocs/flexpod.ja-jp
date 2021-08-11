@@ -1,0 +1,65 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-fabricpool_add_a_cloud_tier_to_ontap.html 
+keywords: add, cloud, tier, ontap, aggregate, storage, fabricpool, flexpod, ontap, cli, oncommand, manager 
+summary: オブジェクトストレージをアグリゲートに接続する前に、オブジェクトストレージを追加し、 ONTAP で識別する必要があります。このタスクは、 OnCommand システムマネージャまたは ONTAP CLI のどちらかで実行できます。 
+---
+= ONTAP にクラウド階層を追加します
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+オブジェクトストレージをアグリゲートに接続する前に、オブジェクトストレージを追加し、 ONTAP で識別する必要があります。このタスクは、 OnCommand システムマネージャまたは ONTAP CLI のどちらかで実行できます。
+
+FabricPool は、クラウド階層として Amazon S3 、 IBM Object Cloud Storage 、および Microsoft Azure Blob Storage オブジェクトストアをサポートしています。
+
+次の情報が必要です。
+
+* サーバ名（ FQDN ）。例：「 3.amazonaws.com 」
+* アクセスキー ID
+* シークレットキー
+* コンテナ名（バケット名）
+
+
+
+
+== OnCommand システムマネージャ
+
+OnCommand System Manager を使用してクラウド階層を追加するには、次の手順を実行します。
+
+. OnCommand System Manager を起動します。
+. [ ストレージ ] をクリックします
+. アグリゲートとディスクをクリックします。
+. クラウド階層をクリックします。
+. オブジェクトストアプロバイダを選択します。
+. オブジェクトストアプロバイダの必要に応じてテキストフィールドを入力します。
++
+Container Name フィールドに、オブジェクトストアのバケット名またはコンテナ名を入力します。
+
+. アグリゲートを保存して接続をクリックします。
+
+
+image:cloud-fabricpool_image13.png["エラー：グラフィックイメージがありません"]
+
+
+
+== ONTAP CLI
+
+ONTAP CLI を使用してクラウド階層を追加するには、次のコマンドを入力します。
+
+....
+object-store config create
+-object-store-name <name>
+-provider-type <AWS>
+-port <443/8082> (AWS)
+-server <name>
+-container-name <bucket-name>
+-access-key <string>
+-secret-password <string>
+-ssl-enabled true
+-ipspace default
+....
+link:cloud-fabricpool_attach_a_cloud_tier_to_an_ontap_aggregate.html["次：クラウド階層を ONTAP アグリゲートに接続します。"]

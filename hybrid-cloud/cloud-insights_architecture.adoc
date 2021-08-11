@@ -1,0 +1,132 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-insights_architecture.html 
+keywords: architecture, solution, technology, diagram, hardware, requirements, case, details, software, cloud, insights 
+summary: このセクションでは、 Cloud Insights で監視される NetApp AFF A800 システムを含む、 FlexPod データセンター統合インフラのアーキテクチャについて説明します。 
+---
+= アーキテクチャ
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+このセクションでは、 Cloud Insights で監視される NetApp AFF A800 システムを含む、 FlexPod データセンター統合インフラのアーキテクチャについて説明します。
+
+
+
+== 解決策テクノロジ
+
+FlexPod Datacenter 解決策には、次に示す最小コンポーネントが含まれており、可用性が高く、拡張性に優れ、検証済みで、サポートされている統合インフラ環境を構築できます。
+
+* NetApp ONTAP ストレージノード × 2 （ HA ペア × 1 ）
+* Cisco Nexus データセンターネットワークスイッチ × 2
+* Cisco MDS ファブリックスイッチ × 2 （ FC 環境ではオプション）
+* Cisco UCS ファブリックインターコネクト × 2
+* 1 台の Cisco UCS ブレードシャーシに 2 台の Cisco UCS B シリーズブレードサーバを搭載
+
+
+または
+
+* Cisco UCS C シリーズラックマウントサーバ × 2
+
+
+Cloud Insights でデータを収集するには、 FlexPod データセンター環境内、またはデータを収集するコンポーネントにアクセスできる場所に、仮想マシンまたは物理マシンとして Acquisition Unit を導入する必要があります。Acquisition Unit ソフトウェアは、サポートされている複数の Windows または Linux オペレーティングシステムを実行するシステムにインストールできます。次の表に、このソフトウェアの解決策コンポーネントを示します。
+
+|===
+| オペレーティングシステム | バージョン 
+
+
+| Microsoft Windows の場合 | 10. 
+
+
+| Microsoft Windows Server の場合 | 2012 、 2012 R2 、 2016 、 2019 
+
+
+| Red Hat Enterprise Linux の場合 | 7.2 – 7.6 
+
+
+| CentOS の場合 | 7.2 – 7.6 
+
+
+| Oracle Enterprise Linux の場合 | 7.5 
+
+
+| Debian | 9. 
+
+
+| Ubuntu | 18.04 LTS 
+|===
+
+
+== アーキテクチャ図
+
+次の図に、解決策のアーキテクチャを示します。
+
+image:cloud-insights_image2.png["エラー：グラフィックイメージがありません"]
+
+
+
+== ハードウェア要件
+
+次の表に、解決策の実装に必要なハードウェアコンポーネントを示します。解決策の特定の実装で使用されるハードウェアコンポーネントは、お客様の要件に応じて異なる場合があります。
+
+|===
+| ハードウェア | 数量 
+
+
+| Cisco Nexus 9336C-FX2 | 2. 
+
+
+| Cisco UCS 6454 ファブリックインターコネクト | 2. 
+
+
+| Cisco UCS 5108 ブレードシャーシ | 1. 
+
+
+| Cisco UCS 2408 ファブリックエクステンダ | 2. 
+
+
+| Cisco UCS B200 M5 ブレード | 2. 
+
+
+| NetApp AFF A800 | 2. 
+|===
+
+
+== ソフトウェア要件
+
+次の表に、解決策の実装に必要なソフトウェアコンポーネントを示します。解決策の特定の実装で使用されるソフトウェアコンポーネントは、お客様の要件に応じて異なる場合があります。
+
+|===
+| ソフトウェア | バージョン 
+
+
+| Cisco Nexus ファームウェア | 9.3 （ 5 ） 
+
+
+| Cisco UCS のバージョン | 4.1 （ 2a ） 
+
+
+| NetApp ONTAP のバージョン | 9.7 
+
+
+| NetApp Cloud Insights のバージョン | 2020 年 9 月、基本 
+
+
+| Red Hat Enterprise Linux の場合 | 7.6 
+
+
+| VMware vSphere の場合 | 6.7U3 
+|===
+
+
+== ユースケースの詳細
+
+この解決策環境のユースケースは次のとおりです。
+
+* NetApp Active IQ デジタルアドバイザに提供されたデータを基に環境を分析し、ストレージシステムのリスクとストレージ最適化に関する推奨事項を評価します。
+* FlexPod Datacenter 解決策に導入された ONTAP ストレージ・システムの問題をトラブルシューティングするには、システム統計情報をリアルタイムで調べます。
+* ONTAP データセンター統合インフラに導入された FlexPod ストレージシステムの特定の関心ポイントを簡単に監視できるように、カスタマイズしたダッシュボードを生成できます。
+

@@ -1,0 +1,14 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-epic-sizing_reference_architecture.html 
+keywords:  
+summary:  
+---
+= リファレンスアーキテクチャ
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+

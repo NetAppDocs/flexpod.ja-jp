@@ -1,0 +1,29 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-fabricpool_where_to_find_additional_information.html 
+keywords: additional, information, flexpod, cloud, fabricpool 
+summary: このドキュメントに記載されている情報の詳細については、以下のドキュメントや Web サイトを参照してください。 
+---
+= 追加情報の参照先
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+このドキュメントに記載されている情報の詳細については、以下のドキュメントや Web サイトを参照してください。
+
+* FabricPool のベストプラクティス
++
+http://www.netapp.com/us/media/tr-4598.pdf["www.netapp.com/us/media/tr-4598.pdf"^]
+
+* ネットアップの製品マニュアル
++
+https://docs.netapp.com["https://docs.netapp.com"^]
+
+* TR-4036 ：『 FlexPod データセンター技術仕様』
++
+https://www.netapp.com/us/media/tr-4036.pdf["https://www.netapp.com/us/media/tr-4036.pdf"^]
+
+

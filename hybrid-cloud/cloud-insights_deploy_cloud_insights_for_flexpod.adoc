@@ -1,0 +1,190 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-insights_deploy_cloud_insights_for_flexpod.html 
+keywords: cloud, insights, service, vmware, vm, rhel, red, hat, enterprise, acquisition, unit, flexpod, datacenter 
+summary: Cloud Insights for FlexPod を導入するには、次のタスクを完了する必要があります。 
+---
+= Cloud Insights for FlexPod を導入します
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+解決策を導入するには、次のタスクを実行する必要があります。
+
+. Cloud Insights サービスに登録します
+. Acquisition Unit として設定する VMware 仮想マシン（ VM ）を作成します
+. Red Hat Enterprise Linux （ RHEL ）ホストをインストールします
+. Cloud Insights ポータルで Acquisition Unit インスタンスを作成し、ソフトウェアをインストールします
+. FlexPod データセンターから Cloud Insights に監視対象のストレージシステムを追加します。
+
+
+
+
+== NetApp Cloud Insights サービスに登録します
+
+NetApp Cloud Insights サービスに登録するには、次の手順を実行します。
+
+. に進みます https://cloud.netapp.com/cloud-insights["https://cloud.netapp.com/cloud-insights"^]
+. 画面の中央にあるボタンをクリックして 14 日間の無償トライアルを開始するか、右上にあるリンクをクリックして、既存の NetApp Cloud Central アカウントに登録またはログインします。
+
+
+
+
+== Acquisition Unit として設定する VMware 仮想マシンを作成する
+
+VMware VM を作成して Acquisition Unit として設定するには、次の手順を実行します。
+
+. Web ブラウザを起動して VMware vSphere にログインし、 VM をホストするクラスタを選択します。
+. そのクラスタを右クリックし、メニューから [ 仮想マシンの作成 ] を選択します。
++
+image:cloud-insights_image3.png["エラー：グラフィックイメージがありません"]
+
+. 新規仮想マシンウィザードで、次へをクリックします。
+. VM の名前を指定し、インストール先のデータセンターを選択して、 Next （次へ）をクリックします。
+. 次のページで、 VM のインストール先となるクラスタ、ノード、またはリソースグループを選択し、 [ 次へ ] をクリックします。
+. VM をホストする共有データストアを選択し、 Next （次へ）をクリックします。
+. VM の互換性モードが ESXi 6.7 以降に設定されていることを確認し '[ 次へ ] をクリックします
+. [Guest OS Family Linux, Guest OS Version: Red Hat Enterprise Linux 7 (64 bit)] を選択します。
++
+image:cloud-insights_image4.png["エラー：グラフィックイメージがありません"]
+
+. 次のページでは、 VM のハードウェアリソースをカスタマイズできます。Cloud Insights Acquisition Unit には、次のリソースが必要です。リソースを選択したら、 [ 次へ ] をクリックします。
++
+.. CPU × 2
+.. 8GB の RAM
+.. 100GB のハードディスクスペースが必要です
+.. ポート 443 で SSL 接続を介して FlexPod データセンターおよび Cloud Insights サーバのリソースにアクセスできるネットワーク。
+.. 選択した Linux ディストリビューション（ Red Hat Enterprise Linux ）の ISO イメージをブート元として指定します。
++
+image:cloud-insights_image5.png["エラー：グラフィックイメージがありません"]
+
+
+
+. VM を作成するには、 [Ready to Complete] ページで設定を確認し、 [Finish] をクリックします。
+
+
+
+
+== Red Hat Enterprise Linux をインストールします
+
+Red Hat Enterprise Linux をインストールするには、次の手順を実行します。
+
+. VM の電源をオンにし、ウィンドウをクリックして仮想コンソールを起動し、 Red Hat Enterprise Linux 7.6 をインストールするオプションを選択します。
++
+image:cloud-insights_image6.png["エラー：グラフィックイメージがありません"]
+
+. 使用する言語を選択し、 [ 続行 ] をクリックします。
++
+次のページはインストールの概要です。これらのオプションのほとんどはデフォルト設定のままでかまいません。
+
+. 次のオプションを実行して、ストレージレイアウトをカスタマイズする必要があります。
++
+.. サーバのパーティションをカスタマイズするには、インストール先をクリックします。
+.. VMware 仮想ディスク 100GiB がブラックチェックマークで選択されていることを確認し、 [I will Configure Partitioning （パーティションの設定） ] オプションボタンを選択します。
++
+image:cloud-insights_image7.png["エラー：グラフィックイメージがありません"]
+
+.. 完了をクリックします。
++
+新しいメニューが表示され、パーティションテーブルをカスタマイズできます。それぞれ 25 GB を '/opt/NetApp' と '/var/log/netapp' 専用にします残りのストレージをシステムに自動的に割り当てることができます。
+
++
+image:cloud-insights_image8.png["エラー：グラフィックイメージがありません"]
+
+.. [ インストールの概要 ] に戻るには、 [ 完了 ] をクリックします。
+
+
+. [ ネットワークとホスト名 ] をクリックします。
++
+.. サーバのホスト名を入力します。
+.. スライダボタンをクリックして、ネットワークアダプタの電源をオンにします。ネットワークに Dynamic Host Configuration Protocol （ DHCP ；動的ホスト構成プロトコル）が設定されている場合は、 IP アドレスが割り当てられます。表示されない場合は、 Configure （設定）をクリックし、アドレスを手動で割り当てます。
++
+image:cloud-insights_image9.png["エラー：グラフィックイメージがありません"]
+
+.. 。[ 完了 ] をクリックして、 [ インストールの概要 ] に戻ります。
+
+
+. [ インストールの概要 ] ページで、 [ インストールの開始 ] をクリックします。
+. インストールの進行状況ページで、 root パスワードを設定するか、ローカルユーザーアカウントを作成できます。インストールが完了したら、 Reboot （再起動）をクリックしてサーバを再起動します。
++
+image:cloud-insights_image10.png["エラー：グラフィックイメージがありません"]
+
+. システムが再起動したら、サーバにログインし、 Red Hat Subscription Manager に登録します。
++
+image:cloud-insights_image11.png["エラー：グラフィックイメージがありません"]
+
+. Red Hat Enterprise Linux のサブスクリプションを追加します。
++
+image:cloud-insights_image12.png["エラー：グラフィックイメージがありません"]
+
+
+
+
+
+== Cloud Insights ポータルで Acquisition Unit インスタンスを作成し、ソフトウェアをインストールする
+
+Cloud Insights ポータルで Acquisition Unit インスタンスを作成してソフトウェアをインストールするには、次の手順を実行します。
+
+. Cloud Insights のホームページで、左側のメインメニューの Admin エントリにカーソルを合わせ、メニューから Data Collectors を選択します。
++
+image:cloud-insights_image13.png["エラー：グラフィックイメージがありません"]
+
+. データコレクタページの上部中央で、 Acquisition Unit のリンクをクリックします。
++
+image:cloud-insights_image14.png["エラー：グラフィックイメージがありません"]
+
+. 新しい Acquisition Unit を作成するには、右側のボタンをクリックします。
++
+image:cloud-insights_image15.png["エラー：グラフィックイメージがありません"]
+
+. Acquisition Unit のホストとして使用するオペレーティングシステムを選択し、 Web ページからインストールスクリプトをコピーする手順に従います。
++
+この例では、 Linux サーバを使用しています。これは、スニペットとトークンを提供し、ホストの CLI に貼り付けます。Web ページは Acquisition Unit への接続を待機します。
+
++
+image:cloud-insights_image16.png["エラー：グラフィックイメージがありません"]
+
+. プロビジョニングされた Red Hat Enterprise Linux マシンの CLI にスニペットを貼り付け、 Enter キーを押します。
++
+image:cloud-insights_image17.png["エラー：グラフィックイメージがありません"]
+
++
+インストールプログラムは、圧縮パッケージをダウンロードしてインストールを開始します。インストールが完了すると、 Acquisition Unit が NetApp Cloud Insights に登録されたことを示すメッセージが表示されます。
+
++
+image:cloud-insights_image18.png["エラー：グラフィックイメージがありません"]
+
+
+
+
+
+== FlexPod データセンターから Cloud Insights に監視対象のストレージシステムを追加します
+
+FlexPod 環境から ONTAP ストレージシステムを追加するには、次の手順を実行します。
+
+. Cloud Insights ポータルの Acquisition Unit ページに戻り、新たに登録されたユニットを探します。ユニットのサマリーを表示するには、ユニットをクリックします。
++
+image:cloud-insights_image19.png["エラー：グラフィックイメージがありません"]
+
+. ストレージシステムを追加するウィザードを開始するには、概要ページでデータコレクタを作成するボタンをクリックします。最初のページには、データの収集元となるすべてのシステムが表示されます。検索バーを使用して ONTAP を検索します。
++
+image:cloud-insights_image20.png["エラー：グラフィックイメージがありません"]
+
+. ONTAP データ管理ソフトウェアを選択します。
++
+導入環境の名前を指定し、使用する Acquisition Unit を選択するためのページが表示されます。ONTAP システムの接続情報とクレデンシャルを指定し、接続をテストして確認できます。
+
++
+image:cloud-insights_image21.png["エラー：グラフィックイメージがありません"]
+
+. [ セットアップの完了 ] をクリックします
++
+ポータルが Data Collectors ページに戻り、 Data Collector は最初のポーリングを開始して、 FlexPod データセンターの ONTAP ストレージシステムからデータを収集します。
+
++
+image:cloud-insights_image22.png["エラー：グラフィックイメージがありません"]
+
+

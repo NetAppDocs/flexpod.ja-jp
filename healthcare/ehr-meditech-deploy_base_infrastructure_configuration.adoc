@@ -1,0 +1,63 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-deploy_base_infrastructure_configuration.html 
+keywords: base, infrastructure, configuration, network, storage, connections, software, host 
+summary: インフラを設定するには、次のネットワーク接続、ストレージ接続、およびソフトウェアが存在している必要があります。 
+---
+= ベースインフラの構成
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+
+
+== ネットワーク接続
+
+インフラを設定する前に、次のネットワーク接続を確立しておく必要があります。
+
+* ポートチャネルと仮想ポートチャネル（ vPC ）を使用するリンクアグリゲーションが全体的に使用され、帯域幅と高可用性を向上させる設計が可能になります。
++
+** vPC は、 Cisco FI スイッチと Cisco Nexus スイッチの間で使用されます。
+** 各サーバには、ユニファイドファブリックへの冗長接続を持つ仮想ネットワークインターフェイスカード（ vNIC ）があります。NIC フェールオーバーは、 FI 間で冗長性を確保するために使用されます。
+** 各サーバには仮想 Host Bus Adapter （ vHBA ）があり、ユニファイドファブリックに冗長接続されます。
+
+
+* Cisco UCS FI は推奨されるエンドホストモードで設定され、アップリンクスイッチへの vNIC のダイナミックなピン接続を提供します。
+
+
+
+
+== ストレージ接続
+
+インフラを設定する前に、次のストレージ接続を確立しておく必要があります。
+
+* ストレージポートインターフェイスグループ（ ifgroups 、 vPC ）
+* スイッチ N9K-A への 10Gb リンク
+* スイッチ N9K-B への 10Gb リンク
+* インバンド管理（アクティブ / パッシブボンド）：
++
+** 管理スイッチ N9K-A への 1GB リンク
+** 管理スイッチ N9K-B への 1GB リンク
+
+
+* Cisco MDS スイッチを介した 32Gb FC のエンドツーエンド接続、単一イニシエータのゾーニング構成
+* FC SAN は、ステートレスコンピューティングを完全に実現するためにブートします。サーバは、 AFF ストレージクラスタでホストされているブートボリューム内の LUN からブートされます
+* MEDITECH のワークロードはすべて FC LUN にホストされており、ストレージコントローラノードに分散されています
+
+
+
+
+== ホストソフトウェア
+
+次のソフトウェアをインストールする必要があります。
+
+* Cisco UCS ブレードに ESXi をインストールします
+* VMware vCenter がインストールおよび設定されている（すべてのホストが vCenter に登録されている）
+* VSC をインストールして VMware vCenter に登録
+* ネットアップクラスタが設定されました
+
+
+link:ehr-meditech-deploy_cisco_ucs_blade_server_and_switch_configuration.html["次に、 Cisco UCS ブレードサーバとスイッチの設定を行います。"]

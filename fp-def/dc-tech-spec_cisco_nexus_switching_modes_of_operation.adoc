@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: fp-def/dc-tech-spec_cisco_nexus_switching_modes_of_operation.html 
+keywords: cisco, nexus, switching, modes, operation, datacenter, techincal, specifications 
+summary: 特定の FlexPod 環境のスイッチングコンポーネントとして、さまざまな Cisco Nexus 製品を使用できます。これらのオプションのほとんどは、従来の Cisco Nexus OS または NX-OS ソフトウェアを利用しています。Cisco Nexus ファミリーのスイッチは、製品ライン内でさまざまな機能を提供します。これらの機能については、このドキュメントで後述します。 
+---
+= Cisco Nexus スイッチング動作モード
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+特定の FlexPod 環境のスイッチングコンポーネントとして、さまざまな Cisco Nexus 製品を使用できます。これらのオプションのほとんどは、従来の Cisco Nexus OS または NX-OS ソフトウェアを利用しています。Cisco Nexus ファミリーのスイッチは、製品ライン内でさまざまな機能を提供します。これらの機能については、このドキュメントで後述します。
+
+シスコが提供する Software-Defined ネットワーク分野の製品は、 Application Centric Infrastructure （ ACI ）と呼ばれています。ACI モードをサポートする Cisco Nexus 製品ラインは、ファブリックモードとも呼ばれ、 Cisco Nexus 9300 シリーズです。これらのスイッチは、 NX-OS またはスタンドアロンモードにも導入できます。
+
+Cisco ACI は、特定のアプリケーションの要件に重点を置いたデータセンター導入をターゲットとしています。アプリケーションは、ホストまたは仮想マシン（ VM ）からネットワーク経由でストレージに接続できる一連のプロファイルと契約を通じてインスタンス化されます。
+
+FlexPod は、 Cisco Nexus スイッチの両方の動作モードで検証されます。ACI モードと NX-OS モードの詳細については、次の Cisco のページを参照してください。
+
+* http://www.cisco.com/c/en/us/solutions/data-center-virtualization/application-centric-infrastructure/index.html["Cisco Application Centric Infrastructure の場合"^]
+* http://www.cisco.com/c/en/us/products/ios-nx-os-software/nx-os-software/index.html["Cisco NX-OS ソフトウェア"^]
+

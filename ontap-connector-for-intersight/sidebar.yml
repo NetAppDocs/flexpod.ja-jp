@@ -1,0 +1,19 @@
+---
+section: ontap-connector-for-intersight
+title: Cisco Intersight と NetApp ONTAP ストレージクイックスタートガイド
+entries:
+- title: はじめに
+  url: "/ontap-connector-for-intersight/index.html"
+  type: solutions
+- title: 要件
+  url: "/ontap-connector-for-intersight/ci-qsg_requirements.html"
+- title: 作業を開始する前に
+  url: "/ontap-connector-for-intersight/ci-qsg_before_you_begin.html"
+- title: クレームの目標
+  url: "/ontap-connector-for-intersight/ci-qsg_claim_targets.html"
+- title: Cisco Intersight からネットアップストレージを監視
+  url: "/ontap-connector-for-intersight/ci-qsg_monitor_netapp_storage_from_cisco_intersight.html"
+- title: ユースケース
+  url: "/ontap-connector-for-intersight/ci-qsg_use_cases.html"
+- title: 参考資料
+  url: "/ontap-connector-for-intersight/ci-qsg_references.html"

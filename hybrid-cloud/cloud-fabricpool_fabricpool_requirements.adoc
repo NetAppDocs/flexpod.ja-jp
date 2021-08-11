@@ -1,0 +1,135 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-fabricpool_fabricpool_requirements.html 
+keywords: cloud, fabricpool, flexpod, requirements, platforms, intercluster, lif, connectivity, volume, licensing, object, store, profiler 
+summary: FabricPool を使用するには、 ONTAP 9.2 以降と、このセクションに記載されたプラットフォームのいずれかで SSD アグリゲートを使用する必要があります。 
+---
+= FabricPool の要件
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+FabricPool を使用するには、 ONTAP 9.2 以降と、このセクションに記載されたプラットフォームのいずれかで SSD アグリゲートを使用する必要があります。追加の FabricPool 要件は、接続するクラウド階層によって異なります。NetApp AFF C190 など、容量が比較的小さい、固定レベルの AFF プラットフォームでは、アクセス頻度の低いデータをクラウド階層に移動する場合に FabricPool を使用すると効果的です。
+
+
+
+== プラットフォーム
+
+FabricPool は、次のプラットフォームでサポートされます。
+
+* NetApp AFF
++
+** A800
+** A700S 、 A700
+** A320 、 A300
+** A220 、 A200
+** C190
+** AFF8080 、 AFF8060 、および AFF8040
+
+
+* NetApp FAS
++
+** FAS9000
+** FAS8200
+** FAS8080 、 FAS8060 、および FAS8040
+** FAS2750 、 FAS2720
+** FAS2650 、 FAS2620
+
+
+
+
+
+NOTE: FabricPool を使用できるのは、 FAS プラットフォーム上の SSD アグリゲートのみです。
+
+* クラウド階層
++
+** Alibaba Cloud Object Storage Service （標準、低頻度アクセス）
+** Amazon S3 （標準、標準 -IA 、 1 ゾーン -IA 、インテリジェント階層化）
+** Amazon Commercial クラウドサービス（ C2S ）
+** Google Cloud Storage （マルチリージョン、リージョナル、ニアライン、コールドライン）
+** IBM Cloud Object Storage （ Standard 、 Vault 、 Cold Vault 、 Flex ）
+** Microsoft Azure Blob Storage （ホットおよびクール）
+
+
+
+
+
+
+== クラスタ間 LIFs
+
+FabricPool を使用するクラスタのハイアベイラビリティ（ HA ）ペアでは、クラウド階層と通信するために 2 つのクラスタ間 LIF が必要です。ネットアップでは、追加の HA ペアでクラスタ間 LIF を作成して、これらのノードのアグリゲートにもクラウド階層をシームレスに接続することを推奨しています。
+
+ONTAP が AWS S3 オブジェクトストアとの接続に使用する LIF は、 10Gbps ポート上に配置する必要があります。
+
+ルーティングが異なるノードで複数の Intercluser LIF を使用する場合は、異なる IPspace に配置することを推奨します。FabricPool では設定時に複数の IPspace から選択できますが、 IPspace 内の特定のクラスタ間 LIF を選択することはできません。
+
+
+NOTE: クラスタ間 LIF を無効化または削除すると、クラウド階層への通信が中断されます。
+
+
+
+== 接続性
+
+FabricPool 読み取りレイテンシは、クラウド階層への接続機能です。次の図に示すように、 10Gbps ポートを使用するクラスタ間 LIF は、十分なパフォーマンスを提供します。特定のネットワーク環境のレイテンシとスループットを検証して、 FabricPool のパフォーマンスに与える影響を判断することを推奨します。
+
+
+NOTE: 低パフォーマンスの環境で FabricPool を使用する場合は、クライアントアプリケーションの最小パフォーマンス要件を引き続き満たし、それに応じてリカバリ時間の目標を調整する必要があります。
+
+image:cloud-fabricpool_image6.png["エラー：グラフィックイメージがありません"]
+
+
+
+=== オブジェクトストアプロファイラ
+
+次に示すオブジェクトストアプロファイラの例は ONTAP の CLI から実行でき、 FabricPool アグリゲートに接続する前にオブジェクトストアのレイテンシとスループットのパフォーマンスをテストします。
+
+
+NOTE: クラウド階層は、オブジェクトストレージプロファイラで使用する前に ONTAP に追加する必要があります。
+
+次のコマンドを使用して、 ONTAP の advanced 権限モードからオブジェクトストアプロファイラを開始します。
+
+....
+storage aggregate object-store profiler start -object-store-name <name> -node <name>
+....
+結果を表示するには、次のコマンドを実行します。
+
+....
+storage aggregate object-store profiler show
+....
+クラウド階層では、パフォーマンス階層のようなパフォーマンスは提供されません（通常は毎秒 GB ）。FabricPool アグリゲートは、 SATA のようなパフォーマンスを簡単に提供できますが、 SATA のようなパフォーマンスを必要としない階層化ソリューションでは、 10 秒という高いレイテンシと低いスループットも許容できます。
+
+image:cloud-fabricpool_image7.png["エラー：グラフィックイメージがありません"]
+
+
+
+== 個のボリューム
+
+ストレージシンプロビジョニングは、 FlexPod 仮想インフラ管理者向けの標準的な手法です。NetApp Virtual Storage Console （ VSC ）では、 VMware データストアのストレージボリュームを、スペースギャランティ（シンプロビジョニング）なしでプロビジョニングできます。また、ネットアップのベストプラクティスに従って、ストレージ効率の設定が最適化されます。VSC を使用して VMware データストアを作成する場合は、データストアボリュームにスペースギャランティを割り当てる必要がないため追加の操作は必要ありません。
+
+
+NOTE: FabricPool は、「なし」以外のスペースギャランティを使用するボリュームを含むアグリゲート（「ボリューム」など）にクラウド階層を接続できません。
+
+....
+volume modify -space-guarantee none
+....
+'pace guarantee none' パラメータを設定すると ' ボリュームのシン・プロビジョニングが行われますこのギャランティタイプのボリュームで使用されるスペースの量は、初期ボリュームサイズで決定されるのではなく、データが追加されるにつれて増加します。このアプローチは FabricPool にとって不可欠です。ボリュームがホットになりパフォーマンス階層に戻されるクラウド階層データをサポートする必要があるためです。
+
+
+
+== ライセンス
+
+FabricPool では、サードパーティのオブジェクトストレージプロバイダ（ Amazon S3 など）を AFF および FAS ハイブリッドフラッシュシステムのクラウド階層として接続する場合、容量ベースのライセンスが必要です。
+
+FabricPool ライセンスには恒久ライセンスとタームベースライセンス（ 1 年または 3 年）があります。
+
+クラウド階層に格納されているデータの量（使用容量）がライセンス容量に達すると、クラウド階層への階層化が停止します。「すべて」の階層化ポリシーを使用したボリュームへの SnapMirror コピーを含む追加データは、ライセンス容量が増加するまで階層化できません。階層化は停止しますが、クラウド階層のデータには引き続きアクセスできます。ライセンスされた容量が増えるまで、追加のコールドデータは SSD に残ります。
+
+新しい ONTAP 9.5 以降のクラスタを購入すると、無料の 10TB 容量のタームベースの FabricPool ライセンスが付属しますが、追加のサポートコストが適用される場合があります。FabricPool ライセンス（既存のライセンスの追加容量を含む）は、 1TB 単位で購入できます。
+
+FabricPool ライセンスは、 FabricPool アグリゲートを含まないクラスタからのみ削除できます。
+
+
+NOTE: FabricPool ライセンスはクラスタ全体が対象です。ライセンスの購入時に UUID を用意しておく必要があります（ cluster identify show ）。追加のライセンス情報については、を参照してください https://kb.netapp.com/support/s/article/ka21A0000008qb3QAA/ONTAP-FabricPool-FP-Licensing-Overview["ネットアップナレッジベース"^]。

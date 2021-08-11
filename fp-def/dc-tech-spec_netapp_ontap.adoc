@@ -1,0 +1,17 @@
+---
+sidebar: sidebar 
+permalink: fp-def/dc-tech-spec_netapp_ontap.html 
+keywords: ontap, fas, aff, system, datacenter, techincal, specifications, flexpod, software 
+summary: NetApp ONTAP ソフトウェアは、すべての NetApp FAS システムまたは AFF システムにインストールされます。FlexPod は、 ONTAP ソフトウェアとの検証済みで、ノンストップオペレーション、無停止アップグレード、即応性に優れたデータインフラを実現する、拡張性に優れたストレージアーキテクチャを提供します。 
+---
+= NetApp ONTAP
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+NetApp ONTAP ソフトウェアは、すべての NetApp FAS システムまたは AFF システムにインストールされます。FlexPod は、 ONTAP ソフトウェアとの検証済みで、ノンストップオペレーション、無停止アップグレード、即応性に優れたデータインフラを実現する、拡張性に優れたストレージアーキテクチャを提供します。
+
+ONTAP の詳細については、を参照してください http://www.netapp.com/us/products/data-management-software/ontap.aspx["ONTAP データ管理ソフトウェア"^] 製品ページ。

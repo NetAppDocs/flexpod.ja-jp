@@ -1,0 +1,86 @@
+---
+sidebar: sidebar 
+permalink: fp-def/fp-express-tech-spec_legacy_equipment.html 
+keywords: legacy, equipment, legacy, storage, controller, fas, disk, shelf 
+summary: このセクションでは、ネットアップの従来型ディスクシェルフ、 FAS コントローラ、およびストレージコントローラのオプションを紹介します。 
+---
+= レガシー機器
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+ネットアップの従来型ストレージコントローラオプションを次の表に示します。
+
+|===
+| ストレージコントローラ | FAS パーツ番号 | 技術仕様 
+
+
+| FAS2520 | 選択した個々のオプションに基づきます | http://www.netapp.com/us/products/storage-systems/fas2500/fas2500-tech-specs.aspx[] 
+
+
+| FAS2552 | 選択した個々のオプションに基づきます | http://www.netapp.com/us/products/storage-systems/fas2500/fas2500-tech-specs.aspx[] 
+
+
+| FAS2554 のこと | 選択した個々のオプションに基づきます | http://www.netapp.com/us/products/storage-systems/fas2500/fas2500-tech-specs.aspx[] 
+
+
+| FAS8020 | 選択した個々のオプションに基づきます | http://www.netapp.com/us/products/storage-systems/fas8000/fas8000-tech-specs.aspx[] 
+|===
+次の表に、 NetApp FAS で使用されている従来型のディスクシェルフオプションを示します。
+
+|===
+| ディスクシェルフ | パーツ番号 | 技術仕様 
+
+
+| DE1600 | E-X5682A-DM-0E-R6-C | link:http://www.netapp.com/us/products/storage-systems/e2800/e2800-tech-specs.aspx["NetApp Hardware Universe のディスクシェルフ技術仕様サポートされているドライブ"] 
+
+
+| DE5600 | E-X4041A-12-R6 | link:http://www.netapp.com/us/products/storage-systems/e2800/e2800-tech-specs.aspx["NetApp Hardware Universe のディスクシェルフ技術仕様サポートされているドライブ"] 
+
+
+| DE6600 | X-48564-00-R6 | link:http://www.netapp.com/us/products/storage-systems/e2800/e2800-tech-specs.aspx["NetApp Hardware Universe のディスクシェルフ技術仕様サポートされているドライブ"] 
+|===
+
+
+== ネットアップの従来型 FAS コントローラ
+
+次の表に、ネットアップの従来の FAS コントローラオプションを示します。
+
+|===
+| 現在のコンポーネント | FAS2554 のこと | FAS2552 | FAS2520 
+
+
+| 設定 | 4U シャーシに 2 台のコントローラを搭載します | 2U シャーシに 2 台のコントローラを搭載できます | 2U シャーシに 2 台のコントローラを搭載できます 
+
+
+| 最大物理容量 | 576TB | 509TB になります | 336TB 
+
+
+| 内蔵ドライブ | 24 | 24 | 12. 
+
+
+| 最大ドライブ数（内蔵および外付け） | 144 | 144 | 84 
+
+
+| 最大ボリュームサイズ 3+| 60TB 
+
+
+| 最大アグリゲートサイズ 3+| 120TB 
+
+
+| LUN の最大数 3+| コントローラあたり 2 、 048 
+
+
+| サポートするストレージネットワークプロトコル 2+| iSCSI 、 FC 、 FCoE 、 NFS 、 CIFS | iSCSI 、 NFS 、および CIFS 
+
+
+| NetApp FlexVol の最大ボリューム数 3+| コントローラあたり 1 、 000 
+
+
+| NetApp Snapshot コピーの最大数 3+| コントローラあたり 25 、 000 
+|===
+
+NOTE: その他の NetApp FAS モデルについては、を参照してください https://hwu.netapp.com/Controller/Index?platformTypeId=2032["FAS モデルセクション"^] を参照してください。 Hardware Universe

@@ -1,0 +1,50 @@
+---
+sidebar: sidebar 
+permalink: fp-def/fp-express-tech-spec_connectivity_requirements.html 
+keywords: connectivity, requirements, flexpod, express, aff, fas, e, series 
+summary: ここでは、 FlexPod Express の各バージョンの接続要件について説明します。 
+---
+= 接続要件
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+ここでは、 FlexPod Express の各バージョンの接続要件について説明します。
+
+
+
+== FAS Express と NetApp FlexPod の接続要件
+
+FAS Express と NetApp FlexPod の接続要件は次のとおりです。
+
+* NetApp FAS ストレージコントローラは、 Cisco Nexus スイッチに直接接続する必要があります。ただし、 Cisco UCS で管理される構成では、ストレージコントローラがファブリックインターコネクトに接続されます。
+* FlexPod のコアコンポーネント間には、追加の機器をインラインで配置できません。
+* Cisco Nexus 3000/9000 シリーズスイッチとネットアップストレージコントローラの接続には、仮想ポートチャネル（ vPC ）が必要です。
+* 必須ではありませんが、環境全体でジャンボフレームのサポートを有効にすることを推奨します。
+
+
+
+
+== FlexPod Express と NetApp E シリーズの接続要件
+
+E シリーズを使用した FlexPod Express の接続要件は次のとおりです。
+
+* E シリーズストレージコントローラは、ファブリックインターコネクトに直接接続されている必要があります。
+* FlexPod のコアコンポーネント間には、追加の機器をインラインで配置しないでください。
+* vPC は、ファブリックインターコネクトとイーサネットスイッチの間に必要です。
+
+
+
+
+== AFF Express と NetApp FlexPod の接続要件
+
+AFF Express と NetApp FlexPod の接続要件は次のとおりです。
+
+* NetApp AFF ストレージコントローラは、 Cisco Nexus スイッチに直接接続する必要があります。ただし、 Cisco UCS で管理される構成では、ストレージコントローラがファブリックに接続されます。インターコネクト：
+* FlexPod のコアコンポーネント間には、追加の機器をインラインで配置できません。
+* Cisco Nexus 3000/9000 シリーズスイッチとネットアップストレージコントローラの接続には、仮想ポートチャネル（ vPC ）が必要です。
+* 必須ではありませんが、環境全体でジャンボフレームのサポートを有効にすることを推奨します。
+

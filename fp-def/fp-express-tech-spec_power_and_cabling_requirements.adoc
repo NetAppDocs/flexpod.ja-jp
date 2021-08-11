@@ -1,0 +1,179 @@
+---
+sidebar: sidebar 
+permalink: fp-def/fp-express-tech-spec__power_and_cabling_requirements.html 
+keywords: power, cabling, requirements, flexpod, express, cisco, ucs, minimum, cabling 
+summary: このセクションでは、 FlexPod Express デザインの電源要件および最小ケーブル要件について説明します。 
+---
+= 電源とケーブル接続の要件
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+このセクションでは、 FlexPod Express デザインの電源要件および最小ケーブル要件について説明します。
+
+
+
+== 電力要件
+
+電力要件は米国に基づいていますAC 電源の仕様と使用を前提としています。他の国では、電力要件が異なる場合があります。直流（ DC ）電源オプションは、ほとんどのコンポーネントで使用できます。必要な最大電力およびその他の詳細な電力情報の詳細については、各ハードウェアコンポーネントの詳細な技術仕様を参照してください。
+
+Cisco UCS の電力データの詳細については、を参照してください http://www.cisco.com/assets/cdc_content_elements/flash/dataCenter/cisco_ucs_power_calculator/["Cisco UCS Power Calculator"^]。
+
+次の表に、各デバイスに必要な電源ポートを示します。
+
+|===
+| Cisco Nexus スイッチ | 電源ケーブルが必要です 
+
+
+| Cisco Nexus 3048 | Cisco Nexus 3000 シリーズスイッチごとに C13-C14 電源ケーブル × 2 
+
+
+| Cisco Nexus 3524 | Cisco Nexus 3000 シリーズスイッチごとに C13-C14 電源ケーブル × 2 
+
+
+| Cisco Nexus 9396 | Cisco Nexus 9000 シリーズスイッチごとに C13-C14 電源ケーブル × 2 
+|===
+|===
+| Cisco UCS シャーシ | 電源ケーブルが必要です 
+
+
+| Cisco UCS 5108 | Cisco UCS シャーシごとに 2 つの CAB-US515P-C19-US/CAB-US520-c19-US 
+|===
+|===
+| Cisco UCS B シリーズサーバ | 電源ケーブルが必要です 
+
+
+| Cisco UCS B200 M4 | N/A 。ブレードサーバはシャーシから電源供給されます 
+
+
+| Cisco UCS B420 M4 | N/A 。ブレードサーバはシャーシから電源供給されます 
+
+
+| Cisco UCS B200 M5 | N/A 。ブレードサーバはシャーシから電源供給されます 
+
+
+| Cisco UCS B480 M5 の場合 | N/A 。ブレードサーバはシャーシから電源供給されます 
+|===
+|===
+| Cisco UCS C シリーズサーバ | 電源ポートが必要です 
+
+
+| Cisco UCS C220 M4 .3+| Cisco UCS サーバごとに C13-C14 電源ケーブル × 2 
+
+
+| Cisco UCS C240 M4 
+
+
+| Cisco UCS C460 M4 Cisco UCS C220 M5 Cisco UCS C240 M5 Cisco UCS C480 M5 
+|===
+|===
+| NetApp FAS コントローラ | 必要な電源ポート（ HA ペアごと） 
+
+
+| FAS2554 のこと | C13-C14 × 2 
+
+
+| FAS2552 | C13-C14 × 2 
+
+
+| FAS2520 | C13-C14 × 2 
+
+
+| FAS8020 | C13-C14 × 2 
+|===
+|===
+| E シリーズコントローラ | 必要な電源ポート（ HA ペアごと） 
+
+
+| E2824 | C14 / C20 × 2 
+|===
+|===
+| NetApp FAS ディスクシェルフ | 電源ポートが必要です 
+
+
+| DS212C | C13-C14 × 2 
+
+
+| DS224C | C13-C14 × 2 
+
+
+| DS460C | C13-C14 × 2 
+
+
+| DS2246 | C13-C14 × 2 
+
+
+| DS4246 | C13-C14 × 4 
+|===
+|===
+| E-Series ディスクシェルフ | 電源ポートが必要です 
+
+
+| DE460C | C14 / C20 × 2 
+
+
+| DE224C | C14 / C20 × 2 
+
+
+| DE212C | C14 / C20 × 2 
+|===
+
+
+== ケーブルの最小要件
+
+ここでは、 FlexPod Express デザインの最小ケーブル要件について説明します。ほとんどの FlexPod 環境では追加のケーブルが必要ですが、構成数は導入規模と範囲によって異なります。
+
+次の表に、各デバイスに必要なケーブルの最小数を示します。
+
+|===
+| Cisco Nexus 3000 シリーズスイッチ | ケーブルが必要です 
+
+
+| Cisco Nexus 31108 .5+| スイッチごとに 10GbE ファイバケーブルまたは Twinax ケーブルが少なくとも 2 本必要です 
+
+
+| Cisco Nexus 3172PQ の場合 
+
+
+| Cisco Nexus 3048 
+
+
+| Cisco Nexus 3524 
+
+
+| Cisco Nexus 9396 
+
+
+| DS212C |  
+
+
+| DS2246 .4+| SAS ケーブルの数は、ディスクシェルフの構成によって異なります 
+
+
+| DS460C 
+
+
+| DS224C 
+
+
+| DS4246 
+
+
+| E2800  a| 
+* コントローラ 1 台につき、管理用のギガビットイーサネット（ 1GbE ）ケーブルが少なくとも 1 本必要です
+* コントローラ 1 台につき 10GbE ケーブル 2 本以上（ iSCSI の場合）または FC ケーブル 2 本以上で、速度要件が同じです
+
+
+
+
+| DE460C | ディスクシェルフ 1 台につき、 Mini-SAS HD ケーブル 2 本 
+
+
+| DE224C | ディスクシェルフ 1 台につき、 Mini-SAS HD ケーブル 2 本 
+
+
+| DE212C | ディスクシェルフ 1 台につき、 Mini-SAS HD ケーブル 2 本 
+|===

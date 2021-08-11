@@ -1,0 +1,272 @@
+---
+sidebar: sidebar 
+permalink: fp-def/dc-tech-spec_cisco_components.html 
+keywords: cisco, components, ucs, fabric, interconnect, blade, server, rack, apic, nexus, software, support 
+summary: シスコは、解決策の設計とアーキテクチャに大きく貢献し、 FlexPod のコンピューティングレイヤとネットワーキングレイヤの両方をカバーしています。ここでは、 FlexPod で使用できる Cisco UCS および Cisco Nexus オプションについて説明します。FlexPod は、 Cisco UCS B シリーズと C シリーズの両方のサーバをサポートしています。 
+---
+= シスコのコンポーネント
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+シスコは、解決策の設計とアーキテクチャに大きく貢献し、 FlexPod のコンピューティングレイヤとネットワーキングレイヤの両方をカバーしています。ここでは、 FlexPod で使用できる Cisco UCS および Cisco Nexus オプションについて説明します。FlexPod は、 Cisco UCS B シリーズと C シリーズの両方のサーバをサポートしています。
+
+
+
+== Cisco UCS ファブリックインターコネクトのオプション
+
+FlexPod アーキテクチャには、冗長ファブリックインターコネクトが必要です。ファブリックインターコネクトのペアに複数の Cisco UCS シャーシを追加する場合、環境内のシャーシの最大数は、アーキテクチャとポートの両方の制限によって決定されることに注意してください。
+
+次の表に、基本ファブリックインターコネクトのパーツ番号を示します。電源装置ユニット（ PSU ）、 SFP+ 、 QSFP+ 、拡張モジュールは含まれません。その他のファブリックインターコネクトもサポートされています。を参照してください https://mysupport.netapp.com/matrix/["NetApp IMT"^] をクリックしてください。
+
+|===
+| Cisco UCS ファブリックインターコネクト | パーツ番号 | 技術仕様 
+
+
+| Cisco UCS 6332UP | UCS-FI-6332 アップ | http://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/6332-specsheet.pdf["Cisco UCS 6332 ファブリックインターコネクト"] 
+
+
+| Cisco UCS 6454 | UCS-FI-6454-U | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/ucs-6454-fab-int-specsheet.pdf["Cisco UCS 6454 ファブリックインターコネクト"] 
+|===
+
+
+=== Cisco UCS 6454
+
+Cisco UCS 6454 シリーズは、ラインレート、低遅延、ロスレスの 10/25/40/100GbE イーサネットおよび FCoE 接続、およびイーサネットまたは FC の動作が可能なユニファイドポートを提供します。44 個の 10 / 25Gbps ポートは、 10Gbps または 25Gbps の統合イーサネットとして動作できます。このうちの 8 つのユニファイドポートは、 FC 用に 8 / 16 / 32Gbps で動作可能です。4 つのポートは従来の接続では 1/10/25Gbps で動作し、 6 つの QSFP ポートは 40/100Gbps アップリンクポートまたはブレークアウトポートとして機能します。100Gbps アダプタをサポートするネットアップストレージコントローラを使用して、 100Gbps エンドツーエンドのネットワーク接続を確立できます。アダプタおよびプラットフォームのサポートについては、を参照してください https://hwu.netapp.com/Adapter/Index["NetApp Hardware Universe の略"^]。
+
+ポートの詳細については、を参照してください https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/datasheet-c78-741116.html["Cisco UCS 6454 ファブリックインターコネクト"^] データシート
+
+100Gb QSFP データモジュールの技術仕様については、を参照してください https://www.cisco.com/c/en/us/products/collateral/interfaces-modules/transceiver-modules/datasheet-c78-736282.html["Cisco 100GBASE QSFP モジュールデータシート"^]。
+
+
+
+== Cisco UCS B シリーズシャーシオプション
+
+Cisco UCS B シリーズブレードを使用するには、 Cisco UCS B シリーズシャーシが必要です。次の表では、 Cisco UCS BSeries シャーシオプションについて説明します。
+
+|===
+| Cisco UCS B シリーズシャーシ | パーツ番号 | 技術仕様 
+
+
+| Cisco UCS 5108 | N20-C6508 | http://www.cisco.com/c/en/us/products/servers-unified-computing/ucs-5100-series-blade-server-chassis/index.html["Cisco UCS 5100 シリーズブレードサーバシャーシ"] 
+|===
+各 Cisco UCS 5108 ブレードシャーシには、ファブリックインターコネクトへの冗長接続を提供するために、 2 つの Cisco UCS 2200/2300 シリーズ IOM が必要です。どのファブリックインターコネクトと Cisco UCS 5108 IOM の組み合わせに対応できるかについては、を参照してください。
+
+
+
+== Cisco UCS B シリーズブレードサーバのオプション
+
+Cisco UCS B シリーズブレードサーバには、さまざまな CPU 、メモリ、および I/O オプションを備えたハーフ幅およびフル幅の各種タイプが用意されています。次の表に示す部品番号は、ベースサーバー用です。CPU 、メモリ、ドライブ、メザニンアダプタカードは含まれません。FlexPod アーキテクチャでは、複数の構成オプションを使用でき、サポートされています。
+
+|===
+| Cisco UCS B シリーズブレード | パーツ番号 | 技術仕様 
+
+
+| Cisco UCS B200 M5 | UCSB-B2005-M5 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/datasheet-c78-739296.html["Cisco UCS B200 M5 ブレードサーバ"] 
+
+
+| Cisco UCS B480 M5 の場合 | UCSB-B480-M5 | Cisco UCS B480 M5 ブレードサーバ 
+|===
+旧世代の Cisco UCS B シリーズブレードがでサポートされていれば、 FlexPod アーキテクチャで使用できます https://ucshcltool.cloudapps.cisco.com/public/["Cisco UCS ハードウェアおよびソフトウェア互換性リスト"^]。Cisco UCS B シリーズブレードサーバには、有効な SmartNet サポート契約も必要です。
+
+
+
+== Cisco UCS C シリーズラックサーバのオプション
+
+Cisco UCS C シリーズラックサーバには、 1 ラック、 2 ラック、 4 ラックユニット（ RU ）の種類があり、さまざまな CPU 、メモリ、 I/O オプションを備えています。下の 2 番目の表に記載されている部品番号は、ベースサーバー用です。CPU 、メモリ、ドライブ、 Peripheral Component Interconnect Express （ PCIe ）カード、または Cisco Fabric Extender は含まれません。FlexPod アーキテクチャでは、複数の構成オプションを使用でき、サポートされています。
+
+Cisco UCS C シリーズラックサーバノードを使用するには、次の最初の表に示すように、 Cisco UCS C シリーズシャーシが必要です。
+
+|===
+| Cisco UCS C シリーズシャーシ | パーツ番号 | 技術仕様 
+
+
+| Cisco UCS C4200 | UCSC-C4200-SFF | https://www.cisco.com/c/en/us/products/servers-unified-computing/ucs-c4200-series-rack-server-chassis/index.html["Cisco UCS C4200 シリーズラックサーバシャーシ"] 
+|===
+次の表では、 Cisco UCS CSeries ラックサーバのオプションについて説明します。
+
+|===
+| Cisco UCS C シリーズラックサーバ | パーツ番号 | 技術仕様 
+
+
+| Cisco UCS C220 M5 | UCSC-C220 - M5SN | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c220m5-sff-specsheet.pdf["Cisco UCS C220 M5 ラックサーバ"] 
+
+
+| Cisco UCS C240 M5 | UCS-C - C240 - M5S | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c240m5-sff-specsheet.pdf["Cisco UCS C240 M5 ラックサーバ"] 
+
+
+| Cisco UCS C480 M5 の場合 | UCSC-C480-M5 | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c480-m5-high-performance-specsheet.pdf["Cisco UCS C480 M5 ラックサーバ"] 
+
+
+| Cisco UCS C480 ML M5 | UCSC-C480-M5ML8 | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c480m5-specsheet-ml-m5-server.pdf["Cisco UCS C480 ML M5 ラックサーバ"] 
+
+
+| Cisco UCS C125 M5 | UCSC-C125 | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c125m5-rack-server-node.pdf["Cisco UCS C125 M5 ラックサーバノード"] 
+|===
+旧世代の Cisco UCS C シリーズサーバは、でサポートされていれば、 FlexPod アーキテクチャで使用できます https://ucshcltool.cloudapps.cisco.com/public/["Cisco UCS ハードウェアおよびソフトウェア互換性リスト"^]。Cisco UCS C シリーズサーバには、有効な SmartNet サポート契約も必要です。
+
+
+
+== Cisco Nexus 5000 シリーズスイッチのオプション
+
+FlexPod アーキテクチャには、冗長構成の Cisco Nexus 5000 、 7000 、または 9000 シリーズスイッチが必要です。次の表に示す部品番号は、 Cisco Nexus 5000 シリーズシャーシのものです。 SFP モジュール、アドオン FC 、イーサネットモジュールは含まれていません。
+
+|===
+| Cisco Nexus 5000 シリーズスイッチ | パーツ番号 | 技術仕様 
+
+
+| Cisco Nexus 56128P | N5K-C56128P .2+| http://www.cisco.com/c/en/us/products/collateral/switches/nexus-5000-series-switches/datasheet-c78-730760.html["Cisco Nexus 5600 プラットフォームスイッチ"] 
+
+
+| Cisco Nexus 5672UP.16G | N5K-C5672UP.16G 
+
+
+| Cisco Nexus 5596UP | N5k-c5596UP FA .2+| http://www.cisco.com/c/en/us/products/collateral/switches/nexus-5000-series-switches/data_sheet_c78-618603.html["Cisco Nexus 5548 および 5596 スイッチ"] 
+
+
+| Cisco Nexus 5548UP | N5K-C5548UP - FA 
+|===
+
+
+== Cisco Nexus 7000 シリーズスイッチオプション
+
+FlexPod アーキテクチャには、冗長構成の Cisco Nexus 5000 、 7000 、または 9000 シリーズスイッチが必要です。次の表に示す部品番号は、 Cisco Nexus 7000 シリーズシャーシのものです。 SFP モジュール、ラインカード、電源装置は含まれませんが、ファントレイも含まれます。
+
+|===
+| Cisco Nexus 7000 シリーズスイッチ | パーツ番号 | 技術仕様 
+
+
+| Cisco Nexus 7004 | N7K-C7004 | http://www.cisco.com/en/US/products/ps12735/index.html["Cisco Nexus 7000 4 スロットスイッチ"] 
+
+
+| Cisco Nexus 7009 | N7K-C7009 | http://www.cisco.com/en/US/products/ps11565/index.html["Cisco Nexus 7000 9 スロットスイッチ"] 
+
+
+| Cisco Nexus 7702 | N7K-C7702 | http://www.cisco.com/c/en/us/products/switches/nexus-7700-2-slot-switch/index.html["Cisco Nexus 7700 2 スロットスイッチ"] 
+
+
+| Cisco Nexus 7706 | N77-C7706 | http://www.cisco.com/en/US/products/ps13482/index.html["Cisco Nexus 7700 6 スロットスイッチ"] 
+|===
+
+
+== Cisco Nexus 9000 シリーズのスイッチオプション
+
+FlexPod アーキテクチャには、冗長構成の Cisco Nexus 5000 、 7000 、または 9000 シリーズスイッチが必要です。次の表に示す部品番号は、 Cisco Nexus 9000 シリーズシャーシのもので、 SFP モジュールやイーサネットモジュールは含まれていません。
+
+|===
+| Cisco Nexus 9000 シリーズスイッチ | パーツ番号 | 技術仕様 
+
+
+| Cisco Nexus 93180YC-FX | N9K-C93180YC-FX .5+| http://www.cisco.com/c/en/us/products/collateral/switches/nexus-9000-series-switches/datasheet-c78-729405.html["Cisco Nexus 9300 シリーズスイッチ"] 
+
+
+| Cisco Nexus 93180YC-EX | N9K-93180YC-EX 
+
+
+| Cisco Nexus 9336PQ ACI スパイン | N9K-C9336PQ 
+
+
+| Cisco Nexus 9332PQ の場合 | N9K-C9332PQ 
+
+
+| Cisco Nexus 9336C-FX2 | N9K-C9336C-FX2 
+
+
+| Cisco Nexus 92304QC | N9K-C92304QC .2+| http://www.cisco.com/c/en/us/products/collateral/switches/nexus-9000-series-switches/datasheet-c78-735989.html["Cisco Nexus 9200 シリーズスイッチ"] 
+
+
+| Cisco Nexus 9236C | N9K-9236C 
+|===
+
+NOTE: 一部の Cisco Nexus 9000 シリーズスイッチには、他のモデルもあります。これらのバリアントは、 FlexPod 解決策の一部としてサポートされています。Cisco Nexus 9000 シリーズスイッチの一覧については、を参照してください http://www.cisco.com/c/en/us/support/switches/nexus-9000-series-switches/tsd-products-support-series-home.html["Cisco Nexus 9000 シリーズスイッチ"^] シスコの Web サイトで入手できます。
+
+
+
+== Cisco APIC オプション
+
+Cisco ACI を導入する際には、の項目に加えて、 3 つの Cisco APIC を設定する必要があります link:dc-tech-spec_technical_specifications_and_references.html#cisco-nexus-9000-series-switches["Cisco Nexus 9000 シリーズスイッチ"]。Cisco APIC のサイズの詳細については、を参照してください http://www.cisco.com/c/en/us/products/collateral/cloud-systems-management/application-policy-infrastructure-controller-apic/datasheet-c78-732414.html["Cisco Application Centric Infrastructure のデータシート。"^]
+
+APIC 製品仕様の詳細については、の表 1 ～ 3 を参照してください https://www.cisco.com/c/en/us/products/collateral/cloud-systems-management/application-policy-infrastructure-controller-apic/datasheet-c78-739715.html["Cisco Application Policy Infrastructure Controller データシート"^]。
+
+
+
+== Cisco Nexus ファブリックエクステンダのオプション
+
+C シリーズサーバを使用する大規模な FlexPod アーキテクチャでは、冗長構成の Cisco Nexus 2000 シリーズラックマウント FEX が推奨されます。次の表に、 Cisco Nexus FEX のいくつかのオプションを示します。代替 FEX モデルもサポートされています。詳細については、を参照してください https://ucshcltool.cloudapps.cisco.com/public/["Cisco UCS ハードウェアおよびソフトウェア互換性リスト"^]。
+
+|===
+| Cisco Nexus ラックマウント FEX | パーツ番号 | 技術仕様 
+
+
+| Cisco Nexus 2232PP | N2K-C2232PP .2+| http://www.cisco.com/en/US/prod/collateral/switches/ps9441/ps10110/data_sheet_c78-507093.html["Cisco Nexus 2000 シリーズファブリックエクステンダ"] 
+
+
+| Cisco Nexus 2232TM-E | N2K-C2232TM-E です 
+
+
+| Cisco Nexus 2348UPQ | N2K-C2348UPQ .2+| http://www.cisco.com/c/en/us/products/collateral/switches/nexus-2000-series-fabric-extenders/datasheet-c78-731663.html["Cisco Nexus 2300 プラットフォームファブリックエクステンダ"] 
+
+
+| Cisco Nexus 2348TQCisco Nexus 2348TQ-E | N2K-C2348TQN2K-C2348TQ-E 
+|===
+
+
+== Cisco MDS のオプション
+
+Cisco MDS スイッチは、 FlexPod アーキテクチャのオプションコンポーネントです。FC SAN に Cisco MDS スイッチを実装する場合、冗長 SAN スイッチファブリックが必要です。次の表に、サポートされている Cisco MDS スイッチのサブセットのパーツ番号と詳細を示します。を参照してください https://mysupport.netapp.com/matrix/["NetApp IMT"^] および サポートされる SAN スイッチの一覧を確認できます。
+
+|===
+| Cisco MDS 9000 シリーズスイッチ | パーツ番号 | 説明 
+
+
+| Cisco MDS 9148T | DS-C9148T-24IK .2+| http://www.cisco.com/c/en/us/products/storage-networking/mds-9100-series-multilayer-fabric-switches/models-listing.html["Cisco MDS 9100 シリーズスイッチ"] 
+
+
+| Cisco MDS 9132T | DS-C9132T-MEK9 
+
+
+| Cisco MDS 9396S | DS-C9396S-K9 | http://www.cisco.com/c/en/us/products/storage-networking/mds-9396s-16g-multilayer-fabric-switch/index.html["Cisco MDS 9300 シリーズスイッチ"] 
+|===
+
+
+== シスコのソフトウェアライセンスオプション
+
+Cisco Nexus スイッチでストレージプロトコルを有効にするには、ライセンスが必要です。Cisco Nexus 5000 および 7000 シリーズのスイッチでは、いずれのスイッチも SAN ブート実装で FC プロトコルまたは FCoE プロトコルを有効にするためにストレージサービスライセンスが必要です。Cisco Nexus 9000 シリーズスイッチでは、現在 FC と FCoE はサポートされていません。
+
+これらのライセンスに必要なライセンスと製品番号は、 FlexPod 解決策の各コンポーネントで選択するオプションによって異なります。たとえば、ソフトウェアライセンスの製品番号は、ポートの数や、選択する Cisco Nexus 5000 または 7000 シリーズスイッチによって異なります。正確なパーツ番号については、営業担当者にお問い合わせください。次の表に、シスコのソフトウェアライセンスオプションを示します。
+
+|===
+| Cisco ソフトウェアライセンス | パーツ番号 | ライセンス情報 
+
+
+| Cisco Nexus 5500 ストレージライセンス、 8 、 48 、 96 ポート | N55-8P-SSK9/ N55-48P-SSK9/ N55-96P-SSK9 .5+| http://www.cisco.com/c/en/us/td/docs/switches/datacenter/sw/nx-os/licensing/guide/b_Cisco_NX-OS_Licensing_Guide/b_Cisco_NX-OS_Licensing_Guide_chapter_01.html["Cisco NX-OS ソフトウェア機能のライセンス"] 
+
+
+| Cisco Nexus 5010/5020 ストレージプロトコルライセンス | N5010 - SSK9/ N5020 - SSK9 
+
+
+| Cisco Nexus 5600 ストレージプロトコルライセンス | N56-16P-SSK9/N5672-72P-SSK9/N56128-128P-SSK9 
+
+
+| Cisco Nexus 7000 Storage Enterprise ライセンス | N7K-SAN1K9 
+
+
+| Cisco Nexus 9000 Enterprise Services ライセンス | N95-LAN1K9/ N93-LAN1K9 
+|===
+
+
+== シスコはライセンスオプションをサポートしています
+
+FlexPod アーキテクチャのすべてのシスコ機器について、有効な SmartNet サポート契約が必要です。
+
+必要なライセンスおよびこれらのライセンスのパーツ番号は、製品によって異なる場合があるため、営業担当者が確認する必要があります。次の表に、シスコのサポートライセンスオプションを示します。
+
+|===
+| Cisco Support のライセンス | ライセンスガイド 
+
+
+| Smart Net Total Care Onsite Premium | http://www.cisco.com/c/en/us/products/collateral/cloud-systems-management/smart-net-total-care/datasheet-c78-735459.pdf["Cisco Smart Net Total Care サービス"] 
+|===

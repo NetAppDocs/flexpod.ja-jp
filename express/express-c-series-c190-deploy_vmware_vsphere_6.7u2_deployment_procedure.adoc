@@ -1,0 +1,422 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-c190-deploy_vmware_vsphere_6.7u2_deployment_procedure.html 
+keywords: vmware, vsphere, deployment, procedure, configure, install, esxi, cisco ucs, c, series, host, multipathing 
+summary: ここでは、 FlexPod Express 構成に VMware ESXi 6.7U2 をインストールする手順について説明します。以下に記載する導入手順は、前のセクションで説明した環境変数用にカスタマイズされたものです。 
+---
+= VMware vSphere 6.7U2 導入手順
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+ここでは、 FlexPod Express 構成に VMware ESXi 6.7U2 をインストールする手順について説明します。以下に記載する導入手順は、前のセクションで説明した環境変数用にカスタマイズされたものです。
+
+このような環境に VMware ESXi をインストールするには、複数の方法があります。この手順は、 Cisco UCS C シリーズサーバ用 CIMC インターフェイスの仮想 KVM コンソールと仮想メディア機能を使用して、リモートインストールメディアを個々のサーバにマッピングします。
+
+
+NOTE: この手順は、 Cisco UCS サーバ A および Cisco UCS サーバ B に対して実行する必要があります
+
+
+NOTE: クラスタに追加するノードに対してこの手順を完了しておく必要があります。
+
+
+
+== Cisco UCS C シリーズスタンドアロンサーバの CIMC インターフェイスにログインします
+
+以下に、 Cisco UCS C シリーズスタンドアロンサーバの CIMC インターフェイスにログインする手順について説明します。仮想 KVM を実行するには CIMC インターフェイスにログインする必要があります。これにより、管理者はリモートメディアを使用したオペレーティングシステムのインストールを開始できます。
+
+
+
+=== すべてのホスト
+
+. Web ブラウザに移動し、 Cisco UCS C シリーズの CIMC インターフェイスの IP アドレスを入力します。この手順では CIMC GUI アプリケーションを起動します。
+. 管理ユーザ名とクレデンシャルを使用して、 CIMC UI にログインします。
+. メインメニューで、サーバータブを選択します。
+. Launch KVM Console をクリックします。
++
+image:express-c-series-c190-deploy_image17.png["エラー：グラフィックイメージがありません"]
+
+. 仮想 KVM コンソールから、 [Virtual Media]( 仮想メディア ) タブを選択します。
+. [CD/DVD のマップ ] を選択します。
++
+
+NOTE: 最初に [ 仮想デバイスのアクティブ化 ] をクリックする必要があります。プロンプトが表示されたら、 [ このセッションを受け入れる ] を選択
+
+. VMware ESXi 6.7U2 インストーラの ISO イメージファイルを参照して、 [ 開く ] をクリックします。Map Device をクリックします。
+. 電源メニューを選択し、システムの電源再投入（コールドブート）を選択します。はいをクリックします。
+
+
+
+
+== VMware ESXi をインストールします
+
+以下に、各ホストに VMware ESXi をインストールする手順について説明します。
+
+
+
+=== ESXi 6.7U2 Cisco カスタムイメージをダウンロードします
+
+. に移動します https://my.vmware.com/web/vmware/info/slug/datacenter_cloud_infrastructure/vmware_vsphere/6_7["VMware vSphere のダウンロードページ"^] カスタム ISO の場合。
+. ESXi 6.7U2 Install CD の Cisco Custom Image の横にある Go to Downloads をクリックします。
+. ESXi 6.7U2 Install CD （ ISO ）用の Cisco Custom Image をダウンロードします。
+. システムが起動すると、 VMware ESXi インストールメディアがマシンによって検出されます。
+. 表示されるメニューから VMware ESXi インストーラを選択します。インストーラがロードされます。これには数分かかることがあります。
+. インストーラのロードが完了したら、 Enter キーを押してインストールを続行します。
+. エンドユーザライセンス契約を読んだ後、同意して F11 キーを押してインストールを続行します。
+. ESXi のインストールディスクとして設定した NetApp LUN を選択し、 Enter キーを押してインストールを続行します。
++
+image:express-c-series-c190-deploy_image18.png["エラー：グラフィックイメージがありません"]
+
+. 適切なキーボードレイアウトを選択し、 Enter キーを押します。
+. ルートパスワードを入力して確定し、 Enter キーを押します。
+. 既存のパーティションがボリュームから削除されていることを示す警告が表示されます。F11 キーを押してインストールを続行します。ESXi のインストール後にサーバがリブートします。
+
+
+
+
+== VMware ESXi ホスト管理ネットワークをセットアップします
+
+以下に、 VMware ESXi ホストごとに管理ネットワークを追加する手順について説明します。
+
+
+
+=== すべてのホスト
+
+. サーバのリブートが完了したら、 F2 キーを押してシステムをカスタマイズするオプションを入力します。
+. インストールプロセスで入力したログイン名と root パスワードを使用してログインします。
+. Configure Management Network （管理ネットワークの設定）オプションを選択します。
+. [ ネットワークアダプタ ] を選択し、 Enter キーを押します。
+. vSwitch0 に使用するポートを選択します。Enter キーを押します。
+. CIMC の eth0 および eth1 に対応するポートを選択します。
++
+image:express-c-series-c190-deploy_image19.png["エラー：グラフィックイメージがありません"]
+
+. VLAN （オプション）を選択し、 Enter キーを押します。
+. VLAN ID 「 \<mgmt_vlan_id>` 」を入力します。Enter キーを押します。
+. Configure Management Network （管理ネットワークの設定）メニューから、 IPv4 Configuration （ IPv4 設定）を選択して管理インターフェイスの IP アドレスを設定します。Enter キーを押します。
+. 矢印キーを使用して [Set Static IPv4 Address] をハイライトし、スペースバーを使用してこのオプションを選択します。
+. VMware ESXi ホスト「 \<ESXi_host_mgmt_ip>> 」を管理するための IP アドレスを入力します。
+. VMware ESXi ホスト「 \ <ESXi_host_mgmt_netmask>> 」のサブネットマスクを入力します。
+. VMware ESXi ホスト「 \<ESXi_host_mgmt_gateway>` 」のデフォルトゲートウェイを入力します。
+. Enter キーを押して、 IP 設定の変更を確定します。
+. IPv6 設定メニューを表示します。
+. IPv6 を有効にする（再起動が必要）オプションを選択解除して IPv6 を無効にするには、スペースバーを使用します。Enter キーを押します。
+. DNS 設定を指定するメニューを表示します。
+. IP アドレスは手動で割り当てられるため、 DNS 情報も手動で入力する必要があります。
+. プライマリ DNS サーバの IP アドレス「 \ <nameserver_ip>` 」を入力します。
+. （任意）セカンダリ DNS サーバの IP アドレスを入力します。
+. VMware ESXi ホスト名の FQDN として、「 \ <ESXi_host_fqdn>> 」を入力します。
+. Enter キーを押して、 DNS 設定の変更を確定します。
+. Esc キーを押して、管理ネットワークの設定サブメニューを終了します。
+. Y キーを押して変更を確定し、サーバーを再起動します。
+. トラブルシューティングオプションを選択し、 ESXi シェルと SSH を有効にします。
++
+
+NOTE: これらのトラブルシューティングオプションは、お客様のセキュリティポリシーに従って検証後に無効にすることができます。
+
+. メインコンソール画面に戻るには、 Esc キーを 2 回押します。
+. 画面上部の CIMC マクロ > 静的マクロ > Alt-F ドロップダウンメニューから Alt-F1 をクリックします。
+. ESXi ホストの適切なクレデンシャルを使用してログインします。
+. プロンプトで、次の esxcli コマンドのリストを順次入力してネットワーク接続を有効にします。
++
+....
+esxcli network vswitch standard policy failover set -v vSwitch0 -a vmnic2,vmnic4 -l iphash
+....
+
+
+
+
+== ESXi ホストを設定
+
+次の表の情報を使用して、各 ESXi ホストを設定します。
+
+|===
+| 詳細（ Detail ） | 詳細値 
+
+
+| ESXi ホスト名 | \<ESXi_host_fqdn>> のように指定します 
+
+
+| ESXi ホスト管理 IP | \<ESXi_host_mgmt_IP> 
+
+
+| ESXi ホスト管理マスク | \<ESXi_host_mgmt_netmask>> 
+
+
+| ESXi ホスト管理ゲートウェイ | \<ESXi_host_mgmt_gateway>> 
+
+
+| ESXi ホストの NFS IP | \ <ESXi_host_nfs_ip>> 
+
+
+| ESXi ホストの NFS マスク | \ <ESXi_host_nfs_netmask>> の順にクリックします 
+
+
+| ESXi ホストの NFS ゲートウェイ | \<ESXi_host_nfs_gateway>> 
+
+
+| ESXi ホスト vMotion IP | \<ESXi_host_vMotion_IP> です 
+
+
+| ESXi ホストの vMotion マスク | \<ESXi_host_vMotion_netmask>> 
+
+
+| ESXi ホストの vMotion ゲートウェイ | \ <ESXi_host_vMotion_gateway>> の順に選択します 
+
+
+| ESXi ホスト iSCSI-A IP | \<ESXi_host_iscsi-a_IP> です 
+
+
+| ESXi ホスト iSCSI-A マスク | \ <ESXi_host_iscsi-A netmask >> の順にクリックします 
+
+
+| ESXi ホスト iSCSI-A ゲートウェイ | \<ESXi_host_iscsi-a_gateway>> 
+
+
+| ESXi ホスト iSCSI-B IP | \<ESXi_host_iscsi-B_IP> です 
+
+
+| ESXi ホスト iSCSI-B マスク | \<ESXi_host_iscsi-B_netmask>> 
+
+
+| ESXi ホスト iSCSI-B ゲートウェイ | \<ESXi_host_scs-b_gateway>> 
+|===
+
+
+=== ESXi ホストにログインします
+
+ESXi ホストにログインするには、次の手順を実行します。
+
+. Web ブラウザでホストの管理 IP アドレスを開きます。
+. root アカウントとインストールプロセスで指定したパスワードを使用して、 ESXi ホストにログインします。
+. VMware Customer Experience Improvement Program に関する声明をお読みください。適切な応答を選択したら、 [OK] をクリックします。
+
+
+
+
+=== iSCSI ブートを設定します
+
+iSCSI ブートを設定するには、次の手順を実行します。
+
+. 左側の [ ネットワーク ] を選択します。
+. 右側の [Virtual Switches] タブを選択します。
++
+image:express-c-series-c190-deploy_image20.png["エラー：グラフィックイメージがありません"]
+
+. iScsiBootvSwitch をクリックします。
+. [ 設定の編集 ] を選択します
+. MTU を 9000 に変更し、 [ 保存 ] をクリックします。
+. iSCSIBootPG ポートの名前を iSCSIBootPG-A に変更します
++
+
+NOTE: この構成では、 vmnic3 と vmnic5 が iSCSI ブートに使用されます。ESXi ホストに NIC がほかにもある場合は、 vmnic 番号が異なることがあります。iSCSI ブートに使用されている NIC を確認するには、 CIMC の iSCSI vNIC 上の MAC アドレスを ESXi の vmnic に照合します。
+
+. 中央のペインで、 [VMkernel NICs] タブを選択します。
+. Add VMkernel NIC を選択します。
++
+.. 新しいポートグループ名として、 iScsiBootPG-B を指定します
+.. 仮想スイッチの iScsiBootvSwitch を選択します。
+.. VLAN ID に「 \<iSCSIb_vlan_id>` 」と入力します。
+.. MTU を 9000 に変更します。
+.. IPv4 設定を展開します。
+.. 静的設定を選択します。
+.. アドレスとして「 \\<var_hosta_iSCSIb_ip>> 」と入力します。
+.. Subnet Mask には「 \\<<var_hosta_iSCSIb_mask>> 」と入力します。
+.. Create をクリックします。 .
++
+
+NOTE: iScsiBootPG-A で MTU を 9000 に設定します
+
+
+
+. フェイルオーバーを設定するには、次の手順を実行します。
++
+.. iSCSIBootPG の設定の編集 - A > 階層化とフェイルオーバー > フェイルオーバー順序 > vmnic3 をクリックします。vmnic3 がアクティブで、 vmnic5 が未使用である。
+.. iSCSIBootPG-B で設定の編集 > チーム化とフェイルオーバー > フェイルオーバー順序 > vmnic5 をクリックします。vmnic5 がアクティブで、 vmnic3 が未使用である。
++
+image:express-c-series-c190-deploy_image21.png["エラー：グラフィックイメージがありません"]
+
+
+
+
+
+
+
+=== iSCSI マルチパスを設定します
+
+ESXi ホストで iSCSI マルチパスを設定するには、次の手順を実行します。
+
+. 左側のナビゲーションペインで Storage （ストレージ）を選択します。アダプタをクリックします。
+. iSCSI ソフトウェアアダプタを選択し、 Configure iSCSI （ iSCSI の設定）をクリックします。
++
+image:express-c-series-c190-deploy_image22.png["エラー：グラフィックイメージがありません"]
+
+. [ 動的ターゲット ] で、 [ 動的ターゲットの追加 ] をクリックします。
++
+image:express-c-series-c190-deploy_image23.png["エラー：グラフィックイメージがありません"]
+
+. IP アドレス「 iscsi_dlif01a 」を入力します。
++
+.. IP アドレス 'iSCSI_lif01b'iSCSI_lif02a'iSCSI_lif02b' で繰り返します
+.. [Save Configuration] をクリックします。
++
+image:express-c-series-c190-deploy_image24.png["エラー：グラフィックイメージがありません"]
+
++
+
+NOTE: iSCSI LIF の IP アドレスは、ネットアップクラスタで network interface show コマンドを実行するか、 System Manager の Network Interfaces タブで確認できます。
+
+
+
+
+
+
+
+=== ESXi ホストを設定
+
+ESXi ブートを設定するには、次の手順を実行します。
+
+. 左側のナビゲーションペインで、 [ ネットワーク ] を選択します。
+. vSwitch0 を選択します。
++
+image:express-c-series-c190-deploy_image25.png["エラー：グラフィックイメージがありません"]
+
+. 設定の編集を選択します。
+. MTU を 9000 に変更します。
+. NIC チーミングを展開し、 vmnic2 と vmnic4 の両方がアクティブに設定され、 NIC チーミングとフェイルオーバーが IP ハッシュに基づいてルートに設定されていることを確認します。
++
+
+NOTE: ロードバランシングの IP ハッシュ方式では、スタティック（モードオン）ポートチャネルで SRC-DST-IP EtherChannel を使用して、基盤となる物理スイッチを適切に設定する必要があります。スイッチの設定ミスが原因で接続が断続的に発生する可能性があります。その場合は、ポートチャネル設定のトラブルシューティング中に、 Cisco スイッチに関連付けられている 2 つのアップリンクポートのいずれかを一時的にシャットダウンして ESXi 管理 vmkernel ポートへの通信をリストアします。
+
+
+
+
+
+=== ポートグループと VMkernel NIC を設定します
+
+ポートグループと VMkernel NIC を設定するには、次の手順を実行します。
+
+. 左側のナビゲーションペインで、 [ ネットワーク ] を選択します。
+. Port Groups タブを右クリックします。
++
+image:express-c-series-c190-deploy_image26.png["エラー：グラフィックイメージがありません"]
+
+. [VM Network] を右クリックし、 [Edit] を選択します。VLAN ID を「 \<<var_vm_traffic_vlan>> 」に変更します。
+. [Add Port Group] をクリックします。
++
+.. ポートグループに MGMT-Network という名前を付けます。
+.. VLAN ID に「 \ <mgmt_vlan>> 」と入力します。
+.. vSwitch0 が選択されていることを確認してください。
+.. [ 保存 ] をクリックします .
+
+
+. [VMkernel NICs] タブをクリックします。
++
+image:express-c-series-c190-deploy_image27.png["エラー：グラフィックイメージがありません"]
+
+. Add VMkernel NIC を選択します。
++
+.. [ 新しいポートグループ ] を選択します。
+.. ポートグループに「 NFS-Network 」という名前を付けます。
+.. VLAN ID として「 \<nfs_vlan_id>` 」と入力します。
+.. MTU を 9000 に変更します。
+.. IPv4 設定を展開します。
+.. 静的設定を選択します。
+.. アドレスとして「 \\<<var_hosta_nfs_ip>> 」と入力します。
+.. [ サブネットマスク ] に「 \\<<var_hosta_nfs_mask>> 」と入力します。
+.. Create をクリックします。 .
+
+
+. この手順を繰り返して、 vMotion VMkernel ポートを作成します。
+. Add VMkernel NIC を選択します。
++
+.. [ 新しいポートグループ ] を選択します。
+.. ポートグループに vMotion という名前を付けます。
+.. VLAN ID に「 \<VMotion_vlan_id>> 」と入力します。
+.. MTU を 9000 に変更します。
+.. IPv4 設定を展開します。
+.. 静的設定を選択します。
+.. アドレスとして「 \<<var_hosta_VMotion_ip>> 」と入力します。
+.. Subnet Mask には「 \\<<var_hosta_vMotion mask>> 」と入力します。
+.. IPv4 の設定後に vMotion チェックボックスが選択されていることを確認します。
++
+image:express-c-series-c190-deploy_image28.png["エラー：グラフィックイメージがありません"]
+
++
+
+NOTE: ESXi ネットワークの設定には、ライセンスで許可されている場合に VMware vSphere Distributed Switch を使用するなどの方法が多数あります。ビジネス要件を満たす必要がある場合は、 FlexPod Express で代替ネットワーク構成がサポートされます。
+
+
+
+
+
+
+
+=== 最初のデータストアをマウント
+
+最初にマウントされるデータストアは 'infra_datastore.vm のデータストアと 'infra_swap データストアであり 'VM スワップファイル用です
+
+. 左側のナビゲーションペインで [ ストレージ ] をクリックし、 [ 新しいデータストア ] をクリックします。
++
+image:express-c-series-c190-deploy_image29.png["エラー：グラフィックイメージがありません"]
+
+. マウント NFS データストアを選択します。
++
+image:express-c-series-c190-deploy_image30.png["エラー：グラフィックイメージがありません"]
+
+. Provide NFS Mount Details （ NFS マウントの詳細の提供）ページに次の情報を入力します。
++
+** 名前： 'infra_datastore.
+** NFS サーバ : `\<<var_nodeA_nfs_lif>`
+** 共有 : 「 /infra_datastore 」
+** NFS 3 が選択されていることを確認します。
+
+
+. 完了をクリックします。[ 最近のタスク ] ペインにタスクの完了が表示されます。
+. この手順を繰り返して 'infra_swap' データストアをマウントします
++
+** 名前： infra_swap
+** NFS サーバ : `\<<var_nodeA_nfs_lif>`
+** 共有 :`/infra_swap
+** NFS 3 が選択されていることを確認します。
+
+
+
+
+
+
+=== NTP を設定します
+
+ESXi ホストの NTP を設定するには、次の手順を実行します。
+
+. 左側のナビゲーションペインで、 [ 管理 ] をクリックします。右側のペインで [ システム ] を選択し、 [ 時刻と日付 ] をクリックします。
+. Use Network Time Protocol （ NTP クライアントを有効にする）を選択します。
+. NTP サービスのスタートアップポリシーとして、 Start and Stop With Host を選択します。
+. NTP サーバとして「 \<<var_ntp>> 」と入力します。複数の NTP サーバを設定できます。
+. [ 保存 ] をクリックします .
++
+image:express-c-series-c190-deploy_image31.png["エラー：グラフィックイメージがありません"]
+
+
+
+
+
+=== VM スワップファイルの場所を移動します
+
+以下に、 VM スワップファイルの場所を移動する手順について説明します。
+
+. 左側のナビゲーションペインで、 [ 管理 ] をクリックします。右側のペインでシステムを選択し、スワップをクリックします。
++
+image:express-c-series-c190-deploy_image32.png["エラー：グラフィックイメージがありません"]
+
+. 設定の編集をクリックします。データストアのオプションから 'infra_swap' を選択します
++
+image:express-c-series-c190-deploy_image33.png["エラー：グラフィックイメージがありません"]
+
+. [ 保存 ] をクリックします .
+
+
+link:express-c-series-c190-design_vmware_vcenter_server_6.7u2_installation_procedure.html["次の例： VMware vCenter Server 6.7U2 インストール手順"]

@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-deploy_storage_virtual_machine_configuration.html 
+keywords: storage, virtual, machine, configuration, svm, meditech, host, luns, language, encoding 
+summary: このセクションでは、 ONTAP 8.3 以降のバージョンへの導入について説明します。 
+---
+= Storage Virtual Machine の設定
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+このセクションでは、 ONTAP 8.3 以降のバージョンへの導入について説明します。
+
+
+NOTE: Storage Virtual Machine （ SVM ）は、 ONTAP API および ONTAP CLI では Vserver とも呼ばれます。
+
+
+
+== MEDITECH ホスト LUN 用の SVM
+
+ONTAP ストレージクラスタごとに 1 つの専用 SVM を作成して、その SVM に MEDITECH ホスト用の LUN が含まれているアグリゲートを所有して管理する必要があります。
+
+
+
+== SVM の言語エンコード設定
+
+すべての SVM に言語エンコードを設定することを推奨します。SVM の作成時に言語エンコード設定を指定しなかった場合は、デフォルトの言語エンコード設定が使用されます。ONTAP のデフォルトの言語エンコード設定は C.UTF-8 です。言語エンコードを設定したあとで、 Infinite Volume を備えた SVM の言語を変更することはできません。
+
+SVM に関連付けられたボリュームは、ボリュームの作成時に別の設定を明示的に指定しないかぎり、 SVM の言語エンコード設定を継承します。特定の処理を実行できるようにするには、サイトのすべてのボリュームで一貫した言語エンコード設定を使用する必要があります。たとえば、 SnapMirror では、ソース SVM とデスティネーション SVM の言語エンコード設定が同じである必要があります。
+
+link:ehr-meditech-deploy_volume_configuration.html["次の手順：ボリューム構成"]

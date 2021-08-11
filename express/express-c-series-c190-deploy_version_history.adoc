@@ -1,0 +1,20 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-c190-deploy_version_history.html 
+keywords: version, history, express, c, series, c190, deploy 
+summary: このドキュメントのバージョン履歴を次に示します。 
+---
+= バージョン履歴
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+|===
+| バージョン | 日付 | ドキュメントのバージョン履歴 
+
+
+| バージョン 1.0 以降 | 2019年11月 | 初版リリース 
+|===

@@ -1,0 +1,88 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-c190-deploy_technology_requirements.html 
+keywords: technology, requirements, hardware, software, express, c, series, deployment 
+summary: FlexPod Express システムには、ハードウェアコンポーネントとソフトウェアコンポーネントを組み合わせて使用する必要があります。FlexPod Express では、システムにハイパーバイザーノードを追加するために必要なハードウェアコンポーネントについても、 2 つのユニット単位で説明します。 
+---
+= テクノロジ要件
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+FlexPod Express システムには、ハードウェアコンポーネントとソフトウェアコンポーネントを組み合わせて使用する必要があります。FlexPod Express では、システムにハイパーバイザーノードを追加するために必要なハードウェアコンポーネントについても、 2 つのユニット単位で説明します。
+
+
+
+== ハードウェア要件
+
+選択したハイパーバイザーに関係なく、すべての FlexPod Express 構成で同じハードウェアが使用されます。したがって、ビジネス要件が変わっても、同じ FlexPod Express ハードウェア上で別のハイパーバイザーを使用できます。
+
+次の表に、 FlexPod 構成および実装に必要なハードウェアコンポーネントを示します。解決策の実装に使用されるハードウェアコンポーネントは、お客様の要件に応じて変更される場合があります。
+
+|===
+| ハードウェア | 数量 
+
+
+| AFF C190 は、 2 ノードクラスタです | 1. 
+
+
+| Cisco C220 M5 サーバ | 2. 
+
+
+| Cisco Nexus 31108PC-V スイッチ | 2. 
+
+
+| Cisco UCS C220 M5 ラックサーバ用 Cisco UCS 仮想インターフェイスカード（ VIC ） 1457 | 2. 
+|===
+次の表に、 10GbE を実装するための基本構成に加えて、必要なハードウェアを示します。
+
+|===
+| ハードウェア | 数量 
+
+
+| Cisco UCS C220 M5 サーバ | 2. 
+
+
+| Cisco VIC 1457 | 2. 
+|===
+
+
+== ソフトウェア要件
+
+次の表に、 FlexPod Express ソリューションのアーキテクチャを実装するために必要なソフトウェアコンポーネントを示します。
+
+|===
+| ソフトウェア | バージョン | 詳細 
+
+
+| Cisco Integrated Management Controller （ CIMC ） | 4.0.4 | Cisco UCS C220 M5 ラックサーバの場合 
+
+
+| Cisco nenic ドライバ | 1.0.0.29 | VIC 1457 インターフェイスカード用 
+
+
+| Cisco NX-OS | 7.0 （ 3 ） I7 （ 6 ） | Cisco Nexus 31108PC-V スイッチ向け 
+
+
+| NetApp ONTAP | 9.6 | AFF C190 コントローラの場合 
+|===
+次の表に、 FlexPod Express でのすべての VMware vSphere 環境に必要なソフトウェアを示します。
+
+|===
+| ソフトウェア | バージョン 
+
+
+| VMware vCenter Server Appliance の略 | 6.7U2 
+
+
+| VMware vSphere ESXi ハイパーバイザー | 6.7U2 
+
+
+| NetApp VAAI Plug-in for ESXi | 1.1.2 
+
+
+| NetApp VSC | 9.6 
+|===

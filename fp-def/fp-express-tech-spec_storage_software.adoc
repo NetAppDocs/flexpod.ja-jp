@@ -1,0 +1,29 @@
+---
+sidebar: sidebar 
+permalink: fp-def/fp-express-tech-spec_storage_software.html 
+keywords: storage, software, flexpod, express, ontap, e, series, santricity 
+summary: このセクションに記載されているストレージソフトウェアは、 FlexPod エクスプレスプラットフォームでサポートされています。 
+---
+= ストレージソフトウェア
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+このセクションに記載されているストレージソフトウェアは、 FlexPod エクスプレスプラットフォームでサポートされています。
+
+
+
+== NetApp ONTAP
+
+NetApp ONTAP ソフトウェアは、すべてのネットアップストレージシステムにインストールされます。
+
+FlexPod は、 ONTAP との組み合わせにより検証済みで、ノンストップオペレーション、無停止アップグレード、アジャイルデータインフラを実現する、拡張性に優れたストレージアーキテクチャを提供します。ONTAP の詳細については、を参照してください http://www.netapp.com/us/products/platform-os/ontap/index.aspx["ONTAP データ管理ソフトウェアの製品ページ"^]。
+
+
+
+== E シリーズ SANtricity ソフトウェア
+
+E シリーズ SANtricity ソフトウェアは、すべての E シリーズストレージシステムで動作する OS です。SANtricity は、多様なアプリケーションニーズに対応する柔軟性に優れたシステムで、組み込みの高可用性機能とさまざまなデータ保護機能を提供します。詳細については、を参照してください http://www.netapp.com/us/products/platform-os/santricity/index.aspx["SANtricity ソフトウェア製品サイト"^]。

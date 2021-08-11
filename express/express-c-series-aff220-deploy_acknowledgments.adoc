@@ -1,0 +1,19 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-aff220-deploy_acknowledgments.html 
+keywords: acknowledgements, authors, support, contribution 
+summary: 作成者は、特定の個人のサポートとこの設計への貢献を認めたいと考えています。 
+---
+= 謝辞
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+作成者は、この設計に対するサポートと貢献について、次の人々に認めたいと考えています。
+
+* ポールオノフレッティオノトレイシー
+* Arvind Ramakrishnan のようなホテルです
+

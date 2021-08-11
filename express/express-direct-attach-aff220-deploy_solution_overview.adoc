@@ -1,0 +1,90 @@
+---
+sidebar: sidebar 
+permalink: express/express-direct-attach-aff220-deploy_solution_overview.html 
+keywords: solution, overview, flexpod, express, converged, infrastructure, program, verified, architecture, case, summary 
+summary: この FlexPod Express 解決策は、 FlexPod コンバージドインフラプログラムの一部です。 
+---
+= 解決策の概要
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+この FlexPod Express 解決策は、 FlexPod コンバージドインフラプログラムの一部です。
+
+
+
+== FlexPod 統合インフラプログラム
+
+FlexPod リファレンスアーキテクチャは、 Cisco Validated Design （ CVD ；シスコ検証済み設計）または NetApp Verified Architectures （ NVA ；ネットアップ検証済みアーキテクチャ）として提供されます。これらのバリエーションでサポートされない構成が作成されない場合、特定の CVD または NVA からのお客様の要件に基づく差異は認められます。
+
+次の図に示すように、 FlexPod プログラムには、 FlexPod Express 、 FlexPod Datacenter 、 FlexPod Select の 3 つのソリューションが含まれています。
+
+* * FlexPod Express * は、 Cisco とネットアップが提供するテクノロジを搭載したエントリレベルの解決策をお客様に提供します。
+* * FlexPod Datacenter * は、さまざまなワークロードやアプリケーションに最適な多目的基盤を提供します。
+* * FlexPod Select * は、 FlexPod データセンターの最良の側面を組み込み、特定のアプリケーションにインフラストラクチャを調整します。
+
+
+次の図に、解決策の技術コンポーネントを示します。
+
+image:express-direct-attach-aff220-deploy_image2.png["エラー：グラフィックイメージがありません"]
+
+
+
+== NetApp Verified Architecture プログラム
+
+NVA プログラムは、ネットアップソリューションの検証済みアーキテクチャをお客様に提供します。NVA は、次の品質を持つ NetApp 解決策アーキテクチャを示しています。
+
+* 入念にテストされています
+* あらかじめ規定されている
+* 導入リスクを最小限に抑えます
+* 運用開始までの時間を短縮
+
+
+このガイドでは、ネットアップストレージが直接接続された FlexPod Express の設計について詳しく説明します。次のセクションでは、この解決策の設計に使用されるコンポーネントについて説明します。
+
+
+
+=== ハードウェアコンポーネント
+
+* NetApp AFF A220
+* Cisco UCS Mini
+* Cisco UCS B200 M5
+* Cisco UCS VIC 140/1480
+* Cisco Nexus 3000 シリーズスイッチ
+
+
+
+
+=== ソフトウェアコンポーネント
+
+* NetApp ONTAP 9.5.
+* VMWare vSphere 6.7U1
+* Cisco UCS Manager 4.0(1b)
+* Cisco NXOS ファームウェア 7.0(3) I6(1)
+
+
+
+
+== 解決策テクノロジ
+
+この解決策は、ネットアップ、 Cisco 、 VMware の最新テクノロジを活用しています。ONTAP 9.5 を実行する新しい NetApp AFF A220 、 Cisco Nexus 31108PCV スイッチが 2 台、 VMware vSphere 6.7U1 を実行する Cisco UCS B200 M5 サーバが搭載されています。検証済みのこの解決策では、 10GbE テクノロジ経由で Direct Connect IP ストレージを使用します。
+
+次の図は、 FlexPod Express と VMware vSphere 6.7U1 IP ベースの Direct Connect アーキテクチャを示しています。
+
+image:express-direct-attach-aff220-deploy_image3.png["エラー：グラフィックイメージがありません"]
+
+
+
+== ユースケースの概要
+
+FlexPod Express 解決策は、次のようないくつかのユースケースに適用できます。
+
+* ROBOs
+* 中堅・中小企業向け
+* コスト効率に優れた専用の解決策が必要な環境
+
+
+FlexPod Express は、仮想ワークロードと混在ワークロードに最適です。

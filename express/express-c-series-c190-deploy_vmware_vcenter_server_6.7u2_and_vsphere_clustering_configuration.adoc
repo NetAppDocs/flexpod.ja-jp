@@ -1,0 +1,106 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-c190-deploy_vmware_vcenter_server_6.7u2_and_vsphere_clustering_configuration.html 
+keywords: vmware, vcenter, server, vsphere, clustering, configuration, esxi, host, coredump 
+summary: VMware vCenter Server 6.7 および vSphere クラスタリングを設定するには、このページに記載されている手順を実行します。 
+---
+= VMware vCenter Server 6.7U2 と vSphere クラスタリング構成
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+VMware vCenter Server 6.7 および vSphere クラスタリングを設定するには、次の手順を実行します。
+
+. 「 \ https://\<<FQDN 」または「 vCenter の IP >>/vsphere-client/` 」に移動します。
+. vSphere Client の起動をクリックします。
+. vCSA のセットアッププロセスで入力したユーザ名 mailto ： administrator@vspehre.loca l [administrator^] @vsphere.local および SSO パスワードを使用してログインします。
+. vCenter 名を右クリックし、 New Datacenter を選択します。
+. データセンターの名前を入力し、 [OK] をクリックします。
+
+
+
+
+== vSphere クラスタを作成します
+
+vSphere クラスタを作成するには、次の手順を実行します。
+
+. 新しく作成したデータセンターを右クリックし、 [New Cluster] を選択します。
+. クラスタの名前を入力します。
+. チェックボックスをオンにして DR と vSphere HA を有効にします。
+. [OK] をクリックします。
++
+image:express-c-series-c190-deploy_image45.png["エラー：グラフィックイメージがありません"]
+
+
+
+
+
+== ESXi ホストをクラスタに追加
+
+ESXi ホストをクラスタに追加するには、次の手順を実行します。
+
+. クラスタを右クリックし、 Add Host （ホストの追加）を選択します。
++
+image:express-c-series-c190-deploy_image46.png["エラー：グラフィックイメージがありません"]
+
+. ESXi ホストをクラスタに追加するには、次の手順を実行します。
++
+.. ホストの IP または FQDN を入力します。次へをクリックします。
+.. root ユーザ名とパスワードを入力します。次へをクリックします。
+.. Yes をクリックして、ホストの証明書を VMware 証明書サーバによって署名された証明書に置き換えます。
+.. [Host Summary] ページで [Next] をクリックします。
+.. 緑の + アイコンをクリックして、 vSphere ホストにライセンスを追加します。
+
+
+. この手順は、必要に応じてあとで実行できます。
++
+.. [ 次へ ] をクリックして、ロックダウンモードを無効のままに
+.. [VM の場所 ] ページで [ 次へ ] をクリックします。
+.. [Ready to Complete] ページを確認します。[ 戻る ] ボタンを使用して変更を行うか、 [ 完了 ] を選択します。
+
+
+. Cisco UCS ホスト B に対して手順 1 と 2 を繰り返します
++
+
+NOTE: FlexPod 構成にホストを追加する場合は、この手順を実行する必要があります。
+
+
+
+
+
+== ESXi ホストにコアダンプを設定します
+
+ESXi ホストにコアダンプを設定するには、次の手順を実行します。
+
+. https ： // にログインします https://172.21.181.105:5480/ui/services["vCenter"^] IP:5480/ の場合は、ユーザ名に root を入力し、 root パスワードを入力します。
+. services をクリックして、 VMware vSphere ESXi Dump Collector を選択します。
+. VMware vSphere ESXi Dump コレクタサービスを開始します。
++
+image:express-c-series-c190-deploy_image47.png["エラー：グラフィックイメージがありません"]
+
+. SSH を使用して管理 IP ESXi ホストに接続し、ユーザ名に「 root 」と入力して、 root パスワードを入力します。
+. 次のコマンドを実行します。
++
+....
+esxcli system coredump network set -i ip_address_of_core_dump_collector -v vmk0 -o 6500
+esxcli system coredump network set --enable=true
+esxcli system coredump network check
+....
+. 最終コマンドを入力すると、「 Verified the configured netdump server is running 」というメッセージが表示されます。
++
+image:express-c-series-c190-deploy_image48.png["エラー：グラフィックイメージがありません"]
+
++
+
+NOTE: FlexPod Express にホストを追加する場合は、このプロセスを完了する必要があります。
+
++
+
+NOTE: この検証で使用する「 IP_address_OF_CORE_DUMP_collector 」は、 vCenter の IP です。
+
+
+
+link:express-c-series-c190-design_netapp_virtual_storage_console_9.6_deployment_procedures.html["次： NetApp Virtual Storage Console 9.6 導入手順"]

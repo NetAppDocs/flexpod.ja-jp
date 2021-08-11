@@ -1,0 +1,21 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-fabricpool_introduction.html 
+keywords: flexpod, fabricpool, inactive, data, tiering, amazon, aws, s3 
+summary: このテクニカルレポートでは、ネットアップと Cisco が提供する FlexPod コンバージドインフラアーキテクチャに関連して、 ONTAP FabricPool のデータ階層化機能について説明します。 
+---
+= TR-4801 ：『 FlexPod with FabricPool - Inactive Data Tiering to Amazon AWS S3 』
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+ネットアップ、 Scott Kovacs 氏
+
+フラッシュストレージの価格は下落し続けているため、これまでフラッシュストレージの候補とみなされていなかったワークロードやアプリケーションで利用できます。しかし、 IT 管理者にとっては、ストレージへの投資を最も効率的に活用することが非常に重要です。IT 部門は、予算をほとんど増やすことなく、パフォーマンスの高いサービスを提供し続ける必要があります。このようなニーズに対応するために、 NetApp FabricPool では、使用頻度の低いデータをオンプレミスの高価なフラッシュストレージからパブリッククラウドの対費用効果の高いストレージ階層に移動することで、クラウドの経済性を活用できます。アクセス頻度の低いデータをクラウドに移動することで、 AFF システムや FAS システム上の貴重なフラッシュストレージスペースが解放され、ビジネスクリティカルなワークロードに対応できる容量がハイパフォーマンスのフラッシュ階層に追加されます。
+
+このテクニカルレポートでは、ネットアップと Cisco が提供する FlexPod コンバージドインフラアーキテクチャに関連して、 ONTAP FabricPool のデータ階層化機能について説明します。このテクニカルレポートで説明する概念を最大限に活用するには、 FlexPod データセンター統合インフラアーキテクチャと ONTAP ストレージソフトウェアについて理解しておく必要があります。FlexPod と ONTAP に精通していることを前提に、 FabricPool とその仕組み、オンプレミスのフラッシュストレージをより効率的に使用するための の使用方法について説明します。このレポートの内容の大部分については、で詳しく説明します https://www.netapp.com/pdf.html?item=/media/17239-tr4598pdf.pdf["TR-4598 ：『 FabricPool Best Practices 』"^] およびその他の ONTAP 製品ドキュメントを参照してください。このコンテンツは FlexPod インフラのために集約されており、 FabricPool のすべてのユースケースを網羅しているわけではありません。ONTAP 9.6 では、すべての機能と概念が使用可能です。
+
+追加情報 About FlexPod をに示します https://www.netapp.com/pdf.html?item=/media/12424-tr4036.pdf["TR-4036 『 FlexPod データセンター技術仕様』"^]。

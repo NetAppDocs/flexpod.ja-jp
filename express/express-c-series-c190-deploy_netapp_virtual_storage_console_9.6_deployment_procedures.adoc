@@ -1,0 +1,106 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-c190-deploy_netapp_virtual_storage_console_9.6_deployment_procedures.html 
+keywords: virtual, storage, console, deployment, procedures, install, nfs, vaai 
+summary: このセクションでは、 NetApp Virtual Storage Console （ VSC ）の導入手順について説明します。 
+---
+= NetApp Virtual Storage Console 9.6 の導入手順
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+このセクションでは、 NetApp Virtual Storage Console （ VSC ）の導入手順について説明します。
+
+
+
+== Virtual Storage Console 9.6 をインストールします
+
+Open Virtualization Format （ OVF ）導入を使用して VSC 9.6 ソフトウェアをインストールする手順は、次のとおりです。
+
+. vSphere Web Client > Host Cluster > Deploy OVF Template に移動します。
+. ネットアップサポートサイトからダウンロードした VSC OVF ファイルを参照します。
++
+image:express-c-series-c190-deploy_image49.png["エラー：グラフィックイメージがありません"]
+
+. VM 名を入力し、導入先のデータセンターまたはフォルダを選択します。次へをクリックします。
++
+image:express-c-series-c190-deploy_image50.png["エラー：グラフィックイメージがありません"]
+
+. 「 FlexPod - Cluster ESXi 」クラスタを選択し、「 Next 」をクリックします。
+. 詳細を確認し、 [ 次へ ] をクリックします。
++
+image:express-c-series-c190-deploy_image51.png["エラー：グラフィックイメージがありません"]
+
+. [Accept （同意） ] をクリックしてライセンスを受け入れ、 [Next] をクリックします。
+. シンプロビジョニング仮想ディスク形式と NFS データストアの 1 つを選択します。次へをクリックします。
++
+image:express-c-series-c190-deploy_image52.png["エラー：グラフィックイメージがありません"]
+
+. [Select Networks] ( ネットワークの選択 ) から宛先ネットワークを選択し、 [Next] ( 次へ ) をクリックします。
++
+image:express-c-series-c190-deploy_image53.png["エラー：グラフィックイメージがありません"]
+
+. テンプレートのカスタマイズで、 VSC 管理者パスワード、 vCenter 名または IP アドレス、およびその他の設定の詳細を入力し、次へをクリックします。
++
+image:express-c-series-c190-deploy_image54.png["エラー：グラフィックイメージがありません"]
+
+. 入力した設定の詳細を確認し、 Finish をクリックして NetApp-VSC VM の導入を完了します。
+. NetApp-VSC VM の電源をオンにして、 VM コンソールを開きます。
+. NetApp - VSC VM のブートプロセス中に、 VMware Tools のインストールを求めるプロンプトが表示されます。vCenter で、 [NetApp-VSC VM] -[ ゲスト OS] -[ VMware Tools のインストール ] を選択します。
++
+image:express-c-series-c190-deploy_image55.png["エラー：グラフィックイメージがありません"]
+
+. OVF テンプレートのカスタマイズ時に、ネットワーク設定と vCenter の登録情報が提供されました。そのため、 NetApp-VSC VM の実行後、 VSC 、 vSphere API for Storage Awareness （ VASA ）、および VMware Storage Replication Adapter （ SRA ）が vCenter に登録されます。
+. vCenter Client からログアウトし、再度ログインします。ホームメニューから、 NetApp VSC がインストールされていることを確認します。
++
+image:express-c-series-c190-deploy_image56.png["エラー：グラフィックイメージがありません"]
+
+
+
+
+
+== NetApp NFS VAAI Plug-in をダウンロードしてインストールします
+
+NetApp NFS VAAI Plug-in をダウンロードしてインストールするには、次の手順を実行します。
+
+. NetApp NFS Plug-in 1.1.2 for VMware' をダウンロードしますNFS プラグインのダウンロードページから VIB ファイルをダウンロードし、ローカルマシンまたは管理ホストに保存します。
+. NetApp NFS Plug-in for VMware VAAI をダウンロードします。
++
+.. にアクセスします https://mysupport.netapp.com/NOW/download/software/nfs_plugin_vaai_esxi6/1.1.2/["ソフトウェアダウンロードページ"^]。
+.. 下にスクロールして、 NetApp NFS Plug-in for VMware VAAI をクリックします。
+.. vSphere Web Client のホーム画面で、 Virtual Storage Console を選択します。
+.. Virtual Storage Console > Settings > NFS VAAI Tools で、ファイルを選択し、ダウンロードしたプラグインが格納されている場所を参照して、 NFS Plug-in をアップロードします。
++
+image:express-c-series-c190-deploy_image57.png["エラー：グラフィックイメージがありません"]
+
+
+
+. アップロードをクリックして、プラグインを vCenter に転送します。
+. ホストを選択し、 NetApp VSC > Install NFS Plug-in for VMware VAAI の順に選択します。
++
+image:express-c-series-c190-deploy_image58.png["エラー：グラフィックイメージがありません"]
+
+
+
+
+
+== ESXi ホストのストレージ設定を最適化します
+
+VSC を使用すると、ネットアップストレージコントローラに接続されているすべての ESXi ホストに対して、ストレージ関連の設定を自動的に構成できます。これらの設定を使用するには、次の手順を実行します。
+
+. ホーム画面で、 vCenter > Hosts and Clusters を選択します。各 ESXi ホストを右クリックし、 NetApp VSC > Set Recommended Values を選択します。
++
+image:express-c-series-c190-deploy_image59.png["エラー：グラフィックイメージがありません"]
+
+. 選択した vSphere ホストに適用する設定を確認してください。[OK] をクリックして設定を適用します。
++
+image:express-c-series-c190-deploy_image60.png["エラー：グラフィックイメージがありません"]
+
++
+image:express-c-series-c190-deploy_image61.png["エラー：グラフィックイメージがありません"]
+
+. これらの設定を適用したら、 ESXi ホストをリブートします。
+

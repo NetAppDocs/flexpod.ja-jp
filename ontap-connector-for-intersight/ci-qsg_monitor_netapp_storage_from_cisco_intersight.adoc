@@ -1,0 +1,49 @@
+---
+sidebar: sidebar 
+permalink: ontap-connector-for-intersight/ci-qsg_monitor_netapp_storage_from_cisco_intersight.html 
+keywords: netapp, storage, cisco intersight, monitor, orchestrate, orchestration, storage inventory, storage widgets 
+summary: ターゲットへの請求が完了すると、 Advantage Tier ライセンスがある場合は、ネットアップストレージウィジェット、ストレージインベントリ、および仮想化の各タブを使用できるようになります。Premier Tier ライセンスがある場合は、オーケストレーションタブを使用できます。 
+---
+= Cisco Intersight からネットアップストレージを監視
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+ターゲットへの請求が完了すると、 Advantage Tier ライセンスがある場合は、ネットアップストレージウィジェット、ストレージインベントリ、および仮想化の各タブを使用できるようになります。Premier Tier ライセンスがある場合は、オーケストレーションタブを使用できます。
+
+
+
+== ストレージインベントリの概要
+
+次のスクリーンショットは、 * Operate > Storage * 画面を示しています。
+
+image:ci-qsg_image9.png["スクリーンショットは、 [Operate &GT; Storage] 画面を示しています"]
+
+次のスクリーンショットは、ストレージクラスタの概要を示しています。
+
+image:ci-qsg_image10.png["スクリーンショットは、ストレージクラスタの概要を示しています"]
+
+
+
+== ストレージウィジェット
+
+ストレージウィジェットを表示するには、 * Monitoring > Dashboards > View NetApp Storage widgets * に移動します。
+
+* 次のスクリーンショットは、ストレージバージョンサマリウィジェットを示しています。
+
+
+image:ci-qsg_image11.jpg["ストレージバージョンサマリウィジェットのスクリーンショット"]
+
+* このスクリーンショットは、容量利用率別の上位 5 つのストレージアレイを示しています。
+
+
+image:ci-qsg_image12.png["容量利用率別の上位 5 つのストレージアレイを示すウィジェットのスクリーンショット"]
+
+* このスクリーンショットは、容量利用率別の上位 5 つのストレージボリュームを示しています。
+
+
+image:ci-qsg_image13.png["容量利用率別の上位 5 つのストレージボリュームを示すウィジェットのスクリーンショット"]

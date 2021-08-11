@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-deploy_initiator_group_configuration.html 
+keywords: initiator, group, configuration, fc, data, network, protocol, igroups 
+summary: FC をデータネットワークプロトコルとして使用する場合は、各ストレージコントローラに 2 つのイニシエータグループ（ igroup ）を作成します。1 つ目の igroup には、 MEDITECH ホスト VM （ MEDITECH 向け igroup ）をホストしている VMware ESXi サーバ上の FC ホストインターフェイスカードの WWPN が含まれています。 
+---
+= イニシエータグループの構成
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+FC をデータネットワークプロトコルとして使用する場合は、各ストレージコントローラに 2 つのイニシエータグループ（ igroup ）を作成します。1 つ目の igroup には、 MEDITECH ホスト VM （ MEDITECH 向け igroup ）をホストしている VMware ESXi サーバ上の FC ホストインターフェイスカードの WWPN が含まれています。
+
+MEDITECH igroup オペレーティングシステムのタイプは環境設定に応じて設定する必要があります。例：
+
+* Windows Server 環境のベアメタルサーバ・ハードウェアにインストールされているアプリケーションには、 igroup オペレーティング・システム・タイプ「 windows 」を使用します。
+* VMware vSphere ハイパーバイザを使用して仮想化されるアプリケーションには、 igroup オペレーティングシステムタイプ「 vmware 」を使用します。
+
+
+
+NOTE: igroup のオペレーティングシステムのタイプは、 LUN のオペレーティングシステムのタイプと異なる場合があります。たとえば、仮想化された MEDITECH ホストの場合、 igroup のオペレーティング・システム・タイプを「 vmware 」に設定する必要があります。仮想化された MEDITECH ホストが使用する LUN の場合は ' オペレーティング・システムのタイプを Windows 2008 以降に設定する必要がありますMEDITECH ホストオペレーティングシステムが Windows Server 2008 R2 64 ビット Enterprise Edition であるため、この設定を使用します。
+
+オペレーティング・システム・タイプに適した値については、の「 LUN igroup の作成」および「 LUN の作成」を参照してください https://library.netapp.com/ecm/ecm_download_file/ECMP1366832["『 clustered Data ONTAP 8.2 コマンド：マニュアルページリファレンス』"^]。
+
+link:ehr-meditech-deploy_lun_mappings.html["次のコマンド： LUN マッピング"]

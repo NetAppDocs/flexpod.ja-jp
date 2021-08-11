@@ -1,0 +1,96 @@
+---
+sidebar: sidebar 
+permalink: fp-def/fp-express-tech-spec__cisco_components.html 
+keywords: cisco, components, blade, server, options, rack, ucs, nexus, switches 
+summary: シスコは、 FlexPod Express の設計およびアーキテクチャに大きく貢献しており、解決策のコンピューティングおよびネットワーキングレイヤに貢献しています。 
+---
+= シスコのコンポーネント
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+シスコは、 FlexPod Express の設計およびアーキテクチャに大きく貢献しており、解決策のコンピューティングおよびネットワーキングレイヤに貢献しています。ここでは、 FlexPod Express で使用できる Cisco UCS および Cisco Nexus コンポーネントについて説明します。
+
+
+
+== Cisco UCS B シリーズブレードサーバのオプション
+
+Cisco UCS Mini プラットフォームで現在サポートされている Cisco UCS B シリーズブレードは、 B200 M5 および B420 M4 です。その他のブレードは、 Cisco UCS Mini プラットフォームでサポートされるようになるため、次の表に記載されます。
+
+|===
+| Cisco UCS B シリーズサーバ | パーツ番号 | 技術仕様 
+
+
+| Cisco UCS B200 M5 | UCSB-B2005-M5 | https://www.cisco.com/c/en/us/support/servers-unified-computing/ucs-b200-m5-blade-server/model.html[] 
+
+
+| Cisco UCS B200 M4 | UCSB-B2004-M4 | http://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/b200m4-specsheet.pdf[] 
+
+
+| Cisco UCS B420 M4 | UCSB-B420-M4 | http://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/b420m4-spec-sheet.pdf[] 
+|===
+
+
+== Cisco UCS C シリーズラックサーバのオプション
+
+Cisco UCS C シリーズブレードには、 1 ラックおよび 2 ラックユニット（ RU ）のさまざまな種類があり、 CPU 、メモリ、 I/O のオプションもさまざまです。次の表に示す部品番号は、ベースサーバのものです。 CPU 、メモリ、ディスクドライブ、 PCIe カード、 Cisco FEX は含まれません。FlexPod では、複数の設定オプションを使用でき、サポートされています。
+
+|===
+| Cisco UCS C シリーズラックサーバ | パーツ番号 | 技術仕様 
+
+
+| Cisco UCS C220 M4 | UCSC-C220 - M4S | http://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c220m4-sff-spec-sheet.pdf[] 
+
+
+| Cisco UCS C240 M4 | UCSC-C240 - M4S | http://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c240m4-sff-spec-sheet.pdf[] 
+
+
+| Cisco UCS C460 M4 | UCSC-C460-M4 | http://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c460m4_specsheet.pdf[] 
+|===
+
+
+== Cisco Nexus スイッチ
+
+すべての FlexPod Express アーキテクチャに冗長スイッチが必要です。
+
+AFF Express with FlexPod または FAS アーキテクチャは、 Cisco Nexus 31108 スイッチで構築されます。Cisco UCS Mini （ Cisco UCS で管理される）アーキテクチャを搭載した FlexPod Express は、 Cisco Nexus 3524 スイッチを使用して検証されます。この構成は、標準スイッチを使用して導入することもできます。
+
+E シリーズを搭載した FlexPod Express は、標準スイッチとして導入できます。
+
+次の表に、 Cisco Nexus シリーズシャーシの部品番号を示します。これらの部品番号には、追加の SFP モジュールやアドオンモジュールは含まれていません。
+
+|===
+| Cisco Nexus シリーズスイッチ | パーツ番号 | 技術仕様 
+
+
+| Cisco Nexus 3048 | N3K-C3048TP-1GE | http://www.cisco.com/c/en/us/products/collateral/switches/nexus-3000-series-switches/data_sheet_c78-685363.html[] 
+
+
+| Cisco Nexus 31108 | N3K-C31108PC-V | http://www.cisco.com/c/en/us/products/switches/nexus-31108pc-v-switch/index.html[] 
+
+
+| Cisco Nexus 9396 | N9K-C9396PX | http://www.cisco.com/c/en/us/products/collateral/switches/nexus-9000-series-switches/datasheet-c78-729405.html[] 
+
+
+| Cisco Nexus 3172 | N3K-C3172. | https://www.cisco.com/c/en/us/products/collateral/switches/nexus-3000-series-switches/data_sheet_c78-729483.html[] 
+|===
+
+
+== シスコのサポートライセンスオプション
+
+FlexPod Express アーキテクチャのすべてのシスコ機器について、有効な SMARTnet サポート契約が必要です。
+
+
+NOTE: 必要なライセンスとこれらのライセンスのパーツ番号は、製品によって異なる場合があるため、営業担当者が確認する必要があります。
+
+次の表に、シスコのサポートライセンスオプションを示します。
+
+|===
+| Cisco Support のライセンス | ライセンスガイド 
+
+
+| SMARTnet 24X7x4 | http://www.cisco.com/web/services/portfolio/product-technical-support/smartnet/index.html[] 
+|===

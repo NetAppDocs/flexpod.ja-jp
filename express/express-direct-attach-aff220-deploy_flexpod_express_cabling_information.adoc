@@ -1,0 +1,142 @@
+---
+sidebar: sidebar 
+permalink: express/express-direct-attach-aff220-deploy_flexpod_express_cabling_information.html 
+keywords: cabling, express, information, cisco, nexus, switch, aff, storage, controller, ucs, fabric 
+summary: リファレンス検証のケーブル接続については、次の表で説明します。 
+---
+= FlexPod エクスプレスケーブル接続情報
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+リファレンス検証のケーブル接続については、次の表で説明します。
+
+次の表に、 Cisco Nexus スイッチ 31108PCV A のケーブル接続情報を示します
+
+|===
+| ローカルデバイス | ローカルポート | リモートデバイス | リモートポート 
+
+
+.6+| Cisco Nexus スイッチ 31108PCV A | Eth1/1 | NetApp AFF A220 ストレージコントローラ A | e0M 
+
+
+| Eth1/2 | Cisco UCS-mini FIA | mgmt0 （管理） 
+
+
+| Eth1/3 | Cisco UCS-mini FIA | Eth1/1 
+
+
+| ETH 1/4 | Cisco UCS-mini FI-B | Eth1/1 
+
+
+| ETH 1/13 | Cisco NX 31108PCV B | ETH 1/13 
+
+
+| ETH 1/14 | Cisco NX 31108PCV B | ETH 1/14 
+|===
+次の表に、 Cisco Nexus スイッチ 31108PCV B のケーブル接続情報を示します
+
+|===
+| ローカルデバイス | ローカルポート | リモートデバイス | リモートポート 
+
+
+.6+| Cisco Nexus スイッチ 31108PCV B | Eth1/1 | NetApp AFF A220 ストレージコントローラ B | e0M 
+
+
+| Eth1/2 | Cisco UCS-mini FI-B | mgmt0 （管理） 
+
+
+| Eth1/3 | Cisco UCS-mini FIA | Eth1/2 
+
+
+| ETH 1/4 | Cisco UCS-mini FI-B | Eth1/2 
+
+
+| ETH 1/13 | Cisco NX 31108PCV A | ETH 1/13 
+
+
+| ETH 1/14 | Cisco NX 31108PCV A | ETH 1/14 
+|===
+次の表に、 NetApp AFF A220 ストレージコントローラ A のケーブル接続情報を示します
+
+|===
+| ローカルデバイス | ローカルポート | リモートデバイス | リモートポート 
+
+
+.5+| NetApp AFF A220 ストレージコントローラ A | e0a | NetApp AFF A220 ストレージコントローラ B | e0a 
+
+
+| e0b | NetApp AFF A220 ストレージコントローラ B | e0b 
+
+
+| e0e | Cisco UCS-mini FIA | Eth1/3 
+
+
+| e0f | Cisco UCS-mini FI-B | Eth1/3 
+
+
+| e0M | Cisco NX 31108PCV A | Eth1/1 
+|===
+次の表に、 NetApp AFF A220 ストレージコントローラ B のケーブル接続情報を示します
+
+|===
+| ローカルデバイス | ローカルポート | リモートデバイス | リモートポート 
+
+
+.5+| NetApp AFF A220 ストレージコントローラ B | e0a | NetApp AFF A220 ストレージコントローラ B | e0a 
+
+
+| e0b | NetApp AFF A220 ストレージコントローラ B | e0b 
+
+
+| e0e | Cisco UCS-mini FIA | Eth1/4 
+
+
+| e0f | Cisco UCS-mini FI-B | Eth1/4 
+
+
+| e0M | Cisco NX 31108PCV B | Eth1/1 
+|===
+次の表に、 Cisco UCS Fabric Interconnect A のケーブル接続情報を示します
+
+|===
+| ローカルデバイス | ローカルポート | リモートデバイス | リモートポート 
+
+
+.5+| Cisco UCS ファブリックインターコネクト A | Eth1/1 | Cisco NX 31108PCV A | Eth1/3 
+
+
+| Eth1/2 | Cisco NX 31108PCV B | Eth1/3 
+
+
+| Eth1/3 | NetApp AFF A220 ストレージコントローラ A | e0e 
+
+
+| Eth1/4 | NetApp AFF A220 ストレージコントローラ B | e0e 
+
+
+| mgmt0 （管理） | Cisco NX 31108PCV A | Eth1/2 
+|===
+次の表に、 Cisco UCS ファブリックインターコネクト B のケーブル接続情報を示します
+
+|===
+| ローカルデバイス | ローカルポート | リモートデバイス | リモートポート 
+
+
+.5+| Cisco UCS ファブリックインターコネクト B | Eth1/1 | Cisco NX 31108PCV A | Eth1/4 
+
+
+| Eth1/2 | Cisco NX 31108PCV B | Eth1/4 
+
+
+| Eth1/3 | NetApp AFF A220 ストレージコントローラ A | e0f 
+
+
+| Eth1/4 | NetApp AFF A220 ストレージコントローラ B | e0f 
+
+
+| mgmt0 （管理） | Cisco NX 31108PCV B | Eth1/2 
+|===

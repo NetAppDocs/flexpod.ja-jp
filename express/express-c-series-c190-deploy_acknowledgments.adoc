@@ -1,0 +1,16 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-c190-deploy_acknowledgments.html 
+keywords: author, acknowledgements, express, c, series, c190, deployment, flexpod 
+summary: 著者はジョンジョージをこの設計への彼のサポートそして貢献のために認めたいと思う。 
+---
+= 謝辞
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+著者はジョンジョージをこの設計への彼のサポートそして貢献のために認めたいと思う。

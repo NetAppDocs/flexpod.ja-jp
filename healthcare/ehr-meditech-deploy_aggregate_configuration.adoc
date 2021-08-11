@@ -1,0 +1,52 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-deploy_aggregate_configuration.html 
+keywords: aggregate, configuration, raid, groups, dp, storage, expansion, snapshot, copy, 
+summary: ネットアップでは、通常のネットアップの Flash Pool アグリゲートを含め、ネットアップ FAS または AFF システム内のすべてのアグリゲートの RAID タイプとして RAID DP テクノロジを推奨しています。MEDITECH のドキュメントで RAID 10 の使用が規定されているかもしれませんが、 MEDITECH では RAID DP の使用が承認されています。 
+---
+= アグリゲートの構成
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+
+
+== NetApp RAID DP
+
+ネットアップでは、通常のネットアップの Flash Pool アグリゲートを含め、ネットアップ FAS または AFF システム内のすべてのアグリゲートの RAID タイプとして RAID DP テクノロジを推奨しています。MEDITECH のドキュメントで RAID 10 の使用が規定されているかもしれませんが、 MEDITECH では RAID DP の使用が承認されています。
+
+
+
+== RAID グループのサイズと数
+
+デフォルトの RAID グループサイズは 16 です。このサイズは、特定のサイトの MEDITECH ホストに対応するアグリゲートに適しているとはかぎりません。ネットアップが RAID グループで使用することを推奨しているディスクの数については、を参照してください https://fieldportal.netapp.com/content/190829["ネットアップ TR-3838 ：『 Storage Subsystem Configuration Guide 』"^]。
+
+ネットアップでは、 RAID グループサイズと同じ 1 つ以上のディスクグループを含むアグリゲートにディスクを追加することを推奨しているため、 RAID グループのサイズはストレージ拡張にとって重要です。RAID グループの数は、データディスクの数と RAID グループのサイズによって異なります。必要なデータディスクの数を判断するには、 NetApp System Performance Modeler （ SPM ）サイジングツールを使用します。データディスクの数を決定したら、 RAID グループのサイズを調整して、各ディスクタイプの RAID グループサイズの推奨範囲内でパリティディスクの数が最小になるようにします。
+
+MEDITECH 環境向け SPM サイジングツールの使用方法については、を参照してください https://fieldportal.netapp.com/content/198446["NetApp TR-4190 ：『 NetApp Sizing Guidelines for MEDITECH Environments 』"^]。
+
+
+
+== ストレージ拡張に関する考慮事項
+
+ディスク数の多いアグリゲートを拡張する場合は、アグリゲート RAID グループサイズと同じグループに含まれるディスクを追加します。このアプローチに従うことで、アグリゲート全体でパフォーマンスの一貫性を確保できます。
+
+たとえば、 RAID グループサイズが 20 で作成されたアグリゲートにストレージを追加する場合、ネットアップでは 20 本以上のディスクグループを追加することを推奨します。そのため、ディスクに 20 、 40 、 60 などを追加します。
+
+アグリゲートを拡張したら、影響を受けるボリュームまたはアグリゲートで再配置タスクを実行して、既存のデータストライプを新しいディスクに分散することで、パフォーマンスを向上できます。この処理は、特に既存のアグリゲートがいっぱいになった場合に役立ちます。
+
+
+NOTE: CPU 負荷の高いタスクとディスク負荷の高いタスクであるため、営業時間外にスケジュールの再割り当てを計画する必要があります。
+
+アグリゲート拡張後の再配置の使用の詳細については、を参照してください https://fieldportal.netapp.com/content/192896["ネットアップの TR-3929 ：『 Reallocate Best Practices Guide 』"^]。
+
+
+
+== アグリゲートレベルの Snapshot コピー
+
+アグリゲートレベルの NetApp Snapshot コピーリザーブを 0 に設定し、デフォルトのアグリゲート Snapshot スケジュールを無効にします。可能であれば、既存のアグリゲートレベルの Snapshot コピーを削除します。
+
+link:ehr-meditech-deploy_storage_virtual_machine_configuration.html["次： Storage Virtual Machine の構成"]

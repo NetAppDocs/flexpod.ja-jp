@@ -1,0 +1,49 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-epic-sizing_additional_information.html 
+keywords: additional, information, flexpod, epic, sizing 
+summary: このドキュメントに記載されている情報の詳細については、以下のドキュメントまたは Web サイトを参照してください。 
+---
+= 追加情報
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+このドキュメントに記載されている情報の詳細については、次のドキュメントまたは Web サイトを参照してください。
+
+* FlexPod データセンターと FC の Cisco Validated Design の 2 つの機能がありますFlexPod データセンター環境の詳細な導入。
++
+https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi65u1_n9fc.html["https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi65u1_n9fc.html"^]
+
+* TR-3928 ：『 NetApp Best Practices for Epic 』Epic ソフトウェア環境、リファレンスアーキテクチャ、統合に関するベストプラクティスの概要
++
+https://fieldportal.netapp.com/?oparams=68646["https://fieldportal.netapp.com/?oparams=68646"^]
+
+* TR-3930i ：『 NetApp Sizing Guidelines for Epic 』（ Field Portal へのアクセスはこのドキュメントで確認する必要がある）
++
+https://fieldportal.netapp.com/?oparams=68786["https://fieldportal.netapp.com/?oparams=68786"^]
+
+* Epic on_cisco_UCS_tech_briefCisco UCS で Epic を使用した Cisco のベストプラクティス
++
+https://www.cisco.com/c/dam/en_us/solutions/industries/healthcare/Epic_on_UCS_tech_brief_FNL.pdf["https://www.cisco.com/c/dam/en_us/solutions/industries/healthcare/Epic_on_UCS_tech_brief_FNL.pdf"^]
+
+* ネットアップ https://netapp-my.sharepoint.com/:w:/p/dorianh/ETSsgHnsIipGkSvMd-EZFpEBIvAmw_rAZvw1RGDtWiMr8w["FlexPod"^] 設計ゾーン（ Design Zone ）
++
+https://www.cisco.com/c/en/us/solutions/design-zone/data-center-design-guides/flexpod-design-guides.html["https://www.cisco.com/c/en/us/solutions/design-zone/data-center-design-guides/flexpod-design-guides.html"^]
+
+* FlexPod DC とファイバチャネルストレージ（ MDS スイッチ）は、 NetApp AFF 、 vSphere 6.5U1 、および Cisco UCS Manager を使用します
++
+https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi65u1_n9fc.html["https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi65u1_n9fc.html"^]
+
+* TR-4693 ：『 FlexPod Datacenter for Epic EHR Deployment Guide 』
++
+https://www.netapp.com/us/media/tr-4693.pdf["https://www.netapp.com/us/media/tr-4693.pdf"^]
+
+* ネットアップの製品マニュアル
++
+https://www.netapp.com/us/documentation/index.aspx["https://www.netapp.com/us/documentation/index.aspx"^]
+
+

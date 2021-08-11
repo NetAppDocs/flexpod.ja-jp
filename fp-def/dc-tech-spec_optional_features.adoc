@@ -1,0 +1,167 @@
+---
+sidebar: sidebar 
+permalink: fp-def/dc-tech-spec_optional_features.html 
+keywords: metrocluster, fc, nvme, fc, san, boot, cisco, mds, fcoe, iscsi 
+summary: ネットアップは、 FlexPod データセンターのアーキテクチャをさらに強化するために、いくつかのオプションコンポーネントをサポートしてオプションコンポーネントについては、以降のサブセクションで説明します。 
+---
+= オプション機能
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+ネットアップは、 FlexPod データセンターのアーキテクチャをさらに強化するために、いくつかのオプションコンポーネントをサポートしてオプションコンポーネントについては、以降のサブセクションで説明します。
+
+
+
+== MetroCluster
+
+FlexPod は、 2 ノードまたは 4 ノードのどちらのクラスタ構成でも、継続的可用性を実現する NetApp MetroCluster ソフトウェアのどちらかのバリエーションをサポートします。MetroCluster は、重要なワークロード向けに同期レプリケーションを提供します。Cisco スイッチに接続されたデュアルサイト構成が必要です。サイト間でサポートされる最大距離は、 MetroCluster FC の場合は約 186 マイル（ 300km ）、 MetroCluster IP の場合は約 435 マイル（ 700km ）に増加します。次の図は、 FlexPod Datacenter with NetApp MetroCluster Architecture と FlexPod Datacenter with NetApp MetroCluster IP Architecture をそれぞれ示しています。
+
+詳細およびガイダンスについては、次の導入ドキュメントを参照してください。
+
+* * FlexPod MetroCluster FC. * http://www.netapp.com/us/media/nva-0030-deploy.pdf["NVA-0030 - 導入： MetroCluster FlexPod FC を使用した データセンター"^]。
+* * FlexPod MetroCluster IP. * https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi67_n9k_aci_metrocluster.html["CVD ：『 FlexPod Datacenter with NetApp MetroCluster IP 』"^]。
+
+
+image:dc-tech-spec_image1.png["エラー：グラフィックイメージがありません"]
+
+image:dc-tech-spec_image2.png["エラー：グラフィックイメージがありません"]
+
+
+
+== エンドツーエンドの FC-NVMe
+
+エンドツーエンドの FC-NVMe は、リアルタイムアプリケーション向けにお客様の既存の SAN インフラストラクチャをシームレスに拡張しながら、同時に、遅延を低減しながら IOPS とスループットを向上させます。
+
+既存の 32G FC SAN 転送を使用して、 NVMe と SCSI の両方のワークロードを同時に転送できます。
+
+次の図に、 FlexPod MDS を使用した FC の データセンターを示します。
+
+FlexPod の構成とパフォーマンスのメリットの詳細については、を参照してください https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/whitepaper-c11-741907.html["ホワイトペーパー『 Introducing End-to-End NVMe for FlexPod 』"^]
+
+ONTAP 実装の詳細については、を参照してください https://www.netapp.com/us/media/tr-4684.pdf["TR-4684 『 Implementing and Configuring Modern SANs with NVMe 』"^]。
+
+image:dc-tech-spec_image3.png["エラー：グラフィックイメージがありません"]
+
+
+
+== Cisco MDS を介した FC SAN ブート
+
+専用の SAN ネットワークを使用して拡張性を向上させるために、 FlexPod は Cisco MDS スイッチ経由で FC をサポートし、 Cisco Nexus 93108TC-FX などの FC スイッチをサポートしています。Cisco MDS の FC SAN ブートオプションには、次のライセンスおよびハードウェア要件があります。
+
+* ネットアップストレージコントローラごとに少なくとも 2 つの FC ポート。 SAN ファブリックごとに 1 つのポート
+* 各ネットアップストレージコントローラに FC ライセンスが必要です
+* ネットアップでサポートされている Cisco MDS スイッチおよびファームウェアのバージョン http://mysupport.netapp.com/matrix["IMT"^]
+
+
+MDS ベースの設計の詳細については、 CVD を参照してください https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_vmware_netappaffa.html["『 FlexPod Datacenter with VMware vSphere 6.7U1 Fibre Channel and iSCSI Deployment Guide 』を参照してください"^]。
+
+次の図は、 MDS 接続を備えた FlexPod Datacenter for FC と、 Cisco Nexus 93180YC-FX を使用した FlexPod Datacenter for FC のそれぞれの例を示しています。
+
+image:dc-tech-spec_image4.jpg["エラー：グラフィックイメージがありません"]
+
+image:dc-tech-spec_image5.png["エラー：グラフィックイメージがありません"]
+
+
+
+== Cisco Nexus を使用した FC SAN ブート
+
+従来の FC SAN ブートオプションには、ライセンスとハードウェアに関する次の要件があります。
+
+* Cisco Nexus 5000 シリーズスイッチで FC ゾーニングを実行する場合は、 Cisco Nexus 5000 シリーズスイッチのストレージプロトコルサービスパッケージライセンス（ FC_FEATURES_PKG ）が必要です。
+* Cisco Nexus 5000 シリーズスイッチで FC ゾーニングを実行する場合は、ファブリックインターコネクトと Cisco Nexus 5000 シリーズスイッチの間に SAN リンクが必要です。さらに冗長性を確保するため、リンク間に SAN ポートチャネルを配置することを推奨します。
+* Cisco Nexus 5010 、 5020 、および 5548P スイッチには、 Cisco UCS ファブリックインターコネクトとネットアップストレージコントローラとの接続用に、個別の FC またはユニバーサルポート（ UP ）モジュールが必要です。
+* Cisco Nexus 93180YC-FX で FC を有効にするには、 FC 機能のライセンスが必要です。
+* ネットアップストレージコントローラごとに、接続用に少なくとも 2 つの 8 / 16 / 32Gb FC ポートが必要です。
+* ネットアップストレージコントローラに FC ライセンスが必要です。
++
+
+NOTE: Cisco Nexus 7000 または 9000 ファミリーのスイッチを使用すると、ファブリックインターコネクトで FC ゾーニングを実行しないかぎり、従来の FC を使用することはできません。この場合、スイッチへの SAN アップリンクはサポートされません。
+
+
+
+次の図に、 FC 接続の構成を示します。
+
+image:dc-tech-spec_image6.png["エラー：グラフィックイメージがありません"]
+
+
+
+== FCoE SAN ブートオプション
+
+FCoE SAN ブートオプションには、ライセンスとハードウェアに関する次の要件があります。
+
+* スイッチで FC ゾーニングを実行する場合は、 Cisco Nexus 5000 または 7000 シリーズスイッチ「（ FC_FEATURES_PKG ）」のストレージプロトコルサービスパッケージライセンスが必要です。
+* スイッチで FC ゾーニングを実行する場合は、ファブリックインターコネクトと Cisco Nexus 5000 または 7000 シリーズスイッチ間に FCoE アップリンクが必要です。さらに冗長性を確保するために、リンク間で FCoE ポートチャネルを使用することも推奨されます。
+* オンボードのユニファイドターゲットアダプタ 2 （ UTA2 ）ポートがないかぎり、各ネットアップストレージコントローラに、 FCoE 接続用のデュアルポートユニファイドターゲットアダプタ（ UTA ）アドオンカードが少なくとも 1 枚必要です。
+* このオプションを使用するには、ネットアップストレージコントローラに FC ライセンスが必要です。
+* Cisco Nexus 7000 シリーズスイッチを使用し、 FC ゾーニングをスイッチで実行する場合は、 FCoE に対応したラインカードが必要です。
++
+
+NOTE: Cisco Nexus 9000 シリーズスイッチを使用すると、ファブリックインターコネクトで FC ゾーニングを実行し、アプライアンスポートでファブリックインターコネクトにストレージを接続していないかぎり、 FCoE を使用できなくなります。この場合、スイッチへの FCoE アップリンクはサポートされません。
+
+
+
+次の図に、 FCoE ブートのシナリオを示します。
+
+image:dc-tech-spec_image7.png["エラー：グラフィックイメージがありません"]
+
+
+
+== iSCSI ブートオプション
+
+iSCSI ブートオプションには、ライセンスとハードウェアに関する次の要件があります。
+
+* ネットアップストレージコントローラに iSCSI ライセンスが必要です。
+* iSCSI ブートに対応した Cisco UCS サーバのアダプタが必要です。
+* ネットアップストレージコントローラには、 2 ポート 10Gbps イーサネットアダプタが必要です。
+
+
+次の図は、 iSCSI でブートされるイーサネットのみの構成を示しています。
+
+image:dc-tech-spec_image8.png["エラー：グラフィックイメージがありません"]
+
+
+
+== Cisco UCS はネットアップストレージと直接接続
+
+NetApp AFF コントローラと FAS コントローラは、アップストリームの SAN スイッチを使用せずに、 Cisco UCS ファブリックインターコネクトに直接接続できます。
+
+ネットアップストレージに直接接続する場合は、 Cisco UCS の次の 4 つのポートタイプを使用できます。
+
+* * ストレージ FC ポート。 * ネットアップストレージの FC ポートに直接接続します。
+* * ストレージ FCoE ポート。 * ネットアップストレージの FCoE ポートにこのポートを直接接続します。
+* * アプライアンス・ポート。 * ネットアップ・ストレージ上の 10GbE ポートに、このポートを直接接続します。
+* * ユニファイドストレージポート。 * このポートを NetApp UTA に直接接続できます。
+
+
+ライセンスとハードウェアの要件は次のとおりです。
+
+* ネットアップストレージコントローラにはプロトコルライセンスが必要です。
+* サーバには Cisco UCS アダプタ（イニシエータ）が必要です。サポートされている Cisco UCS アダプタの一覧については、ネットアップを参照してください http://mysupport.netapp.com/matrix["IMT"^]。
+* ネットアップストレージコントローラにはターゲットアダプタが必要です。
+
+
+次の図に、 FC 直接接続構成を示します。
+
+image:dc-tech-spec_image9.png["エラー：グラフィックイメージがありません"]
+
+* 注： *
+
+* Cisco UCS は FC スイッチングモードで設定されます。
+* ターゲットからファブリックインターコネクトへの FCoE ポートは、 FCoE ストレージポートとして構成されます。
+* ターゲットからファブリックインターコネクトへの FC ポートは、 FC ストレージポートとして構成されます。
+
+
+次の図に、 iSCSI / ユニファイド IP の直接接続構成を示します。
+
+image:dc-tech-spec_image10.png["エラー：グラフィックイメージがありません"]
+
+* 注： *
+
+* Cisco UCS はイーサネットスイッチングモードで設定されます。
+* ターゲットからファブリックインターコネクトへの iSCSI ポートは、 iSCSI データ用のイーサネットストレージポートとして構成されます。
+* ターゲットからファブリックインターコネクトへのイーサネットポートは、 CIFS / NFS データ用のイーサネットストレージポートとして構成されます。
+

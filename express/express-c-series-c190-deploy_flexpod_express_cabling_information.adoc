@@ -1,0 +1,130 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-c190-deploy_flexpod_express_cabling_information.html 
+keywords: flexpod, express, cabling, information, storage, controller, switch, cisco, nexus 
+summary: この参照検証は、次の図と表に示すようにケーブル接続されています。 
+---
+= FlexPod エクスプレスケーブル接続情報
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+この参照検証は、次の図と表に示すようにケーブル接続されています。
+
+この図は、リファレンス検証のケーブル配線を示しています。
+
+image:express-c-series-c190-deploy_image3.png["エラー：グラフィックイメージがありません"]
+
+次の表に、 Cisco Nexus スイッチ 31108PCV-A のケーブル接続情報を示します
+
+|===
+| ローカルデバイス | ローカルポート | リモートデバイス | リモートポート 
+
+
+.10+| Cisco Nexus スイッチ 31108PC-V A | Eth1/1 | NetApp AFF C190 ストレージコントローラ A | e0c 
+
+
+| Eth1/2 | NetApp AFF C190 ストレージコントローラ B | e0c 
+
+
+| Eth1/3 | Cisco UCS C220 C シリーズスタンドアロンサーバ A | MLOM0 
+
+
+| Eth1/4 | Cisco UCS C220 C シリーズスタンドアロンサーバ B | MLOM0 
+
+
+| Eth1/5 | Cisco UCS C220 C シリーズスタンドアロンサーバ A | MLOM1 
+
+
+| Eth1/6 | Cisco UCS C220 C シリーズスタンドアロンサーバ B | MLOM1 
+
+
+| Eth1/25 | Cisco Nexus スイッチ 31108PC-V B | Eth1/25 
+
+
+| Eth1/26 | Cisco Nexus スイッチ 31108PC-V B | Eth1/26 
+
+
+| Eth1/33 | NetApp AFF C190 ストレージコントローラ A | e0M 
+
+
+| Eth1/34 | Cisco UCS C220 C シリーズスタンドアロンサーバ A | CIMC （ FEX135/1/25 ） 
+|===
+この表は、 Cisco Nexus スイッチ 31108PCV-B のケーブル接続情報を示しています
+
+|===
+| ローカルデバイス | ローカルポート | リモートデバイス | リモートポート 
+
+
+.10+| Cisco Nexus スイッチ 31108PC-V B | Eth1/1 | NetApp AFF C190 ストレージコントローラ A | e0d 
+
+
+| Eth1/2 | NetApp AFF C190 ストレージコントローラ B | e0d 
+
+
+| Eth1/3 | Cisco UCS C220 C シリーズスタンドアロンサーバ A | MLOM2 
+
+
+| Eth1/4 | Cisco UCS C220 C シリーズスタンドアロンサーバ B | MLOM2 
+
+
+| Eth1/5 | Cisco UCS C220 C シリーズスタンドアロンサーバ A | MLOM3 
+
+
+| Eth1/6 | Cisco UCS C220 C シリーズスタンドアロンサーバ B | MLOM3 
+
+
+| Eth1/25 | Cisco Nexus スイッチ 31108 A | Eth1/25 
+
+
+| Eth1/26 | Cisco Nexus スイッチ 31108 A | Eth1/26 
+
+
+| Eth1/33 | NetApp AFF C190 ストレージコントローラ B | e0M 
+
+
+| Eth1/34 | Cisco UCS C220 C シリーズスタンドアロンサーバ B | CIMC （ FEX135/1/26 ） 
+|===
+次の表に、 NetApp AFF C190 ストレージコントローラ A のケーブル接続情報を示します
+
+|===
+| ローカルデバイス | ローカルポート | リモートデバイス | リモートポート 
+
+
+.5+| NetApp AFF C190 ストレージコントローラ A | e0a | NetApp AFF C190 ストレージコントローラ B | e0a 
+
+
+| e0b | NetApp AFF C190 ストレージコントローラ B | e0b 
+
+
+| e0c | Cisco Nexus スイッチ 31108PC-V A | Eth1/1 
+
+
+| e0d | Cisco Nexus スイッチ 31108PC-V B | Eth1/1 
+
+
+| e0M | Cisco Nexus スイッチ 31108PC-V A | Eth1/33 
+|===
+この表は、 NetApp AFF C190 ストレージコントローラ B のケーブル接続情報を示しています
+
+|===
+| ローカルデバイス | ローカルポート | リモートデバイス | リモートポート 
+
+
+.5+| NetApp AFF C190 ストレージコントローラ B | e0a | NetApp AFF C190 ストレージコントローラ A | e0a 
+
+
+| e0b | NetApp AFF C190 ストレージコントローラ A | e0b 
+
+
+| e0c | Cisco Nexus スイッチ 31108PC-V A | Eth1/2 
+
+
+| e0d | Cisco Nexus スイッチ 31108PC-V B | Eth1/2 
+
+
+| e0M | Cisco Nexus スイッチ 31108PC-V B | Eth1/33 
+|===

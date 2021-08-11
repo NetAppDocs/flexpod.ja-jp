@@ -1,0 +1,97 @@
+---
+sidebar: sidebar 
+permalink: healthcare/medical-imaging_solution_infrastructure_hardware_and_software_components.html 
+keywords: harware, software, components, solution, infrastructure, medical, imaging, flexpod 
+summary: 次の表に、医用画像システム用 FlexPod インフラストラクチャのハードウェアコンポーネントとソフトウェアコンポーネントをそれぞれ示します。 
+---
+= 解決策インフラのハードウェアコンポーネントとソフトウェアコンポーネント
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+次の表に、医用画像システム用 FlexPod インフラストラクチャのハードウェアコンポーネントとソフトウェアコンポーネントをそれぞれ示します。
+
+|===
+| レイヤー（ Layer ） | 製品ファミリー | 数量とモデル | 詳細 
+
+
+.4+| コンピューティング | Cisco UCS 5108 シャーシ | 1 または 2 | 年間調査数をサポートするために必要なブレード数に基づきます 
+
+
+| Cisco UCS ブレードサーバ | B200 M5 | 20 コア以上、 2.7GHz 以上、 128-384GB RAM を搭載した各年の調査数に基づくブレードの数 
+
+
+| Cisco UCS 仮想インターフェイスカード（ VIC ） | Cisco UCS 1440 | を参照してください 
+
+
+| Cisco UCS ファブリックインターコネクト × 2 | 6454 以降 | – 
+
+
+| ネットワーク | Cisco Nexus スイッチ | Cisco Nexus 3000 シリーズまたは 9000 シリーズ × 2 | – 
+
+
+.2+| ストレージネットワーク | SMB / CIFS 、 NFS 、または iSCSI プロトコル経由のストレージアクセス用の IP ネットワーク | 上記と同じネットワークスイッチ | – 
+
+
+| FC 経由のストレージアクセス | Cisco MDS 9132T × 2 | – 
+
+
+.3+| ストレージ | NetApp AFF A400 オールフラッシュストレージシステム | 1 つ以上の HA ペア | 2 つ以上のノードで構成されるクラスタ 
+
+
+| ディスクシェルフ | 1 台以上の DS224C または NS224 ディスクシェルフ | 24 本のドライブをフル装備 
+
+
+| SSD の場合 | 容量が 24 、 2TB 以上 | – 
+|===
+|===
+| ソフトウェア | 製品ファミリー | バージョンまたはリリース | 詳細 
+
+
+.7+| エンタープライズ医療画像システム |  |  |  
+
+
+| MS SQL または Oracle データベースサーバ | 医療画像システムのベンダーから提案されているとおりです |  
+
+
+| MongoDB サーバのような SQL DB はありません | 医療画像システムのベンダーから提案されているとおりです |  
+
+
+| アプリケーションサーバ | 医療画像システムのベンダーから提案されているとおりです |  
+
+
+| 統合サーバ（ MS BizTalk 、 MuleSoft 、 Rhapsody 、 Tibco ） | 医療画像システムのベンダーから提案されているとおりです |  
+
+
+| 仮想マシン | Linux （ 64 ビット） |  
+
+
+| 仮想マシン | Windows Server （ 64 ビット） |  
+
+
+| ストレージ | ONTAP | ONTAP 9.7 以降 |  
+
+
+.3+| ネットワーク | Cisco UCS ファブリックインターコネクト | Cisco UCS Manager 4.1 以降 |  
+
+
+| Cisco イーサネットスイッチ | 9.2(3) i7(2) 以降 |  
+
+
+| Cisco FC ： Cisco MDS 9132T | 8.4(2) 以降 |  
+
+
+| ハイパーバイザー | ハイパーバイザー | VMware vSphere ESXi 6.7 U2 以降 |  
+
+
+.3+| 管理 | ハイパーバイザー管理システム | VMware vCenter Server 6.7 U1 （ vCSA ）以降 |  
+
+
+| NetApp Virtual Storage Console （ VSC ） | VSC 9.7 以降 |  
+
+
+| SnapCenter | SnapCenter 4.3 以降 |  
+|===

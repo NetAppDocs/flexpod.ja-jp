@@ -1,0 +1,19 @@
+---
+sidebar: sidebar 
+permalink: healthcare/medical-imaging_conclusion.html 
+keywords: medical, imaging, flexpod, healthcare, organization, productivity, conclusion 
+summary: FlexPod で医療画像処理環境を実行することで、医療機関はスタッフの生産性の向上と設備投資と運用コストの削減を期待できます。 
+---
+= まとめ
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+FlexPod で医療画像処理環境を実行することで、医療機関はスタッフの生産性の向上と設備投資と運用コストの削減を期待できます。FlexPod は、 Cisco とネットアップの戦略的パートナーシップにより、検証済みで厳格にテストされた統合インフラを提供します。予測可能な低レイテンシのシステムパフォーマンスと高可用性を実現するように特別に設計されています。このアプローチにより、医療画像システムのユーザーに優れたユーザー体験と最適な応答時間が実現します。
+
+医用画像処理システムのさまざまなコンポーネントが、 SMB / CIFS 、 NFS 、 ext4 、 NTFS ファイルシステムのデータストレージを必要とします。そのため、インフラで、 NFS 、 SMB / CIFS 、 SAN の各プロトコル経由でデータアクセスを提供する必要があります。ネットアップストレージシステムでは、これらのプロトコルを単一のストレージアレイでサポートしています。
+
+高可用性、ストレージ効率、 Snapshot コピーベースのスケジュールされた高速バックアップ、高速リストア処理、ディザスタリカバリ用のデータレプリケーション、 FlexPod ストレージインフラ機能は、いずれも業界をリードするデータストレージと管理システムを提供します。

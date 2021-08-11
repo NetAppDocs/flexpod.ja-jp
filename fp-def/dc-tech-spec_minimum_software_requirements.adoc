@@ -1,0 +1,42 @@
+---
+sidebar: sidebar 
+permalink: fp-def/dc-tech-spec_minimum_software_requirements.html 
+keywords: software, requirements, minimum, flexpod, datacenter, techincal, specifications, cisco, ucs, manager 
+summary: 次の情報は、 FlexPod 構成のソフトウェアの最小要件を示しています。 
+---
+= ソフトウェアの最小要件
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+FlexPod 構成には、次に示す最小ソフトウェア要件があります。
+
+* NetApp ONTAP
++
+** ONTAP ソフトウェアのバージョンには ONTAP 9.1 以降が必要です
+
+
+* Cisco UCS Manager リリース：
++
+** Cisco UCS 6200 シリーズファブリックインターコネクト - 2.2 （ 8a ）
+** Cisco UCS 6300 シリーズファブリックインターコネクト： 3.1 （ 1e ）
+** Cisco UCS 6400 シリーズファブリックインターコネクト： 4.0(1)
+
+
+* Cisco Nexus 5000 シリーズスイッチの場合、 Cisco NX-OS ソフトウェアリリース 5.0(3)N1 （ 1c ）以降（ NX-OS 5.1.x を含む）
+* Cisco Nexus 7000 シリーズスイッチの場合：
++
+** 4 スロットシャーシには、 Cisco NX-OS ソフトウェアリリース 6.1(2) 以降が必要です
+** 9 スロットシャーシには、 Cisco NX-OS ソフトウェアリリース 5.2 以降が必要です
+** 10 スロットシャーシには、 Cisco NX-OS ソフトウェアリリース 4.0 以降が必要です
+** 18 スロットシャーシには、 Cisco NX-OS ソフトウェアリリース 4.1 以降が必要です
+
+
+* Cisco Nexus 9000 シリーズスイッチの場合は、 Cisco NX-OS ソフトウェアリリース 6.1(2) 以降が必要です
+
+
+
+NOTE: FlexPod 構成で使用するソフトウェアがネットアップに表示され、サポートされている必要があります http://mysupport.netapp.com/matrix["IMT"^]。一部の機能では、リストされている機能よりも新しいリリースのソフトウェアが必要になる場合があります。

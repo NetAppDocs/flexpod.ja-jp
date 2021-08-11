@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: fp-def/fp-express-tech-spec_other_requirements.html 
+keywords: requirements, flexpod, express, software, hardware, cisco, imt, hcl 
+summary: FlexPod Express のその他の要件を次に示します。 
+---
+= その他の要件
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+FlexPod Express のその他の要件は次のとおりです。
+
+* 次の項目を含むすべての機器について、有効なサポート契約が必要です。
++
+** シスコ機器に対する SMARTnet サポート
+** ネットアップ機器に対する SupportEdge Premium のサポート
+
+
+* すべてのソフトウェアコンポーネントがにリストされ、サポートされている必要があります http://support.netapp.com/matrix/["NetApp IMT"^]。
+* すべてのネットアップハードウェアコンポーネントがに一覧表示され、サポートされている必要があります https://hwu.netapp.com/Home/Index["NetApp Hardware Universe の略"^]。
+* すべての Cisco ハードウェアコンポーネントがにリストされ、でサポートされている必要があります https://ucshcltool.cloudapps.cisco.com/public/["Cisco HCL"^]。
+

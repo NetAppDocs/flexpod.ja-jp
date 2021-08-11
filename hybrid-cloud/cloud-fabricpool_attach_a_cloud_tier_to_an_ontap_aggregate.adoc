@@ -1,0 +1,60 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-fabricpool_attach_a_cloud_tier_to_an_ontap_aggregate.html 
+keywords: attach, cloud, tier, ontap, aggregate, fabricpool, flexpod, ontap, cli, oncommand, system, manager 
+summary: ONTAP でオブジェクトストアを追加して識別したら、そのオブジェクトストアをアグリゲートに接続して FabricPool を作成する必要があります。このタスクは、 OnCommand システムマネージャまたは ONTAP CLI を使用して実行できます。 
+---
+= ONTAP アグリゲートにクラウド階層を接続する
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+ONTAP でオブジェクトストアを追加して識別したら、そのオブジェクトストアをアグリゲートに接続して FabricPool を作成する必要があります。このタスクは、 OnCommand システムマネージャまたは ONTAP CLI を使用して実行できます。
+
+1 つのクラスタに複数のタイプのオブジェクトストアを接続できますが、各アグリゲートに接続できるオブジェクトストアのタイプは 1 つだけです。たとえば、 1 つのアグリゲートで Google Cloud を使用でき、別のアグリゲートで Amazon S3 を使用できますが、 1 つのアグリゲートを両方に接続することはできません。
+
+
+NOTE: クラウド階層をアグリゲートに接続することは、永続的なアクションです。クラウド階層は、接続されているアグリゲートから接続を解除することはできません。
+
+
+
+== OnCommand システムマネージャ
+
+OnCommand System Manager を使用してクラウド階層をアグリゲートに接続するには、次の手順を実行します。
+
+. OnCommand System Manager を起動します。
+. [ アプリケーションと階層 ] をクリックします。
++
+image:cloud-fabricpool_image14.png["エラー：グラフィックイメージがありません"]
+
+. [ ストレージ階層 ] をクリックします。
+. アグリゲートをクリックします。
+. アクションをクリックし、クラウド階層の接続を選択します。
++
+image:cloud-fabricpool_image15.png["エラー：グラフィックイメージがありません"]
+
+. クラウド階層を選択します。
+. アグリゲート上のボリュームの階層化ポリシーを表示および更新します（オプション）。デフォルトでは、ボリューム階層化ポリシーは「 Snapshot のみ」に設定されています。
+. [ 保存 ] をクリックします .
+
+
+
+
+== ONTAP CLI
+
+ONTAP CLI を使用してアグリゲートにクラウド階層を接続するには、次のコマンドを実行します。
+
+....
+storage aggregate object-store attach
+-aggregate <name>
+-object-store-name <name>
+....
+例
+
+....
+storage aggregate object-store attach -aggregate aggr1 -object-store-name - aws_infra_fp_bk_1
+....
+link:cloud-fabricpool_set_volume_tiering_policy.html["次：ボリューム階層化ポリシーを設定します。"]

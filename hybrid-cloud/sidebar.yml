@@ -1,0 +1,66 @@
+---
+section: hybrid-cloud
+title: ハイブリッドクラウド
+entries:
+- title: NetApp Cloud Insights for FlexPod の略
+  url: "/hybrid-cloud/cloud-insights_netapp_cloud_insights_for_flexpod.html"
+  type: solutions
+  entries:
+  - title: ユースケース
+    url: "/hybrid-cloud/cloud-insights_use_cases.html"
+  - title: アーキテクチャ
+    url: "/hybrid-cloud/cloud-insights_architecture.html"
+  - title: 設計上の考慮事項
+    url: "/hybrid-cloud/cloud-insights_design_considerations.html"
+  - title: Cloud Insights for FlexPod を導入します
+    url: "/hybrid-cloud/cloud-insights_deploy_cloud_insights_for_flexpod.html"
+  - title: ユースケース
+    url: "/hybrid-cloud/cloud-insights_use_cases_01.html"
+  - title: ビデオとデモ
+    url: "/hybrid-cloud/cloud-insights_videos_and_demos.html"
+  - title: 追加情報
+    url: "/hybrid-cloud/cloud-insights_additional_information.html"
+- title: FabricPool with FlexPod - Amazon AWS S3 への非アクティブなデータ階層化
+  url: "/hybrid-cloud/cloud-fabricpool_introduction.html"
+  type: solutions
+  entries:
+  - title: FlexPod の概要とアーキテクチャ
+    url: "/hybrid-cloud/cloud-fabricpool_flexpod_overview_and_architecture.html"
+  - title: FabricPool
+    url: "/hybrid-cloud/cloud-fabricpool_fabricpool.html"
+  - title: FabricPool の要件
+    url: "/hybrid-cloud/cloud-fabricpool_fabricpool_requirements.html"
+  - title: 設定
+    url: "/hybrid-cloud/cloud-fabricpool_software_revisions.html"
+    entries:
+    - title: FabricPool ライセンスをインストールする
+      url: "/hybrid-cloud/cloud-fabricpool_install_fabricpool_license.html"
+    - title: AWS S3 バケットを作成する
+      url: "/hybrid-cloud/cloud-fabricpool_create_aws_s3_bucket.html"
+    - title: ONTAP にクラウド階層を追加します
+      url: "/hybrid-cloud/cloud-fabricpool_add_a_cloud_tier_to_ontap.html"
+    - title: ONTAP アグリゲートにクラウド階層を接続する
+      url: "/hybrid-cloud/cloud-fabricpool_attach_a_cloud_tier_to_an_ontap_aggregate.html"
+    - title: ボリューム階層化ポリシーを設定します
+      url: "/hybrid-cloud/cloud-fabricpool_set_volume_tiering_policy.html"
+    - title: ボリューム階層化の最小クーリング日数を設定します
+      url: "/hybrid-cloud/cloud-fabricpool_set_volume_tiering_minimum_cooling_days.html"
+  - title: パフォーマンスに関する考慮事項
+    url: "/hybrid-cloud/cloud-fabricpool_performance_considerations.html"
+  - title: 所有コスト
+    url: "/hybrid-cloud/cloud-fabricpool_cost_of_ownership.html"
+  - title: まとめ
+    url: "/hybrid-cloud/cloud-fabricpool_conclusion.html"
+  - title: 追加情報の参照先
+    url: "/hybrid-cloud/cloud-fabricpool_where_to_find_additional_information.html"
+- title: ONTAP データセンターと Cisco UCS Manager 、 NetApp AFF 9.3 FlexPod 、および VMware vSphere
+    6.5U1 [ 設計 ]
+  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_icp_ucsm32.html
+- title: Apprenda 8.2 、 Cisco ACI 3.1 、 Kubernetes 1.9.4 を搭載したプラットフォームサービス向け FlexPod
+    データセンター [ 設計 ]
+  url: https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/whitepaper-c11-740803.pdf
+- title: Cisco CloudCenter とネットアッププライベートストレージを使用したハイブリッドクラウド向け FlexPod データセンター [ 設計
+  url: http://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_hybridcloud_design.html
+- title: Cisco CloudCenter とネットアッププライベートストレージを使用したハイブリッドクラウド向け FlexPod データセンター [ 導入
+    ]
+  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_hybridcloud.html

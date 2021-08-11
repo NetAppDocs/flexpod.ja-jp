@@ -1,0 +1,77 @@
+---
+sidebar:
+  entries:
+  - title: FlexPod ソリューションのドキュメント
+    url: "/index.html"
+  - section: fp-def
+  - section: hybrid-cloud
+  - section: ent-db
+  - section: healthcare
+  - section: vdi
+  - section: modern-apps
+  - section: ms-apps
+  - section: express
+  - section: security
+  - section: ontap-connector-for-intersight
+homepage:
+  tiles:
+  - title: FlexPod - ここから始めます
+    links:
+    - title: ビデオとデモ
+      summary: FlexPod 機能のショートビデオ / デモ
+      url: https://tv.netapp.com/search?q=FlexPod
+    - title: ブログ
+      summary: FlexPod の機能を紹介するテクニカルブログ
+      url: https://blog.netapp.com/tag/Flexpod/
+  - title: FlexPod で AI と最新のデータ分析を実現
+    links:
+    - title: 新機能
+      summary: AI / ML 向けの最新の FlexPod ソリューションをご確認ください
+      url: https://www.flexpod.com/solutions/verticals/healthcare/
+    - title: ビデオとデモ
+      summary: AI / ML 向け FlexPod ソリューションのショートビデオデモ
+      url: https://tv.netapp.com/search?q=FlexPod%20AI
+    - title: ブログ
+      summary: AI / ML 向け FlexPod 機能を紹介するテクニカルブログ
+      url: https://blog.netapp.com/tag/Flexpod/
+  - title: ビジネスアプリケーションとエンタープライズデータベース
+    links:
+    - title: ビデオとデモ
+      summary: ビジネスアプリケーションのエンタープライズデータベース機能に関する短いビデオ / デモ
+      url: https://tv.netapp.com/search?q=FlexPod%20SAP
+    - title: ブログ
+      summary: ビジネスアプリケーションおよびエンタープライズデータベース向けの FlexPod 機能を紹介するテクニカルブログ
+      url: https://blog.netapp.com/tag/Flexpod/
+  - title: ハイブリッドクラウド
+    links:
+    - title: 新機能
+      summary: 最新の FlexPod ハイブリッドクラウドソリューションをご確認ください
+      url: https://flexpod.com/solutions/use-cases/hybrid-cloud/
+    - title: ビデオとデモ
+      summary: ハイブリッドクラウド向け FlexPod ソリューションのショートビデオデモ
+      url: https://tv.netapp.com/search?q=FlexPod%20Hybrid%20Cloud
+    - title: ブログ
+      summary: ハイブリッドクラウド向け FlexPod 機能を紹介するテクニカルブログ
+      url: https://blog.netapp.com/tag/Flexpod/
+  - title: FlexPod for VDI の略
+    links:
+    - title: 新機能
+      summary: VDI 向けの最新の FlexPod ソリューションをご確認ください
+      url: https://www.flexpod.com/solutions/use-cases/virtual-desktop-infrastructure/
+    - title: ビデオとデモ
+      summary: VDI 向けネットアップソリューションに関するショートビデオ / デモ
+      url: https://tv.netapp.com/search?q=FlexPod%20VDI
+    - title: ブログ
+      summary: FlexPod の VDI 機能を紹介するテクニカルブログ
+      url: https://blog.netapp.com/tag/Flexpod/
+  - title: FlexPod による医療
+    links:
+    - title: 新機能
+      summary: 最新のヘルスケア向け FlexPod ソリューションをご確認ください
+      url: https://flexpod.com/solutions/verticals/healthcare/
+    - title: ビデオとデモ
+      summary: ヘルスケア向け FlexPod ソリューションに関する短いビデオ / デモ
+      url: https://tv.netapp.com/search?q=FlexPod%20Healthcare
+    - title: ブログ
+      summary: ヘルスケア向け FlexPod の機能を紹介するテクニカルブログ
+      url: https://blog.netapp.com/tag/Healthcare/

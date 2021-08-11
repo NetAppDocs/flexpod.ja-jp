@@ -1,0 +1,94 @@
+---
+sidebar: sidebar 
+permalink: ontap-connector-for-intersight/ci-qsg_before_you_begin.html 
+keywords: cisco, intersight, intersight assist, netapp, ontap, connector, begin, install, installation, upgrade, active iq unified manager, create, deploy, deployment, download, OVA, appliance 
+summary: 開始する前に、 AIQ UM をインストールまたはアップグレードし、 Cisco Intersight アカウントを作成し、 Intersight Assist をインストールします。 
+---
+= 作業を開始する前に
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+ネットアップストレージの監視とオーケストレーションを Cisco Intersight から行うには、 NetApp Active IQ Unified Manager と Cisco Intersight Assist 仮想アプライアンスが vCenter 環境にインストールされている必要があります。
+
+
+
+== NetApp Active IQ Unified Manager をインストールまたはアップグレードします
+
+Active IQ Unified Manager 9.8p1 以降にインストールまたはアップグレードしていない場合は、これをインストールまたはアップグレードします。手順については、を参照してください link:http://docs.netapp.com/ocum-98/index.jsp["Unified Manager 9.8 ドキュメントセンター"]。
+
+
+
+== Cisco Intersight Assist Virtual Appliance をインストールします
+
+がを満たしていることを確認します https://www.cisco.com/c/en/us/td/docs/unified_computing/Intersight/b_Cisco_Intersight_Appliance_Getting_Started_Guide/b_Cisco_Intersight_Appliance_Getting_Started_Guide_chapter_0111.html?referring_site=RE&pos=1&page=https://www.cisco.com/c/en/us/td/docs/unified_computing/Intersight/b_Cisco_Intersight_Appliance_Getting_Started_Guide.html["Cisco Intersight Virtual Appliance のライセンス、システム、ネットワークの要件"^]。
+
+* 手順 *
+
+. Cisco Intersight アカウントを作成します。にアクセスします https://intersight.com/["https://intersight.com/"^] サイト間アカウントを作成します。Cisco Intersight アカウントを作成するには、有効な Cisco ID が必要です。
+. サイト間仮想アプライアンスは、からダウンロードできます https://software.cisco.com/download/home/286319499/type/286323047/release/1.0.9-148["software.cisco.com"^]。詳細については、を参照してください。
+. OVA を導入します。OVA を導入するには、 DNS と NTP が必要です。
++
+.. OVA を導入する前に、 A / PTR レコードと CNAME エイリアスレコードを使用して DNS を設定します。以下の例を参照してください。
++
+image:ci-qsg_image1.png["A / PTR レコードに使用されるホスト名の例"]
+
+.. サイト間仮想アプライアンスの OVA 導入の要件に基づいて、適切な構成サイズ（小、小、中規模）を選択します。
++
+* ヒント：ストレージオブジェクトの数が多い 2 ノード ONTAP クラスタの場合、小規模（ vCPU 16 、 Gi RAM ）オプションを使用することを推奨します。
+
++
+image:ci-qsg_image2.png["Deploy OVF Template ステップ 5 の設定のスクリーンショット"]
+
+.. [* テンプレートのカスタマイズ * （ Customize Template ） ] ページで、 OVF テンプレートの展開プロパティをカスタマイズします。管理者パスワードはローカル・ユーザに使用されます admin （ WebUI / CLI / ssh ）
++
+image:ci-qsg_image3.png["エラー：グラフィックイメージがありません"]
+
++
+image:ci-qsg_image4.png["エラー：グラフィックイメージがありません"]
+
+.. 「 * 次へ * 」をクリックします。
+
+
+. Intersight Assist アプライアンスの導入後。
++
+.. に移動します https://FQDN-of-your-appliance[] アプライアンスの設置後のセットアップを完了するには、次の手順を実行します。
++
+インストールプロセスが自動的に開始されます。Intersight.com への帯域幅によっては、インストールに最大 1 時間かかる場合があります。また、 VM の電源がオンになったあとでセキュアなサイトが稼働するまでに数秒かかることもあります。
+
+.. 導入後のプロセスで、インストール対象を選択します。
++
+*** * Intersight Connected Virtual Appliance 。 * この導入では、 Intersight.com の全機能を利用するために必要なサービスを更新したり、利用したりするために、シスコおよびサイト間サービスに接続する必要があります。
+*** * Intersight プライベート仮想アプライアンス。 * この導入は、データセンターを切断（エアギャップ）モードで運用する環境を想定しています。
+*** * Intersight Assist 。 * この導入により、 SaaS モデルを Cisco Intersight に接続できるようになりました。
++
+
+NOTE: 「 Intersight Assist 」を選択した場合は、続行する前にデバイス ID と請求コードをメモしておきます。
+
++
+image:ci-qsg_image5.png["サイト間展開オプションのスクリーンショット"]
+
+
+
+.. [* Proceed] をクリックします。
+.. 「 * Intersight Assist * 」を選択した場合は、次の手順を実行します。
++
+... SaaS Intersight のアカウントに移動します https://intersight.com["https://intersight.com"^]。
+... [*Targets*,*Cisco Intersight Assist*] 、 [*Start*] の順にクリックします。
+... 新しく導入した Intersight Assist 仮想アプライアンスからデバイス ID と請求コードをコピーして貼り付けることで、 * Cisco Intersight Assist * アプライアンスを要求します。
++
+image:ci-qsg_image6.png["Cisco Intersight Assist を強調表示するターゲットタイプの選択のスクリーンショット"]
+
+... Cisco Intersight Assist * アプライアンスに戻り、 [* Continue] をクリックします。 * ブラウザの更新が必要になる場合があります。
++
+ダウンロードとインストールのプロセスが開始されます。バイナリは、 Intersight Cloud からオンプレミスアプライアンスに転送されます。完了時間は、 Intersight Cloud への帯域幅によって異なります。
+
+
+
+
+
+

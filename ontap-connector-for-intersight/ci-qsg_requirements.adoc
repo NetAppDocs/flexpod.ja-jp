@@ -1,0 +1,55 @@
+---
+sidebar: sidebar 
+permalink: ontap-connector-for-intersight/ci-qsg_requirements.html 
+keywords: netapp, ontap, cisco, intersight, hardware, software, licensing, requirements 
+summary: NetApp ONTAP ストレージと Cisco Intersight の統合に関するハードウェア、ソフトウェア、ライセンスの要件を満たしていることを確認します。 
+---
+= 要件
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+NetApp ONTAP ストレージと Cisco Intersight の統合に関するハードウェア、ソフトウェア、ライセンスの要件を満たしていることを確認します。
+
+
+
+== ハードウェアとソフトウェアの要件
+
+解決策の実装に必要な最小限のハードウェアコンポーネントとソフトウェアコンポーネントを以下に示します。解決策の特定の実装で使用されるコンポーネントは、お客様の要件に応じて異なる場合があります。
+
+|===
+| コンポーネント | 要件の詳細 
+
+
+| NetApp ONTAP | ONTAP 9.7P1 以降 
+
+
+| NetApp Active IQ Unified Manager の略 | NetApp Active IQ Unified Manager 9.8P1 以降 
+
+
+| ネットアップストレージアレイ | ONTAP 9.7P1 以降では、 ONTAP ASA 、 AFF 、 FAS のすべてのストレージアレイがサポートされます 
+
+
+| 仮想化ハイパーバイザー | vSphere 6.7 以降 
+|===
+
+NOTE: を参照してください https://www.cisco.com/c/en/us/solutions/collateral/data-center-virtualization/flexpod/cisco-imm-for-flexpod.html["FlexPod 用 Cisco Intersight 管理モード"^] Cisco UCS Compute Components と UCSM バージョンの最小要件については、を参照してください。
+
+
+
+== Cisco Intersight のライセンス要件
+
+Cisco Intersight のライセンスは、サブスクリプションベースで複数のライセンスエディションから選択できます。ライセンスタイプによって機能が拡張されています。1 年、 3 年、または 5 年のサブスクリプション期間を購入し、選択したサブスクリプション期間に必要な Cisco UCS サーバボリューム階層を選択できます。Cisco Intersight ポータルにアクセスしてデバイスを要求すると、各 Cisco エンドポイントには Cisco Intersight Base が自動的に追加コストなしで含まれます。
+
+シスコの発注ツールを使用すると、次のいずれかの高階層サイトライセンスを購入できます。
+
+* * Cisco Intersight Essentials.* Essentials には、 Cisco UCS Central および Cisco IMC Supervisor エンタイトルメント、サービスプロファイルを使用したポリシーベースの構成、ファームウェア管理、ハードウェア互換性リスト（ HCL ）との互換性評価など、基本層のすべての機能が含まれています。
+* * Cisco Intersight Advantage * は、 Base 層と Essentials 層のすべての機能を提供します。物理コンピューティング、物理ストレージ、仮想環境（ VMware ESXi ）のストレージウィジェット、ストレージインベントリ、ストレージ容量、ストレージ利用率の情報、ドメイン間でのインベントリの相関関係が含まれます。
+* * Cisco Intersight Premier は、 Advantage 層で提供される機能に加えて、 Cisco UCS 全体でプライベートクラウドインフラサービス（ IaaS ）オーケストレーションを提供します。これには仮想マシン（ VM ）や物理ストレージ（ネットアップストレージ）などのサードパーティシステムも含まれます。
+
+
+さまざまなライセンスレベルでサポートされる機能の詳細については、を参照してください https://intersight.com/help/getting_started#intersight_licensing["シスコのライセンス"]。

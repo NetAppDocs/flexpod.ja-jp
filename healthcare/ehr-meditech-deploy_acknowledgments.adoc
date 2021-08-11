@@ -1,0 +1,23 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-deploy_acknowledgments.html 
+keywords: acknowledgements, contributors, authors 
+summary: 本ガイドの作成には、以下の方々が関わってきました。 
+---
+= 謝辞
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+本ガイドの作成には、以下の方々が関わってきました。
+
+* Brandon AGEE 、テクニカルマーケティングエンジニア、ネットアップ
+* ネットアップ、テクニカルマーケティングエンジニア、 Atul Bhalodia 氏
+* ネットアップシニアプロダクトマネージャー、 Ketan Mota 氏
+* ネットアップ、ヘルスケア、ソリューションアーキテクト、 John Duignan 氏
+* シスコ、 Jon Ebmeier 氏
+* シスコ、マイク・ブレナン
+

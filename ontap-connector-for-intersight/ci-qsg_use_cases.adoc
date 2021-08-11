@@ -1,0 +1,105 @@
+---
+sidebar: sidebar 
+permalink: ontap-connector-for-intersight/ci-qsg_use_cases.html 
+keywords: netapp, ontap, cisco, intersight, storage, use cases, monitor, monitoring, orchestration, reference workflows, custom workflows, storage inventory, widgets 
+summary: これらは、 Cisco Intersight のネットアップストレージの監視とオーケストレーションのユースケース例です。 
+---
+= ユースケース
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+これらは、 Cisco Intersight のネットアップストレージの監視とオーケストレーションのユースケース例です。
+
+
+
+== ユースケース 1 ：ネットアップストレージのインベントリとウィジェットを監視する
+
+ネットアップストレージ環境が Cisco Intersight に存在する場合は、ネットアップストレージオブジェクトをストレージインベントリから詳細に監視し、ストレージウィジェットの概要を確認できます。
+
+. Intersight Assist OVA を導入（ vCenter 環境ではオンプレミスのタスク）
+. Intersight Assist に NetApp AIQ UM デバイスを追加します。
+. 「 * Storage * 」に移動して、ネットアップストレージインベントリをナビゲートします。
+. ネットアップストレージのウィジェット * を監視ダッシュボード * に追加します。
++
+はです https://tv.netapp.com/detail/video/6228096841001["リンク"^] からビデオに、 ONTAP ストレージ監視機能を Cisco Intersight から紹介しています。
+
+
+
+
+
+== ユースケース 2 ：リファレンスワークフローを使用したネットアップストレージのオーケストレーション
+
+ネットアップストレージ環境と vCenter 環境が Cisco Intersight に存在する場合は、ストレージタスクと仮想化タスクが含まれたエンドツーエンドのリファレンスワークフローを必要に応じて実行できます。
+
+. Intersight Assist OVA を導入（ vCenter 環境ではオンプレミスのタスク）
+. Intersight Assist に NetApp AIQ UM デバイスを追加します。
+. Intersight Assist を介して vCenter ターゲットを Intersight に追加します。
+. すぐに使用できるリファレンスワークフローを実行します。
++
+参照ワークフローのリストを次に示します
+
++
+** 新しいストレージインターフェイス
+** 新しい VMFS データストア
+** VMFS データストアを更新してください
+** VMFS データストアを削除します
+** 新しい NAS データストア
+** NAS データストアの更新
+** NAS データストアを削除します
+** 新しいストレージホスト
+** ストレージホストを更新してください
+** ストレージホストを削除します
+** 新しいストレージエクスポートポリシー
+** ストレージエクスポートポリシーを削除します
+** 新しい Storage Virtual Machine
+** 新規仮想マシン
+
+
+
+
+
+
+== 使用事例 3 ：デザイナー不要のフォームを使用したカスタムワークフロー
+
+ネットアップストレージ環境と vCenter 環境が Cisco Intersight に存在する場合は、ネットアップのストレージと仮想化タスクを使用してカスタムワークフローを構築できます。
+
+. サイト間アシスト OVA の導入（ vCenter 環境ではオンプレミスのタスク）
+. Intersight Assist に NetApp AIQ UM デバイスを追加します。
+. Intersight Assist を介して vCenter ターゲットを Intersight に追加します。
+. Intersight の「 * Orchestration 」タブに移動します。
+. [ ワークフローの作成 *] を選択します。
+. ストレージと仮想化のタスクをワークフローに追加できます。
++
+Cisco Intersight には、次のネットアップストレージタスクが用意されています。
+
++
+** タスク 1 ：ストレージエクスポートポリシーをボリュームに追加する
+** タスク 2 ：イニシエータをストレージホスト（ igroup ）に接続する
+** タスク 3 ：ストレージ LUN を拡張する
+** タスク 4 ：ストレージボリュームを展開する
+** タスク 5 ： NetApp igroup LUN マップを検索する
+** タスク 6 ： ID でストレージ LUN を検索する
+** タスク 7 ： ID でストレージボリュームを検索する
+** タスク 8 ：新しいストレージエクスポートポリシー
+** タスク 9 ：新しいストレージ Fibre Channel インターフェイス
+** タスク 10 ：新しいストレージホスト
+** タスク 11 ：新しいストレージ IP インターフェイス
+** タスク 12 ：新しいストレージ LUN
+** タスク 13 ：新しいストレージ LUN ID
+** タスク 14 ：新しい Storage Virtual Machine
+** タスク 15 ：新しいストレージボリューム
+** タスク 16 ：ストレージエクスポートポリシーを削除する
+** タスク 17 ：ストレージホストを削除する
+** タスク 18 ：ストレージ LUN を削除する
+** タスク 19 ：ストレージ LUN ID を削除する
+** タスク 20 ：ストレージボリュームを削除する
+
+
+
+
+ネットアップのストレージと仮想化タスクを使用したワークフローのカスタマイズの詳細については、ビデオをご覧ください https://tv.netapp.com/detail/video/6228095945001["Cisco Intersight の NetApp ONTAP ストレージオーケストレーション"^]。

@@ -1,0 +1,15 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-c190-deploy_conclusion.html 
+keywords: flexpod, express, c, series, c190, deployment, conclusion 
+summary: FlexPod Express は、業界をリードするコンポーネントを使用した検証済みの設計を提供することで、シンプルで効果的な解決策を実現します。 
+---
+= まとめ
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+FlexPod Express は、業界をリードするコンポーネントを使用した検証済みの設計を提供することで、シンプルで効果的な解決策を実現します。コンポーネントの追加による拡張により、 FlexPod Express は特定のビジネスニーズに合わせて調整できます。FlexPod Express は、中小規模の企業や、特定用途向けのソリューションを必要とする企業向けに設計されています。

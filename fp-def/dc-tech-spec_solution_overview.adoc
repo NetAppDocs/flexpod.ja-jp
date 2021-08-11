@@ -1,0 +1,22 @@
+---
+sidebar: sidebar 
+permalink: fp-def/dc-tech-spec_solution_overview.html 
+keywords: flexpod, datacenter, technucal, specifications, platform, architecture 
+summary: FlexPod プラットフォームは、 Cisco Unified Computing System （ Cisco UCS ）、 Cisco Nexus ファミリースイッチ、およびネットアップストレージコントローラ（ NetApp AFF または FAS システム）を基盤として構築された、事前設計されたベストプラクティスのデータセンターアーキテクチャです。 
+---
+= TR-4036 ：『 FlexPod Datacenter Technical Specifications 』
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Sree Lakshmi Lanka Lanka 氏と Arvind Ramakrinan 氏、ネットアップ
+
+FlexPod プラットフォームは、 Cisco Unified Computing System （ Cisco UCS ）、 Cisco Nexus ファミリースイッチ、およびネットアップストレージコントローラ（ NetApp AFF または FAS システム）を基盤として構築された、事前設計されたベストプラクティスのデータセンターアーキテクチャです。
+
+FlexPod は、さまざまな仮想ハイパーバイザーや、ベアメタルのオペレーティングシステム、エンタープライズワークロードを実行するのに適したプラットフォームです。FlexPod は、ベースライン構成だけでなく、さまざまなユースケースや要件に対応できるよう、サイズ設定と最適化が可能な柔軟性も備えています。
+
+
+NOTE: FlexPod の完全な設定を注文する前に、を参照してください http://www.netapp.com/us/technology/flexpod["FlexPod 統合インフラ"^] これらの技術仕様の最新バージョンについては、 netapp.com のページを参照してください。

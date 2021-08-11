@@ -1,0 +1,112 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-c190-deploy_vmware_vcenter_server_6.7u2_installation_procedure.html 
+keywords: vmware, vcenter, installation, procedure, express, c, series, c190, deployment 
+summary: このセクションでは、 FlexPod 構成に VMware vCenter Server 6.7 をインストールする詳細な手順について説明します。 
+---
+= VMware vCenter Server 6.7U2 のインストール手順
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+このセクションでは、 FlexPod 構成に VMware vCenter Server 6.7 をインストールする詳細な手順について説明します。
+
+
+NOTE: FlexPod Express では、 VMware vCenter Server Appliance （ VCSA ）を使用します。
+
+
+
+== VMware vCenter Server Appliance をダウンロードします
+
+VMware vCenter Server Appliance （ VCSA ）をダウンロードするには、次の手順を実行します。
+
+. vCSA をダウンロードします。ESXi ホストの管理時に Get vCenter Server アイコンをクリックして、ダウンロードリンクにアクセスします。
+. vCSA を VMware サイトからダウンロードします。
+. インストール可能な Microsoft Windows vCenter Server がサポートされますが、 VMware では新しい導入に vCSA を推奨します。
+. ISO イメージをマウントします。
+. VCSA -ui-installer > win32 ディレクトリに移動します。「 installer.exe 」をダブルクリックします。
+. [ インストール ] をクリックします
+. [ はじめに ] ページで [ 次へ ] をクリックします。
++
+image:express-c-series-c190-deploy_image34.png["エラー：グラフィックイメージがありません"]
+
+. 展開タイプとして、 Embedded Platform Services Controller を選択します。
++
+image:express-c-series-c190-deploy_image35.png["エラー：グラフィックイメージがありません"]
+
++
+
+NOTE: 必要に応じて、 FlexPod Express 解決策の一部として、外部プラットフォームサービスコントローラの導入もサポートされます。
+
+. アプライアンス導入ターゲットで、導入した ESXi ホストの IP アドレス、ルートユーザ名、および root パスワードを入力します。
++
+image:express-c-series-c190-deploy_image36.png["エラー：グラフィックイメージがありません"]
+
+. vCSA に VM 名および root パスワードとして入力し、 vCSA に使用するアプライアンス VM を設定します。
++
+image:express-c-series-c190-deploy_image37.png["エラー：グラフィックイメージがありません"]
+
+. 環境に最も適した導入サイズを選択してください。次へをクリックします。
++
+image:express-c-series-c190-deploy_image38.png["エラー：グラフィックイメージがありません"]
+
+. 「 infra_datastore 」データストアを選択します。次へをクリックします。
+. Configure network settings （ネットワーク設定の設定）ページで次の情報を入力し、 Next （次へ）をクリックします。
++
+.. MGMT - Network （ネットワーク）を選択します。
+.. vCSA に使用する FQDN または IP を入力します。
+.. 使用する IP アドレスを入力します。
+.. 使用するサブネットマスクを入力します。
+.. デフォルトゲートウェイを入力します。
+.. DNS サーバを入力します。
+
+
+. 「ステージ 1 を完了する準備ができました」ページで、入力した設定が正しいことを確認します。完了をクリックします。
++
+image:express-c-series-c190-deploy_image39.png["エラー：グラフィックイメージがありません"]
+
+. アプライアンスの導入を開始する前に、第 1 段階の設定を確認してください。
++
+image:express-c-series-c190-deploy_image40.png["エラー：グラフィックイメージがありません"]
+
++
+vCSA がインストールされます。このプロセスには数分かかります。
+
+. ステージ 1 が完了すると、完了したことを示すメッセージが表示されます。「続行」をクリックしてステージ 2 の設定を開始します。
+. 「ステージ 2 の紹介」ページで、「次へ」をクリックします。
++
+image:express-c-series-c190-deploy_image41.png["エラー：グラフィックイメージがありません"]
+
+. NTP サーバのアドレスとして「 \\<<var_ntp_id>> 」と入力します。複数の NTP IP アドレスを入力できます。
+. vCenter Server High Availability （ HA ；高可用性）を使用する場合は、 SSH アクセスが有効になっていることを確認してください。
+. SSO ドメイン名、パスワード、およびサイト名を設定します。次へをクリックします。
++
+image:express-c-series-c190-deploy_image42.png["エラー：グラフィックイメージがありません"]
+
++
+
+NOTE: 特に 'vSpher.local' ドメイン名から外れる場合は ' これらの値を参考にしてください
+
+. 必要に応じて、 VMware カスタマーエクスペリエンスプログラムに参加します。次へをクリックします。
++
+image:express-c-series-c190-deploy_image43.png["エラー：グラフィックイメージがありません"]
+
+. 設定の概要を確認します。[ 完了 ] をクリックするか、 [ 戻る ] ボタンを使用して設定を編集します。
+. インストールの開始後に、インストールを一時停止または終了できないことを示すメッセージが表示されます。[OK] をクリックして続行します。
++
+image:express-c-series-c190-deploy_image44.png["エラー：グラフィックイメージがありません"]
+
++
+アプライアンスの設定が続行されます。これには数分かかります。
+
++
+セットアップが正常に完了したことを示すメッセージが表示されます。
+
+. インストーラが vCenter Server にアクセスするために提供するリンクはクリック可能です。
+
+
+link:express-c-series-c190-design_vmware_vcenter_server_6.7u2_and_vsphere_clustering_configuration.html["次の例： VMware vCenter Server 6.7U2 と vSphere クラスタリング構成"]

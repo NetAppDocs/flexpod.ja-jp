@@ -1,0 +1,15 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-fabricpool_cost_of_ownership.html 
+keywords: cost, ownership, evaluator, group, savings, fabricpool, cloud 
+summary: FabricPool の経済計算ツールは、独立した IT アナリスト企業の Evaluator Group を通じて入手でき、オンプレミスとクラウド間でコストを削減し、コールドデータストレージを実現するためのプロジェクトを支援します。 
+---
+= 所有コスト
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+。 https://www.evaluatorgroup.com/FabricPool/["FabricPool 経済計算ツール"^] 独立した IT アナリスト企業の Evaluator Group が、オンプレミスとクラウドの間でコールドデータストレージのコスト削減を予測できるよう支援します。この計算ツールは、アクセス頻度の低いデータをパフォーマンス階層に格納するコストと、残りのデータライフサイクルについてクラウド階層に送信するコストを算出するシンプルなインターフェイスです。5 年間の計算に基づいて、ソース容量、データ増加率、スナップショット容量、コールドデータの割合の 4 つの主要な要素を使用して、その期間におけるストレージコストを決定します。

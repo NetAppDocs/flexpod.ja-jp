@@ -1,0 +1,62 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-aff220-deploy_deployment_procedures_overview.html 
+keywords: vmware, vcenter, server, appliance, download 
+summary: このドキュメントでは、完全な冗長性と高可用性を備えた FlexPod Express システムの構成方法、および複数の Cisco UCS ホストのプロビジョニング方法について詳しく説明します。 
+---
+= 導入手順
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+このドキュメントでは、完全な冗長性と高可用性を備えた FlexPod Express システムの構成について詳しく説明します。この冗長性を反映するために、各手順で設定するコンポーネントをコンポーネント A またはコンポーネント B と呼びますたとえば、このドキュメントでプロビジョニングされている 2 台のネットアップストレージコントローラは、コントローラ A とコントローラ B で識別されます。スイッチ A とスイッチ B は Cisco Nexus スイッチのペアを表します。
+
+また、このドキュメントでは、複数の Cisco UCS ホストをプロビジョニングする手順についても説明します。これらのホストは、サーバ A 、サーバ B などとして順次識別されます。
+
+環境に関連する情報をステップに含める必要があることを示すために、コマンド構造の一部として「 \ <text>> 」が表示されます。「 vlan create 」コマンドについては、次の例を参照してください。
+
+....
+Controller01>vlan create vif0 <<mgmt_vlan_id>>
+....
+本ドキュメントでは、 FlexPod Express 環境を完全に構成する方法について説明します。このプロセスでは、さまざまな手順で、お客様固有の命名規則、 IP アドレス、および VLAN （仮想 LAN ）スキームを入力する必要があります。次の表に、このガイドで説明する導入に必要な VLAN を示します。このテーブルは、特定のサイト変数に基づいて作成し、ドキュメントの設定手順を実装するために使用できます。
+
+
+NOTE: 別々のインバンド管理 VLAN とアウトオブバンド管理 VLAN を使用する場合は、それらの間にレイヤ 3 ルートを作成する必要があります。この検証では、共通の管理 VLAN を使用しました。
+
+|===
+| AN 名 | VLAN の目的 | このドキュメントの検証で使用された ID 
+
+
+| 管理 VLAN | 管理インターフェイス用の VLAN | 3437 
+
+
+| ネイティブ VLAN | タグなしフレームが割り当てられている VLAN | 2. 
+
+
+| NFS VLAN | NFS トラフィック用の VLAN | 3438 
+
+
+| VMware vMotion VLAN | ある物理ホストから別の物理ホストへの仮想マシンの移動用に指定された VLAN | 3441 
+
+
+| 仮想マシンのトラフィック VLAN | 仮想マシンアプリケーショントラフィック用の VLAN | 3442 
+
+
+| iSCSI-A VLAN | ファブリック A の iSCSI トラフィック用 VLAN | 3439 
+
+
+| iSCSI-B VLAN | ファブリック B の iSCSI トラフィック用 VLAN | 3440 
+|===
+VLAN 番号は、 FlexPod Express の設定全体で必要になります。VLAN は「 \<<var_xxxx_vlan>> 」と呼ばれます。「 xxxx 」は VLAN の目的（ iSCSI-A など）です。
+
+次の表は、作成された VMware 仮想マシンを示しています。
+
+|===
+| 仮想マシンの概要 | ホスト名 
+
+
+| VMware vCenter Server の各機能を使用し |  
+|===

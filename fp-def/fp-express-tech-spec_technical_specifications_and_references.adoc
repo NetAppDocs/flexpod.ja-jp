@@ -1,0 +1,395 @@
+---
+sidebar: sidebar 
+permalink: fp-def/fp-express-tech-spec__technical_specifications_and_references.html 
+keywords: technical, specifications, references, blade, servers, ucs, b, series, rack, disk, shelves, fas, adapters, controllers 
+summary: このセクションでは、 FlexPod Express の各コンポーネントに関するその他の重要な技術仕様について説明します。 
+---
+= 技術仕様と参考資料
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+このセクションでは、 FlexPod Express の各コンポーネントに関するその他の重要な技術仕様について説明します。
+
+
+
+== Cisco UCS B シリーズブレードサーバ
+
+次の表に、 Cisco UCS B シリーズブレードサーバのオプションを示します。
+
+|===
+| コンポーネント | Cisco UCS B200 M4 | Cisco UCS B420 M4 | Cisco UCS B200 M5 
+
+
+| プロセッサのサポート | Intel Xeon E5-2600 | Intel Xeon E5-4600 | インテル ® Xeon ® スケーラブル・プロセッサー 
+
+
+| 最大メモリ容量 | DIMM × 24 、最大 768GB | DIMM × 48 、最大 3TB | 最大 3072GB の DIMM を 24 枚 
+
+
+| メモリのサイズと速度 | 32GB DDR4 、 2133MHz | 64GB DDR4 、 2400MHz | 16GB 、 32GB 、 64GB 、 128GB DDR4 、 2666MHz 
+
+
+| SAN ブートサポート | はい。 | はい。 | はい。 
+
+
+| メザニン I/O アダプタスロット | 2. | 3. | GPU サポートを含む、前面と背面の 2 つのポートを備えています 
+
+
+| I/O の最大スループット | 80GBps です | 160GBps です | 80GBps です 
+|===
+
+
+== Cisco UCS C シリーズラックサーバ
+
+次の表に、 Cisco UCS C シリーズラックサーバのオプションを示します。
+
+|===
+| コンポーネント | Cisco UCS C220 M4 | Cisco UCS C240 M4 | Cisco UCS C460 M4 | Cisco UCS C220 M5 
+
+
+| プロセッサのサポート | 1 または 2 個の Intel E5-2600 シリーズ | Intel Xeon E5-2600 シリーズ 1 台または 2 台 | Intel Xeon E7-4800/8800 シリーズ × 2 または 4 | インテル ® Xeon ® スケーラブル・プロセッサー（ 1 または 2 ） 
+
+
+| 最大メモリ容量 | 1.5GB | 1.5 TB | 6 TB | 3072GB 
+
+
+| PCIe スロット | 2. | 6. | 10. | 2. 
+
+
+| フォームファクタ | 1RU | 2RU | 4RU | 1 RU 
+|===
+次の表に、 Cisco UCS C シリーズラックサーバオプションのデータシートを示します。
+
+|===
+| コンポーネント | Cisco UCS データシート 
+
+
+| Cisco UCS C220 M4 | http://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c220m4-sff-spec-sheet.pdf[] 
+
+
+| Cisco UCS C240 M4 | http://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c240-m4-rack-server/datasheet-c78-732455.html[] 
+
+
+| Cisco UCS C460 M4 | http://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c460-m4-rack-server/datasheet-c78-730907.html[] 
+
+
+| Cisco UCS C220 M5 | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c220m5-sff-specsheet.pdf[] 
+|===
+
+
+== Cisco Nexus 3000 シリーズスイッチ
+
+次の表に、 Cisco Nexus 3000 シリーズスイッチのオプションを示します。
+
+|===
+| コンポーネント | Cisco Nexus 3048 | Cisco Nexus 3524 | Cisco Nexus 31108 | Cisco Nexus 3172PQ の場合 
+
+
+| フォームファクタ | 1RU | 1RU | 1RU | 1 RU 
+
+
+| 1Gbps ポートの最大数 | 48 | 24 | 48 （ 10/40/100Gbps ） | 1 / 10GbE ポート × 72 、または 1 / 10GbE ポート × 48 、 40GbE ポート × 6 
+
+
+| 転送レート | 132MBps | 360Mbps | 1.2Bpps | 1 、 pps 
+
+
+| ジャンボフレームのサポート | はい。 | はい。 | はい。 | はい。 
+|===
+次の表に、 Cisco Nexus 3000 シリーズスイッチオプションのデータシートを示します。
+
+|===
+| コンポーネント | Cisco Nexus データシート 
+
+
+| Cisco Nexus 31108 | http://www.cisco.com/c/en/us/products/switches/nexus-31108pc-v-switch/index.html[] 
+
+
+| Cisco Nexus 3172PQ の場合 | https://www.cisco.com/c/en/us/products/switches/nexus-3172pq-switch/index.html[] 
+
+
+| Cisco Nexus 3048 | https://www.cisco.com/c/en/us/products/switches/nexus-3048-switch/index.html[] 
+
+
+| Cisco Nexus 3172PQ-XL | https://www.cisco.com/c/en/us/products/switches/nexus-3172pq-switch/index.html[] 
+
+
+| Cisco Nexus 3548 XL | https://www.cisco.com/c/en/us/products/switches/nexus-3548-x-switch/index.html[] 
+
+
+| Cisco Nexus 3524 XL | https://www.cisco.com/c/en/us/products/switches/nexus-3524-x-switch/index.html[] 
+
+
+| Cisco Nexus 3548 | https://www.cisco.com/c/en/us/products/switches/nexus-3548-x-switch/index.html[] 
+
+
+| Cisco Nexus 3524 | https://www.cisco.com/c/en/us/products/switches/nexus-3524-x-switch/index.html[] 
+|===
+次の表に、 Cisco Nexus 9000 シリーズのスイッチオプションを示します。
+
+|===
+| コンポーネント | Cisco Nexus 9396 | Cisco Nexus 9372 
+
+
+| フォームファクタ | 2RU | 1RU 
+
+
+| 最大ポート数 | 60 | 54 
+
+
+| 10Gbps SFP+ アップリンクポート | 48 | 48 
+|===
+次の表に、 Cisco Nexus 9000 シリーズスイッチオプションのデータシートを示します。
+
+|===
+| コンポーネント | Cisco Nexus データシート 
+
+
+| Cisco Nexus 9396 | http://www.cisco.com/c/en/us/products/collateral/switches/nexus-9000-series-switches/datasheet-c78-736967.html[] 
+
+
+| Cisco Nexus 9372 | http://www.cisco.com/c/en/us/products/collateral/switches/nexus-9000-series-switches/datasheet-c78-736967.html[] 
+
+
+| Nexus 9396X | https://www.cisco.com/c/en/us/products/switches/nexus-9396px-switch/index.html?dtid=osscdc000283[] 
+|===
+
+
+== NetApp FAS ストレージコントローラ
+
+次の表に、ネットアップ FAS の現在のストレージコントローラオプションを示します。
+
+|===
+| 現在のコンポーネント | FAS2620 | FAS2650 
+
+
+| 設定 | 2U シャーシに 2 台のコントローラを搭載できます | 4U シャーシに 2 台のコントローラを搭載します 
+
+
+| 最大物理容量 | 1440TB | 1243TB 
+
+
+| 内蔵ドライブ | 12. | 24 
+
+
+| 最大ドライブ数（内蔵および外付け） | 144 | 144 
+
+
+| 最大ボリュームサイズ 2+| 100TB 
+
+
+| 最大アグリゲートサイズ 2+| 4TB 
+
+
+| LUN の最大数 2+| コントローラあたり 2 、 048 
+
+
+| サポートするストレージネットワークプロトコル 2+| iSCSI 、 FC 、 FCoE 、 NFS 、 CIFS 
+
+
+| NetApp FlexVol の最大ボリューム数 2+| コントローラあたり 1 、 000 
+
+
+| NetApp Snapshot コピーの最大数 2+| コントローラあたり 25 、 000 
+
+
+| NetApp Flash Pool インテリジェントなデータキャッシングを最大限に活用 2+| 24 TB 
+|===
+
+NOTE: FAS ストレージコントローラオプションの詳細については、を参照してください https://hwu.netapp.com/Controller/Index?platformTypeId=2032["FAS モデル"^] Hardware Universe のセクション。AFF の場合は、を参照してください セクション。
+
+次の表に、 FAS8020 コントローラシステムの特性を示します。
+
+|===
+| コンポーネント | FAS8020 
+
+
+| 設定 | 3U シャーシに 2 台のコントローラを搭載します 
+
+
+| 最大物理容量 | 2880TB 
+
+
+| ドライブの最大数 | 480 
+
+
+| 最大ボリュームサイズ | 70TB 
+
+
+| 最大アグリゲートサイズ | 324TB 
+
+
+| LUN の最大数 | コントローラあたり 8 、 192 
+
+
+| サポートするストレージネットワークプロトコル | iSCSI 、 FC 、 NFS 、 CIFS 
+
+
+| FlexVol の最大数 | コントローラあたり 1 、 000 
+
+
+| Snapshot コピーの最大数 | コントローラあたり 25 、 000 
+
+
+| NetApp Flash Cache によるインテリジェントなデータキャッシングを最大限に活用 | 3TB 
+
+
+| Flash Pool の最大データキャッシング | 24 TB 
+|===
+次の表に、ネットアップストレージコントローラのデータシートを示します。
+
+|===
+| コンポーネント | ストレージコントローラのデータシート 
+
+
+| FAS2600 シリーズ | http://www.netapp.com/us/products/storage-systems/fas2600/fas2600-tech-specs.aspx[] 
+
+
+| FAS2500 シリーズ | http://www.netapp.com/us/products/storage-systems/fas2500/fas2500-tech-specs.aspx[] 
+
+
+| FAS8000 シリーズ | http://www.netapp.com/us/products/storage-systems/fas8000/fas8000-tech-specs.aspx[] 
+|===
+
+
+== ネットアップ FAS イーサネットアダプタ
+
+次の表に、ネットアップ FAS 10GbE アダプタを示します。
+
+|===
+| コンポーネント | X1117A-R6 
+
+
+| ポート数 | 2. 
+
+
+| アダプタタイプ | SFP+ （ファイバ使用 
+|===
+FAS8000 シリーズコントローラでは X1117A-R6 SFP+ アダプタがサポートされます。
+
+FAS2600 および FAS2500 シリーズストレージシステムはオンボード 10GbE ポートを備えています。詳細については、を参照してください https://hwu.netapp.com/Resources/generatedPDFs/AdapterCards-9.1_ONTAP-FAS.pdf?tag=8020["NetApp 10GbE アダプタのデータシート"^]。
+
+
+NOTE: AFF または FAS モデルに基づくアダプタの詳細については、を参照してください https://hwu.netapp.com/Adapter/Index["アダプタセクション"^] を参照してください。 Hardware Universe
+
+
+
+== NetApp FAS ディスクシェルフ
+
+次の表に、ネットアップ FAS のディスクシェルフオプションの最新情報を示します。
+
+|===
+| コンポーネント | DS460C | DS224C | DS212C | DS2246 | DS4246 
+
+
+| フォームファクタ | 4RU | 2RU | 2RU | 2RU | 4RU 
+
+
+| エンクロージャあたりのドライブ数 | 60 | 24 | 12. | 24 | 24 
+
+
+| ドライブのフォームファクタ | 3.5 インチラージフォームファクタ | 2.5 インチスモールフォームファクタ | 3.5 インチラージフォームファクタ | 2.5 インチスモールフォームファクタ | 3.5 インチラージフォームファクタ 
+
+
+| シェルフ I/O モジュール | デュアル IOM12 モジュール | デュアル IOM12 モジュール | デュアル IOM12 モジュール | デュアル IOM6 モジュール | デュアル IOM6 モジュール 
+|===
+詳細については、ネットアップディスクシェルフのデータシートを参照してください。
+
+
+NOTE: ディスクシェルフの詳細については、『 NetApp Hardware Universe 』を参照してください https://hwu.netapp.com/Shelves/Index?osTypeId=2032["Disk Shelves セクション"^]。
+
+
+
+== NetApp FAS ディスクドライブ
+
+ネットアップのディスクの技術仕様には、フォームファクタサイズ、ディスク容量、ディスク rpm 、サポートコントローラ、 Data ONTAP のバージョンなどがあり、これらはのドライブのセクションに記載されています http://hwu.netapp.com/Drives/Index?queryId=1581392["NetApp Hardware Universe の略"^]。
+
+
+
+== E シリーズストレージコントローラ
+
+次の表に、現在の E シリーズストレージコントローラのオプションを示します。
+
+|===
+| 現在のコンポーネント | E2812 | E2824 | E2860 となります 
+
+
+| 設定 | 2U シャーシに 2 台のコントローラを搭載できます | 2U シャーシに 2 台のコントローラを搭載できます | 4U シャーシに 2 台のコントローラを搭載します 
+
+
+| 最大物理容量 | 1 、 800TB | 1756.8TB | 1 、 800TB 
+
+
+| 内蔵ドライブ | 12. | 24 | 60 
+
+
+| 最大ドライブ数（内蔵および外付け） 3+| 180 
+
+
+| 最大 SSD 数 3+| 120 
+
+
+| ディスクプールボリュームの最大ボリュームサイズ 3+| 1 、 024TB 
+
+
+| 最大ディスクプール数 3+| 20 
+
+
+| サポートするストレージネットワークプロトコル 3+| iSCSI および FC 
+
+
+| 最大ボリューム数 3+| 512 
+|===
+次の表に、最新の E シリーズストレージコントローラのデータシートを示します。
+
+|===
+| コンポーネント | ストレージコントローラのデータシート 
+
+
+| E2800 | http://www.netapp.com/us/media/ds-3805.pdf[] 
+|===
+
+
+== E シリーズアダプタ
+
+次の表に、 E シリーズのアダプタを示します。
+
+|===
+| コンポーネント | X-56023-00-0E-C | X-56025-00-0E-C | X-56027-00-0E-C | X-56024-00-0E-C | X-56026-00-0E-C 
+
+
+| ポート数 | 2. | 4. | 4. | 2. | 2. 
+
+
+| アダプタタイプ | 10Gb Base-T の提供です | 16G FC および 10GbE iSCSI | （ SAS ）。 | 16G FC および 10GbE iSCSI | （ SAS ）。 
+|===
+
+
+== E-Series ディスクシェルフ
+
+次の表に、 E シリーズのディスクシェルフオプションを示します。
+
+|===
+| コンポーネント | DE212C | DE224C | DE460C 
+
+
+| フォームファクタ | 2RU | 2RU | 4RU 
+
+
+| エンクロージャあたりのドライブ数 | 12. | 24 | 60 
+
+
+| ドライブのフォームファクタ | 2.5 インチスモールフォームファクタ 3.5 インチ | 2.5 インチ | 2.5 インチスモールフォームファクタ 3.5 インチ 
+
+
+| シェルフ I/O モジュール | IOM12 | IOM12 | IOM12 
+|===
+
+
+== E シリーズのディスクドライブ
+
+ネットアップのディスクドライブの技術仕様には、フォームファクタサイズ、ディスク容量、ディスク rpm 、サポートコントローラ、 SANtricity のバージョンなどがあり、これらはのドライブセクションに記載されています http://hwu.netapp.com/Drives/Index?queryId=1844075["NetApp Hardware Universe の略"^]。

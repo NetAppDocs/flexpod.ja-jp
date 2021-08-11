@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: fp-def/dc-tech-spec_legacy_equipment.html 
+keywords: legacy, equipment, cisco, end, life, eol, flexpod, datacenter, technical, specifications 
+summary: FlexPod は、 Cisco とネットアップが現在販売している既存の機器と新しい機器を使用できる柔軟な解決策です。場合によっては、 Cisco とネットアップの機器の一部のモデルがサポート終了（ EOL ）に指定されていることがあります。 
+---
+= レガシー機器
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+FlexPod は、 Cisco とネットアップが現在販売している既存の機器と新しい機器を使用できる柔軟な解決策です。場合によっては、 Cisco とネットアップの機器の一部のモデルがサポート終了（ EOL ）に指定されていることがあります。
+
+これらの機器モデルは提供されなくなりましたが、販売終了（ EOA ）の前にこれらのモデルのいずれかを購入した場合は、 FlexPod 構成でその機器を使用できます。FlexPod でサポートされていて、販売されなくなった従来の機器モデルの完全なリストは、で参照できます https://mysupport.netapp.com/info/eoa/index.html["ネットアップサービスおよびサポート製品プログラム可用性インデックス"^]。
+
+シスコのレガシー機器の詳細については、のシスコ EOL および EOA に関する通知を参照してください http://www.cisco.com/c/en/us/products/servers-unified-computing/ucs-c-series-rack-servers/eos-eol-notice-listing.html["Cisco UCS C シリーズラックサーバ"^]、および。
+
+従来の FC ファブリックのサポートには、次のものが含まれます。
+
+* 2GB ファブリック
+* 4GB ファブリック
+
+
+レガシーソフトウェアには次のものが含まれます。
+
+* NetApp Data ONTAP 7-Mode 、 7.3.5 以降
+* ONTAP 8.1.x ～ 9.0.x
+* Cisco UCS Manager 1.3 以降
+* Cisco UCS Manager 2.1 ～ 2.2.7
+

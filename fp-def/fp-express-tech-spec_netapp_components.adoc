@@ -1,0 +1,246 @@
+---
+sidebar: sidebar 
+permalink: fp-def/fp-express-tech-spec__netapp_components.html 
+keywords: storage, controller, options, fas, e, series, disk, shelves, licensing, software 
+summary: ネットアップストレージコントローラは、ブートとアプリケーションデータストレージの両方を実現する FlexPod Express アーキテクチャのストレージ基盤を提供します。このセクションでは、 FlexPod Express アーキテクチャのさまざまなネットアップオプションについて説明します。 
+---
+= NetApp コンポーネント
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+ネットアップストレージコントローラは、ブートとアプリケーションデータストレージの両方を実現する FlexPod Express アーキテクチャのストレージ基盤を提供します。このセクションでは、 FlexPod Express アーキテクチャのさまざまなネットアップオプションについて説明します。
+
+
+
+== ネットアップストレージコントローラのオプション
+
+
+
+== NetApp FAS
+
+AFF Express アーキテクチャでは、冗長構成の AFF C190 、 FlexPod A220 、または FAS2750 シリーズのコントローラが必要です。コントローラは ONTAP ソフトウェアを実行します。ストレージコントローラの注文時に、優先されるソフトウェアバージョンをコントローラにプリロードすることができます。ONTAP の場合、クラスタは、クラスタインターコネクトスイッチのペアを使用して導入することも、スイッチレスクラスタ構成に導入することもできます。
+
+次の表に示すパーツ番号は、空のコントローラのものです。選択したストレージプラットフォームに応じて、さまざまなオプションや設定を使用できます。これらの追加コンポーネントの詳細については、営業担当者にお問い合わせください。
+
+|===
+| ストレージコントローラ | FAS パーツ番号 | 技術仕様 
+
+
+| FAS2750 | 選択した個々のオプションに基づきます | https://www.netapp.com/us/products/storage-systems/hybrid-flash-array/fas2700.aspx[] 
+
+
+| FAS2720 | 選択した個々のオプションに基づきます | https://www.netapp.com/us/products/storage-systems/hybrid-flash-array/fas2700.aspx[] 
+
+
+| AFF C190 | 選択した個々のオプションに基づきます | https://www.netapp.com/us/products/entry-level-aff.aspx[] 
+
+
+| AFF A220 | 選択した個々のオプションに基づきます | https://www.netapp.com/us/documentation/all-flash-fas.aspx[] 
+
+
+| FAS2620 | 選択した個々のオプションに基づきます | http://www.netapp.com/us/products/storage-systems/fas2600/fas2600-tech-specs.aspx[] 
+
+
+| FAS2650 | 選択した個々のオプションに基づきます | http://www.netapp.com/us/products/storage-systems/fas2600/fas2600-tech-specs.aspx[] 
+|===
+
+
+=== E-Series ストレージ
+
+FlexPod Express アーキテクチャには、 NetApp E2800 シリーズコントローラの HA ペアが必要です。コントローラは SANtricity OS を実行します。
+
+次の表に示すパーツ番号は、空のコントローラのものです。選択したストレージプラットフォームに応じて、さまざまなオプションや設定を使用できます。これらの追加コンポーネントの詳細については、営業担当者にお問い合わせください。
+
+|===
+| ストレージコントローラ | パーツ番号 | 技術仕様 
+
+
+| E2800 | 選択した個々のオプションに基づきます | http://www.netapp.com/us/products/storage-systems/e2800/e2800-tech-specs.aspx[] 
+|===
+
+
+== ネットアップのイーサネット拡張モジュール
+
+
+
+=== NetApp FAS
+
+次の表に、 NetApp FAS10GbE アダプタオプションを示します。
+
+|===
+| コンポーネント | パーツ番号 | 技術仕様 
+
+
+| NetApp X1117A | X1117A-R6 | https://library.netapp.com/ecm/ecm_download_file/ECMM1280307[] 
+|===
+[NOTE]
+====
+FAS2500 シリーズおよび 2600 シリーズのストレージシステムはオンボード 10GbE ポートを備えています。
+
+NetApp X1117A アダプタは FAS8020 ストレージシステム用です。
+
+====
+
+
+=== E-Series ストレージ
+
+次の表に、 E シリーズ 10GbE アダプタオプションを示します。
+
+|===
+| コンポーネント | パーツ番号 
+
+
+| 10GbE iSCSI / 16Gb FC 4 ポート | X-56025-00-0E-C 
+
+
+| 10GbE iSCSI / 16Gb FC 2 ポート | X-56024-00-0E-C 
+|===
+[NOTE]
+====
+E2824 シリーズストレージシステムには、オンボード 10GbE ポートがあります。
+
+10GbE iSCSI / 16Gb FC の 4 ポートホストインターフェイスカード（ HIC ）を使用してポート密度を高めることができます。
+
+====
+オンボードポートと HIC は、 SANtricity OS でアクティブ化された機能に応じて、 iSCSI アダプタまたは FC アダプタとして機能します。
+
+サポートされているアダプタオプションの詳細については、の「アダプタ」セクションを参照してください https://hwu.netapp.com/Adapter/Index["NetApp Hardware Universe の略"^]。
+
+
+
+== ネットアップのディスクシェルフとディスク
+
+
+
+== NetApp FAS
+
+ストレージコントローラには、 1 台以上のネットアップディスクシェルフが必要です。選択したネットアップシェルフタイプによって、そのシェルフ内で使用可能なドライブタイプが決まります。
+
+FAS2700 および FAS2600 シリーズのコントローラは、デュアルストレージコントローラと同じシャーシに搭載されたディスクを含む構成として提供されます。この構成には SATA ドライブまたは SAS ドライブを使用できます。そのため、パフォーマンスや容量の要件によってスピンドル数が制限されないかぎり、外付けディスクシェルフを追加する必要はありません。
+
+[NOTE]
+====
+ディスクシェルフの部品番号は、 AC PSU を 2 台搭載した空のシェルフのものです。その他のパーツ番号については、営業担当者にお問い合わせください。
+
+ディスクドライブのパーツ番号は、購入するディスクのサイズとフォームファクタによって異なります。その他のパーツ番号については、営業担当者にお問い合わせください。
+
+====
+次の表に、ネットアップのディスクシェルフオプションと、 NetApp Hardware Universe に搭載されている各シェルフタイプでサポートされるドライブを示します。Hardware Universe リンクに従って、使用している ONTAP のバージョンを選択し、シェルフタイプを選択します。シェルフイメージの下の Supported Drives をクリックすると、特定のバージョンの ONTAP およびディスクシェルフでサポートされるドライブが表示されます。
+
+|===
+| ディスクシェルフ | パーツ番号 | 技術仕様 
+
+
+| DS212C | DS212C 0-12 | link:http://www.netapp.com/us/products/storage-systems/disk-shelves-and-storage-media/disk-shelves-tech-specs.aspx["NetApp Hardware Universe のディスクシェルフとストレージメディア技術仕様サポートされているドライブ"] 
+
+
+| DS224C | DS224C - 0 ~ 24 | link:http://www.netapp.com/us/products/storage-systems/disk-shelves-and-storage-media/disk-shelves-tech-specs.aspx["NetApp Hardware Universe のディスクシェルフとストレージメディア技術仕様サポートされているドライブ"] 
+
+
+| DS460C | DS460C - 0~60 | link:http://www.netapp.com/us/products/storage-systems/disk-shelves-and-storage-media/disk-shelves-tech-specs.aspx["NetApp Hardware Universe のディスクシェルフとストレージメディア技術仕様サポートされているドライブ"] 
+
+
+| DS2246 | X559A-R6 | link:http://www.netapp.com/us/products/storage-systems/disk-shelves-and-storage-media/disk-shelves-tech-specs.aspx["NetApp Hardware Universe のディスクシェルフとストレージメディア技術仕様サポートされているドライブ"] 
+
+
+| DS4246 | X24M-R6 | link:http://www.netapp.com/us/products/storage-systems/disk-shelves-and-storage-media/disk-shelves-tech-specs.aspx["NetApp Hardware Universe のディスクシェルフとストレージメディア技術仕様サポートされているドライブ"] 
+
+
+| DS4486 | DS4486 - 144TB - R5-C | link:http://www.netapp.com/us/products/storage-systems/disk-shelves-and-storage-media/disk-shelves-tech-specs.aspx["NetApp Hardware Universe のディスクシェルフとストレージメディア技術仕様サポートされているドライブ"] 
+|===
+
+
+=== E-Series ストレージ
+
+シャーシにドライブを格納していないストレージコントローラには、少なくとも 1 台のネットアップディスクシェルフが必要です。選択したネットアップシェルフタイプによって、そのシェルフ内で使用可能なドライブタイプが決まります。
+
+E2800 シリーズのコントローラは、デュアルストレージコントローラと、サポート対象のディスクシェルフに格納されたディスクを含む構成として提供されます。この構成は SSD または SAS ドライブで提供されます。
+
+
+NOTE: ディスクドライブのパーツ番号は、購入するディスクのサイズとフォームファクタによって異なります。その他のパーツ番号については、営業担当者にお問い合わせください。
+
+次の表に、ネットアップのディスクシェルフオプション、および各シェルフタイプでサポートされるドライブを示します。これらは、 NetApp Hardware Universe に搭載されています。Hardware Universe リンクに従って、使用している ONTAP のバージョンを選択し、シェルフタイプを選択します。シェルフイメージの下の Supported Drives をクリックすると、特定のバージョンの ONTAP およびディスクシェルフでサポートされるドライブが表示されます。
+
+|===
+| ディスクシェルフ | パーツ番号 | 技術仕様 
+
+
+| DE460C | E-X5730A-DM-0E-C | link:http://www.netapp.com/us/products/storage-systems/e2800/e2800-tech-specs.aspx["NetApp Hardware Universe のディスクシェルフ技術仕様サポートされているドライブ"] 
+
+
+| DE224C | E-X5721A-DM-0E-C | link:http://www.netapp.com/us/products/storage-systems/e2800/e2800-tech-specs.aspx["NetApp Hardware Universe のディスクシェルフ技術仕様サポートされているドライブ"] 
+
+
+| DE212C | E-X5723A-DM-0E-C | link:https://hwu.netapp.com/Shelves/Index?osTypeId=2357027["NetApp Hardware Universe のディスクシェルフ技術仕様サポートされているドライブ"] 
+|===
+
+
+== ネットアップのソフトウェアライセンスオプション
+
+
+
+=== NetApp FAS
+
+次の表に、 NetApp FAS ソフトウェアのライセンスオプションを示します。
+
+|===
+| ネットアップソフトウェアライセンス | パーツ番号 | 技術仕様 
+
+
+| ベースクラスタライセンス 2+| ライセンスについて詳しくは、ネットアップの営業チームにお問い合わせください。 
+|===
+
+
+=== E-Series ストレージ
+
+次の表に、 E シリーズソフトウェアのライセンスオプションを示します。
+
+|===
+| ネットアップソフトウェアライセンス | パーツ番号 | 技術仕様 
+
+
+| 標準装備 2.2+| ライセンスについて詳しくは、ネットアップの営業チームにお問い合わせください。 
+
+
+| プレミアム機能 
+|===
+
+
+== ネットアップサポートのライセンスオプション
+
+SupportEdge Premium ライセンスが必要です。これらのライセンスのパーツ番号は、 FlexPod Express デザインで選択されたオプションによって異なります。
+
+
+
+=== NetApp FAS
+
+次の表に、ネットアップがサポートする NetApp FAS のライセンスオプションを示します。
+
+|===
+| ネットアップサポートライセンス | パーツ番号 | 技術仕様 
+
+
+| SupportEdge Premium4 時間オンサイト、月数 :36 | ： cs -O2-4HR | link:www.netapp.com/us/support/supportedge.html["http://www.netapp.com/us/support/supportedge.html"] 
+|===
+
+
+=== E-Series ストレージ
+
+次の表に、 E シリーズストレージのネットアップサポートライセンスオプションを示します。
+
+|===
+| ネットアップサポートライセンス | パーツ番号 | 技術仕様 
+
+
+| ハードウェアサポート Premium ： 4 時間以内（オンサイト）、月数： 36 | SVC-O2-4HR-E .3+| link:www.netapp.com/us/support/supportedge.html["http://www.netapp.com/us/support/supportedge.html"] 
+
+
+| ソフトウェアサポート | SW-SSP-O2-4HR-E 
+
+
+| 初期インストール | SVC-INST-O2-4HR-E 
+|===

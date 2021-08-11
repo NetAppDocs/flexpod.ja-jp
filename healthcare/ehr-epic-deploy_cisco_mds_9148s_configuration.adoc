@@ -1,0 +1,180 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-epic-deploy_cisco_mds_9148s_configuration.html 
+keywords: cisco, ucs, configuration, mds, fc, switches, compute, fabric, aff, a700, controllers 
+summary: Cisco MDS 9100 シリーズ FC スイッチは、 NetApp AFF A700 コントローラと Cisco UCS コンピューティングファブリック間の冗長 16GB FC 接続を提供します。 
+---
+= Cisco MDS 9148S の構成
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Cisco MDS 9100 シリーズ FC スイッチは、 NetApp AFF A700 コントローラと Cisco UCS コンピューティングファブリック間の冗長 16GB FC 接続を提供します。ケーブルは、の説明に従って接続する必要があります link:ehr-epic-deploy_deployment_and_configuration_overview.html#cabling-diagram["「配線図」"]
+
+. 各 MDS スイッチのスイッチコンソールで、次のコマンドを実行して、解決策に必要な機能を有効にします。
++
+....
+configure terminal
+feature npiv
+feature fport-channel-trunk
+....
+. の FlexPod Cisco MDS スイッチの設定セクションに従って、個々のポート、ポートチャネル、および説明を設定します https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi65u1_n9fc.html["FlexPod データセンターと FC の Cisco Validated Design の 2 つの機能があります"^]。
+. Epic 解決策に必要な VSAN を作成するには、グローバルコンフィギュレーションモードで次の手順を実行します。
++
+.. ファブリック A の MDS スイッチの場合：
++
+....
+vsan database
+vsan <vsan-a-id>
+vsan <vsan-a-id> name Fabric-A
+exit
+zone smart-zoning enable vsan <vsan-a-id>
+vsan database
+vsan <vsan-a-id> interface fc1/1
+vsan <vsan-a-id> interface fc1/2
+vsan <vsan-a-id> interface port-channel110
+vsan <vsan-a-id> interface port-channel112
+....
++
+コマンドの最後の 2 行のポートチャネル番号は、リファレンスドキュメントを使用して個々のポート、ポートチャネル、および説明をプロビジョニングしたときに作成されました。
+
+.. ファブリック B の MDS スイッチの場合：
++
+....
+vsan database
+vsan <vsan-b-id>
+vsan <vsan-b-id> name Fabric-B
+exit
+zone smart-zoning enable vsan <vsan-b-id>
+vsan database
+vsan <vsan-b-id> interface fc1/1
+vsan <vsan-b-id> interface fc1/2
+vsan <vsan-b-id> interface port-channel111
+vsan <vsan-b-id> interface port-channel113
+....
++
+コマンドの最後の 2 行のポートチャネル番号は、リファレンスドキュメントを使用して個々のポート、ポートチャネル、および説明をプロビジョニングしたときに作成されました。
+
+
+
+. 各 FC スイッチについて、デバイスのエイリアス名を作成します。このエイリアス名を使用すると、リファレンスドキュメントの詳細情報を使用して、運用中の各デバイスをわかりやすく識別できます。
+. 最後に、前の手順で各 MDS スイッチに作成したデバイスエイリアス名を使用して、 FC ゾーンを作成します。
++
+.. ファブリック A の MDS スイッチの場合：
++
+....
+configure terminal
+zone name VM-Host-Infra-01-A vsan <vsan-a-id>
+member device-alias VM-Host-Infra-01-A init
+member device-alias Infra-SVM-fcp_lif01a target
+member device-alias Infra-SVM-fcp_lif02a target
+exit
+zone name VM-Host-Infra-02-A vsan <vsan-a-id>
+member device-alias VM-Host-Infra-02-A init
+member device-alias Infra-SVM-fcp_lif01a target
+member device-alias Infra-SVM-fcp_lif02a target
+exit
+zoneset name Fabric-A vsan <vsan-a-id>
+member VM-Host-Infra-01-A
+member VM-Host-Infra-02-A
+exit
+zoneset activate name Fabric-A vsan <vsan-a-id>
+exit
+show zoneset active vsan <vsan-a-id>
+....
+.. ファブリック B の MDS スイッチの場合：
++
+....
+configure terminal
+zone name VM-Host-Infra-01-B vsan <vsan-b-id>
+member device-alias VM-Host-Infra-01-B init
+member device-alias Infra-SVM-fcp_lif01b target
+member device-alias Infra-SVM-fcp_lif02b target
+exit
+zone name VM-Host-Infra-02-B vsan <vsan-b-id>
+member device-alias VM-Host-Infra-02-B init
+member device-alias Infra-SVM-fcp_lif01b target
+member device-alias Infra-SVM-fcp_lif02b target
+exit
+zoneset name Fabric-B vsan <vsan-b-id>
+member VM-Host-Infra-01-B
+member VM-Host-Infra-02-B
+exit
+zoneset activate name Fabric-B vsan <vsan-b-id>
+exit
+show zoneset active vsan <vsan-b-id>
+....
+
+
+
+
+
+
+== Cisco UCS の設定に関するガイダンス
+
+Cisco UCS を使用することで、 Epic のお客様はネットワーク、ストレージ、コンピューティングの分野でエキスパートを活用して、ポリシーやテンプレートを作成し、それぞれのニーズに合わせて環境をカスタマイズできます。作成されたポリシーとテンプレートをサービスプロファイルに統合することで、シスコのブレードサーバとラックサーバの一貫した、繰り返し可能で信頼性の高い、迅速な導入を実現できます。
+
+Cisco UCS には、 Cisco UCS システム（ドメインと呼ばれる）を管理するための 3 つの方法があります。
+
+* Cisco UCS Manager HTML 5 GUI
+* Cisco UCS CLI
+* マルチドメイン環境向けの Cisco UCS Central
+
+
+次の図に、 Cisco UCS Manager の SAN ノードのサンプルスクリーンショットを示します。
+
+image:ehr-epic-deploy_image10.png["エラー：グラフィックイメージがありません"]
+
+大規模な導入環境では、大規模な Epic 機能コンポーネントレベルで、独立した Cisco UCS ドメインを構築することでフォールトトレランスを強化できます。
+
+2 つ以上のデータセンターを備えた耐障害性の高い設計では、 Cisco UCS Manager がグローバルポリシーとグローバルサービスプロファイルを設定して、企業全体のホスト間で一貫性を確保するうえで重要な役割を果たします。
+
+Cisco UCS コンピューティングプラットフォームをセットアップするには、次の手順を実行します。Cisco UCS B200 M5 ブレードサーバを Cisco UCS 5108AC ブレードシャーシに設置したあと、次の手順を実行します。また、の説明に従ってケーブル接続の要件を満たしている必要があります link:ehr-epic-deploy_deployment_and_configuration_overview.html#cabling-diagram["「配線図」"]
+
+. Cisco UCS Manager ファームウェアをバージョン 3.2(2f) 以降にアップグレードします。
+. ドメインのレポート、コールホーム機能、および NTP 設定を行います。
+. 各ファブリックインターコネクトにサーバポートとアップリンクポートを設定します。
+. シャーシ検出ポリシーを編集します。
+. アウトオブバンド管理用のアドレスプールを作成します。 UUID 、 MAC アドレス、サーバ、 WWNN 、 WWPN を指定します。
+. イーサネットおよび FC アップリンクポートチャネルおよび VSAN を作成します。
+. SAN 接続、ネットワーク制御、サーバプールの認定、電源制御、サーバ BIOS 、 デフォルトのメンテナンスに使用できます。
+. vNIC および vHBA テンプレートを作成します。
+. vMedia ブートポリシーと FC ブートポリシーを作成します。
+. 各 Epic プラットフォーム要素のサービスプロファイルテンプレートとサービスプロファイルを作成します。
+. サービスプロファイルを適切なブレードサーバに関連付けます。
+
+
+FlexPod の Cisco UCS サービスプロファイルの各主要要素を設定する詳細な手順については、を参照してください https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi65u1_n9fc.html["FlexPod データセンターと FC の Cisco Validated Design の 2 つの機能があります"^] 文書化
+
+Epic の導入では、導入される Epic エレメントに基づいてさまざまなサービスプロファイルタイプを推奨しています。サーバプールとサーバプールの認定を使用することで、お客様は特定のホストロールへのサービスプロファイルの展開を識別し、自動化することができます。サービスプロファイルのサンプルリストは次のとおりです。
+
+* Epic Chronicle Cache データベースホストの場合：
++
+** 本番ホストのサービスプロファイル
+** Reporting Service のホストプロファイル
+** ディザスタリカバリホストのサービスプロファイル
+** ホットスペアホストサービスプロファイル
+
+
+* Epic Hyperspace ホストの場合：
++
+** VDI ホストサービスプロファイル
+** Citrix XenApp ホストサービスプロファイル
+** ディザスタリカバリホストのサービスプロファイル
+** ホットスペアホストサービスプロファイル
+
+
+* Epic cogito および Clarity データベースホストの場合：
++
+** データベースホストサービスプロファイル（ Clarity RDBMS およびビジネスオブジェクト）
+
+
+* Epic Services ホストの場合：
++
+** アプリケーションホストプロファイル（印刷形式、リレー、通信、 Web BLOB など）
+
+
+

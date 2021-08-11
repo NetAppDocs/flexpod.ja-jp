@@ -1,0 +1,19 @@
+---
+sidebar: sidebar 
+permalink: fp-def/fp-express-tech-spec_overview.html 
+keywords: flexpod, express, technical, specifications, architecture, cisco, ucs 
+summary: FlexPod Express は、 Cisco Unified Computing System （ Cisco UCS ）と Cisco Nexus ファミリーのスイッチ上に構築された、ベストプラクティスに基づく事前設計済みのアーキテクチャであり、ストレージレイヤは NetApp FAS または NetApp E シリーズストレージを使用して構築されます。 
+---
+= TR-4293 ：『 FlexPod Express Technical Specifications 』
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+ネットアップ、 Karthick Radhakrinan 、 Arvind Ramakrinan 、 Lindsey Street 、 Savita Kumari
+
+FlexPod Express は、 Cisco Unified Computing System （ Cisco UCS ）と Cisco Nexus ファミリーのスイッチ上に構築された、ベストプラクティスに基づく事前設計済みのアーキテクチャであり、ストレージレイヤは NetApp FAS または NetApp E シリーズストレージを使用して構築されます。FlexPod Express は、さまざまな仮想ハイパーバイザーやベアメタルオペレーティングシステム（ OS ）やエンタープライズワークロードを実行するのに適したプラットフォームです。
+
+FlexPod Express は、ベースライン構成だけでなく、さまざまなユースケースや要件に対応できるよう、サイズ設定と最適化が可能な柔軟性も備えています。このドキュメントでは、使用しているストレージシステム、 NetApp FAS を使用した FlexPod Express 、および E シリーズを使用した FlexPod Express に基づいて FlexPod Express 構成を分類します。

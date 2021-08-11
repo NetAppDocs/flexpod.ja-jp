@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-aff220-design_solution_overview.html 
+keywords: NetApp ONTAP 9.4, NetApp AFF A220, VMware vSphere 6.7, Target audience, 
+summary: FlexPod Express は、混在仮想化ワークロードを実行するように設計されています。リモートオフィス、ブランチオフィス、中堅企業を対象としています。また、特定の目的に専用の解決策を実装したい大規模企業にも最適です。この新しい解決策 for FlexPod Express には、 NetApp ONTAP 9.4 、 NetApp AFF A220 、 VMware vSphere 6.7 などの新しいテクノロジが追加されています。 
+---
+= 解決策の概要
+
+
+FlexPod Express は、混在仮想化ワークロードを実行するように設計されています。リモートオフィス、ブランチオフィス、中堅企業を対象としています。また、特定の目的に専用の解決策を実装したい大規模企業にも最適です。この新しい解決策 for FlexPod Express には、 NetApp ONTAP 9.4 、 NetApp AFF A220 、 VMware vSphere 6.7 などの新しいテクノロジが追加されています。
+
+次の図に、 FlexPod Express 解決策に含まれるハードウェアコンポーネントを示します。
+
+image:express-c-series-aff220-design_image3.png["エラー：グラフィックイメージがありません"]
+
+
+
+== 対象読者
+
+本ドキュメントは、 IT の効率化と IT のイノベーションを実現するために構築されたインフラを活用したいお客様を対象としています。本ドキュメントが対象とする主な読者は、セールスエンジニア、フィールドコンサルタント、プロフェッショナルサービス担当者、 IT マネージャーなどです。 パートナー様のエンジニア、お客様
+
+
+
+== 解決策テクノロジ
+
+この解決策は、ネットアップ、 Cisco 、 VMware の最新テクノロジを活用しています。この解決策には、 ONTAP 9.4 ソフトウェア、デュアル Cisco Nexus 3172P スイッチ、 VMware vSphere 6.7 を実行する Cisco UCS C220 M5 ラックサーバを実行する新しい NetApp AFF A220 システムが搭載されています。この検証済み解決策では、 10 ギガビットイーサネット（ 10GbE ）テクノロジを使用しています。次の図は概要を示しています。また、 FlexPod Express アーキテクチャが組織の進化するビジネスニーズに適応できるように、 2 つのハイパーバイザーノードを一度に追加して拡張する方法についても説明します。
+
+image:express-c-series-aff220-design_image4.png["エラー：グラフィックイメージがありません"]
+
+
+NOTE: 40GbE は検証されていませんが、サポートされるインフラです。
+
+link:express-c-series-aff220-design_technology_requirements.html["次のステップ：テクノロジの要件"]

@@ -1,0 +1,80 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-aff220-design_technology_requirements.html 
+keywords: express, requirements, technology, AFF A220, UCS C220 M5, Nexus 3172P switch, Virtual Interface Card, VIC 1387, C220 M5 Rack Server, CVR-QSFP-SFP10G adapter 
+summary: FlexPod Express では、選択したハイパーバイザーとネットワークの速度に応じて、ハードウェアコンポーネントとソフトウェアコンポーネントを組み合わせる必要があります。また FlexPod 、ハイパーバイザーノードをシステムに追加するために必要なハードウェアコンポーネントが 2 つのユニットに配置されます。 
+---
+= テクノロジ要件
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+FlexPod Express では、選択したハイパーバイザーとネットワークの速度に応じて、ハードウェアコンポーネントとソフトウェアコンポーネントを組み合わせる必要があります。また FlexPod 、ハイパーバイザーノードをシステムに追加するために必要なハードウェアコンポーネントが 2 つのユニットに配置されます。
+
+
+
+== ハードウェア要件
+
+選択したハイパーバイザーに関係なく、すべての FlexPod Express 構成で同じハードウェアが使用されます。そのため、ビジネス要件が変わっても、どちらのハイパーバイザーも同じ FlexPod Express ハードウェア上で実行できます。
+
+次の表に、すべての FlexPod 構成に必要なハードウェアコンポーネントと、解決策の実装に必要なハードウェアコンポーネントを示します。解決策の特定の実装で使用されるハードウェアコンポーネントは、お客様の要件に応じて異なる場合があります。
+
+[cols="50,50"]
+|===
+| ハードウェア | 数量 
+
+
+| AFF A220 2 ノードクラスタ | 1. 
+
+
+| Cisco UCS C220 M5 サーバ | 2. 
+
+
+| Cisco Nexus 3172P スイッチ | 2. 
+
+
+| Cisco UCS C220 M5 ラックサーバ用 Cisco UCS Virtual Interface Card （ VIC ；仮想インターフェイスカード） 1387 | 2. 
+
+
+| Cisco CVR-QSFP-SFP10G アダプタ | 4. 
+|===
+
+
+== ソフトウェア要件
+
+次の表に、 FlexPod Express 解決策のアーキテクチャを実装するために必要なソフトウェアコンポーネントを示します。
+
+次の表に、 FlexPod Express の基本実装に必要なソフトウェアを示します。
+
+[cols="33,33,33"]
+|===
+| ソフトウェア | バージョン | 詳細 
+
+
+| Cisco Integrated Management Controller （ CIMC ） | 3.1.3 | C220 M5 ラックサーバ用 
+
+
+| Cisco NX-OS | nxos.7.0.3.I7.5.bin | Cisco Nexus 3172P スイッチの場合 
+
+
+| NetApp ONTAP | 9.4 | AFF A220 コントローラの場合 
+|===
+次の表に、 FlexPod Express のすべての VMware vSphere 環境に必要なソフトウェアを示します。
+
+[cols="50,50"]
+|===
+| ソフトウェア | バージョン 
+
+
+| VMware vCenter Server Appliance の略 | 6.7 
+
+
+| VMware vSphere ESXi の場合 | 6.7 
+
+
+| NetApp VAAI Plug-in for ESXi | 1.1.2 
+|===
+link:express-c-series-aff220-design_design_choices.html["次のステップ：設計の選択肢。"]

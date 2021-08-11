@@ -1,0 +1,40 @@
+---
+sidebar: sidebar 
+permalink: fp-def/fp-express-tech-spec_minimum_software_requirements.html 
+keywords: minimum, software, requirements, flexpod, express, aff, fas, e, series 
+summary: ここでは、 FlexPod Express の各バージョンに最低限必要なソフトウェアについて説明します。 
+---
+= 最小ソフトウェア要件
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+ここでは、 FlexPod Express の各バージョンに最低限必要なソフトウェアについて説明します。
+
+
+
+== ネットアップの AFF または FAS を使用する FlexPod Express のソフトウェア要件
+
+ネットアップ FAS を使用した FlexPod Express のソフトウェア要件は次のとおりです。
+
+* ONTAP 9.1 以降
+* Cisco NX-OS バージョン 7.0(3) I6(1) 以降
+* Cisco UCS で管理される構成では、 Cisco UCS Manager UCS 4.0(1b)
+
+
+すべてのソフトウェアがにリストされ、サポートされている必要があります http://support.netapp.com/matrix/["NetApp IMT"^]。一部のソフトウェア機能では、以前のアーキテクチャに示されている最小要件よりも新しいバージョンのコードが必要になる場合があります。
+
+
+
+== E シリーズを使用する FlexPod Express のソフトウェア要件
+
+E シリーズを使用する FlexPod Express のソフトウェア要件は次のとおりです。
+
+* E シリーズ SANtricity ソフトウェア 11.30 以降
+* Cisco UCS Manager 4.0(1b)
+
+
+すべてのソフトウェアがにリストされ、サポートされている必要があります http://support.netapp.com/matrix/["NetApp IMT"^]。

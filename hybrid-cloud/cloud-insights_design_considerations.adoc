@@ -1,0 +1,17 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-insights_design_considerations.html 
+keywords: design, considerations, flexpod, datacenter, infrastructure, cisco, cloud, insights 
+summary: FlexPod Datacenter 解決策は、シスコとネットアップが設計した統合インフラです。エンタープライズワークロードを実行するための、動的で可用性が高く、拡張性に優れたデータセンター環境を提供します。 
+---
+= 設計上の考慮事項
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+FlexPod Datacenter 解決策は、シスコとネットアップが設計した統合インフラです。エンタープライズワークロードを実行するための、動的で可用性が高く、拡張性に優れたデータセンター環境を提供します。解決策のコンピューティングリソースとネットワークリソースは Cisco UCS および Nexus 製品から提供され、ストレージリソースは ONTAP ストレージシステムから提供されます。解決策設計は、更新されたハードウェアモデルまたはソフトウェアとファームウェアのバージョンが利用可能になったときに、定期的に拡張されます。これらの詳細情報に加え、解決策の設計と導入に関するベストプラクティスも、 Cisco Validated Design （ CVD ）または NetApp Verified Architecture （ NVA ）ドキュメントにキャプチャされ、定期的に公開されています。
+
+FlexPod Datacenter 解決策の設計に関する最新の CVD ドキュメントを参照できます https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_vmware_vs_7_design.html["こちらをご覧ください"^]。

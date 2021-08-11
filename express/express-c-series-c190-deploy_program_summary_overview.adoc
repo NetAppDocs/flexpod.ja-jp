@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-c190-deploy_program_summary_overview.html 
+keywords: fexpod, express, cisco, ucs, series, c, aff, c190, nva, deployment 
+summary: FlexPod Datacenter と FlexPod Express は、ベースライン構成が可能で、多種多様なユースケースや要件に対応できるよう、サイズ設定と最適化が可能な柔軟性を備えています。 
+---
+= NVA-1142-deploy ： FlexPod Express with Cisco UCS C シリーズ and NetApp AFF C190 Series - NVA Deployment （英語
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+ネットアップ、 Savita Kumari 氏
+
+業界の動向から、共有インフラやクラウドコンピューティングへの大規模なデータセンターの移行が進行していることがわかります。さらに、データセンターで使い慣れたテクノロジを使用しているリモートオフィスやブランチオフィスに、シンプルで効果的な解決策を求めています。
+
+FlexPod ® Express は、 Cisco Unified Computing System （ Cisco UCS ）、 Cisco Nexus ファミリースイッチ、およびネットアップストレージテクノロジを基盤とした、事前設計されたベストプラクティスのデータセンターアーキテクチャです。FlexPod Express システムのコンポーネントは、 FlexPod Datacenter と同様に、小規模な IT インフラ環境全体での管理面の相乗効果を実現します。FlexPod Datacenter と FlexPod Express は、仮想化に最適なプラットフォームで、ベアメタルのオペレーティングシステムやエンタープライズワークロードに最適です。
+
+FlexPod Datacenter と FlexPod Express は、ベースライン構成が可能で、多種多様なユースケースや要件に対応できるよう、サイズ設定と最適化が可能な柔軟性を備えています。FlexPod データセンターを利用している既存のお客様は、使い慣れたツールを使用して FlexPod Express システムを管理できます。FlexPod Express をご利用のお客様は、環境の拡大に合わせて、 FlexPod データセンターの管理に容易に移行できます。
+
+FlexPod Express は、リモートオフィス、ブランチオフィス、中堅企業に最適なインフラ基盤です。また、専用のワークロードにインフラを提供したいお客様にも最適な解決策です。
+
+FlexPod Express は、ほぼすべてのワークロードに適した、管理しやすいインフラを提供します。

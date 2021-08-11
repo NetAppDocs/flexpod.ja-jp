@@ -1,0 +1,22 @@
+---
+section: security
+title: FlexPod とセキュリティ
+entries:
+- title: 解決策、 FlexPod によるランサムウェア対策
+  url: "/security/security-ransomware_what_is_ransomware.html"
+  type: solutions
+  entries:
+  - title: FlexPod の概要
+    url: "/security/security-ransomware_flexpod_overview.html"
+  - title: ランサムウェア攻撃からの保護対策
+    url: "/security/security-ransomware_ransomware_protection_measures.html"
+  - title: FlexPod 上のデータの保護とリカバリ
+    url: "/security/security-ransomware_protect_and_recover_data_on_flexpod.html"
+  - title: 身代金を支払うことなく業務を継続できます
+    url: "/security/security-ransomware_continue_business_operations_without_paying_ransom.html"
+  - title: まとめ
+    url: "/security/security-ransomware_conclusion.html"
+  - title: 謝辞
+    url: "/security/security-ransomware_acknowledgements.html"
+  - title: 追加情報
+    url: "/security/security-ransomware_additional_information.html"

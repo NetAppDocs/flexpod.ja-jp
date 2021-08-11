@@ -1,0 +1,64 @@
+---
+sidebar: sidebar 
+permalink: express/express-direct-attach-design_program_summary.html 
+keywords: express, datacenter, select, converged infrastructure, CVD, NVA, AFF A220, FAS 2750/2720, UCS Mini, UCS B200 M5, UCS VIC 1440/1480, Nexus 3000 Series Switches 
+summary: FlexPod リファレンスアーキテクチャは、 Cisco Validated Design または NetApp Verified Architectures として提供されます。これらのバリエーションでサポートされない構成が作成されない場合、特定の CVD または NVA からのお客様の要件に基づく差異は認められます。 
+---
+= プログラムの概要
+
+
+この FlexPod Express 解決策は、 FlexPod コンバージドインフラプログラムの一部です。
+
+
+
+== FlexPod 統合インフラプログラム
+
+FlexPod リファレンスアーキテクチャは、 Cisco Validated Design （ CVD ；シスコ検証済み設計）または NetApp Verified Architectures （ NVA ；ネットアップ検証済みアーキテクチャ）として提供されます。これらのバリエーションでサポートされない構成が作成されない場合、特定の CVD または NVA からのお客様の要件に基づく差異は認められます。
+
+次の図に示すように、 FlexPod プログラムには、 FlexPod Express 、 FlexPod Datacenter 、 FlexPod Select の 3 つのソリューションが含まれています。
+
+* * FlexPod Express. * は、 Cisco とネットアップが提供するテクノロジを搭載したエントリレベルの解決策をお客様に提供します。
+* * FlexPod * Datacenter * は、さまざまなワークロードやアプリケーションに最適な多目的基盤を提供します。
+* * FlexPod Select * は、 FlexPod データセンターの最良の側面を組み込み、特定のアプリケーションにインフラストラクチャを調整します。
+
+
+次の図に、解決策の技術コンポーネントを示します。
+
+image:express-direct-attach-design_image1.png["エラー：グラフィックイメージがありません"]
+
+
+
+== NetApp Verified Architecture プログラム
+
+NVA プログラムは、ネットアップソリューションの検証済みアーキテクチャをお客様に提供します。NVA は、次の品質を持つ NetApp 解決策アーキテクチャを示しています。
+
+* 入念にテストされています
+* あらかじめ規定されている
+* 導入リスクを最小限に抑えます
+* 運用開始までの時間を短縮
+
+
+このガイドでは、ネットアップストレージが直接接続された FlexPod Express の設計について詳しく説明します。次のセクションでは、この解決策デザインで使用されるコンポーネントについて説明します。
+
+
+
+=== ハードウェアコンポーネント
+
+* NetApp AFF A220 または FAS 2750/2720
+* Cisco UCS Mini
+* Cisco UCS B200 M5
+* Cisco UCS VIC 1440/1480
+* Cisco Nexus 3000 シリーズスイッチ
+
+
+
+
+=== ソフトウェアコンポーネント
+
+* NetApp ONTAP 9.5
+* VMware vSphere 6.7U1
+* Cisco UCS Manager 4.0(1b)
+* Cisco NXOS ファームウェア 7.0(3) I6(1)
+
+
+link:express-direct-attach-design_solution_overview.html["次の手順：解決策の概要"]

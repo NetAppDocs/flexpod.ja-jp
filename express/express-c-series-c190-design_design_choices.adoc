@@ -1,0 +1,180 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-c190-design_design_choices.html 
+keywords: AFF C190, CIFS, NFS, iSCSI, FCP, SnapMirror, SnapVault, SnapRestore, SnapManager, SnapCenter, FabricPool 
+summary: このセクションに記載されているテクノロジは、アーキテクチャ設計フェーズで採用されました。各テクノロジは、 FlexPod Express Infrastructure 解決策の特定の目的に使用されます。 
+---
+= 設計の選択肢
+
+
+このセクションに記載されているテクノロジは、アーキテクチャ設計フェーズで採用されました。各テクノロジは、 FlexPod Express Infrastructure 解決策の特定の目的に使用されます。
+
+
+
+== NetApp AFF ONTAP 9.6 搭載 C190 シリーズ
+
+この解決策は、 NetApp AFF C190 システムと ONTAP 9.6 ソフトウェアの 2 つの最新ネットアップ製品を活用しています。
+
+
+
+=== AFF C190 システム
+
+ターゲットグループとは、リーズナブルな価格でオールフラッシュテクノロジを導入し、 IT インフラを最新化したいと考えているお客様です。AFF C190 システムには、 ONTAP 9.6 とフラッシュバンドルの新しいライセンスが付属しています。つまり、次の機能が搭載されています。
+
+* CIFS 、 NFS 、 iSCSI 、および FCP
+* NetApp SnapMirror データレプリケーションソフトウェア、 NetApp SnapVault バックアップソフトウェア、 NetApp SnapRestore データリカバリソフトウェア、 NetApp SnapManager ストレージ管理ソフトウェア製品スイート、 NetApp SnapCenter ソフトウェア
+* FlexVol テクノロジ
+* 重複排除、圧縮、コンパクション
+* シンプロビジョニング
+* Storage QoS
+* NetApp RAID DP テクノロジ
+* NetApp Snapshot テクノロジ
+* FabricPool
+
+
+次の図に、ホスト接続の 2 つのオプションを示します。
+
+次の図は、 SFP+ モジュールを挿入できる UTA 2 ポートを示しています。
+
+image:express-c-series-c190-design_image4.png["エラー：グラフィックイメージがありません"]
+
+次の図に、従来の RJ-45 イーサネットケーブルを介した接続用の 10GBASE-T ポートを示します。
+
+image:express-c-series-c190-design_image5.png["エラー：グラフィックイメージがありません"]
+
+
+NOTE: 10GBASE-T ポートオプションの場合、 10GBASE-T ベースのアップリンクスイッチが必要です。
+
+AFF C190 システムは、 960GB SSD のみで構成されます。拡張には 4 つの段階があり、その中から選択できます。
+
+* 960GB × 8
+* 960GB ： 12 倍
+* 960GB × 18
+* 24X 960GB
+
+
+AFF C190 ハードウェアシステムの詳細については、を参照してください https://www.netapp.com/us/products/entry-level-aff.aspx["NetApp AFF C190 オールフラッシュアレイのページ"^]。
+
+
+
+=== ONTAP 9.6 ソフトウェア
+
+NetApp AFF C190 システムでは、新しい ONTAP 9.6 データ管理ソフトウェアを使用します。ONTAP 9.6 は、業界をリードするエンタープライズデータ管理ソフトウェアです。新しいレベルのシンプルさと柔軟性、強力なデータ管理機能、ストレージ効率化機能、業界をリードするクラウド統合機能を兼ね備えています。
+
+ONTAP 9.6 には、 FlexPod Express 解決策に最適ないくつかの機能があります。最も重要なのは、ストレージ効率化に対するネットアップの取り組みです。これは、小規模環境で最も重要な機能の 1 つです。ONTAP 9.6 では、重複排除、圧縮、コンパクション、シンプロビジョニングなどのネットアップの Storage Efficiency 機能が特徴です。NetApp WAFL システムは、常に 4KB ブロックを書き込みます。したがって、コンパクションでは、ブロックが割り当てられた 4KB のスペースを使用していない場合、複数のブロックが 4KB ブロックにまとめられます。次の図に、このプロセスを示します。
+
+image:express-c-series-c190-design_image6.png["エラー：グラフィックイメージがありません"]
+
+ONTAP 9.6 では、 NVMe ボリューム用のオプションの 512 バイトブロックサイズがサポートされるようになりました。この機能は、 512 バイトのブロックをネイティブで使用する VMware Virtual Machine File System （ VMFS ）と連携します。デフォルトの 4K サイズをそのまま使用することも、必要に応じて 512 バイトのブロックサイズを設定することもできます。
+
+ONTAP 9.6 のその他の機能拡張には、次のものがあります。
+
+* * NetApp Aggregate Encryption （ NAE ）。 * NAE はアグリゲートレベルでキーを割り当て、アグリゲート内のすべてのボリュームを暗号化します。この機能では、アグリゲートレベルでボリュームを暗号化および重複排除できます。
+* * NetApp ONTAP FlexGroup のボリューム機能強化 * 。ONTAP 9.6 では、 FlexGroup ボリュームの名前を簡単に変更できます。データをに移行するために新しいボリュームを作成する必要はありません。ボリュームサイズは、 ONTAP システムマネージャまたは CLI を使用して縮小することもできます。
+* * FabricPool の機能強化 * ONTAP 9.6 では、クラウド階層としてのオブジェクトストアのサポートが追加されています。Google Cloud と Alibaba Cloud Object Storage Service （ OSS ）のサポートもリストに追加されました。FabricPool は、 AWS S3 、 Azure Blob 、 IBM Cloud オブジェクトストレージ、 NetApp StorageGRID オブジェクトベースストレージソフトウェアなど、複数のオブジェクトストアをサポートしています。
+* * SnapMirror の機能拡張。 * ONTAP 9.6 では、新しいボリュームレプリケーション関係はデフォルトで暗号化されたあとにソースアレイから削除され、 SnapMirror デスティネーションで復号化されます。
+
+
+
+
+== Cisco Nexus 3000 シリーズ
+
+Cisco Nexus 31108PC-V は、 10Gbps SFP + ベースのトップオブラック（ ToR ）スイッチで、 48 個の SFP+ ポートと 6 個の QSFP28 ポートを備えています。各 SFP+ ポートは 100Mbps 、 10Gbps 、各 QSFP28 ポートはネイティブの 100Gbps モードまたは 40Gbps モードまたは 4x 10Gbps モードで動作し、柔軟な移行オプションを提供します。このスイッチは、低レイテンシと低消費電力に最適化された、真の PHY レス・スイッチです。
+
+Cisco Nexus 31108PC-V 仕様には、次のコンポーネントが含まれています。
+
+* 最大 1.2Tbps のスイッチング容量および転送速度（ 31108PC-V
+* SFP ポート × 48 で 1 / 10 ギガビットイーサネット（ 10GbE ）をサポート。 QSFP28 ポート × 6 では、それぞれ 4 個の 10GbE または 40GbE 、 100GbE をサポートします
+
+
+次の図に、 Cisco Nexus 31108PC-V スイッチを示します。
+
+image:express-c-series-c190-design_image7.png["エラー：グラフィックイメージがありません"]
+
+Cisco Nexus 31108PC-V スイッチの詳細については、を参照してください https://www.cisco.com/c/en/us/products/collateral/switches/nexus-3000-series-switches/data_sheet_c78-729483.html["Cisco Nexus 3172PQ 、 3172TQ 、 3172TQ-32T 、 3172PQ-XL 、および 3172TQ-XL スイッチのデータシート"^]。
+
+
+
+== Cisco UCS C-Series
+
+Cisco UCS C シリーズラックサーバは FlexPod Express 用に選択されました。多くの設定オプションを使用することで、 FlexPod Express 環境の特定の要件に合わせて調整できます。
+
+Cisco UCS C シリーズラックサーバは、業界標準のフォームファクタでユニファイドコンピューティングを提供し、 TCO の削減と即応性の向上を実現します。
+
+Cisco UCS C シリーズラックサーバには、次のようなメリットがあります。
+
+* フォームファクタに依存しない Cisco UCS へのエントリポイント
+* アプリケーションを簡単かつ迅速に導入
+* ユニファイドコンピューティングの革新性と利点をラックサーバに拡張
+* 使い慣れたラックパッケージに独自のメリットをもたらし、お客様の選択肢を拡大
+
+
+image:express-c-series-c190-design_image8.png["エラー：グラフィックイメージがありません"]
+
+Cisco UCS C220 M5 ラックサーバは、この図のように、業界で最も汎用性の高い汎用エンタープライズインフラおよびアプリケーションサーバの 1 つです。高密度の 2 ソケットラックサーバで、仮想化、コラボレーション、ベアメタルなど、さまざまなワークロードに業界最高レベルのパフォーマンスと効率性を提供します。Cisco UCS C シリーズラックサーバは、スタンドアロンサーバとして導入することも、 Cisco UCS の一部として導入することもできます。これにより、シスコの標準ベースのユニファイドコンピューティングの革新的な技術を活用して、お客様の TCO を削減し、ビジネスの俊敏性を高めることができます。
+
+C220 M5 サーバの詳細については、を参照してください https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/datasheet-c78-739281.html["Cisco UCS C220 M5 ラックサーバデータシート"^]。
+
+
+
+=== C220 M5 ラックサーバ用 Cisco UCS VIC 1457 接続
+
+次の図に示す Cisco UCS VIC 1457 アダプタは、 M5 世代の Cisco UCS C シリーズサーバ用に設計された、クアッドポート Small Form-Factor Pluggable （ SFP28 ） Modular LAN on Motherboard （ mLOM ）カードです。このカードは 10/25Gbps のイーサネットまたは FCoE をサポートしています。このカードは、 PCIe 標準準拠のインタフェースをホストに提供でき、 NIC または HBA として動的に構成できます。
+
+image:express-c-series-c190-design_image9.png["エラー：グラフィックイメージがありません"]
+
+Cisco UCS VIC 1457 アダプタの詳細については、を参照してください https://www.cisco.com/c/en/us/products/collateral/interfaces-modules/unified-computing-system-adapters/datasheet-c78-741130.html["Cisco UCS 仮想インターフェイスカード 1400 シリーズデータシート"^]。
+
+
+
+== VMware vSphere 6.7U2
+
+VMware vSphere 6.7U2 は、 FlexPod Express で使用するハイパーバイザーオプションの 1 つです。VMware vSphere を使用すると、購入したコンピューティング容量が十分に使用されていることを確認しながら、組織の電力および冷却のフットプリントを削減できます。また、 VMware vSphere を使用すると、ハードウェア障害からの保護（ VMware High Availability 、 VMware HA ）が可能になり、 vSphere ホストのクラスタ全体（メンテナンスモードの VMware Distributed Resource Scheduler 、または VMware DRS - MM ）でリソースのロードバランシングを計算できます。
+
+カーネルのみが再起動されるため、 VMware vSphere 6.7U2 を使用すると、ハードウェアを再起動せずに vSphere ESXi をロードすることで、迅速なブートが可能になります。vSphere 6.7U2 vSphere クライアント（ HTML5 ベースのクライアント）には、コードキャプチャ機能と API エクスプローラ機能を備えた Developer Center などの新しい機能拡張がいくつかあります。コードキャプチャを使用すると、 vSphere クライアントにアクションを記録して、わかりやすいシンプルなコード出力を提供できます。vSphere 6.7U2 には、メンテナンスモードの DRS （ DRS-MM ）などの新機能も含まれています。
+
+VMware vSphere 6.7U2 には次の機能があります。
+
+* VMware は、外部の VMware Platform Services Controller （ PSC ）導入モデルを廃止しています。
+
+
+
+NOTE: vSphere の次回のメジャーリリース以降、外部 PSC は利用できません。
+
+* vCenter Server Appliance のバックアップおよびリストアでサポートされる新しいプロトコルが追加されました。サポートされるプロトコルの選択肢として NFS と SMB を導入、合計で最大 7 つ（ HTTP 、 HTTPS 、 FTP 、 FTPS 、 SCP 、 NFS 、および SMB ）：ファイルベースのバックアップまたはリストア処理用に vCenter Server を設定する場合。
+* コンテンツライブラリを使用する際の新しい機能。vCenter Server でリンクモードが強化されている場合は、コンテンツライブラリ間でネイティブの VM テンプレートを同期できるようになりました。
+* をに更新します https://blogs.vmware.com/vsphere/2019/04/vcenter-server-6-7-update-2-whats-new.html["[ クライアントプラグイン ] ページ"^]。
+* VMware vSphere Update Manager には、 vSphere Client の機能強化も含まれています。1 つの画面で、準拠状況の確認と修正をすべて実行できます。
+
+
+VMware vSphere 6.7 U2 の詳細については、を参照してください https://blogs.vmware.com/vsphere/2019/04/vcenter-server-6-7-update-2-whats-new.html["VMware vSphere のブログページ"^]。
+
+VMware vCenter Server 6.7 U2 の更新の詳細については、を参照してください https://docs.vmware.com/en/VMware-vSphere/6.7/rn/vsphere-vcenter-server-67u2-release-notes.html["リリースノート"^]。
+
+
+NOTE: この解決策は vSphere 6.7U2 で検証されていますが、は他のコンポーネントで認定されている任意の vSphere バージョンをサポートします https://mysupport.netapp.com/matrix/["ネットアップの Interoperability Matrix Tool （ IMT ）"^]。ネットアップでは、修正および機能強化のために、次のリリースバージョンの vSphere を導入することを推奨します。
+
+
+
+== ブートアーキテクチャ
+
+FlexPod Express ブートアーキテクチャでは、次のオプションがサポートされています。
+
+* iSCSI SAN LUN
+* Cisco FlexFlash SD カード
+* ローカルディスク
+
+
+FlexPod データセンターは iSCSI LUN からブートされるため、 FlexPod Express でも iSCSI ブートを使用することで解決策の管理性が向上します。
+
+
+
+=== ESXi ホストの仮想ネットワークインターフェイスカードのレイアウト
+
+Cisco UCS VIC 1457 には 4 つの物理ポートがあります。この解決策検証では、 ESXi ホストを使用するのこれら 4 つの物理ポートを確認します。NIC の数が少ないかそれよりも多い場合は、 VMNIC の数が異なる可能性があります。
+
+iSCSI ブート実装では、 iSCSI ブートには個別の Virtual Network Interface Card （ vNIC; 仮想ネットワークインターフェイスカード）が必要です。これらの vNIC は、次の図に示すように、適切なファブリックの iSCSI VLAN をネイティブ VLAN として使用し、 iSCSI ブート vSwitch に接続します。
+
+image:express-c-series-c190-design_image10.png["エラー：グラフィックイメージがありません"]
+
+link:express-c-series-c190-design_conclusion.html["次は終わりです"]

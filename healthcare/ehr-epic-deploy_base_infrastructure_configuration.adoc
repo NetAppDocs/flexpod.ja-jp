@@ -1,0 +1,63 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-epic-deploy_base_infrastructure_configuration.html 
+keywords: base, configuration, infrastructure, network, connectivity, storage, host, software 
+summary: このセクションでは、インフラを設定するために必要なネットワーク接続、ストレージ接続、およびソフトウェアについて説明します。 
+---
+= ベースインフラの構成
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+
+
+== ネットワーク接続
+
+インフラを設定する前に、次のネットワーク接続を確立しておく必要があります。
+
+* 全体を通して、ポートチャネルと仮想ポートチャネルを使用したリンクアグリゲーションが使用されるため、より広い帯域幅と HA を実現できます。
++
+** 仮想ポートチャネルは、 Cisco FI スイッチと Cisco Nexus スイッチの間で使用されます。
+** 各サーバには、ユニファイドファブリックへの冗長接続を持つ vNIC があります。NIC フェイルオーバーは、 FI 間で冗長性を確保するために使用されます。
+** 各サーバには、ユニファイドファブリックに冗長接続された vHBA があります。
+
+
+* Cisco UCS FI は推奨されるエンドホストモードで設定され、アップリンクスイッチへの vNIC のダイナミックなピン接続を提供します。
+
+
+
+
+== ストレージ接続
+
+インフラを設定する前に、次のストレージ接続を確立しておく必要があります。
+
+* ストレージポート ifgroup （ vPC ）
+* スイッチ N9k- A への 10G リンク
+* スイッチ N9k-B への 10G リンク
+* インバンド管理（アクティブ / パッシブボンド）：
++
+** 管理スイッチ N9k-A への 1G リンク
+** 管理スイッチ N9k-B への 1G リンク
+
+
+* Cisco MDS スイッチを介した 16G FC のエンドツーエンド接続。単一イニシエータのゾーニングが設定さ
+* FC SAN ブートでは、ステートレスコンピューティングを完全に実現します。サーバは、 AFF ストレージクラスタでホストされているブートボリューム内の LUN からブートされます。
+* Epic ワークロードはすべて FC LUN でホストされており、 FC LUN はストレージコントローラノード全体に分散されています。
+
+
+
+
+== ホストソフトウェア
+
+次のソフトウェアをインストールする必要があります。
+
+* ESXi は Cisco UCS ブレードにインストールされます。
+* vCenter をインストールして設定し、すべてのホストを vCenter に登録します。
+* VSC が vCenter にインストールされて登録されている。
+* ネットアップクラスタが設定されている。
+
+
+link:ehr-epic-deploy_cisco_ucs_blade_server_and_switch_configuration.html["次に、 Cisco UCS ブレードサーバとスイッチの設定を行います"]

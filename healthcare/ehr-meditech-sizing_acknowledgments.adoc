@@ -1,0 +1,22 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-sizing_acknowledgments.html 
+keywords: acknowledgements, contributions, writers 
+summary: 本ガイドの執筆および作成には、以下の方々が協力していただきました。 
+---
+= 謝辞
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+本ガイドの執筆および作成には、以下の方々が協力していただきました。
+
+* Brandon AGEE 、テクニカルマーケティングエンジニア、ネットアップ
+* ネットアップ、ヘルスケア、ソリューションアーキテクト、 John Duignan 氏
+* ネットアップ、プロダクトマネージャー、 Ketan Mota
+* Cisco Systems, Inc 、テクニカルソリューションアーキテクト、 Jon Ebmeier 氏
+* シスコシステムズ、プロダクトマネージャ、 Mike Brennan 氏
+

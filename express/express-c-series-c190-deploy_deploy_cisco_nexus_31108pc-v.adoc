@@ -1,0 +1,441 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-c190-deploy_deploy_cisco_nexus_31108pc-v.html 
+keywords: deploy, cisco, nexus, initial, setup, swtich, 31108pc, v, configure, switch, server 
+summary:  
+---
+= Cisco Nexus 31108PC-V の導入
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+このセクションでは、 FlexPod Express 環境で使用する Cisco Nexus 33108PC-V スイッチの構成について詳しく説明します。
+
+
+
+== Cisco Nexus 31108PC-V スイッチの初期セットアップ
+
+次の手順では、 FlexPod Express の基本環境で使用するように Cisco Nexus スイッチを設定する方法について説明します。
+
+
+NOTE: この手順は、 NX-OS ソフトウェアリリース 7.0(3) i7(6) を実行する Cisco Nexus 31108PC-V を使用していることを前提としています。
+
+. スイッチのコンソールポートを最初にブートして接続すると、 Cisco NX-OS セットアップが自動的に開始されます。この初期構成では、スイッチ名、 mgmt0 インターフェイス構成、および Secure Shell （ SSH ）セットアップなどの基本的な設定を行います。
+. FlexPod Express 管理ネットワークは、さまざまな方法で構成できます。31108PC-V スイッチの mgmt0 インターフェイスは既存の管理ネットワークに接続することも、 31108PC-V スイッチの mgmt0 インターフェイスをバックツーバックで接続することもできます。ただし、このリンクは、 SSH トラフィックなどの外部管理アクセスには使用できません。
++
+
+NOTE: この導入ガイドでは、 FlexPod Express Cisco Nexus 31108PC-V スイッチを既存の管理ネットワークに接続します。
+
+. Cisco Nexus 31108PC-V スイッチを設定するには、スイッチの電源をオンにし、画面の指示に従います。ここでは、両方のスイッチの初期セットアップを示します。スイッチ固有の情報については、適切な値に置き換えてください。
++
+....
+This setup utility will guide you through the basic configuration of
+the system. Setup configures only enough connectivity for management
+of the system.
+*Note: setup is mainly used for configuring the system initially,
+when no configuration is present. So setup always assumes system
+defaults and not the current system configuration values.
+Press Enter at anytime to skip a dialog. Use ctrl-c at anytime
+to skip the remaining dialogs.
+Would you like to enter the basic configuration dialog (yes/no): y
+Do you want to enforce secure password standard (yes/no) [y]: y
+  Create another login account (yes/no) [n]: n
+  Configure read-only SNMP community string (yes/no) [n]: n
+  Configure read-write SNMP community string (yes/no) [n]: n
+  Enter the switch name : 31108PC-V-B
+  Continue with Out-of-band (mgmt0) management configuration? (yes/no) [y]: y
+    Mgmt0 IPv4 address : <<var_switch_mgmt_ip>>
+    Mgmt0 IPv4 netmask : <<var_switch_mgmt_netmask>>
+  Configure the default gateway? (yes/no) [y]: y
+    IPv4 address of the default gateway : <<var_switch_mgmt_gateway>>
+  Configure advanced IP options? (yes/no) [n]: n
+  Enable the telnet service? (yes/no) [n]: n
+  Enable the ssh service? (yes/no) [y]: y
+    Type of ssh key you would like to generate (dsa/rsa) [rsa]: rsa
+    Number of rsa key bits <1024-2048> [1024]: <enter>
+  Configure the ntp server? (yes/no) [n]: y
+    NTP server IPv4 address : <<var_ntp_ip>>
+  Configure default interface layer (L3/L2) [L2]: <enter>
+  Configure default switchport interface state (shut/noshut) [noshut]: <enter>
+  Configure CoPP system profile (strict/moderate/lenient/dense) [strict]: <enter>
+....
+. 設定の概要が表示され、編集するかどうかの確認を求められます。設定が正しい場合は、「 n 」と入力します。
++
+....
+Would you like to edit the configuration? (y
+es/no) [n]: n
+....
+. その後、この設定を使用するかどうかを確認するメッセージが表示され、保存します。その場合は、「 y 」と入力します。
++
+....
+Use this configuration and save it? (yes/no) [y]: Enter
+....
+. Cisco Nexus スイッチ B について、この手順を繰り返します
+
+
+
+
+== 高度な機能を有効にします
+
+追加の設定オプションを提供するには、 Cisco NX-OS で特定の高度な機能をイネーブルにする必要があります。Cisco Nexus スイッチ A およびスイッチ B で適切な機能を有効にするには、コマンド（ config t ）を使用して構成モードに切り替え、次のコマンドを実行します。
+
+....
+feature interface-vlan
+feature lacp
+feature vpc
+....
+
+NOTE: ポートチャネルのデフォルトのロードバランシングハッシュでは、ソースおよびデスティネーションの IP アドレスを使用して、ポートチャネルのインターフェイス全体のロードバランシングアルゴリズムを決定します。ハッシュアルゴリズムにソースおよびデスティネーションの IP アドレス以外にもデータを提供することで、ポートチャネルのメンバー全体へのより均等なロードバランシングを実現できます。同じ理由から、ソースおよびデスティネーションの TCP ポートをハッシュアルゴリズムに追加することを推奨します。
+
+構成モード（ config t ）から次のコマンドを入力し、 Cisco Nexus スイッチ A とスイッチ B のグローバルポートチャネルロードバランシング設定を行います。
+
+....
+port-channel load-balance src-dst ip-l4port
+....
+
+
+== グローバルスパニングツリーを設定します
+
+Cisco Nexus プラットフォームでは、ブリッジアシュアランスと呼ばれる新しい保護機能を使用します。ブリッジアシュアランスは、スパニングツリーアルゴリズムを実行していないデバイスでデータトラフィックの転送を継続する単方向リンクやその他のソフトウェア障害から保護するのに役立ちます。ポートは、プラットフォームに応じて、ネットワークやエッジなどのいくつかの状態のいずれかに配置できます。
+
+すべてのポートがデフォルトでネットワークポートとみなされるように、ブリッジアシュアランスを設定することを推奨します。この設定により、ネットワーク管理者は各ポートの設定を確認することになります。また、未識別のエッジポートや、ブリッジアシュアランス機能が有効になっていないネイバーなど、最も一般的な構成エラーも表示されます。また、スパニングツリーでブロックするポートの数が少なすぎない方が、多くのポートをブロックする方が安全で、デフォルトのポートの状態でネットワーク全体の安定性を高めることができます。
+
+サーバ、ストレージ、アップリンクスイッチを追加するときは、スパニングツリーの状態に細心の注意を払ってください。追加する構成がブリッジアシュアランスをサポートしていない場合は特に注意が必要です。このような場合は、ポートをアクティブにするためにポートタイプの変更が必要になることがあります。
+
+Bridge Protocol Data Unit （ BPDU; ブリッジプロトコルデータユニット）ガードは、別の保護レイヤとしてデフォルトでエッジポートでイネーブルになっています。ネットワーク内のループを防止するために、このインターフェイス上で BPDU が別のスイッチから受信された場合、この機能はポートをシャットダウンします。
+
+Cisco Nexus スイッチ A およびスイッチ B で、構成モード（ config t ）から次のコマンドを実行し、デフォルトのポートタイプや BPDU ガードなどのデフォルトのスパニングツリーオプションを設定します。
+
+....
+spanning-tree port type network default
+spanning-tree port type edge bpduguard default
+spanning-tree port type edge bpdufilter default
+ntp server <<var_ntp_ip>> use-vrf management
+ntp master 3
+....
+
+
+== VLAN を定義します
+
+VLAN の異なるポートを個別に設定する前に、レイヤ 2 VLAN をスイッチ上に定義する必要があります。また、 VLAN に名前を付けておくと、今後のトラブルシューティングを簡単に行うことができます。
+
+構成モード（ config t ）から次のコマンドを実行し、 Cisco Nexus スイッチ A とスイッチ B のレイヤ 2 VLAN を定義して説明します。
+
+....
+vlan <<nfs_vlan_id>>
+  name NFS-VLAN
+vlan <<iSCSI_A_vlan_id>>
+  name iSCSI-A-VLAN
+vlan <<iSCSI_B_vlan_id>>
+  name iSCSI-B-VLAN
+vlan <<vmotion_vlan_id>>
+  name vMotion-VLAN
+vlan <<vmtraffic_vlan_id>>
+  name VM-Traffic-VLAN
+vlan <<mgmt_vlan_id>>
+  name MGMT-VLAN
+vlan <<native_vlan_id>>
+  name NATIVE-VLAN
+exit
+....
+
+
+== アクセスポートと管理ポートの説明を設定します
+
+レイヤ 2 VLAN に名前を割り当てる場合と同様に、すべてのインターフェイスに説明を設定すると、プロビジョニングとトラブルシューティングの両方に役立ちます。
+
+各スイッチの構成モード（ config t ）から、 FlexPod Express の大規模構成に関する次のポート説明を入力します。
+
+
+
+=== Cisco Nexus スイッチ A
+
+....
+int eth1/1
+  description AFF C190-A e0c
+int eth1/2
+  description AFF C190-B e0c
+int eth1/3
+  description UCS-Server-A: MLOM port 0 vSwitch0
+int eth1/4
+  description UCS-Server-B: MLOM port 0 vSwitch0
+int eth1/5
+  description UCS-Server-A: MLOM port 1 iScsiBootvSwitch
+int eth1/6
+  description UCS-Server-B: MLOM port 1 iScsiBootvSwitch
+int eth1/25
+  description vPC peer-link 31108PC-V-B 1/25
+int eth1/26
+  description vPC peer-link 31108PC-V-B 1/26
+int eth1/33
+  description AFF C190-A e0M
+int eth1/34
+  description UCS Server A: CIMC
+....
+
+
+=== Cisco Nexus スイッチ B
+
+....
+int eth1/1
+  description AFF C190-A e0d
+int eth1/2
+  description AFF C190-B e0d
+int eth1/3
+  description UCS-Server-A: MLOM port 2 vSwitch0
+int eth1/4
+description UCS-Server-B: MLOM port 2 vSwitch0
+int eth1/5
+  description UCS-Server-A: MLOM port 3 iScsiBootvSwitch
+int eth1/6
+  description UCS-Server-B: MLOM port 3 iScsiBootvSwitch
+int eth1/25
+  description vPC peer-link 31108PC-V-A 1/25
+int eth1/26
+  description vPC peer-link 31108PC-V-A 1/26
+int eth1/33
+  description AFF C190-B e0M
+int eth1/34
+  description UCS Server B: CIMC
+....
+
+
+== サーバおよびストレージの管理インターフェイスを設定します
+
+サーバとストレージの管理インターフェイスで使用する VLAN は、通常、どちらも 1 つだけです。そのため、管理インターフェイスポートをアクセスポートとして設定します。各スイッチの管理 VLAN を定義し、スパニングツリーポートタイプをエッジに変更します。
+
+構成モード（ config t ）から次のコマンドを入力し、サーバとストレージの両方の管理インターフェイスのポート設定を行います。
+
+
+
+=== Cisco Nexus スイッチ A
+
+....
+int eth1/33-34
+  switchport mode access
+  switchport access vlan <<mgmt_vlan>>
+  spanning-tree port type edge
+  speed 1000
+exit
+....
+
+
+=== Cisco Nexus スイッチ B
+
+....
+int eth1/33-34
+  switchport mode access
+  switchport access vlan <<mgmt_vlan>>
+  spanning-tree port type edge
+  speed 1000
+exit
+....
+
+
+== 仮想ポートチャネルのグローバル設定を実行します
+
+仮想ポートチャネル（ vPC ）を使用すると、 2 つの異なる Cisco Nexus スイッチに物理的に接続されたリンクを、 3 番目のデバイスに対する単一のポートチャネルとして認識できます。3 番目のデバイスには、スイッチ、サーバ、またはその他のネットワークデバイスを使用できます。vPC はレイヤ 2 マルチパスを提供します。これにより、帯域幅を増やし、ノード間で複数のパラレルパスを有効にし、代替パスが存在する場合はトラフィックをロードバランシングすることで、冗長性を確保できます。
+
+vPC には次の利点があります。
+
+* 1 つのデバイスが 2 つのアップストリームデバイス間でポートチャネルを使用できるようにする
+* スパニングツリープロトコルのブロックポートの排除
+* ループフリートポロジを提供する
+* 使用可能なすべてのアップリンク帯域幅を使用する
+* リンクまたはデバイスのいずれかに障害が発生した場合に、高速コンバージェンスを提供します
+* リンクレベルの耐障害性を提供します
+* 高可用性の実現を支援します
+
+
+vPC 機能を正しく機能させるには、 2 つの Cisco Nexus スイッチ間でいくつかの初期セットアップを行う必要があります。バックツーバックの mgmt0 構成を使用する場合は、インターフェイスに定義されたアドレスを使用し、「 ping `\<switch_a/B_mgmt0_ip_addr>vrf ’ management コマンドを使用してそれらのアドレスで通信が可能であることを確認します。
+
+構成モード（ config t ）から次のコマンドを実行し、両方のスイッチの vPC グローバル構成を設定します。
+
+
+
+=== Cisco Nexus スイッチ A
+
+....
+vpc domain 1
+ role priority 10
+  peer-keepalive destination <<switch_B_mgmt0_ip_addr>> source <<switch_A_mgmt0_ip_addr>> vrf
+management
+peer-switch
+peer-gateway
+auto-recovery
+delay restore 150
+ip arp synchronize
+int eth1/25-26
+  channel-group 10 mode active
+int Po10
+  description vPC peer-link
+  switchport
+  switchport mode trunk
+  switchport trunk native vlan <<native_vlan_id>>
+  switchport trunk allowed vlan <<nfs_vlan_id>>,<<vmotion_vlan_id>>, <<vmtraffic_vlan_id>>, <<mgmt_vlan>, <<iSCSI_A_vlan_id>>, <<iSCSI_B_vlan_id>>
+  spanning-tree port type network
+  vpc peer-link
+  no shut
+exit
+copy run start
+....
+
+
+=== Cisco Nexus スイッチ B
+
+....
+vpc domain 1
+  peer-switch
+  role priority 20
+  peer-keepalive destination <<switch_A_mgmt0_ip_addr>> source <<switch_B_mgmt0_ip_addr>> vrf management
+  peer-gateway
+  auto-recovery
+  delay-restore 150
+   ip arp synchronize
+int eth1/25-26
+  channel-group 10 mode active
+int Po10
+  description vPC peer-link
+  switchport
+  switchport trunk native vlan <<native_vlan_id>>
+  switchport trunk allowed vlan <<nfs_vlan_id>>,<<vmotion_vlan_id>>, <<vmtraffic_vlan_id>>, <<mgmt_vlan>>, <<iSCSI_A_vlan_id>>, <<iSCSI_B_vlan_id>>
+  spanning-tree port type network
+  vpc peer-link
+no shut
+exit
+copy run start
+....
+
+
+== ストレージポートチャネルを設定します
+
+ネットアップストレージコントローラでは、 Link Aggregation Control Protocol （ LACP ）を使用してネットワークにアクティブ / アクティブ接続できます。LACP は、スイッチ間でネゴシエーションとロギングの両方を行うため、 LACP の使用を推奨します。ネットワークは vPC 用に設定されているため、ストレージからのアクティブ / アクティブ接続を可能にして、別々の物理スイッチに接続できます。各コントローラには、各スイッチへのリンクが 2 つあります。ただし、 4 つのリンクはすべて同じ vPC とインターフェイスグループ（ ifgrp ）に属します。
+
+構成モード（ config t ）から各スイッチで次のコマンドを実行し、個々のインターフェイスと、 NetApp AFF コントローラに接続されたポートのポートチャネル構成を設定します。
+
+. スイッチ A およびスイッチ B で次のコマンドを実行して、ストレージコントローラ A のポートチャネルを設定します。
++
+....
+int eth1/1
+  channel-group 11 mode active
+int Po11
+  description vPC to Controller-A
+  switchport
+  switchport mode trunk
+  switchport trunk native vlan <<native_vlan_id>>
+  switchport trunk allowed vlan <<nfs_vlan_id>>,<<mgmt_vlan_id>>,<<iSCSI_A_vlan_id>>, <<iSCSI_B_vlan_id>>
+  spanning-tree port type edge trunk
+  mtu 9216
+  vpc 11
+  no shut
+....
+. スイッチ A とスイッチ B で次のコマンドを実行して、ストレージコントローラ B のポートチャネルを設定します。
++
+....
+int eth1/2
+  channel-group 12 mode active
+int Po12
+  description vPC to Controller-B
+  switchport
+  switchport mode trunk
+  switchport trunk native vlan <<native_vlan_id>>
+  switchport trunk allowed vlan <<nfs_vlan_id>>,<<mgmt_vlan_id>>, <<iSCSI_A_vlan_id>>, <<iSCSI_B_vlan_id>>
+  spanning-tree port type edge trunk
+  mtu 9216
+  vpc 12
+  no shut
+exit
+copy run start
+....
+
+
+
+
+== サーバ接続を設定します
+
+Cisco UCS サーバには 4 ポートの仮想インターフェイスカード VIC1457 があり、 iSCSI を使用した ESXi オペレーティングシステムのデータトラフィックおよびブートに使用されます。これらのインターフェイスは互いにフェイルオーバーするように設定されているため、単一リンク以上の冗長性が追加されます。これらのリンクを複数のスイッチに分散させることで、あるスイッチが完全に停止した場合でもサーバの運用を継続することができます。
+
+構成モード（ config t ）から次のコマンドを実行し、各サーバに接続されたインターフェイスのポート設定を行います。
+
+
+
+=== Cisco Nexus スイッチ A ： Cisco UCS サーバ A と Cisco UCS サーバ B の構成
+
+....
+int eth1/5
+  switchport mode trunk
+  switchport trunk native vlan <<native_vlan_id>>
+  switchport trunk allowed vlan <<iSCSI_A_vlan_id>>,<<nfs_vlan_id>>,<<vmotion_vlan_id>>,<<vmtraffic_vlan_id>>,<<mgmt_vlan_id>>
+  spanning-tree port type edge trunk
+  mtu 9216
+  no shut
+exit
+copy run start
+....
+
+
+=== Cisco Nexus スイッチ B ： Cisco UCS サーバ A および Cisco UCS サーバ B の構成
+
+....
+int eth1/6
+  switchport mode trunk
+  switchport trunk native vlan <<native_vlan_id>>
+  switchport trunk allowed vlan <<iSCSI_B_vlan_id>>,<<nfs_vlan_id>>,<<vmotion_vlan_id>>,<<vmtraffic_vlan_id>>,<<mgmt_vlan_id>>
+  spanning-tree port type edge trunk
+  mtu 9216
+  no shut
+exit
+copy run start
+....
+
+
+== サーバポートチャネルを設定します
+
+スイッチ A およびスイッチ B で次のコマンドを実行して、サーバ A のポートチャネルを設定します。
+
+....
+int eth1/3
+  channel-group 13 mode active
+int Po13
+  description vPC to Server-A
+  switchport
+  switchport mode trunk
+  switchport trunk native vlan <<native_vlan_id>>
+  switchport trunk allowed vlan  <<nfs_vlan_id>>,<<vmotion_vlan_id>>,<<vmtraffic_vlan_id>>,<<mgmt_vlan_id>>
+  spanning-tree port type edge trunk
+  mtu 9216
+  vpc 13
+  no shut
+....
+スイッチ A およびスイッチ B で次のコマンドを実行して、サーバ B のポートチャネルを設定します。
+
+....
+int eth1/4
+  channel-group 14 mode active
+int Po14
+  description vPC to Server-B
+  switchport
+  switchport mode trunk
+  switchport trunk native vlan <<native_vlan_id>>
+  switchport trunk allowed vlan  <<nfs_vlan_id>>,<<vmotion_vlan_id>>,<<vmtraffic_vlan_id>>,<<mgmt_vlan_id>>
+  spanning-tree port type edge trunk
+  mtu 9216
+  vpc 14
+  no shut
+....
+
+NOTE: この解決策検証では MTU 9000 が使用されていました。ただし、アプリケーションの要件に応じて、 MTU に別の値を設定することもできます。FlexPod 解決策全体で同じ MTU 値を設定することが重要です。コンポーネント間の MTU 設定が正しくないと、パケットが破棄され、これらのパケットを再送信する必要があり、解決策の全体的なパフォーマンスに影響します。
+
+
+NOTE: Cisco UCS サーバを追加して解決策を拡張するには、新しく追加したサーバがスイッチ A および B に接続されているスイッチポートを使用して、上記のコマンドを実行します
+
+
+
+== 既存のネットワークインフラへのアップリンク
+
+使用可能なネットワークインフラに応じて、 FlexPod 環境をアップリンクするためのいくつかの方法や機能があります。既存の Cisco Nexus 環境がある場合は、 vPC を使用して、 FlexPod 環境に含まれる Cisco Nexus 31108 スイッチをインフラにアップリンクすることを推奨します。必要に応じて、 10GbE インフラ解決策の場合は 10GbE アップリンク、 1GbE インフラ解決策の場合は 1GbE アップリンクがサポートされます。前述の手順を使用して、既存の環境へのアップリンク vPC を作成できます。設定が完了したら、 copy start を実行して各スイッチに設定を保存してください。
+
+link:express-c-series-c190-design_netapp_storage_deployment_procedure_@part_1@.html["次のセクション：ネットアップストレージ導入手順（パート 1 ）"]

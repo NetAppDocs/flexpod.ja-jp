@@ -1,0 +1,1005 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-c190-deploy_netapp_storage_deployment_procedure_@part_1@.html 
+keywords: storage, deployment, procedure, hardware, universe, controller, configure, node, installation, aff, c190, series 
+summary: このセクションでは、 NetApp AFF ストレージ導入手順について説明します。 
+---
+= ネットアップストレージ導入手順（パート 1 ）
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+このセクションでは、 NetApp AFF ストレージ導入手順について説明します。
+
+
+
+== ネットアップストレージコントローラ AFF C190 シリーズの設置
+
+
+
+=== NetApp Hardware Universe の略
+
+NetApp Hardware Universe （ HWU ）アプリケーションは、特定の ONTAP バージョンでサポートされているハードウェアコンポーネントとソフトウェアコンポーネントを提供します。ONTAP ソフトウェアで現在サポートされているネットアップのすべてのストレージアプライアンスに関する構成情報を提供します。また、コンポーネントの互換性の表も示します。
+
+使用するハードウェアコンポーネントとソフトウェアコンポーネントが、インストールする ONTAP のバージョンでサポートされていることを確認します。
+
+にアクセスします http://hwu.netapp.com/Home/Index["HWU"^] システム設定ガイドを表示するアプリケーション。コントローラタブをクリックして、 ONTAP ソフトウェアの異なるバージョンとネットアップストレージアプライアンスの互換性を必要な仕様で確認します。
+
+または、ストレージアプライアンス別にコンポーネントを比較するには、ストレージシステムの比較をクリックします。
+
+|===
+| コントローラ AFFC190 シリーズの前提条件 
+
+
+ a| 
+ストレージシステムの物理的な場所を計画するには、 NetApp Hardware Universe を参照してください。次のセクションを参照してください。
+
+* 電力要件
+* サポートされている電源コード
+* オンボードポートとケーブル
+
+
+|===
+
+
+=== ストレージコントローラ
+
+AFF のコントローラの物理的な設置手順に従います https://mysupport.netapp.com/documentation/docweb/index.html?productID=62937&language=en-US["C190"^] ドキュメント
+
+
+
+== NetApp ONTAP 9.6
+
+
+
+=== 設定ワークシート
+
+セットアップスクリプトを実行する前に、製品マニュアルから構成ワークシートに情報を記入してください。設定ワークシートは、 ONTAP 9.6 ソフトウェアセットアップガイドで入手できます。
+
+
+NOTE: このシステムは、 2 ノードスイッチレスクラスタ構成でセットアップされます。
+
+次の表に、 ONTAP 9.6 のインストールと設定の情報を示します。
+
+|===
+| クラスタの詳細 | クラスタの詳細の値 
+
+
+| クラスタノード A の IP アドレス | \<<var_nodeA_mgmt_ip>> 
+
+
+| クラスタノード A のネットマスク | \<<var_nodeA_mgmt_mask>> を使用します 
+
+
+| クラスタノード A のゲートウェイ | \<<var_nodeA_mgmt_gateway>> を使用します 
+
+
+| クラスタノードの名前 | \<<var_nodeA>> を使用します 
+
+
+| クラスタノード B の IP アドレス | \<<var_nodeB_mgmt_ip>> 
+
+
+| クラスタノード B のネットマスク | \<<var_nodeB_mgmt_mask>> を使用します 
+
+
+| クラスタノード B のゲートウェイ | \<<var_nodeB_mgmt_gateway>> を使用します 
+
+
+| クラスタノード B の名前 | \<<var_nodeB>> を使用します 
+
+
+| ONTAP 9.6 URL | \<<var_url_boot_software>> を参照してください 
+
+
+| クラスタの名前 | \<<var_clustername> を使用します 
+
+
+| クラスタ管理 IP アドレス | \<<var_clustermgmt_ip>> 
+
+
+| クラスタ B ゲートウェイ | \<<var_clustermgmt_gateway>> を使用します 
+
+
+| クラスタ B のネットマスク | \<<var_clustermgmt_mask>> を使用します 
+
+
+| ドメイン名 | \<<var_domain_name>> を参照してください 
+
+
+| DNS サーバ IP （複数入力できます） | <<var_dns_server_ip を使用します 
+
+
+| NTP サーバ IP （複数入力可能） | \<<var_ntp_server_ip>> 
+|===
+
+
+=== ノード A を設定
+
+ノード A を設定するには、次の手順を実行します。
+
+. ストレージ・システムのコンソール・ポートに接続します。ローダー A のプロンプトが表示されます。ただし、ストレージシステムがリブートループに入っている場合は、このメッセージが表示されたら Ctrl-C キーを押して自動ブートループを終了します。
++
+....
+Starting AUTOBOOT press Ctrl-C to abort…
+....
++
+システムをブートできるようにします。
+
++
+....
+autoboot
+....
+. Ctrl+C キーを押してブートメニューを表示します。
++
+
+NOTE: ONTAP 9.6 がブートしているソフトウェアのバージョンでない場合は、次の手順に進み、新しいソフトウェアをインストールします。ONTAP 9.6 がブートしているバージョンの場合は、オプション 8 および y を選択してノードをリブートします。その後、手順 14 に進みます。
+
+. 新しいソフトウェアをインストールするには、オプション 7 を選択します。
+. 「 y 」と入力してアップグレードを実行します。
+. ダウンロードに使用するネットワークポートに e0M を選択します。
+. 「 y 」と入力して今すぐリブートします。
+. e0M の IP アドレス、ネットマスク、およびデフォルトゲートウェイをそれぞれの場所に入力します。
++
+....
+<<var_nodeA_mgmt_ip>> <<var_nodeA_mgmt_mask>> <<var_nodeA_mgmt_gateway>>
+....
+. ソフトウェアを検索できる URL を入力します。
++
+
+NOTE: ping 可能な Web サーバを指定する必要があります。
+
++
+....
+<<var_url_boot_software>>
+....
+. ユーザ名が入力されていない場合は、 Enter キーを押します。
+. y を入力して、新しくインストールしたソフトウェアを、以降のリブートで使用するデフォルトとして設定します。
+. 「 y 」と入力してノードをリブートします。
++
+
+NOTE: 新しいソフトウェアをインストールするときに、 BIOS およびアダプタカードのファームウェアアップグレードが実行され、リブートが発生してローダー A プロンプトで停止する可能性があります。これらの操作が行われた場合、システムがこの手順と異なることがあります。
+
+. Ctrl+C キーを押してブートメニューを表示します。
+. Clean Configuration および Initialize All Disks のオプション 4 を選択します。
+. ディスクを初期化し、設定をリセットして、新しいファイルシステムをインストールするには、「 y 」と入力します。
+. 「 y 」と入力して、ディスク上のすべてのデータを消去します。
++
+
+NOTE: ルートアグリゲートの初期化と作成には、接続されているディスクの数とタイプに応じて 90 分以上かかる場合があります。初期化が完了すると、ストレージシステムがリブートします。SSD の初期化にかかる時間は大幅に短縮されます。ノード A のディスクの初期化中も、ノード B の設定を続行できます。
+
+
+
+ノード A を初期化している間に、ノード B の設定を開始します
+
+
+
+=== ノード B を設定
+
+ノード B を設定するには、次の手順を実行します。
+
+. ストレージ・システムのコンソール・ポートに接続します。ローダー A のプロンプトが表示されます。ただし、ストレージシステムがリブートループに入っている場合は、このメッセージが表示されたら Ctrl-C キーを押して自動ブートループを終了します。
++
+....
+Starting AUTOBOOT press Ctrl-C to abort…
+....
+. Ctrl+C キーを押してブートメニューを表示します。
++
+....
+autoboot
+....
+. プロンプトが表示されたら、 Ctrl-C キーを押します。
++
+
+NOTE: ONTAP 9.6 がブートしているソフトウェアのバージョンでない場合は、次の手順に進み、新しいソフトウェアをインストールします。ONTAP 9.6 がブートしているバージョンの場合は、オプション 8 および y を選択してノードをリブートします。その後、手順 14 に進みます。
+
+. 新しいソフトウェアをインストールするには、オプション 7.A を選択します
+. 「 y 」と入力してアップグレードを実行します。
+. ダウンロードに使用するネットワークポートに e0M を選択します。
+. 「 y 」と入力して今すぐリブートします。
+. e0M の IP アドレス、ネットマスク、およびデフォルトゲートウェイをそれぞれの場所に入力します。
++
+....
+<<var_nodeB_mgmt_ip>> <<var_nodeB_mgmt_ip>><<var_nodeB_mgmt_gateway>>
+....
+. ソフトウェアを検索できる URL を入力します。
++
+
+NOTE: ping 可能な Web サーバを指定する必要があります。
+
++
+....
+<<var_url_boot_software>>
+....
+. ユーザ名が入力されていない場合は、 Enter キーを押します。
+. y を入力して、新しくインストールしたソフトウェアを、以降のリブートで使用するデフォルトとして設定します。
+. 「 y 」と入力してノードをリブートします。
++
+
+NOTE: 新しいソフトウェアをインストールするときに、 BIOS およびアダプタカードのファームウェアアップグレードが実行され、リブートが発生してローダー A プロンプトで停止する可能性があります。これらの操作が行われた場合、システムがこの手順と異なることがあります。
+
+. Ctrl+C キーを押してブートメニューを表示します。
+. Clean Configuration および Initialize All Disks のオプション 4 を選択します。
+. ディスクを初期化し、設定をリセットして、新しいファイルシステムをインストールするには、「 y 」と入力します。
+. 「 y 」と入力して、ディスク上のすべてのデータを消去します。
++
+
+NOTE: ルートアグリゲートの初期化と作成には、接続されているディスクの数とタイプに応じて 90 分以上かかる場合があります。初期化が完了すると、ストレージシステムがリブートします。SSD の初期化にかかる時間は大幅に短縮されます。
+
+
+
+
+
+== ノード A の構成とクラスタ構成を継続
+
+ストレージコントローラ A （ノード A ）のコンソールポートに接続されているコンソールポートプログラムから、ノードセットアップスクリプトを実行します。このスクリプトは、 ONTAP 9.6 がノードで初めてブートしたときに表示されます。
+
+
+NOTE: ONTAP 9.6 では、ノードとクラスタのセットアップ手順が少し変更されています。クラスタセットアップウィザードを使用してクラスタの最初のノードを設定できるようになりました。また、 NetApp ONTAP System Manager （旧 OnCommand ® System Manager ）を使用してクラスタを設定します。
+
+. プロンプトに従ってノード A をセットアップします
++
+....
+Welcome to the cluster setup wizard.
+You can enter the following commands at any time:
+  "help" or "?" - if you want to have a question clarified,
+  "back" - if you want to change previously answered questions, and
+  "exit" or "quit" - if you want to quit the cluster setup wizard.
+     Any changes you made before quitting will be saved.
+You can return to cluster setup at any time by typing "cluster setup".
+To accept a default or omit a question, do not enter a value.
+This system will send event messages and periodic reports to NetApp Technical
+Support. To disable this feature, enter
+autosupport modify -support disable
+within 24 hours.
+Enabling AutoSupport can significantly speed problem determination and
+resolution should a problem occur on your system.
+For further information on AutoSupport, see:
+http://support.netapp.com/autosupport/
+Type yes to confirm and continue {yes}: yes
+Enter the node management interface port [e0M]:
+Enter the node management interface IP address: <<var_nodeA_mgmt_ip>>
+Enter the node management interface netmask: <<var_nodeA_mgmt_mask>>
+Enter the node management interface default gateway: <<var_nodeA_mgmt_gateway>>
+A node management interface on port e0M with IP address <<var_nodeA_mgmt_ip>> has been created.
+Use your web browser to complete cluster setup by accessing
+https://<<var_nodeA_mgmt_ip>>
+Otherwise, press Enter to complete cluster setup using the command line
+interface:
+....
+. ノードの管理インターフェイスの IP アドレスに移動します。
++
+
+NOTE: クラスタのセットアップは、 CLI を使用して実行することもできます。このドキュメントでは、 System Manager のセットアップガイドを使用したクラスタのセットアップについて説明します。
+
+. クラスタを設定するには、セットアップガイドをクリックします。
+. クラスタ名には「 \\<<var_clustername>> 」を、設定する各ノードには「 \<<var_nodeA>` 」と「 \<<var_nodeB>> 」を入力します。ストレージシステムに使用するパスワードを入力します。クラスタタイプに「スイッチレスクラスタ」を選択します。クラスタベースライセンスを入力します。
+. クラスタ、 NFS 、および iSCSI の機能ライセンスを入力することもできます。
+. クラスタの作成中を示すステータスメッセージが表示されます。このステータスメッセージは、複数のステータスを切り替えます。このプロセスには数分かかります。
+. ネットワークを設定します
++
+.. [IP Address Range] オプションを選択解除します。
+.. Cluster Management IP Address フィールドに「 \<<var_clustermgmt_ip>> 」、 Netmask フィールドに「 \var_clustermgmt_mask>> 」と入力します。また、 Gateway フィールドに「 \<<var_clustermgmt_gateway>> 」と入力します。使用する方法 Port フィールドのを選択し、ノード A の e0M を選択します
+.. ノード A のノード管理 IP がすでに入力されています。ノード B には '\\<<var_nodeA_mgmt_ip>> を入力します
+.. [DNS Domain Name] フィールドに「 \<<var_domain_name>` 」と入力します。[DNS Server IP Address] フィールドに「 \<<var_dns_server_ip>> 」と入力します。
++
+
+NOTE: DNS サーバの IP アドレスは複数入力できます。
+
+.. Primary NTP Server フィールドに「 10.63.172.16.2 」と入力します。
++
+
+NOTE: 代替 NTP サーバを入力することもできます。「 \\<<var_ntp_server_ip>> 」の IP アドレス「 10.63.172.16.2 」は、 Nexus Mgmt IP です。
+
+
+
+. サポート情報を設定します。
++
+.. AutoSupport へのアクセスにプロキシが必要な環境の場合は、プロキシの URL をプロキシの URL に入力します。
+.. イベント通知に使用する SMTP メールホストと E メールアドレスを入力します。
++
+
+NOTE: 続行するには、少なくともイベント通知方式を設定する必要があります。いずれかの方法を選択できます。
+
++
+image:express-c-series-c190-deploy_image4.png["エラー：グラフィックイメージがありません"]
+
++
+クラスタ構成が完了したことを示すメッセージが表示されたら、 Manage Your Cluster （クラスタの管理）をクリックしてストレージを構成します。
+
+
+
+
+
+
+
+== ストレージクラスタ構成を継続します
+
+ストレージノードとベースクラスタの設定が完了したら、ストレージクラスタの設定に進むことができます。
+
+
+
+=== すべてのスペアディスクを初期化します
+
+クラスタ内のすべてのスペアディスクを初期化するには、次のコマンドを実行します。
+
+....
+disk zerospares
+....
+
+
+=== オンボード UTA2 ポートパーソナリティを設定します
+
+. ucadmin show コマンドを実行して、現在のモードとポートの現在のタイプを確認します。
++
+....
+AFF C190::> ucadmin show
+                       Current  Current    Pending  Pending    Admin
+Node          Adapter  Mode     Type       Mode     Type       Status
+------------  -------  -------  ---------  -------  ---------  -----------
+AFF C190_A     0c       cna       target     -        -          online
+AFF C190_A     0d       cna       target     -        -          online
+AFF C190_A     0e       cna       target     -        -          online
+AFF C190_A     0f       cna       target     -        -          online
+AFF C190_B     0c       cna       target     -        -          online
+AFF C190_B     0d       cna       target     -        -          online
+AFF C190_B     0e       cna       target     -        -          online
+AFF C190_B     0f       cna       target     -        -          online
+8 entries were displayed.
+....
+. 使用中のポートの現在のモードが CNA であり、現在のタイプが target に設定されていることを確認します。そうでない場合は、次のコマンドを使用してポートパーソナリティを変更します。
++
+....
+ucadmin modify -node <home node of the port> -adapter <port name> -mode cna -type target
+....
++
+
+NOTE: 前のコマンドを実行するには、ポートをオフラインにする必要があります。ポートをオフラインにするには、次のコマンドを実行します。
+
++
+....
+network fcp adapter modify -node <home node of the port> -adapter <port name> -state down
+....
++
+
+NOTE: ポートパーソナリティを変更した場合、変更を有効にするには、各ノードをリブートする必要があります。
+
+
+
+
+
+== 管理論理インターフェイスの名前を変更します
+
+管理論理インターフェイス（ LIF ）の名前を変更するには、次の手順を実行します。
+
+. 現在の管理 LIF の名前を表示します。
++
+....
+network interface show –vserver <<clustername>>
+....
+. クラスタ管理 LIF の名前を変更します。
++
+....
+network interface rename –vserver <<clustername>> –lif cluster_setup_cluster_mgmt_lif_1 –newname cluster_mgmt
+....
+. ノード B の管理 LIF の名前を変更します。
++
+....
+network interface rename -vserver <<clustername>> -lif cluster_setup_node_mgmt_lif_AFF C190_B_1 -newname AFF C190-02_mgmt1
+....
+
+
+
+
+== クラスタ管理で自動リバートを設定する
+
+クラスタ管理インターフェイスで auto-revert パラメータを設定します。
+
+....
+network interface modify –vserver <<clustername>> -lif cluster_mgmt –auto-revert true
+....
+
+
+== サービスプロセッサのネットワークインターフェイスをセットアップします
+
+各ノードのサービスプロセッサに静的 IPv4 アドレスを割り当てるには、次のコマンドを実行します。
+
+....
+system service-processor network modify –node <<var_nodeA>> -address-family IPv4 –enable true –dhcp none –ip-address <<var_nodeA_sp_ip>> -netmask <<var_nodeA_sp_mask>> -gateway <<var_nodeA_sp_gateway>>
+system service-processor network modify –node <<var_nodeB>> -address-family IPv4 –enable true –dhcp none –ip-address <<var_nodeB_sp_ip>> -netmask <<var_nodeB_sp_mask>> -gateway <<var_nodeB_sp_gateway>>
+....
+
+NOTE: サービスプロセッサの IP アドレスは、ノード管理 IP アドレスと同じサブネット内にある必要があります。
+
+
+
+== ONTAP でストレージフェイルオーバーを有効にします
+
+ストレージフェイルオーバーが有効になっていることを確認するには、フェイルオーバーペアで次のコマンドを実行します。
+
+. ストレージフェイルオーバーのステータスを確認
++
+....
+storage failover show
+....
++
+
+NOTE: \\<<var_nodeA>>` と \\<<var_nodeB>> の両方がテイクオーバーを実行できる必要があります。ノードでテイクオーバーを実行できる場合は、ステップ 3 に進みます。
+
+. 2 つのノードのどちらかでフェイルオーバーを有効にします。
++
+....
+storage failover modify -node <<var_nodeA>> -enabled true
+....
++
+
+NOTE: フェイルオーバーは、片方のノードで有効にすれば、両方のノードで有効になります。
+
+. 2 ノードクラスタの HA ステータスを確認
++
+
+NOTE: この手順は、ノードが 3 つ以上のクラスタには適用されません。
+
++
+....
+cluster ha show
+....
+. ハイアベイラビリティが構成されている場合は、ステップ 6 に進みます。ハイアベイラビリティが設定されている場合は、コマンドの実行時に次のメッセージが表示されます。
++
+....
+High Availability Configured: true
+....
+. HA モードは 2 ノードクラスタでのみ有効にします。
++
+
+NOTE: ノードが 3 つ以上のクラスタの場合は、このコマンドを実行しないでください。フェイルオーバーで問題が発生します。
+
++
+....
+cluster ha modify -configured true
+Do you want to continue? {y|n}: y
+....
+. ハードウェアアシストが正しく設定されていることを確認し、必要に応じてパートナーの IP アドレスを変更
++
+....
+storage failover hwassist show
+....
++
+
+NOTE: 「 Keep Alive Status: Error: 」というメッセージは、いずれかのコントローラがハードウェアアシストが設定されていないことを示すハードウェアアシストのキープアライブアラートをパートナーから受信しなかったことを示します。ハードウェアアシストを設定するには、次のコマンドを実行します。
+
++
+....
+storage failover modify –hwassist-partner-ip <<var_nodeB_mgmt_ip>> -node <<var_nodeA>>
+storage failover modify –hwassist-partner-ip <<var_nodeA_mgmt_ip>> -node <<var_nodeB>>
+....
+
+
+
+
+== ONTAP でジャンボフレーム MTU ブロードキャストドメインを作成します
+
+MTU が 9000 のデータブロードキャストドメインを作成するには、次のコマンドを実行します。
+
+....
+broadcast-domain create -broadcast-domain Infra_NFS -mtu 9000
+broadcast-domain create -broadcast-domain Infra_iSCSI-A -mtu 9000
+broadcast-domain create -broadcast-domain Infra_iSCSI-B -mtu 9000
+....
+
+
+== デフォルトのブロードキャストドメインからデータポートを削除します
+
+10GbE のデータポートは iSCSI / NFS トラフィックに使用されます。これらのポートはデフォルトドメインから削除する必要があります。ポート e0e と e0f は使用されないため、デフォルトのドメインからも削除する必要があります。
+
+ブロードキャストドメインからポートを削除するには、次のコマンドを実行します。
+
+....
+broadcast-domain remove-ports -broadcast-domain Default -ports <<var_nodeA>>:e0c, <<var_nodeA>>:e0d, <<var_nodeA>>:e0e, <<var_nodeA>>:e0f, <<var_nodeB>>:e0c, <<var_nodeB>>:e0d, <<var_nodeA>>:e0e, <<var_nodeA>>:e0f
+....
+
+
+== UTA2 ポートではフロー制御を無効にします
+
+ネットアップでは、外部デバイスに接続されているすべての UTA2 ポートでフロー制御を無効にすることをベストプラクティスとして推奨します。フロー制御を無効にするには、次のコマンドを実行します。
+
+....
+net port modify -node <<var_nodeA>> -port e0c -flowcontrol-admin none
+Warning: Changing the network port settings will cause a several second interruption in carrier.
+Do you want to continue? {y|n}: y
+net port modify -node <<var_nodeA>> -port e0d -flowcontrol-admin none
+Warning: Changing the network port settings will cause a several second interruption in carrier.
+Do you want to continue? {y|n}: y
+net port modify -node <<var_nodeA>> -port e0e -flowcontrol-admin none
+Warning: Changing the network port settings will cause a several second interruption in carrier.
+Do you want to continue? {y|n}: y
+net port modify -node <<var_nodeA>> -port e0f -flowcontrol-admin none
+Warning: Changing the network port settings will cause a several second interruption in carrier.
+Do you want to continue? {y|n}: y
+net port modify -node <<var_nodeB>> -port e0c -flowcontrol-admin none
+Warning: Changing the network port settings will cause a several second interruption in carrier.
+Do you want to continue? {y|n}: y
+net port modify -node <<var_nodeB>> -port e0d -flowcontrol-admin none
+Warning: Changing the network port settings will cause a several second interruption in carrier.
+Do you want to continue? {y|n}: y
+net port modify -node <<var_nodeB>> -port e0e -flowcontrol-admin none
+Warning: Changing the network port settings will cause a several second interruption in carrier.
+Do you want to continue? {y|n}: y
+net port modify -node <<var_nodeB>> -port e0f -flowcontrol-admin none
+Warning: Changing the network port settings will cause a several second interruption in carrier.
+Do you want to continue? {y|n}: y
+....
+
+
+== ONTAP でインターフェイスグループ LACP を設定します
+
+このタイプのインターフェイスグループには複数のイーサネットインターフェイスと LACP をサポートするスイッチが必要です。セクション 5.1 のこのガイドの手順に基づいて設定されていることを確認してください。
+
+クラスタのプロンプトで、次の手順を実行します。
+
+....
+ifgrp create -node <<var_nodeA>> -ifgrp a0a -distr-func port -mode multimode_lacp
+network port ifgrp add-port -node <<var_nodeA>> -ifgrp a0a -port e0c
+network port ifgrp add-port -node <<var_nodeA>> -ifgrp a0a -port e0d
+ifgrp create -node << var_nodeB>> -ifgrp a0a -distr-func port -mode multimode_lacp
+network port ifgrp add-port -node <<var_nodeB>> -ifgrp a0a -port e0c
+network port ifgrp add-port -node <<var_nodeB>> -ifgrp a0a -port e0d
+....
+
+
+== ONTAP でジャンボフレームを設定します
+
+ジャンボフレーム（通常は MTU が 9 、 000 バイトのフレーム）を使用するように ONTAP ネットワークポートを設定するには、クラスタシェルから次のコマンドを実行します。
+
+....
+AFF C190::> network port modify -node node_A -port a0a -mtu 9000
+Warning: This command will cause a several second interruption of service on
+         this network port.
+Do you want to continue? {y|n}: y
+AFF C190::> network port modify -node node_B -port a0a -mtu 9000
+Warning: This command will cause a several second interruption of service on
+         this network port.
+Do you want to continue? {y|n}: y
+....
+
+
+== ONTAP で VLAN を作成します
+
+ONTAP で VLAN を作成するには、次の手順を実行します。
+
+. NFS VLAN ポートを作成し、データブロードキャストドメインに追加します。
++
+....
+network port vlan create –node <<var_nodeA>> -vlan-name a0a-<<var_nfs_vlan_id>>
+network port vlan create –node <<var_nodeB>> -vlan-name a0a-<<var_nfs_vlan_id>>
+broadcast-domain add-ports -broadcast-domain Infra_NFS -ports <<var_nodeA>>:a0a-<<var_nfs_vlan_id>>, <<var_nodeB>>:a0a-<<var_nfs_vlan_id>>
+....
+. iSCSI VLAN ポートを作成し、データブロードキャストドメインに追加します。
++
+....
+network port vlan create –node <<var_nodeA>> -vlan-name a0a-<<var_iscsi_vlan_A_id>>
+network port vlan create –node <<var_nodeA>> -vlan-name a0a-<<var_iscsi_vlan_B_id>>
+network port vlan create –node <<var_nodeB>> -vlan-name a0a-<<var_iscsi_vlan_A_id>>
+network port vlan create –node <<var_nodeB>> -vlan-name a0a-<<var_iscsi_vlan_B_id>>
+broadcast-domain add-ports -broadcast-domain Infra_iSCSI-A -ports <<var_nodeA>>:a0a-<<var_iscsi_vlan_A_id>>,<<var_nodeB>>:a0a-<<var_iscsi_vlan_A_id>>
+broadcast-domain add-ports -broadcast-domain Infra_iSCSI-B -ports <<var_nodeA>>:a0a-<<var_iscsi_vlan_B_id>>,<<var_nodeB>>:a0a-<<var_iscsi_vlan_B_id>>
+....
+. MGMT-VLAN ポートを作成します。
++
+....
+network port vlan create –node <<var_nodeA>> -vlan-name a0a-<<mgmt_vlan_id>>
+network port vlan create –node <<var_nodeB>> -vlan-name a0a-<<mgmt_vlan_id>>
+....
+
+
+
+
+== ONTAP でデータアグリゲートを作成する
+
+ONTAP のセットアッププロセスで、ルートボリュームを含むアグリゲートが作成されます。追加のアグリゲートを作成するには、アグリゲート名、アグリゲートを作成するノード、アグリゲートに含まれるディスク数を確認します。
+
+アグリゲートを作成するには、次のコマンドを実行します。
+
+....
+aggr create -aggregate aggr1_nodeA -node <<var_nodeA>> -diskcount <<var_num_disks>>
+aggr create -aggregate aggr1_nodeB -node <<var_nodeB>> -diskcount <<var_num_disks>>
+....
+
+NOTE: 構成内で少なくとも 1 つのディスクをスペアとして保持します（最も大きいディスクを選択してください）。ディスクのタイプとサイズごとに少なくとも 1 つのスペアを用意しておくことを推奨します。
+
+
+NOTE: ディスクは 5 本から始めて、追加のストレージが必要になったときにアグリゲートにディスクを追加できます。
+
+
+NOTE: ディスクの初期化が完了するまで、アグリゲートを作成することはできません。aggr show コマンドを実行して、アグリゲートの作成ステータスを表示します。次の手順は、 aggr1_cluster1_01 がオンラインになるまで実行しないでください。
+
+
+
+== ONTAP でタイムゾーンを設定します
+
+時刻の同期を設定し、クラスタのタイムゾーンを設定するには、次のコマンドを実行します。
+
+....
+timezone <<var_timezone>>
+....
+
+NOTE: たとえば、米国東部では、タイムゾーンは America/New_York になります。タイムゾーン名の入力を開始したら、 Tab キーを押して使用可能なオプションを表示します。
+
+
+
+== ONTAP で SNMP を設定します
+
+SNMP を設定するには、次の手順を実行します。
+
+. 場所や連絡先などの SNMP 基本情報を設定します。ポーリング時に ' この情報は 'sysLocation' 変数と SNMP の sysContact' 変数として表示されます
++
+....
+snmp contact <<var_snmp_contact>>
+snmp location “<<var_snmp_location>>”
+snmp init 1
+options snmp.enable on
+....
+. リモートホストに送信する SNMP トラップを設定します。
++
+....
+snmp traphost add <<var_snmp_server_fqdn>>
+....
+
+
+
+
+== ONTAP で SNMPv1 を設定します
+
+SNMPv1 を設定するには、コミュニティと呼ばれる共有シークレットのプレーンテキストパスワードを設定します。
+
+....
+snmp community add ro <<var_snmp_community>>
+....
+
+NOTE: 「 snmp community delete all 」コマンドは慎重に使用してください。他の監視製品にコミュニティストリングが使用されている場合、このコマンドはそれらを削除します。
+
+
+
+== ONTAP で SNMPv3 を設定します
+
+SNMPv3 では、認証用のユーザを定義および設定する必要があります。SNMPv3 を設定するには、次の手順を実行します。
+
+. 「 securitysnmpusers 」コマンドを実行して、エンジン ID を表示します。
+. 「 mpv3user 」という名前のユーザを作成します。
++
+....
+security login create -username snmpv3user -authmethod usm -application snmp
+....
+. 信頼できるエンティティのエンジン ID を入力し、認証プロトコルとして MD5 を選択してください。
+. プロンプトが表示されたら、認証プロトコルのパスワードとして最低 8 文字のパスワードを入力します。
+. プライバシープロトコルとして des を選択します。
+. プロンプトが表示されたら、プライバシープロトコルのパスワードとして最低 8 文字のパスワードを入力します。
+
+
+
+
+== ONTAP で AutoSupport HTTPS を設定します
+
+NetApp AutoSupport ツールは、サポート概要情報を HTTPS 経由でネットアップに送信します。AutoSupport を設定するには、次のコマンドを実行します。
+
+....
+system node autosupport modify -node * -state enable –mail-hosts <<var_mailhost>> -transport https -support enable -noteto <<var_storage_admin_email>>
+....
+
+
+== Storage Virtual Machine を作成
+
+インフラ Storage Virtual Machine （ SVM ）を作成するには、次の手順を実行します。
+
+. vserver create コマンドを実行します
++
+....
+vserver create –vserver Infra-SVM –rootvolume rootvol –aggregate aggr1_nodeA –rootvolume-security-style unix
+....
+. NetApp VSC のインフラ SVM アグリゲートリストにデータアグリゲートを追加します。
++
+....
+vserver modify -vserver Infra-SVM -aggr-list aggr1_nodeA,aggr1_nodeB
+....
+. NFS と iSCSI を残して、未使用のストレージプロトコルを SVM から削除します。
++
+....
+vserver remove-protocols –vserver Infra-SVM -protocols cifs,ndmp,fcp
+....
+. インフラ SVM で NFS プロトコルを有効にして実行します。
++
+....
+nfs create -vserver Infra-SVM -udp disabled
+....
+. NetApp NFS VAAI プラグインの「 VM vStorage 」パラメータをオンにします。次に、 NFS が設定されていることを確認します。
++
+....
+vserver nfs modify –vserver Infra-SVM –vstorage enabled
+vserver nfs show
+....
++
+
+NOTE: SVM は以前は Vserver と呼ばれていたため、コマンドラインでは「 vserver 」の前にコマンドが配置されます。
+
+
+
+
+
+== ONTAP で NFSv3 を設定します
+
+次の表に、この設定を完了するために必要な情報を示します。
+
+|===
+| 詳細（ Detail ） | 詳細値 
+
+
+| ESXi ホスト A の NFS IP アドレス | \<<var_esxi_hostA_nfs_ip>> 
+
+
+| ESXi ホスト B の NFS IP アドレス | \<<var_esxi_hostB_nfs_ip>> を追加します 
+|===
+SVM に NFS を設定するには、次のコマンドを実行します。
+
+. デフォルトのエクスポートポリシーに各 ESXi ホスト用のルールを作成します。
+. 作成する各 ESXi ホストにルールを割り当てます。各ホストには独自のルールインデックスがあります。最初の ESXi ホストのルールインデックスは 1 、 2 番目の ESXi ホストのルールインデックスは 2 のようになります。
++
+....
+vserver export-policy rule create –vserver Infra-SVM -policyname default –ruleindex 1 –protocol nfs -clientmatch <<var_esxi_hostA_nfs_ip>> -rorule sys –rwrule sys -superuser sys –allow-suid false
+vserver export-policy rule create –vserver Infra-SVM -policyname default –ruleindex 2 –protocol nfs -clientmatch <<var_esxi_hostB_nfs_ip>> -rorule sys –rwrule sys -superuser sys –allow-suid false
+vserver export-policy rule show
+....
+. エクスポートポリシーをインフラ SVM ルートボリュームに割り当てます。
++
+....
+volume modify –vserver Infra-SVM –volume rootvol –policy default
+....
++
+
+NOTE: エクスポートポリシーは、 vSphere のセットアップ後にインストールするように選択した場合に自動的に処理されます。インストールしない場合は、 Cisco UCS C シリーズサーバを追加するときにエクスポートポリシールールを作成する必要があります。
+
+
+
+
+
+== ONTAP で iSCSI サービスを作成します
+
+SVM に iSCSI サービスを作成するには、次のコマンドを実行します。また、このコマンドでは iSCSI サービスが開始され、 SVM の iSCSI IQN が設定されます。iSCSI が設定されていることを確認します。
+
+....
+iscsi create -vserver Infra-SVM
+iscsi show
+....
+
+
+== ONTAP で SVM ルートボリュームの負荷共有ミラーを作成
+
+ONTAP で SVM ルートボリュームの負荷共有ミラーを作成するには、次の手順を実行します。
+
+. インフラ SVM ルートボリュームの負荷共有ミラーとなるボリュームを各ノードに作成します。
++
+....
+volume create –vserver Infra_Vserver –volume rootvol_m01 –aggregate aggr1_nodeA –size 1GB –type DP
+volume create –vserver Infra_Vserver –volume rootvol_m02 –aggregate aggr1_nodeB –size 1GB –type DP
+....
+. ルートボリュームのミラー関係を 15 分ごとに更新するジョブスケジュールを作成します。
++
+....
+job schedule interval create -name 15min -minutes 15
+....
+. ミラーリング関係を作成
++
+....
+snapmirror create -source-path Infra-SVM:rootvol -destination-path Infra-SVM:rootvol_m01 -type LS -schedule 15min
+snapmirror create -source-path Infra-SVM:rootvol -destination-path Infra-SVM:rootvol_m02 -type LS -schedule 15min
+....
+. ミラーリング関係を初期化し、作成されたことを確認します。
++
+....
+snapmirror initialize-ls-set -source-path Infra-SVM:rootvol
+snapmirror show
+....
+
+
+
+
+== ONTAP で HTTPS アクセスを設定する
+
+ストレージコントローラへのセキュアなアクセスを設定するには、次の手順を実行します。
+
+. 証明書コマンドにアクセスするには、権限レベルを上げてください。
++
+....
+set -privilege diag
+Do you want to continue? {y|n}: y
+....
+. 通常は、自己署名証明書がすでに存在します。次のコマンドを実行して証明書を確認します。
++
+....
+security certificate show
+....
+. 表示されている各 SVM の証明書の共通名は、 SVM の DNS FQDN と一致する必要があります。4 つのデフォルト証明書を削除して、認証局の自己署名証明書または証明書に置き換える必要があります。
++
+
+NOTE: 証明書を作成する前に期限切れになった証明書を削除することを推奨します。「 securitycertificate delete 」コマンドを実行して、期限切れの証明書を削除します。次のコマンドでは、タブ補完を使用して、デフォルトの証明書を選択して削除します。
+
++
+....
+security certificate delete [TAB] …
+Example: security certificate delete -vserver Infra-SVM -common-name Infra-SVM -ca Infra-SVM -type server -serial 552429A6
+....
+. 自己署名証明書を生成してインストールするには、次のコマンドを 1 回限りのコマンドとして実行します。インフラ SVM とクラスタ SVM のサーバ証明書を生成します。これらのコマンドの実行に役立つように、タブ補完を使用してください。
++
+....
+security certificate create [TAB] …
+Example: security certificate create -common-name infra-svm.netapp.com -type server -size 2048 -country US -state "North Carolina" -locality "RTP" -organization "NetApp" -unit "FlexPod" -email-addr "abc@netapp.com" -expire-days 3650 -protocol SSL -hash-function SHA256 -vserver Infra-SVM
+....
+. 次の手順で必要なパラメータの値を取得するには、 security certificate show コマンドを実行します。
+. 作成した各証明書を ' – server-enabled true' および– client-enabled false' パラメータを使用して有効にしますタブ補完を使用してください。
++
+....
+security ssl modify [TAB] …
+Example: security ssl modify -vserver Infra-SVM -server-enabled true -client-enabled false -ca infra-svm.netapp.com -serial 55243646 -common-name infra-svm.netapp.com
+....
+. SSL と HTTPS アクセスを設定して有効にし、 HTTP アクセスを無効にします。
++
+....
+system services web modify -external true -sslv3-enabled true
+Warning: Modifying the cluster configuration will cause pending web service requests to be interrupted as the web servers are restarted.
+Do you want to continue {y|n}: y
+system services firewall policy delete -policy mgmt -service http –vserver <<var_clustername>>
+....
++
+
+NOTE: これらのコマンドの一部で、エントリが存在しないことを示すエラーメッセージが返されますが、これは通常の動作であり問題ありません。
+
+. admin 権限レベルにリバートしてセットアップを作成し、 SVM を Web で使用できるようにします。
++
+....
+set –privilege admin
+vserver services web modify –name spi –vserver * -enabled true
+....
+
+
+
+
+== ONTAP で NetApp FlexVol ボリュームを作成します
+
+NetApp FlexVol ® ボリュームを作成するには、ボリューム名、サイズ、およびボリュームが存在するアグリゲートを入力します。2 つの VMware データストアボリュームと 1 つのサーバブートボリュームを作成します。
+
+....
+volume create -vserver Infra-SVM -volume infra_datastore -aggregate aggr1_nodeB -size 500GB -state online -policy default -junction-path /infra_datastore -space-guarantee none -percent-snapshot-space 0
+volume create -vserver Infra-SVM -volume infra_swap -aggregate aggr1_nodeA -size 100GB -state online -policy default -junction-path /infra_swap -space-guarantee none -percent-snapshot-space 0 -snapshot-policy none -efficiency-policy none
+volume create -vserver Infra-SVM -volume esxi_boot -aggregate aggr1_nodeA -size 100GB -state online -policy default -space-guarantee none -percent-snapshot-space 0
+....
+
+
+== ONTAP で LUN を作成します
+
+2 つのブート LUN を作成するには、次のコマンドを実行します。
+
+....
+lun create -vserver Infra-SVM -volume esxi_boot -lun VM-Host-Infra-A -size 15GB -ostype vmware -space-reserve disabled
+lun create -vserver Infra-SVM -volume esxi_boot -lun VM-Host-Infra-B -size 15GB -ostype vmware -space-reserve disabled
+....
+
+NOTE: Cisco UCS C シリーズサーバを追加する場合は、追加のブート LUN を作成する必要があります。
+
+
+
+== ONTAP に iSCSI LIF を作成
+
+次の表に、この設定を完了するために必要な情報を示します。
+
+|===
+| 詳細（ Detail ） | 詳細値 
+
+
+| ストレージノード A iSCSI LIF01A | \<<var_nodeA_iscsi_lif01a_ip>> 
+
+
+| ストレージノード A の iSCSI LIF01A ネットワークマスク | \<<var_nodeA_iscsi_lif01a _mask>> をクリックします 
+
+
+| ストレージノード A iSCSI LIF01B | \<<var_nodeA_iscsi_lif01b_ip>> 
+
+
+| ストレージノード A の iSCSI LIF01B ネットワークマスク | \<<var_nodeA_iscsi_lif01b_mask>> をクリックします 
+
+
+| ストレージノード B iSCSI LIF01A | \<<var_nodeB_iscsi_lif01a_ip>> 
+
+
+| ストレージノード B iSCSI LIF01A ネットワークマスク | \<<var_nodeB_iscsi_lif01a_mask>> を選択します 
+
+
+| ストレージノード B iSCSI LIF01B | \<<var_nodeB_iscsi_lif01b_ip>> 
+
+
+| ストレージノード B iSCSI LIF01B ネットワークマスク | \<<var_nodeB_iscsi_lif01b_mask>> をクリックします 
+|===
+各ノードに 2 つずつ、 4 つの iSCSI LIF を作成します。
+
+....
+network interface create -vserver Infra-SVM -lif iscsi_lif01a -role data -data-protocol iscsi -home-node <<var_nodeA>> -home-port a0a-<<var_iscsi_vlan_A_id>> -address <<var_nodeA_iscsi_lif01a_ip>> -netmask <<var_nodeA_iscsi_lif01a_mask>> –status-admin up –failover-policy disabled –firewall-policy data –auto-revert false
+network interface create -vserver Infra-SVM -lif iscsi_lif01b -role data -data-protocol iscsi -home-node <<var_nodeA>> -home-port a0a-<<var_iscsi_vlan_B_id>> -address <<var_nodeA_iscsi_lif01b_ip>> -netmask <<var_nodeA_iscsi_lif01b_mask>> –status-admin up –failover-policy disabled –firewall-policy data –auto-revert false
+network interface create -vserver Infra-SVM -lif iscsi_lif02a -role data -data-protocol iscsi -home-node <<var_nodeB>> -home-port a0a-<<var_iscsi_vlan_A_id>> -address <<var_nodeB_iscsi_lif01a_ip>> -netmask <<var_nodeB_iscsi_lif01a_mask>> –status-admin up –failover-policy disabled –firewall-policy data –auto-revert false
+network interface create -vserver Infra-SVM -lif iscsi_lif02b -role data -data-protocol iscsi -home-node <<var_nodeB>> -home-port a0a-<<var_iscsi_vlan_B_id>> -address <<var_nodeB_iscsi_lif01b_ip>> -netmask <<var_nodeB_iscsi_lif01b_mask>> –status-admin up –failover-policy disabled –firewall-policy data –auto-revert false
+network interface show
+....
+
+
+== ONTAP に NFS LIF を作成します
+
+次の表に、この設定を完了するために必要な情報を示します。
+
+|===
+| 詳細（ Detail ） | 詳細値 
+
+
+| ストレージノード A NFS LIF 01 IP | \<<var_nodeA_nfs_lif_01_ip>> 
+
+
+| ストレージノード A NFS LIF 01 のネットワークマスク | \<<var_nodeA_nfs_lif_01_mask>> を参照してください 
+
+
+| ストレージノード B の NFS LIF 02 IP | \<<var_nodeB_nfs_lif_02_ip>> 
+
+
+| ストレージノード B の NFS LIF 02 ネットワークマスク | \<<var_nodeB_nfs_lif_02_mask>> を参照してください 
+|===
+NFS LIF を作成します。
+
+....
+network interface create -vserver Infra-SVM -lif nfs_lif01 -role data -data-protocol nfs -home-node <<var_nodeA>> -home-port a0a-<<var_nfs_vlan_id>> –address <<var_nodeA_nfs_lif_01_ip>> -netmask << var_nodeA_nfs_lif_01_mask>> -status-admin up –failover-policy broadcast-domain-wide –firewall-policy data –auto-revert true
+network interface create -vserver Infra-SVM -lif nfs_lif02 -role data -data-protocol nfs -home-node <<var_nodeA>> -home-port a0a-<<var_nfs_vlan_id>> –address <<var_nodeB_nfs_lif_02_ip>> -netmask << var_nodeB_nfs_lif_02_mask>> -status-admin up –failover-policy broadcast-domain-wide –firewall-policy data –auto-revert true
+network interface show
+....
+
+
+== インフラ SVM 管理者を追加
+
+次の表に、 SVM 管理者を追加するために必要な情報を示します。
+
+|===
+| 詳細（ Detail ） | 詳細値 
+
+
+| vsmgmt IP | \<<var_svm_mgmt_ip>> を追加します 
+
+
+| vsmgmt ネットワークマスク | \<<var_SVM_mgmt_mask>> を使用します 
+
+
+| vsmgmt デフォルトゲートウェイ | \<<var_SVM_mgmt_gateway>> を使用します 
+|===
+インフラ SVM 管理者および SVM 管理論理インターフェイスを管理ネットワークに追加するには、次の手順を実行します。
+
+. 次のコマンドを実行します。
++
+....
+network interface create –vserver Infra-SVM –lif vsmgmt –role data –data-protocol none –home-node <<var_nodeB>> -home-port  e0M –address <<var_svm_mgmt_ip>> -netmask <<var_svm_mgmt_mask>> -status-admin up –failover-policy broadcast-domain-wide –firewall-policy mgmt –auto-revert true
+....
++
+
+NOTE: ここで指定する SVM 管理 IP は、ストレージクラスタ管理 IP と同じサブネット内にある必要があります。
+
+. SVM 管理インターフェイスの外部へのアクセスを許可するデフォルトルートを作成します。
++
+....
+network route create –vserver Infra-SVM -destination 0.0.0.0/0 –gateway <<var_svm_mgmt_gateway>>
+network route show
+....
+. SVM の vsadmin ユーザのパスワードを設定し、ユーザのロックを解除します。
++
+....
+security login password –username vsadmin –vserver Infra-SVM
+Enter a new password: <<var_password>>
+Enter it again: <<var_password>>
+security login unlock –username vsadmin –vserver Infra-SVM
+....
+
+
+link:express-c-series-c190-design_deploy_cisco_ucs_c-series_rack_server.html["次に、 Cisco UCS C シリーズラックサーバを導入します"]

@@ -1,0 +1,27 @@
+---
+sidebar: sidebar 
+permalink: ontap-connector-for-intersight/ci-qsg_claim_targets.html 
+keywords: cisco, intersight, netapp, ontap, connector, claim, targets, active iq unified manager, AIQ UM 
+summary: Cisco Intersight Assist をインストールすると、ネットアップのストレージデバイスと仮想化デバイスを請求できます。 
+---
+= クレームの目標
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+Cisco Intersight Assist をインストールすると、ネットアップのストレージデバイスと仮想化デバイスを請求できます。「 * Intersight Targets * 」ページに戻り、 vCenter と NetApp Active IQ Unified Manager のターゲットを追加します。請求プロセスの詳細については、ビデオをご覧ください https://tv.netapp.com/detail/video/6228080442001["Cisco Intersight Assist を使用してターゲットを請求します。"^]
+
+
+NOTE: NetApp Active IQ Unified Manager （ AIQ UM ） API ゲートウェイが有効になっていることを確認します。
+
+「 * 設定」 > 「一般」 > 「機能設定 * 」の順に選択します。
+
+image:ci-qsg_image7.png["有効な NetApp AIQ UM API ゲートウェイのスクリーンショット"]
+
+次の例は、 Cisco Intersight の NetApp AIQ UM ターゲットを請求する方法を示しています。
+
+image:ci-qsg_image8.png["Cisco Intersight から要求されている NetApp AIQ UM ターゲットのスクリーンショット"]

@@ -1,0 +1,68 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-epic-deploy_infrastructure_hardware_and_software_components.html 
+keywords: infrastructure, hardware, software, components, firmware, imt 
+summary: 必ず Interoperability Matrix Tool （ IMT ）を使用して、ソフトウェアとファームウェアのすべてのバージョンがサポートされていることを確認してください。 
+---
+= インフラのハードウェアコンポーネントとソフトウェアコンポーネント
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+必ずを使用してください http://mysupport.netapp.com/matrix/["Interoperability Matrix Tool （ IMT ）"^] ソフトウェアとファームウェアのすべてのバージョンがサポートされていることを検証します。次の表に、テストで使用したインフラのハードウェアとソフトウェアのコンポーネントを示します。
+
+|===
+| レイヤー（ Layer ） | 製品ファミリー | バージョンまたはリリース | 詳細 
+
+
+| コンピューティング | Cisco UCS 5108 |  | 1 台のシャーシ 
+
+
+|  | Cisco UCS ブレードサーバ | B200 M5 × 4 | 各 CPU コア × 18 、 RAM BIOS が 768GB （ 2.2(8) ） 
+
+
+|  | Cisco UCS VIC | UCS 1340 × 4 | VMware ESXi fNIC FC ドライバ： 1.0.34 VMware ESXi eNIC イーサネットドライバ： 1.0.6.0 
+
+
+|  | Cisco UCS FI × 2 | 6332-16UP と Cisco UCSM 3.2(2f ) |  
+
+
+| ネットワーク | Cisco イーサネットスイッチ | 7.0 （ 3 ） I7 （ 2 ） | Cisco Nexus 9372PX-E × 2 
+
+
+| ストレージネットワーク | iSCSI ： N9k を使用する IP 解決策 |  | FI および UCS シャーシ 
+
+
+|  | FC ： Cisco MDS 9148S | 8.2 （ 2 ） | Cisco 9148S スイッチ × 2 
+
+
+| ストレージ | NetApp AFF A700s × 2 | ONTAP 9.3 一般提供 | 2 ノードクラスタ × 1 
+
+
+|  | DS224C ディスクシェルフ × 2 |  |  
+
+
+|  | SSD の場合 | 960GB × 48 |  
+
+
+| ソフトウェア | ハイパーバイザー | VMware vSphere ESXi 6.5 U1 |  
+
+
+|  | 仮想マシン | RHEL 7.4 |  
+
+
+|  | ハイパーバイザー管理システム | VMware vCenter Server 6.5 U1 （ vCSA ） | vCenter Server Appliance の略 
+
+
+|  | NetApp Virtual Storage Console の略 | VSC 7.0P1 |  
+
+
+|  | SnapCenter | SnapCenter 4.0 |  
+
+
+|  | Cisco UCS Manager の略 | 3.2 （ 2f ） * |  
+|===
+link:ehr-epic-deploy_base_infrastructure_configuration.html["次の手順：基本インフラの構成。"]

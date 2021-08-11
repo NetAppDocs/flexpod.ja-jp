@@ -1,0 +1,184 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-epic-deploy_netapp_configuration.html 
+keywords: configuration, ha, pair, configuration, storage, fc, protocol, flexpod, epic 
+summary: Epic ソフトウェア環境向けに導入されたネットアップストレージでは、ハイアベイラビリティ（ HA ）ペア構成のストレージコントローラを使用します。FC プロトコル（ FCP ）を介して、両方のコントローラから Epic データベースサーバにストレージを提供する必要があります。 
+---
+= NetApp の設定
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Epic ソフトウェア環境向けに導入されたネットアップストレージでは、ハイアベイラビリティ（ HA ）ペア構成のストレージコントローラを使用します。FC プロトコル（ FCP ）を介して、両方のコントローラから Epic データベースサーバにストレージを提供する必要があります。この構成では、両方のコントローラのストレージが提供され、通常運用時にアプリケーションの負荷が均等に分散されます。
+
+本番ワークロードをフォールトドメインに分離するための EPIC 要件については、『 Epic All-Flash Reference Architecture Strategy Handbook 』を参照してください。作業を続行する前に、このドキュメントを詳しくお読みください。ONTAP ノードは別のストレージプールとみなすことができます。
+
+
+
+== ONTAP の設定
+
+ここでは、関連する ONTAP コマンドを使用した導入手順とプロビジョニング手順の例を示します。特に重視するのは、 HA コントローラペアを使用するネットアップが推奨するストレージレイアウトを実装するためのストレージのプロビジョニング方法です。ONTAP の大きなメリットの 1 つは、既存の HA ペアを中断せずにスケールアウトできることです。
+
+EPIC は、ストレージのパフォーマンス要件とレイアウトに関する詳細なガイダンスを提供し、ストレージのプレゼンテーションやホスト側のストレージレイアウトなどを各お客様に提供します。EPIC は次のカスタムドキュメントを提供します。
+
+* プリセールス時のサイジングに使用する Epic Hardware Configuration Guide です。
+* 導入時の LUN とボリュームのレイアウトに使用する Epic Database Storage Layout の推奨事項。
+
+
+Epic Database Storage Layout の推奨事項を参照して、これらの要件を満たすお客様固有のストレージシステムレイアウトと構成を開発する必要があります。
+
+10TB データベースをサポートする AFF A700 ストレージシステムの導入例を次に示します。以下の表に、本番環境のデータベースをサポートするために使用されるストレージのプロビジョニングパラメータを示します。
+
+|===
+| パラメータ | コントローラ 1 | コントローラ 2 
+
+
+| コントローラのホスト名 | Prod1-01 | Prod1-02 
+
+
+| Aggregate ONTAP の略 | aggr0_cluster1_01 （ ADP 11 パーティション） | aggr0_cluster1_01 （ ADP 11 パーティション） 
+
+
+| データを集約します | Prod1-01_aggr1 （ 22 パーティション） | Prod1-02_aggr1 （ 22 パーティション） 
+
+
+| ボリューム（サイズ） | Epic prod_db1 （ 2TB ） ep_prod_db2 （ 2TB ） ep_prod_db3 （ 2TB ） ep_prod_db4 （ 2TB ） ep_prod_db5 （ 2TB ） ep_prod_db6 （ 2TB ） ep_prod_db7 （ 2TB ） ep_prod_db7 （ 2TB ） ep_prod_inst （ 1TB ） ep_prod_inst(1td_200Gb ） prod_prop2d_prod_p2d_prod_prod_prod_prod_p2d_prod_prod_pro_n2 ） | Epic _report_db1 （ 2TB ） ep_report_db2 （ 2TB ） ep_report_db3 （ 2TB ） ep_report_db4 （ 2TB ） ep_report_db5 （ 2TB ） ep_report_db6 （ 2TB ） ep_report_db7 （ 2TB ） ep_report_db7 （ 2TB ） ep_report_db7 （ 2TB ） ep_report_db7 （ 2TB ） ep_report_inst （ 1TB ） ep_report （ 1TB ） 
+
+
+| LUN パス（サイズ） | /ep_prod_db1/ep_prod_db1 （ 1.4TB ） /ep_prod_db2/ep_prod_db3 （ 1.4TB ） /ep_prod_db3 （ 1.4TB ） /ep_prod_prod_db3 （ 1.4TB ） /ep_prod_pld_db3 （ 1.4TB ） /ep_prod_prod_db prod_db prop_dpro_ep_db （ 1.4TB ） /r00ep_prod_prop_dupic ） | /ep_prod_db1/ep_report_db1 （ 1.4TB ） /epm_prod_db2/epm_report_db2 （ 1.4TB ） /epm_prod_db3 （ 1.4TB ） /epm_report_bd3 （ 1.4TB ） /ep_report_db3 （ 1.4TB ） /ep_prod_report_bep_db4 （ 1.4TB ） /epm_report_depic r100c_epic レポート（ 1.4TB ） 
+
+
+| 仮想マシン | RHEL | RHEL 
+
+
+| LUN タイプ | Linux （ FC を使用して RHEL VM から RDM として直接マウント） | Linux （ FC を使用して RHEL VM から RDM として直接マウント） 
+
+
+| FCP イニシエータグループ（ igroup ）の名前 | IG_EOG_PROCd （ Linux ） | IG_EOF_REPORT （ Linux ） 
+
+
+| ホストオペレーティングシステム | VMware | VMware 
+
+
+| EPIC データベースサーバのホスト名 | Epic 本番環境 | Epic レポート 
+
+
+| SVM | svm_prod | SVM_PS （本番用サービス） SVM_CIFS 
+|===
+
+
+=== ONTAP ライセンス
+
+ストレージコントローラのセットアップが完了したら、ライセンスを適用して、ネットアップ推奨の ONTAP 機能を有効にします。Epic ワークロードに必要なライセンスには、 FC 、 CIFS 、 Snapshot 、 SnapRestore 、 FlexClone 、 」を参照してください。
+
+ライセンスを適用するには、 NetApp System Manager を開いて、「 Configuration - Licenses 」に移動し、該当するライセンスを追加します。または、次のコマンドを実行して、 CLI を使用してライセンスを追加します。
+
+....
+license add -license-code <code>
+....
+
+
+=== AutoSupport の設定
+
+AutoSupport ツールは、概要のサポート情報を HTTPS 経由でネットアップに送信します。AutoSupport を設定するには、次の ONTAP コマンドを実行します。
+
+....
+autosupport modify -node * -state enable
+autosupport modify -node * -mail-hosts <mailhost.customer.com>
+autosupport modify -node prod1-01 -from prod1-01@customer.com
+autosupport modify -node prod1-02 -from prod1-02@customer.com
+autosupport modify -node * -to storageadmins@customer.com
+autosupport modify -node * -support enable
+autosupport modify -node * -transport https
+autosupport modify -node * -hostnamesubj true
+....
+
+
+=== ハードウェアアシストテイクオーバーの設定
+
+各ノードで、ハードウェアアシストテイクオーバーを有効にして、コントローラで万一障害が発生した場合にテイクオーバーを開始する時間を最小限に抑えてください。ハードウェアアシストテイクオーバーを設定するには、次の手順を実行します。
+
+. 次の ONTAP コマンドを実行します。パートナーアドレスオプションを prod1-01 の管理ポートの IP アドレスに設定します。
++
+....
+EPIC::> storage failover modify -node prod1-01 -hwassist-partner-ip <prod1-02-mgmt-ip>
+....
+. 次の ONTAP コマンドを実行します。パートナーアドレスのオプションを cluster1-02 の管理ポートの IP アドレスに設定します。
++
+....
+EPIC::> storage failover modify -node prod1-02 -hwassist-partner-ip <prod1-01-mgmt-ip>
+....
+. 次の ONTAP コマンドを実行して、 prod1-01 と prod1-02 の両方の HA コントローラペアでハードウェアアシストテイクオーバーを有効にします。
++
+....
+EPIC::> storage failover modify -node prod1-01 -hwassist true
+EPIC::> storage failover modify -node prod1-02 -hwassist true
+....
+
+
+
+
+=== ONTAP ストレージプロビジョニング
+
+ストレージプロビジョニングワークフローは次のとおりです。
+
+. アグリゲートを作成します。
+. Storage Virtual Machine （ SVM ）を作成します。
++
+アグリゲートの作成が完了したら、次は SVM を作成します。ONTAP では、ストレージは SVM として仮想化されます。ホストとクライアントは物理ストレージハードウェアにアクセスできなくなります。System Manager の GUI または CLI を使用して SVM を作成します。
+
+. FC LIF を作成
++
+SVM 上でポートとストレージがプロビジョニングされ、 LIF と呼ばれる仮想ポートを介してホストとクライアントに提供されます。
+
++
+すべてのワークロードを 1 つの SVM ですべてのプロトコルを使用して実行できます。Epic では、本番用 FC 用の SVM と CIFS 用の SVM を 1 つ使用することを推奨しています。
+
++
+.. System Manager GUI の SVM 設定から FC を有効化、開始する。
+.. SVM に FC LIF を追加LUN ごとに構築されたパスの数に応じて、各ストレージノードに複数の FC LIF を設定します。
+
+
+. イニシエータグループ（ igroup ）を作成します。
++
+igroup は、 FC プロトコルのホスト WWPN または iSCSI ホストノード名のテーブルであり、ホストで使用できる LUN を定義します。たとえば、ホストクラスタを使用している場合、いくつかの igroup を使用して、クラスタ内の 1 つのホストだけ、またはすべてのホストに特定の LUN が認識されるように設定できます。複数の igroup を定義して LUN にマッピングし、どのイニシエータが LUN にアクセスできるかを制御することができます。
+
++
+System Manager の GUI または CLI を使用して、 VMware タイプの FC igroup を作成します。
+
+. FC スイッチ上にゾーンを作成します。
++
+FC ゾーンまたは FCoE ゾーンは、ファブリック内の 1 つ以上のポートを論理的にグループ化したものです。デバイス同士が互いを認識し、接続し、相互にセッションを作成して通信できるようにするには、両方のポートに共通のゾーンメンバーシップが必要です。シングルイニシエータのゾーニングを推奨します。
+
++
+.. スイッチにゾーンを作成し、ネットアップターゲットと Cisco UCS ブレードイニシエータをゾーンに追加します。
++
+ネットアップのベストプラクティスは、シングルイニシエータゾーニングです。各ゾーンには、コントローラのイニシエータとターゲット WWPN が 1 つだけ含まれています。ゾーンには、ノード名ではなくポート名が使用されます。
+
+
+
+. ボリュームと LUN を作成
++
+.. System Manager の GUI （または CLI ）を使用して、 LUN をホストするボリュームを作成します。ボリュームに対しては、 Storage Efficiency の設定とデータ保護がすべてデフォルトで設定されます。オプションで 'vol modify コマンドを使用して ' ボリュームのボリューム暗号化および QoS ポリシーをオンにできますボリュームには、 LUN および Snapshot コピーを格納できるだけの十分な容量が必要です。容量の問題からボリュームを保護するには 'autosize オプションと 'autodelete オプションを有効にしますボリュームを作成したら、 Epic ワークロードを格納する LUN を作成します。
+.. System Manager GUI （または CLI ）を使用して 'Epic ワークロードをホストするタイプ vmware' の FC LUN を作成しますLUN の作成は、 System Manager のウィザードを使用して簡単に実行できるようになりました。
++
+VSC を使用してボリュームや LUN をプロビジョニングすることもできます。を参照してください http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-fc-esx-cpg/home.html["『 FC Configuration for ESX Express Guide 』を参照してください"^]。
+
++
+を参照してください http://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.dot-cm-sanag%2Fhome.html["『 SAN アドミニストレーションガイド』および『 SAN 構成ガイド』を参照してください"^] VSC を使用しない場合。
+
+
+
+. LUN を igroup にマッピングします。
++
+LUN と igroup が作成されたら、適切なホストに LUN へのアクセスを許可する関連 igroup に LUN をマッピングします。
+
++
+これで、 LUN を検出して ESXi サーバにマッピングする準備ができました。ESXi ホストのストレージを更新し、新たに検出された LUN を追加します。
+
+
+
+link:ehr-epic-deploy_genio_tool.html["次は Genio ツールです。"]

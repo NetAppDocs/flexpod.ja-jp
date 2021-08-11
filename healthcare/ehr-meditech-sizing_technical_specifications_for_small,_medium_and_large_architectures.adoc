@@ -1,0 +1,205 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-sizing_technical_specifications_for_small,_medium_and_large_architectures.html 
+keywords: technical, specifications, small, medium, large, architectures, bill, material 
+summary: このセクションでは、さまざまなサイズのストレージアーキテクチャに対応するサンプル部品表について説明します。 
+---
+= 小規模、中規模、大規模のアーキテクチャ向けの技術仕様
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+このセクションでは、さまざまなサイズのストレージアーキテクチャに対応するサンプル部品表について説明します。
+
+
+
+== 小規模、中規模、大規模のアーキテクチャ向けの部品表。
+
+FlexPod の設計は、多数の異なるコンポーネントとソフトウェアバージョンを含む柔軟なインフラです。使用 https://fieldportal.netapp.com/content/443847["TR-4036 ：『 FlexPod Technical Specifications 』"^] 有効な FlexPod 構成を組み立てるためのガイドとして使用してください。次の表に、 FlexPod の最小要件を示します。設定例はそのままです。構成は、環境やユースケースに応じて製品ファミリーごとに拡張できます。
+
+このサイジング演習では、カテゴリ 3 の MEDITECH 環境、カテゴリ 5 のメディア、カテゴリ 6 の大規模環境に対応します。
+
+|===
+|  | 小規模 | 中 | 大規模 
+
+
+| プラットフォーム | NetApp AFF A220 オールフラッシュストレージシステム HA ペア × 1 | NetApp AFF A220 HA ペア × 1 | NetApp AFF A300 オールフラッシュストレージシステム HA ペア × 1 
+
+
+| ディスクシェルフ | 3.8TB × 9 | 3.8TB × 13TB | 3.8TB × 19TB 
+
+
+| MEDITECH データベースのサイズ | 3TB - 12TB | 17TB | 30TB を超えています 
+
+
+| MEDITECH の IOPS | 22 、 000 IOPS 超 | 25 、 000 IOPS 超 | 32 、 000 IOPS 超 
+
+
+| 合計 IOPS | 22000 年 | 27000 | 35000 
+
+
+| 生データ | 34.2TB | 49.4TB | 68.4TB 
+
+
+| 使用可能容量 | 18.53TiB | 27.96TiB の場合 | 33.82TiB 
+
+
+| 実効容量（ 2 ： 1 のストレージ効率） | 55.6TiB | 83.89TiB | 101.47TiB 
+|===
+
+NOTE: お客様の環境によっては、複数の MEDITECH 本番ワークロードを同時に実行している場合や、 IOPS 要件が高い場合があります。その場合は、ネットアップアカウントチームと協力して、必要な IOPS と容量に基づいてストレージシステムのサイジングを行ってください。ワークロードに適したプラットフォームを特定できる必要があります。たとえば、 NetApp AFF A700 オールフラッシュストレージシステム HA ペアで複数の MEDITECH 環境を正常に実行しているお客様がいます。
+
+次の表に、 MEDITECH 構成に必要な標準ソフトウェアを示します。
+
+|===
+| ソフトウェア | 製品ファミリー | バージョンまたはリリース | 詳細 
+
+
+| ストレージ | ONTAP | ONTAP 9.4 の一般提供（ GA ） |  
+
+
+.3+| ネットワーク | Cisco UCS ファブリックインターコネクト | Cisco UCSM 4.x の場合 | 現在推奨されているリリース 
+
+
+| Cisco Nexus イーサネットスイッチ | 7.0 （ 3 ） I7 （ 6 ） | 現在推奨されているリリース 
+
+
+| Cisco FC ： Cisco MDS 9132T | 8.3 （ 2 ） | 現在推奨されているリリース 
+
+
+| ハイパーバイザー | ハイパーバイザー | VMware vSphere ESXi 6.7 |  
+
+
+|  | 仮想マシン（ VM ） | Windows * 2016 |  
+
+
+.4+| 管理 | ハイパーバイザー管理システム | VMware vCenter Server 6.7 U1 （ vCSA ） |  
+
+
+| NetApp Virtual Storage Console （ VSC ） | VSC 7.0P1 |  
+
+
+| NetApp SnapCenter | SnapCenter 4.0 |  
+
+
+| Cisco UCS Manager の略 | 4.x |  
+|===
+次の表は、小規模（カテゴリ 3 ）の構成例 - インフラコンポーネントを示しています。
+
+|===
+| レイヤー（ Layer ） | 製品ファミリー | 数量とモデル | 詳細 
+
+
+.5+| コンピューティング | Cisco UCS 5108 シャーシ | 1. | ハーフ幅ブレードを 8 台まで、またはフル幅ブレードを 4 台までサポートします。サーバ要件の増大に合わせてシャーシを追加します。 
+
+
+| Cisco シャーシ I/O モジュール | 2 x 2208 | 8GB x 10GB アップリンクポート 
+
+
+| Cisco UCS ブレードサーバ | B200 M5 × 4 | それぞれ 2 x 14 コア、 2.6GHz 以上のクロック速度、 384GB BIOS 3.2 （ 3# ） 
+
+
+| Cisco UCS 仮想インターフェイスカード | UCS 1440 × 4 | VMware ESXi fnic FC ドライバ： 1.0.47 VMware ESXi eNIC イーサネットドライバ： 1.0.27.0 （ Interoperability Matrix を参照： https://ucshcltool.cloudapps.cisco.com/public/)[] 
+
+
+| Cisco UCS ファブリックインターコネクト（ FI ） × 2 | UCS 6454 FI × 2 | 10 / 25 / 100Gb イーサネットおよび 32Gb FC をサポートする第 4 世代のファブリックインターコネクト 
+
+
+| ネットワーク | Cisco イーサネットスイッチ | Nexus 9336c-FX2 × 2 | 1Gb 、 10GB 、 25GB 、 40GB 、 100GB 
+
+
+.2+| ストレージネットワーク | BLOB ストレージ用の IP Network Nexus 9K |  | FI および UCS シャーシ 
+
+
+| FC ： Cisco MDS 9132T |  | Cisco 9132T スイッチ × 2 
+
+
+.3+| ストレージ | NetApp AFF A300 オールフラッシュストレージシステム | 1 つの HA ペア | すべての MEDITECH ワークロード（ファイルサーバ、イメージサーバ、 SQL Server 、 VMware など）に対応する 2 ノードクラスタ 
+
+
+| DS224C ディスクシェルフ | DS224C ディスクシェルフ 1 台 |  
+
+
+| ソリッドステートドライブ（ SSD ） | 3.8TB × 9 |  
+|===
+次の表は、中規模（カテゴリ 5 ）構成の例、インフラストラクチャコンポーネントを示しています
+
+|===
+| レイヤー（ Layer ） | 製品ファミリー | 数量とモデル | 詳細 
+
+
+.5+| コンピューティング | Cisco UCS 5108 シャーシ | 1. | ハーフ幅ブレードを 8 台まで、またはフル幅ブレードを 4 台までサポートします。サーバ要件の増大に合わせてシャーシを追加します。 
+
+
+| Cisco シャーシ I/O モジュール | 2 x 2208 | 8GB x 10GB アップリンクポート 
+
+
+| Cisco UCS ブレードサーバ | B200 M5 × 6 | それぞれ 2 つの 16 コア、 2.5GHz/ 以上のクロック速度、 384GB 以上のメモリ BIOS 3.2 （ 3# ）を備えています。 
+
+
+| Cisco UCS 仮想インターフェイスカード（ VIC ） | UCS 1440 VIC × 6 | VMware ESXi fnic FC ドライバ： 1.0.47 VMware ESXi eNIC イーサネットドライバ： 1.0.27.0 （ Interoperability Matrix を参照） 
+
+
+| Cisco UCS ファブリックインターコネクト（ FI ） × 2 | UCS 6454 FI × 2 | 10GB / 25Gb / 100Gb イーサネットおよび 32Gb FC をサポートする第 4 世代ファブリックインターコネクト 
+
+
+| ネットワーク | Cisco イーサネットスイッチ | Nexus 9336c-FX2 × 2 | 1Gb 、 10GB 、 25GB 、 40GB 、 100GB 
+
+
+.2+| ストレージネットワーク | BLOB ストレージ用の IP Network Nexus 9K |  |  
+
+
+| FC ： Cisco MDS 9132T |  | Cisco 9132T スイッチ × 2 
+
+
+.3+| ストレージ | NetApp AFF A220 オールフラッシュストレージシステム | 2 つの HA ペア | すべての MEDITECH ワークロード（ファイルサーバ、イメージサーバ、 SQL Server 、 VMware など）に対応する 2 ノードクラスタ 
+
+
+| DS224C ディスクシェルフ | DS224C ディスクシェルフ × 1 |  
+
+
+| SSD の場合 | 3.8TB × 13 |  
+|===
+次の表は、大規模な（カテゴリ 6 の）構成例 - インフラコンポーネントを示しています。
+
+|===
+| レイヤー（ Layer ） | 製品ファミリー | 数量とモデル | 詳細 
+
+
+.5+| コンピューティング | Cisco UCS 5108 シャーシ | 1. |  
+
+
+| Cisco シャーシ I/O モジュール | 2 x 2208 | 10 GB アップリンクポート x 8 
+
+
+| Cisco UCS ブレードサーバ | B200 M5 × 8 | 各構成には、 2 x 24 コア、 2.7GHz および 768GB BIOS 3.2 （ 3# ）が搭載されています。 
+
+
+| Cisco UCS 仮想インターフェイスカード（ VIC ） | UCS 1440 VIC × 8 | VMware ESXi fnic FC ドライバ： 1.0.47 VMware ESXi eNIC イーサネットドライバ： 1.0.27.0 （ Interoperability Matrix を確認してください） https://ucshcltool.cloudapps.cisco.com/public/)[] 
+
+
+| Cisco UCS ファブリックインターコネクト（ FI ） × 2 | UCS 6454 FI × 2 | 10GB / 25Gb / 100Gb イーサネットおよび 32Gb FC をサポートする第 4 世代ファブリックインターコネクト 
+
+
+| ネットワーク | Cisco イーサネットスイッチ | Nexus 9336c-FX2 × 2 | Cisco Nexus 9332PQ1 、 10GB 、 25GB 、 40GB 、 100GB × 2 
+
+
+.2+| ストレージネットワーク | BLOB ストレージ用の IP ネットワーク N9k |  |  
+
+
+| FC ： Cisco MDS 9132T |  | Cisco 9132T スイッチ × 2 
+
+
+.3+| ストレージ | AFF A300 | 1 つの HA ペア | すべての MEDITECH ワークロード（ファイルサーバ、イメージサーバ、 SQL Server 、 VMware など）に対応する 2 ノードクラスタ 
+
+
+| DS224C ディスクシェルフ | DS224C ディスクシェルフ × 1 |  
+
+
+| SSD の場合 | 3.8TB × 19 |  
+|===
+
+NOTE: これらの構成は、サイジングのガイダンスの開始点となります。一部のお客様の環境で、 MEDITECH の本番ワークロードと MEDITECH 以外のワークロードが同時に実行されている場合や、 IOP 要件が高い場合があります。ネットアップアカウントチームと協力して、必要な IOPS 、ワークロード、容量に基づいてストレージシステムのサイジングを行い、ワークロードに対応するプラットフォームを決定する必要があります。

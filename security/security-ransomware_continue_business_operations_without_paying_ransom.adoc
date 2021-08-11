@@ -1,0 +1,19 @@
+---
+sidebar: sidebar 
+permalink: security/security-ransomware_continue_business_operations_without_paying_ransom.html 
+keywords: ransom, pay, business, operations, restore, data, attack, prevent, recover 
+summary: 本ドキュメントで説明しているネットアップの機能は、攻撃を受けて数分以内にデータをリストアし、攻撃を未然に防ぐのに役立ちます。そのため、業務の中断を回避することができます。 
+---
+= 身代金を支払うことなく業務を継続
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+本ドキュメントで説明しているネットアップの機能は、攻撃を受けて数分以内にデータをリストアし、攻撃を未然に防ぐのに役立ちます。そのため、業務の中断を回避することができます。
+
+Snapshot コピーのスケジュールは、目標復旧時点（ RPO ）を達成するように設定できます。Snapshot コピーベースのリストア処理は非常に高速なため、 RTO （目標復旧時間）は非常に低く抑えられます。
+
+何よりも、攻撃の結果として身代金を支払わなくても、通常の運用にすばやく戻ることができます。

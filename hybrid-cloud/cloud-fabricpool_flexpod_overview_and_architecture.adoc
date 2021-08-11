@@ -1,0 +1,38 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-fabricpool_flexpod_overview_and_architecture.html 
+keywords: flexpod, cloud, fabricpool, networking, cisco, mds, storage, ucs, vmware, vsphere 
+summary: FlexPod は、仮想化ソリューションと非仮想化ソリューションの両方の統合基盤となるハードウェアとソフトウェアの定義済みセットです。 
+---
+= FlexPod の概要とアーキテクチャ
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+
+
+== FlexPod の概要
+
+FlexPod は、仮想化ソリューションと非仮想化ソリューションの両方の統合基盤となるハードウェアとソフトウェアの定義済みセットです。FlexPod には、 NetApp AFF ストレージ、 Cisco Nexus ネットワーク、 Cisco MDS ストレージネットワーク、 Cisco Unified Computing System （ Cisco UCS ）、 VMware vSphere ソフトウェアが 1 つのパッケージに含まれています。この設計は柔軟性に優れており、ネットワーク、コンピューティング、ストレージを 1 つのデータセンターラックに収容することも、お客様のデータセンター設計に従って導入することもできます。ポート密度を使用すると、ネットワークコンポーネントは複数の構成に対応できます。
+
+FlexPod アーキテクチャのメリットの 1 つは、お客様の要件に合わせて環境をカスタマイズしたり柔軟に設定したりできることです。FlexPod ユニットは、要件や需要の変化に応じて簡単に拡張できます。ユニットは、スケールアップ（ FlexPod ユニットにリソースを追加）とスケールアウト（ FlexPod ユニットを追加）の両方に対応しています。FlexPod リファレンスアーキテクチャでは、ファイバチャネルおよび IP ベースのストレージ解決策の耐障害性、コスト上のメリット、および導入の容易さを強調しています。単一のインターフェイスから複数のプロトコルに対応できるストレージシステムなら、選択肢が広がり、投資が無駄にならずに保護されます。これは、まさに Wire-Once アーキテクチャだからです。次の図に、 FlexPod の多くのハードウェアコンポーネントを示します。
+
+image:cloud-fabricpool_image2.png["エラー：グラフィックイメージがありません"]
+
+
+
+== FlexPod アーキテクチャ
+
+次の図に、 VMware vSphere と FlexPod 解決策のコンポーネントと、 Cisco UCS 6454 ファブリックインターコネクトに必要なネットワーク接続を示します。この設計には、次のコンポーネントがあります。
+
+* Cisco UCS 5108 ブレードシャーシと Cisco UCS ファブリックインターコネクト間のポートチャネル 40GB イーサネット接続
+* Cisco UCS ファブリックインターコネクトと Cisco Nexus 9000 間の 40GB イーサネット接続
+* Cisco Nesxus 9000 と NetApp AFF A300 ストレージアレイ間に 40GB イーサネット接続
+
+
+これらのインフラオプションは、 Cisco UCS ファブリックインターコネクトと NetApp AFF A300 の間に Cisco MDS スイッチが配置されたことで拡張されました。この構成では、 16Gb FC ブートホストに、共有ストレージへのブロックレベルのアクセスを提供します。これは、アーキテクチャにストレージを追加する場合に、ホストから Cisco UCS ファブリックインターコネクトへのケーブルの再接続が不要になるため、リファレンスアーキテクチャによって wire-once 戦略が強化されることを意味します。
+
+image:cloud-fabricpool_image3.png["エラー：グラフィックイメージがありません"]

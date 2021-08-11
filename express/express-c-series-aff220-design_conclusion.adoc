@@ -1,0 +1,12 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-aff220-design_conclusion.html 
+keywords: conclusion, scaling, hypervisor 
+summary: FlexPod Express は、業界をリードするコンポーネントを使用した検証済みの設計を提供することで、シンプルで効果的な解決策を実現します。 
+---
+= まとめ
+
+
+FlexPod Express は、業界をリードするコンポーネントを使用した検証済みの設計を提供することで、シンプルで効果的な解決策を実現します。拡張性を備え、ハイパーバイザープラットフォームにオプションを提供することで、 FlexPod Express は特定のビジネスニーズに合わせてカスタマイズできます。FlexPod Express は、中小規模の企業、リモートオフィスやブランチオフィスなど、特定用途向けのソリューションを必要とする企業を念頭に置いて設計されています。
+
+link:express-c-series-aff220-design_where_to_find_additional_information.html["次へ：追加情報の検索場所。"]

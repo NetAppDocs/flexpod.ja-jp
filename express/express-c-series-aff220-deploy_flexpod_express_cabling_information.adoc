@@ -1,0 +1,116 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-aff220-deploy_flexpod_express_cabling_information.html 
+keywords: cabling, information, validation, cisco, nexus, switches 
+summary: このセクションでは、 Cisco Nexus スイッチ 3172P A および B および NetApp AFF A220 ストレージコントローラ A および B のケーブル接続の検証に関する情報を参照できます 
+---
+= FlexPod エクスプレスケーブル接続情報
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+次の図に、リファレンス検証のケーブル接続を示します。
+
+image:express-c-series-aff220-deploy_image5.png["エラー：グラフィックイメージがありません"]
+
+次の表に、 Cisco Nexus スイッチ 3172P A のケーブル接続情報を示します
+
+|===
+| ローカルデバイス | ローカルポート | リモートデバイス | リモートポート 
+
+
+| Cisco Nexus スイッチ 3172P A | Eth1/1 | NetApp AFF A220 ストレージコントローラ A | e0c 
+
+
+|  | Eth1/2 | NetApp AFF A220 ストレージコントローラ B | e0c 
+
+
+|  | Eth1/3 | Cisco UCS C220 C シリーズスタンドアロンサーバ A | CVR-QSFP-SFP10G アダプタ搭載の MLOM1 
+
+
+|  | Eth1/4 | Cisco UCS C220 C シリーズスタンドアロンサーバ B | CVR-QSFP-SFP10G アダプタ搭載の MLOM1 
+
+
+|  | Eth1/25 | Cisco Nexus スイッチ 3172P B | Eth1/25 
+
+
+|  | Eth1/26 | Cisco Nexus スイッチ 3172P B | Eth1/26 
+
+
+|  | Eth1/33 | NetApp AFF A220 ストレージコントローラ A | e0M 
+
+
+|  | Eth1/34 | Cisco UCS C220 C シリーズスタンドアロンサーバ A | CIMC 
+|===
+次の表に、 Cisco Nexus スイッチ 3172P B のケーブル接続情報を示します
+
+|===
+| ローカルデバイス | ローカルポート | リモートデバイス | リモートポート 
+
+
+| Cisco Nexus スイッチ 3172P B | Eth1/1 | NetApp AFF A220 ストレージコントローラ A | e0d 
+
+
+|  | Eth1/2 | NetApp AFF A220 ストレージコントローラ B | e0d 
+
+
+|  | Eth1/3 | Cisco UCS C220 C シリーズスタンドアロンサーバ A | CVR-QSFP-SFP10G アダプタ搭載の MLOM2 
+
+
+|  | Eth1/4 | Cisco UCS C220 C シリーズスタンドアロンサーバ B | CVR-QSFP-SFP10G アダプタ搭載の MLOM2 
+
+
+|  | Eth1/25 | Cisco Nexus スイッチ 3172P A | Eth1/25 
+
+
+|  | Eth1/26 | Cisco Nexus スイッチ 3172P A | Eth1/26 
+
+
+|  | Eth1/33 | NetApp AFF A220 ストレージコントローラ B | e0M 
+
+
+|  | Eth1/34 | Cisco UCS C220 C シリーズスタンドアロンサーバ B | CIMC 
+|===
+次の表に、 NetApp AFF A220 ストレージコントローラ A のケーブル接続情報を示します
+
+|===
+| ローカルデバイス | ローカルポート | リモートデバイス | リモートポート 
+
+
+| NetApp AFF A220 ストレージコントローラ A | e0a | NetApp AFF A220 ストレージコントローラ B | e0a 
+
+
+|  | e0b | NetApp AFF A220 ストレージコントローラ B | e0b 
+
+
+|  | e0c | Cisco Nexus スイッチ 3172P A | Eth1/1 
+
+
+|  | e0d | Cisco Nexus スイッチ 3172P B | Eth1/1 
+
+
+|  | e0M | Cisco Nexus スイッチ 3172P A | Eth1/33 
+|===
+次の表に、 NetApp AFF A220 ストレージコントローラ B のケーブル接続情報を示します
+
+|===
+| ローカルデバイス | ローカルポート | リモートデバイス | リモートポート 
+
+
+| NetApp AFF A220 ストレージコントローラ B | e0a | NetApp AFF A220 ストレージコントローラ A | e0a 
+
+
+|  | e0b | NetApp AFF A220 ストレージコントローラ A | e0b 
+
+
+|  | e0c | Cisco Nexus スイッチ 3172P A | Eth1/2 
+
+
+|  | e0d | Cisco Nexus スイッチ 3172P B | Eth1/2 
+
+
+|  | e0M | Cisco Nexus スイッチ 3172P B | Eth1/33 
+|===

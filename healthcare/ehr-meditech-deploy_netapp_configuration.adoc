@@ -1,0 +1,82 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-deploy_netapp_configuration.html 
+keywords: configuration, storage, meditech, software, environments, controllers, hardware, takeover, licenses 
+summary: MEDITECH ソフトウェア環境に導入されているネットアップストレージでは、ハイアベイラビリティペア構成のストレージコントローラを使用します。ストレージは、両方のコントローラから MEDITECH データベースサーバに FC プロトコル経由で提供する必要があります。この構成では、両方のコントローラのストレージが提供され、通常運用時にアプリケーションの負荷が均等に分散されます。 
+---
+= NetApp の設定
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+MEDITECH ソフトウェア環境に導入されているネットアップストレージでは、ハイアベイラビリティペア構成のストレージコントローラを使用します。ストレージは、両方のコントローラから MEDITECH データベースサーバに FC プロトコル経由で提供する必要があります。この構成では、両方のコントローラのストレージが提供され、通常運用時にアプリケーションの負荷が均等に分散されます。
+
+
+
+== ONTAP の設定
+
+ここでは、関連する ONTAP コマンドを使用した導入およびプロビジョニング手順の例を示します。特に重視するのは、ハイアベイラビリティコントローラペアを使用するネットアップが推奨するストレージレイアウトを実装するためのストレージのプロビジョニング方法です。ONTAP の大きなメリットの 1 つは、既存の高可用性ペアを中断せずにスケールアウトできることです。
+
+
+
+=== ONTAP ライセンス
+
+ストレージコントローラのセットアップが完了したら、ライセンスを適用して、ネットアップが推奨する ONTAP 機能を有効にします。MEDITECH ワークロードに対応しているライセンスは、 FC 、 CIFS 、 NetApp Snapshot 、 SnapRestore 、 FlexClone 、 および SnapMirror テクノロジ：
+
+ライセンスを設定するには、 NetApp ONTAP System Manager を開き、「設定 - ライセンス」に移動して、該当するライセンスを追加します。
+
+または、 CLI を使用して次のコマンドを実行してライセンスを追加します。
+
+....
+license add -license-code <code>
+....
+
+
+=== AutoSupport の設定
+
+NetApp AutoSupport ツールは、概要のサポート情報を HTTPS 経由でネットアップに送信します。AutoSupport を設定するには、次の ONTAP コマンドを実行します。
+
+....
+autosupport modify -node * -state enable
+autosupport modify -node * -mail-hosts <mailhost.customer.com>
+autosupport modify -node prod1-01 -from prod1-01@customer.com
+autosupport modify -node prod1-02 -from prod1-02@customer.com
+autosupport modify -node * -to storageadmins@customer.com
+autosupport modify -node * -support enable
+autosupport modify -node * -transport https
+autosupport modify -node * -hostnamesubj true
+....
+
+
+=== ハードウェアアシストテイクオーバーの設定
+
+各ノードで、ハードウェアアシストテイクオーバーを有効にして、コントローラで障害が発生した場合にテイクオーバーを開始するまでの時間を最小限に抑えます。ハードウェアアシストテイクオーバーを設定するには、次の手順を実行します。
+
+. 次の ONTAP コマンドを xxx に実行します。
++
+パートナー・アドレス・オプションを prod1-01 の管理ポートの IP アドレスに設定します
+
++
+....
+MEDITECH::> storage failover modify -node prod1-01 -hwassist-partner-ip <prod1-02-mgmt-ip>
+....
+. 次の ONTAP コマンドを xxx に実行します。
++
+パートナー・アドレス・オプションを 'cluster1-02 の管理ポートの IP アドレスに設定します
+
++
+....
+MEDITECH::> storage failover modify -node prod1-02 -hwassist-partner-ip <prod1-01-mgmt-ip>
+....
+. 次の ONTAP コマンドを実行して ' ハードウェア支援型のテイクオーバーを ' prod1-01 と prod1-02 の両方の HA コントローラ・ペアで有効にします
++
+....
+MEDITECH::> storage failover modify -node prod1-01 -hwassist true
+MEDITECH::> storage failover modify -node prod1-02 -hwassist true
+....
+
+
+link:ehr-meditech-deploy_aggregate_configuration.html["次の例は、アグリゲートの構成を示し"]

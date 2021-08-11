@@ -1,0 +1,15 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-deploy_lun_mappings.html 
+keywords: lun, mappings, meditech, host 
+summary: MEDITECH ホストの LUN マッピングは、 LUN の作成時に確立されます。 
+---
+= LUN マッピング
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+MEDITECH ホストの LUN マッピングは、 LUN の作成時に確立されます。

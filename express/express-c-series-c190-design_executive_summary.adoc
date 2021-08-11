@@ -1,0 +1,18 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-c190-design_executive_summary.html 
+keywords: NVA-1139, design, infrastructure, cloud computing, 
+summary: FlexPod Express は、 Cisco Unified Computing System 、 Cisco Nexus ファミリーのスイッチ、および NetApp AFF システム上に構築された、事前設計されたベストプラクティスのデータセンターアーキテクチャです。 
+---
+= NVA-1139 - 設計： FlexPod Express with Cisco UCS C シリーズ and NetApp AFF C190 シリーズ
+
+
+ネットアップ、 Savita Kumari 氏
+
+協力：image:cisco logo.png["エラー：グラフィックイメージがありません"]
+
+業界のトレンドは、共有インフラとクラウドコンピューティングへの大規模なデータセンターの移行を示しています。さらに、データセンターで使い慣れたテクノロジを使用するリモートオフィスやブランチオフィスに、シンプルで効果的な解決策を求めています。
+
+FlexPod Express は、 Cisco Unified Computing System （ Cisco UCS ）、 Cisco Nexus ファミリースイッチ、および NetApp AFF システム上に構築された、事前設計されたベストプラクティスのデータセンターアーキテクチャです。FlexPod Express のコンポーネントは、 FlexPod Datacenter と同様に、小規模な IT インフラ環境全体で管理面の相乗効果を実現します。FlexPod Datacenter と FlexPod Express は、仮想化に最適なプラットフォームで、ベアメタルのオペレーティングシステムやエンタープライズワークロードに最適です。
+
+link:express-c-series-c190-design_program_summary.html["次のページ：プログラムの概要"]

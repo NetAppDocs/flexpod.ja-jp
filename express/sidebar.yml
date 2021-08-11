@@ -1,0 +1,142 @@
+---
+section: express
+title: FlexPod エクスプレスの略
+entries:
+- title: FlexPod Express with Cisco UCS C シリーズおよび NetApp AFF C190 シリーズ設計ガイド
+  url: "/express/express-c-series-c190-design_executive_summary.html"
+  type: solutions
+  entries:
+  - title: プログラムの概要
+    url: "/express/express-c-series-c190-design_program_summary.html"
+  - title: テクノロジ要件
+    url: "/express/express-c-series-c190-design_technology_requirements.html"
+  - title: 設計の選択肢
+    url: "/express/express-c-series-c190-design_design_choices.html"
+  - title: まとめ
+    url: "/express/express-c-series-c190-design_conclusion.html"
+  - title: 追加情報の参照先
+    url: "/express/express-c-series-c190-design_where_to_find_additional_information.html"
+- title: FlexPod Express with Cisco UCS C シリーズおよび NetApp AFF C190 シリーズ導入ガイド
+  url: "/express/express-c-series-c190-deploy_program_summary_overview.html"
+  type: solutions
+  entries:
+  - title: 解決策の概要
+    url: "/express/express-c-series-c190-deploy_solution_overview.html"
+  - title: テクノロジ要件
+    url: "/express/express-c-series-c190-deploy_technology_requirements.html"
+  - title: FlexPod エクスプレスケーブル接続情報
+    url: "/express/express-c-series-c190-deploy_flexpod_express_cabling_information.html"
+  - title: 導入手順
+    entries:
+    - title: 概要
+      url: "/express/express-c-series-c190-deploy_deployment_procedures_overview.html"
+    - title: Cisco Nexus 31108PC-V の導入
+      url: "/express/express-c-series-c190-deploy_deploy_cisco_nexus_31108pc-v.html"
+    - title: ネットアップストレージ導入手順（パート 1 ）
+      url: "/express/express-c-series-c190-deploy_netapp_storage_deployment_procedure_@part_1@.html"
+    - title: Cisco UCS C シリーズラックサーバを導入する
+      url: "/express/express-c-series-c190-deploy_deploy_cisco_ucs_c-series_rack_server.html"
+    - title: NetApp AFF ストレージ導入手順（パート 2 ）
+      url: "/express/express-c-series-c190-deploy_netapp_aff_storage_deployment_procedure_@part_2@.html"
+    - title: VMware vSphere 6.7U2 導入手順
+      url: "/express/express-c-series-c190-deploy_vmware_vsphere_6.7u2_deployment_procedure.html"
+    - title: VMware vCenter Server 6.7U2 のインストール手順
+      url: "/express/express-c-series-c190-deploy_vmware_vcenter_server_6.7u2_installation_procedure.html"
+    - title: VMware vCenter Server 6.7U2 と vSphere クラスタリング構成
+      url: "/express/express-c-series-c190-deploy_vmware_vcenter_server_6.7u2_and_vsphere_clustering_configuration.html"
+    - title: NetApp Virtual Storage Console 9.6 の導入手順
+      url: "/express/express-c-series-c190-deploy_netapp_virtual_storage_console_9.6_deployment_procedures.html"
+  - title: まとめ
+    url: "/express/express-c-series-c190-deploy_conclusion.html"
+  - title: 謝辞
+    url: "/express/express-c-series-c190-deploy_acknowledgments.html"
+  - title: 追加情報の参照先
+    url: "/express/express-c-series-c190-deploy_where_to_find_additional_information.html"
+  - title: バージョン履歴
+    url: "/express/express-c-series-c190-deploy_version_history.html"
+- title: FlexPod Express with Cisco UCS C シリーズおよび AFF A220 シリーズ設計ガイド
+  url: "/express-c-series-aff220-design_executive_summary.html"
+  type: solutions
+  entries:
+  - title: プログラムの概要
+    url: "/express/express-c-series-aff220-design_program_summary.html"
+  - title: 解決策の概要
+    url: "/express/express-c-series-aff220-design_solution_overview.html"
+  - title: テクノロジ要件
+    url: "/express/express-c-series-aff220-design_technology_requirements.html"
+  - title: 設計の選択肢
+    url: "/express/express-c-series-aff220-design_design_choices.html"
+  - title: 解決策の検証
+    url: "/express/express-c-series-aff220-design_solution_verification.html"
+  - title: まとめ
+    url: "/express/express-c-series-aff220-design_conclusion.html"
+  - title: 追加情報の参照先
+    url: "/express/express-c-series-aff220-design_where_to_find_additional_information.html"
+- title: "『 FlexPod Express with Cisco UCS C Series and AFF A220 Series Deployment
+    Guide 』"
+  url: "/express/express-c-series-aff220-deploy_program_summary.html"
+  type: solutions
+  entries:
+  - title: 解決策の概要
+    url: "/express/express-c-series-aff220-deploy_solution_overview.html"
+  - title: テクノロジ要件
+    url: "/express/express-c-series-aff220-deploy_technology_requirements.html"
+  - title: FlexPod エクスプレスケーブル接続情報
+    url: "/express/express-c-series-aff220-deploy_flexpod_express_cabling_information.html"
+  - title: 導入手順
+    url: "/express/express-c-series-aff220-deploy_deployment_procedures_overview.html"
+    entries:
+    - title: Cisco Nexus 3172P Deployment 手順の略
+      url: "/express/express-c-series-aff220-deploy_cisco_nexus_3172p_deployment_procedure.html"
+    - title: ネットアップストレージ導入手順（パート 1 ）
+      url: "/express/express-c-series-aff220-deploy_netapp_storage_deployment_procedure_@part_1@.html"
+    - title: Cisco UCS C シリーズラックサーバ導入手順
+      url: "/express/express-c-series-aff220-deploy_cisco_ucs_c-series_rack_server_deployment_procedure.html"
+    - title: NetApp AFF ストレージ導入手順（パート 2 ）
+      url: "/express/express-c-series-aff220-deploy_netapp_aff_storage_deployment_procedure_@part_2@.html"
+    - title: VMware vSphere 6.7 の導入手順
+      url: "/express/express-c-series-aff220-deploy_vmware_vsphere_6.7_deployment_procedure.html"
+    - title: VMware vCenter Server 6.7 をインストールする
+      url: "/express/express-c-series-aff220-deploy_install_vmware_vcenter_server_6.7.html"
+    - title: VMware vCenter Server 6.7 および vSphere クラスタリングを設定する
+      url: "/express/express-c-series-aff220-deploy_configure_vmware_vcenter_server_6.7_and_vsphere_clustering.html"
+  - title: まとめ
+    url: "/express/express-c-series-aff220-deploy_conclusion.html"
+  - title: 追加情報の参照先
+    url: "/express/express-c-series-aff220-deploy_where_to_find_additional_information.html"
+- title: FlexPod Express with VMware vSphere 6.7U1 and NetApp AFF A220 with Direct-Attached
+    IP Based Storage Design Guide 』
+  url: "/express/express-direct-attach-design_overview.html"
+  type: solutions
+  entries:
+  - title: プログラムの概要
+    url: "/express/express-direct-attach-design_program_summary.html"
+  - title: 解決策の概要
+    url: "/express/express-direct-attach-design_solution_overview.html"
+  - title: テクノロジ要件
+    url: "/express/express-direct-attach-design_technology_requirements.html"
+  - title: 設計の選択肢
+    url: "/express/express-direct-attach-design_design_choices.html"
+  - title: 解決策の検証
+    url: "/express/express-direct-attach-design_solution_verification.html"
+  - title: まとめ
+    url: "/express/express-direct-attach-design_conclusion.html"
+  - title: 追加情報の参照先
+    url: "/express/express-direct-attach-design_where_to_find_additional_information.html"
+- title: FlexPod Express と VMware vSphere 6.7U1 、および直接接続型の IP ベースストレージを搭載した NetApp
+    AFF A220
+  url: "/express/express-direct-attach-aff220-deploy_program_summary.html"
+  type: solutions
+  entries:
+  - title: 解決策の概要
+    url: "/express/express-direct-attach-aff220-deploy_solution_overview.html"
+  - title: テクノロジ要件
+    url: "/express/express-direct-attach-aff220-deploy_technology_requirements.html"
+  - title: FlexPod エクスプレスケーブル接続情報
+    url: "/express/express-direct-attach-aff220-deploy_flexpod_express_cabling_information.html"
+  - title: 導入手順
+    url: "/express/express-direct-attach-aff220-deploy_deployment_procedures.html"
+  - title: まとめ
+    url: "/express/express-direct-attach-aff220-deploy_conclusion.html"
+  - title: 追加情報
+    url: "/express/express-direct-attach-aff220-deploy_additional_information.html"

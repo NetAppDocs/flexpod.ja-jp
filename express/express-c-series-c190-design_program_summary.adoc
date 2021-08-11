@@ -1,0 +1,62 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-c190-design_program_summary.html 
+keywords: Converged Infrastructure, Cisco Validated Design, CVD, NVA, Express, Datacenter, UCS C220 M5, AFF C190, Nexus 31108 switch, VMware vSphere 6.7U2. 
+summary: FlexPod リファレンスアーキテクチャは、 Cisco Validated Design または NetApp Verified Architectures として提供されます。該当する CVD または NVA からのお客様の要件に基づく差異は、それらのバリエーションによってサポートされていない構成が導入されない場合に認められます。 
+---
+= プログラムの概要
+
+
+
+
+== FlexPod 統合インフラのポートフォリオ
+
+FlexPod リファレンスアーキテクチャは、 Cisco Validated Design （ CVD ）または NetApp Verified Architectures （ NVA ）として提供されます。該当する CVD または NVA からのお客様の要件に基づく差異は、それらのバリエーションによってサポートされていない構成が導入されない場合に認められます。
+
+次の図に示すように、 FlexPod ポートフォリオには FlexPod Express および FlexPod Datacenter というソリューションが含まれています。
+
+* * FlexPod Express* は、 Cisco とネットアップのテクノロジーを搭載したエントリーレベルの解決策です。
+* * FlexPod Datacenter * は、さまざまなワークロードやアプリケーションに最適な多目的基盤を提供します。
+
+
+image:express-c-series-c190-design_image1.png["エラー：グラフィックイメージがありません"]
+
+
+
+== NetApp Verified Architecture プログラム
+
+NetApp Verified Architecture プログラムは、ネットアップソリューションの検証済みアーキテクチャを提供するものです。NVA 解決策には、次の特性があります。
+
+* 入念にテストされています
+* あらかじめ規定されている
+* 導入リスクを最小限に抑えます
+* 市場投入までの時間を短縮：このガイドでは、 VMware vSphere を使用した FlexPod Express の設計について詳しく説明します。
+
+
+また、この設計では、 NetApp ONTAP 9.6 ソフトウェア、 Cisco Nexus 31108 スイッチ、および Cisco UCS C220 M5 サーバをハイパーバイザーノードとして実行する、新しい AFF C190 システムを利用します。
+
+
+
+== 解決策の概要
+
+FlexPod Express は、混在仮想化ワークロードを実行するように設計されています。リモートオフィス、ブランチオフィス、中堅企業を対象としています。また、特定の目的に専用の解決策を実装したい大規模企業にも最適です。この新しい解決策 for FlexPod Express には、 NetApp ONTAP 9.6 、 NetApp AFF C190 システム、 VMware vSphere 6.7U2 などの新しいテクノロジが追加されています。
+
+次の図に、 FlexPod Express 解決策に含まれるハードウェアコンポーネントを示します。
+
+image:express-c-series-c190-design_image2.png["エラー：グラフィックイメージがありません"]
+
+
+
+== 対象読者
+
+本ドキュメントは、 IT の効率性を高め、 IT のイノベーションを実現するために構築されたインフラを活用したい方を対象としています。本ドキュメントが対象とする主な読者は、セールスエンジニア、フィールドコンサルタント、プロフェッショナルサービス担当者、 IT マネージャーなどです。 パートナー様のエンジニア、お客様
+
+
+
+== 解決策テクノロジ
+
+この解決策は、ネットアップ、 Cisco 、 VMware の最新テクノロジを活用しています。このシステムには、 ONTAP 9.6 ソフトウェア、 Cisco Nexus 31108 デュアルスイッチ、および VMware vSphere 6.7U2 を実行する Cisco UCS C220 M5 ラックサーバを実行する、新しい NetApp AFF C190 システムが搭載されています。この検証済み解決策は、次の図に示すように、 10 ギガビットイーサネット（ 10GbE ）テクノロジを使用しています。また、 FlexPod Express アーキテクチャが組織の進化するビジネスニーズに適応できるように、 2 つのハイパーバイザーノードを一度に追加して拡張する方法についても説明します。
+
+image:express-c-series-c190-design_image3.png["エラー：グラフィックイメージがありません"]
+
+link:express-c-series-c190-design_technology_requirements.html["次のステップ：テクノロジの要件"]

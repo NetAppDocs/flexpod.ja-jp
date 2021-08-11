@@ -1,0 +1,46 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-aff220-design_program_summary.html 
+keywords: summary, converged infrastructure, CVD, NVA, Express, Datacenter, select, Nexus 3172P, UCS C220 M5 
+summary: FlexPod リファレンスアーキテクチャは、 Cisco Validated Design または NetApp Verified Architectures として提供されます。CVD または NVA のお客様の要件に基づく差異は、それらの違いによってサポートされない構成が導入されない場合に許容されます。 
+---
+= プログラムの概要
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+
+
+== FlexPod コンバージドインフラのポートフォリオ
+
+FlexPod リファレンスアーキテクチャは、 Cisco Validated Design （ CVD ）または NetApp Verified Architectures （ NVA ）として提供されます。CVD または NVA のお客様の要件に基づく差異は、それらの違いによってサポートされない構成が導入されない場合に許容されます。
+
+次の図に示すように、 FlexPod ポートフォリオには、 FlexPod Express 、 FlexPod Datacenter 、 FlexPod Select の 3 つのソリューションが含まれています。
+
+* * FlexPod Express. * は、 Cisco とネットアップのテクノロジで構成されるエントリレベルの解決策を提供します。
+* * FlexPod * Datacenter * は、さまざまなワークロードやアプリケーションに最適な多目的基盤を提供します。
+* * FlexPod Select * は、 FlexPod データセンターの最良の側面を組み込み、特定のアプリケーションにインフラストラクチャを調整します。
+
+
+image:express-c-series-aff220-design_image2.png["エラー：グラフィックイメージがありません"]
+
+
+
+== NetApp Verified Architecture プログラム
+
+NVA プログラムは、ネットアップソリューションの検証済みアーキテクチャをお客様に提供します。NVA は、 NetApp 解決策には次の資質があることを意味します。
+
+* 入念にテストされています
+* あらかじめ規定されている
+* 導入リスクを最小限に抑えます
+* 運用開始までの時間を短縮
+
+
+このガイドでは、 VMware vSphere を使用した FlexPod Express の設計について詳しく説明します。また、この設計では、 NetApp ONTAP 9.4 ソフトウェア、 Cisco Nexus 3172P スイッチ、および Cisco UCS C220 M5 サーバをハイパーバイザーノードとして実行する、まったく新しい AFF A220 システムを活用しています。
+
+このドキュメントは AFF A220 で検証済みですが、この解決策は FAS2700 もサポートしています。
+
+link:express-c-series-aff220-design_solution_overview.html["次の手順：解決策の概要"]

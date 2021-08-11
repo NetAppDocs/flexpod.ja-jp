@@ -1,0 +1,111 @@
+---
+sidebar: sidebar 
+permalink: fp-def/dc-tech-spec_power_and_cabling_requirements.html 
+keywords: power, cabling, requirements, minimum, techincal, datacenter, specifications 
+summary: FlexPod 設計には、電源とケーブル配線の最小要件があります。 
+---
+= 電源とケーブル接続の要件
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+FlexPod 設計には、電源とケーブル配線の最小要件があります。
+
+
+
+== 電力要件
+
+FlexPod データセンターの電力要件は、 FlexPod データセンター構成のインストール場所によって異なります。
+
+必要な最大電力およびその他の詳細な電力情報の詳細については、に記載されている各ハードウェアコンポーネントの技術仕様を参照してください link:dc-tech-spec_technical_specifications_and_references.html["技術仕様と参考資料：ハードウェアコンポーネント"]。
+
+Cisco UCS の電力データの詳細については、を参照してください http://www.cisco.com/assets/cdc_content_elements/flash/dataCenter/cisco_ucs_power_calculator/["Cisco UCS Power Calculator"^]。
+
+ネットアップストレージコントローラの電力データについては、を参照してください http://hwu.netapp.com/Controller/Index?platformTypeId=6780858["NetApp Hardware Universe の略"^]。プラットフォームで、構成に使用するストレージプラットフォーム（ FAS/V シリーズまたは AFF ）を選択します。ONTAP バージョンとストレージコントローラを選択し、 [ 結果の表示 ] ボタンをクリックします。
+
+
+
+== ケーブルの最小要件
+
+必要なケーブルとアダプタの数と種類は、 FlexPod データセンターの導入環境によって異なります。ケーブルのタイプ、トランシーバのタイプ、および番号は、デザインプロセス中に要件に基づいて決定されます。次の表に、必要なケーブルの最小数を示します。
+
+|===
+| ハードウェア | モデル番号 | ケーブルが必要です 
+
+
+| Cisco UCS シャーシ | Cisco UCS 5108 | Cisco UCS 2104XP 、 2204XP 、または 2208XP モジュールごとに 2 本以上のツイン同軸ケーブルを使用する 
+
+
+.6+| Cisco UCS ファブリックインターコネクト | Cisco UCS 6248UP  a| 
+* 管理ポート用 Cat5e ケーブル × 2
+* ファブリックインターコネクトのペアごとに、 L1 と L2 の 2 本の Cat5e ケーブル
+* ファブリックインターコネクトごとに 4 本以上のツイン同軸ケーブル
+* ファブリックインターコネクトごとに少なくとも 4 本の FC ケーブル
+
+
+
+
+| Cisco UCS 6296UP 
+
+
+| Cisco UCS 6332-16UP 
+
+
+| Cisco UCS 6454 
+
+
+| Cisco UCS 6332  a| 
+* 管理ポート用 Cat5e ケーブル × 2
+* ファブリックインターコネクトのペアごとに、 L1 と L2 の 2 本の Cat5e ケーブル
+* ファブリックインターコネクトごとに 4 本以上のツイン同軸ケーブル
+
+
+
+
+| Cisco UCS 6324  a| 
+* 10/100/1000Mbps 管理ポート × 2
+* ファブリックインターコネクトごとに 2 本以上のツイン同軸ケーブル
+
+
+
+
+.2+| Cisco Nexus 5000 および 7000 シリーズスイッチ | Cisco Nexus 5000 シリーズ  a| 
+* スイッチごとに少なくとも 2 本の 10GbE ファイバケーブルまたはツイン同軸ケーブルが必要です
+* スイッチごとに少なくとも 2 本の FC ケーブル（ FC / FCoE 接続が必要な場合）
+
+
+
+
+| Cisco Nexus 7000 シリーズ 
+
+
+| Cisco Nexus 9000 シリーズスイッチ | Cisco Nexus 9000 シリーズ | 各スイッチに少なくとも 2 本の 10GbE ケーブル 
+
+
+.2+| NetApp FAS コントローラ | AFF A シリーズ  a| 
+* ストレージコントローラごとに 1 組の SAS ケーブルまたは SATA ケーブル
+* 従来の FC を使用している場合、コントローラごとに少なくとも 2 本の FC ケーブル
+* 各コントローラに 10GbE ケーブルが少なくとも 2 本必要です
+* コントローラごとに管理用の GbE ケーブルが少なくとも 1 本必要です
+* ONTAP では、クラスタインターコネクトスイッチのペアごとに 8 本の短いツイン同軸ケーブルが必要です
+
+
+
+
+| FAS シリーズ 
+
+
+.4+| NetApp ディスクシェルフ | DS212C .3+| ディスクシェルフ 1 台につき、 SAS 、 SATA 、または FC ケーブル 2 本 
+
+
+| DS224C 
+
+
+| DS460C 
+
+
+| NS224 | 各ディスクシェルフに 100Gbps 銅ケーブルを 2 本 
+|===

@@ -1,0 +1,40 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-deploy_esxi_configuration_best_practices.html 
+keywords: esxi, configuration, practices, vsc, vmware, vaai, host, multipathing 
+summary: ESXi ホスト側の構成では、エンタープライズデータベースのワークロードを実行する場合と同様に VMware ホストを構成します。 
+---
+= ESXi 構成のベストプラクティス
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+ESXi ホスト側の構成では、エンタープライズデータベースのワークロードを実行する場合と同様に VMware ホストを構成します。
+
+* VSC for VMware vSphere は、 ESXi ホストのマルチパス設定と HBA タイムアウト設定を確認し、ネットアップストレージシステムに最も適した設定を行います。VSC で設定される値は、ネットアップによる厳格な内部テストに基づいています。
+* ストレージパフォーマンスを最適化するには、 VMware vStorage APIs for Array Integration （ VAAI ）をサポートしているストレージハードウェアの使用を検討してください。NetApp Plug-in for VAAI は、 ESXi ホストにインストールされている VMware の仮想ディスクライブラリを統合するソフトウェアライブラリです。VMware VAAI パッケージを使用すると、特定のタスクを物理ホストからストレージアレイにオフロードできます。
++
+シンプロビジョニングやハードウェアアクセラレーションなどのタスクをアレイレベルで実行して、 ESXi ホスト上のワークロードを削減できます。コピーオフロード機能やスペースリザベーション機能によって、 VSC の処理のパフォーマンスが向上します。ネットアップサポートサイトから、このプラグインのインストールパッケージをダウンロードして、インストール手順を確認できます。
+
++
+VSC は、ネットアップストレージコントローラのパフォーマンスの最適化とフェイルオーバーを実現するために、 ESXi ホストのタイムアウト、マルチパス設定、 HBA タイムアウト設定などの値を設定します。次の手順を実行します。
+
++
+.. VMware vSphere Web Client のホームページで、 vCenter > Hosts を選択します。
+.. ホストを右クリックし、 Actions > NetApp VSC > Set Recommended Values を選択します。
+.. NetApp Recommended Settings （ネットアップの推奨設定）ダイアログボックスで、システムに最も適した値を選択します。
++
+標準の推奨値がデフォルトで設定されます。
+
++
+image:ehr-meditech-deploy_image7.png["エラー：グラフィックイメージがありません"]
+
+.. [OK] をクリックします。
+
+
+
+
+link:ehr-meditech-deploy_netapp_configuration.html["次：ネットアップの構成"]

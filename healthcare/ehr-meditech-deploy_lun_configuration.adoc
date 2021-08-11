@@ -1,0 +1,54 @@
+---
+sidebar: sidebar 
+permalink: healthcare/ehr-meditech-deploy_lun_configuration.html 
+keywords: lun, configuration, provisioning, operating, system, type, size, presentation 
+summary: 環境内の MEDITECH ホストの数によって、 NetApp FAS または AFF システム内に作成される LUN の数が決まります。Hardware Configuration Proposal （ハードウェア構成提案）は、各 LUN のサイズを指定します。 
+---
+= LUN の設定
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+環境内の MEDITECH ホストの数によって、 NetApp FAS または AFF システム内に作成される LUN の数が決まります。Hardware Configuration Proposal （ハードウェア構成提案）は、各 LUN のサイズを指定します。
+
+
+
+== LUN のプロビジョニング
+
+MEDITECH ホスト専用の MEDITECH LUN にはシックプロビジョニングとシンプロビジョニングがあります。
+
+
+
+== LUN オペレーティングシステムのタイプ
+
+作成した LUN のアライメントを正しく行うには、 LUN のオペレーティングシステムのタイプを正しく設定する必要があります。ミスアライメント状態の LUN では不要な書き込み処理のオーバーヘッドが発生するため、ミスアライメント状態の LUN を修正するとコストがかかります。
+
+MEDITECH ホストサーバは通常、 VMware vSphere ハイパーバイザーを使用して仮想化された Windows Server 環境で実行されます。ホストサーバは、ベアメタルサーバ上の Windows Server 環境でも実行できます。設定するオペレーティング・システム・タイプの値を決定するには ' の LUN Create セクションを参照してください https://library.netapp.com/ecm/ecm_download_file/ECMP1366832["clustered Data ONTAP 8.3 コマンド：マニュアルページリファレンス"^]。
+
+
+
+== LUN サイズ
+
+MEDITECH ホストごとの LUN サイズを確認するには、 MEDITECH の Hardware Configuration Proposal （新規導入）または Hardware Evaluation Task （既存導入）ドキュメントを参照してください。
+
+
+
+== LUN の提供
+
+MEDITECH を使用するには、プログラム、ディクショナリ、データファイル用のストレージを、 FC プロトコルを使用して MEDITECH ホストに LUN として提供する必要があります。VMware 仮想環境では、 MEDITECH ホストをホストしている VMware ESXi サーバに LUN が提供されます。次に、 VMware ESXi サーバに提供される各 LUN は、物理互換モードで RDM を使用して、各 MEDITECH ホスト VM にマッピングされます。
+
+適切な LUN 命名規則を使用して、 MEDITCH ホストに LUN を提供する必要があります。たとえば ' 管理を容易にするには 'MEDITECH ホストの mt-host-01 に LUN 「 M TFS01E 」を提供する必要があります
+
+MEDITECH とバックアップシステムのインストーラを使用して、 MEDITECH ホストで使用する LUN に適した一貫した命名規則を考案する場合は、 MEDITECH ハードウェア構成提案書を参照してください。
+
+MEDITECH LUN 名の例は「 MFS05E 」です。
+
+* 「 TFS 」は MEDITECH ファイルサーバ（ MEDITECH ホスト用）を示します。
+* 「 05 」はホスト番号 5 を示します。
+* 「 E 」は Windows E ドライブを示します。
+
+
+link:ehr-meditech-deploy_initiator_group_configuration.html["次の例：イニシエータグループの設定"]

@@ -1,0 +1,19 @@
+---
+sidebar: sidebar 
+permalink: security/security-ransomware_acknowledgements.html 
+keywords: acknowledgements, author, contributors, flexpod, ransomware 
+summary: 本ガイドの作成にご協力いただいたことに、以下の方々に感謝いたします。 
+---
+= 謝辞
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+このドキュメントの作成にあたり、以下の方々のご協力に感謝します。
+
+* ネットアップ、 Jorge Gomez Navarrete 氏
+* ネットアップ、 Ganesh Kamath
+

@@ -1,0 +1,52 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-aff220-deploy_netapp_aff_storage_deployment_procedure_@part_2@.html 
+keywords: san, map, boot, storage, setup, aff, deployment, procedure, igroups 
+summary: igroup を作成するには、 iSCSI イニシエータの IQN が必要です。また、次の手順を実行する必要があります。 
+---
+= NetApp AFF ストレージ導入手順（パート 2 ）
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+
+
+== ONTAP SAN ブートストレージのセットアップ
+
+
+
+=== iSCSI igroup を作成します
+
+igroup を作成するには、次の手順を実行します。
+
+この手順には、サーバ構成から iSCSI イニシエータの IQN が必要です。
+
+. クラスタ管理ノードの SSH 接続から、次のコマンドを実行します。この手順で作成された 3 つの igroup を表示するには、 igroup show コマンドを実行します。
++
+....
+igroup create –vserver Infra-SVM –igroup VM-Host-Infra-A –protocol iscsi –ostype vmware –initiator <<var_vm_host_infra_a_iSCSI-A_vNIC_IQN>>, <<var_vm_host_infra_a_iSCSI-B_vNIC_IQN>>
+igroup create –vserver Infra-SVM –igroup VM-Host-Infra-B –protocol iscsi –ostype vmware –initiator <<var_vm_host_infra_b_iSCSI-A_vNIC_IQN>>, <<var_vm_host_infra_b_iSCSI-B_vNIC_IQN>>
+....
++
+
+NOTE: この手順は、 Cisco UCS C シリーズサーバを追加するときに実行する必要があります。
+
+
+
+
+
+== ブート LUN を igroup にマッピングします
+
+ブート LUN を igroup にマッピングするには、クラスタ管理 SSH 接続から次のコマンドを実行します。
+
+....
+lun map –vserver Infra-SVM –volume esxi_boot –lun VM-Host-Infra- A –igroup VM-Host-Infra- A –lun-id 0
+lun map –vserver Infra-SVM –volume esxi_boot –lun VM-Host-Infra- B –igroup VM-Host-Infra- B –lun-id 0
+....
+
+NOTE: この手順は、 Cisco UCS C シリーズサーバを追加するときに実行する必要があります。
+
+link:express-c-series-aff220-deploy_vmware_vsphere_6.7_deployment_procedure.html["次のステップ： VMware vSphere 6.7 Deployment 手順。"]

@@ -1,0 +1,17 @@
+---
+sidebar: sidebar 
+permalink: fp-def/dc-tech-spec_flexpod_rules.html 
+keywords: flexpod, rules, flexible, infrastructure, components, software, versions 
+summary: FlexPod の設計により、多数の異なるコンポーネントとソフトウェアバージョンを含む柔軟なインフラが実現します。 
+---
+= FlexPod ルール
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+FlexPod の設計により、多数の異なるコンポーネントとソフトウェアバージョンを含む柔軟なインフラが実現します。
+
+ルールセットは、有効な FlexPod 構成を構築またはアセンブルするためのガイドとして使用します。このドキュメントに記載されている番号とルールは、 FlexPod 構成の最小要件です。また、環境やユースケースに応じて、同梱されている製品ファミリー内で拡張することもできます。

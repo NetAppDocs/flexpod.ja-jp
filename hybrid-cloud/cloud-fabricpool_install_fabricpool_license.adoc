@@ -1,0 +1,47 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/cloud-fabricpool_install_fabricpool_license.html 
+keywords: install, fabricpool, license, cloud, capacity, oncommand, system, manager 
+summary: ネットアップライセンスファイルを取得したら、 OnCommand System Manager でインストールできます。ライセンス・ファイルをインストールするには、次の手順を実行します。 
+---
+= FabricPool ライセンスをインストールする
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+ネットアップライセンスファイルを取得したら、 OnCommand System Manager でインストールできます。ライセンスファイルをインストールするには、次の手順を実行します。
+
+. 構成をクリックします
+. クラスタをクリックします。
+. [ ライセンス ] をクリックします
+. 追加をクリックします。
+. [ ファイルの選択 ] をクリックして、ファイルを参照して選択します。
+. 追加をクリックします。
+
+
+image:cloud-fabricpool_image8.png["エラー：グラフィックイメージがありません"]
+
+
+
+== ライセンス容量
+
+ライセンス容量を表示するには、 ONTAP CLI または OnCommand System Manager を使用します。ライセンス容量を確認するには、 ONTAP CLI で次のコマンドを実行します。
+
+....
+system license show-status
+....
+OnCommand システムマネージャで、次の手順を実行します。
+
+. 構成をクリックします
+. [ ライセンス ] をクリックします
+. [ 詳細 ] タブをクリックします。
+
+
+image:cloud-fabricpool_image9.png["エラー：グラフィックイメージがありません"]
+
+FabricPool ライセンスの行には、最大容量と現在の容量が表示されます。
+
+link:cloud-fabricpool_create_aws_s3_bucket.html["次： AWS S3 バケットを作成します。"]

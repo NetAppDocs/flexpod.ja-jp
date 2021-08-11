@@ -1,0 +1,138 @@
+---
+sidebar: sidebar 
+permalink: express/express-c-series-aff220-design_design_choices.html 
+keywords: AFF A220, ontap 9, Nexus 3172P, UCS C-Series, VMware vSphere 
+summary: このページに記載されているテクノロジは、この設計の設計プロセスで採用されています。各テクノロジは、 FlexPod Express Infrastructure 解決策の特定の目的に使用されます。 
+---
+= 設計の選択肢
+
+
+この設計の設計プロセスでは、次のテクノロジが採用されました。各テクノロジは、 FlexPod Express Infrastructure 解決策の特定の目的に使用されます。
+
+
+
+== AFF 9.4 を搭載した NetApp ONTAP A220 シリーズ
+
+この解決策は、 NetApp AFF A220 と ONTAP 9.4 の 2 つの最新ネットアップ製品を活用しています。
+
+
+
+=== AFF A220 システム
+
+AFF A220 ハードウェアシステムの詳細については、を参照してください https://www.netapp.com/us/products/storage-systems/all-flash-array/aff-a-series.aspx["AFF A-Series のホームページ"^]。
+
+
+
+=== ONTAP 9.4 ソフトウェア
+
+NetApp AFF A220 システムは、新しい ONTAP 9.4 ソフトウェアを使用します。ONTAP 9.4 は、業界をリードするエンタープライズデータ管理ソフトウェアです。新しいレベルのシンプルさと柔軟性、強力なデータ管理機能、ストレージ効率化機能、業界をリードするクラウド統合機能を兼ね備えています。
+
+ONTAP 9.4 には、 FlexPod Express 解決策に最適な機能がいくつかあります。最も重要なのは、ストレージ効率化に対するネットアップの取り組みです。これは、小規模環境で最も重要な機能の 1 つです。ONTAP 9.4 では、重複排除、圧縮、シンプロビジョニングなどのネットアップの Storage Efficiency 機能に、新たなコンパクション機能が追加されています。NetApp WAFL システムは常に 4KB ブロックを書き込むため、コンパクションでは、ブロックが割り当てられた 4KB のスペースを使用していない場合、複数のブロックが 4KB ブロックにまとめられます。次の図に、このプロセスを示します。
+
+image:express-c-series-aff220-design_image5.png["エラー：グラフィックイメージがありません"]
+
+また、ルートデータのパーティショニングは AFF A220 システムでも利用できます。このパーティショニングにより、ルートアグリゲートと 2 つのデータアグリゲートをシステム内のディスクにストライピングできるようになります。したがって、 2 ノードの AFF A220 クラスタの両方のコントローラでは、アグリゲート内のすべてのディスクのパフォーマンスを利用できます。次の図を参照してください。
+
+image:express-c-series-aff220-design_image6.png["エラー：グラフィックイメージがありません"]
+
+これらは、 FlexPod Express 解決策を補完するいくつかの主要機能です。ONTAP 9.4 のその他の機能の詳細については、を参照してください https://www.netapp.com/us/media/ds-3231.pdf["ONTAP 9 データ管理ソフトウェアのデータシート"^]。また、ネットアップを参照してくださいONTAP 9.4 用に更新されました。
+
+
+
+== Cisco Nexus 3000 シリーズ
+
+Cisco Nexus 3172P は、 1/10/40/100Gbps スイッチを備えた、堅牢でコスト効率に優れたスイッチです。ユニファイドファブリックファミリの一部である Cisco Nexus 3172PQ スイッチは、トップオブラックのデータセンター環境向けのコンパクトな 1 ラックユニット（ 1RU ）スイッチです。（次の図を参照）。 最大 72 個の 1 / 10GbE ポートを 1RU または 48 個の 1 / 10GbE に搭載し、さらに 6 個の 40GbE ポートを 1RU に搭載しています。また、物理レイヤの柔軟性を最大限に高めるために、 1/10/40Gbps もサポートしています。
+
+すべての Cisco Nexus シリーズモデルは、基盤となる同じオペレーティングシステムである NX-OS を実行するため、 FlexPod Express および FlexPod Datacenter ソリューションでは複数の Cisco Nexus モデルがサポートされます。
+
+パフォーマンスの仕様は次のとおりです。
+
+* すべてのポートでのラインレートトラフィックスループット（レイヤ 2 とレイヤ 3 の両方）
+* 最大設定可能な MTU （最大 9216 バイト）（ジャンボフレーム）
+
+
+image:express-c-series-aff220-design_image7.png["エラー：グラフィックイメージがありません"]
+
+Cisco Nexus 3172 スイッチの詳細については、を参照してください https://www.cisco.com/c/en/us/products/collateral/switches/nexus-3000-series-switches/data_sheet_c78-729483.html["Cisco Nexus 3172PQ 、 3172TQ 、 3172TQ-32T 、 3172PQ-XL 、および 3172TQ-XL スイッチのデータシート"^]。
+
+
+
+== Cisco UCS C-Series
+
+Cisco UCS C シリーズラックサーバは FlexPod Express 用に選択されました。多くの設定オプションを使用することで、 FlexPod Express 環境の特定の要件に合わせて調整できます。
+
+Cisco UCS C シリーズラックサーバは、業界標準のフォームファクタでユニファイドコンピューティングを提供し、 TCO の削減と即応性の向上を実現します。
+
+Cisco UCS C シリーズラックサーバには、次のような利点があります。
+
+* フォームファクタに依存しない Cisco UCS へのエントリポイント
+* アプリケーションを簡単かつ迅速に導入
+* ユニファイドコンピューティングの革新性と利点をラックサーバに拡張
+* 使い慣れたラックパッケージに独自のメリットをもたらし、お客様の選択肢を拡大
+
+
+image:express-c-series-aff220-design_image8.png["エラー：グラフィックイメージがありません"]
+
+Cisco UCS C220 M5 ラックサーバ（前の図）は、業界で最も汎用性の高い汎用エンタープライズインフラおよびアプリケーションサーバの 1 つです。高密度の 2 ソケットラックサーバで、仮想化、コラボレーション、ベアメタルなど、さまざまなワークロードに業界最高レベルのパフォーマンスと効率性を提供します。Cisco UCS C シリーズラックサーバは、スタンドアロンサーバとして導入することも、 Cisco UCS の一部として導入することもできます。これにより、シスコの標準ベースのユニファイドコンピューティングの革新的な技術を活用して、お客様の TCO を削減し、ビジネスの俊敏性を高めることができます。
+
+C220 M5 サーバの詳細については、を参照してください https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/datasheet-c78-739281.html["Cisco UCS C220 M5 ラックサーバデータシート"^]。
+
+
+
+==== C220 M5 ラックサーバ用の接続オプション
+
+C220 M5 ラックサーバの接続オプションは次のとおりです。
+
+* * Cisco UCS VIC 1387 *
++
+Cisco UCS VIC 1387 （次の図）は、 modular-LAN-on-motherboard （ mLOM ）フォームファクタで、デュアルポート拡張 QSFP+ 40GbE および FC over Ethernet （ FCoE ）を提供します。mLOM スロットは、 Peripheral Component Interconnect Express （ PCIe ）スロットを使用せずに Cisco VIC を取り付けるために使用できるため、 I/O の拡張性が向上します。
+
+
+
+image:express-c-series-aff220-design_image9.png["エラー：グラフィックイメージがありません"]
+
+Cisco UCS VIC 1387 アダプタの詳細については、を参照してください https://www.cisco.com/c/en/us/products/interfaces-modules/ucs-virtual-interface-card-1387/index.html["Cisco UCS 仮想インターフェイスカード 1387"^] データシート：
+
+* * CVR-QSFP-SFP10G アダプタ *
++
+Cisco QSA モジュールは QSFP ポートを SFP または SFP+ ポートに変換します。このアダプタを使用すると、任意の SFP+ または SFP モジュールまたはケーブルを使用して、ネットワークの反対側の低速ポートに接続できます。この柔軟性により、高密度の 40GbE QSFP プラットフォームを最大限に活用することで、コスト効率の高い 40GbE への移行が可能になります。このアダプタは、 SFP+ 光ファイバとケーブル接続をすべてサポートし、複数の 1GbE SFP モジュールをサポートします。このプロジェクトは 10GbE 接続を使用して検証されており、 VIC 1387 が 40GbE で使用されているため、 CVR-QSFP-SFP10G アダプタ（次の図）が変換に使用されます。
+
+
+
+image:express-c-series-aff220-design_image10.png["エラー：グラフィックイメージがありません"]
+
+
+
+== VMware vSphere 6.7
+
+VMware vSphere 6.7 は、 FlexPod Express で使用するハイパーバイザーオプションの 1 つです。VMware vSphere を使用すると、購入したコンピューティング容量が十分に使用されていることを確認しながら、組織の電力および冷却のフットプリントを削減できます。また、 VMware vSphere を使用すると、ハードウェア障害からの保護（ VMware High Availability 、 VMware HA ）が可能になり、 vSphere ホストのクラスタ全体（ VMware Distributed Resource Scheduler 、 VMware DRS ）でリソースの負荷分散を計算できます。
+
+VMware vSphere 6.7 では、カーネルのみが再起動されるため、ハードウェアを再起動することなく、 vSphere ESXi をロードする場所で「クイックブート」を実行できます。この機能は、 Quick Boot ホワイトリストにあるプラットフォームとドライバでのみ使用できます。vSphere 6.7 では、 vSphere Client の機能が拡張され、 vSphere Web Client の機能の約 90% を使用できます。
+
+vSphere 6.7 では、 VMware がこの機能を拡張して、ホスト単位ではなく、 Enhanced vMotion Compatibility （ EVC ）を仮想マシン（ VM ）単位で設定できるようにしました。vSphere 6.7 でも、 VMware はインスタントクローンの作成に使用できる API を公開しています。
+
+vSphere 6.7 U1 の機能には、次のようなものがあります。
+
+* すべての機能を備えた HTML5 Web ベース vSphere Client です
+* NVIDIA GRID vGPU VM の vMotionインテル ® FPGA のサポート。
+* vCenter Server Converge Tool で、外部 PSC から内部 PCS への移行が実施されました。
+* VSAN （ HCI の更新）の機能拡張
+* 強化されたコンテンツ・ライブラリ
+
+
+vSphere 6.7 U1 の詳細については、を参照してください https://blogs.vmware.com/vsphere/2018/10/whats-new-in-vcenter-server-6-7-update-1.html["vCenter Server 6.7 Update 1 の新機能"^]。この解決策は vSphere 6.7 で検証済みですが、他のコンポーネントとの互換性を確認する任意の vSphere バージョンを NetApp Interoperability Matrix Tool でサポートします。ネットアップでは、 vSphere 6.7U1 を修正機能と拡張機能として導入することを推奨します。
+
+
+
+== ブートアーキテクチャ
+
+FlexPod Express ブートアーキテクチャでサポートされているオプションは次のとおりです。
+
+* iSCSI SAN LUN
+* Cisco FlexFlash SD カード
+* ローカルディスク
+
+
+FlexPod データセンターは iSCSI LUN からブートされるため、 FlexPod の管理性も解決策 Express の iSCSI ブートを使用して強化されます。
+
+link:express-c-series-aff220-design_solution_verification.html["次：解決策の検証："]

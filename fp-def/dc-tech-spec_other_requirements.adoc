@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: fp-def/dc-tech-spec_other_requirements.html 
+keywords: flexpod, datacenter, technical, specifications, requirements, interoperability 
+summary: FlexPod アーキテクチャには、相互運用性とサポート関連の次の要件が追加で含まれています 
+---
+= その他の要件
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+FlexPod アーキテクチャには、相互運用性とサポート関連の次の要件が追加で含まれています。
+
+* すべてのハードウェアコンポーネントとソフトウェアコンポーネントがネットアップに記載され、サポートされている必要があります http://mysupport.netapp.com/matrix["IMT"^]、、および Cisco UCS Hardware and Software Interoperability Matrix Tool を参照してください。
+* 次の項目を含むすべての機器について、有効なサポート契約が必要です。
++
+** シスコ機器の Smart Net Total Care （ SmartNet ）サポート
+** ネットアップ機器に対する SupportEdge Premium のサポート
+
+
+
+
+詳細については、ネットアップを参照してください http://mysupport.netapp.com/matrix["IMT"^]。
