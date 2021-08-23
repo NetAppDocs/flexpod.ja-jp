@@ -3,12 +3,14 @@ section: healthcare
 title: 医療機関
 entries:
 - title: FlexPod Datacenter for Epic Directional Sizing Guide 』を参照してください
-  url: "/healthcare/ehr-epic-sizing_introduction.html"
   type: solutions
   entries:
+  - title: 概要
+    url: "/healthcare/ehr-epic-sizing_introduction.html"
   - title: リファレンスアーキテクチャ
-    url: "/healthcare/ehr-epic-sizing_netapp_storage_reference_architectures_for_epic.html"
     entries:
+    - title: Epic に対応したネットアップストレージリファレンスアーキテクチャ
+      url: "/healthcare/ehr-epic-sizing_netapp_storage_reference_architectures_for_epic.html"
     - title: Epic に対応した Cisco UCS リファレンスアーキテクチャ
       url: "/healthcare/ehr-epic-sizing_cisco_ucs_reference_architecture_for_epic.html"
   - title: 小規模、中規模、大規模アーキテクチャの技術仕様
@@ -18,14 +20,16 @@ entries:
   - title: 謝辞
     url: "/healthcare/ehr-epic-sizing_acknowledgements.html"
 - title: Epic EHR 向け FlexPod データセンター導入ガイド
-  url: "/healthcare/ehr-epic-deploy_overview.html"
   type: solutions
   entries:
+  - title: 概要
+    url: "/healthcare/ehr-epic-deploy_overview.html"
   - title: 設計
     url: "/healthcare/ehr-epic-deploy_design.html"
   - title: 導入と設定
-    url: "/healthcare/ehr-epic-deploy_deployment_and_configuration_overview.html"
     entries:
+    - title: 概要
+      url: "/healthcare/ehr-epic-deploy_deployment_and_configuration_overview.html"
     - title: インフラのハードウェアコンポーネントとソフトウェアコンポーネント
       url: "/healthcare/ehr-epic-deploy_infrastructure_hardware_and_software_components.html"
     - title: ベースインフラの構成
@@ -45,9 +49,10 @@ entries:
   - title: 謝辞
     url: "/healthcare/ehr-epic-deploy_acknowledgements.html"
 - title: Epic Performance Testing 向け FlexPod
-  url: "/healthcare/ehr-epic-performance_introduction.html"
   type: solutions
   entries:
+  - title: 概要
+    url: "/healthcare/ehr-epic-performance_introduction.html"
   - title: エグゼクティブサマリー
     url: "/healthcare/ehr-epic-performance_executive_summary.html"
   - title: テスト方法
@@ -61,9 +66,10 @@ entries:
   - title: 謝辞
     url: "/healthcare/ehr-epic-performance_acknowledgements.html"
 - title: FlexPod for MEDITECH の指向性サイジングガイド
-  url: "/healthcare/ehr-meditech-sizing_introduction.html"
   type: solutions
   entries:
+  - title: 概要
+    url: "/healthcare/ehr-meditech-sizing_introduction.html"
   - title: MEDITECH ワークロードの概要
     url: "/healthcare/ehr-meditech-sizing_meditech_workload_overview.html"
   - title: 小規模、中規模、大規模アーキテクチャの技術仕様
@@ -73,14 +79,16 @@ entries:
   - title: 謝辞
     url: "/healthcare/ehr-meditech-sizing_acknowledgments.html"
 - title: FlexPod Datacenter for MEDITECH 導入ガイド
-  url: "/healthcare/ehr-meditech-deploy_overview.html"
   type: solutions
   entries:
+  - title: 概要
+    url: "/healthcare/ehr-meditech-deploy_overview.html"
   - title: 設計
     url: "/healthcare/ehr-meditech-deploy_design.html"
   - title: 導入と設定
-    url: "/healthcare/ehr-meditech-deploy_deployment_and_configuration_overview.html"
     entries:
+    - title: 概要
+      url: "/healthcare/ehr-meditech-deploy_deployment_and_configuration_overview.html"
     - title: ベースインフラの構成
       url: "/healthcare/ehr-meditech-deploy_base_infrastructure_configuration.html"
     - title: Cisco UCS ブレードサーバとスイッチの構成
@@ -108,9 +116,10 @@ entries:
   - title: 追加情報の参照先
     url: "/healthcare/ehr-meditech-deploy_where_to_find_additional_information.html"
 - title: FlexPod for Medical Imaging の略
-  url: "/healthcare/medical-imaging_introduction.html"
   type: solutions
   entries:
+  - title: 概要
+    url: "/healthcare/medical-imaging_introduction.html"
   - title: アーキテクチャ
     url: "/healthcare/medical-imaging_architecture.html"
   - title: 解決策インフラのハードウェアコンポーネントとソフトウェアコンポーネント

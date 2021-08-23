@@ -3,9 +3,10 @@ section: hybrid-cloud
 title: ハイブリッドクラウド
 entries:
 - title: NetApp Cloud Insights for FlexPod の略
-  url: "/hybrid-cloud/cloud-insights_netapp_cloud_insights_for_flexpod.html"
   type: solutions
   entries:
+  - title: 概要
+    url: "/hybrid-cloud/cloud-insights_netapp_cloud_insights_for_flexpod.html"
   - title: ユースケース
     url: "/hybrid-cloud/cloud-insights_use_cases.html"
   - title: アーキテクチャ
@@ -21,9 +22,10 @@ entries:
   - title: 追加情報
     url: "/hybrid-cloud/cloud-insights_additional_information.html"
 - title: FabricPool with FlexPod - Amazon AWS S3 への非アクティブなデータ階層化
-  url: "/hybrid-cloud/cloud-fabricpool_introduction.html"
   type: solutions
   entries:
+  - title: 概要
+    url: "/hybrid-cloud/cloud-fabricpool_introduction.html"
   - title: FlexPod の概要とアーキテクチャ
     url: "/hybrid-cloud/cloud-fabricpool_flexpod_overview_and_architecture.html"
   - title: FabricPool
@@ -31,8 +33,9 @@ entries:
   - title: FabricPool の要件
     url: "/hybrid-cloud/cloud-fabricpool_fabricpool_requirements.html"
   - title: 設定
-    url: "/hybrid-cloud/cloud-fabricpool_software_revisions.html"
     entries:
+    - title: FabricPool ソフトウェアのリビジョン
+      url: "/hybrid-cloud/cloud-fabricpool_software_revisions.html"
     - title: FabricPool ライセンスをインストールする
       url: "/hybrid-cloud/cloud-fabricpool_install_fabricpool_license.html"
     - title: AWS S3 バケットを作成する
