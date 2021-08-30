@@ -53,7 +53,7 @@ Cisco UCS B シリーズブレードを使用するには、 Cisco UCS B シリ�
 
 | Cisco UCS 5108 | N20-C6508 | http://www.cisco.com/c/en/us/products/servers-unified-computing/ucs-5100-series-blade-server-chassis/index.html["Cisco UCS 5100 シリーズブレードサーバシャーシ"] 
 |===
-各 Cisco UCS 5108 ブレードシャーシには、ファブリックインターコネクトへの冗長接続を提供するために、 2 つの Cisco UCS 2200/2300 シリーズ IOM が必要です。どのファブリックインターコネクトと Cisco UCS 5108 IOM の組み合わせに対応できるかについては、を参照してください。
+各 Cisco UCS 5108 ブレードシャーシには、ファブリックインターコネクトへの冗長接続を提供するために、 2 つの Cisco UCS 2200/2300/2400 シリーズ IOM が必要です。
 
 
 

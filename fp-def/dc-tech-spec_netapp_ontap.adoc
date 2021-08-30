@@ -12,6 +12,6 @@ summary: NetApp ONTAP ソフトウェアは、すべての NetApp FAS システ�
 :imagesdir: ./../media/
 
 
-NetApp ONTAP ソフトウェアは、すべての NetApp FAS システムまたは AFF システムにインストールされます。FlexPod は、 ONTAP ソフトウェアとの検証済みで、ノンストップオペレーション、無停止アップグレード、即応性に優れたデータインフラを実現する、拡張性に優れたストレージアーキテクチャを提供します。
+NetApp ONTAP ソフトウェアは、すべてのネットアップ FAS 、 AFF 、および AFF All SAN Array （ ASA ）システムにインストールされます。FlexPod は、 ONTAP ソフトウェアとの検証済みで、ノンストップオペレーション、無停止アップグレード、即応性に優れたデータインフラを実現する、拡張性に優れたストレージアーキテクチャを提供します。
 
 ONTAP の詳細については、を参照してください http://www.netapp.com/us/products/data-management-software/ontap.aspx["ONTAP データ管理ソフトウェア"^] 製品ページ。

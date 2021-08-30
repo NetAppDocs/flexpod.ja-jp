@@ -42,7 +42,7 @@ entries:
 - title: FlexPod データセンター技術仕様
   type: solutions
   entries:
-  - title: ''
+  - title: 概要
     url: "/fp-def/dc-tech-spec_solution_overview.html"
   - title: FlexPod プラットフォーム
     url: "/fp-def/dc-tech-spec_flexpod_platforms.html"

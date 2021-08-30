@@ -365,6 +365,30 @@ FAS データセンターでは、使用可能な FlexPod ストレージコン�
 |===
 
 
+=== AFF ASA A シリーズ
+
+最新モデルの NetApp AFF ASA A シリーズストレージコントローラは、いずれも FlexPod で使用できます。追加情報については、『オール SAN アレイ』ドキュメント、『 ONTAP AFF オール SAN アレイシステム』テクニカルレポート、および『 NetApp Hardware Universe 』を参照してください。特定の AFF モデルの詳細については、次の表に示すプラットフォーム固有のドキュメントを参照してください。
+
+|===
+| コンポーネント | AFF A シリーズコントローラプラットフォームのドキュメント 
+
+
+| NetApp AFF ASA A800 | http://docs.netapp.com/allsan/index.jsp["AFF ASA A800 プラットフォームのドキュメント"] 
+
+
+| NetApp AFF ASA A700 | http://docs.netapp.com/allsan/index.jsp["AFF ASA A700 プラットフォームのドキュメント"] 
+
+
+| NetApp AFF ASA A400 | http://docs.netapp.com/allsan/index.jsp["AFF ASA A400 プラットフォームのドキュメント"] 
+
+
+| NetApp AFF ASA A250 | http://docs.netapp.com/allsan/index.jsp["AFF ASA A250 プラットフォームマニュアル"] 
+
+
+| NetApp AFF ASA A220 | http://docs.netapp.com/allsan/index.jsp["AFF ASA A220 プラットフォームのマニュアル"] 
+|===
+
+
 === NetApp ディスクシェルフ
 
 ネットアップのディスクシェルフの技術仕様には、フォームファクタサイズ、エンクロージャあたりのドライブ数、シェルフ I/O モジュールなどが含まれます。このドキュメントは、次の表に記載されています。詳細については、を参照してください http://www.netapp.com/us/products/storage-systems/disk-shelves-and-storage-media/disk-shelves-tech-specs.aspx["ネットアップのディスクシェルフとストレージメディア技術仕様"^] および。

@@ -110,7 +110,6 @@
   <block id="2abc157d263e35282dcd9b561414fc09" category="summary">ネットアップのストレージコントローラは、ブートとアプリケーションデータストレージの両方に関して、 FlexPod アーキテクチャのストレージ基盤を提供します。ネットアップのコンポーネントには、ストレージコントローラ、クラスタインターコネクトスイッチ、ドライブとディスクシェルフ、ライセンスオプションがあります。</block>
   <block id="2ca7c673d212fe0aac08f9e41ac63265" category="doc">NetApp コンポーネント</block>
   <block id="c1a132b08c3d15f664a4e983ca90172e" category="section-title">ネットアップストレージコントローラのオプション</block>
-  <block id="85aa468559f0b1f790cdef84e7412410" category="paragraph">FlexPod アーキテクチャには、冗長な NetApp FAS または AFF コントローラが必要です。コントローラは ONTAP ソフトウェアを実行します。ストレージコントローラを購入した場合は、優先バージョンのソフトウェアをコントローラにプリロードすることができます。ONTAP の場合は、クラスタ全体を発注した。クラスタ全体には、ストレージコントローラのペアとクラスタインターコネクト（スイッチまたはスイッチレス）が含まれます。</block>
   <block id="f3d1ddd3608cc33b94186096baefa680" category="paragraph">選択したストレージプラットフォームに応じて、さまざまなオプションや設定を使用できます。これらの追加コンポーネントの詳細については、営業担当者にお問い合わせください。</block>
   <block id="0801ff54af9cce0b9f0f9dc6d4f359d8" category="paragraph">次の表に示すコントローラファミリーは、解決策データセンター FlexPod での使用に適しています。 Cisco Nexus スイッチへの接続はシームレスであるためです。を参照してください<block ref="bb9c67b5a4c15a85b5e6aa6c9afd0285" category="inline-link-rx"></block> 各コントローラモデルの互換性の詳細については、を参照してください。</block>
   <block id="ab55821a5158bbae88cc564fe08c13bb" category="cell">ストレージコントローラファミリー</block>
@@ -205,7 +204,6 @@
   <block id="f312eeb62002bbf3617b218baf8ae4da" category="cell"><block ref="f312eeb62002bbf3617b218baf8ae4da" category="inline-link-rx"></block></block>
   <block id="160f9594439a5c252e567ca5fa56f9aa" category="summary">FlexPod プラットフォームは、 Cisco Unified Computing System （ Cisco UCS ）、 Cisco Nexus ファミリースイッチ、およびネットアップストレージコントローラ（ NetApp AFF または FAS システム）を基盤として構築された、事前設計されたベストプラクティスのデータセンターアーキテクチャです。</block>
   <block id="d0ed65e54397020ba99377dad07d0960" category="doc">TR-4036 ：『 FlexPod Datacenter Technical Specifications 』</block>
-  <block id="c21f0d8dd96a1d7bc606c36253404aae" category="paragraph">Sree Lakshmi Lanka Lanka 氏と Arvind Ramakrinan 氏、ネットアップ</block>
   <block id="44449d841c637b73894538d1cb10ad73" category="paragraph">FlexPod は、さまざまな仮想ハイパーバイザーや、ベアメタルのオペレーティングシステム、エンタープライズワークロードを実行するのに適したプラットフォームです。FlexPod は、ベースライン構成だけでなく、さまざまなユースケースや要件に対応できるよう、サイズ設定と最適化が可能な柔軟性も備えています。</block>
   <block id="0f9b398b73c49f27eb0e6ce88a41a230" category="inline-link">FlexPod 統合インフラ</block>
   <block id="823b3b69aad760899b67dee8091a03a3" category="admonition">FlexPod の完全な設定を注文する前に、を参照してください<block ref="4d4c2ccc5cc5a93d3d89d2afd9d2f8a7" category="inline-link-rx"></block> これらの技術仕様の最新バージョンについては、 netapp.com のページを参照してください。</block>
@@ -241,14 +239,10 @@
   <block id="1887d9d6b7314b8c1dd849fca8e56223" category="list-text">解決策が C シリーズサーバを使用している場合は、 Cisco UCS C シリーズラックサーバを 2 台。</block>
   <block id="99c0ea390e48259a4fbf2269863d83b2" category="paragraph">Cisco UCS C シリーズラックサーバをより大規模に導入する場合は、 2232PP FEX モジュールのペアを選択できます。ただし、 2232PP はハードウェア要件ではありません。</block>
   <block id="bb649be95dbc5df4aef3ad2ccb562f87" category="list-text">ハイアベイラビリティ（ HA ）ペア構成のネットアップストレージコントローラ × 2 ：</block>
-  <block id="302b17543e5e3a6b3330298e6a63a4cf" category="paragraph">サポート対象のネットアップ FAS または AFF シリーズのストレージコントローラで構成できます。を参照してください<block ref="bb9c67b5a4c15a85b5e6aa6c9afd0285" category="inline-link-rx"></block> サポートされている FAS および AFF コントローラモデルの最新リストを表示するアプリケーション。</block>
-  <block id="72eee99f567d32f06a532212d1d7b437" category="list-text">HA 構成では、データアクセス用にコントローラごとに 2 つの冗長インターフェイスが必要です。インターフェイスには FCoE 、 FC 、または 10Gb イーサネット（ 10GbE ）を使用できます。</block>
   <block id="0052efad5d260a806d52bfcfe640936f" category="inline-link">スイッチ</block>
   <block id="6f13026c20a1afa20a978290723178d9" category="list-text">解決策で NetApp ONTAP を使用している場合は、ネットアップの承認を受けたクラスタインターコネクトトポロジが必要です。詳細については、を参照してください<block ref="8e1fea0ef6ffd9e11ab75b3d4af03217" category="inline-link-rx"></block> NetApp Hardware Universe のタブ。</block>
-  <block id="f52e34ce40c43df796df0349c77dd218" category="list-text">解決策で ONTAP を使用する場合は、データアクセス用にコントローラごとに 10GbE ポートを少なくとも 2 つ追加する必要があります。</block>
   <block id="e3313d2a580d4ea7c09b15c5c979da6a" category="list-text">2 ノード構成の ONTAP クラスタでは、 2 ノードスイッチレスクラスタを構成できます。</block>
   <block id="5482261cd927b97915d0cb11f2a92148" category="list-text">ONTAP クラスタのノードが 3 つ以上の場合は、クラスタインターコネクトスイッチのペアが必要です。</block>
-  <block id="100bff185e67a567c732e1842ccebd36" category="list-text">サポート対象のディスクタイプが設定されたネットアップディスクシェルフ × 1現在サポートされているディスクシェルフモデルの最新のリストについては、 NetApp Hardware Universe のシェルフタブを参照してください。</block>
   <block id="42419c0e478fd6f7bbffe6b8974833ca" category="summary">ネットアップストレージコントローラは、ブートとアプリケーションデータストレージの両方を実現する FlexPod Express アーキテクチャのストレージ基盤を提供します。このセクションでは、 FlexPod Express アーキテクチャのさまざまなネットアップオプションについて説明します。</block>
   <block id="4ba8114dd624dc2130553b7742f70d88" category="section-title">NetApp FAS</block>
   <block id="6f4427b59f55f6827f3d3145a95ee28d" category="paragraph">AFF Express アーキテクチャでは、冗長構成の AFF C190 、 FlexPod A220 、または FAS2750 シリーズのコントローラが必要です。コントローラは ONTAP ソフトウェアを実行します。ストレージコントローラの注文時に、優先されるソフトウェアバージョンをコントローラにプリロードすることができます。ONTAP の場合、クラスタは、クラスタインターコネクトスイッチのペアを使用して導入することも、スイッチレスクラスタ構成に導入することもできます。</block>
@@ -730,11 +724,6 @@
   <block id="010a6cb0eccdea35662ad711d443f2ec" category="doc">オプション機能</block>
   <block id="1749d12df3df2319d3eee218a277ff83" category="section-title">MetroCluster</block>
   <block id="1cc86d2d4461432b3b903fda17791ec4" category="paragraph">FlexPod は、 2 ノードまたは 4 ノードのどちらのクラスタ構成でも、継続的可用性を実現する NetApp MetroCluster ソフトウェアのどちらかのバリエーションをサポートします。MetroCluster は、重要なワークロード向けに同期レプリケーションを提供します。Cisco スイッチに接続されたデュアルサイト構成が必要です。サイト間でサポートされる最大距離は、 MetroCluster FC の場合は約 186 マイル（ 300km ）、 MetroCluster IP の場合は約 435 マイル（ 700km ）に増加します。次の図は、 FlexPod Datacenter with NetApp MetroCluster Architecture と FlexPod Datacenter with NetApp MetroCluster IP Architecture をそれぞれ示しています。</block>
-  <block id="501e047417fa2cdd118f632e1426b85c" category="paragraph">詳細およびガイダンスについては、次の導入ドキュメントを参照してください。</block>
-  <block id="c4325031d96572e8678952bdef6b1b91" category="inline-link">NVA-0030 - 導入： MetroCluster FlexPod FC を使用した データセンター</block>
-  <block id="99f01aa3264178876ab422966e7c37ce" category="list-text">* FlexPod MetroCluster FC. *<block ref="6f446c3549a8e0e66decc9ca2a4768a5" category="inline-link-rx"></block>。</block>
-  <block id="e2b39a282bf653c5d79e69f6c4bf219c" category="inline-link">CVD ：『 FlexPod Datacenter with NetApp MetroCluster IP 』</block>
-  <block id="da486cc19ce5e83469e6ad2674c1cecf" category="list-text">* FlexPod MetroCluster IP. *<block ref="2192052989cfb0dc4629fa95683ce34b" category="inline-link-rx"></block>。</block>
   <block id="ca2380af14784cf2292bca74ecc5950f" category="paragraph"><block ref="ca2380af14784cf2292bca74ecc5950f" category="inline-image-macro-rx" type="image"></block></block>
   <block id="a2f84fe24ac1cc3a35b8fd2e10f8fb69" category="paragraph"><block ref="a2f84fe24ac1cc3a35b8fd2e10f8fb69" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ab2679ebd7bb85b68b87dac6f34ef516" category="section-title">エンドツーエンドの FC-NVMe</block>
@@ -908,7 +897,6 @@
   <block id="e9f91f6c582fc9c06492922408255841" category="cell">N20-C6508</block>
   <block id="808b1571f5756e4a697697421e6df46d" category="inline-link">Cisco UCS 5100 シリーズブレードサーバシャーシ</block>
   <block id="2f81ceda3b0bfc238f7f690e7473830e" category="cell"><block ref="2f81ceda3b0bfc238f7f690e7473830e" category="inline-link-rx"></block></block>
-  <block id="d86c1f4f619a3bba741383fdac037459" category="paragraph">各 Cisco UCS 5108 ブレードシャーシには、ファブリックインターコネクトへの冗長接続を提供するために、 2 つの Cisco UCS 2200/2300 シリーズ IOM が必要です。どのファブリックインターコネクトと Cisco UCS 5108 IOM の組み合わせに対応できるかについては、を参照してください。</block>
   <block id="a657b94e4c9e579fa82aa858106b19f3" category="paragraph">Cisco UCS B シリーズブレードサーバには、さまざまな CPU 、メモリ、および I/O オプションを備えたハーフ幅およびフル幅の各種タイプが用意されています。次の表に示す部品番号は、ベースサーバー用です。CPU 、メモリ、ドライブ、メザニンアダプタカードは含まれません。FlexPod アーキテクチャでは、複数の構成オプションを使用でき、サポートされています。</block>
   <block id="58f718ee214b0714734639e81128fbb3" category="cell">Cisco UCS B シリーズブレード</block>
   <block id="cd9477b63872b9cb0b9d373edd1c82f7" category="cell"><block ref="cd9477b63872b9cb0b9d373edd1c82f7" category="inline-link-rx"></block></block>
@@ -7447,4 +7435,41 @@
   <block id="9651c3a3b7cbc999c2c50c39dbf61c04" category="sidebar">FlexPod を使用したハイブリッドクラウド</block>
   <block id="0466740965e7956f8fc2a734a83f5686" category="sidebar">FabricPool ソフトウェアのリビジョン</block>
   <block id="6cb34c048fceb40f7d64efc563d407f9" category="sidebar">ランサムウェアとは</block>
+  <block id="fbebe2a055b4dcf362a0493004ef468f" category="paragraph">FlexPod アーキテクチャには、冗長な NetApp FAS 、 AFF 、または AFF ASA コントローラが必要です。コントローラは ONTAP ソフトウェアを実行します。ストレージコントローラを購入した場合は、優先バージョンのソフトウェアをコントローラにプリロードすることができます。ONTAP の場合は、クラスタ全体を発注した。クラスタ全体には、ストレージコントローラのペアとクラスタインターコネクト（スイッチまたはスイッチレス）が含まれます。</block>
+  <block id="dac9e0940606682208e977faac4e179e" category="paragraph">Sree Lakshmi Lanka 氏、 Arvind Ramakrishnan 氏、ネットアップの Jyh shing Chen 氏</block>
+  <block id="74f1a060fec1286151922916e9cb7cc9" category="paragraph">FlexPod プラットフォームは、 Cisco Unified Computing System （ Cisco UCS ）、 Cisco Nexus ファミリースイッチ、およびネットアップストレージコントローラ（ NetApp AFF 、 ASA 、または FAS システム）を基盤として設計された、ベストプラクティスのデータセンターアーキテクチャです。</block>
+  <block id="cc910127c1a0f3009d24973fab296857" category="paragraph">NetApp ONTAP ソフトウェアは、すべてのネットアップ FAS 、 AFF 、および AFF All SAN Array （ ASA ）システムにインストールされます。FlexPod は、 ONTAP ソフトウェアとの検証済みで、ノンストップオペレーション、無停止アップグレード、即応性に優れたデータインフラを実現する、拡張性に優れたストレージアーキテクチャを提供します。</block>
+  <block id="b84c25a0a6333d1b6ec82954312075f9" category="paragraph">この構成には、サポートされているネットアップの FAS 、 AFF 、または ASA シリーズのストレージコントローラが含まれます。を参照してください<block ref="bb9c67b5a4c15a85b5e6aa6c9afd0285" category="inline-link-rx"></block> サポートされている FAS 、 AFF 、 ASA の各コントローラモデルの最新リストを表示するためのアプリケーション。</block>
+  <block id="f19ed772a308d90aafe4bc81c025d843" category="list-text">HA 構成では、データアクセス用にコントローラごとに 2 つの冗長インターフェイスが必要です。インターフェイスは FCoE 、 FC 、 10 / 25 / 100Gb イーサネット（ 10GbE ）です。</block>
+  <block id="1e43cedc7bbfa39913e13dd030f51171" category="list-text">解決策が ONTAP を使用している場合、データアクセスには、コントローラごとに最低 2 つの 10 / 25 / 100GbE ポートが追加で必要です。</block>
+  <block id="9ae783a3ab636618c5130cf4e28efd11" category="list-text">サポート対象のディスクタイプが設定されたネットアップディスクシェルフ × 1のシェルフタブを参照してください <block ref="910181e0dcbc3888beac11d697ebd30b" category="inline-link-macro-rx"></block> サポートされるディスクシェルフモデルの最新のリストについては、を参照してください。</block>
+  <block id="107d17c23965093bdabe46bc6b6ba610" category="section-title">AFF ASA A シリーズ</block>
+  <block id="dbb86a37ca706fad417eb540ecf9bff8" category="paragraph">最新モデルの NetApp AFF ASA A シリーズストレージコントローラは、いずれも FlexPod で使用できます。追加情報については、『オール SAN アレイ』ドキュメント、『 ONTAP AFF オール SAN アレイシステム』テクニカルレポート、および『 NetApp Hardware Universe 』を参照してください。特定の AFF モデルの詳細については、次の表に示すプラットフォーム固有のドキュメントを参照してください。</block>
+  <block id="8edae448eb4c721effbdf809fd185881" category="cell">NetApp AFF ASA A800</block>
+  <block id="4a7b86ad78c8ba8757536489d20f9502" category="inline-link">AFF ASA A800 プラットフォームのドキュメント</block>
+  <block id="f57218ceec3975958769e7ef8d88662f" category="cell"><block ref="f57218ceec3975958769e7ef8d88662f" category="inline-link-rx"></block></block>
+  <block id="76230c3a7bd329c3a04a86fbc92976bd" category="cell">NetApp AFF ASA A700</block>
+  <block id="c53631b035c05bd428821e22dd6f2419" category="inline-link">AFF ASA A700 プラットフォームのドキュメント</block>
+  <block id="2ae12155440a384dd9d1153571d45471" category="cell"><block ref="2ae12155440a384dd9d1153571d45471" category="inline-link-rx"></block></block>
+  <block id="aafe0e1c53b524c9bed54653f1c4a0a6" category="cell">NetApp AFF ASA A400</block>
+  <block id="11c182a198b8ae3b16428bc673141058" category="inline-link">AFF ASA A400 プラットフォームのドキュメント</block>
+  <block id="86d7eaf61ea8b8d4697e7ce4c2c5e96f" category="cell"><block ref="86d7eaf61ea8b8d4697e7ce4c2c5e96f" category="inline-link-rx"></block></block>
+  <block id="6cea84fb4efd66ee16d7e9ec06547f0b" category="cell">NetApp AFF ASA A250</block>
+  <block id="527843652c5ccaf5877107bbb3b5c75f" category="inline-link">AFF ASA A250 プラットフォームマニュアル</block>
+  <block id="642dbf17c3fc84fac2bf46864ba46956" category="cell"><block ref="642dbf17c3fc84fac2bf46864ba46956" category="inline-link-rx"></block></block>
+  <block id="bcafb16f83e5ee87f9a5f2dfa7e154eb" category="cell">NetApp AFF ASA A220</block>
+  <block id="0fe164f47d43f2cbfd102d0aa1d2dfb9" category="inline-link">AFF ASA A220 プラットフォームのマニュアル</block>
+  <block id="35e833762d254950955265d789112b72" category="cell"><block ref="35e833762d254950955265d789112b72" category="inline-link-rx"></block></block>
+  <block id="0a3ce874fb8892a0ef377541f9e22ae0" category="paragraph">ONTAP 9.8 以降では、 MetroCluster メディエーターを第 3 のサイトに導入して解決策 IP ONTAP を監視し、サイト障害の発生時に自動計画外スイッチオーバーを実施できます。</block>
+  <block id="0656baab6b20856ac35525618612d0a6" category="paragraph">次の図は、ネットアップの MetroCluster アーキテクチャを備えた FlexPod データセンターを示しています。</block>
+  <block id="ba2830cdd34f42264ebedc2885654b49" category="paragraph">次の図は、ネットアップの MetroCluster IP アーキテクチャを備えた FlexPod データセンターを示しています。</block>
+  <block id="31f3e5f374c9981c7f755a62df9aa5f7" category="paragraph">拡張レイヤ 2 サイト間接続を使用する FlexPod MetroCluster IP 解決策環境では、次の図に示す要件を満たしている場合、 ISL を共有し、 MetroCluster スイッチを準拠 FlexPod IP スイッチとして使用することで、コストを削減できます。 この図は、解決策 IP FlexPod MetroCluster と ISL 共有および準拠スイッチを示しています。</block>
+  <block id="dcef946275e6f1b48b1149dd3ce50394" category="paragraph">次の 2 つの図は、 VXLAN マルチサイトファブリックと、解決策 IP FlexPod MetroCluster と VXLAN マルチサイトファブリック導入のための MetroCluster IP ストレージファブリックを示しています。</block>
+  <block id="19fbeb4208b5ee6112e7e9897e7b98c6" category="list-text">FlexPod MetroCluster IP 解決策用の VXLAN マルチサイトファブリック</block>
+  <block id="21b055a7983c5da979e2032a8d151070" category="paragraph"><block ref="21b055a7983c5da979e2032a8d151070" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8b8fc1f77a77033a4f875b9d3c41cba0" category="list-text">FlexPod MetroCluster IP 解決策用の MetroCluster IP ストレージファブリック</block>
+  <block id="fff3221387526a475e245a0672623dde" category="paragraph"><block ref="fff3221387526a475e245a0672623dde" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a6838277329036ad65d76f3631b28615" category="paragraph">各 Cisco UCS 5108 ブレードシャーシには、ファブリックインターコネクトへの冗長接続を提供するために、 2 つの Cisco UCS 2200/2300/2400 シリーズ IOM が必要です。</block>
+  <block id="69f41216a6f701dbadf4920121ca1d1c" category="list-text">Cisco Intersight 管理モード：</block>
+  <block id="bec37368cdee36a2d40b5acd316c52ac" category="list-text">Cisco UCS 6400 シリーズファブリックインターコネクト– 4.1(2)</block>
 </blocks>
