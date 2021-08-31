@@ -7437,10 +7437,8 @@
   <block id="6cb34c048fceb40f7d64efc563d407f9" category="sidebar">ランサムウェアとは</block>
   <block id="fbebe2a055b4dcf362a0493004ef468f" category="paragraph">FlexPod アーキテクチャには、冗長な NetApp FAS 、 AFF 、または AFF ASA コントローラが必要です。コントローラは ONTAP ソフトウェアを実行します。ストレージコントローラを購入した場合は、優先バージョンのソフトウェアをコントローラにプリロードすることができます。ONTAP の場合は、クラスタ全体を発注した。クラスタ全体には、ストレージコントローラのペアとクラスタインターコネクト（スイッチまたはスイッチレス）が含まれます。</block>
   <block id="dac9e0940606682208e977faac4e179e" category="paragraph">Sree Lakshmi Lanka 氏、 Arvind Ramakrishnan 氏、ネットアップの Jyh shing Chen 氏</block>
-  <block id="74f1a060fec1286151922916e9cb7cc9" category="paragraph">FlexPod プラットフォームは、 Cisco Unified Computing System （ Cisco UCS ）、 Cisco Nexus ファミリースイッチ、およびネットアップストレージコントローラ（ NetApp AFF 、 ASA 、または FAS システム）を基盤として設計された、ベストプラクティスのデータセンターアーキテクチャです。</block>
   <block id="cc910127c1a0f3009d24973fab296857" category="paragraph">NetApp ONTAP ソフトウェアは、すべてのネットアップ FAS 、 AFF 、および AFF All SAN Array （ ASA ）システムにインストールされます。FlexPod は、 ONTAP ソフトウェアとの検証済みで、ノンストップオペレーション、無停止アップグレード、即応性に優れたデータインフラを実現する、拡張性に優れたストレージアーキテクチャを提供します。</block>
   <block id="b84c25a0a6333d1b6ec82954312075f9" category="paragraph">この構成には、サポートされているネットアップの FAS 、 AFF 、または ASA シリーズのストレージコントローラが含まれます。を参照してください<block ref="bb9c67b5a4c15a85b5e6aa6c9afd0285" category="inline-link-rx"></block> サポートされている FAS 、 AFF 、 ASA の各コントローラモデルの最新リストを表示するためのアプリケーション。</block>
-  <block id="f19ed772a308d90aafe4bc81c025d843" category="list-text">HA 構成では、データアクセス用にコントローラごとに 2 つの冗長インターフェイスが必要です。インターフェイスは FCoE 、 FC 、 10 / 25 / 100Gb イーサネット（ 10GbE ）です。</block>
   <block id="1e43cedc7bbfa39913e13dd030f51171" category="list-text">解決策が ONTAP を使用している場合、データアクセスには、コントローラごとに最低 2 つの 10 / 25 / 100GbE ポートが追加で必要です。</block>
   <block id="9ae783a3ab636618c5130cf4e28efd11" category="list-text">サポート対象のディスクタイプが設定されたネットアップディスクシェルフ × 1のシェルフタブを参照してください <block ref="910181e0dcbc3888beac11d697ebd30b" category="inline-link-macro-rx"></block> サポートされるディスクシェルフモデルの最新のリストについては、を参照してください。</block>
   <block id="107d17c23965093bdabe46bc6b6ba610" category="section-title">AFF ASA A シリーズ</block>
@@ -7472,4 +7470,9 @@
   <block id="a6838277329036ad65d76f3631b28615" category="paragraph">各 Cisco UCS 5108 ブレードシャーシには、ファブリックインターコネクトへの冗長接続を提供するために、 2 つの Cisco UCS 2200/2300/2400 シリーズ IOM が必要です。</block>
   <block id="69f41216a6f701dbadf4920121ca1d1c" category="list-text">Cisco Intersight 管理モード：</block>
   <block id="bec37368cdee36a2d40b5acd316c52ac" category="list-text">Cisco UCS 6400 シリーズファブリックインターコネクト– 4.1(2)</block>
+  <block id="cf5bd5fc9c0cc6da411822bc35fd08db" category="inline-link">AFF ASA A シリーズのドキュメント</block>
+  <block id="e9c5cbf5c293a99accdc40c5466598b6" category="cell"><block ref="e9c5cbf5c293a99accdc40c5466598b6" category="inline-link-rx"></block></block>
+  <block id="aa2f8bc486f5931602b4fd5aa1b0bde8" category="paragraph">FlexPod プラットフォームは、 Cisco Unified Computing System （ Cisco UCS ）、 Cisco Nexus ファミリースイッチ、およびネットアップストレージコントローラ（ AFF 、 ASA 、または FAS システム）を基盤として構築された、事前設計されたベストプラクティスのデータセンターアーキテクチャです。</block>
+  <block id="49f8002032516f551341370d8bbb87c4" category="list-text">HA 構成では、データアクセス用にコントローラごとに 2 つの冗長インターフェイスが必要です。インターフェイスは FCoE 、 FC 、 10 / 25 / 100Gb イーサネット（ GbE ）です。</block>
+  <block id="69f069c4c370b3ec1c58983efd30432c" category="list-text">ネットアップ機器に対する SupportEdge Advisor または SupportEdge Premium のサポート</block>
 </blocks>

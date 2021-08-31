@@ -14,7 +14,7 @@ summary: FlexPod プラットフォームは、 Cisco Unified Computing System �
 
 Sree Lakshmi Lanka 氏、 Arvind Ramakrishnan 氏、ネットアップの Jyh shing Chen 氏
 
-FlexPod プラットフォームは、 Cisco Unified Computing System （ Cisco UCS ）、 Cisco Nexus ファミリースイッチ、およびネットアップストレージコントローラ（ NetApp AFF 、 ASA 、または FAS システム）を基盤として設計された、ベストプラクティスのデータセンターアーキテクチャです。
+FlexPod プラットフォームは、 Cisco Unified Computing System （ Cisco UCS ）、 Cisco Nexus ファミリースイッチ、およびネットアップストレージコントローラ（ AFF 、 ASA 、または FAS システム）を基盤として構築された、事前設計されたベストプラクティスのデータセンターアーキテクチャです。
 
 FlexPod は、さまざまな仮想ハイパーバイザーや、ベアメタルのオペレーティングシステム、エンタープライズワークロードを実行するのに適したプラットフォームです。FlexPod は、ベースライン構成だけでなく、さまざまなユースケースや要件に対応できるよう、サイズ設定と最適化が可能な柔軟性も備えています。
 

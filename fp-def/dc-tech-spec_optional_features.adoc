@@ -20,8 +20,6 @@ summary: ネットアップは、 FlexPod データセンターのアーキテ�
 
 FlexPod は、 2 ノードまたは 4 ノードのどちらのクラスタ構成でも、継続的可用性を実現する NetApp MetroCluster ソフトウェアのどちらかのバリエーションをサポートします。MetroCluster は、重要なワークロード向けに同期レプリケーションを提供します。Cisco スイッチに接続されたデュアルサイト構成が必要です。サイト間でサポートされる最大距離は、 MetroCluster FC の場合は約 186 マイル（ 300km ）、 MetroCluster IP の場合は約 435 マイル（ 700km ）に増加します。次の図は、 FlexPod Datacenter with NetApp MetroCluster Architecture と FlexPod Datacenter with NetApp MetroCluster IP Architecture をそれぞれ示しています。
 
-ONTAP 9.8 以降では、 MetroCluster メディエーターを第 3 のサイトに導入して解決策 IP ONTAP を監視し、サイト障害の発生時に自動計画外スイッチオーバーを実施できます。
-
 次の図は、ネットアップの MetroCluster アーキテクチャを備えた FlexPod データセンターを示しています。
 
 image:dc-tech-spec_image1.png["エラー：グラフィックイメージがありません"]
@@ -29,6 +27,8 @@ image:dc-tech-spec_image1.png["エラー：グラフィックイメージがあ�
 次の図は、ネットアップの MetroCluster IP アーキテクチャを備えた FlexPod データセンターを示しています。
 
 image:dc-tech-spec_image2.png["エラー：グラフィックイメージがありません"]
+
+ONTAP 9.8 以降では、 MetroCluster メディエーターを第 3 のサイトに導入して解決策 IP ONTAP を監視し、サイト障害の発生時に自動計画外スイッチオーバーを実施できます。
 
 拡張レイヤ 2 サイト間接続を使用する FlexPod MetroCluster IP 解決策環境では、次の図に示す要件を満たしている場合、 ISL を共有し、 MetroCluster スイッチを準拠 FlexPod IP スイッチとして使用することで、コストを削減できます。 この図は、解決策 IP FlexPod MetroCluster と ISL 共有および準拠スイッチを示しています。
 

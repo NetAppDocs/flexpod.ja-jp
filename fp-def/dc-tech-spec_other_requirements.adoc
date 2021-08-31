@@ -18,7 +18,7 @@ FlexPod アーキテクチャには、相互運用性とサポート関連の次
 * 次の項目を含むすべての機器について、有効なサポート契約が必要です。
 +
 ** シスコ機器の Smart Net Total Care （ SmartNet ）サポート
-** ネットアップ機器に対する SupportEdge Premium のサポート
+** ネットアップ機器に対する SupportEdge Advisor または SupportEdge Premium のサポート
 
 
 
