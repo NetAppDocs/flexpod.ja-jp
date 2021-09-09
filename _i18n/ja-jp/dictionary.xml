@@ -665,12 +665,7 @@
   <block id="b57f077428dce4df34f2d8532f2648c5" category="paragraph">FlexPod Express は、ベースライン構成だけでなく、さまざまなユースケースや要件に対応できるよう、サイズ設定と最適化が可能な柔軟性も備えています。このドキュメントでは、使用しているストレージシステム、 NetApp FAS を使用した FlexPod Express 、および E シリーズを使用した FlexPod Express に基づいて FlexPod Express 構成を分類します。</block>
   <block id="3fa8666b8a47acf64248b6b5f67a82a5" category="summary">このセクションに記載されているストレージソフトウェアは、 FlexPod エクスプレスプラットフォームでサポートされています。</block>
   <block id="a64c8d59be31b09362634dedf23d4e86" category="doc">ストレージソフトウェア</block>
-  <block id="d8e932523c7d30227113d9baa1f68493" category="paragraph">NetApp ONTAP ソフトウェアは、すべてのネットアップストレージシステムにインストールされます。</block>
-  <block id="ea9e42abcc28802c2dec00398a321049" category="inline-link">ONTAP データ管理ソフトウェアの製品ページ</block>
-  <block id="f097249a06eda4087c5b437e50e70470" category="paragraph">FlexPod は、 ONTAP との組み合わせにより検証済みで、ノンストップオペレーション、無停止アップグレード、アジャイルデータインフラを実現する、拡張性に優れたストレージアーキテクチャを提供します。ONTAP の詳細については、を参照してください<block ref="807368d97abf0aca5e6981675b58ea14" category="inline-link-rx"></block>。</block>
   <block id="02a5537e181da938c0f5cb453ba3d4a7" category="section-title">E シリーズ SANtricity ソフトウェア</block>
-  <block id="8cb2faddff4ef53c3d7eb03456379b03" category="inline-link">SANtricity ソフトウェア製品サイト</block>
-  <block id="e3c20a827c7db443e1b16705ba8eae07" category="paragraph">E シリーズ SANtricity ソフトウェアは、すべての E シリーズストレージシステムで動作する OS です。SANtricity は、多様なアプリケーションニーズに対応する柔軟性に優れたシステムで、組み込みの高可用性機能とさまざまなデータ保護機能を提供します。詳細については、を参照してください<block ref="470ed698d82b5bb5ff621d39c0dc617f" category="inline-link-rx"></block>。</block>
   <block id="28b69efdba58f83101dca273e330e519" category="summary">FlexPod の設計により、多数の異なるコンポーネントとソフトウェアバージョンを含む柔軟なインフラが実現します。</block>
   <block id="5eac17db957622119d1b18a268d7c299" category="doc">FlexPod ルール</block>
   <block id="2415fc49fbe847187613f58fe7ec0149" category="paragraph">ルールセットは、有効な FlexPod 構成を構築またはアセンブルするためのガイドとして使用します。このドキュメントに記載されている番号とルールは、 FlexPod 構成の最小要件です。また、環境やユースケースに応じて、同梱されている製品ファミリー内で拡張することもできます。</block>
@@ -7475,4 +7470,16 @@
   <block id="aa2f8bc486f5931602b4fd5aa1b0bde8" category="paragraph">FlexPod プラットフォームは、 Cisco Unified Computing System （ Cisco UCS ）、 Cisco Nexus ファミリースイッチ、およびネットアップストレージコントローラ（ AFF 、 ASA 、または FAS システム）を基盤として構築された、事前設計されたベストプラクティスのデータセンターアーキテクチャです。</block>
   <block id="49f8002032516f551341370d8bbb87c4" category="list-text">HA 構成では、データアクセス用にコントローラごとに 2 つの冗長インターフェイスが必要です。インターフェイスは FCoE 、 FC 、 10 / 25 / 100Gb イーサネット（ GbE ）です。</block>
   <block id="69f069c4c370b3ec1c58983efd30432c" category="list-text">ネットアップ機器に対する SupportEdge Advisor または SupportEdge Premium のサポート</block>
+  <block id="5906d6dbdea0ad13566afd9cead9fc2c" category="paragraph">FlexPod Express は、 NetApp ONTAP または SANtricity オペレーティングシステムを実行するストレージシステムをサポートしています。</block>
+  <block id="07bb9fea02eb345871ff44646d8ceb97" category="paragraph">NetApp ONTAP ソフトウェアは、 AFF および FAS ストレージシステムで稼働するオペレーティングシステムです。ONTAP は、ノンストップオペレーション、無停止アップグレード、即応性に優れたデータインフラを実現する、拡張性に優れたストレージアーキテクチャを提供します。</block>
+  <block id="1e3274a40d2751f8442f3b15fddb1f21" category="inline-link">ONTAP の製品ページ</block>
+  <block id="0f9b0a6f89a44a0888a692ccc45abc12" category="paragraph">ONTAP の詳細については、を参照してください<block ref="88cc62f55a4daad34ef58813e7e4f1c6" category="inline-link-rx"></block>。</block>
+  <block id="0ba0549652aeb08deee908e7e20e4817" category="paragraph">E シリーズ SANtricity ソフトウェアは、 E シリーズストレージシステムで動作するオペレーティングシステムです。SANtricity は、多様なアプリケーションニーズに対応する柔軟性に優れたシステムで、組み込みの高可用性機能とさまざまなデータ保護機能を提供します。</block>
+  <block id="54ea526e0f7043f1dc938cd7369a4327" category="inline-link">SANtricity の製品ページ</block>
+  <block id="6b5301ce1cf7e0e48684f0dfb047d000" category="paragraph">詳細については、を参照してください<block ref="886f8cec6f6fad388084013f5ad16d82" category="inline-link-rx"></block>。</block>
+  <block id="107b85601e13443e848d96d910bee735" category="summary">このページでは、 SAP HANA などの SAP アプリケーションでの FlexPod の使用方法の概要を説明します。</block>
+  <block id="7caa0b3fa0fd74ced773a86b62850a8b" category="doc">FlexPod での SAP の紹介</block>
+  <block id="1d17aeb7ab368ca4f28128e50a5cf276" category="paragraph">FlexPod プラットフォームは、 Cisco Unified Computing System （ Cisco UCS ）、 Cisco Nexus ファミリースイッチ、およびネットアップストレージコントローラを基盤として構築された、事前設計されたベストプラクティスのデータセンターアーキテクチャです。</block>
+  <block id="864daa7ed7265e3176099021d13f4763" category="paragraph">FlexPod は、 SAP アプリケーションの実行に適したプラットフォームです。本ソリューションを使用することで、お客様は、カスタマイズされたデータセンター統合モデルを使用して、 SAP HANA を迅速かつ確実に導入できます。FlexPod は、ベースライン構成だけでなく、さまざまなユースケースや要件に対応できるよう、サイズ設定と最適化が可能な柔軟性も備えています。</block>
+  <block id="5b7e41bd189664acad4c873cf6e0c2df" category="sidebar">SAP with FlexPod の概要</block>
 </blocks>

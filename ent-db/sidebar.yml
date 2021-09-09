@@ -4,6 +4,8 @@ title: エンタープライズデータベース
 entries:
 - title: SAP
   entries:
+  - title: SAP with FlexPod の概要
+    url: "/ent-db/index.html"
   - title: SAP HANA FC SAN に関する CVD [ 導入 ]
     url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_sap_ucsm40_fcsan.html
   - title: SAP HANA with SQL ホワイトペーパー（ WP ） [ 設計 ]
