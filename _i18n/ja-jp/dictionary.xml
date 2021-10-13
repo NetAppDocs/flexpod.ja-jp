@@ -372,7 +372,6 @@
   <block id="2fe9f1b02d69ad8ef2e636eb4f330189" category="summary">本ドキュメントでは、 FlexPod Express プラットフォームの技術仕様について説明します。</block>
   <block id="7501c5e58e67ce758d854a0f76243785" category="doc">FlexPod プラットフォーム</block>
   <block id="929267c420e3d3c55cf94c77cb6278ff" category="paragraph">FlexPod プラットフォームには、次の 3 つがあります。</block>
-  <block id="aeda0c1e440fcd1c6c3baa6b69d759d7" category="list-text">* FlexPod データセンター。 * このプラットフォームは、ワークロードエンタープライズアプリケーション、仮想化、 VDI 、パブリックおよびプライベートクラウドに適した、拡張性にきわめて優れた仮想データセンターインフラストラクチャです。FlexPod データセンターには、独自の仕様があります。詳細については、を参照してください<block ref="edbf5529a56a24d958ac2eea62717089" category="inline-link-rx"></block>。</block>
   <block id="ec80c81f43eaed2db319aaaddeb1b47c" category="list-text">* FlexPod Express. * このプラットフォームは、リモートオフィスやエッジのユースケース向けのコンパクトな統合インフラストラクチャです。</block>
   <block id="82da3c7bdf42770183f1b2651ae3ac0a" category="inline-link">FlexPod Select for High-Performance Oracle RAC.</block>
   <block id="ea29f1a94a5cc0b3c2459d7f61b47043" category="list-text">* FlexPod Select 。 * このプラットフォームは、などの高性能アプリケーションに特化したアーキテクチャです<block ref="6aad01ba0b9744c0d680fcb06a4741ad" category="inline-link-rx"></block></block>
@@ -663,7 +662,6 @@
   <block id="59dad7986b7e1d4c7d25feadecf54af7" category="paragraph">ネットアップ、 Karthick Radhakrinan 、 Arvind Ramakrinan 、 Lindsey Street 、 Savita Kumari</block>
   <block id="01b5eb7de901fc377f6709faad98f27e" category="paragraph">FlexPod Express は、 Cisco Unified Computing System （ Cisco UCS ）と Cisco Nexus ファミリーのスイッチ上に構築された、ベストプラクティスに基づく事前設計済みのアーキテクチャであり、ストレージレイヤは NetApp FAS または NetApp E シリーズストレージを使用して構築されます。FlexPod Express は、さまざまな仮想ハイパーバイザーやベアメタルオペレーティングシステム（ OS ）やエンタープライズワークロードを実行するのに適したプラットフォームです。</block>
   <block id="b57f077428dce4df34f2d8532f2648c5" category="paragraph">FlexPod Express は、ベースライン構成だけでなく、さまざまなユースケースや要件に対応できるよう、サイズ設定と最適化が可能な柔軟性も備えています。このドキュメントでは、使用しているストレージシステム、 NetApp FAS を使用した FlexPod Express 、および E シリーズを使用した FlexPod Express に基づいて FlexPod Express 構成を分類します。</block>
-  <block id="3fa8666b8a47acf64248b6b5f67a82a5" category="summary">このセクションに記載されているストレージソフトウェアは、 FlexPod エクスプレスプラットフォームでサポートされています。</block>
   <block id="a64c8d59be31b09362634dedf23d4e86" category="doc">ストレージソフトウェア</block>
   <block id="02a5537e181da938c0f5cb453ba3d4a7" category="section-title">E シリーズ SANtricity ソフトウェア</block>
   <block id="28b69efdba58f83101dca273e330e519" category="summary">FlexPod の設計により、多数の異なるコンポーネントとソフトウェアバージョンを含む柔軟なインフラが実現します。</block>
@@ -7482,4 +7480,6 @@
   <block id="1d17aeb7ab368ca4f28128e50a5cf276" category="paragraph">FlexPod プラットフォームは、 Cisco Unified Computing System （ Cisco UCS ）、 Cisco Nexus ファミリースイッチ、およびネットアップストレージコントローラを基盤として構築された、事前設計されたベストプラクティスのデータセンターアーキテクチャです。</block>
   <block id="864daa7ed7265e3176099021d13f4763" category="paragraph">FlexPod は、 SAP アプリケーションの実行に適したプラットフォームです。本ソリューションを使用することで、お客様は、カスタマイズされたデータセンター統合モデルを使用して、 SAP HANA を迅速かつ確実に導入できます。FlexPod は、ベースライン構成だけでなく、さまざまなユースケースや要件に対応できるよう、サイズ設定と最適化が可能な柔軟性も備えています。</block>
   <block id="5b7e41bd189664acad4c873cf6e0c2df" category="sidebar">SAP with FlexPod の概要</block>
+  <block id="b751a075630ee799e9ae603044754240" category="list-text">* FlexPod データセンター。 * このプラットフォームは、ワークロードエンタープライズアプリケーション、仮想化、 VDI 、パブリックおよびプライベートクラウドに適した、拡張性にきわめて優れた仮想データセンターインフラストラクチャです。FlexPod データセンターには、独自の仕様があります。詳細については、を参照してください<block ref="c74831bb1a85ac0f8575eb8eeac86329" category="inline-link-rx"></block>。</block>
+  <block id="245c499a8eb2230fa27979a452c776e5" category="summary">このセクションに記載されているストレージオペレーティングシステムは、 FlexPod Express プラットフォームでサポートされます。</block>
 </blocks>

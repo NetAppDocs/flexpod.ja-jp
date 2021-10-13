@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: fp-def/fp-express-tech-spec_storage_software.html 
 keywords: storage, software, flexpod, express, ontap, e, series, santricity 
-summary: このセクションに記載されているストレージソフトウェアは、 FlexPod エクスプレスプラットフォームでサポートされています。 
+summary: このセクションに記載されているストレージオペレーティングシステムは、 FlexPod Express プラットフォームでサポートされます。 
 ---
 = ストレージソフトウェア
 :hardbreaks:
