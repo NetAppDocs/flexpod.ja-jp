@@ -17,7 +17,7 @@ FlexPod Express のその他の要件は次のとおりです。
 * 次の項目を含むすべての機器について、有効なサポート契約が必要です。
 +
 ** シスコ機器に対する SMARTnet サポート
-** ネットアップ機器に対する SupportEdge Premium のサポート
+** ネットアップ機器に対する SupportEdge Advisor または SupportEdge Premium のサポート
 
 
 * すべてのソフトウェアコンポーネントがにリストされ、サポートされている必要があります http://support.netapp.com/matrix/["NetApp IMT"^]。
