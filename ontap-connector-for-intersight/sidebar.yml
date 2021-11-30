@@ -6,7 +6,7 @@ entries:
   url: "/ontap-connector-for-intersight/index.html"
   type: solutions
 - title: 新機能
-  url: "/ontap-connector-for-intersight/reference-new.html"
+  url: "/ontap-connector-for-intersight/ci-qsg_new.html"
 - title: 要件
   url: "/ontap-connector-for-intersight/ci-qsg_requirements.html"
 - title: 作業を開始する前に
