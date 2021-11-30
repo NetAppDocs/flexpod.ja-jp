@@ -12,7 +12,7 @@ summary: ネットアップと Cisco は提携を通じて、 FlexPod エコシ�
 :imagesdir: ./../media/
 
 
-ネットアップ Rachel Lithman と Sree Lanka
+ネットアップ Rachel Lithman と Jyh Shing Chen
 
 協力：image:cisco logo.png["エラー：グラフィックイメージがありません"]
 

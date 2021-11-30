@@ -25,6 +25,9 @@ image:ci-qsg_image9.png["スクリーンショットは、 [Operate &GT; Storage
 
 次のスクリーンショットは、ストレージクラスタの概要を示しています。
 
+
+NOTE: 以下のパフォーマンス指標の概要情報は、ストレージアレイが NetApp Active IQ Unified Manager 9.9 以上を介して監視されている場合にのみ表示されます。
+
 image:ci-qsg_image10.png["スクリーンショットは、ストレージクラスタの概要を示しています"]
 
 

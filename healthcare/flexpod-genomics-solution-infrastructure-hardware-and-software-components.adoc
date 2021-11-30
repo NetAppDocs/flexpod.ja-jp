@@ -1,0 +1,113 @@
+---
+sidebar: sidebar 
+permalink: healthcare/flexpod-genomics-solution-infrastructure-hardware-and-software-components.html 
+keywords: GATK, setup, validation, cabling, hardware, software 
+summary: このセクションでは、この解決策で使用する解決策インフラおよびソフトウェアコンポーネントについて説明します。 
+---
+= 解決策インフラのハードウェアコンポーネントとソフトウェアコンポーネント
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:flexpod-genomics-benefits-of-deploying-genomic-workloads-on-flexpod.html["従来：ゲノムワークロードを FlexPod に導入するメリット"]
+
+次の図に、 GATK の設定と検証に使用される FlexPod システムを示します。使用しました https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_vmware_vsphere_7_0_ontap_9_7.html["FlexPod データセンターと VMware vSphere 7.0 および NetApp ONTAP 9.7 Cisco Validated Design （ CVD ）"^] セットアッププロセスの実行中です。
+
+image:flexpod-genomics-image6.png["エラー：グラフィックイメージがありません"]
+
+次の図は、 FlexPod のケーブル配線の詳細を示しています。
+
+image:flexpod-genomics-image7.png["エラー：グラフィックイメージがありません"]
+
+次の表に、 FlexPod で有効にする GATK テスト中に使用されるハードウェアコンポーネントを示します。はこちらです https://mysupport.netapp.com/matrix/["NetApp Interoperability Matrix Tool で確認できます"^] （ IMT ）および。
+
+|===
+| レイヤー（ Layer ） | 製品ファミリー | 数量とモデル | 詳細 
+
+
+| コンピューティング | Cisco UCS 5108 シャーシ | 1 または 2 |  
+
+
+|  | Cisco UCS ブレードサーバ | B200 M5 × 6 | それぞれに、 20 コア以上、 2.7GHz 、および 128-384GB RAM を 2 個搭載しています 
+
+
+|  | Cisco UCS 仮想インターフェイスカード（ VIC ） | Cisco UCS 1440 | を参照してください 
+
+
+|  | Cisco UCS ファブリックインターコネクト × 2 | 6332 | - 
+
+
+| ネットワーク | Cisco Nexus スイッチ | Cisco Nexus 9332 × 2 | - 
+
+
+| ストレージネットワーク | SMB / CIFS 、 NFS 、または iSCSI プロトコル経由のストレージアクセス用の IP ネットワーク | 上記と同じネットワークスイッチ | - 
+
+
+|  | FC 経由のストレージアクセス | Cisco MDS 9148S × 2 | - 
+
+
+| ストレージ | NetApp AFF A700 オールフラッシュストレージシステム | 1 クラスタ | 2 ノードクラスタ 
+
+
+|  | ディスクシェルフ | DS224C または NS224 ディスクシェルフ × 1 | 24 本のドライブをフル装備 
+
+
+|  | SSD の場合 | 容量が 24 、 2TB 以上 | - 
+|===
+この表は、インフラストラクチャソフトウェアを示しています。
+
+|===
+| ソフトウェア | 製品ファミリー | バージョンまたはリリース | 詳細 
+
+
+| 様々 | Linux の場合 | RHEL 8.3 | - 
+
+
+|  | Windows の場合 | Windows Server 2012 R2 （ 64 ビット） | - 
+
+
+|  | NetApp ONTAP | ONTAP 9.8 以降 | - 
+
+
+|  | Cisco UCS ファブリックインターコネクト | Cisco UCS Manager 4.1 以降 | - 
+
+
+|  | Cisco Ethernet 3000 または 9000 シリーズスイッチ | 9000 シリーズの場合、 7.0(3) i7(7) 以降（ 3000 シリーズ用）、 9.2(4) 以降 | - 
+
+
+|  | Cisco FC ： Cisco MDS 9132T | 8.4(1a) 以降 | - 
+
+
+|  | ハイパーバイザー | VMware vSphere ESXi 7.0 | - 
+
+
+| ストレージ | ハイパーバイザー管理システム | VMware vCenter Server 7.0 （ vCSA ）以降 | - 
+
+
+| ネットワーク | NetApp Virtual Storage Console （ VSC ） | VSC 9.7 以降 | - 
+
+
+|  | NetApp SnapCenter | SnapCenter 4.3 以降 | - 
+
+
+|  | Cisco UCS Manager の略 | 4.1 （ 3c ）以降 |  
+
+
+| ハイパーバイザー | ESXi |  |  
+
+
+| 管理 | ハイパーバイザー管理システム VMware vCenter Server 7.0 （ vCSA ）以降 |  |  
+
+
+|  | NetApp Virtual Storage Console （ VSC ） | VSC 9.7 以降 |  
+
+
+|  | NetApp SnapCenter | SnapCenter 4.3 以降 |  
+
+
+|  | Cisco UCS Manager の略 | 4.1 （ 3c ）以降 |  
+|===
+link:flexpod-genomics-genomics---gatk-setup-and-execution.html["次は、 Genomics - GATK のセットアップと実行です。"]

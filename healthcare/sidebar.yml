@@ -2,6 +2,27 @@
 section: healthcare
 title: 医療機関
 entries:
+- title: ゲノム解析のための FlexPod
+  type: solutions
+  entries:
+  - title: はじめに
+    url: "/healthcare/flexpod-genomics-introduction.html"
+  - title: ゲノムワークロードを FlexPod に導入するメリット
+    url: "/healthcare/flexpod-genomics-benefits-of-deploying-genomic-workloads-on-flexpod.html"
+  - title: 解決策インフラのハードウェアコンポーネントとソフトウェアコンポーネント
+    url: "/healthcare/flexpod-genomics-solution-infrastructure-hardware-and-software-components.html"
+  - title: ゲノム - GATK のセットアップと実行
+    url: "/healthcare/flexpod-genomics-genomics---gatk-setup-and-execution.html"
+  - title: jar ファイルを使用して GATK を実行するための出力
+    url: "/healthcare/flexpod-genomics-appendix-a.html"
+  - title: "./GATK スクリプトを使用して GATK を実行するための出力"
+    url: "/healthcare/flexpod-genomics-appendix-b.html"
+  - title: クロムウェルエンジンを使用した GATK 実行用出力
+    url: "/healthcare/flexpod-genomics-appendix-c.html"
+  - title: GPU セットアップ
+    url: "/healthcare/flexpod-genomics-appendix-d-gpu-setup.html"
+  - title: まとめ
+    url: "/healthcare/flexpod-genomics-conclusion.html"
 - title: FlexPod Datacenter for Epic Directional Sizing Guide 』を参照してください
   type: solutions
   entries:
