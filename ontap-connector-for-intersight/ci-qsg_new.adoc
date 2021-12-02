@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: ontap-connector-for-intersight/reference-new.html 
+permalink: ontap-connector-for-intersight/ci-qsg_new.html 
 keywords: netapp, cisco, ontap, intersight, flexpod, what's new, features, release notes, enhancements 
 summary: Cisco Intersight には、新機能、拡張機能、バグ修正を提供する新しいリリースが導入されています。 
 ---
@@ -18,12 +18,11 @@ summary: Cisco Intersight には、新機能、拡張機能、バグ修正を提
 
 == 2021年10月
 
-* Cisco Intersight に含まれるネットアップストレージのタスクの最新リストを追加しました。を参照してください link:ontap-connector-for-intersight/ci-qsg_use_cases.html["ユースケース 3 ：ネットアップストレージタスクの一覧をデザイナーの手を使わずにカスタムワークフローを構築"]。
+* Cisco Intersight に含まれるネットアップストレージのタスクの最新リストを追加しました。を参照してください link:ci-qsg_use_cases.html["使用例 3 デザイナフリーフォームを使用したカスタムワークフロー"] NetApp ストレージ・タスクの一覧を表示します。
 * クラスタリストページに Health 列が追加されました。
 * 選択したクラスタの全般ページで詳細が表示されるようになりました。
 * ナビゲーションペインから NTP サーバテーブルにアクセスできるようになりました。
-* PSU 、ファン、 FRU の情報を含む新しい Sensors タブが Nodes ページに追加されました。
-* CIFS および NVMe の情報が Storage Virtual Machine の General ページに表示されるようになりました。
+* Storage Virtual Machine の General ページを含む新しい Sensors タブが追加されました。
 * VLAN およびリンクアグリゲーショングループの概要が、 Port General ページで使用できるようになりました。
 * ボリューム合計容量テーブルに追加された合計データ容量列。
 * Average Volume Statistics テーブル、 Average LUN Statistics テーブル、 Average Aggregate Statistics テーブル、 Average Storage VM Statistics テーブル、および Average Node Statistics テーブルに追加されたレイテンシ、 IOPS 、およびスループットの列

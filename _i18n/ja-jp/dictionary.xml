@@ -7485,13 +7485,9 @@
   <block id="b312f45322f166ee041a7a16747fd5c1" category="doc">の新機能</block>
   <block id="8a53d76b23b9bd398a76313ad1fa9a21" category="paragraph">このセクションでは、 Cisco Intersight と NetApp ONTAP ストレージに利用できる新機能を紹介します。</block>
   <block id="a5f3f63c2f6e1d6d4605650633b9ce8a" category="section-title">2021年10月</block>
-  <block id="de34eca679dd6247c92b150abb3a7de0" category="inline-link-macro">ユースケース 3 ：ネットアップストレージタスクの一覧をデザイナーの手を使わずにカスタムワークフローを構築</block>
-  <block id="3a4b493c0e825641268aee1e0f9870d6" category="list-text">Cisco Intersight に含まれるネットアップストレージのタスクの最新リストを追加しました。を参照してください <block ref="fbd0daa77f229ba539f28706ca5be227" category="inline-link-macro-rx"></block>。</block>
   <block id="754b6987e50dda52c9ced2b9e6a1c5a2" category="list-text">クラスタリストページに Health 列が追加されました。</block>
   <block id="b9af62df3144700ecbf415dca380fa7b" category="list-text">選択したクラスタの全般ページで詳細が表示されるようになりました。</block>
   <block id="9413b697ad103ecb2a9939006df613ac" category="list-text">ナビゲーションペインから NTP サーバテーブルにアクセスできるようになりました。</block>
-  <block id="28639af9987b0edbfaeff009a5cf089f" category="list-text">PSU 、ファン、 FRU の情報を含む新しい Sensors タブが Nodes ページに追加されました。</block>
-  <block id="23ea9591aa7cd8e92ec6510589a7c09d" category="list-text">CIFS および NVMe の情報が Storage Virtual Machine の General ページに表示されるようになりました。</block>
   <block id="b77580e30c5da9fbe1d65bcbd5aa6f14" category="list-text">VLAN およびリンクアグリゲーショングループの概要が、 Port General ページで使用できるようになりました。</block>
   <block id="cbc1bce1da822fe664e5f3e591f9ff5c" category="list-text">ボリューム合計容量テーブルに追加された合計データ容量列。</block>
   <block id="b475ee88bad1c3a8e0c02734aa611a21" category="list-text">Average Volume Statistics テーブル、 Average LUN Statistics テーブル、 Average Aggregate Statistics テーブル、 Average Storage VM Statistics テーブル、および Average Node Statistics テーブルに追加されたレイテンシ、 IOPS 、およびスループットの列</block>
@@ -7830,4 +7826,7 @@
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">新機能</block>
   <block id="33e4e289cefe243134e8d14e37181dd1" category="sidebar">ゲノム解析のための FlexPod</block>
   <block id="b913c1c1cde143cea45cb35af2f91d75" category="sidebar">./GATK スクリプトを使用して GATK を実行するための出力</block>
+  <block id="c47b18a4d429299b996de436c91a4416" category="inline-link-macro">使用例 3 デザイナフリーフォームを使用したカスタムワークフロー</block>
+  <block id="7fd44dc2c5fafe252191e6ef332a6773" category="list-text">Cisco Intersight に含まれるネットアップストレージのタスクの最新リストを追加しました。を参照してください <block ref="026b254cc8ff2f5d36709bcf93418a5f" category="inline-link-macro-rx"></block> NetApp ストレージ・タスクの一覧を表示します。</block>
+  <block id="4b6fb03e9a4a802c4ef171e5df2f924b" category="list-text">Storage Virtual Machine の General ページを含む新しい Sensors タブが追加されました。</block>
 </blocks>
