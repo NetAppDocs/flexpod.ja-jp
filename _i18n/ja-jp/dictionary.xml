@@ -7829,4 +7829,158 @@
   <block id="c47b18a4d429299b996de436c91a4416" category="inline-link-macro">使用例 3 デザイナフリーフォームを使用したカスタムワークフロー</block>
   <block id="7fd44dc2c5fafe252191e6ef332a6773" category="list-text">Cisco Intersight に含まれるネットアップストレージのタスクの最新リストを追加しました。を参照してください <block ref="026b254cc8ff2f5d36709bcf93418a5f" category="inline-link-macro-rx"></block> NetApp ストレージ・タスクの一覧を表示します。</block>
   <block id="4b6fb03e9a4a802c4ef171e5df2f924b" category="list-text">Storage Virtual Machine の General ページを含む新しい Sensors タブが追加されました。</block>
+  <block id="3274a50ba9f0d3c0adefdfa11c5094be" category="doc">テスト結果</block>
+  <block id="782ca8c3b3f6b85a20e7774ff589f789" category="inline-link-macro">従来のテストアプローチ：</block>
+  <block id="cf68be33c569e87bc6218ae412a7bbcc" category="paragraph"><block ref="cf68be33c569e87bc6218ae412a7bbcc" category="inline-link-macro-rx"></block></block>
+  <block id="59a129edf6585b5b94078f507b12dbe4" category="paragraph">テストでは、 FC / NVMe のパフォーマンスを IOPS とレイテンシの観点から測定する fio ワークロードを実行しました。</block>
+  <block id="6738aae3cd4df39bbc26a3bad293665a" category="paragraph">次のグラフは、ブロックサイズ 8KB を使用して 100% ランダムリードワークロードを実行した場合の結果を示しています。</block>
+  <block id="b0d3cee0e72680a6ada8eb5a06a22eb1" category="paragraph"><block ref="b0d3cee0e72680a6ada8eb5a06a22eb1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5141efc6b88a2bed36d90e38c96f7ab7" category="paragraph">このテストでは、サーバ側のレイテンシを 0.35 ミリ秒未満に抑えながら、 120 万 IOPS を超えるパフォーマンスが得られたことがわかりました。</block>
+  <block id="c9cd8369c2faac65ea4ea6f107ac6ecf" category="paragraph">次のグラフは、ブロックサイズ 8KB を使用して 100% のランダムライトワークロードを実行した場合の結果を示しています。</block>
+  <block id="f7661ca9c6d708cd0c9ee2e71db142c3" category="paragraph"><block ref="f7661ca9c6d708cd0c9ee2e71db142c3" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="79d053da52285166e8bd9e1c70c87099" category="paragraph">テストでは、システムの IOPS は 300k に近く、サーバ側でのレイテンシは 1 ミリ秒未満に抑えられていることがわかりました。</block>
+  <block id="b0c9c578d76018d5878d63bd9a39aeba" category="paragraph">8KB のブロックサイズでランダムリードの 80% と書き込みの 20% を処理したところ、以下の結果が得られました。</block>
+  <block id="2e1c58920917bdd785a16681f848654d" category="paragraph"><block ref="2e1c58920917bdd785a16681f848654d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b19321a96e9ac599b3b8d87709e85476" category="paragraph">テストでは、 100 万 IOPS を超えるシステムを達成し、サーバ側のレイテンシを 1 ミリ秒未満に抑えていることがわかりました。</block>
+  <block id="37e25507485409498126e40407e02f41" category="paragraph">ブロックサイズ 64KB 、シーケンシャルリード 100% の場合、以下の結果が得られました。</block>
+  <block id="341dcf5271845a25c9d049cf4187cda1" category="paragraph"><block ref="341dcf5271845a25c9d049cf4187cda1" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="13ede1c85f4be2a1bfcc52e1f43293b4" category="paragraph">テストでは、サーバ側のレイテンシを 1 ミリ秒未満に抑えながら約 25 万 IOPS を達成したことがわかりました。</block>
+  <block id="8964077aad0764d48818dac44f07a511" category="paragraph">ブロックサイズ 64KB とシーケンシャルライト 100% の場合、結果は次のようになりました。</block>
+  <block id="947d8364f394e40fc69981ec054af32c" category="paragraph"><block ref="947d8364f394e40fc69981ec054af32c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="cfe45bc6d480e92e2538f6d8a0844088" category="paragraph">テストでは、サーバ側のレイテンシを 1 ミリ秒未満に抑えながら約 120k IOPS を達成したことがわかりました。</block>
+  <block id="5dc13e73a0465851a2ba30b55bd352de" category="paragraph"><block ref="5dc13e73a0465851a2ba30b55bd352de" category="inline-link-macro-rx"></block></block>
+  <block id="14f26e1bc4c8924cbf01bd8dbea343fe" category="summary">この解決策は、 FlexPod 上の VMware vSphere 7 における FC-NVMe パフォーマンスの概要を示しています。解決策は、 FC-NVMe トラフィックを正常に通過できることが確認され、さまざまなデータブロックサイズの FC-NVMe に対してパフォーマンスメ米はキャプチャされた。</block>
+  <block id="1b3e89e012899156ba5550bd4371ef7a" category="doc">TR-4914 ：『 End-to-End NVMe for FlexPod with Cisco UCSM 、 VMware vSphere 7.0 、 and NetApp ONTAP 9 』</block>
+  <block id="2365b7af8882a5c751cd63a1f4ee5d88" category="paragraph">ネットアップ Chris Schmitt と Kamini Singh</block>
+  <block id="5c8f5d2d89f99e064ca145e1b674b0f3" category="paragraph">最先端のコアテクノロジである NVMe データストレージ標準は、現在および将来のメモリテクノロジに非常に広帯域で超低レイテンシのストレージアクセスを提供することで、エンタープライズデータストレージのアクセスと転送を変革しています。NVMe は、 SCSI コマンドセットを NVMe コマンドセットに置き換えます。</block>
+  <block id="31b69b7e1c4e960e6cedf19de53f4322" category="paragraph">NVMe は、不揮発性フラッシュドライブ、マルチコア CPU 、ギガバイト単位のメモリを搭載するように設計されています。また、 1970 年代からコンピュータサイエンスの大きな進歩を活かし、より効率的にデータを解析して操作できる合理化されたコマンドセットを実現しています。エンドツーエンドの NVMe アーキテクチャを採用することで、データセンター管理者は、仮想環境とコンテナ化環境をどの程度まで拡張できるか、またトランザクション指向データベースでサポートできる拡張性の程度を再考することができます。</block>
+  <block id="09f15216328f20676143c09d02767181" category="paragraph">FlexPod は、 Cisco Unified Computing System （ Cisco UCS ）、 Cisco Nexus スイッチ、 Cisco MDS スイッチ、 NetApp AFF システムを含む、ベストプラクティスのデータセンターアーキテクチャです。これらのコンポーネントは、 Cisco とネットアップの両方のベストプラクティスに従って接続および構成されており、さまざまなエンタープライズワークロードを確実に実行するための優れたプラットフォームを提供します。FlexPod はスケールアップとスケールアウトに対応しており、パフォーマンスと容量の向上（コンピューティング、ネットワーク、またはストレージのリソースを必要に応じて個別に追加）が可能です。また、複数の一貫した導入が必要な環境（ FlexPod スタックの追加ロールアウトなど）ではスケールアウトすることもできます。</block>
+  <block id="e8b94bd82e142d7440b2225c538c2741" category="paragraph">次の図に、 FlexPod コンポーネントファミリーを示します。</block>
+  <block id="1454b90737e9a70aa21407e131562c61" category="paragraph"><block ref="1454b90737e9a70aa21407e131562c61" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2e9ea0ababa2da0236c1f9f5471a7488" category="paragraph">FlexPod は FC-NVMe を導入するための理想的なプラットフォームです。既存の Cisco UCS B200 M5 サーバまたは M6 サーバ、または Cisco UCS C シリーズ M5 または M6 ラックサーバに Cisco UCS VIC 1400 シリーズおよびポートエクスパンダを追加し、 Cisco UCS システム、 Cisco MDS 32Gbps スイッチへの無停止でのシンプルなソフトウェアアップグレードをサポートします。 および NetApp AFF ストレージアレイで使用できます。サポート対象のハードウェアとソフトウェアを導入したあとの FC-NVMe 設定は、 FCP の設定と似ています。</block>
+  <block id="7acd6a467f483afa5e35fc90a1800225" category="paragraph">NetApp ONTAP 9.5 以降には、包括的な FC-NVMe 解決策が搭載されています。AFF A300 、 AFF A400 、 AFF A700 、 AFF A700s 、および AFF A800 アレイの ONTAP ソフトウェアを無停止で更新することで、これらのデバイスでエンドツーエンドの NVMe ストレージスタックがサポートされます。そのため、第 6 世代の Host Bus Adapter （ HBA ；ホストバスアダプタ）と NVMe ドライバがサポートされているサーバは、ネイティブの NVMe を使用してこれらのアレイと通信できます。</block>
+  <block id="836e469eca1073cea18717fc8a4286e2" category="section-title">解決策のメリット</block>
+  <block id="8a00ffcca52af99daf08edb962c9ceeb" category="paragraph">FlexPod 向けエンドツーエンド NVMe は、解決策がもたらす次のメリットを通じて、お客様に卓越した価値を提供します。</block>
+  <block id="54502830ada1e4b4b82c7d936f4c269d" category="list-text">NVMe は、高速で広帯域のハードウェアプロトコルである PCIe を利用しています。これは、 SCSI 、 SAS 、 SATA などの従来の標準規格に比べてはるかに高速です。Cisco UCS サーバとネットアップストレージアレイ間の広帯域幅、超低レイテンシ接続により、要件の厳しいアプリケーションの大部分に対応します。</block>
+  <block id="e47e7787f697c0c24a924681d0e1b4d0" category="list-text">FC-NVMe 解決策はロスレスであり、次世代アプリケーションの拡張性要件に対応できます。こうした新しいテクノロジには、人工知能（ AI ）、機械学習（ ML ）、ディープラーニング（ DL ）、リアルタイム分析、その他ミッションクリティカルなアプリケーションなどがあります。</block>
+  <block id="0741486bab90bf898dc73f717739c21b" category="list-text">スタック全体のすべてのリソースを効率的に使用することで、 IT コストを削減します。</block>
+  <block id="d69be026b050768811ccdabac96cbafa" category="list-text">応答時間を大幅に短縮し、アプリケーションのパフォーマンスを大幅に向上させます。これは、 IOPS とスループットの向上に対応し、レイテンシを低減します。解決策は、パフォーマンスを最大 60% 向上し、既存のワークロードのレイテンシを最大 50% 低減します。</block>
+  <block id="5ff92b3471b3232211467fc1e17bbe3c" category="list-text">FC-NVMe は効率的なプロトコルで、優れたキューイング機能を備えています。特に、 1 秒あたりの I/O 処理数（ IOPS 、トランザクション数）が増え、アクティビティが並列に処理される場合に適しています。</block>
+  <block id="1a225cc1a41f04ca9c5b251d8c2ec01e" category="list-text">Cisco UCS 、 Cisco MDS 、 NetApp AFF ストレージアレイなどの FlexPod コンポーネントのソフトウェアを無停止でアップグレードできます。アプリケーションを変更する必要はありません。</block>
+  <block id="a2fd382ce5cff0928aa9f57571fdde76" category="inline-link-macro">次のステップ：テストアプローチ</block>
+  <block id="7209294d21223fab68b6c4dd8b3859fa" category="paragraph"><block ref="7209294d21223fab68b6c4dd8b3859fa" category="inline-link-macro-rx"></block></block>
+  <block id="1d3e394196ca20a245bc3d85ea19f8e3" category="summary">シスコとネットアップは、 FlexPod を使用して、さまざまなユースケースやアプリケーションに対応できる柔軟性と拡張性に優れたプラットフォームを開発しました。FC-NVMe を使用すると、同じ共有インフラで同時に実行されているビジネスクリティカルなアプリケーションを効率的かつ効果的にサポートするための機能が FlexPod に追加されています。</block>
+  <block id="ac0ec60d36dfa69ed9c33bff90080b23" category="inline-link-macro">前へ：テスト結果。</block>
+  <block id="da4457b5f68502fd9980ca6ca4d26523" category="paragraph"><block ref="da4457b5f68502fd9980ca6ca4d26523" category="inline-link-macro-rx"></block></block>
+  <block id="357ae1052d4a9a1f8ad31341782e681d" category="paragraph">この解決策の測定されたスループットは、 14GBps であり、 1 ミリ秒未満のレイテンシでシーケンシャルリードワークロードを処理する場合は 220 万 IOPS です。ランダムリードワークロードのスループットは 9.5GBps で 1.25M IOPS です。FlexPod を使用して FC-NVMe でこのパフォーマンスを提供できれば、ミッションクリティカルなアプリケーションのニーズに対応することができます。</block>
+  <block id="45151779d60c25e99023c85fb7e5f70e" category="paragraph">VMware vSphere 7.0 U2 を搭載した FlexPod データセンターは、さまざまな IT ワークロードに FC-NVMe を導入するための最適な共有インフラ基盤です。これにより、 FC-NVMe を必要とするアプリケーションにハイパフォーマンスなストレージアクセスを提供できます。FC-NVMe は進化し、高可用性、マルチパス、およびオペレーティングシステムの追加サポートが組み込まれています。 FlexPod は、このような機能をサポートするために必要な拡張性と信頼性を備えたプラットフォームに最適です。</block>
+  <block id="2e9b438bb0a923f9a4cfd56c7eb47eba" category="paragraph">シスコとネットアップは、 FlexPod を使用して、さまざまなユースケースやアプリケーションに対応できる柔軟性と拡張性に優れたプラットフォームを開発しました。FC-NVMe を使用すると、同じ共有インフラで同時に実行されているビジネスクリティカルなアプリケーションを効率的かつ効果的にサポートするための機能が FlexPod に追加されています。FlexPod は柔軟性と拡張性に優れているため、進化するビジネス要件に合わせて拡張できる適切なサイズのインフラから利用を開始できます。</block>
+  <block id="21b8b4e69eb4bcd7890b3ce6dff80e12" category="list-text">Cisco Unified Computing System （ UCS ）</block>
+  <block id="584b12a2ac3f6fd3e0e7049156fdd91c" category="inline-link"><block ref="584b12a2ac3f6fd3e0e7049156fdd91c" category="inline-link-rx"></block></block>
+  <block id="3c65018c18cf8ce78db5681a338977ae" category="paragraph"><block ref="3c65018c18cf8ce78db5681a338977ae" category="inline-link-rx"></block></block>
+  <block id="a9bc4af6dc522e2b661cd4b6503061e4" category="list-text">Cisco UCS 6400 シリーズファブリックインターコネクトデータシート</block>
+  <block id="71a8d27297a8ea56627190298acb7a23" category="inline-link"><block ref="71a8d27297a8ea56627190298acb7a23" category="inline-link-rx"></block></block>
+  <block id="ae0111867c908af61ab7655ef25c16fb" category="paragraph"><block ref="ae0111867c908af61ab7655ef25c16fb" category="inline-link-rx"></block></block>
+  <block id="a3dbaa31ff645cd7a47a13288a226f5d" category="inline-link"><block ref="a3dbaa31ff645cd7a47a13288a226f5d" category="inline-link-rx"></block></block>
+  <block id="a34348cc0f49f6f3fb873c621819ae6a" category="paragraph"><block ref="a34348cc0f49f6f3fb873c621819ae6a" category="inline-link-rx"></block></block>
+  <block id="aa03af91e97e3a7938de166d258e0470" category="inline-link"><block ref="aa03af91e97e3a7938de166d258e0470" category="inline-link-rx"></block></block>
+  <block id="6020fe19150345d99b481804bbc989d5" category="paragraph"><block ref="6020fe19150345d99b481804bbc989d5" category="inline-link-rx"></block></block>
+  <block id="cd2d76930423ad7cca8537acf2a3068d" category="inline-link"><block ref="cd2d76930423ad7cca8537acf2a3068d" category="inline-link-rx"></block></block>
+  <block id="6cd4f16d8b1f703abed74c85ee281843" category="paragraph"><block ref="6cd4f16d8b1f703abed74c85ee281843" category="inline-link-rx"></block></block>
+  <block id="3e18b63e5077aa1deedf66c411dc8962" category="list-text">Cisco Unified Computing System アダプタ</block>
+  <block id="f513f9c79ebe79e00b99cb4ecf13210b" category="inline-link"><block ref="f513f9c79ebe79e00b99cb4ecf13210b" category="inline-link-rx"></block></block>
+  <block id="a4717af815ea61bfcbc2feac8fd0f6fb" category="paragraph"><block ref="a4717af815ea61bfcbc2feac8fd0f6fb" category="inline-link-rx"></block></block>
+  <block id="14fee3a0e9e863a2a4ad52686e64bb8c" category="inline-link"><block ref="14fee3a0e9e863a2a4ad52686e64bb8c" category="inline-link-rx"></block></block>
+  <block id="ff21394970e5bbf12b466a766bcbd877" category="paragraph"><block ref="ff21394970e5bbf12b466a766bcbd877" category="inline-link-rx"></block></block>
+  <block id="67be4cd88f4003fcf0aa3708830b1930" category="inline-link"><block ref="67be4cd88f4003fcf0aa3708830b1930" category="inline-link-rx"></block></block>
+  <block id="40d407225fc884be5c71714aca43a1e4" category="paragraph"><block ref="40d407225fc884be5c71714aca43a1e4" category="inline-link-rx"></block></block>
+  <block id="3a373635e800d81fd6378be296ce1927" category="list-text">Cisco MDS 9000 マルチレイヤファブリックスイッチ</block>
+  <block id="f011e1d4812d8030d2924298e204fc70" category="inline-link"><block ref="f011e1d4812d8030d2924298e204fc70" category="inline-link-rx"></block></block>
+  <block id="9609058c7d02b009db6d66db2c603718" category="paragraph"><block ref="9609058c7d02b009db6d66db2c603718" category="inline-link-rx"></block></block>
+  <block id="64bb879a7dafb3e944b0357c4a709261" category="list-text">Cisco MDS 9132T 32 Gbps 32 ポートファイバチャネルスイッチ</block>
+  <block id="11db24b66c77035ede185430bf9d09f9" category="inline-link"><block ref="11db24b66c77035ede185430bf9d09f9" category="inline-link-rx"></block></block>
+  <block id="23c1509f5b84de26c4b1055eb21193f6" category="paragraph"><block ref="23c1509f5b84de26c4b1055eb21193f6" category="inline-link-rx"></block></block>
+  <block id="a5119a6bd0f4d733e0f1f4c10f9d063b" category="list-text">NetApp ONTAP 9.</block>
+  <block id="56069277df4c901b9bbe8e803e67db24" category="inline-link"><block ref="56069277df4c901b9bbe8e803e67db24" category="inline-link-rx"></block></block>
+  <block id="e5fd571885e12d60c887ac4ff16b1b18" category="paragraph"><block ref="e5fd571885e12d60c887ac4ff16b1b18" category="inline-link-rx"></block></block>
+  <block id="30d37924aae959f5f8be738ca035502f" category="list-text">NetApp AFF A シリーズ</block>
+  <block id="c6a079892f1cff76919834401bb28e4c" category="inline-link"><block ref="c6a079892f1cff76919834401bb28e4c" category="inline-link-rx"></block></block>
+  <block id="91fbc750242e3f6e73b7346d7de4255d" category="paragraph"><block ref="91fbc750242e3f6e73b7346d7de4255d" category="inline-link-rx"></block></block>
+  <block id="0efcb78d6dd86f734d5f4bc64ccf8c30" category="inline-link"><block ref="0efcb78d6dd86f734d5f4bc64ccf8c30" category="inline-link-rx"></block></block>
+  <block id="08b9bce1e64e2ff433f4a5d4ab2d177f" category="paragraph"><block ref="08b9bce1e64e2ff433f4a5d4ab2d177f" category="inline-link-rx"></block></block>
+  <block id="1437b8b2e8fc7321b26cb3260b2497de" category="inline-link"><block ref="1437b8b2e8fc7321b26cb3260b2497de" category="inline-link-rx"></block></block>
+  <block id="3d6f191554274501ba88fe69ea6ba807" category="paragraph"><block ref="3d6f191554274501ba88fe69ea6ba807" category="inline-link-rx"></block></block>
+  <block id="581a5130c89459868713aba87d5ddef8" category="list-text">最新 SAN のベストプラクティス</block>
+  <block id="28cf8118bed6bfff2d8c5e8b980c1d1d" category="inline-link"><block ref="28cf8118bed6bfff2d8c5e8b980c1d1d" category="inline-link-rx"></block></block>
+  <block id="8773dad2264bd751de05c2821b5b7106" category="paragraph"><block ref="8773dad2264bd751de05c2821b5b7106" category="inline-link-rx"></block></block>
+  <block id="0d226f32134d70adc638b78bc53393a8" category="list-text">FlexPod 向けエンドツーエンド NVMe の導入</block>
+  <block id="651d79725508fd0119e3f81dd49cf222" category="inline-link"><block ref="651d79725508fd0119e3f81dd49cf222" category="inline-link-rx"></block></block>
+  <block id="7b00214f336cfd8e3b6c48d0df0025a3" category="paragraph"><block ref="7b00214f336cfd8e3b6c48d0df0025a3" category="inline-link-rx"></block></block>
+  <block id="7aaf95441fd5c24881cd267924f4466b" category="section-title">相互運用性マトリックス</block>
+  <block id="0919916303e590e1fc82d7bf4eecfa6b" category="inline-link"><block ref="0919916303e590e1fc82d7bf4eecfa6b" category="inline-link-rx"></block></block>
+  <block id="85974e66cddabad7238a4eec399c793e" category="paragraph"><block ref="85974e66cddabad7238a4eec399c793e" category="inline-link-rx"></block></block>
+  <block id="569e776974c7eff044e2da8f8153566d" category="list-text">Cisco UCS ハードウェア互換性マトリックス</block>
+  <block id="70896e149d49fd7ef77574e6cd6467d1" category="inline-link"><block ref="70896e149d49fd7ef77574e6cd6467d1" category="inline-link-rx"></block></block>
+  <block id="e069122d2e90856ce8a194155dfe6294" category="paragraph"><block ref="e069122d2e90856ce8a194155dfe6294" category="inline-link-rx"></block></block>
+  <block id="33a5856b62b0795c60374ac94b38ff05" category="inline-link"><block ref="33a5856b62b0795c60374ac94b38ff05" category="inline-link-rx"></block></block>
+  <block id="d6ac65bf36b9bb86fd269d9f52d82cf3" category="paragraph"><block ref="d6ac65bf36b9bb86fd269d9f52d82cf3" category="inline-link-rx"></block></block>
+  <block id="0b761cfbb2be11fcc3bd9c4447e089c4" category="paragraph">本プロジェクトの実施にあたって、 Cisco と Scott Lane 、 Bobby Oommen から協力して得た支援とガイダンスに感謝の意を表します。</block>
+  <block id="adb629e7b9571b85f36338a7308d3ea7" category="summary">ここでは、 FC-NVMe on FlexPod の検証テストの概要を示します。また、 VMware vSphere 7 を使用した FC-NVMe for FlexPod に関してワークロードのテストを実行するために採用したテスト環境とテスト計画の両方が含まれます。</block>
+  <block id="0cf60f5f532710fb3fc684833fbc52fb" category="doc">テストアプローチ</block>
+  <block id="7c54c22f386bd3b54b9b61e8c93bfb23" category="paragraph"><block ref="7c54c22f386bd3b54b9b61e8c93bfb23" category="inline-link-macro-rx"></block></block>
+  <block id="27ca21876995024e46fc189c526da150" category="paragraph">Cisco Nexus 9000 シリーズスイッチは、次の 2 つの動作モードをサポートします。</block>
+  <block id="57b515ea7813a4d426d5ba78eabc281d" category="list-text">NX-OS スタンドアロンモード、 Cisco NX-OS ソフトウェアを使用</block>
+  <block id="ffe1740a370eca3eb8bf6399772ffc24" category="list-text">Cisco Application Centric Infrastructure （ Cisco ACI ）プラットフォームを使用する ACI ファブリックモード</block>
+  <block id="fc3aa2974d4884cd963eac1c25c20aa4" category="paragraph">スタンドアロンモードでは、スイッチは一般的な Cisco Nexus スイッチのように機能し、ポート密度、低レイテンシ、 40GbE および 100GbE 接続を向上させます。</block>
+  <block id="fe1c42d88dbba4744f92edbb76b5a4be" category="paragraph">NX-OS を搭載した FlexPod は、コンピューティング、ネットワーク、ストレージの各レイヤで完全な冗長性を実現するように設計されています。デバイスまたはトラフィックパスの観点からは、単一点障害はありません。次の図は、この FC-NVMe の検証で使用した最新の FlexPod 設計のさまざまな要素の接続を示しています。</block>
+  <block id="1a53d38ba1544ccbf531bdca08f785fa" category="paragraph"><block ref="1a53d38ba1544ccbf531bdca08f785fa" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="60c9302e13567e5be52b9ef8ade8be50" category="paragraph">この設計では、 FC SAN の観点から、最新の第 4 世代 Cisco UCS 6454 ファブリックインターコネクトと、サーバにポートエクスパンダを備えた Cisco UCS VIC 1400 プラットフォームを使用しています。Cisco UCS シャーシ内の Cisco UCS B200 M6 ブレードサーバは、 Cisco UCS 2408 ファブリックエクステンダ IOM に接続されたポートエクスパンダ付き Cisco UCS VIC 1440 を使用し、各 Fibre Channel over Ethernet （ FCoE ）仮想ホストバスアダプタ（ vHBA ）の速度は 40Gbps です。Cisco UCS C220 M5 ラックサーバは、 Cisco UCS VIC 1457 を使用し、各ファブリックインターコネクトに 25Gbps インターフェイスを 2 つ搭載しています。各 C220 M5 FCoE vHBA の速度は 50 Gbps です。</block>
+  <block id="680762378b447ceaa8c388af5a826657" category="paragraph">ファブリックインターコネクトは、 32Gbps SAN ポートチャネルを介して、最新世代の Cisco MDS 9148T または 9132T FC スイッチに接続します。Cisco MDS スイッチと NetApp AFF A800 ストレージクラスタ間の接続も 32Gbps FC です。この構成では、ストレージクラスタと Cisco UCS の間で 32Gbps FC 、 FCP 、 FC-NVMe ストレージがサポートされます。この検証では、各ストレージコントローラへの FC 接続が 4 つ使用されます。各ストレージコントローラでは、 FCP と FC-NVMe の両方のプロトコルに 4 つの FC ポートが使用されます。</block>
+  <block id="5e0c7ed874ce8f4c61ce2a70f5c216d5" category="paragraph">Cisco Nexus スイッチと最新世代の NetApp AFF A800 ストレージクラスタ間の接続も 100Gbps で、ストレージコントローラのポートチャネルとスイッチの vPC もあります。NetApp AFF A800 ストレージコントローラには、高速の Peripheral Connect Interface Express （ PCIe ）バス上に NVMe ディスクが搭載されています。</block>
+  <block id="d1fd21e5896206a9eefa5051e741cb40" category="inline-link">UCS 管理モードの FlexPod データセンター（ Cisco UCS 4.2(1) 、 VMware vSphere 7.0U2 、および NetApp ONTAP 9.9 ）</block>
+  <block id="c7a4509b40decadb49a5221fcd638737" category="paragraph">この検証で使用する FlexPod の実装方法は、に基づいています<block ref="6f18f38be02f890aedb1b9fbdab2000c" category="inline-link-rx"></block>。</block>
+  <block id="99fb86edec4684b06474ee611758a8f6" category="section-title">検証済みのハードウェアとソフトウェア</block>
+  <block id="7ec755c1c3dd5f89cc06830f1ad21cd0" category="paragraph">次の表に、解決策の検証プロセスで使用したハードウェアとソフトウェアのバージョンを示します。Cisco とネットアップは、相互運用性マトリックスを用意しています。これらのマトリックスは、 FlexPod の具体的な実装についてサポートが必要かどうかを確認するために参照してください。詳細については、次のリソースを参照してください。</block>
+  <block id="e4cd53129cc4d7b20f289aa364c15ee4" category="list-text"><block ref="e4cd53129cc4d7b20f289aa364c15ee4" category="inline-link-rx"></block></block>
+  <block id="45304a3fc78b38f4236bba1dd02f945a" category="inline-link">Cisco UCS ハードウェアおよびソフトウェア相互運用性ツール</block>
+  <block id="0b973c281c756cdd48ddc559ee712e1a" category="list-text"><block ref="0b973c281c756cdd48ddc559ee712e1a" category="inline-link-rx"></block></block>
+  <block id="28c02808d035abd3371299d909f5e0ad" category="cell">コンピューティング</block>
+  <block id="54d92758c639e3149b8477fb8fbd7a8b" category="list-text">Cisco UCS 6454 ファブリックインターコネクト × 2</block>
+  <block id="fdcb4a186beb36dce6cccb2c0bf40a3a" category="list-text">Cisco UCS 5108 ブレードシャーシ × 1 （ Cisco UCS 2408 I/O モジュール × 2</block>
+  <block id="662443be9d7c17c03a11d59e6070e061" category="list-text">Cisco UCS B200 M6 ブレード × 4 （各 Cisco UCS VIC 1440 アダプタおよびポートエキスパンダカード × 1</block>
+  <block id="3dc2ed116d99b2738437b92167b9255e" category="cell">リリース 4.2 （ 1f ）</block>
+  <block id="2e1804a8f86e3360faa59a0e6c35ebe9" category="cell">Cisco UCS Manager 、 Cisco UCS VIC 1440 、およびポートエクスパンダが含まれます</block>
+  <block id="2b55387dd066c5bac646ac61543d152d" category="cell">CPU</block>
+  <block id="782d6923371160b137ad9cb74900584f" category="cell">2.0 GHz の Intel Xeon Gold 6330 CPU × 2 、 42 MB のレイヤ 3 キャッシュ、 CPU あたり 28 コア</block>
+  <block id="4789f23283b3a61f858b641a1bef19a3" category="cell">メモリ</block>
+  <block id="3d52408762ee832c813d927207074186" category="cell">1 、 024GB （ 3200 MHz で動作する 64 GB DIMM × 16 ）</block>
+  <block id="ae931a94f0a2669c2621baeb8f329bcb" category="cell">NX-OS スタンドアロンモードの 2 台の Cisco Nexus 9336C-FX2 スイッチ</block>
+  <block id="3454187a3bd238e1127c1a3908f72a94" category="cell">リリース 9.3(8)</block>
+  <block id="2d9c3ae178d1c13e0c097005526087d3" category="cell">Cisco MDS 9132T 32Gbps 32 ポート FC スイッチ × 2</block>
+  <block id="2519c978262e289b4c206fa969ef7392" category="cell">リリース 8.4 （ 2c ）</block>
+  <block id="0a19e46f5401a4cda5fb7492d73fd009" category="cell">FC-NVMe SAN 分析をサポートします</block>
+  <block id="704547ba4d4a8b912fc21259d7fd9225" category="cell">1.8TB NVMe SSD × 24 搭載の NetApp AFF A800 ストレージコントローラ × 2</block>
+  <block id="93c816ffe69b578572a6d0bb31923fce" category="cell">NetApp ONTAP 9.9.3.1P1</block>
+  <block id="c8e134f3baa115ca65925b5be12b21e8" category="cell">7.0U2</block>
+  <block id="f7eea647714641318ee86fedbbed4691" category="cell">VMware ESXi</block>
+  <block id="28d14b47338f273ae463f5202a7b3039" category="cell">7.0.2 の場合</block>
+  <block id="1d6f6e1f6fb6825e57caa47713d1d35f" category="cell">VMware ESXi ネイティブファイバチャネル NIC ドライバ（ NFNIC ）</block>
+  <block id="333097ffdb80252354a766c2f7608a57" category="cell">5.0.0.12</block>
+  <block id="a375bd1e9e888365f82fb4b14d8fab87" category="cell">VMware で FC-NVMe をサポートします</block>
+  <block id="7f2a1639f12c9cad91a6ddf10a589196" category="cell">VMware ESXi ネイティブイーサネット NIC ドライバ（ NENIC ）</block>
+  <block id="3f1d21bf3b3851ee53f41f51934eb0db" category="cell">1.0.35.0</block>
+  <block id="eed71d0b27b71177e3d536f88303483b" category="cell">テストツール</block>
+  <block id="7226d2a470936f81133f1895b4590679" category="cell">fio</block>
+  <block id="1fd471297dc154377b5a06d0f4f8d8c3" category="cell">3.19</block>
+  <block id="b7147bcdeea01051fc17935b5a32b501" category="paragraph">また、統合型ワークロードを使用して FlexPod 上の NVMe を検証するパフォーマンステスト計画を作成しました。このワークロードにより、 8KB のランダムリードおよびライト、および 64KB の読み取りと書き込みを実行できました。AFF A800 ストレージに対して、 VMware ESXi ホストを使用してテストケースを実行しました。</block>
+  <block id="2e79064e688222f91a066aece210a0b8" category="paragraph">パフォーマンス測定に使用できるオープンソースの合成 I/O ツールである fio を使用して、合成ワークロードを生成しました。</block>
+  <block id="42cce40e218d5c950d88fc7b34fcd165" category="paragraph">パフォーマンステストを完了するために、ストレージとサーバの両方でいくつかの設定手順を実行しました。実装の詳細な手順は次のとおりです。</block>
+  <block id="c842c76389c01f5e0e1a240acfea745f" category="list-text">ストレージ側で、 4 つの Storage Virtual Machine （ SVM 、旧 Vserver ）、 1 つの SVM に 8 つのボリューム、 1 つのボリュームに 1 つのネームスペースを作成しました。1TB のボリュームと 960GB のネームスペースを作成しました。SVM ごとに 4 つの LIF と、 SVM ごとに 1 つのサブシステムを作成しました。SVM LIF は、クラスタ上の使用可能な 8 つの FC ポートに均等に分散されました。</block>
+  <block id="184a0c27499df02752fb18d292b274b4" category="list-text">サーバ側で、 ESXi ホストごとに 1 つの仮想マシン（ VM ）を作成し、合計 4 台の VM を構築しました。統合型ワークロードを実行するために、サーバに fio をインストールしました。</block>
+  <block id="7a7acdd97d3b2e04e7f8a97609258a92" category="list-text">ストレージと VM の構成が完了すると、 ESXi ホストからストレージネームスペースに接続できるようになります。そのため、ネームスペースに基づいてデータストアを作成し、それらのデータストアに基づいて仮想マシンディスク（ VMDK ）を作成することができました。</block>
+  <block id="7dc96590f7bab3379a7a79986056d22a" category="inline-link-macro">次の手順：テスト結果</block>
+  <block id="096a470899a55b7a333eae4cffec63d0" category="paragraph"><block ref="096a470899a55b7a333eae4cffec63d0" category="inline-link-macro-rx"></block></block>
+  <block id="e353dbe42c8654f33588d4da0b517469" category="doc">概要</block>
+  <block id="5c132e38b08825778491f35b81da58ff" category="paragraph">このテクニカルレポートでは、 FlexPod 上の VMware vSphere 7 での NVMe over Fibre Channel （ FC-NVMe ）パフォーマンスの概要を説明します。FlexPod は、 FC-NVMe を導入してアプリケーションへのハイパフォーマンスなストレージアクセスを実現するための最適な共有インフラ基盤です。</block>
+  <block id="25ef19e5b86411048323be68f8ad1ef7" category="sidebar">Cisco UCSM 、 VMware vSphere 7.0 、および NetApp ONTAP 9 を使用した FlexPod 向けのエンドツーエンド NVMe</block>
 </blocks>

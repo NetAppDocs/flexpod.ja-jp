@@ -1,0 +1,49 @@
+---
+sidebar: sidebar 
+permalink: infrastructure/nvme-vsphere-test-results.html 
+keywords: test, results, iops, latency 
+summary:  
+---
+= テスト結果
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:nvme-vsphere-testing-approach.html["従来のテストアプローチ："]
+
+テストでは、 FC / NVMe のパフォーマンスを IOPS とレイテンシの観点から測定する fio ワークロードを実行しました。
+
+次のグラフは、ブロックサイズ 8KB を使用して 100% ランダムリードワークロードを実行した場合の結果を示しています。
+
+image:nvme-vsphere-image3.png["エラー：グラフィックイメージがありません"]
+
+このテストでは、サーバ側のレイテンシを 0.35 ミリ秒未満に抑えながら、 120 万 IOPS を超えるパフォーマンスが得られたことがわかりました。
+
+次のグラフは、ブロックサイズ 8KB を使用して 100% のランダムライトワークロードを実行した場合の結果を示しています。
+
+image:nvme-vsphere-image4.png["エラー：グラフィックイメージがありません"]
+
+テストでは、システムの IOPS は 300k に近く、サーバ側でのレイテンシは 1 ミリ秒未満に抑えられていることがわかりました。
+
+8KB のブロックサイズでランダムリードの 80% と書き込みの 20% を処理したところ、以下の結果が得られました。
+
+image:nvme-vsphere-image5.png["エラー：グラフィックイメージがありません"]
+
+テストでは、 100 万 IOPS を超えるシステムを達成し、サーバ側のレイテンシを 1 ミリ秒未満に抑えていることがわかりました。
+
+ブロックサイズ 64KB 、シーケンシャルリード 100% の場合、以下の結果が得られました。
+
+image:nvme-vsphere-image6.png["エラー：グラフィックイメージがありません"]
+
+テストでは、サーバ側のレイテンシを 1 ミリ秒未満に抑えながら約 25 万 IOPS を達成したことがわかりました。
+
+ブロックサイズ 64KB とシーケンシャルライト 100% の場合、結果は次のようになりました。
+
+image:nvme-vsphere-image7.png["エラー：グラフィックイメージがありません"]
+
+テストでは、サーバ側のレイテンシを 1 ミリ秒未満に抑えながら約 120k IOPS を達成したことがわかりました。
+
+link:nvme-vsphere-conclusion.html["次は終わりです"]

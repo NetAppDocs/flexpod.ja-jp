@@ -1,0 +1,15 @@
+---
+sidebar: sidebar 
+permalink: infrastructure/nvme-vsphere-abstract.html 
+keywords:  
+summary:  
+---
+= 概要
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+このテクニカルレポートでは、 FlexPod 上の VMware vSphere 7 での NVMe over Fibre Channel （ FC-NVMe ）パフォーマンスの概要を説明します。FlexPod は、 FC-NVMe を導入してアプリケーションへのハイパフォーマンスなストレージアクセスを実現するための最適な共有インフラ基盤です。

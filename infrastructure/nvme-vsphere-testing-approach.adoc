@@ -1,0 +1,112 @@
+---
+sidebar: sidebar 
+permalink: infrastructure/nvme-vsphere-testing-approach.html 
+keywords: test, environment, hardware, software, plan 
+summary: ここでは、 FC-NVMe on FlexPod の検証テストの概要を示します。また、 VMware vSphere 7 を使用した FC-NVMe for FlexPod に関してワークロードのテストを実行するために採用したテスト環境とテスト計画の両方が含まれます。 
+---
+= テストアプローチ
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:nvme-vsphere-introduction.html["前へ：はじめに。"]
+
+ここでは、 FC-NVMe on FlexPod の検証テストの概要を示します。また、 VMware vSphere 7 を使用した FC-NVMe for FlexPod に関してワークロードのテストを実行するために採用したテスト環境とテスト計画の両方が含まれます。
+
+
+
+== テスト環境
+
+Cisco Nexus 9000 シリーズスイッチは、次の 2 つの動作モードをサポートします。
+
+* NX-OS スタンドアロンモード、 Cisco NX-OS ソフトウェアを使用
+* Cisco Application Centric Infrastructure （ Cisco ACI ）プラットフォームを使用する ACI ファブリックモード
+
+
+スタンドアロンモードでは、スイッチは一般的な Cisco Nexus スイッチのように機能し、ポート密度、低レイテンシ、 40GbE および 100GbE 接続を向上させます。
+
+NX-OS を搭載した FlexPod は、コンピューティング、ネットワーク、ストレージの各レイヤで完全な冗長性を実現するように設計されています。デバイスまたはトラフィックパスの観点からは、単一点障害はありません。次の図は、この FC-NVMe の検証で使用した最新の FlexPod 設計のさまざまな要素の接続を示しています。
+
+image:nvme-vsphere-image2.png["エラー：グラフィックイメージがありません"]
+
+この設計では、 FC SAN の観点から、最新の第 4 世代 Cisco UCS 6454 ファブリックインターコネクトと、サーバにポートエクスパンダを備えた Cisco UCS VIC 1400 プラットフォームを使用しています。Cisco UCS シャーシ内の Cisco UCS B200 M6 ブレードサーバは、 Cisco UCS 2408 ファブリックエクステンダ IOM に接続されたポートエクスパンダ付き Cisco UCS VIC 1440 を使用し、各 Fibre Channel over Ethernet （ FCoE ）仮想ホストバスアダプタ（ vHBA ）の速度は 40Gbps です。Cisco UCS C220 M5 ラックサーバは、 Cisco UCS VIC 1457 を使用し、各ファブリックインターコネクトに 25Gbps インターフェイスを 2 つ搭載しています。各 C220 M5 FCoE vHBA の速度は 50 Gbps です。
+
+ファブリックインターコネクトは、 32Gbps SAN ポートチャネルを介して、最新世代の Cisco MDS 9148T または 9132T FC スイッチに接続します。Cisco MDS スイッチと NetApp AFF A800 ストレージクラスタ間の接続も 32Gbps FC です。この構成では、ストレージクラスタと Cisco UCS の間で 32Gbps FC 、 FCP 、 FC-NVMe ストレージがサポートされます。この検証では、各ストレージコントローラへの FC 接続が 4 つ使用されます。各ストレージコントローラでは、 FCP と FC-NVMe の両方のプロトコルに 4 つの FC ポートが使用されます。
+
+Cisco Nexus スイッチと最新世代の NetApp AFF A800 ストレージクラスタ間の接続も 100Gbps で、ストレージコントローラのポートチャネルとスイッチの vPC もあります。NetApp AFF A800 ストレージコントローラには、高速の Peripheral Connect Interface Express （ PCIe ）バス上に NVMe ディスクが搭載されています。
+
+この検証で使用する FlexPod の実装方法は、に基づいています https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_m6_esxi7u2.html["UCS 管理モードの FlexPod データセンター（ Cisco UCS 4.2(1) 、 VMware vSphere 7.0U2 、および NetApp ONTAP 9.9 ）"^]。
+
+
+
+== 検証済みのハードウェアとソフトウェア
+
+次の表に、解決策の検証プロセスで使用したハードウェアとソフトウェアのバージョンを示します。Cisco とネットアップは、相互運用性マトリックスを用意しています。これらのマトリックスは、 FlexPod の具体的な実装についてサポートが必要かどうかを確認するために参照してください。詳細については、次のリソースを参照してください。
+
+* https://mysupport.netapp.com/matrix/["NetApp Interoperability Matrix Tool で確認できます"^]
+* https://ucshcltool.cloudapps.cisco.com/public/["Cisco UCS ハードウェアおよびソフトウェア相互運用性ツール"]
+
+
+|===
+| レイヤー（ Layer ） | デバイス | イメージ（ Image ） | コメント 
+
+
+| コンピューティング  a| 
+* Cisco UCS 6454 ファブリックインターコネクト × 2
+* Cisco UCS 5108 ブレードシャーシ × 1 （ Cisco UCS 2408 I/O モジュール × 2
+* Cisco UCS B200 M6 ブレード × 4 （各 Cisco UCS VIC 1440 アダプタおよびポートエキスパンダカード × 1
+
+| リリース 4.2 （ 1f ） | Cisco UCS Manager 、 Cisco UCS VIC 1440 、およびポートエクスパンダが含まれます 
+
+
+| CPU | 2.0 GHz の Intel Xeon Gold 6330 CPU × 2 、 42 MB のレイヤ 3 キャッシュ、 CPU あたり 28 コア | – | – 
+
+
+| メモリ | 1 、 024GB （ 3200 MHz で動作する 64 GB DIMM × 16 ） | – | – 
+
+
+| ネットワーク | NX-OS スタンドアロンモードの 2 台の Cisco Nexus 9336C-FX2 スイッチ | リリース 9.3(8) | – 
+
+
+| ストレージネットワーク | Cisco MDS 9132T 32Gbps 32 ポート FC スイッチ × 2 | リリース 8.4 （ 2c ） | FC-NVMe SAN 分析をサポートします 
+
+
+| ストレージ | 1.8TB NVMe SSD × 24 搭載の NetApp AFF A800 ストレージコントローラ × 2 | NetApp ONTAP 9.9.3.1P1 | – 
+
+
+| ソフトウェア | Cisco UCS Manager の略 | リリース 4.2 （ 1f ） | – 
+
+
+|  | VMware vSphere の場合 | 7.0U2 | – 
+
+
+|  | VMware ESXi | 7.0.2 の場合 | – 
+
+
+|  | VMware ESXi ネイティブファイバチャネル NIC ドライバ（ NFNIC ） | 5.0.0.12 | VMware で FC-NVMe をサポートします 
+
+
+|  | VMware ESXi ネイティブイーサネット NIC ドライバ（ NENIC ） | 1.0.35.0 | – 
+
+
+| テストツール | fio | 3.19 | – 
+|===
+
+
+== テスト計画
+
+また、統合型ワークロードを使用して FlexPod 上の NVMe を検証するパフォーマンステスト計画を作成しました。このワークロードにより、 8KB のランダムリードおよびライト、および 64KB の読み取りと書き込みを実行できました。AFF A800 ストレージに対して、 VMware ESXi ホストを使用してテストケースを実行しました。
+
+パフォーマンス測定に使用できるオープンソースの合成 I/O ツールである fio を使用して、合成ワークロードを生成しました。
+
+パフォーマンステストを完了するために、ストレージとサーバの両方でいくつかの設定手順を実行しました。実装の詳細な手順は次のとおりです。
+
+. ストレージ側で、 4 つの Storage Virtual Machine （ SVM 、旧 Vserver ）、 1 つの SVM に 8 つのボリューム、 1 つのボリュームに 1 つのネームスペースを作成しました。1TB のボリュームと 960GB のネームスペースを作成しました。SVM ごとに 4 つの LIF と、 SVM ごとに 1 つのサブシステムを作成しました。SVM LIF は、クラスタ上の使用可能な 8 つの FC ポートに均等に分散されました。
+. サーバ側で、 ESXi ホストごとに 1 つの仮想マシン（ VM ）を作成し、合計 4 台の VM を構築しました。統合型ワークロードを実行するために、サーバに fio をインストールしました。
+. ストレージと VM の構成が完了すると、 ESXi ホストからストレージネームスペースに接続できるようになります。そのため、ネームスペースに基づいてデータストアを作成し、それらのデータストアに基づいて仮想マシンディスク（ VMDK ）を作成することができました。
+
+
+link:nvme-vsphere-test-results.html["次の手順：テスト結果"]

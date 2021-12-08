@@ -1,0 +1,16 @@
+---
+section: infrastructure
+title: インフラ
+entries:
+- title: Cisco UCSM 、 VMware vSphere 7.0 、および NetApp ONTAP 9 を使用した FlexPod 向けのエンドツーエンド
+    NVMe
+  type: solutions
+  entries:
+  - title: はじめに
+    url: "/infrastructure/nvme-vsphere-introduction.html"
+  - title: テストアプローチ
+    url: "/infrastructure/nvme-vsphere-testing-approach.html"
+  - title: テスト結果
+    url: "/infrastructure/nvme-vsphere-test-results.html"
+  - title: まとめ
+    url: "/infrastructure/nvme-vsphere-conclusion.html"

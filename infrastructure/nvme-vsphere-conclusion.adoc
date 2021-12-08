@@ -1,0 +1,117 @@
+---
+sidebar: sidebar 
+permalink: infrastructure/nvme-vsphere-conclusion.html 
+keywords: conclusion, additional information, acknowledgements, interoperability matrixes 
+summary: シスコとネットアップは、 FlexPod を使用して、さまざまなユースケースやアプリケーションに対応できる柔軟性と拡張性に優れたプラットフォームを開発しました。FC-NVMe を使用すると、同じ共有インフラで同時に実行されているビジネスクリティカルなアプリケーションを効率的かつ効果的にサポートするための機能が FlexPod に追加されています。 
+---
+= まとめ
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./..media/
+
+
+link:nvme-vsphere-test-results.html["前へ：テスト結果。"]
+
+この解決策の測定されたスループットは、 14GBps であり、 1 ミリ秒未満のレイテンシでシーケンシャルリードワークロードを処理する場合は 220 万 IOPS です。ランダムリードワークロードのスループットは 9.5GBps で 1.25M IOPS です。FlexPod を使用して FC-NVMe でこのパフォーマンスを提供できれば、ミッションクリティカルなアプリケーションのニーズに対応することができます。
+
+VMware vSphere 7.0 U2 を搭載した FlexPod データセンターは、さまざまな IT ワークロードに FC-NVMe を導入するための最適な共有インフラ基盤です。これにより、 FC-NVMe を必要とするアプリケーションにハイパフォーマンスなストレージアクセスを提供できます。FC-NVMe は進化し、高可用性、マルチパス、およびオペレーティングシステムの追加サポートが組み込まれています。 FlexPod は、このような機能をサポートするために必要な拡張性と信頼性を備えたプラットフォームに最適です。
+
+シスコとネットアップは、 FlexPod を使用して、さまざまなユースケースやアプリケーションに対応できる柔軟性と拡張性に優れたプラットフォームを開発しました。FC-NVMe を使用すると、同じ共有インフラで同時に実行されているビジネスクリティカルなアプリケーションを効率的かつ効果的にサポートするための機能が FlexPod に追加されています。FlexPod は柔軟性と拡張性に優れているため、進化するビジネス要件に合わせて拡張できる適切なサイズのインフラから利用を開始できます。
+
+
+
+== 追加情報
+
+このドキュメントに記載されている情報の詳細については、以下のドキュメントや Web サイトを参照してください。
+
+* Cisco Unified Computing System （ UCS ）
++
+http://www.cisco.com/en/US/products/ps10265/index.html["http://www.cisco.com/en/US/products/ps10265/index.html"^]
+
+* Cisco UCS 6400 シリーズファブリックインターコネクトデータシート
++
+https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/datasheet-c78-741116.html["https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/datasheet-c78-741116.html"^]
+
+* Cisco UCS 5100 シリーズブレードサーバシャーシ
++
+http://www.cisco.com/en/US/products/ps10279/index.html["http://www.cisco.com/en/US/products/ps10279/index.html"^]
+
+* Cisco UCS B シリーズブレードサーバ
++
+http://www.cisco.com/en/US/partner/products/ps10280/index.html["http://www.cisco.com/en/US/partner/products/ps10280/index.html"^]
+
+* Cisco UCS C シリーズラックサーバ
++
+http://www.cisco.com/c/en/us/products/servers-unified-computing/ucs-c-series-rack-servers/index.html["http://www.cisco.com/c/en/us/products/servers-unified-computing/ucs-c-series-rack-servers/index.html"^]
+
+* Cisco Unified Computing System アダプタ
++
+http://www.cisco.com/en/US/products/ps10277/prod_module_series_home.html["http://www.cisco.com/en/US/products/ps10277/prod_module_series_home.html"^]
+
+* Cisco UCS Manager の略
++
+http://www.cisco.com/en/US/products/ps10281/index.html["http://www.cisco.com/en/US/products/ps10281/index.html"^]
+
+* Cisco Nexus 9000 シリーズスイッチ
++
+http://www.cisco.com/c/en/us/products/switches/nexus-9000-series-switches/index.html["http://www.cisco.com/c/en/us/products/switches/nexus-9000-series-switches/index.html"^]
+
+* Cisco MDS 9000 マルチレイヤファブリックスイッチ
++
+http://www.cisco.com/c/en/us/products/storage-networking/mds-9000-series-multilayer-switches/index.html["http://www.cisco.com/c/en/us/products/storage-networking/mds-9000-series-multilayer-switches/index.html"^]
+
+* Cisco MDS 9132T 32 Gbps 32 ポートファイバチャネルスイッチ
++
+https://www.cisco.com/c/en/us/products/collateral/storage-networking/mds-9100-series-multilayer-fabric-switches/datasheet-c78-739613.html["https://www.cisco.com/c/en/us/products/collateral/storage-networking/mds-9100-series-multilayer-fabric-switches/datasheet-c78-739613.html"^]
+
+* NetApp ONTAP 9.
++
+http://www.netapp.com/us/products/platform-os/ontap/index.aspx["http://www.netapp.com/us/products/platform-os/ontap/index.aspx"^]
+
+* NetApp AFF A シリーズ
++
+http://www.netapp.com/us/products/storage-systems/all-flash-array/aff-a-series.aspx["http://www.netapp.com/us/products/storage-systems/all-flash-array/aff-a-series.aspx"^]
+
+* VMware vSphere の場合
++
+https://www.vmware.com/products/vsphere["https://www.vmware.com/products/vsphere"^]
+
+* VMware vCenter Server の各機能を使用し
++
+http://www.vmware.com/products/vcenter-server/overview.html["http://www.vmware.com/products/vcenter-server/overview.html"^]
+
+* 最新 SAN のベストプラクティス
++
+https://www.netapp.com/us/media/tr-4080.pdf["https://www.netapp.com/us/media/tr-4080.pdf"^]
+
+* FlexPod 向けエンドツーエンド NVMe の導入
++
+https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/whitepaper-c11-741907.html["https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/whitepaper-c11-741907.html"^]
+
+
+
+
+
+== 相互運用性マトリックス
+
+* NetApp Interoperability Matrix Tool で確認できます
++
+http://support.netapp.com/matrix/["http://support.netapp.com/matrix/"^]
+
+* Cisco UCS ハードウェア互換性マトリックス
++
+https://ucshcltool.cloudapps.cisco.com/public/["https://ucshcltool.cloudapps.cisco.com/public/"^]
+
+* VMware Compatibility Guide 』を参照してください
++
+http://www.vmware.com/resources/compatibility["http://www.vmware.com/resources/compatibility"^]
+
+
+
+
+
+== 謝辞
+
+本プロジェクトの実施にあたって、 Cisco と Scott Lane 、 Bobby Oommen から協力して得た支援とガイダンスに感謝の意を表します。
