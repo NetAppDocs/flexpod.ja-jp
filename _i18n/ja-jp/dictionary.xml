@@ -7983,4 +7983,29 @@
   <block id="e353dbe42c8654f33588d4da0b517469" category="doc">概要</block>
   <block id="5c132e38b08825778491f35b81da58ff" category="paragraph">このテクニカルレポートでは、 FlexPod 上の VMware vSphere 7 での NVMe over Fibre Channel （ FC-NVMe ）パフォーマンスの概要を説明します。FlexPod は、 FC-NVMe を導入してアプリケーションへのハイパフォーマンスなストレージアクセスを実現するための最適な共有インフラ基盤です。</block>
   <block id="25ef19e5b86411048323be68f8ad1ef7" category="sidebar">Cisco UCSM 、 VMware vSphere 7.0 、および NetApp ONTAP 9 を使用した FlexPod 向けのエンドツーエンド NVMe</block>
+  <block id="8107695c6d7deb6f421fdffa4d6e7df7" category="sidebar">AFF Express for VMware vSphere 7.0 と Cisco UCS Mini および NetApp FAS / FlexPod （ NVA ）</block>
+  <block id="87a971542df3ff14010fa8aae834b5b7" category="sidebar">ファイバチャネル SAN を使用する FlexPod Datacenter for SAP 解決策 with Cisco UCS Mnager 4.0 and NetApp ONTAP 9.7</block>
+  <block id="4977bb12e747bb06984bb21c0f4f3151" category="sidebar">FlexPod with SQL に SAP アプリケーションサーバを導入します</block>
+  <block id="3233ebc457b5203d5068f2f1ebefc465" category="sidebar">解決策 Datacenter for SAP FlexPod with Cisco ACI 、 Cisco UCS Manager 4.0 、 and NetApp AFF A –シリーズ</block>
+  <block id="f7ddcbada961aed8796552abed289c8d" category="sidebar">Cisco Container Platform を使用した FlexPod での SAP データハブの導入</block>
+  <block id="bbb30e43b4cdf72f7ecccf34c7d3daec" category="sidebar">解決策 Datacenter for SAP FlexPod with Cisco ACI 、 Cisco UCS Manager 4.0 、 and NetApp AFF A –シリーズ設計ガイド</block>
+  <block id="99f8347a9f811141b792f62f79e237f3" category="sidebar">解決策 Datacenter for SAP FlexPod with Cisco UCS 3rd Generation and NetApp AFF A – Series 』を参照してください</block>
+  <block id="50fbdfa5afaeed259fc748fdf086bdcb" category="sidebar">Cisco UCS Manager 4.0 を搭載した解決策 Datacenter for SAP FlexPod と、 ONTAP 9.6 を搭載した NetApp AFF A</block>
+  <block id="61ff255146e4fcbd1bda09a8e5d41cf2" category="sidebar">FlexPod Datacenter for Microsoft SQL Server 2019 および VMware vSphere 6.7</block>
+  <block id="ab2acd3b2765cfe6f6e9c62d59d93690" category="sidebar">VMware および Hyper-V で実行されている Linux VM 上の FlexPod Datacenter with Microsoft SQL Server 2017</block>
+  <block id="d8d9af257f02bffd2d92213b9efa9f5f" category="sidebar">『 FlexPod Datacenter with VMware vSphere 7.0 』、『 Cisco VXLAN Single-Site Fabric 』、『 NetApp ONTAP 9.7 Design Guide 』</block>
+  <block id="a48aebb37b56c1a4d26975457d63eeb8" category="sidebar">ONTAP Datacenter with NetApp FlexPod 9.7 、 Cisco Intersight 、 VMware vSphere 6.7 U3 設計</block>
+  <block id="0c7a516e32b082b31bda03bb6878b53e" category="sidebar">ONTAP データセンターと NetApp FlexPod 9.7 、 Cisco Intersight 、 VMware vSphere 6.7 U3-Deploy</block>
+  <block id="8d2c7acca4025e737c3f4355826ec2de" category="sidebar">『 FlexPod Datacenter with Cisco Intersight 』と『 NetApp ONTAP 9.7 Design Guide 』</block>
+  <block id="dfa87e00a076f509a2df0369c3145704" category="sidebar">ONTAP データセンターと NetApp FlexPod 9.6 、 Cisco UCS 第 4 世代、 VMware vSphere 6.7U2 （ CVD ）</block>
+  <block id="2498e142ba642e0f4aa9aa7efe4e70f6" category="sidebar">FlexPod データセンターと VMware vSphere 6.7 U1 、 Cisco UCS 第 4 世代、および NetApp AFF A シリーズ設計</block>
+  <block id="d4889b00654de2e35312e3117701950b" category="sidebar">FlexPod データセンターと VMware vSphere 6.7 U1 、 Cisco UCS 第 4 世代、および NetApp AFF A シリーズ - Deploy</block>
+  <block id="649e277e513a10420ec478f17109e379" category="sidebar">FlexPod データセンターと Cisco ACI マルチポッド、 NetApp MetroCluster IP 、 VMware vSphere 6.7 設計ガイド</block>
+  <block id="734e45a14e22d25e99de3abd0d2a1510" category="sidebar">FlexPod データセンターと Cisco ACI マルチポッド、 NetApp MetroCluster IP 、 VMware vSphere 6.7 導入ガイド</block>
+  <block id="ef500a82dc8ad1887fe510a32683569c" category="sidebar">FlexPod Datacenter for OpenShift Container Platform 4 設計ガイド</block>
+  <block id="ab9336a5da6f0f0e756cc5f626c1da03" category="sidebar">ディープラーニング CVD 設計ガイド：『 FlexPod Datacenter for AI / ML with Cisco UCS 480 ML Nvidia T4 vGPU 』</block>
+  <block id="6b6a85c2fbd19770e05e227ae9a92029" category="sidebar">『 FlexPod Datacenter for AI / ML with Cisco UCS 480 ML Nvidia T4 vGPU for Deep Learning CVD Deployment Guide 』</block>
+  <block id="d6205320f3a7011e64b601100518be60" category="sidebar">『 FlexPod Datacenter for AI / ML with Cisco UCS C480 ML for Deep Learning Design Guide 』を参照してください</block>
+  <block id="26b2da44f63ebbe0d09d512b64685d73" category="sidebar">FlexPod for 3D Graphics Visualization with VMware and NVIDIA 』を参照してください</block>
+  <block id="ebf263f6e0d06b26f79aafb2dda2fffe" category="sidebar">FlexPod for 3D Graphics Visualization with Citrix and NVIDIA （ホワイトペーパー）</block>
 </blocks>

@@ -1,0 +1,35 @@
+---
+section: flexpod-dc
+title: FlexPod データセンター
+entries:
+- title: "『 FlexPod Datacenter with VMware vSphere 7.0 』、『 Cisco VXLAN Single-Site
+    Fabric 』、『 NetApp ONTAP 9.7 Design Guide 』"
+  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi70_vxlan_evpn_design.html
+- title: FlexPod Datacenter with VMware vSphere 7.0 and NetApp ONTAP 9.7 』を参照してください
+  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_vmware_vsphere_7_0_ontap_9_7.html
+- title: ONTAP Datacenter with NetApp FlexPod 9.7 、 Cisco Intersight 、 VMware vSphere
+    6.7 U3 設計
+  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_dc_ontap_97_ucs_4_vmw_vs_67_U3_design.html
+- title: ONTAP データセンターと NetApp FlexPod 9.7 、 Cisco Intersight 、 VMware vSphere 6.7
+    U3-Deploy
+  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_dc_ontap_97_ucs_4_vmw_vs_67_U3.html
+- title: "『 FlexPod Datacenter with Cisco Intersight 』と『 NetApp ONTAP 9.7 Design Guide
+    』"
+  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_dc_ontap_97_ucs_4_vmw_vs_67_U3_design.html
+- title: ONTAP データセンターと NetApp FlexPod 9.6 、 Cisco UCS 第 4 世代、 VMware vSphere 6.7U2
+    （ CVD ）
+  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_vmware_netappaffa_u2.html
+- title: FlexPod データセンターと VMware vSphere 6.7 U1 、 Cisco UCS 第 4 世代、および NetApp AFF
+    A シリーズ設計
+  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_vmware_netappaffa_design.html
+- title: FlexPod データセンターと VMware vSphere 6.7 U1 、 Cisco UCS 第 4 世代、および NetApp AFF
+    A シリーズ - Deploy
+  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_vmware_netappaffa.html
+- title: FlexPod 向けエンドツーエンド NVMe の導入
+  url: https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/whitepaper-c11-741907.html
+- title: FlexPod データセンターと Cisco ACI マルチポッド、 NetApp MetroCluster IP 、 VMware vSphere
+    6.7 設計ガイド
+  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi67_n9k_aci_metrocluster_design.html
+- title: FlexPod データセンターと Cisco ACI マルチポッド、 NetApp MetroCluster IP 、 VMware vSphere
+    6.7 導入ガイド
+  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi67_n9k_aci_metrocluster.html

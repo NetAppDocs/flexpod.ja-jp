@@ -38,6 +38,25 @@ entries:
   - title: NetApp AFF A シリーズおよび Cisco UCS Manager 3.2 を使用した、 IP ベースのストレージを備えた解決策 Datacenter
       for SAP FlexPod
     url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_saphana_n9k_aff_ucsm.html
+  - title: ファイバチャネル SAN を使用する FlexPod Datacenter for SAP 解決策 with Cisco UCS Mnager
+      4.0 and NetApp ONTAP 9.7
+    url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_sap_ucsm40_fcsan.html
+  - title: FlexPod with SQL に SAP アプリケーションサーバを導入します
+    url: https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/sap-appservers-flexpod-with-sql.pdf
+  - title: 解決策 Datacenter for SAP FlexPod with Cisco ACI 、 Cisco UCS Manager 4.0 、
+      and NetApp AFF A –シリーズ
+    url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_ACI_sap_netappaffa.html
+  - title: Cisco Container Platform を使用した FlexPod での SAP データハブの導入
+    url: https://www.cisco.com/c/en/us/solutions/collateral/data-center-virtualization/unified-computing/sap-datahub-on-flexpod-with-cisco-container-platform.html
+  - title: 解決策 Datacenter for SAP FlexPod with Cisco ACI 、 Cisco UCS Manager 4.0 、
+      and NetApp AFF A –シリーズ設計ガイド
+    url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_ACI_sap_netappaffa_design.html
+  - title: 解決策 Datacenter for SAP FlexPod with Cisco UCS 3rd Generation and NetApp
+      AFF A – Series 』を参照してください
+    url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_sap_ontap96.html
+  - title: Cisco UCS Manager 4.0 を搭載した解決策 Datacenter for SAP FlexPod と、 ONTAP 9.6
+      を搭載した NetApp AFF A
+    url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_sap_netappaffa_design.html
 - title: Oracle の場合
   entries:
   - title: Cisco UCS 上の Oracle 19C RAC データベースと NVMe over Fibre Channel を使用する NetApp
@@ -48,6 +67,8 @@ entries:
     url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_orc12cr2_affaseries.html
   - title: Oracle Linux 上で Oracle RAC を使用する FlexPod データセンター [Deploy]
     url: http://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_orcrac_12c_bm.html
+  - title: Cisco UCS および NetApp AFF A シリーズ上の FlexPod データセンターと Oracle RAC データベース
+    url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_orc12cr2_affaseries.html
 - title: Microsoft SQL Server の場合
   entries:
   - title: FlexPod Datacenter for Microsoft SQL Server 2019 および VMware vSphere 6.7
@@ -58,4 +79,9 @@ entries:
     url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/mssql2016_flexpod_vmware_cvd.html
   - title: VMware および Hyper-V で実行されている Linux VM 上の FlexPod データセンターと Microsoft SQL
       Server 2017 [ 設計 ]
+    url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/mssql2017_flexpod_linux.html
+  - title: FlexPod Datacenter for Microsoft SQL Server 2019 および VMware vSphere 6.7
+    url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/mssql2019_flexpod.html
+  - title: VMware および Hyper-V で実行されている Linux VM 上の FlexPod Datacenter with Microsoft
+      SQL Server 2017
     url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/mssql2017_flexpod_linux.html
