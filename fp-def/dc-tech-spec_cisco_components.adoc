@@ -65,46 +65,58 @@ Cisco UCS B シリーズブレードサーバには、さまざまな CPU 、メ
 | Cisco UCS B シリーズブレード | パーツ番号 | 技術仕様 
 
 
-| Cisco UCS B200 M5 | UCSB-B2005-M5 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/datasheet-c78-739296.html["Cisco UCS B200 M5 ブレードサーバ"] 
-
-
-| Cisco UCS B480 M5 の場合 | UCSB-B480-M5 | Cisco UCS B480 M5 ブレードサーバ 
+| Cisco UCS B200 M6 | UCSB-B2006-M6 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/datasheet-c78-2368888.html["Cisco UCS B200 M6 ブレードサーバ"] 
 |===
 旧世代の Cisco UCS B シリーズブレードがでサポートされていれば、 FlexPod アーキテクチャで使用できます https://ucshcltool.cloudapps.cisco.com/public/["Cisco UCS ハードウェアおよびソフトウェア互換性リスト"^]。Cisco UCS B シリーズブレードサーバには、有効な SmartNet サポート契約も必要です。
 
 
 
+== Cisco UCS X シリーズシャーシオプション
+
+Cisco UCS X シリーズのコンピューティングノードを使用するには、 Cisco UCS X シリーズシャーシが必要です。次の表では、 Cisco UCS X シリーズシャーシオプションについて説明します。
+
+|===
+| Cisco UCS X シリーズブレード | パーツ番号 | 技術仕様 
+
+
+| Cisco UCS 9508 M6 | UCSX-9508 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/datasheet-c78-2472574.html["Cisco UCX9508 X シリーズシャーシ"] 
+|===
+ファブリックインターコネクトへの冗長接続を提供するには、各 Cisco UCS 9508 シャーシに 2 つの Cisco UCS 9108 Intelligent Fabric Module （ IFM ）が必要です。
+
+
+
+== Cisco UCS X シリーズデバイスのオプション
+
+Cisco UCS X シリーズのコンピューティングノードには、 CPU 、メモリ、 I/O の各種オプションが用意されています。次の表に、ベースノードのパーツ番号を示します。CPU 、メモリ、ドライブ、メザニンアダプタカードは含まれません。FlexPod アーキテクチャでは、複数の構成オプションを使用でき、サポートされています。
+
+|===
+| Cisco UCS X シリーズコンピューティングノード | パーツ番号 | 技術仕様 
+
+
+| Cisco UCS X210c M6 | UCSX-210C - M6 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/datasheet-c78-2465523.html?ccid=cc002456&oid=dstcsm026318["Cisco UCS X210c M6 コンピューティングノード"] 
+|===
+
+
 == Cisco UCS C シリーズラックサーバのオプション
 
-Cisco UCS C シリーズラックサーバには、 1 ラック、 2 ラック、 4 ラックユニット（ RU ）の種類があり、さまざまな CPU 、メモリ、 I/O オプションを備えています。下の 2 番目の表に記載されている部品番号は、ベースサーバー用です。CPU 、メモリ、ドライブ、 Peripheral Component Interconnect Express （ PCIe ）カード、または Cisco Fabric Extender は含まれません。FlexPod アーキテクチャでは、複数の構成オプションを使用でき、サポートされています。
+Cisco UCS C シリーズラックサーバには、 1 ラックユニット（ RU ）と 2 ラックユニット（ RU ）の 2 種類があり、さまざまな CPU 、メモリ、 I/O オプションが用意されています。下の 2 番目の表に記載されている部品番号は、ベースサーバー用です。CPU 、メモリ、ドライブ、 Peripheral Component Interconnect Express （ PCIe ）カード、または Cisco Fabric Extender は含まれません。FlexPod アーキテクチャでは、複数の構成オプションを使用でき、サポートされています。
 
-Cisco UCS C シリーズラックサーバノードを使用するには、次の最初の表に示すように、 Cisco UCS C シリーズシャーシが必要です。
-
-|===
-| Cisco UCS C シリーズシャーシ | パーツ番号 | 技術仕様 
-
-
-| Cisco UCS C4200 | UCSC-C4200-SFF | https://www.cisco.com/c/en/us/products/servers-unified-computing/ucs-c4200-series-rack-server-chassis/index.html["Cisco UCS C4200 シリーズラックサーバシャーシ"] 
-|===
-次の表では、 Cisco UCS CSeries ラックサーバのオプションについて説明します。
+次の表に、 Cisco UCS C シリーズラックサーバのオプションを示します。
 
 |===
 | Cisco UCS C シリーズラックサーバ | パーツ番号 | 技術仕様 
 
 
-| Cisco UCS C220 M5 | UCSC-C220 - M5SN | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c220m5-sff-specsheet.pdf["Cisco UCS C220 M5 ラックサーバ"] 
+| Cisco UCS C220 M6 | UCSC-C220 - M6 | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c220m6-sff-specsheet.pdf["Cisco UCS C220 M6 ラックサーバ"] 
 
 
-| Cisco UCS C240 M5 | UCS-C - C240 - M5S | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c240m5-sff-specsheet.pdf["Cisco UCS C240 M5 ラックサーバ"] 
+| Cisco UCS C225 M6 | UCSC-C225-M6 | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c225-m6-sff-specsheet.pdf["Cisco UCS C225 M6 ラックサーバ"] 
 
 
-| Cisco UCS C480 M5 の場合 | UCSC-C480-M5 | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c480-m5-high-performance-specsheet.pdf["Cisco UCS C480 M5 ラックサーバ"] 
+| Cisco UCS C240 M6 | UCSC-C240 -M6 | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c240m6-sff-specsheet.pdf["Cisco UCS C240 M6 ラックサーバ"] 
 
 
-| Cisco UCS C480 ML M5 | UCSC-C480-M5ML8 | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c480m5-specsheet-ml-m5-server.pdf["Cisco UCS C480 ML M5 ラックサーバ"] 
-
-
-| Cisco UCS C125 M5 | UCSC-C125 | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c125m5-rack-server-node.pdf["Cisco UCS C125 M5 ラックサーバノード"] 
+| Cisco UCS C245 M6 | UCSC-C245-M6 | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c245m6-sff-specsheet.pdf["Cisco UCS C245 M6 ラックサーバ"] 
 |===
 旧世代の Cisco UCS C シリーズサーバは、でサポートされていれば、 FlexPod アーキテクチャで使用できます https://ucshcltool.cloudapps.cisco.com/public/["Cisco UCS ハードウェアおよびソフトウェア互換性リスト"^]。Cisco UCS C シリーズサーバには、有効な SmartNet サポート契約も必要です。
 

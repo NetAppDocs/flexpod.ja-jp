@@ -40,19 +40,18 @@ FlexPod アーキテクチャには、冗長な NetApp FAS 、 AFF 、または 
 
 == クラスタインターコネクトスイッチのオプション
 
-次の表に、 FlexPod アーキテクチャで使用できるネットアップと Cisco Nexus のクラスタインターコネクトスイッチを示します。また、導入する ONTAP のバージョンに互換性がある場合、 ONTAP は、他社製スイッチを含む FlexPod 対応のすべてのクラスタスイッチをサポートします。を参照してください https://hwu.netapp.com/["NetApp Hardware Universe の略"^] で、特定のスイッチモデルの互換性の詳細を確認できます。
+次の表に、 FlexPod アーキテクチャで使用できる Nexus クラスタインターコネクトスイッチを示します。また、導入する ONTAP のバージョンに互換性がある場合、 ONTAP は、他社製スイッチを含む FlexPod 対応のすべてのクラスタスイッチをサポートします。を参照してください https://hwu.netapp.com/["NetApp Hardware Universe の略"^] で、特定のスイッチモデルの互換性の詳細を確認できます。
 
 |===
+
+
 | クラスタインターコネクトスイッチ | 技術仕様 
 
 
-| NetApp CN1610 | https://mysupport.netapp.com/documentation/docweb/index.html?productID=62373&language=en-US["ネットアップのマニュアル： CN1610 スイッチ"] 
-
-
-| Cisco Nexus 3232C | https://mysupport.netapp.com/documentation/docweb/index.html?productID=62619&language=en-US["ネットアップのマニュアル： Cisco Nexus 3232C switches"] 
-
-
 | Cisco Nexus 3132Q-V の 2 つのポートを設定します | https://mysupport.netapp.com/documentation/docweb/index.html?productID=62377&language=en-US["ネットアップのマニュアル： Cisco Nexus 3132Q-V switches"] 
+
+
+| Cisco Nexus 9336C-FX2 | https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336/9336-overview.html["ネットアップのマニュアル： Cisco Nexus 9336C-FX2 switches"] 
 |===
 
 

@@ -71,10 +71,7 @@ summary: 技術仕様は、シャーシ、 FEX 、サーバ、スイッチなど
 | コンポーネント | Cisco UCS データシート 
 
 
-| Cisco UCS B200 M5 | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/b200m5-specsheet.pdf["Cisco UCS B200 M5 ブレードサーバ"] 
-
-
-| Cisco UCS B480 M5 の場合 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/datasheet-c78-739280.html["Cisco UCS B480 M5 ブレードサーバ"] 
+| Cisco UCS B200 M6 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/datasheet-c78-2368888.html["Cisco UCS B200 M6 ブレードサーバ"] 
 |===
 
 
@@ -86,25 +83,70 @@ Cisco UCS C シリーズラックサーバの技術仕様には、プロセッ�
 | コンポーネント | Cisco UCS データシート 
 
 
-| Cisco UCS C220 M5 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/datasheet-c78-739281.html["Cisco UCS C220 M5 ラックサーバ"] 
+| Cisco UCS C220 M6 | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c220m6-sff-specsheet.pdf["Cisco UCS C220 M6 ラックサーバ"] 
 
 
-| Cisco UCS C240 M5 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/datasheet-c78-739279.html["Cisco UCS C240 M5 ラックサーバ"] 
+| Cisco UCS C225 M6 | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c225-m6-sff-specsheet.pdf["Cisco UCS C225 M6 ラックサーバ"] 
 
 
-| Cisco UCS C480 M5 の場合 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/datasheet-c78-739291.html["Cisco UCS C480 M5 ラックサーバ"] 
+| Cisco UCS C240 M6 | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c240m6-sff-specsheet.pdf["Cisco UCS C240 M6 ラックサーバ"] 
 
 
-| Cisco UCS C480 ML M5 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/datasheet-c78-741211.html["Cisco UCS C480 ML M5 ラックサーバ"] 
-
-
-| Cisco UCS C125 M5 | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c125m5-rack-server-node.pdf["Cisco UCS C125 M5 ラックサーバノード"] 
+| Cisco UCS C245 M6 | https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/c245m6-sff-specsheet.pdf["Cisco UCS C245 M6 ラックサーバ"] 
 |===
+
+
+== Cisco UCS X シリーズシャーシ
+
+次の表に示す Cisco UCS X シリーズシャーシの技術仕様には、次のコンポーネントが含まれています。
+
+* ラックユニット数
+* 最大ノード数
+* ユニファイドファブリック機能
+* IFM の I/O ベイの数
+
+
 |===
-| Cisco UCS C シリーズシャーシ | Cisco UCS データシート 
+| コンポーネント | Cisco UCS 9508 X シリーズコンピューティングノードシャーシ 
 
 
-| Cisco UCS C4200 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c4200-series-rack-server-chassis/datasheet-c78-740839.html["Cisco UCS C4200 シリーズラックサーバシャーシ"] 
+| ラックユニット | 7. 
+
+
+| 最大ノード数 | 8. 
+
+
+| ユニファイドファブリックに対応しています | はい。 
+
+
+| IM 用 I/O ベイ | Cisco UCS 9108 Intelligent Fabric Module （ IFM ）用ベイ × 2 
+|===
+詳細については、を参照してください link:https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/datasheet-c78-2472574.html["Cisco UCS X9508 X シリーズシャーシのデータシート"^]。
+
+
+
+== Cisco UCS X シリーズコンピューティングノード
+
+次の表に示す Cisco UCS X シリーズコンピューティングノードの技術仕様には、次のコンポーネントが含まれています。
+
+* プロセッサソケットの数
+* プロセッサのサポート
+* メモリ容量
+* サイズと速度
+* SAN ブートサポート
+* メザニンアダプタスロットの数
+* I/O の最大スループット
+* フォームファクタ
+* シャーシあたりのコンピューティングノードの最大数
+
+
+|===
+
+
+| コンポーネント | Cisco UCS データシート 
+
+
+| Cisco UCS X210c M6 | https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-x-series-modular-system/datasheet-c78-2465523.html?ccid=cc002456&oid=dstcsm026318["Cisco UCS X210c M6 コンピューティングノード"] 
 |===
 
 
@@ -118,19 +160,16 @@ Cisco UCS C シリーズラックサーバの技術仕様には、プロセッ�
 | サーバ | GPU 
 
 
-| Cisco UCS C480 ML M5 | NVIDIA SXM2 V100 32G 
+| Cisco UCS C220 M6 | NVIDIA T4 
 
 
-| Cisco UCS C480 M5 の場合 | NVIDIA V100 （ 16GB / 32GB ） NVIDIA T4 （ 16GB ） 
+| Cisco UCS C225 M6 | NVIDIA T4 
 
 
-| Cisco UCS C240 M5 | NVIDIA V100 （ 16GB / 32GB ） NVIDIA T4 （ 16GB ） 
+| Cisco UCS C240 M6 | NVIDIA Tesla A10 、 A100 
 
 
-| Cisco UCS C220 M5 | NVIDIA T4 （ 16GB ） 
-
-
-| Cisco UCS C125 M5 | NVIDIA T4 （ 16GB ） 
+| Cisco UCS C245 M6 | NVIDIA Tesla A10 、 A100 
 |===
 
 
@@ -319,10 +358,10 @@ SFP モジュールの詳細については、次のリソースを参照して�
 
 === FAS シリーズ
 
-FAS データセンターでは、使用可能な FlexPod ストレージコントローラのすべてのモデルがサポートされます。FAS シリーズのすべてのストレージコントローラの詳細な仕様については、を参照してください https://hwu.netapp.com/["NetApp Hardware Universe の略"^] および次の表に記載されているプラットフォームデータシートを参照してください。
+FAS データセンターでは、使用可能な FlexPod ストレージコントローラのすべてのモデルがサポートされます。FAS シリーズのすべてのストレージコントローラの詳細な仕様については、を参照してください https://hwu.netapp.com/["NetApp Hardware Universe の略"^]。特定の FAS モデルの詳細については、次の表に示すプラットフォーム固有のドキュメントを参照してください。
 
 |===
-| コンポーネント | FAS シリーズコントローラのデータシート 
+| コンポーネント | FAS シリーズコントローラプラットフォームのマニュアル 
 
 
 | FAS9000 シリーズ | https://www.netapp.com/us/media/ds-3810.pdf["FAS9000 シリーズのデータシート"] 
@@ -332,6 +371,9 @@ FAS データセンターでは、使用可能な FlexPod ストレージコン�
 
 
 | FAS8300 シリーズ | https://www.netapp.com/us/media/ds-4020.pdf["FAS8300 シリーズのデータシート"] 
+
+
+| FAS500f シリーズ | https://docs.netapp.com/us-en/ontap-systems/fas500f/index.html["FAS500f シリーズのデータシート"] 
 
 
 | FAS2700 シリーズ | https://www.netapp.com/us/media/ds-3929.pdf["FAS2700 シリーズのデータシート"] 
@@ -346,22 +388,19 @@ FAS データセンターでは、使用可能な FlexPod ストレージコン�
 | コンポーネント | AFF A シリーズコントローラプラットフォームのドキュメント 
 
 
-| NetApp AFF A800 | http://docs.netapp.com/platstor/topic/com.netapp.nav.a800/home.html["AFF A800 プラットフォームのドキュメント"] 
+| NetApp AFF A800 | https://docs.netapp.com/us-en/ontap-systems/a800/index.html["AFF A800 プラットフォームのドキュメント"] 
 
 
-| NetApp AFF A700 | http://docs.netapp.com/platstor/topic/com.netapp.nav.fas9000/home.html["AFF A700 プラットフォームのドキュメント"] 
+| NetApp AFF A700 | https://docs.netapp.com/us-en/ontap-systems/fas9000/index.html["AFF A700 プラットフォームのドキュメント"] 
 
 
-| NetApp AFF A700s | http://docs.netapp.com/platstor/topic/com.netapp.nav.a700s/home.html["AFF A700s プラットフォームのドキュメント"] 
+| NetApp AFF A700s | https://docs.netapp.com/us-en/ontap-systems/a700s/index.html["AFF A700s プラットフォームのドキュメント"] 
 
 
-| NetApp AFF A400 | http://docs.netapp.com/platstor/index.jsp?topic=%2Fcom.netapp.nav.a400%2Fhome.html["AFF A400 プラットフォームのドキュメント"] 
+| NetApp AFF A400 | https://docs.netapp.com/us-en/ontap-systems/a400/index.html["AFF A400 プラットフォームのドキュメント"] 
 
 
-| NetApp AFF A300 | http://docs.netapp.com/platstor/topic/com.netapp.nav.a300/home.html["AFF A300 プラットフォームドキュメント"] 
-
-
-| NetApp AFF A220 | http://docs.netapp.com/platstor/topic/com.netapp.nav.fas2700/home.html["AFF A220 プラットフォームのマニュアル"] 
+| NetApp AFF A250 | https://docs.netapp.com/us-en/ontap-systems/a250/index.html["AFF A250 プラットフォームマニュアル"] 
 |===
 
 
