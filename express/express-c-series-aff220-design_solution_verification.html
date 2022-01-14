@@ -1,0 +1,2675 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head class="at-element-marker">
+  <title>解決策の検証</title>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1">
+  <meta http-equiv="language" content="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="解決策の検証" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://docs.netapp.com/ja-jp/flexpod/express/express-c-series-aff220-design_solution_verification.html" />
+	<meta property="og:description" content="冗長性と可用性から個々の機能に至るまで、 FlexPod Express アーキテクチャ全体が検証され、お客様の信頼を獲得し、設計プロセスに信頼を築きます。" />
+  <meta property="og:image" content="https://docs.netapp.com/ja-jp/flexpod/images/logo-tophat-social.png" />
+  <meta property="og:image:alt" content="NetApp Logo" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="encoding" content="utf-8">
+  <meta http-equiv="nss-type" content="Product Documentation"/>
+  <meta http-equiv="nss-subtype" content="User Guide"/>
+  
+  <meta name="description" content="冗長性と可用性から個々の機能に至るまで、 FlexPod Express アーキテクチャ全体が検証され、お客様の信頼を獲得し、設計プロセスに信頼を築きます。">
+  <meta name="keywords" content=" verification, express">
+  
+  
+
+  <!-- Icons -->
+  <link rel="icon" href="/ja-jp/flexpod/images/favicon.ico" type="image/x-icon">
+
+  <!-- RSS Feed -->
+  
+
+  <!-- CSS Definitions: NetApp CSS should be defined after generic css -->
+
+  <!-- Elastic Search -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/searchkit/0.10.0/theme.css">
+
+  <!-- Controls AsciiDoctor Admonition Blocks -->
+  <link rel="stylesheet" type="text/css" href="/ja-jp/flexpod/css/font-awesome.min.css">
+
+  <!-- Controls the shadow effect for search dropdown menu -->
+  <link rel="stylesheet" href="/ja-jp/flexpod/css/boxshadowproperties.css">
+
+  <!-- NetApp CSS controls the technical content -->
+  <link rel="stylesheet" type="text/css" href="/ja-jp/flexpod/css/netapp.css">
+
+  <!-- WWW CSS Content -->
+  <link rel="stylesheet" type="text/css" href="/ja-jp/flexpod/css/www-luci-dotcom.min.css">
+  <link rel="stylesheet" type="text/css" href="/ja-jp/flexpod/css/www-netapp-dotcom.css">
+  <link rel="stylesheet" href="/ja-jp/flexpod/css/www-netapp-library-critical.min.css" media="all" >
+  <link rel="stylesheet" href="/ja-jp/flexpod/css/www-netapp-library-non-critical.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="stylesheet" href="/ja-jp/flexpod/css/www-netapp-library-global-header-footer.min.css">
+
+  <!-- NetApp IE Customizations -->
+  <link rel="stylesheet" href='/ja-jp/flexpod/css/na-utility.css' type='text/css'>
+  <link rel="stylesheet" href='/ja-jp/flexpod/css/na-sidebar.css' type='text/css'>
+  <link rel='stylesheet' href='/ja-jp/flexpod/css/clouddocs.css' type='text/css'>
+  <link rel='stylesheet' href='/ja-jp/flexpod/css/na-pagenav.css' type='text/css'>
+
+  
+  <link rel="stylesheet" href="/ja-jp/flexpod/css/landing-page.css" type="text/css">
+  <link rel="stylesheet" href="/ja-jp/flexpod/css/tabbed-blocks.css" type="text/css">
+  <link rel="stylesheet" href='/ja-jp/flexpod/css/product-family.css' type="text/css">
+  
+
+  
+  <link rel='stylesheet' href='/ja-jp/flexpod/css/na-feature.css' type='text/css'>
+  
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+  <!-- Used to import Promise for IE. Required for SearchKit -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
+  
+    <script src='/ja-jp/flexpod/js/na-search.js'></script>
+  
+
+  
+  <script src='/ja-jp/flexpod/js/na-pagenav.js'></script>
+  
+
+  <link rel='stylesheet' href='/ja-jp/flexpod/css/prism.css' type='text/css'>
+  <link rel='stylesheet' href='/ja-jp/flexpod/css/prism-netapp.css' type='text/css'>
+
+
+  <script src='/ja-jp/flexpod/js/na-utility.js'></script>
+  <script src='/ja-jp/flexpod/js/clouddocs.js'></script>
+  <script>
+  if (document.location.hostname === "docs.netapp.com") {
+    var head = document.getElementsByTagName('head')[0];
+    var adobe = document.createElement("script");
+    adobe.type = "text/javascript";
+    adobe.src = "//assets.adobedtm.com/60287eadf1ee/c284da483c83/launch-e9ff3acac59f.min.js";
+    head.appendChild(adobe);
+  }
+  </script>
+  <script src='/ja-jp/flexpod/js/jquery.navgoco.min.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src='/ja-jp/flexpod/js/toc.js'></script>
+  <script src='/ja-jp/flexpod/js/customscripts.js'></script>
+
+  <script>
+      $(document).ready(function() {
+          
+          var collapseOnInit = true;
+          
+
+          var navSettings = {
+              "caretHtml": '',
+              "accordion": collapseOnInit,
+              "openClass": 'active', // open
+              "save": false, // leave false or nav highlighting doesn't work right
+              "cookie": {
+                  "name": 'navgoco',
+                  "expires": false,
+                  "path": '/'
+              },
+              "slide": {
+                  "duration": 400,
+                  "easing": 'swing'
+              }
+          };
+
+          // Initialize navgoco with default options
+          $("#mysidebar").navgoco(navSettings);
+          
+
+          $("#collapseAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', false);
+          });
+
+          $("#expandAll").click(function(e) {
+              e.preventDefault();
+              $("#mysidebar").navgoco('toggle', true);
+          });
+
+      });
+
+  </script>
+  <script>
+      $(document).ready(function() {
+          $("#tg-sb-link").click(function() {
+              $("#tg-sb-sidebar").toggle();
+              $("#tg-sb-content").toggleClass('col-md-9');
+              $("#tg-sb-content").toggleClass('col-md-12');
+              $("#tg-sb-icon").toggleClass('fa-toggle-on');
+              $("#tg-sb-icon").toggleClass('fa-toggle-off');
+          });
+      });
+  </script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-81697994-3"></script>
+  <script>
+  if (document.location.hostname === "docs.netapp.com") {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-81697994-3');
+  }
+  </script>
+  <script src='/ja-jp/flexpod/js/version-dropdown.js'></script>
+  <script src='/ja-jp/flexpod/js/product-family.js'></script>
+  <script src='/ja-jp/flexpod/js/FileSaver.min.js'></script>
+  <script src='/ja-jp/flexpod/js/jszip-utils.min.js'></script>
+  <script src='/ja-jp/flexpod/js/jszip.min.js'></script>
+  <script src='/ja-jp/flexpod/js/pdf-ux.js'></script>
+</head>
+
+
+  <body class role="document">
+    <div id="page" class="n-off-canvas-menu">
+      <div class="n-off-canvas-menu__menu"><!--TODO: Add offcanvas code --></div>
+      <div class="n-off-canvas-menu__content-wrap">
+        <header class="site-header" id="banner">
+  <!-- Start top_hat -->
+  <div class="n-top-hat">
+    <div class="n-container">
+      <div class="n-top-hat__cross-property-nav">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/products-a-z/" class="n-top-hat__link">製品とソリューション</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/support-and-training/netapp-university/" class="n-top-hat__link">サポートとトレーニング</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://cloud.netapp.com" class="n-top-hat__link">Cloud Central</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://community.netapp.com/" class="n-top-hat__link">コミュニティ</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://blog.netapp.com/" class="n-top-hat__link">ブログ</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://customers.netapp.com/en/" class="n-top-hat__link">ユーザ事例</a>
+          </li>
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">お問い合わせ</a>
+          </li>
+        </ul>
+      </div>
+      <div class="n-top-hat__utils">
+        <ul class="n-top-hat__list">
+          <li class="n-top-hat__list-item">
+            <a href="https://www.netapp.com/us/contact-us/index.aspx" target="_self" class="n-top-hat__link" data-ntap-ui="contact-us">お問い合わせ</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End top_hat -->
+
+  <!-- Start property bar -->
+  <style>
+    .n-property-navigation-bar__menus--desktop-experience .n-menu--mega__default-content__heading span {
+    color: #34B0FF;
+    }
+  </style>
+  <div class="n-property-bar " data-ntap-ui="sticky-nav">
+    <div class="n-property-bar__inner-wrap">
+      <div class="n-property-bar__menu-toggle">
+        <a href="#" class="n-property-bar__menu-toggle-link">
+          <span class="n-property-bar__menu-toggle-text">Menu</span>
+          <svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
+            <title>bars</title>
+            <use xlink:href="/ja-jp/flexpod/common/svg/sprite.svg#bars"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="n-property-bar__property-mark ">
+        <a href="https://www.netapp.com" class="n-property-bar__property-link">
+          <div class="n-property-bar__logo">
+            <svg class="n-icon-netapp-mark n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
+              <title>netapp-mark</title>
+              <use xlink:href="/ja-jp/flexpod/common/svg/sprite.svg#netapp-mark"></use>
+            </svg>
+            <svg class="n-icon-netapp-logo n-property-bar__logo-svg" aria-labelledby="title">
+              <title>netapp-logo</title>
+              <use xlink:href="/ja-jp/flexpod/common/svg/sprite.svg#netapp-logo"></use>
+            </svg>
+          </div>
+        </a>
+      </div>
+
+      
+      <div class="search-property-bar">
+        <div id="search-demo-container" class="searchbox n-property-bar__search">
+          <div id="react-search" 
+          data-search-html="/ja-jp/flexpod/search.html"
+          data-type="widget" 
+          data-placeholder="ドキュメントを検索" 
+          data-no-results-found="{query}に該当する結果はありません" 
+          data-did-you-mean="{suggestion} を検索" 
+          data-no-results-found-did-you-mean="{query} に該当する結果はありません。{suggestion} の間違いではありませんか?" 
+          data-results-found="{hitCount} 件見つかりました"  
+          data-sk-es-pf-indexes=""></div>
+          <button class="n-property-bar__search-toggle-button" type="button">
+            <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
+              <title>search</title>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ja-jp/flexpod/common/svg/sprite.svg#search"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="n-property-bar__toolbar">
+    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
+      <div id="ie-i18n-menu">
+      <span class="ie-i18n-lang">日本語</span>
+        <button class="ie-i18n-icon-container" type="button">
+          <svg class="n-globe__icon" aria-labelledby="title">
+            <title>globe</title>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ja-jp/flexpod/common/svg/sprite.svg#globe"></use>
+          </svg>
+        </button>
+      </div>
+      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
+        <div class="n-language-selector-menu">
+          <ul class="n-menu__list">
+            <li class="n-menu__list-column">
+              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/ja-jp/flexpod/express/express-c-series-aff220-design_solution_verification.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/us-en/flexpod/express/express-c-series-aff220-design_solution_verification.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
+                </li><li class="n-menu__list-item n-menu__list-item--level-1">
+                  <a href="https://docs.netapp.com/zh-cn/flexpod/express/express-c-series-aff220-design_solution_verification.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
+                </li></ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- End Language Selector -->
+
+    <div class="n-property-bar__cta"></div>
+  </div>
+  <script>
+    $(function(){
+        var currentLocalization = $('html').attr('lang');
+
+        var localizationsDictionary = {
+            "en-CA" : "https://www.netapp.com/search/index.aspx?for_cr=canada&",
+            "en-IN" : "https://www.netapp.com/search/index.aspx?for_cr=india&",
+            "nl-NL" : "https://www.netapp.com/search/index.aspx?for_cr=netherlands&",
+            "ru-RU" : "https://www.netapp.com/search/index.aspx?for_cr=russia&",
+            "sv-SE" : "https://www.netapp.com/search/index.aspx?for_cr=sweden&",
+            "it-IT" : "https://www.netapp.com/search/index.aspx?for_cr=italy&",
+            "he-IL" : "https://www.netapp.com/search/index.aspx?for_cr=israel&",
+            "ko-KR" : "https://www.netapp.com/search/index.aspx?for_cr=korea&",
+            "zh-TW" : "https://www.netapp.com/search/index.aspx?for_cr=taiwan&",
+            "en-GB" : "https://www.netapp.com/search/index.aspx?for_cr=unitedkingdom&",
+            "en-SG" : "https://www.netapp.com/search/index.aspx?for_cr=asean&",
+            "en-AU" : "https://www.netapp.com/search/index.aspx?for_cr=australia&",
+            "pt-BR" : "https://www.netapp.com/search/index.aspx?for_cr=brasil&",
+            "de-CH" : "https://www.netapp.com/search/index.aspx?for_cr=switzerland&",
+            "es-MX" : "https://www.netapp.com/search/index.aspx?for_cr=mexico&"
+        };
+
+        if($('html').hasClass('ntap-whitelisted') && localizationsDictionary.hasOwnProperty(currentLocalization)) {
+            $('.n-property-bar__property-link').attr('href', '/');
+        }
+    });
+  </script>
+  <!-- End property bar -->
+</header>
+
+
+        <main id="n-main-content" class="n-main-content">
+          <!-- Start Documentation Content -->
+<div class="ie-main">
+  <!-- Sidebar Column -->
+  
+  <div class="col-md-3" >
+      <div class="n-pdf-header">
+  <a id="toggleButtonPdf" class="n-pdf-button" type="button">
+    <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>利用可能なPDF<span>
+    </span>
+  </a>
+</div>
+<div class="n-pdf-body-container">
+  <ul id="toggleContainerPdf" class="n-pdf-body" style="display:none;"><li class="pdf-ux-container">
+        <a target="_blank" href="/ja-jp/flexpod/pdfs/fullsite-sidebar/FlexPod_ソリューション.pdf" >
+          <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>このドキュメントサイトのPDF</a>
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/flexpod/pdfs/sidebar/FlexPod_の定義.pdf" 
+            
+          >
+            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            FlexPod の定義
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/flexpod/pdfs/sidebar/FlexPod_Express_技術仕様.pdf" 
+            
+          >
+            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            FlexPod Express 技術仕様
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/flexpod/pdfs/sidebar/FlexPod_データセンター技術仕様.pdf" 
+            
+          >
+            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            FlexPod データセンター技術仕様
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/flexpod/pdfs/sidebar/FlexPod_データセンター.pdf" 
+            
+          >
+            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            FlexPod データセンター
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/flexpod/pdfs/sidebar/ハイブリッドクラウド.pdf" 
+            
+          >
+            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            ハイブリッドクラウド
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/flexpod/pdfs/sidebar/NetApp_Cloud_Insights_for_FlexPod_の略.pdf" 
+            
+          >
+            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            NetApp Cloud Insights for FlexPod の略
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/flexpod/pdfs/sidebar/FabricPool_with_FlexPod___Amazon_AWS_S3_への非アクティブなデータ階層化.pdf" 
+            
+          >
+            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            FabricPool with FlexPod - Amazon AWS S3 への非アクティブなデータ階層化
+          </a>
+          
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/flexpod/pdfs/sidebar/設定.pdf" 
+            
+          >
+            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            設定
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/flexpod/pdfs/sidebar/エンタープライズデータベース.pdf" 
+            
+          >
+            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            エンタープライズデータベース
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/flexpod/pdfs/sidebar/SAP.pdf" 
+            
+          >
+            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            SAP
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/flexpod/pdfs/sidebar/Oracle_の場合.pdf" 
+            
+          >
+            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            Oracle の場合
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/flexpod/pdfs/sidebar/Microsoft_SQL_Server_の場合.pdf" 
+            
+          >
+            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            Microsoft SQL Server の場合
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/flexpod/pdfs/sidebar/医療機関.pdf" 
+            
+          >
+            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            医療機関
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/flexpod/pdfs/sidebar/ゲノム解析のための_FlexPod.pdf" 
+            
+          >
+            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            ゲノム解析のための FlexPod
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/flexpod/pdfs/sidebar/FlexPod_Datacenter_for_Epic_Directional_Sizing_Guide__を参照してください.pdf" 
+            
+          >
+            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            FlexPod Datacenter for Epic Directional Sizing Guide 』を参照してください
+          </a>
+          
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/flexpod/pdfs/sidebar/リファレンスアーキテクチャ.pdf" 
+            
+          >
+            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            リファレンスアーキテクチャ
+          </a>
+          
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/flexpod/pdfs/sidebar/Epic_EHR_向け_FlexPod_データセンター導入ガイド.pdf" 
+            
+          >
+            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            Epic EHR 向け FlexPod データセンター導入ガイド
+          </a>
+          
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/flexpod/pdfs/sidebar/導入と設定.pdf" 
+            
+          >
+            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            導入と設定
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/flexpod/pdfs/sidebar/Epic_Performance_Testing_向け_FlexPod.pdf" 
+            
+          >
+            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            Epic Performance Testing 向け FlexPod
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/flexpod/pdfs/sidebar/FlexPod_for_MEDITECH_の指向性サイジングガイド.pdf" 
+            
+          >
+            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            FlexPod for MEDITECH の指向性サイジングガイド
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/flexpod/pdfs/sidebar/FlexPod_Datacenter_for_MEDITECH_導入ガイド.pdf" 
+            
+          >
+            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            FlexPod Datacenter for MEDITECH 導入ガイド
+          </a>
+          
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/flexpod/pdfs/sidebar/導入と設定.pdf" 
+            
+          >
+            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            導入と設定
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/flexpod/pdfs/sidebar/FlexPod_for_Medical_Imaging_の略.pdf" 
+            
+          >
+            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            FlexPod for Medical Imaging の略
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/flexpod/pdfs/sidebar/仮想デスクトップインフラ.pdf" 
+            
+          >
+            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            仮想デスクトップインフラ
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/flexpod/pdfs/sidebar/最新のアプリケーション.pdf" 
+            
+          >
+            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            最新のアプリケーション
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/flexpod/pdfs/sidebar/Microsoft_アプリケーション.pdf" 
+            
+          >
+            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            Microsoft アプリケーション
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/flexpod/pdfs/sidebar/FlexPod_エクスプレスの略.pdf" 
+            
+          >
+            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            FlexPod エクスプレスの略
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/flexpod/pdfs/sidebar/FlexPod_Express_with_Cisco_UCS_C_シリーズおよび_NetApp_AFF_C190_シリーズ設計ガイド.pdf" 
+            
+          >
+            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            FlexPod Express with Cisco UCS C シリーズおよび NetApp AFF C190 シリーズ設計ガイド
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/flexpod/pdfs/sidebar/FlexPod_Express_with_Cisco_UCS_C_シリーズおよび_NetApp_AFF_C190_シリーズ導入ガイド.pdf" 
+            
+          >
+            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            FlexPod Express with Cisco UCS C シリーズおよび NetApp AFF C190 シリーズ導入ガイド
+          </a>
+          
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/flexpod/pdfs/sidebar/導入手順.pdf" 
+            
+          >
+            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            導入手順
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/flexpod/pdfs/sidebar/FlexPod_Express_with_Cisco_UCS_C_シリーズおよび_AFF_A220_シリーズ設計ガイド.pdf" 
+            
+          >
+            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            FlexPod Express with Cisco UCS C シリーズおよび AFF A220 シリーズ設計ガイド
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+    <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
+  <a target="_blank" href="/ja-jp/flexpod/pdfs/pages/express/express-c-series-aff220-design_solution_verification.pdf" >
+    <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+    PDF of this page
+  </a>
+</li>
+
+</ul>
+  
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/flexpod/pdfs/sidebar/__FlexPod_Express_with_Cisco_UCS_C_Series_and_AFF_A220_Series_Deployment_Guide__.pdf" 
+            
+          >
+            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            『 FlexPod Express with Cisco UCS C Series and AFF A220 Series Deployment Guide 』
+          </a>
+          
+
+
+
+
+
+
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/flexpod/pdfs/sidebar/導入手順.pdf" 
+            
+          >
+            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            導入手順
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/flexpod/pdfs/sidebar/FlexPod_Express_with_VMware_vSphere_6_7U1_and_NetApp_AFF_A220_with_Direct_Attached_IP_Based_Storage_Design_Guide__.pdf" 
+            
+          >
+            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            FlexPod Express with VMware vSphere 6.7U1 and NetApp AFF A220 with Direct-Attached IP Based Storage Design Guide 』
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/flexpod/pdfs/sidebar/FlexPod_Express_と_VMware_vSphere_6_7U1__および直接接続型の_IP_ベースストレージを搭載した_NetApp_AFF_A220.pdf" 
+            
+          >
+            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            FlexPod Express と VMware vSphere 6.7U1 、および直接接続型の IP ベースストレージを搭載した NetApp AFF A220
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/flexpod/pdfs/sidebar/FlexPod_とセキュリティ.pdf" 
+            
+          >
+            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            FlexPod とセキュリティ
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/flexpod/pdfs/sidebar/解決策__FlexPod_によるランサムウェア対策.pdf" 
+            
+          >
+            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            解決策、 FlexPod によるランサムウェア対策
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/flexpod/pdfs/sidebar/Cisco_Intersight_と_NetApp_ONTAP_ストレージクイックスタートガイド.pdf" 
+            
+          >
+            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            Cisco Intersight と NetApp ONTAP ストレージクイックスタートガイド
+          </a>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/flexpod/pdfs/sidebar/インフラ.pdf" 
+            
+          >
+            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            インフラ
+          </a>
+          
+
+    
+      <ul class="subfolders" style="display:none;">
+        <li class="pdf-ux-container">
+          <a target="_blank" 
+            
+              href="/ja-jp/flexpod/pdfs/sidebar/Cisco_UCSM___VMware_vSphere_7_0__および_NetApp_ONTAP_9_を使用した_FlexPod_向けのエンドツーエンド_NVMe.pdf" 
+            
+          >
+            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            Cisco UCSM 、 VMware vSphere 7.0 、および NetApp ONTAP 9 を使用した FlexPod 向けのエンドツーエンド NVMe
+          </a>
+          
+
+
+
+
+
+
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+
+          
+        </li>
+      </ul>
+    
+
+  
+
+
+</li></ul>
+  <div class="zip-pdf-link-container" style="display: none;">   
+    <a href="#" id="zipPdf">
+      <img src="/ja-jp/flexpod/images/pdf-zip.png" width="16" height="16"/>
+      <pre>個別のPDFドキュメントのコレクション<span class="zip-size"></span></pre>
+    </a><div id="zip-link-popup" class="hide">
+    <div class="inner-modal">
+        <div class="downloading-progress">
+            <div class="spinner"></div>
+            <h1>Creating your file...</h1>
+            <div>This may take a few minutes. Thanks for your patience.</div>
+            <button class="cancel-download-btn" type="button">Cancel</button>
+        </div>
+        <div class="download-complete hide">
+            <div class="done-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+            </div>
+            <div>Your file is ready</div>
+            <button class="cancel-download-btn" type="button">OK</button>
+        </div>
+    </div>
+</div>
+<script>
+    $(".cancel-download-btn").click(function(){
+        $("#zip-link-popup").addClass("hide");
+        $("#zip-link-popup .downloading-progress").removeClass("hide");
+        $("#zip-link-popup .download-complete").addClass("hide");
+    });
+</script></div>
+</div>
+<script>
+  $("#toggleContainerPdf li.active:last-child").parents('ul.subfolders').toggle('display');
+  $("#toggleButtonPdf").click(function () {
+    $("#toggleContainerPdf").toggle('display');
+    $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
+  });
+</script><div class="sidebar-nav-container">
+  <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/index.html">
+        FlexPod ソリューションのドキュメント
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> FlexPod の定義</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> FlexPod Express 技術仕様</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/fp-def/fp-express-tech-spec_overview.html">
+        概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/fp-def/fp-express-tech-spec_flexpod_platforms.html">
+        FlexPod プラットフォーム
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/fp-def/fp-express-tech-spec_flexpod_rules.html">
+        FlexPod ルール
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/fp-def/fp-express-tech-spec_supported_versus_validated_flexpod_configurations.html">
+        サポートされる FlexPod 構成と検証済み 構成の比較
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/fp-def/fp-express-tech-spec_storage_software.html">
+        ストレージソフトウェア
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/fp-def/fp-express-tech-spec_minimum_hardware_requirements.html">
+        最小ハードウェア要件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/fp-def/fp-express-tech-spec_minimum_software_requirements.html">
+        最小ソフトウェア要件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/fp-def/fp-express-tech-spec_connectivity_requirements.html">
+        接続要件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/fp-def/fp-express-tech-spec_other_requirements.html">
+        その他の要件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/fp-def/fp-express-tech-spec__optional_features.html">
+        オプション機能
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/fp-def/fp-express-tech-spec__cisco_components.html">
+        Cisco コンポーネント
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/fp-def/fp-express-tech-spec__netapp_components.html">
+        ネットアップのコンポーネント
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/fp-def/fp-express-tech-spec__power_and_cabling_requirements.html">
+        電源およびケーブルの要件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/fp-def/fp-express-tech-spec__technical_specifications_and_references.html">
+        技術仕様と参考資料
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/fp-def/fp-express-tech-spec__previous_architectures_and_equipment.html">
+        従来のアーキテクチャと機器
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/fp-def/fp-express-tech-spec_legacy_equipment.html">
+        レガシー機器
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/fp-def/fp-express-tech-spec_additional_information.html">
+        追加情報
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> FlexPod データセンター技術仕様</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/fp-def/dc-tech-spec_solution_overview.html">
+        概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/fp-def/dc-tech-spec_flexpod_platforms.html">
+        FlexPod プラットフォーム
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/fp-def/dc-tech-spec_flexpod_rules.html">
+        FlexPod ルール
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/fp-def/dc-tech-spec_supported_versus_validated_flexpod_configurations.html">
+        サポート対象の FlexPod 構成と検証済みの 構成の比較
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/fp-def/dc-tech-spec_netapp_ontap.html">
+        NetApp ONTAP
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/fp-def/dc-tech-spec_cisco_nexus_switching_modes_of_operation.html">
+        Cisco Nexus スイッチング動作モード
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/fp-def/dc-tech-spec_minimum_hardware_requirements.html">
+        ハードウェアの最小要件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/fp-def/dc-tech-spec_minimum_software_requirements.html">
+        ソフトウェアの最小要件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/fp-def/dc-tech-spec_connectivity_requirements.html">
+        接続要件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/fp-def/dc-tech-spec_other_requirements.html">
+        その他の要件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/fp-def/dc-tech-spec_optional_features.html">
+        オプション機能
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/fp-def/dc-tech-spec_cisco_components.html">
+        シスコのコンポーネント
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/fp-def/dc-tech-spec_netapp_components.html">
+        NetApp コンポーネント
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/fp-def/dc-tech-spec_power_and_cabling_requirements.html">
+        電源とケーブル接続の要件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/fp-def/dc-tech-spec_technical_specifications_and_references.html">
+        技術仕様および参考資料
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/fp-def/dc-tech-spec_legacy_equipment.html">
+        レガシー機器
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/fp-def/dc-tech-spec_where_to_find_additional_information.html">
+        追加情報の参照先
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> FlexPod データセンター</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi70_vxlan_evpn_design.html">
+        『 FlexPod Datacenter with VMware vSphere 7.0 』、『 Cisco VXLAN Single-Site Fabric 』、『 NetApp ONTAP 9.7 Design Guide 』
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_vmware_vsphere_7_0_ontap_9_7.html">
+        FlexPod Datacenter with VMware vSphere 7.0 and NetApp ONTAP 9.7 』を参照してください
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_dc_ontap_97_ucs_4_vmw_vs_67_U3_design.html">
+        ONTAP Datacenter with NetApp FlexPod 9.7 、 Cisco Intersight 、 VMware vSphere 6.7 U3 設計
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_dc_ontap_97_ucs_4_vmw_vs_67_U3.html">
+        ONTAP データセンターと NetApp FlexPod 9.7 、 Cisco Intersight 、 VMware vSphere 6.7 U3-Deploy
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_dc_ontap_97_ucs_4_vmw_vs_67_U3_design.html">
+        『 FlexPod Datacenter with Cisco Intersight 』と『 NetApp ONTAP 9.7 Design Guide 』
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_vmware_netappaffa_u2.html">
+        ONTAP データセンターと NetApp FlexPod 9.6 、 Cisco UCS 第 4 世代、 VMware vSphere 6.7U2 （ CVD ）
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_vmware_netappaffa_design.html">
+        FlexPod データセンターと VMware vSphere 6.7 U1 、 Cisco UCS 第 4 世代、および NetApp AFF A シリーズ設計
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_vmware_netappaffa.html">
+        FlexPod データセンターと VMware vSphere 6.7 U1 、 Cisco UCS 第 4 世代、および NetApp AFF A シリーズ - Deploy
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/whitepaper-c11-741907.html">
+        FlexPod 向けエンドツーエンド NVMe の導入
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi67_n9k_aci_metrocluster_design.html">
+        FlexPod データセンターと Cisco ACI マルチポッド、 NetApp MetroCluster IP 、 VMware vSphere 6.7 設計ガイド
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi67_n9k_aci_metrocluster.html">
+        FlexPod データセンターと Cisco ACI マルチポッド、 NetApp MetroCluster IP 、 VMware vSphere 6.7 導入ガイド
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> ハイブリッドクラウド</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> NetApp Cloud Insights for FlexPod の略</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/hybrid-cloud/cloud-insights_netapp_cloud_insights_for_flexpod.html">
+        概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/hybrid-cloud/cloud-insights_use_cases.html">
+        ユースケース
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/hybrid-cloud/cloud-insights_architecture.html">
+        アーキテクチャ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/hybrid-cloud/cloud-insights_design_considerations.html">
+        設計上の考慮事項
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/hybrid-cloud/cloud-insights_deploy_cloud_insights_for_flexpod.html">
+        Cloud Insights for FlexPod を導入します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/hybrid-cloud/cloud-insights_use_cases_01.html">
+        ユースケース
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/hybrid-cloud/cloud-insights_videos_and_demos.html">
+        ビデオとデモ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/hybrid-cloud/cloud-insights_additional_information.html">
+        追加情報
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> FabricPool with FlexPod - Amazon AWS S3 への非アクティブなデータ階層化</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/hybrid-cloud/cloud-fabricpool_introduction.html">
+        概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/hybrid-cloud/cloud-fabricpool_flexpod_overview_and_architecture.html">
+        FlexPod の概要とアーキテクチャ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/hybrid-cloud/cloud-fabricpool_fabricpool.html">
+        FabricPool
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/hybrid-cloud/cloud-fabricpool_fabricpool_requirements.html">
+        FabricPool の要件
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 設定</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/hybrid-cloud/cloud-fabricpool_software_revisions.html">
+        FabricPool ソフトウェアのリビジョン
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/hybrid-cloud/cloud-fabricpool_install_fabricpool_license.html">
+        FabricPool ライセンスをインストールする
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/hybrid-cloud/cloud-fabricpool_create_aws_s3_bucket.html">
+        AWS S3 バケットを作成する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/hybrid-cloud/cloud-fabricpool_add_a_cloud_tier_to_ontap.html">
+        ONTAP にクラウド階層を追加します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/hybrid-cloud/cloud-fabricpool_attach_a_cloud_tier_to_an_ontap_aggregate.html">
+        ONTAP アグリゲートにクラウド階層を接続する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/hybrid-cloud/cloud-fabricpool_set_volume_tiering_policy.html">
+        ボリューム階層化ポリシーを設定します
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/hybrid-cloud/cloud-fabricpool_set_volume_tiering_minimum_cooling_days.html">
+        ボリューム階層化の最小クーリング日数を設定します
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/hybrid-cloud/cloud-fabricpool_performance_considerations.html">
+        パフォーマンスに関する考慮事項
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/hybrid-cloud/cloud-fabricpool_cost_of_ownership.html">
+        所有コスト
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/hybrid-cloud/cloud-fabricpool_conclusion.html">
+        まとめ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/hybrid-cloud/cloud-fabricpool_where_to_find_additional_information.html">
+        追加情報の参照先
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_icp_ucsm32.html">
+        ONTAP データセンターと Cisco UCS Manager 、 NetApp AFF 9.3 FlexPod 、および VMware vSphere 6.5U1 [ 設計 ]
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/whitepaper-c11-740803.pdf">
+        Apprenda 8.2 、 Cisco ACI 3.1 、 Kubernetes 1.9.4 を搭載したプラットフォームサービス向け FlexPod データセンター [ 設計 ]
+      </a></li><li class=" "><a class="na-navbar-padding" href="http://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_hybridcloud_design.html">
+        Cisco CloudCenter とネットアッププライベートストレージを使用したハイブリッドクラウド向け FlexPod データセンター [ 設計
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_hybridcloud.html">
+        Cisco CloudCenter とネットアッププライベートストレージを使用したハイブリッドクラウド向け FlexPod データセンター [ 導入 ]
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> エンタープライズデータベース</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> SAP</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/ent-db/index.html">
+        SAP with FlexPod の概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_sap_ucsm40_fcsan.html">
+        SAP HANA FC SAN に関する CVD [ 導入 ]
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/sap-appservers-flexpod-with-sql.pdf">
+        SAP HANA with SQL ホワイトペーパー（ WP ） [ 設計 ]
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_sap_ontap96.html">
+        解決策 Datacenter for SAP FlexPod with Cisco UCS 3rd Generation and NetApp AFF A –シリーズ [ 設計 ]
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_sap_ucsm40_fcsan_design.html">
+        ファイバチャネル SAN と Cisco UCS Manager 4.0 および NetApp ONTAP 9.7 を使用する解決策 Datacenter for SAP FlexPod [ 設計 ]
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/solutions/collateral/data-center-virtualization/unified-computing/sap-datahub-on-flexpod-with-cisco-container-platform.html">
+        『 Deploy SAP Data Hub on FlexPod with Cisco Container Platform 』（ホワイトペーパー）
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_ACI_sap_netappaffa_design.html">
+        解決策 Datacenter for SAP FlexPod with Cisco ACI 、 Cisco UCS Manager 4.0 、 and NetApp AFF A –シリーズ [ 設計 ]
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_ACI_sap_netappaffa.html">
+        解決策 Datacenter for SAP FlexPod with Cisco ACI 、 Cisco UCS Manager 4.0 、 and NetApp AFF A –シリーズ [Deploy]
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_sap_netappaffa_design.html">
+        Cisco UCS Manager 4.0 を使用した解決策 Datacenter for SAP FlexPod と ONTAP 9.6 （ CVD ）を使用した NetApp AFF A [ 設計 ]
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/solutions/collateral/data-center-virtualization/unified-computing/flexpod-oracle-database-sap-app-servers.html">
+        『 SAP Application Servers on FlexPod with Oracle Database and Cisco UCS and NetApp AFF 』（ホワイトペーパー）
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/dam/en/us/solutions/collateral/data-center-virtualization/unified-computing/whitepaper-c11-741878.pdf">
+        FlexPod データセンターでの仮想 SAP HANA - 設計時の考慮事項とベストプラクティス（ホワイトペーパー）
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_saphana_aci_UCSM32.html">
+        Cisco UCS Manager 3.2 と Cisco Application Centric Infrastructure （ ACI ）を使用した SAP 解決策向け FlexPod データセンター [ 設計 ]
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_saphana_n9k_aff_ucsm.html">
+        NetApp AFF A シリーズおよび Cisco UCS Manager 3.2 を使用した、 IP ベースのストレージを備えた解決策 Datacenter for SAP FlexPod
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_sap_ucsm40_fcsan.html">
+        ファイバチャネル SAN を使用する FlexPod Datacenter for SAP 解決策 with Cisco UCS Mnager 4.0 and NetApp ONTAP 9.7
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/sap-appservers-flexpod-with-sql.pdf">
+        FlexPod with SQL に SAP アプリケーションサーバを導入します
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_ACI_sap_netappaffa.html">
+        解決策 Datacenter for SAP FlexPod with Cisco ACI 、 Cisco UCS Manager 4.0 、 and NetApp AFF A –シリーズ
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/solutions/collateral/data-center-virtualization/unified-computing/sap-datahub-on-flexpod-with-cisco-container-platform.html">
+        Cisco Container Platform を使用した FlexPod での SAP データハブの導入
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_ACI_sap_netappaffa_design.html">
+        解決策 Datacenter for SAP FlexPod with Cisco ACI 、 Cisco UCS Manager 4.0 、 and NetApp AFF A –シリーズ設計ガイド
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_sap_ontap96.html">
+        解決策 Datacenter for SAP FlexPod with Cisco UCS 3rd Generation and NetApp AFF A – Series 』を参照してください
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_sap_netappaffa_design.html">
+        Cisco UCS Manager 4.0 を搭載した解決策 Datacenter for SAP FlexPod と、 ONTAP 9.6 を搭載した NetApp AFF A
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Oracle の場合</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_oracle_ucs_m5.html">
+        Cisco UCS 上の Oracle 19C RAC データベースと NVMe over Fibre Channel を使用する NetApp AFF を使用した FlexPod データセンター [Deploy]
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_orc12cr2_affaseries.html">
+        Cisco UCS および NetApp AFF A シリーズ上の Oracle RAC データベースを使用する FlexPod データセンター [ 設計 ]
+      </a></li><li class=" "><a class="na-navbar-padding" href="http://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_orcrac_12c_bm.html">
+        Oracle Linux 上で Oracle RAC を使用する FlexPod データセンター [Deploy]
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_orc12cr2_affaseries.html">
+        Cisco UCS および NetApp AFF A シリーズ上の FlexPod データセンターと Oracle RAC データベース
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Microsoft SQL Server の場合</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/mssql2019_flexpod.html">
+        FlexPod Datacenter for Microsoft SQL Server 2019 および VMware vSphere 6.7 [ 設計 ]
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/mssql2016_flexpod_vmware_cvd.html">
+        FlexPod Datacenter with Microsoft SQL Server 2016 and VMware vSphere 6.5 」を参照してください
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/mssql2017_flexpod_linux.html">
+        VMware および Hyper-V で実行されている Linux VM 上の FlexPod データセンターと Microsoft SQL Server 2017 [ 設計 ]
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/mssql2019_flexpod.html">
+        FlexPod Datacenter for Microsoft SQL Server 2019 および VMware vSphere 6.7
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/mssql2017_flexpod_linux.html">
+        VMware および Hyper-V で実行されている Linux VM 上の FlexPod Datacenter with Microsoft SQL Server 2017
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 医療機関</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> ゲノム解析のための FlexPod</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/flexpod-genomics-introduction.html">
+        はじめに
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/flexpod-genomics-benefits-of-deploying-genomic-workloads-on-flexpod.html">
+        ゲノムワークロードを FlexPod に導入するメリット
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/flexpod-genomics-solution-infrastructure-hardware-and-software-components.html">
+        解決策インフラのハードウェアコンポーネントとソフトウェアコンポーネント
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/flexpod-genomics-genomics---gatk-setup-and-execution.html">
+        ゲノム - GATK のセットアップと実行
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/flexpod-genomics-appendix-a.html">
+        jar ファイルを使用して GATK を実行するための出力
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/flexpod-genomics-appendix-b.html">
+        ./GATK スクリプトを使用して GATK を実行するための出力
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/flexpod-genomics-appendix-c.html">
+        クロムウェルエンジンを使用した GATK 実行用出力
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/flexpod-genomics-appendix-d-gpu-setup.html">
+        GPU セットアップ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/flexpod-genomics-conclusion.html">
+        まとめ
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> FlexPod Datacenter for Epic Directional Sizing Guide 』を参照してください</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/ehr-epic-sizing_introduction.html">
+        概要
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> リファレンスアーキテクチャ</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/ehr-epic-sizing_netapp_storage_reference_architectures_for_epic.html">
+        Epic に対応したネットアップストレージリファレンスアーキテクチャ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/ehr-epic-sizing_cisco_ucs_reference_architecture_for_epic.html">
+        Epic に対応した Cisco UCS リファレンスアーキテクチャ
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/ehr-epic-sizing_technical_specifications_for_small,_medium,_and_large_architectures.html">
+        小規模、中規模、大規模アーキテクチャの技術仕様
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/ehr-epic-sizing_additional_information.html">
+        追加情報
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/ehr-epic-sizing_acknowledgements.html">
+        謝辞
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Epic EHR 向け FlexPod データセンター導入ガイド</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/ehr-epic-deploy_overview.html">
+        概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/ehr-epic-deploy_design.html">
+        設計
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 導入と設定</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/ehr-epic-deploy_deployment_and_configuration_overview.html">
+        概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/ehr-epic-deploy_infrastructure_hardware_and_software_components.html">
+        インフラのハードウェアコンポーネントとソフトウェアコンポーネント
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/ehr-epic-deploy_base_infrastructure_configuration.html">
+        ベースインフラの構成
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/ehr-epic-deploy_cisco_ucs_blade_server_and_switch_configuration.html">
+        Cisco UCS ブレードサーバとスイッチの構成
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/ehr-epic-deploy_cisco_mds_9148s_configuration.html">
+        Cisco MDS 9148S の構成
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/ehr-epic-deploy_esxi_configuration_best_practices.html">
+        ESXi 構成のベストプラクティス
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/ehr-epic-deploy_netapp_configuration.html">
+        NetApp の設定
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/ehr-epic-deploy_genio_tool.html">
+        GenIO ツール
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/ehr-epic-deploy_where_to_find_additional_information_overview.html">
+        追加情報の参照先
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/ehr-epic-deploy_acknowledgements.html">
+        謝辞
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Epic Performance Testing 向け FlexPod</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/ehr-epic-performance_introduction.html">
+        概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/ehr-epic-performance_executive_summary.html">
+        エグゼクティブサマリー
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/ehr-epic-performance_test_methodology.html">
+        テスト方法
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/ehr-epic-performance_workload_testing.html">
+        ワークロードのテスト
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/ehr-epic-performance_conclusion.html">
+        まとめ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/ehr-epic-performance_additional_information.html">
+        追加情報
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/ehr-epic-performance_acknowledgements.html">
+        謝辞
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> FlexPod for MEDITECH の指向性サイジングガイド</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/ehr-meditech-sizing_introduction.html">
+        概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/ehr-meditech-sizing_meditech_workload_overview.html">
+        MEDITECH ワークロードの概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/ehr-meditech-sizing_technical_specifications_for_small,_medium_and_large_architectures.html">
+        小規模、中規模、大規模アーキテクチャの技術仕様
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/ehr-meditech-sizing_additional_information.html">
+        追加情報
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/ehr-meditech-sizing_acknowledgments.html">
+        謝辞
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> FlexPod Datacenter for MEDITECH 導入ガイド</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/ehr-meditech-deploy_overview.html">
+        概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/ehr-meditech-deploy_design.html">
+        設計
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 導入と設定</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/ehr-meditech-deploy_deployment_and_configuration_overview.html">
+        概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/ehr-meditech-deploy_base_infrastructure_configuration.html">
+        ベースインフラの構成
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/ehr-meditech-deploy_cisco_ucs_blade_server_and_switch_configuration.html">
+        Cisco UCS ブレードサーバとスイッチの構成
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/ehr-meditech-deploy_esxi_configuration_best_practices.html">
+        ESXi 構成のベストプラクティス
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/ehr-meditech-deploy_netapp_configuration.html">
+        NetApp の設定
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/ehr-meditech-deploy_aggregate_configuration.html">
+        アグリゲートの構成
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/ehr-meditech-deploy_storage_virtual_machine_configuration.html">
+        Storage Virtual Machine の設定
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/ehr-meditech-deploy_volume_configuration.html">
+        ボリューム構成
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/ehr-meditech-deploy_lun_configuration.html">
+        LUN の設定
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/ehr-meditech-deploy_initiator_group_configuration.html">
+        イニシエータグループの構成
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/ehr-meditech-deploy_lun_mappings.html">
+        LUN マッピング
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/ehr-meditech-deploy_meditech_modules_and_components.html">
+        MEDITECH のモジュールとコンポーネント
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/ehr-meditech-deploy_acknowledgments.html">
+        謝辞
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/ehr-meditech-deploy_where_to_find_additional_information.html">
+        追加情報の参照先
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> FlexPod for Medical Imaging の略</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/medical-imaging_introduction.html">
+        概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/medical-imaging_architecture.html">
+        アーキテクチャ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/medical-imaging_solution_infrastructure_hardware_and_software_components.html">
+        解決策インフラのハードウェアコンポーネントとソフトウェアコンポーネント
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/medical-imaging_solution_sizing.html">
+        解決策のサイジング
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/medical-imaging_best_practices.html">
+        ベストプラクティス
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/medical-imaging_conclusion.html">
+        まとめ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/healthcare/medical-imaging_additional_information.html">
+        追加情報
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 仮想デスクトップインフラ</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/cisco_ucs_ctx1912esxi7u1_flexpodV2.html">
+        FlexPod データセンターと Citrix 仮想アプリケーションデスクトップ 1912 LTSR および VMware vSphere 7 （最大 6000 ライセンス
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_ontap96_vmware710_67_u2_ucs_40_6700_seats.html">
+        ONTAP FlexPod 9.6 、 VMware Horizon View 7.10 、および VMware vSphere 6.7 U2 と Cisco UCS Manager 4.0 を使用すると、最大 6700 シートに対応できます
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/whitepaper-c11-741654.pdf">
+        FlexPod for 3D Graphics Visualization with VMware and NVIDIA （ホワイトペーパー）
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/cisco_ucs_xd715esxi65u1_flexpod.html">
+        FlexPod Datacenter with Citrix XenDesktop / XenApp 7.15 および VMware vSphere 6.5 Update 1 for 6000 Seats
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_vmware_horizon_n9k_aff_ucsm32.html">
+        VMware Horizon View 7.3 および VMware vSphere 6.5 Update 1 を搭載した FlexPod データセンター（ Cisco UCS Manager 3.2 for 5000 ライセンス）
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_ontap96_vmware710_67_u2_ucs_40_6700_seats.html">
+        ONTAP FlexPod 9.6 、 VMware Horizon View 7.10 、および VMware vSphere 6.7 U2 と Cisco UCS Manager 4.0 を使用すると、最大 6700 シートに対応できます
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 最新のアプリケーション</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_c480m5l_aiml_design.html">
+        ディープラーニング向け FlexPod データセンター： AI / ML と Cisco UCS 480 ML Nvidia T4 vGPU の設計ガイド [ 設計 ]
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/dam/en/us/solutions/collateral/data-center-virtualization/unified-computing/trident-on-container-platform-with-flexpod.pdf">
+        FlexPod を使用した Cisco コンテナプラットフォームへの NetApp Trident CSI プラグインの導入 [Deploy]
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_openshift_platform_4.html">
+        OpenShift Container Platform 4 （導入）の FlexPod データセンター
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_c480m5l_aiml_design.html">
+        『 FlexPod Datacenter for AI / ML with Cisco UCS C480 ML for Deep Learning Design Guide 』 [ 設計 ]
+      </a></li><li class=" "><a class="na-navbar-padding" href="http://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_docker_deploy_design.html">
+        FlexPod Datacenter with Docker Datacenter for Container Management [ 設計 ]
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_openshift4_design.html">
+        FlexPod Datacenter for OpenShift Container Platform 4 設計ガイド
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_c480m5l_aiml_design.html">
+        ディープラーニング CVD 設計ガイド：『 FlexPod Datacenter for AI / ML with Cisco UCS 480 ML Nvidia T4 vGPU 』
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_480ml_aiml_deployment.html">
+        『 FlexPod Datacenter for AI / ML with Cisco UCS 480 ML Nvidia T4 vGPU for Deep Learning CVD Deployment Guide 』
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_c480m5l_aiml_design.html">
+        『 FlexPod Datacenter for AI / ML with Cisco UCS C480 ML for Deep Learning Design Guide 』を参照してください
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/dam/en/us/solutions/collateral/data-center-virtualization/desktop-virtualization-solutions-vmware-horizon-view/whitepaper-c11-741606.pdf">
+        FlexPod for 3D Graphics Visualization with VMware and NVIDIA 』を参照してください
+      </a></li><li class=" "><a class="na-navbar-padding" href="https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/whitepaper-c11-741586.pdf">
+        FlexPod for 3D Graphics Visualization with Citrix and NVIDIA （ホワイトペーパー）
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Microsoft アプリケーション</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="http://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/exchange2013_aci_flexpod_vmware_design.html">
+        Microsoft Exchange 2013 、 F5 BIG-IP 、および Cisco ACI を使用した FlexPod データセンター [ 設計 ]
+      </a></li><li class=" "><a class="na-navbar-padding" href="http://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/exchange2013_aci_flexpod_vmware.html">
+        Microsoft Exchange 2013 、 F5 BIG-IP 、および Cisco ACI を使用した FlexPod データセンター [ 導入 ]
+      </a></li><li class=" "><a class="na-navbar-padding" href="http://www.cisco.com/c/dam/en/us/td/docs/unified_computing/ucs/UCS_CVDs/sharepoint2013_aci_flexpod_vmware.pdf">
+        FlexPod データセンターと Microsoft SharePoint 2013 、 Cisco ACI [ 設計 ]
+      </a></li><li class=" "><a class="na-navbar-padding" href="http://www.cisco.com/c/dam/en/us/td/docs/unified_computing/ucs/UCS_CVDs/sharepoint2013_aci_flexpod_vmware_deploy.pdf">
+        Microsoft SharePoint 2013 と Cisco ACI の組み合わせで使用される FlexPod データセンター [ 導入 ]
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> FlexPod エクスプレスの略</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> FlexPod Express with Cisco UCS C シリーズおよび NetApp AFF C190 シリーズ設計ガイド</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-c-series-c190-design_executive_summary.html">
+        概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-c-series-c190-design_program_summary.html">
+        プログラムの概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-c-series-c190-design_technology_requirements.html">
+        テクノロジ要件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-c-series-c190-design_design_choices.html">
+        設計の選択肢
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-c-series-c190-design_conclusion.html">
+        まとめ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-c-series-c190-design_where_to_find_additional_information.html">
+        追加情報の参照先
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> FlexPod Express with Cisco UCS C シリーズおよび NetApp AFF C190 シリーズ導入ガイド</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-c-series-c190-deploy_program_summary_overview.html">
+        概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-c-series-c190-deploy_solution_overview.html">
+        解決策の概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-c-series-c190-deploy_technology_requirements.html">
+        テクノロジ要件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-c-series-c190-deploy_flexpod_express_cabling_information.html">
+        FlexPod エクスプレスケーブル接続情報
+      </a></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 導入手順</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-c-series-c190-deploy_deployment_procedures_overview.html">
+        概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-c-series-c190-deploy_deploy_cisco_nexus_31108pc-v.html">
+        Cisco Nexus 31108PC-V の導入
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-c-series-c190-deploy_netapp_storage_deployment_procedure_@part_1@.html">
+        ネットアップストレージ導入手順（パート 1 ）
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-c-series-c190-deploy_deploy_cisco_ucs_c-series_rack_server.html">
+        Cisco UCS C シリーズラックサーバを導入する
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-c-series-c190-deploy_netapp_aff_storage_deployment_procedure_@part_2@.html">
+        NetApp AFF ストレージ導入手順（パート 2 ）
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-c-series-c190-deploy_vmware_vsphere_6.7u2_deployment_procedure.html">
+        VMware vSphere 6.7U2 導入手順
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-c-series-c190-deploy_vmware_vcenter_server_6.7u2_installation_procedure.html">
+        VMware vCenter Server 6.7U2 のインストール手順
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-c-series-c190-deploy_vmware_vcenter_server_6.7u2_and_vsphere_clustering_configuration.html">
+        VMware vCenter Server 6.7U2 と vSphere クラスタリング構成
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-c-series-c190-deploy_netapp_virtual_storage_console_9.6_deployment_procedures.html">
+        NetApp Virtual Storage Console 9.6 の導入手順
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-c-series-c190-deploy_conclusion.html">
+        まとめ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-c-series-c190-deploy_acknowledgments.html">
+        謝辞
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-c-series-c190-deploy_where_to_find_additional_information.html">
+        追加情報の参照先
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-c-series-c190-deploy_version_history.html">
+        バージョン履歴
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> FlexPod Express with Cisco UCS C シリーズおよび AFF A220 シリーズ設計ガイド</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-c-series-aff220-design_executive_summary.html">
+        概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-c-series-aff220-design_program_summary.html">
+        プログラムの概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-c-series-aff220-design_solution_overview.html">
+        解決策の概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-c-series-aff220-design_technology_requirements.html">
+        テクノロジ要件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-c-series-aff220-design_design_choices.html">
+        設計の選択肢
+      </a></li><li class="  active "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-c-series-aff220-design_solution_verification.html">
+        解決策の検証
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-c-series-aff220-design_conclusion.html">
+        まとめ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-c-series-aff220-design_where_to_find_additional_information.html">
+        追加情報の参照先
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 『 FlexPod Express with Cisco UCS C Series and AFF A220 Series Deployment Guide 』</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-c-series-aff220-deploy_program_summary.html">
+        概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-c-series-aff220-deploy_solution_overview.html">
+        解決策の概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-c-series-aff220-deploy_technology_requirements.html">
+        テクノロジ要件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-c-series-aff220-deploy_flexpod_express_cabling_information.html">
+        FlexPod エクスプレスケーブル接続情報
+      </a></li><li class="subfolders "><a href="/ja-jp/flexpod/express/express-c-series-aff220-deploy_deployment_procedures_overview.html">
+        <div class="na-navbar-padding"> 導入手順</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-c-series-aff220-deploy_cisco_nexus_3172p_deployment_procedure.html">
+        Cisco Nexus 3172P Deployment 手順の略
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-c-series-aff220-deploy_netapp_storage_deployment_procedure_@part_1@.html">
+        ネットアップストレージ導入手順（パート 1 ）
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-c-series-aff220-deploy_cisco_ucs_c-series_rack_server_deployment_procedure.html">
+        Cisco UCS C シリーズラックサーバ導入手順
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-c-series-aff220-deploy_netapp_aff_storage_deployment_procedure_@part_2@.html">
+        NetApp AFF ストレージ導入手順（パート 2 ）
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-c-series-aff220-deploy_vmware_vsphere_6.7_deployment_procedure.html">
+        VMware vSphere 6.7 の導入手順
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-c-series-aff220-deploy_install_vmware_vcenter_server_6.7.html">
+        VMware vCenter Server 6.7 をインストールする
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-c-series-aff220-deploy_configure_vmware_vcenter_server_6.7_and_vsphere_clustering.html">
+        VMware vCenter Server 6.7 および vSphere クラスタリングを設定する
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-c-series-aff220-deploy_conclusion.html">
+        まとめ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-c-series-aff220-deploy_where_to_find_additional_information.html">
+        追加情報の参照先
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> FlexPod Express with VMware vSphere 6.7U1 and NetApp AFF A220 with Direct-Attached IP Based Storage Design Guide 』</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-direct-attach-design_overview.html">
+        概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-direct-attach-design_program_summary.html">
+        プログラムの概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-direct-attach-design_solution_overview.html">
+        解決策の概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-direct-attach-design_technology_requirements.html">
+        テクノロジ要件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-direct-attach-design_design_choices.html">
+        設計の選択肢
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-direct-attach-design_solution_verification.html">
+        解決策の検証
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-direct-attach-design_conclusion.html">
+        まとめ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-direct-attach-design_where_to_find_additional_information.html">
+        追加情報の参照先
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> FlexPod Express と VMware vSphere 6.7U1 、および直接接続型の IP ベースストレージを搭載した NetApp AFF A220</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-direct-attach-aff220-deploy_program_summary.html">
+        概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-direct-attach-aff220-deploy_solution_overview.html">
+        解決策の概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-direct-attach-aff220-deploy_technology_requirements.html">
+        テクノロジ要件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-direct-attach-aff220-deploy_flexpod_express_cabling_information.html">
+        FlexPod エクスプレスケーブル接続情報
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-direct-attach-aff220-deploy_deployment_procedures.html">
+        導入手順
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-direct-attach-aff220-deploy_conclusion.html">
+        まとめ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/express/express-direct-attach-aff220-deploy_additional_information.html">
+        追加情報
+      </a></li></ul></li><li class=" "><a class="na-navbar-padding" href="https://www.netapp.com/pdf.html?item=/media/21938-nva-1154-DEPLOY.pdf">
+        AFF Express for VMware vSphere 7.0 と Cisco UCS Mini および NetApp FAS / FlexPod （ NVA ）
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> FlexPod とセキュリティ</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> 解決策、 FlexPod によるランサムウェア対策</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/security/security-ransomware_what_is_ransomware.html">
+        ランサムウェアとは
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/security/security-ransomware_flexpod_overview.html">
+        FlexPod の概要
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/security/security-ransomware_ransomware_protection_measures.html">
+        ランサムウェア攻撃からの保護対策
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/security/security-ransomware_protect_and_recover_data_on_flexpod.html">
+        FlexPod 上のデータの保護とリカバリ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/security/security-ransomware_continue_business_operations_without_paying_ransom.html">
+        身代金を支払うことなく業務を継続できます
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/security/security-ransomware_conclusion.html">
+        まとめ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/security/security-ransomware_acknowledgements.html">
+        謝辞
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/security/security-ransomware_additional_information.html">
+        追加情報
+      </a></li></ul></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Cisco Intersight と NetApp ONTAP ストレージクイックスタートガイド</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/ontap-connector-for-intersight/index.html">
+        はじめに
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/ontap-connector-for-intersight/ci-qsg_new.html">
+        新機能
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/ontap-connector-for-intersight/ci-qsg_requirements.html">
+        要件
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/ontap-connector-for-intersight/ci-qsg_before_you_begin.html">
+        作業を開始する前に
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/ontap-connector-for-intersight/ci-qsg_claim_targets.html">
+        クレームの目標
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/ontap-connector-for-intersight/ci-qsg_monitor_netapp_storage_from_cisco_intersight.html">
+        Cisco Intersight からネットアップストレージを監視
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/ontap-connector-for-intersight/ci-qsg_use_cases.html">
+        ユースケース
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/ontap-connector-for-intersight/ci-qsg_references.html">
+        参考資料
+      </a></li></ul></li><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> インフラ</div>
+      </a>
+      <ul><li class="subfolders "><a href="#">
+        <div class="na-navbar-padding"> Cisco UCSM 、 VMware vSphere 7.0 、および NetApp ONTAP 9 を使用した FlexPod 向けのエンドツーエンド NVMe</div>
+      </a>
+      <ul><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/infrastructure/nvme-vsphere-introduction.html">
+        はじめに
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/infrastructure/nvme-vsphere-testing-approach.html">
+        テストアプローチ
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/infrastructure/nvme-vsphere-test-results.html">
+        テスト結果
+      </a></li><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/infrastructure/nvme-vsphere-conclusion.html">
+        まとめ
+      </a></li></ul></li></ul></li></ul>
+</div>
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+  </div>
+  
+
+  <div class="ie-content-pane n-doc__component-detail-content n-doc__component-detail-content--show-code">
+    <!-- Begin of page container -->
+    <article class="page-content">
+      <div class="ie-utility">
+  <div class="ie-menu">
+    <div class="n-breadcrumb">
+      <ul class="n-breadcrumb__list">
+        <li class="n-breadcrumb__list-item">
+          <a href="https://www.netapp.com">ホーム</a>
+        </li>
+        <li class="n-breadcrumb__list-item">
+          <a href="https://docs.netapp.com">ドキュメント</a>
+        </li>
+        
+
+        <li class="n-breadcrumb__list-item">
+          <a href="/ja-jp/flexpod/">FlexPod</a>
+        </li>
+        <li class="n-breadcrumb__list-item">
+          解決策の検証
+        </li>
+      </ul>
+    </div>
+    <div style="clear: both"></div><!-- Main needs to have height -->
+  </div>
+</div>
+
+      <div class="ie-nmt-disclaimer">
+  <span>
+    <div class="ie-nmt-disclaimer-container">
+      <div class="ie-nmt-disclaimer-icon">
+        <svg class="luci-icon" aria-hidden="true">
+          <use xlink:href="/ja-jp/flexpod/common/svg/sprite.svg#circle-info">
+        </svg>
+      </div>
+      <div class="ie-nmt-disclaimer-content">
+        <span> 日本語は機械翻訳による参考訳です。内容に矛盾や不一致があった場合には、英語の内容が優先されます。 </span>
+      </div>
+      <div style="clear:both;"></div>
+    </div>
+  </span>
+</div><div class="n-doc__component-detail-heading-wrap">
+  <h1 class="n-doc__component-detail-heading">解決策の検証</h1>
+</div>
+
+
+<p class="page-details">
+  
+    
+    <time datetime="2021-08-11 05:09:45 +0000">08/11/2021</time>
+    
+  
+
+<span>寄稿者
+</span>
+
+
+</p>
+
+
+<div class="paragraph">
+<p>Cisco とネットアップは、お客様にとって最高のインフラプラットフォームとして機能するように設計、構築された FlexPod Express を提供しています。業界をリードするコンポーネントで設計されているため、お客様は FlexPod Express をインフラ基盤として信頼できます。FlexPod ポートフォリオの基本原則に従い、 FlexPod Express アーキテクチャは、シスコおよびネットアップのデータセンターアーキテクトおよびエンジニアによって徹底的にテストされました。冗長性と可用性から個々の機能に至るまで、 FlexPod Express アーキテクチャ全体が検証され、お客様の信頼を獲得し、設計プロセスに信頼を築きます。</p>
+</div>
+<div class="paragraph">
+<p>VMware vSphere 6.7 は、 FlexPod Express インフラコンポーネントで検証済みです。この検証では、ハイパーバイザー用の 10GbE アップリンク接続オプションを使用しました。</p>
+</div>
+<div class="paragraph">
+<p><a href="express-c-series-aff220-design_conclusion.html">"次は終わりです"</a></p>
+</div>
+
+    </article>
+    <!-- Page Container -->
+  </div>
+
+  
+  <!-- Start Page Toolbar -->
+  <div class="page-nav-toolbar">
+    <div id="version-dropdown"></div>
+    <div class="page-nav-contribute"  >
+      <a target="_blank" href="https://github.com/NetAppDocs/flexpod/issues/new?body=Page%3A%20[解決策の検証](https://docs.netapp.com/ja-jp/flexpod/express/express-c-series-aff220-design_solution_verification.html)" class="page-nav-contribute-link" role="button"><img src="/ja-jp/flexpod/images/discuss-sm.svg" class="github-icon" />ドキュメントの変更をリクエスト</a>
+      <a target="_blank" href="https://github.com/NetAppDocs/flexpod/blob/main/express/express-c-series-aff220-design_solution_verification.adoc" class="page-nav-contribute-link" role="button"><img src="/ja-jp/flexpod/images/edit-sm.svg" class="github-icon" />GitHub で編集</a>
+      <a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/ja-jp/flexpod/images/article-sm.svg" class="github-icon" />寄稿者向けガイド</a>
+    </div>
+    <div class="page-nav-container">
+      <nav class="page-nav-fixed">
+        <div class="page-nav-title">このページ</div>
+        <div class="page-nav-links">
+          <ul class="page-nav-inner" id="page-menu"></ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+  
+  <div style="clear: both"></div><!-- Main needs to have height -->
+</div>
+
+        </main>
+
+        <footer class="n-footer">
+  <div class="n-footer__bottom">
+    <div class="n-container">
+      <div class="n-footer__bottom-left">
+
+        <div class="n-footer__copyright">
+          <ul class="n-footer__copyright-list">
+            <li class="n-footer__copyright-link">
+            <a href="https://www.netapp.com/us/legal/copyright.aspx">© 2022 NetApp, Inc.</a>
+            </li>
+
+</ul>
+</div>
+<div class="n-footer__social-links">
+<ul class="n-footer__social-link-list">
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-blog" href="https://blog.netapp.com" target="_blank" title="blog" alt="blog">
+<span class="n-footer__social-link-text">blog</span>
+<svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
+  <title>blog@</title>
+  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ja-jp/flexpod/common/svg/sprite.svg#blog"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-community" href="https://community.netapp.com/" target="_blank" title="community" alt="community">
+<span class="n-footer__social-link-text">community</span>
+<svg class="n-icon-community n-footer__social-link-icon" aria-labelledby="title">
+<title>community@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ja-jp/flexpod/common/svg/sprite.svg#comments"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-twitter" href="https://twitter.com/netapp" target="_blank" title="twitter" alt="twitter">
+<span class="n-footer__social-link-text">twitter</span>
+<svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
+<title>twitter@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ja-jp/flexpod/common/svg/sprite.svg#twitter"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-facebook" href="https://www.facebook.com/NetApp" target="_blank" title="facebook" alt="facebook">
+<span class="n-footer__social-link-text">facebook</span>
+<svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
+<title>facebook@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ja-jp/flexpod/common/svg/sprite.svg#facebook"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-linkedin" href="https://www.linkedin.com/company/netapp" target="_blank" title="linkedin" alt="linkedin">
+<span class="n-footer__social-link-text">linkedin</span>
+<svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
+<title>linkedin@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ja-jp/flexpod/common/svg/sprite.svg#linkedin"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-youtube" href="https://www.youtube.com/user/NetAppTV" target="_blank" title="youtube" alt="youtube">
+<span class="n-footer__social-link-text">youtube</span>
+<svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
+<title>youtube@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ja-jp/flexpod/common/svg/sprite.svg#youtube"></use>
+</svg>
+
+</a>
+</li>
+<li class="n-footer__social-link-list-item">
+<a class="n-footer__social-link" data-ntap-social="follow-slideshare" href="https://www.slideshare.net/NetApp" target="_blank" title="slideshare" alt="slideshare">
+<span class="n-footer__social-link-text">slideshare</span>
+<svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
+<title>slideshare@</title>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ja-jp/flexpod/common/svg/sprite.svg#slideshare"></use>
+</svg>
+
+</a>
+</li>
+</ul>
+</div>
+
+</div>
+<div class="n-footer__bottom-right">
+  <p class="n-footer__fine-print">Web サイトについてのフィードバックを<a target="_self" href="javascript:netapp_mailto()" class="n-footer__copyright">お寄せください</a>
+  <a href="https://docs.netapp.com/ja-jp/announcements/" class="n-footer__copyright">お知らせ</a>
+  </p>
+</div>
+</div>
+</div>
+</footer>
+
+      </div>
+
+      <!-- Elasticsearch JS -->
+      <script type="text/javascript" src='/ja-jp/flexpod/js/bundle.js'></script>
+
+      <!-- Syntax Highlighting -->
+      <script type="text/javascript" src='/ja-jp/flexpod/js/prism.js'></script>
+      <script type="text/javascript" src='/ja-jp/flexpod/js/prism-curl.js'></script>
+    </div>
+    <script>
+      document.body.offsetWidth=1903;
+      cookieLaw = {}
+      cookieLaw.euCountry = "US";
+      cookieLaw.invoke = function(){return false;}
+    </script>
+    <script src='/ja-jp/flexpod/js/www-ntap.js'></script>
+    <script src='/ja-jp/flexpod/js/tabbed-blocks.js'></script>
+  </body>
+
+  
+</html>
