@@ -16,6 +16,26 @@ summary: Cisco Intersight には、新機能、拡張機能、バグ修正を提
 
 
 
+== 2022 年 1 月
+
+* NetApp Active IQ Unified Manager 9.10 以降のイベントベースのサイト間アラームが追加されました。
+
+
+
+NOTE: 今後のリリースとの互換性を確保し、すべての機能を利用できるようにするために、 NetApp Active IQ Unified Manager をバージョン 9.10 にアップグレードすることを推奨します。
+
+* Storage Virtual Machine に対して各プロトコルを明示的に有効（ true または false ）に設定します
+* clusterHealthStatus 状態を正常にマッピングしました。 -suppressed を OK に設定します
+* クラスタリストページで Health 列の名前が Cluster Status 列に変更されました
+* クラスタが停止しているか到達不能である場合に、ストレージアレイ「 Unreachable 」を表示します
+* クラスタの全般ページで Health 列の名前が Array Status 列に変更されました
+* SVM に「 Volumes 」タブが追加され、 SVM のすべてのボリュームが表示されます
+* ボリュームに Snapshot 容量セクションがあります
+* ライセンスが正しく表示されるようになりました
+
+
+
+
 == 2021年10月
 
 * Cisco Intersight に含まれるネットアップストレージのタスクの最新リストを追加しました。を参照してください link:ci-qsg_use_cases.html["使用例 3 デザイナフリーフォームを使用したカスタムワークフロー"] NetApp ストレージ・タスクの一覧を表示します。

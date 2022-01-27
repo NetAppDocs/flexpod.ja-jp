@@ -19,7 +19,7 @@ summary: 開始する前に、 AIQ UM をインストールまたはアップグ
 
 == NetApp Active IQ Unified Manager をインストールまたはアップグレードします
 
-Active IQ Unified Manager 9.8p1 以降にインストールまたはアップグレードしていない場合は、これをインストールまたはアップグレードします。手順については、を参照してください link:http://docs.netapp.com/ocum-98/index.jsp["Unified Manager 9.8 ドキュメントセンター"]。
+Active IQ Unified Manager 9.10GA 以降にインストールまたはアップグレードしていない場合は、それ以降にインストールするかアップグレードします。手順については、を参照してください link:http://docs.netapp.com/ocum-98/index.jsp["Unified Manager 9.8 ドキュメントセンター"]。
 
 
 

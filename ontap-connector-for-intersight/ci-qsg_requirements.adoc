@@ -28,7 +28,7 @@ NetApp ONTAP ストレージと Cisco Intersight の統合に関するハード�
 | NetApp ONTAP | ONTAP 9.7P1 以降 
 
 
-| NetApp Active IQ Unified Manager の略 | NetApp Active IQ Unified Manager 9.8P1 以降 
+| NetApp Active IQ Unified Manager の略 | NetApp Active IQ Unified Manager 9.10GA 以降 
 
 
 | ネットアップストレージアレイ | ONTAP 9.7P1 以降では、 ONTAP ASA 、 AFF 、 FAS のすべてのストレージアレイがサポートされます 
