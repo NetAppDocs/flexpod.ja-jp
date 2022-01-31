@@ -4,7 +4,7 @@ permalink: healthcare/flexpod-genomics-appendix-b.html
 keywords: execution, gatk script, output 
 summary: このセクションでは、 .GATK 出力の実行について説明します。 
 ---
-= <code> ./GATK</code> スクリプトを使用して GATK を実行するための出力
+= ./GATK スクリプトを使用して GATK を実行するための出力
 :hardbreaks:
 :nofooter: 
 :icons: font
