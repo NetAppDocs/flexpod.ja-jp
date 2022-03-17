@@ -1,0 +1,44 @@
+---
+sidebar: sidebar 
+permalink: security/flexpod-fips-flexpod-cisco-ucs-compute-and-fips-140-2.html 
+keywords: compute, cisco, nist, compliance mode, fabric interconnect, fi, advanced malware protection 
+summary: FlexPod アーキテクチャは、 FIPS 140-2 に準拠した Cisco UCS サーバを使用して設計できます。米国に準拠しています...NIST 、 Cisco UCS サーバは、 FIPS 140-2 レベル 1 準拠モードで動作します。 
+---
+= FlexPod Cisco UCS のコンピューティングと FIPS 140-2
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:flexpod-fips-control-plane-versus-data-plane.html["前：コントロールプレーンとデータプレーンの比較。"]
+
+FlexPod アーキテクチャは、 FIPS 140-2 に準拠した Cisco UCS サーバを使用して設計できます。米国に準拠しています...NIST 、 Cisco UCS サーバは、 FIPS 140-2 レベル 1 準拠モードで動作します。FIPS 準拠の Cisco コンポーネントの一覧については、を参照してください https://www.cisco.com/c/en/us/solutions/industries/government/global-government-certifications/fips-140.html?flt0_general-table0=UCSM["シスコの FIPS 140 ページ"^]。Cisco UCS Manager は FIPS 140-2 認定済みです。
+
+
+
+== Cisco UCS とファブリックインターコネクト
+
+Cisco UCS Manager は、 Cisco Fabric Interconnect （ FI ）から導入され、実行されます。
+
+Cisco UCS および FIPS を有効にする方法の詳細については、を参照してください https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/release/notes/CiscoUCSManager-RN-3-2.html["Cisco UCS Manager のマニュアル"^]。
+
+各ファブリック A および B で Cisco ファブリックインターコネクト上で FIPS モードをイネーブルにするには、次のコマンドを実行します。
+
+....
+fp-health-fabric-A# connect local-mgmt
+fp-health-fabric-A(local-mgmt)# enable fips-mode
+FIPS mode is enabled
+....
+
+NOTE: Cisco UCS Manager Release 3.2(3) より前のリリースのクラスタの FI を FI に置き換えるには、交換用の FI をクラスタに追加する前に、既存の FI で FIPS モードをディセーブル（「 FIPS-mode 」をディセーブル）にします。クラスタが形成されると、 Cisco UCS Manager のブートアップの一環として、 FIPS モードが自動的に有効になります。
+
+シスコは、コンピューティングまたはアプリケーションレイヤに実装可能な次の主要製品を提供しています。
+
+* * エンドポイント向けの Cisco Advanced Malware Protection （ AMP ）。 * Microsoft Windows および Linux オペレーティングシステムでサポートされているこの解決策 は、防止、検出、および応答機能を統合しています。このセキュリティソフトウェアは、セキュリティ侵害の防止、侵入ポイントでのマルウェアのブロック、ファイルおよびプロセスのアクティビティの継続的な監視と分析を行い、フロントライン防御を回避できる脅威を迅速に検出、阻止、修復します。AMP の Malicious Activity Protection （ MAP ）コンポーネントは、すべてのエンドポイントアクティビティを継続的に監視し、エンドポイント上の実行中のプログラムのランタイム検出と異常な動作のブロックを提供します。たとえば、エンドポイントの動作がランサムウェアを示している場合、攻撃の原因となっているプロセスは終了し、エンドポイントの暗号化を防ぎ、攻撃を停止します。
+* * 電子メールセキュリティのための AMP 。 * 電子メールはマルウェアを拡散させ、サイバー攻撃を実行するための主要な手段となっています。平均して、 1 日に約 1 、 000 億通の電子メールが交換されます。これにより、攻撃者はユーザーのシステムに非常に優れた侵入ベクトルを与えることができます。そのため、この種の攻撃を防御することは絶対に不可欠です。AMP は、ゼロデイ攻撃や悪意のある添付ファイルに隠された不潔なマルウェアなどの脅威を電子メールで分析します。また、業界をリードする URL インテリジェンスを使用して、悪意のあるリンクに対抗します。スピアフィッシング、ランサムウェア、その他の高度な攻撃から高度な保護を提供します。
+* * 次世代侵入防御システム（ NGIPS ）。 * Cisco firepower NGIPS は、データセンターの物理アプライアンスとして、または VMware （ NGIPSv for VMware ）の仮想アプライアンスとして導入できます。この非常に効果的な侵入防御システムは、信頼性の高いパフォーマンスと低い総所有コストを実現します。オプションのサブスクリプションライセンスで脅威からの保護を拡張して、 AMP 、アプリケーションの可視化と制御、および URL フィルタリング機能を提供できます。仮想化された NGIPS は、仮想マシン（ VM ）間のトラフィックを検査し、リソースが限られたサイトで NGIPS ソリューションの導入と管理を容易にして、物理資産と仮想資産の両方の保護を強化します。
+
+
+link:flexpod-fips-flexpod-cisco-networking-and-fips-140-2.html["次のセクションでは、 FlexPod のシスコネットワークと FIPS 140-2 について説明します。"]

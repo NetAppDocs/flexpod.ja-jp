@@ -1,0 +1,115 @@
+---
+sidebar: sidebar 
+permalink: security/flexpod-fips-solution-benefits-of-flexpod-converged-infrastructure.html 
+keywords: benefits, hardware, software, 
+summary: FlexPod システムにおける FIPS の設定を実証するために、オープンソースの EHR およびオープンソースの画像アーカイブおよび通信システム（ PACS ）システムを使用して、 FlexPod システムのラボセットアップとワークロード検証を実施しました。 
+---
+= FlexPod コンバージドインフラの解決策 のメリット
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:flexpod-fips-flexpod-netapp-ontap-storage-and-fips-140-2.html["以前のリリース： FlexPod NetApp ONTAP ストレージおよび FIPS 140-2 。"]
+
+医療機関には、いくつかのミッションクリティカルなシステムがあります。最も重要なシステムの 2 つは、電子カルテ（ EHR ）システムと医療画像システムです。FlexPod システムにおける FIPS の設定を実証するために、オープンソースの EHR およびオープンソースの画像アーカイブおよび通信システム（ PACS ）システムを使用して、 FlexPod システムのラボセットアップとワークロード検証を実施しました。EHR 機能、 EHR 論理アプリケーションコンポーネント、および FlexPod システムに実装した場合の EHR システムのメリットの一覧については、を参照してください https://www.netapp.com/pdf.html?item=/media/22199-tr-4881.pdf["TR-4881 ：『 FlexPod for Electronic Health Record Systems 』"^]。医療画像システムの機能、論理アプリケーションコンポーネント、および FlexPod に実装された医療画像システムの利点については、を参照してください。
+
+FIPS のセットアップとワークロードの検証では、典型的な医療機関の代表的なワークロード特性を行使しました。たとえば、現実的な患者データのアクセスおよび変更シナリオを含むオープンソースの EHR システムをテストしました。さらに、医療用画像ワークロードを実行しました。このワークロードには、医療用（ DICOM ）オブジェクトのデジタル画像処理と通信が含まれていました。dcm ファイル形式メタデータを含む DICOM オブジェクトは、ファイルストレージとブロックストレージの両方に保存されています。さらに、仮想化された RedHat Enterprise Linux （ RHEL ）サーバにマルチパス機能も実装しています。DICOM オブジェクトは、 NFS 、 iSCSI を使用してマウントされた LUN 、および FC を使用してマウントされた LUN に保存しました。FIPS のセットアップと検証で、 FlexPod コンバージドインフラが期待以上のパフォーマンスをシームレスに実現したことがわかりました。
+
+次の図は、 FIPS のセットアップと検証に使用される FlexPod システムを示しています。ネットアップはを活用しました https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_vmware_vsphere_7_0_ontap_9_7.html["FlexPod データセンターと VMware vSphere 7.0 および NetApp ONTAP 9.7 Cisco Validated Design （ CVD ）"^] セットアッププロセスの実行中です。
+
+image:flexpod-fips-image6.png["エラー：グラフィックイメージがありません"]
+
+
+
+== 解決策インフラのハードウェアコンポーネントとソフトウェアコンポーネント
+
+次の 2 つの図に、 FlexPod で FIPS を有効にする際に使用するハードウェアコンポーネントとソフトウェアコンポーネントを示します。これらの表に記載されている推奨事項は例です。 NetApp SME と連携して、コンポーネントが組織に適していることを確認する必要があります。また、コンポーネントとバージョンがでサポートされていることを確認します https://mysupport.netapp.com/matrix/["NetApp Interoperability Matrix Tool で確認できます"^] （ IMT ）および。
+
+|===
+| レイヤー（ Layer ） | 製品ファミリー | 数量とモデル | 詳細 
+
+
+| コンピューティング | Cisco UCS 5108 シャーシ | 1 または 2 |  
+
+
+|  | Cisco UCS ブレードサーバ | B200 M5 × 3 | それぞれに、 20 コア以上、 2.7GHz 、および 128-384GB RAM を 2 個搭載しています 
+
+
+|  | Cisco UCS 仮想インターフェイスカード（ VIC ） | Cisco UCS 1440 | を参照してください 
+
+
+|  | Cisco UCS ファブリックインターコネクト × 2 | 6332 | - 
+
+
+| ネットワーク | Cisco Nexus スイッチ | Cisco Nexus 9332 × 2 | - 
+
+
+| ストレージネットワーク | SMB / CIFS 、 NFS 、または iSCSI プロトコル経由のストレージアクセス用の IP ネットワーク | 上記と同じネットワークスイッチ | - 
+
+
+|  | FC 経由のストレージアクセス | Cisco MDS 9148S × 2 | - 
+
+
+| ストレージ | NetApp AFF A700 オールフラッシュストレージシステム | 1 クラスタ | 2 ノードクラスタ 
+
+
+|  | ディスクシェルフ | DS224C または NS224 ディスクシェルフ × 1 | 24 本のドライブをフル装備 
+
+
+|  | SSD の場合 | 容量が 24 、 2TB 以上 | - 
+|===
+|===
+| ソフトウェア | 製品ファミリー | バージョンまたはリリース | 詳細 
+
+
+| 様々 | Linux の場合 | RHEL 7.x | - 
+
+
+|  | Windows の場合 | Windows Server 2012 R2 （ 64 ビット） | - 
+
+
+|  | NetApp ONTAP | ONTAP 9.7 以降 | - 
+
+
+|  | Cisco UCS ファブリックインターコネクト | Cisco UCS Manager 4.1 以降 | - 
+
+
+|  | Cisco Ethernet 3000 または 9000 シリーズスイッチ | 9000 シリーズの場合、 7.0(3) i7(7) 以降（ 3000 シリーズ用）、 9.2(4) 以降 | - 
+
+
+|  | Cisco FC ： Cisco MDS 9132T | 8.4(1a) 以降 | - 
+
+
+|  | ハイパーバイザー | VMware vSphere ESXi 6.7 U2 以降 | - 
+
+
+| ストレージ | ハイパーバイザー管理システム | VMware vCenter Server 6.7 U3 （ vCSA ）以降 | - 
+
+
+| ネットワーク | NetApp Virtual Storage Console （ VSC ） | VSC 9.7 以降 | - 
+
+
+|  | NetApp SnapCenter | SnapCenter 4.3 以降 | - 
+
+
+|  | Cisco UCS Manager の略 | 4.1 （ 1c ）以降 |  
+
+
+| ハイパーバイザー | ESXi |  |  
+
+
+| 管理 | ハイパーバイザー管理システム VMware vCenter Server 6.7 U3 （ vCSA ）以降 |  |  
+
+
+|  | NetApp Virtual Storage Console （ VSC ） | VSC 9.7 以降 |  
+
+
+|  | NetApp SnapCenter | SnapCenter 4.3 以降 |  
+
+
+|  | Cisco UCS Manager の略 | 4.1 （ 1c ）以降 |  
+|===
+link:flexpod-fips-additional-flexpod-security-consideration.html["次： FlexPod のセキュリティに関するその他の考慮事項。"]

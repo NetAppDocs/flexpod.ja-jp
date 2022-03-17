@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: security/flexpod-fips-introduction.html 
+keywords: tr4892, 4892introduction, hitech, fips, hit, ephi, 
+summary: 本ドキュメントは、 FIPS 140-2 のセキュリティコンプライアンスを必要とする 1 つ以上の医療 IT アプリケーションやソリューションをホスティングするための、 Cisco Unified Computing System （ Cisco UCS ）、 Cisco Nexus 、 Cisco MDS 、および NetApp ONTAP ベースの FlexPod インフラの技術概要をまとめたものです。 
+---
+= TR-4892 ：『 FIPS 140-2 security Compliant FlexPod 解決策 for HealthCare 』
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Cisco 、 NetApp John McAbel 、 JayaKishore Esanakula 氏
+
+経済・臨床医療法（ HITECH ）の医療情報技術には、 Federal Information Processing Standard （ FIPS ） 140-2 認証済みの電子保護医療情報（ ePHI ）暗号化が必要です。ヘルス情報テクノロジ（ HIT ）アプリケーションおよびソフトウェアは、相互運用性プログラム（旧称は有意義な使用インセンティブプログラム）認定を取得するために FIPS 140-2 に準拠している必要があります。対象となるプロバイダーおよび病院は、メディケアおよびメディケイドインセンティブを受けるために FIPS 140-2 （レベル 1 ）に準拠した HIT を使用し、メディケアおよびメディケイドセンター（ CMS ）からの払い戻しペナルティを回避する必要があります。FIPS 140-2 認定暗号化アルゴリズムは、に求められる技術的な保護手段として認定されています https://www.hhs.gov/hipaa/for-professionals/security/laws-regulations/index.html["セキュリティルール"^] Health Information Portability and Accountability Act （ HIPAA ：医療情報の相互運用性と説明責任に関する法律）。
+
+FIPS 140-2 は、米国機密情報を保護するハードウェア、ソフトウェア、およびファームウェアの暗号モジュールのセキュリティ要件を設定する政府標準。米国では、この規格への準拠が義務付けられていますまた、金融サービスや医療などの規制産業でもよく使用されています。本テクニカルレポートでは、 FIPS 140-2 のセキュリティ標準を高水準で理解する方法を紹介します。また、医療機関が直面しているさまざまな脅威を理解するのにも役立ちます。最後に、このテクニカルレポートでは、 FIPS 140-2 準拠の FlexPod システムを使用して FlexPod コンバージドインフラに導入した医療資産を保護する方法について説明します。
+
+
+
+=== 適用範囲
+
+このドキュメントは、 FIPS 140-2 のセキュリティコンプライアンスを必要とする 1 つ以上の医療 IT アプリケーションやソリューションをホスティングするための、 Cisco Unified Computing System （ Cisco UCS ）、 Cisco Nexus 、 Cisco MDS 、および NetApp ONTAP ベースの FlexPod インフラの技術概要をまとめたものです。
+
+
+
+=== 対象者
+
+本ドキュメントは、医療業界の技術リーダー、 Cisco とネットアップのパートナーソリューションエンジニア、およびプロフェッショナルサービス担当者を対象としています。本ドキュメントは、コンピューティングとストレージのサイジングの概念に加え、医療の脅威、医療セキュリティ、医療 IT システム、 Cisco UCS 、ネットアップストレージシステムに関する技術的な知識があることを前提としています。
+
+link:flexpod-fips-cybersecurity-threats-in-healthcare.html["次は、医療業界におけるサイバーセキュリティの脅威です。"]

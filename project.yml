@@ -27,6 +27,9 @@ homepage:
   tiles:
   - title: FlexPod - ここから始めます
     links:
+    - title: 新機能
+      summary: ''
+      url: https://fieldportal.netapp.com/content/1668183
     - title: ビデオとデモ
       summary: ''
       url: https://tv.netapp.com/search?q=FlexPod

@@ -1,0 +1,179 @@
+---
+sidebar: sidebar 
+permalink: security/flexpod-fips-flexpod-netapp-ontap-storage-and-fips-140-2.html 
+keywords: storage, data plane, control plane, encryption, NAE CLI, nve, key management, external key management 
+summary: ネットアップは、さまざまなハードウェア、ソフトウェア、サービスを提供しています。これらのサービスには、この標準で検証済みの暗号モジュールのさまざまなコンポーネントを含めることができます。そのため、ネットアップでは、コントロールプレーンとデータプレーンの FIPS 140-2 準拠に対してさまざまなアプローチを採用しています。 
+---
+= FlexPod の NetApp ONTAP ストレージと FIPS 140-2
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:flexpod-fips-flexpod-cisco-networking-and-fips-140-2.html["前のリリース： FlexPod のシスコネットワークと FIPS 140-2"]
+
+ネットアップは、さまざまなハードウェア、ソフトウェア、サービスを提供しています。これらのサービスには、この標準で検証済みの暗号モジュールのさまざまなコンポーネントを含めることができます。そのため、ネットアップでは、コントロールプレーンとデータプレーンに関して、 FIPS 140-2 への準拠にさまざまなアプローチを採用しています。
+
+* ネットアップが提供する暗号モジュールには、転送中のデータと保管中のデータの暗号化についてレベル 1 の検証を実施した暗号モジュールが含まれています。
+* ネットアップは、これらのコンポーネントのサプライヤによって FIPS 140-2 認定を受けたハードウェアモジュールとソフトウェアモジュールの両方を取得します。たとえば、 NetApp Storage Encryption 解決策 は、 FIPS レベル 2 の検証済みドライブを利用します。
+* ネットアップ製品では、製品や機能が検証の範囲外であっても、標準に準拠した検証済みモジュールを使用できます。たとえば、 NetApp Volume Encryption （ NVE ）は FIPS 140-2 に準拠しています。別途検証されるわけではありませんが、レベル 1 で検証済みの NetApp 暗号化モジュールが使用されます。ご使用のバージョンの ONTAP に対する準拠の詳細については、 FlexPod SME にお問い合わせください。
+
+
+* NetApp Cryptographic モジュールは FIPS 140-2 レベル 1 に準拠しています *
+
+* NetApp Cryptographic Security Module （ NCSM ）は FIPS 140-2 レベル 1 に準拠しています。
+
+
+* ネットアップの自己暗号化ドライブは FIPS 140-2 レベル 2 に準拠しています *
+
+ネットアップは、元の機器メーカー（ OEM ）が FIPS 140-2 認定を取得した自己暗号化ドライブ（ SED ）を購入しています。これらのドライブを求めるお客様は、注文時に SED を指定する必要があります。ドライブはレベル 2 で検証されます。次のネットアップ製品では、検証済み SED を利用できます。
+
+* AFF A シリーズおよび FAS ストレージシステム
+* E シリーズおよび EF シリーズストレージシステム
+
+
+* NetApp Aggregate Encryption および NetApp Volume Encryption *
+
+NVE テクノロジと NetApp Aggregate Encryption （ NAE ）テクノロジを使用すると、ボリュームレベルとアグリゲートレベルでそれぞれデータを暗号化できるため、解決策 は物理ドライブに依存しません。
+
+NVE は、 ONTAP 9.1 以降で使用可能なソフトウェアベースの保管データ暗号化解決策 で、 ONTAP 9.2 以降で FIPS 140-2 に準拠しています。NVE を使用すると、 ONTAP でボリュームごとにデータを暗号化して詳細に指定できます。NAE は ONTAP 9.6 で利用でき、 NVE の急成長です。 ONTAP は各ボリュームのデータを暗号化でき、ボリュームはアグリゲート全体でキーを共有できます。NVE と NAE はいずれも AES 256 ビット暗号化を使用します。データは、 SED を使用せずにディスクに保存することもできます。NVE および NAE を使用すると、暗号化が有効になっている場合でも Storage Efficiency 機能を使用できます。アプリケーションレイヤのみの暗号化では、 Storage Efficiency のすべてのメリットが損なわれています。NVE および NAE では、データがネットワークから NetApp WAFL を介して RAID レイヤに到着するため、ストレージ効率が維持されます。これにより、データを暗号化するかどうかが決まります。NAE では、ストレージ効率を高めるためにアグリゲート重複排除を使用できます。NVE ボリュームと NAE ボリュームは同じ NAE アグリゲート内で共存できます。NAE アグリゲートでは、暗号化されていないボリュームはサポートさ
+
+プロセスの仕組みは次のとおりです。データが暗号化されると、 FIPS 140-2 レベル 1 認定の暗号化モジュールに送信されます。暗号モジュールはデータを暗号化して RAID レイヤに戻します。暗号化されたデータがディスクに送信されます。そのため、 NVE と NAE を組み合わせることで、データがディスクに転送される途中ですでに暗号化されています。読み取りは、逆のパスに従います。つまり、ディスクからのデータは暗号化された状態で RAID に送信され、暗号化モジュールによって復号化され、次の図に示すように、スタックの残りの部分が送信されます。
+
+image:flexpod-fips-image3.png["エラー：グラフィックイメージがありません"]
+
+
+NOTE: NVE は、 FIPS 140-2 レベル 1 に準拠したソフトウェア暗号化モジュールを使用します。
+
+NVE の詳細については、を参照してください https://www.netapp.com/us/media/ds-3899.pdf["NVE のデータシート"^]。
+
+NVE でクラウド内のデータを保護する。Cloud Volumes ONTAP と Azure NetApp Files は、 FIPS 140-2 準拠の保存データ暗号化機能を提供できます。
+
+ONTAP 9.7 以降では、 NVE ライセンスでオンボードまたは外部キー管理を使用すれば、新しく作成したアグリゲートとボリュームがデフォルトで暗号化されます。ONTAP 9.6 以降では、アグリゲートレベルの暗号化を使用して、暗号化するボリュームの包含アグリゲートにキーを割り当てることができます。アグリゲートに作成するボリュームはデフォルトで暗号化されます。このデフォルトの設定は、ボリュームを暗号化するときに無効にすることができます。
+
+
+
+== ONTAP NAE CLI コマンド
+
+次の CLI コマンドを実行する前に、クラスタに必要な NVE ライセンスがあることを確認してください。
+
+アグリゲートを作成して暗号化するには、次のコマンドを実行します（ ONTAP 9.6 以降のクラスタ CLI で実行した場合）。
+
+....
+fp-health::> storage aggregate create -aggregate aggregatename -encrypt-with-aggr-key true
+....
+非 NAE アグリゲートを NAE アグリゲートに変換するには、次のコマンドを実行します（ ONTAP 9.6 以降のクラスタ CLI で実行した場合）。
+
+....
+fp-health::> storage aggregate modify -aggregate aggregatename  -node svmname -encrypt-with-aggr-key true
+....
+NAE アグリゲートを非 NAE アグリゲートに変換するには、次のコマンドを実行します（ ONTAP 9.6 以降のクラスタ CLI で実行している場合）。
+
+....
+fp-health::> storage aggregate modify -aggregate aggregatename -node svmname -encrypt-with-aggr-key false
+....
+
+
+== ONTAP NVE CLI コマンド
+
+ONTAP 9.6 以降では、アグリゲートレベルの暗号化を使用して、暗号化するボリュームの包含アグリゲートにキーを割り当てることができます。アグリゲートに作成するボリュームはデフォルトで暗号化されます。
+
+NAE が有効になっているアグリゲートでボリュームを作成するには、次のコマンドを実行します（ ONTAP 9.6 以降のクラスタ CLI で実行した場合）。
+
+....
+fp-health::> volume create -vserver svmname -volume volumename -aggregate aggregatename -encrypt true
+....
+ボリューム移動を行わずに既存ボリュームの「インプレース」暗号化を有効にするには、次のコマンドを実行します（ ONTAP 9.6 以降のクラスタ CLI で実行している場合）。
+
+....
+fp-health::> volume encryption conversion start -vserver svmname -volume volumename
+....
+ボリュームで暗号化が有効になっていることを確認するには、次の CLI コマンドを実行します。
+
+....
+fp-health::> volume show -is-encrypted true
+....
+
+
+== NSE の場合
+
+NSE は、 SED を使用して、ハードウェアアクセラレーションメカニズムでデータ暗号化を実行します。
+
+NSE は、 FIPS 140-2 レベル 2 自己暗号化ドライブを使用し、 AES 256 ビット透過的ディスク暗号化によって保存データを保護できるため、コンプライアンスの確保とスペアの返却が容易になります。ドライブは、暗号化キーの生成を含め、次の図に示すように、すべてのデータ暗号化処理を内部的に実行します。データへの不正アクセスを防止するために、ストレージシステムは、ドライブの初回使用時に確立された認証キーを使用して、ドライブ自体を認証する必要があります。
+
+image:flexpod-fips-image4.png["エラー：グラフィックイメージがありません"]
+
+
+NOTE: NSE は、各ドライブでハードウェア暗号化を使用します。 FIPS 140-2 レベル 2 認定済みです。
+
+NSE の詳細については、を参照してください https://www.netapp.com/us/media/ds-3213-en.pdf["NSE のデータシート"^]。
+
+
+
+== キー管理
+
+FIPS 140-2 規格は、次の図に示すように、境界によって定義された暗号モジュールを環境 にします。
+
+image:flexpod-fips-image5.png["エラー：グラフィックイメージがありません"]
+
+キー管理ツールは、 ONTAP で使用されるすべての暗号化キーを追跡します。NSE SED は、キー管理ツールを使用して NSE SED の認証キーを設定します。キー管理ツールを使用する場合は、 NVE と NAE 解決策 が組み合わされ、ソフトウェア暗号化モジュール、暗号化キー、およびキー管理ツールで構成されます。NVE は、ボリュームごとに、キー管理ツールが格納する一意の XTS-AES 256 データ暗号化キーを使用します。データボリュームに使用するキーは、そのクラスタ内のデータボリュームに一意のキーで、暗号化されたボリュームの作成時に生成されます。同様に、 NAE ボリュームはアグリゲートごとに一意の XTS-AES 256 データ暗号化キーを使用します。このキー管理ツールにも保存されます。NAE キーは、暗号化されたアグリゲートが作成されると生成されます。ONTAP は、キーをあらかじめ再生したり、再利用したり、プレーンテキストで表示したりすることはなく、キー管理ツールによって保存および保護されます。
+
+
+
+== 外部キー管理ツールのサポート
+
+ONTAP 9.3 以降では、 NVE ソリューションと NSE ソリューションの両方で外部キー管理機能がサポートされます。FIPS 140-2 規格の環境 特定のベンダーの実装で使用される暗号モジュール。ほとんどの場合、 FlexPod と ONTAP のお客様は、（の）次のいずれかの検証済みソリューションを使用しています http://mysupport.netapp.com/matrix["NetApp Interoperability Matrix を参照してください"^]) キー管理ツール :
+
+* Gemalto または SafeNet AT のいずれかを指定します
+* Vormetric （ Thales ）
+* IBM SKLM
+* Utimaco （旧称 Microfocus 、 HPE ）
+
+
+NSE と NVMe SED の認証キーは、業界標準の OASIS Key Management Interoperability Protocol （ KMIP ）を使用して外部キーマネージャにバックアップされます。ストレージシステム、ドライブ、およびキー管理ツールのみがキーにアクセスでき、セキュリティドメイン外に移動してデータ漏洩を防止する場合は、ドライブのロックを解除できません。外部キー管理ツールでは、 NVE ボリュームの暗号化キーおよび NAE アグリゲートの暗号化キーも保存されます。コントローラとディスクを移動して外部キー管理ツールにアクセスできなくなった場合は、 NVE ボリュームと NAE ボリュームにアクセスできず、復号化できません。
+
+次の例では、 store virtual machine （ SVM ）「 svmname1 」の外部キー管理ツールで使用されるサーバのリストに、 2 つのキー管理サーバを追加します。
+
+....
+fp-health::> security key-manager external add-servers -vserver svmname1 -key-servers 10.0.0.20:15690, 10.0.0.21:15691
+....
+FlexPod データセンターをマルチテナンシーシナリオで使用している場合、 ONTAP では、セキュリティ上の理由から SVM レベルでデータセンターをテナンシー環境から分離できます。
+
+外部キー管理ツールのリストを確認するには、次の CLI コマンドを実行します。
+
+....
+fp-health::> security key-manager external show
+....
+
+
+== 暗号化を組み合わせることで二重暗号化（多層防御）を実現
+
+データへのアクセスを分離し、データが常に保護されるようにする必要がある場合は、 NSE SED をネットワークレベルまたはファブリックレベルの暗号化と組み合わせることができます。NSE SED は、管理者が高レベルの暗号化を設定または設定ミスを忘れてしまった場合に、バックストップのように機能します。2 つの異なるレイヤの暗号化では、 NSE SED を NVE および NAE と組み合わせることができます。
+
+
+
+== NetApp ONTAP クラスタ全体のコントロールプレーン FIPS モード
+
+NetApp ONTAP データ管理ソフトウェアには、お客様向けに高度なセキュリティをインスタンス化する、 FIPS モードの構成が用意されています。この FIPS モードでは、コントロールプレーンの環境 のみが実行されます。FIPS モードを有効にすると、 FIPS 140-2 の主要な要素に基づいて、 Transport Layer Security v1 （ TLSv1 ）と SSLv3 は無効になり、 TLS v1.1 と TLS v1.2 のみが有効なままになります。
+
+
+NOTE: FIPS モードの ONTAP クラスタ全体のコントロールペインは、 FIPS 140-2 レベル 1 に準拠しています。クラスタ全体の FIPS モードでは、 NCSM が提供するソフトウェアベースの暗号化モジュールを使用します。
+
+クラスタ全体のコントロールプレーンの FIPS 140-2 準拠モードは、 ONTAP のすべての制御インターフェイスを保護します。デフォルトでは、 FIPS 140-2 のみのモードは無効になっていますが、 security config modify コマンドの 'is-fips-enabled ' パラメータを 'true' に設定すると、このモードを有効にできます。
+
+ONTAP クラスタで FIPS モードを有効にするには、次のコマンドを実行します。
+
+....
+fp-health::> security config modify -interface SSL -is-fips-enabled true
+....
+SSL FIPS モードが有効な場合は、 ONTAP から ONTAP 外部のクライアントまたはサーバコンポーネントへの SSL 通信に、 FIPS 準拠の SSL 暗号化が使用されます。
+
+クラスタ全体の FIPS ステータスを表示するには、次のコマンドを実行します。
+
+....
+fp-health::> set advanced
+fp-health::*> security config modify -interface SSL -is-fips-enabled true
+....
+link:flexpod-fips-solution-benefits-of-flexpod-converged-infrastructure.html["次のスライド：解決策 が FlexPod 統合インフラのメリットを提供"]

@@ -1,0 +1,202 @@
+---
+sidebar: sidebar 
+permalink: security/flexpod-fips-flexpod-cisco-networking-and-fips-140-2.html 
+keywords: cisco mds, mds 9000, cryptograhic, snmpv3, ssh, 
+summary: ソフトウェア 8.4.x を搭載した Cisco MDS 9000 シリーズプラットフォームは FIPS 140-2 に準拠しています。Cisco MDS は、 SNMPv3 および SSH 用の暗号モジュールおよび次のサービスを実装しています。 
+---
+= FlexPod シスコのネットワークおよび FIPS 140-2
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:flexpod-fips-flexpod-cisco-ucs-compute-and-fips-140-2.html["前のリリース： FlexPod Cisco UCS のコンピューティングと FIPS 140-2"]
+
+
+
+== Cisco MDS
+
+ソフトウェア 8.4.x を搭載した Cisco MDS 9000 シリーズプラットフォームは、です https://www.cisco.com/c/en/us/solutions/industries/government/global-government-certifications/fips-140.html?flt0_general-table0=mds["FIPS 140-2 に準拠しています"^]。Cisco MDS は、 SNMPv3 および SSH 用の暗号モジュールおよび次のサービスを実装しています。
+
+* 各サービスをサポートするセッション確立
+* 各サービスの主要な派生機能をサポートする、基盤となるすべての暗号化アルゴリズム
+* 各サービスのハッシュ化
+* 各サービスの対称暗号化
+
+
+FIPS モードをイネーブルにする前に、 MDS スイッチで次の作業を実行します。
+
+. パスワードは 8 文字以上にする必要があります。
+. Telnet を無効にします。ユーザは SSH のみを使用してログインする必要があります。
+. RADIUS/TACACS+ によるリモート認証をディセーブルにします。認証できるのは、スイッチに対してローカルなユーザだけです。
+. SNMP v1 および v2 を無効にします。SNMPv3 用に設定されたスイッチ上の既存のユーザアカウントは、認証に SHA 、プライバシーには AES/3DES だけを設定する必要があります。
+. VRRP を無効にします。
+. 認証用の MD5 または暗号化用の DES を持つすべての IKE ポリシーを削除します。認証に SHA を使用し、暗号化に 3DES/AES を使用するようにポリシーを変更します。
+. すべての SSH Server RSA1 キーペアを削除します。
+
+
+MDS スイッチで FIPS モードを有効にして FIPS ステータスを表示するには、次の手順を実行します。
+
+. FIPS のステータスを表示します。
++
+....
+MDSSwitch# show fips status
+FIPS mode is disabled
+MDSSwitch# conf
+Enter configuration commands, one per line.  End with CNTL/Z.
+....
+. 2048 ビットの SSH キーを設定します。
++
+....
+MDSSwitch(config)# no feature ssh
+XML interface to system may become unavailable since ssh is disabled
+MDSSwitch(config)# no ssh key
+MDSSwitch(config)# show ssh key
+**************************************
+could not retrieve rsa key information
+bitcount: 0
+**************************************
+could not retrieve dsa key information
+bitcount: 0
+**************************************
+no ssh keys present. you will have to generate them
+**************************************
+MDSSwitch(config)# ssh key
+dsa   rsa
+MDSSwitch(config)# ssh key rsa 2048 force
+generating rsa key(2048 bits).....
+...
+generated rsa key
+....
+. FIPS モードを有効にする。
++
+....
+MDSSwitch(config)# fips mode enable
+FIPS mode is enabled
+System reboot is required after saving the configuration for the system to be in FIPS mode
+Warning: As per NIST requirements in 6.X, the minimum RSA Key Size has to be 2048
+....
+. FIPS のステータスを表示します。
++
+....
+MDSSwitch(config)# show fips status
+FIPS mode is enabled
+MDSSwitch(config)# feature ssh
+MDSSwitch(config)# show feature | grep ssh
+sshServer            1        enabled
+....
+. コンフィギュレーションを実行コンフィギュレーションに保存します。
++
+....
+MDSSwitch(config)# copy ru st
+[########################################] 100%
+exitCopy complete.
+MDSSwitch(config)# exit
+....
+. MDS スイッチを再起動します
++
+....
+MDSSwitch# reload
+This command will reboot the system. (y/n)?  [n] y
+....
+. FIPS のステータスを表示します。
++
+....
+Switch(config)# fips mode enable
+Switch(config)# show fips status
+....
+
+
+詳細については、を参照してください https://www.cisco.com/c/en/us/td/docs/switches/datacenter/mds9000/sw/5_0/configuration/guides/sec/nxos/sec/fips.html["FIPS モードの有効化"^]。
+
+
+
+== Cisco Nexus の場合
+
+Cisco Nexus 9000 シリーズスイッチ（バージョン 9.3 ）はです https://www.cisco.com/c/en/us/solutions/industries/government/global-government-certifications/fips-140.html?flt0_general-table0=nexus["FIPS 140-2 に準拠しています"^]。Cisco Nexus は、 SNMPv3 および SSH の暗号モジュールと次のサービスを実装します。
+
+* 各サービスをサポートするセッション確立
+* 各サービスの主要な派生機能をサポートする、基盤となるすべての暗号化アルゴリズム
+* 各サービスのハッシュ化
+* 各サービスの対称暗号化
+
+
+FIPS モードを有効にする前に、 Cisco Nexus スイッチで次の作業を実行します。
+
+. Telnet を無効にします。ユーザは Secure Shell （ SSH ）のみを使用してログインする必要があります。
+. SNMPv1 および v2 を無効にします。SNMPv3 用に設定されたデバイス上の既存のユーザアカウントは、認証に SHA 、プライバシーには AES/3DES だけを設定する必要があります。
+. すべての SSH サーバ RSA1 キー・ペアを削除します
+. Cisco TrustSec セキュリティアソシエーションプロトコル（ SAP ）ネゴシエーション中に使用する HMAC-SHA1 メッセージ整合性チェック（ MIC ）をイネーブルにします。これを行うには、「 cts-manual' 」または「 cts-dot1x' 」モードから sap hash-calgorithm「 HMAC-sha-1 」コマンドを入力します。
+
+
+Nexus スイッチで FIPS モードを有効にするには、次の手順を実行します。
+
+. 2048 ビットの SSH 鍵を設定します。
++
+....
+NexusSwitch# show fips status
+FIPS mode is disabled
+NexusSwitch# conf
+Enter configuration commands, one per line.  End with CNTL/Z.
+....
+. 2048 ビットの SSH キーを設定します。
++
+....
+NexusSwitch(config)# no feature ssh
+XML interface to system may become unavailable since ssh is disabled
+NexusSwitch(config)# no ssh key
+NexusSwitch(config)# show ssh key
+**************************************
+could not retrieve rsa key information
+bitcount: 0
+**************************************
+could not retrieve dsa key information
+bitcount: 0
+**************************************
+no ssh keys present. you will have to generate them
+**************************************
+NexusSwitch(config)# ssh key
+dsa   rsa
+NexusSwitch(config)# ssh key rsa 2048 force
+generating rsa key(2048 bits).....
+...
+generated rsa key
+....
+. FIPS モードを有効にする。
++
+....
+NexusSwitch(config)# fips mode enable
+FIPS mode is enabled
+System reboot is required after saving the configuration for the system to be in FIPS mode
+Warning: As per NIST requirements in 6.X, the minimum RSA Key Size has to be 2048
+Show fips status
+NexusSwitch(config)# show fips status
+FIPS mode is enabled
+NexusSwitch(config)# feature ssh
+NexusSwitch(config)# show feature | grep ssh
+sshServer            1        enabled
+Save configuration to the running configuration
+NexusSwitch(config)# copy ru st
+[########################################] 100%
+exitCopy complete.
+NexusSwitch(config)# exit
+....
+. Nexus スイッチを再起動します。
++
+....
+NexusSwitch# reload
+This command will reboot the system. (y/n)?  [n] y
+....
+. FIPS のステータスを表示します。
++
+....
+NexusSwitch(config)# fips mode enable
+NexusSwitch(config)# show fips status
+....
+
+
+さらに、 Cisco NX-OS ソフトウェアは、ネットワーク異常およびセキュリティの検出を強化する NetFlow 機能をサポートしています。NetFlow は、ネットワーク上のすべてのカンバセーション、通信に関係する側、使用されているプロトコル、およびトランザクションの期間のメタデータをキャプチャします。情報を集約して分析すると、正常な動作に関する洞察を得ることができます。収集されたデータを使用すると、疑わしいアクティビティのパターンを識別することもできます。たとえば、マルウェアがネットワーク全体に拡散し、これが気付かない場合があります。NetFlow では、フローを使用してネットワークモニタリングの統計情報を提供します。フローは、送信元インターフェイス（または VLAN ）に着信し、キーの値が同じパケットの単方向ストリームです。キーは、パケット内のフィールドの識別された値です。フローレコードを使用してフローを作成し、フローに固有のキーを定義します。フローエクスポータを使用して、 Cisco StealthWatch などのリモート NetFlow コレクタに NetFlow が収集するデータをエクスポートできます。StealthWatch では、この情報を使用してネットワークを継続的に監視し、ランサムウェアの発生が発生した場合にリアルタイムの脅威検出およびインシデント応答フォレンジックを提供します。
+
+link:flexpod-fips-flexpod-netapp-ontap-storage-and-fips-140-2.html["次のセクションでは、 FlexPod の ONTAP ストレージと FIPS 140-2 について説明します。"]

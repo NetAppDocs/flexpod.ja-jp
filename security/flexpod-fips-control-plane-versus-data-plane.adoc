@@ -1,0 +1,19 @@
+---
+sidebar: sidebar 
+permalink: security/flexpod-fips-control-plane-versus-data-plane.html 
+keywords: control plane, data plane 
+summary: FIPS 140-2 戦略を実装する場合は、保護対象を理解することが重要です。これは、コントロールプレーンとデータプレーンの 2 つの領域に簡単に分割できます。 
+---
+= コントロールプレーンとデータプレーンの比較
+:hardbreaks:
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:flexpod-fips-overview-of-fips-140-2.html["以前： FIPS 140-2 の概要。"]
+
+FIPS 140-2 戦略を実装する場合は、保護対象を理解することが重要です。これは、コントロールプレーンとデータプレーンの 2 つの領域に簡単に分割できます。コントロールプレーンとは、ネットアップストレージコントローラ、 Cisco Nexus スイッチ、 Cisco UCS サーバへの管理アクセスなど、 FlexPod システム内のコンポーネントの制御と運用に影響する要素のことです。このレイヤでの保護は、管理者がデバイスへの接続や変更を行うために使用できるプロトコルと暗号化暗号化暗号化暗号化方式を制限することによって提供されます。データプレーンとは、 FlexPod システム内の PHI などの実際の情報を指します。これは、保存データを暗号化することで保護されます。 FIPS では、使用中の暗号モジュールが標準に準拠していることを確認できます。
+
+link:flexpod-fips-flexpod-cisco-ucs-compute-and-fips-140-2.html["次に、 FlexPod の Cisco UCS コンピューティングと FIPS 140-2 を実行します。"]
