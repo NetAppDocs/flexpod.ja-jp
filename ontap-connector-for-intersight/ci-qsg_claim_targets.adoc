@@ -24,4 +24,7 @@ image:ci-qsg_image7.png["有効な NetApp AIQ UM API ゲートウェイのスク
 
 次の例は、 Cisco Intersight の NetApp AIQ UM ターゲットを請求する方法を示しています。
 
+
+NOTE: NetApp AIQ UM ターゲットを要求すると、 Active IQ Unified Manager で管理されるすべてのクラスタが自動的にサイト間に追加されます。
+
 image:ci-qsg_image8.png["Cisco Intersight から要求されている NetApp AIQ UM ターゲットのスクリーンショット"]
