@@ -13,7 +13,7 @@ summary: FlexPod SM-BC 解決策 のコンピューティング設定は、一�
 :imagesdir: ./../media/
 
 
-link:sm-bcs-solution-validation_overview.html["前提：概要。"]
+link:sm-bcs-solution-validation_overview.html["事前定義：解決策 の検証 - 概要。"]
 
 FlexPod SM-BC 解決策 のコンピューティング設定は、一般的な FlexPod 解決策 のベストプラクティスに従います。以降のセクションでは、検証に使用する接続と構成の一部を紹介します。また、 SM-BC に関連する考慮事項の一部は、実装のリファレンスとガイダンスを提供するために強調表示されています。
 
@@ -145,5 +145,5 @@ image:sm-bcs-image19.png["エラー：グラフィックイメージがありま
 
 |  | 2. | サイト A の iSCSI ターゲット | サイト A コントローラ 2 の iSCSI B LIF 
 |===
-* タイトル：ネットワーク URL ： /Flexpo-d/sm-bcs-network.html
+* タイトル：ネットワークlink:sm-bcs-network.html["次の例は、解決策 の検証 - ネットワークです。"]
 

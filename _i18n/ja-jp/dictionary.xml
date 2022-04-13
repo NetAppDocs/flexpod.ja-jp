@@ -8527,8 +8527,6 @@
   <block id="fc37581a93e14f865030ca55b7270290" category="paragraph"><block ref="fc37581a93e14f865030ca55b7270290" category="inline-link-macro-rx"></block></block>
   <block id="9bba922e59a4daeddb1809c2781a44a1" category="summary">FlexPod SM-BC 解決策 のコンピューティング設定は、一般的な FlexPod 解決策 のベストプラクティスに従います。以降のセクションでは、検証に使用する接続と構成の一部を紹介します。また、 SM-BC に関連する考慮事項の一部は、実装のリファレンスとガイダンスを提供するために強調表示されています。</block>
   <block id="bc8a1d734e83e27cc8a2adc1858d6959" category="doc">解決策 の検証 - コンピューティング</block>
-  <block id="ed0d7e76ce8e3038702fbab0cb9524ab" category="inline-link-macro">前提：概要。</block>
-  <block id="e38775cef86d4cc66d36ea249100c217" category="paragraph"><block ref="e38775cef86d4cc66d36ea249100c217" category="inline-link-macro-rx"></block></block>
   <block id="3f0294fb25b6df81fd5b767f0d74974f" category="paragraph">UCS B200 ブレードサーバと IOM 間の接続は、 UCS 5108 シャーシバックプレーン接続を介して UCS VIC カードによって提供されます。検証に使用する UCS 2204XP ファブリックエクステンダには、それぞれ 16 個の 10G ポートがあり、それぞれ 8 台のハーフ幅ブレードサーバに接続します（たとえば、サーバごとに 2 個）。サーバの接続帯域幅を増やすために、メザニンベースの VIC を追加して、サーバを代替 UCS 2408 IOM に接続し、各サーバに 4 つの 10G 接続を提供できます。</block>
   <block id="faf94a25f3b3dbcdc7d8df2b1e466b18" category="paragraph"><block ref="faf94a25f3b3dbcdc7d8df2b1e466b18" category="inline-image-macro-rx" type="image"></block></block>
   <block id="3e760ed69fcce8d06a007f41a5c61d17" category="paragraph">検証に使用される UCS 5108 シャーシと UCS 6454 FI 間の接続は、 4 つの 10G 接続を使用する IOM 2204XP によって提供されます。FI ポート 1 ～ 4 は、これらの接続用のサーバーポートとして設定されます。FI ポート 25 ～ 28 は、ローカルサイトの Nexus スイッチ A および B へのネットワークアップリンクポートとして設定されます。次の図と表に、 UCS 5108 シャーシおよび Nexus スイッチに接続する UCS 6454 FI の接続図とポート接続の詳細を示します。</block>
@@ -8575,7 +8573,6 @@
   <block id="6add07bc86a316af4f25422f4c8887b7" category="cell">iSCSI B</block>
   <block id="56d1b12d5a4e9f59a4453bb6a7cb7b08" category="cell">サイト B コントローラ 1 の iSCSI B LIF</block>
   <block id="5975420dbf2246f6edb6a902578b5ff1" category="cell">サイト A コントローラ 2 の iSCSI B LIF</block>
-  <block id="5e7b9ab3adef639ef9c61005fee6237c" category="list-text">タイトル：ネットワーク URL ： /Flexpo-d/sm-bcs-network.html</block>
   <block id="efa3c8203ca8f331abebfd2b1b8197b6" category="summary">FlexPod SM-BC 解決策 のネットワーク設定は、各サイトでの一般的な FlexPod 解決策 のベストプラクティスに従います。サイト間接続の場合、解決策 検証設定では、 2 つのサイトの FlexPod Nexus スイッチを相互に接続して、 2 つのサイト間に VLAN を拡張するサイト間接続を提供します。以降のセクションでは、検証に使用する接続と構成の一部を紹介します。</block>
   <block id="74b5d0143f42e7eea9541ccef14b9fb7" category="doc">解決策 の検証 - ネットワーク</block>
   <block id="698c40fe15891da5bf5654625e3efc65" category="paragraph">各サイトの FlexPod Nexus スイッチは、可用性の高い構成で UCS コンピューティングと ONTAP ストレージの間をローカルで接続します。冗長コンポーネントと冗長接続により、単一点障害に対する耐障害性が確保されます。</block>
@@ -8886,8 +8883,6 @@
   <block id="cbb9a6e025db26e6e93575dee2958256" category="paragraph">FlexPod データセンターに NetApp SnapMirror Business Continuity （ SM-BC ）を配置し、 ONTAP 9.10 解決策 を使用すると、単一点障害のシナリオに加えて、サイト障害からビジネスクリティカルなデータを保護できます。このテクニカルレポートでは、 FlexPod SM-BC 解決策 とその解決策 コンポーネントの概要を示し、解決策 の設定と検証の側面をいくつか紹介します。</block>
   <block id="11d56047eb2c0edaf57e943fb8e6a2af" category="summary">FlexPod SM-BC 解決策 のストレージ構成は、各サイトでの一般的な FlexPod 解決策 のベストプラクティスに従います。SM-BC クラスタピアリングおよびデータレプリケーションでは、両方のサイトの FlexPod スイッチ間に確立されたサイト間リンクを使用します。以降のセクションでは、検証に使用する接続と構成の一部を紹介します。</block>
   <block id="d996e1a7c19a3c614597fe3d017735e3" category="doc">解決策 の検証 - ストレージ</block>
-  <block id="a5c83135920d14aae2bfd3bb752f5726" category="inline-link-macro">前のバージョン：解決策 の検証 - 概要</block>
-  <block id="41b051617d64484449db4f9e8900e50c" category="paragraph"><block ref="41b051617d64484449db4f9e8900e50c" category="inline-link-macro-rx"></block></block>
   <block id="06a162921ff2263e0d2871473d84695c" category="paragraph">ローカル UCS FI およびブレードサーバへのストレージ接続は、ローカルサイトの Nexus スイッチによって提供されます。サイト間の Nexus スイッチ接続を介して、リモートの UCS ブレードサーバからストレージにアクセスすることもできます。次の図と表は、各サイトのストレージ接続図とストレージコントローラの接続リストを示しています。</block>
   <block id="8d5a21ecdaacb7041f30f1ec08f09734" category="paragraph"><block ref="8d5a21ecdaacb7041f30f1ec08f09734" category="inline-image-macro-rx" type="image"></block></block>
   <block id="cfde5efedf8c38f0dabe7dd36607a381" category="section-title">接続およびインターフェイス</block>
@@ -8959,4 +8954,14 @@
   <block id="aa81b985470b358604c301c837d7c91b" category="paragraph"><block ref="aa81b985470b358604c301c837d7c91b" category="inline-link-macro-rx"></block></block>
   <block id="c1d535c9a4692514b630f09f40f0b0dc" category="sidebar">ネットアップの SnapMirror によるビジネス継続性機能と ONTAP 9.10 を使用した FlexPod データセンター</block>
   <block id="097c7979ec41d500c7beaecba9d80bfd" category="sidebar">検証済みのシナリオ</block>
+  <block id="926c55d6254734317efca9c578785222" category="inline-link-macro">事前定義：解決策 の検証 - 概要。</block>
+  <block id="015b55d92ffe05728fcc13ea0f166b7d" category="paragraph"><block ref="015b55d92ffe05728fcc13ea0f166b7d" category="inline-link-macro-rx"></block></block>
+  <block id="2624162f080c891f91de0c93697cdcd6" category="inline-link-macro">次の例は、解決策 の検証 - ネットワークです。</block>
+  <block id="510a9ef55077a4c865a658827d82e4ba" category="list-text">タイトル：ネットワーク<block ref="a400e1c221e8c3e8b80a81f5085a481d" category="inline-link-macro-rx"></block></block>
+  <block id="abcffbe98efe96e429a99d1585c42fea" category="inline-link-macro">前のバージョン：解決策 の検証 - コンピューティング。</block>
+  <block id="b3b724b3ba2d9437c4399b9adc6bd618" category="paragraph"><block ref="b3b724b3ba2d9437c4399b9adc6bd618" category="inline-link-macro-rx"></block></block>
+  <block id="49bca3ae2bb88d593b1c6cd906f3a1f5" category="inline-link-macro">次の例：解決策 の検証：ストレージ。</block>
+  <block id="aa19bc894bc9430b5e38f9f1186a4112" category="paragraph"><block ref="aa19bc894bc9430b5e38f9f1186a4112" category="inline-link-macro-rx"></block></block>
+  <block id="182b99dd6e6e03bd87c6e4742f0efe61" category="inline-link-macro">前のバージョン：解決策 の検証 - ネットワーク。</block>
+  <block id="b039f508b07fa442d12ced167cdee4ab" category="paragraph"><block ref="b039f508b07fa442d12ced167cdee4ab" category="inline-link-macro-rx"></block></block>
 </blocks>
