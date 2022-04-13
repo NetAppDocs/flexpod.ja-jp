@@ -145,5 +145,4 @@ image:sm-bcs-image19.png["エラー：グラフィックイメージがありま
 
 |  | 2. | サイト A の iSCSI ターゲット | サイト A コントローラ 2 の iSCSI B LIF 
 |===
-* タイトル：ネットワークlink:sm-bcs-network.html["次の例は、解決策 の検証 - ネットワークです。"]
-
+link:sm-bcs-network.html["次の例は、解決策 の検証 - ネットワークです。"]
