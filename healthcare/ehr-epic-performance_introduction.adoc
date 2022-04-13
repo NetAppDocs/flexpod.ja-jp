@@ -6,6 +6,7 @@ summary: 本レポートの目的は、 Epic Healthcare のワークロードを
 ---
 = TR-4784 ：『 FlexPod for Epic Performance Testing 』
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

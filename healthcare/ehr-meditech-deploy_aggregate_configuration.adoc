@@ -6,6 +6,7 @@ summary: ネットアップでは、通常のネットアップの Flash Pool �
 ---
 = アグリゲートの構成
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: FlexPod Express では、選択したハイパーバイザーとネッ�
 ---
 = テクノロジ要件
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

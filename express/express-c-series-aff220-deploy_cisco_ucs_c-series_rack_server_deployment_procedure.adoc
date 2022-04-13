@@ -6,6 +6,7 @@ summary: ここでは、 FlexPod Express 構成で使用する Cisco UCS C シ�
 ---
 = Cisco UCS C シリーズラックサーバ導入手順
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

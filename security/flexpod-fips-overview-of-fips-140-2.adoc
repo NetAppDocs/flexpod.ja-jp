@@ -6,6 +6,7 @@ summary: FIPS 140-2 は、コンピュータや通信システムの機密情報
 ---
 = FIPS 140-2 の概要
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

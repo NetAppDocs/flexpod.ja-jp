@@ -6,6 +6,7 @@ summary: 次のセクションでは、 FlexPod Express 環境で使用する Ci
 ---
 = Cisco Nexus 3172P Deployment 手順の略
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

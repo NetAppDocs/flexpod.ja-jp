@@ -6,6 +6,7 @@ summary:
 ---
 = 確認応答、バージョン履歴、および追加情報 の参照先
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

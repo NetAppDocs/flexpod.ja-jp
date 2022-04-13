@@ -6,6 +6,7 @@ summary: MEDITECH ソフトウェア環境に導入されているネットア�
 ---
 = NetApp の設定
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

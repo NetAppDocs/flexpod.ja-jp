@@ -6,6 +6,7 @@ summary: この FlexPod Express 解決策は、 FlexPod コンバージドイン
 ---
 = 解決策の概要
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

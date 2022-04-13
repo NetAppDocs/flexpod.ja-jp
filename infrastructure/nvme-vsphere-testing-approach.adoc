@@ -6,6 +6,7 @@ summary: ここでは、 FC-NVMe on FlexPod の検証テストの概要を示し
 ---
 = テストアプローチ
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

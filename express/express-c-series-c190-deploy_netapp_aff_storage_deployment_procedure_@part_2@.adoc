@@ -6,6 +6,7 @@ summary: igroup を作成するには、クラスタ管理ノードの SSH 接�
 ---
 = NetApp AFF ストレージ導入手順（パート 2 ）
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

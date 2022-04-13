@@ -6,6 +6,7 @@ summary: FlexPod の設計により、多数の異なるコンポーネントと
 ---
 = FlexPod ルール
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

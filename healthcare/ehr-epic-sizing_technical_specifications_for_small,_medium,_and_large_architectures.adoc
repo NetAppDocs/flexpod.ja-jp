@@ -6,6 +6,7 @@ summary: FlexPod の設計により、多数の異なるコンポーネントと
 ---
 = 小規模、中規模、大規模のアーキテクチャ向けの技術仕様
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

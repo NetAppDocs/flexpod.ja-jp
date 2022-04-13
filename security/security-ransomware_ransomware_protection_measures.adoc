@@ -6,6 +6,7 @@ summary: ここでは、 NetApp ONTAP データ管理ソフトウェアの主な
 ---
 = ランサムウェアからの保護対策
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

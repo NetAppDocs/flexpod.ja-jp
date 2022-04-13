@@ -5,6 +5,7 @@ keywords: virtualization, FAS27xx, AFF220, express, VMware vSphere,
 summary: FlexPod Express は、混在仮想化ワークロードを実行するように設計されています。リモートオフィス、ブランチオフィス、中堅企業を対象としています。また、特定の目的に専用の解決策を実装したい大規模企業にも最適です。新しい FlexPod Express 解決策の主なドライバは、 ONTAP 9.5 、 FAS27xx 、 AFF220 、 VMware vSphere 6.7U1 などの新しいテクノロジを FlexPod Express に追加することです。 
 ---
 = 解決策の概要
+:allow-uri-read: 
 
 
 FlexPod Express は、混在仮想化ワークロードを実行するように設計されています。リモートオフィス、ブランチオフィス、中堅企業を対象としています。また、特定の目的に専用の解決策を実装したい大規模企業にも最適です。新しい FlexPod Express 解決策の主なドライバは、 ONTAP 9.5 、 FAS27xx/AFF220 、 VMware vSphere 6.7U1 などの新しいテクノロジを FlexPod Express に追加することです。

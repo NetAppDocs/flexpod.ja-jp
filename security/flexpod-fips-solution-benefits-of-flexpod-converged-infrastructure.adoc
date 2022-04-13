@@ -6,6 +6,7 @@ summary: FlexPod システムにおける FIPS の設定を実証するために
 ---
 = FlexPod コンバージドインフラの解決策 のメリット
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -14,7 +15,7 @@ summary: FlexPod システムにおける FIPS の設定を実証するために
 
 link:flexpod-fips-flexpod-netapp-ontap-storage-and-fips-140-2.html["以前のリリース： FlexPod NetApp ONTAP ストレージおよび FIPS 140-2 。"]
 
-医療機関には、いくつかのミッションクリティカルなシステムがあります。最も重要なシステムの 2 つは、電子カルテ（ EHR ）システムと医療画像システムです。FlexPod システムにおける FIPS の設定を実証するために、オープンソースの EHR およびオープンソースの画像アーカイブおよび通信システム（ PACS ）システムを使用して、 FlexPod システムのラボセットアップとワークロード検証を実施しました。EHR 機能、 EHR 論理アプリケーションコンポーネント、および FlexPod システムに実装した場合の EHR システムのメリットの一覧については、を参照してください https://www.netapp.com/pdf.html?item=/media/22199-tr-4881.pdf["TR-4881 ：『 FlexPod for Electronic Health Record Systems 』"^]。医療画像システムの機能、論理アプリケーションコンポーネント、および FlexPod に実装された医療画像システムの利点については、を参照してください。
+医療機関には、いくつかのミッションクリティカルなシステムがあります。最も重要なシステムの 2 つは、電子カルテ（ EHR ）システムと医療画像システムです。FlexPod システムにおける FIPS の設定を実証するために、オープンソースの EHR およびオープンソースの画像アーカイブおよび通信システム（ PACS ）システムを使用して、 FlexPod システムのラボセットアップとワークロード検証を実施しました。EHR 機能、 EHR 論理アプリケーションコンポーネント、および FlexPod システムに実装した場合の EHR システムのメリットの一覧については、を参照してください https://www.netapp.com/pdf.html?item=/media/22199-tr-4881.pdf["TR-4881 ：『 FlexPod for Electronic Health Record Systems 』"^]。医療画像システムの機能、論理アプリケーションコンポーネント、および FlexPod に実装された医療画像システムの利点については、を参照してください https://www.netapp.com/media/19793-tr-4865.pdf["TR-4865 ： FlexPod for Medical Imaging"^]。
 
 FIPS のセットアップとワークロードの検証では、典型的な医療機関の代表的なワークロード特性を行使しました。たとえば、現実的な患者データのアクセスおよび変更シナリオを含むオープンソースの EHR システムをテストしました。さらに、医療用画像ワークロードを実行しました。このワークロードには、医療用（ DICOM ）オブジェクトのデジタル画像処理と通信が含まれていました。dcm ファイル形式メタデータを含む DICOM オブジェクトは、ファイルストレージとブロックストレージの両方に保存されています。さらに、仮想化された RedHat Enterprise Linux （ RHEL ）サーバにマルチパス機能も実装しています。DICOM オブジェクトは、 NFS 、 iSCSI を使用してマウントされた LUN 、および FC を使用してマウントされた LUN に保存しました。FIPS のセットアップと検証で、 FlexPod コンバージドインフラが期待以上のパフォーマンスをシームレスに実現したことがわかりました。
 
@@ -26,7 +27,7 @@ image:flexpod-fips-image6.png["エラー：グラフィックイメージがあ�
 
 == 解決策インフラのハードウェアコンポーネントとソフトウェアコンポーネント
 
-次の 2 つの図に、 FlexPod で FIPS を有効にする際に使用するハードウェアコンポーネントとソフトウェアコンポーネントを示します。これらの表に記載されている推奨事項は例です。 NetApp SME と連携して、コンポーネントが組織に適していることを確認する必要があります。また、コンポーネントとバージョンがでサポートされていることを確認します https://mysupport.netapp.com/matrix/["NetApp Interoperability Matrix Tool で確認できます"^] （ IMT ）および。
+次の 2 つの図に、 FlexPod で FIPS を有効にする際に使用するハードウェアコンポーネントとソフトウェアコンポーネントを示します。これらの表に記載されている推奨事項は例です。 NetApp SME と連携して、コンポーネントが組織に適していることを確認する必要があります。また、コンポーネントとバージョンがでサポートされていることを確認します https://mysupport.netapp.com/matrix/["NetApp Interoperability Matrix Tool で確認できます"^] （ IMT ）および https://ucshcltool.cloudapps.cisco.com/public/["シスコハードウェア互換性リスト（ HCL ）"^]。
 
 |===
 | レイヤー（ Layer ） | 製品ファミリー | 数量とモデル | 詳細 

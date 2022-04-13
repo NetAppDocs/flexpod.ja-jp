@@ -6,6 +6,7 @@ summary: このドキュメントに記載されている情報の詳細につ�
 ---
 = 追加情報の参照先
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -16,7 +17,7 @@ summary: このドキュメントに記載されている情報の詳細につ�
 
 ネットアップの製品マニュアル
 
-http://docs[]。.com
+http://docs[]。 http://docs.netapp.com/["ネットアップ"^].com
 
 FlexPod エクスプレスガイド
 

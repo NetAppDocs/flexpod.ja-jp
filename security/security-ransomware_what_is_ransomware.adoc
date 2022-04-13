@@ -6,6 +6,7 @@ summary: ランサムウェアは、暗号化を使用して悪意のあるソ�
 ---
 = TR-4802 ：『 FlexPod 、 the 解決策 to Ransomware 』
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: データベースの全体的なサイズと合計 IOPS によって�
 ---
 = Epic に対応したネットアップストレージリファレンスアーキテクチャ
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

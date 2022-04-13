@@ -6,6 +6,7 @@ summary: Epic で GenerationIO ツール（ Genio ）を使用して、ストレ
 ---
 = テスト方法
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: このセクションでは、 FlexPod Express の各コンポーネン
 ---
 = 技術仕様と参考資料
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -200,7 +201,7 @@ summary: このセクションでは、 FlexPod Express の各コンポーネン
 | NetApp Flash Pool インテリジェントなデータキャッシングを最大限に活用 2+| 24 TB 
 |===
 
-NOTE: FAS ストレージコントローラオプションの詳細については、を参照してください https://hwu.netapp.com/Controller/Index?platformTypeId=2032["FAS モデル"^] Hardware Universe のセクション。AFF の場合は、を参照してください セクション。
+NOTE: FAS ストレージコントローラオプションの詳細については、を参照してください https://hwu.netapp.com/Controller/Index?platformTypeId=2032["FAS モデル"^] Hardware Universe のセクション。AFF の場合は、を参照してください https://hwu.netapp.com/Controller/Index?platformTypeId=5265148["AFF モデル"^] セクション。
 
 次の表に、 FAS8020 コントローラシステムの特性を示します。
 

@@ -6,6 +6,7 @@ summary: このセクションでは、 FlexPod Express デザインの電源要
 ---
 = 電源とケーブル接続の要件
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

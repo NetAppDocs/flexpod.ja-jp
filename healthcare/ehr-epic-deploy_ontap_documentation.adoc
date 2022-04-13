@@ -6,6 +6,7 @@ summary: 本ドキュメントおよび FlexPod の導入に関連するリン�
 ---
 = ONTAP のドキュメント
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

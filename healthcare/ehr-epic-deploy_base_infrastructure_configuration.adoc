@@ -6,6 +6,7 @@ summary: このセクションでは、インフラを設定するために必�
 ---
 = ベースインフラの構成
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

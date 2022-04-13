@@ -6,6 +6,7 @@ summary: オブジェクトストレージをアグリゲートに接続する�
 ---
 = ONTAP にクラウド階層を追加します
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

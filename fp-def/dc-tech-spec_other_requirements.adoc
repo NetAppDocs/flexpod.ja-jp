@@ -6,6 +6,7 @@ summary: FlexPod アーキテクチャには、相互運用性とサポート関
 ---
 = その他の要件
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -14,7 +15,7 @@ summary: FlexPod アーキテクチャには、相互運用性とサポート関
 
 FlexPod アーキテクチャには、相互運用性とサポート関連の次の要件が追加で含まれています。
 
-* すべてのハードウェアコンポーネントとソフトウェアコンポーネントがネットアップに記載され、サポートされている必要があります http://mysupport.netapp.com/matrix["IMT"^]、、および Cisco UCS Hardware and Software Interoperability Matrix Tool を参照してください。
+* すべてのハードウェアコンポーネントとソフトウェアコンポーネントがネットアップに記載され、サポートされている必要があります http://mysupport.netapp.com/matrix["IMT"^]、 https://ucshcltool.cloudapps.cisco.com/public/["Cisco UCS ハードウェアおよびソフトウェア互換性リスト"^]、および Cisco UCS Hardware and Software Interoperability Matrix Tool を参照してください。
 * 次の項目を含むすべての機器について、有効なサポート契約が必要です。
 +
 ** シスコ機器の Smart Net Total Care （ SmartNet ）サポート

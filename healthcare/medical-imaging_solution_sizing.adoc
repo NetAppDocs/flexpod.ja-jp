@@ -6,6 +6,7 @@ summary: このセクションでは、スタディの数と、対応するイ�
 ---
 = 解決策のサイジング
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

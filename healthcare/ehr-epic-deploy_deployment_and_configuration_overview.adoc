@@ -6,6 +6,7 @@ summary: このドキュメントで紹介するネットアップストレー�
 ---
 = 概要
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

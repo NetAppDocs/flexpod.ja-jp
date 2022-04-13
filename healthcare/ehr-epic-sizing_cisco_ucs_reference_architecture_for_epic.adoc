@@ -6,6 +6,7 @@ summary: Epic を導入する際に、シスコは Epic のベストプラクテ
 ---
 = Epic に対応した Cisco UCS リファレンスアーキテクチャ
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

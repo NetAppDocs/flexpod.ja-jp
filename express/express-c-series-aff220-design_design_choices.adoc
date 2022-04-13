@@ -5,6 +5,7 @@ keywords: AFF A220, ontap 9, Nexus 3172P, UCS C-Series, VMware vSphere
 summary: このページに記載されているテクノロジは、この設計の設計プロセスで採用されています。各テクノロジは、 FlexPod Express Infrastructure 解決策の特定の目的に使用されます。 
 ---
 = 設計の選択肢
+:allow-uri-read: 
 
 
 この設計の設計プロセスでは、次のテクノロジが採用されました。各テクノロジは、 FlexPod Express Infrastructure 解決策の特定の目的に使用されます。
@@ -35,7 +36,7 @@ image:express-c-series-aff220-design_image5.png["エラー：グラフィック�
 
 image:express-c-series-aff220-design_image6.png["エラー：グラフィックイメージがありません"]
 
-これらは、 FlexPod Express 解決策を補完するいくつかの主要機能です。ONTAP 9.4 のその他の機能の詳細については、を参照してください https://www.netapp.com/us/media/ds-3231.pdf["ONTAP 9 データ管理ソフトウェアのデータシート"^]。また、ネットアップを参照してくださいONTAP 9.4 用に更新されました。
+これらは、 FlexPod Express 解決策を補完するいくつかの主要機能です。ONTAP 9.4 のその他の機能の詳細については、を参照してください https://www.netapp.com/us/media/ds-3231.pdf["ONTAP 9 データ管理ソフトウェアのデータシート"^]。また、ネットアップを参照してください http://docs.netapp.com/ontap-9/index.jsp["ONTAP 9 ドキュメンテーション・センター"^]ONTAP 9.4 用に更新されました。
 
 
 

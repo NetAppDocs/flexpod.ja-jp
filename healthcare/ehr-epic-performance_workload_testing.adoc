@@ -6,6 +6,7 @@ summary: AFF A300 HA ペアでは、存在する大規模な Epic インスタ�
 ---
 = ワークロードのテスト
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

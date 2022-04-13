@@ -6,6 +6,7 @@ summary: シスコは、解決策の設計とアーキテクチャに大きく�
 ---
 = シスコのコンポーネント
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -228,7 +229,7 @@ C シリーズサーバを使用する大規模な FlexPod アーキテクチャ
 
 == Cisco MDS のオプション
 
-Cisco MDS スイッチは、 FlexPod アーキテクチャのオプションコンポーネントです。FC SAN に Cisco MDS スイッチを実装する場合、冗長 SAN スイッチファブリックが必要です。次の表に、サポートされている Cisco MDS スイッチのサブセットのパーツ番号と詳細を示します。を参照してください https://mysupport.netapp.com/matrix/["NetApp IMT"^] および サポートされる SAN スイッチの一覧を確認できます。
+Cisco MDS スイッチは、 FlexPod アーキテクチャのオプションコンポーネントです。FC SAN に Cisco MDS スイッチを実装する場合、冗長 SAN スイッチファブリックが必要です。次の表に、サポートされている Cisco MDS スイッチのサブセットのパーツ番号と詳細を示します。を参照してください https://mysupport.netapp.com/matrix/["NetApp IMT"^] および https://ucshcltool.cloudapps.cisco.com/public/["シスコのハードウェアおよびソフトウェア互換性リスト"^] サポートされる SAN スイッチの一覧を確認できます。
 
 |===
 | Cisco MDS 9000 シリーズスイッチ | パーツ番号 | 説明 

@@ -6,6 +6,7 @@ summary: 本レポートは、 MEDITECH EHR アプリケーションソフトウ
 ---
 = TR-4774 ：『 FlexPod for MEDITECH Directional Sizing 』
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

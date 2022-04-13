@@ -6,6 +6,7 @@ summary: 本ガイドの執筆には、以下の方々が協力していただ�
 ---
 = 謝辞
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

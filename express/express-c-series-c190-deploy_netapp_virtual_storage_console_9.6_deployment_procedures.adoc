@@ -6,6 +6,7 @@ summary: このセクションでは、 NetApp Virtual Storage Console （ VSC �
 ---
 = NetApp Virtual Storage Console 9.6 の導入手順
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

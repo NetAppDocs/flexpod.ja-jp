@@ -6,6 +6,7 @@ summary: FlexPod プラットフォームは、 Cisco Unified Computing System �
 ---
 = TR-4036 ：『 FlexPod Datacenter Technical Specifications 』
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

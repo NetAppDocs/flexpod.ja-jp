@@ -6,6 +6,7 @@ summary: このセクションでは、 ONTAP 8.3 以降のバージョンへの
 ---
 = Storage Virtual Machine の設定
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

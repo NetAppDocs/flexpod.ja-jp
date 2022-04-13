@@ -6,6 +6,7 @@ summary: ここでは、手順 Express 構成で使用する Cisco UCS C シリ�
 ---
 = Cisco UCS C シリーズラックサーバを導入する
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

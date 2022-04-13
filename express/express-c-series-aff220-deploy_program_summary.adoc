@@ -5,6 +5,7 @@ keywords: summary, infrastructure, cisco, ucs, flexpod, datacenter
 summary: 業界のトレンドは、共有インフラとクラウドコンピューティングへの大規模なデータセンターの移行を示しています。さらに、リモートオフィスやブランチオフィスにもシンプルで効果的な解決策を導入し、データセンターでよく使用されているテクノロジを活用することができます。 
 ---
 = NVA-1123-deploy ： FlexPod Express with VMware vSphere 6.7 and NetApp AFF A220 deployment guide 』
+:allow-uri-read: 
 
 
 ネットアップ、 Savita Kumari 氏

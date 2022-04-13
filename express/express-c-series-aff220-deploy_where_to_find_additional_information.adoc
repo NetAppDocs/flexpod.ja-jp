@@ -6,6 +6,7 @@ summary: このドキュメントの詳細については、ネットアップ�
 ---
 = 追加情報の参照先
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

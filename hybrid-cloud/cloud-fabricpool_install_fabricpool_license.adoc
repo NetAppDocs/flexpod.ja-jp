@@ -6,6 +6,7 @@ summary: ネットアップライセンスファイルを取得したら、 OnCo
 ---
 = FabricPool ライセンスをインストールする
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

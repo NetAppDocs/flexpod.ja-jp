@@ -6,6 +6,7 @@ summary: FlexPod アーキテクチャ基盤で MEDITECH 環境を運用する�
 ---
 = TR-4753 ：『 FlexPod Datacenter for MEDITECH Deployment Guide 』
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

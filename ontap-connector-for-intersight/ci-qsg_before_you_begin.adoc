@@ -6,6 +6,7 @@ summary: 開始する前に、 AIQ UM をインストールまたはアップグ
 ---
 = 作業を開始する前に
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -30,7 +31,7 @@ Active IQ Unified Manager をインストールまたはアップグレードし
 * 手順 *
 
 . Cisco Intersight アカウントを作成します。にアクセスします https://intersight.com/["https://intersight.com/"^] サイト間アカウントを作成します。Cisco Intersight アカウントを作成するには、有効な Cisco ID が必要です。
-. サイト間仮想アプライアンスは、からダウンロードできます https://software.cisco.com/download/home/286319499/type/286323047/release/1.0.9-148["software.cisco.com"^]。詳細については、を参照してください。
+. サイト間仮想アプライアンスは、からダウンロードできます https://software.cisco.com/download/home/286319499/type/286323047/release/1.0.9-148["software.cisco.com"^]。詳細については、を参照してください https://www.cisco.com/c/en/us/td/docs/unified_computing/Intersight/b_Cisco_Intersight_Appliance_Getting_Started_Guide/b_Cisco_Intersight_Appliance_Install_and_Upgrade_Guide_chapter_00.html["『 Intersight Appliance Install and Upgrade Guide 』を参照してください"^]。
 . OVA を導入します。OVA を導入するには、 DNS と NTP が必要です。
 +
 .. OVA を導入する前に、 A / PTR レコードと CNAME エイリアスレコードを使用して DNS を設定します。以下の例を参照してください。

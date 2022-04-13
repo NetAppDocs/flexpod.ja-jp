@@ -6,6 +6,7 @@ summary: 本ドキュメントでは、 FlexPod Express プラットフォーム
 ---
 = FlexPod プラットフォーム
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: 必ず Interoperability Matrix Tool （ IMT ）を使用して、ソフ
 ---
 = インフラのハードウェアコンポーネントとソフトウェアコンポーネント
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

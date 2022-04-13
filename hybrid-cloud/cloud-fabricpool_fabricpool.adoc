@@ -6,6 +6,7 @@ summary: FabricPool は、オールフラッシュ（ SSD ）アグリゲート�
 ---
 = FabricPool
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

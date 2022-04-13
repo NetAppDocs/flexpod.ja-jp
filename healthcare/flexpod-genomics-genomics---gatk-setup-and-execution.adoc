@@ -6,6 +6,7 @@ summary: このセクションでは、 FlexPod および GATK のセットア�
 ---
 = ゲノム - GATK のセットアップと実行
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -28,7 +29,7 @@ link:flexpod-genomics-solution-infrastructure-hardware-and-software-components.h
 
 . サンプル収集。
 . https://medlineplus.gov/genetics/understanding/testing/sequencing/["ゲノム配列決定"^] シーケンサーを使用して、 raw データを生成します。
-. 前処理中です例： https://www.nature.com/articles/nmeth.4268.pdf?origin=ppub["重複排除"^] を使用します。
+. 前処理中です例： https://www.nature.com/articles/nmeth.4268.pdf?origin=ppub["重複排除"^] を使用します https://broadinstitute.github.io/picard/["Picard"^]。
 . ゲノム解析：
 +
 .. 参照ゲノムへのマッピング。
@@ -134,7 +135,7 @@ image:flexpod-genomics-image17.png["エラー：グラフィックイメージ�
 Red Hat Enterprise 8.3 Linux VM に次の前提条件をインストールします。
 
 * Java 8 または SDK 1.8 以降
-* Broad Institute から GATK 4.2.0.0 をダウンロードしてください https://github.com/broadinstitute/gatk/releases["GitHub サイト"^]。一般に、ゲノム配列データは、タブ区切りの一連の ASCII カラムの形で保存されます。ただし、 ASCII の保存に必要なスペースが多すぎます。したがって、新しい標準は BAM (\*.bAM) ファイルと呼ばれて進化しました。BAM ファイルは、シーケンスデータを圧縮、インデックス化、およびバイナリ形式で格納します。私たち から GATK を実行するために公開されている BAM ファイルのセット。インデックスファイル（ \*.bai ）、辞書ファイル（ \* ）もダウンロードしました。dict ）、および参照データファイル（ * 。FASTA ）を参照してください。
+* Broad Institute から GATK 4.2.0.0 をダウンロードしてください https://github.com/broadinstitute/gatk/releases["GitHub サイト"^]。一般に、ゲノム配列データは、タブ区切りの一連の ASCII カラムの形で保存されます。ただし、 ASCII の保存に必要なスペースが多すぎます。したがって、新しい標準は BAM (\*.bAM) ファイルと呼ばれて進化しました。BAM ファイルは、シーケンスデータを圧縮、インデックス化、およびバイナリ形式で格納します。私たち https://ftp-trace.ncbi.nlm.nih.gov/ReferenceSamples/["ダウンロードしました"^] から GATK を実行するために公開されている BAM ファイルのセット https://www.nih.gov/["パブリックドメイン"^]。インデックスファイル（ \*.bai ）、辞書ファイル（ \* ）もダウンロードしました。dict ）、および参照データファイル（ * 。FASTA ）を参照してください。
 
 
 ダウンロード後、 GATK ツールキットには jar ファイルと一連のサポートスクリプトがあります。
@@ -149,7 +150,7 @@ Red Hat Enterprise 8.3 Linux VM に次の前提条件をインストールしま
 
 === クロムウェルエンジン
 
-Cromwell は、ワークフロー管理を可能にする科学的なワークフローを対象としたオープンソースエンジンです。クロムウェルエンジンは 2 つの方法で作動できます https://cromwell.readthedocs.io/en/stable/Modes/["モード"^]、サーバーモード、または単一ワークフローの実行モード。クロムウェルエンジンの動作は、を使用して制御できます。
+Cromwell は、ワークフロー管理を可能にする科学的なワークフローを対象としたオープンソースエンジンです。クロムウェルエンジンは 2 つの方法で作動できます https://cromwell.readthedocs.io/en/stable/Modes/["モード"^]、サーバーモード、または単一ワークフローの実行モード。クロムウェルエンジンの動作は、を使用して制御できます https://github.com/broadinstitute/cromwell/blob/develop/cromwell.example.backends/cromwell.examples.conf["クロムウェルエンジンコンフィギュレーションファイル"^]。
 
 * * サーバーモード。 * 有効にします https://cromwell.readthedocs.io/en/stable/api/RESTAPI/["RESTful なホテル"^] クロムウェルエンジンでのワークフローの実行。
 * * 実行モード。 * 実行モードはクロムウェルで単一のワークフローを実行する場合に最適です。 https://cromwell.readthedocs.io/en/stable/CommandLine/["参照（ Ref ）"^] 実行モードで使用可能なすべてのオプションを表示します。

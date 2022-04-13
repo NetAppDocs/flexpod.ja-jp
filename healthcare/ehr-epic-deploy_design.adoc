@@ -6,6 +6,7 @@ summary: Epic 対応 FlexPod のアーキテクチャは、 Epic 、 Cisco 、�
 ---
 = 設計
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

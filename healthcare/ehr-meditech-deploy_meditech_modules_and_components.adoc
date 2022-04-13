@@ -6,6 +6,7 @@ summary: MEDITECH アプリケーションは複数のモジュールとコン�
 ---
 = MEDITECH のモジュールとコンポーネント
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: NetApp Cloud Insights の使用方法を示すビデオが表示され�
 ---
 = ビデオとデモ
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

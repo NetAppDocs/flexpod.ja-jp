@@ -6,6 +6,7 @@ summary: FlexPod Express は、業界をリードするコンポーネントを�
 ---
 = まとめ
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

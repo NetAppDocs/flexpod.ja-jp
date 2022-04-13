@@ -6,6 +6,7 @@ summary: FlexPod アーキテクチャは、コンピューティング、ネッ
 ---
 = アーキテクチャ
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

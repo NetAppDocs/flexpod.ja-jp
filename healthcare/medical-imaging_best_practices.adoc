@@ -6,6 +6,7 @@ summary: このセクションでは、 NetApp FlexPod Express ストレージ�
 ---
 = ベストプラクティス
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

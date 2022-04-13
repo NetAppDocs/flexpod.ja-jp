@@ -6,6 +6,7 @@ summary: FlexPod Express のその他の要件を次に示します。
 ---
 = その他の要件
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

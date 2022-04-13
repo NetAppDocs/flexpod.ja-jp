@@ -6,6 +6,7 @@ summary: クラウドへの移行は、組織ごと、ビジネスユニット�
 ---
 = まとめ
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

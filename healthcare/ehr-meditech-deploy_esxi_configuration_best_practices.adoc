@@ -6,6 +6,7 @@ summary: ESXi ホスト側の構成では、エンタープライズデータベ
 ---
 = ESXi 構成のベストプラクティス
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

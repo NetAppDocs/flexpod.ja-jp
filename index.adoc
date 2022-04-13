@@ -7,6 +7,7 @@ summary: FlexPod ソリューションは、お客様の最も重要なビジネ
 ---
 = FlexPod ソリューション
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

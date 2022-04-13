@@ -6,6 +6,7 @@ summary: 著者はジョンジョージをこの設計への彼のサポート�
 ---
 = 謝辞
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

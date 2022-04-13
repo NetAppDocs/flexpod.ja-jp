@@ -6,6 +6,7 @@ summary: ネットアップは、さまざまなハードウェア、ソフト�
 ---
 = FlexPod の NetApp ONTAP ストレージと FIPS 140-2
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

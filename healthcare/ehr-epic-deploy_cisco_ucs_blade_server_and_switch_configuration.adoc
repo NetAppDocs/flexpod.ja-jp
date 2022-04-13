@@ -6,6 +6,7 @@ summary: Epic 対応 FlexPod ソフトウェアは、フォールトトレラン
 ---
 = Cisco UCS ブレードサーバとスイッチの構成
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

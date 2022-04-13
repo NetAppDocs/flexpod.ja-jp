@@ -6,6 +6,7 @@ summary: FIPS 140-2 戦略を実装する場合は、保護対象を理解する
 ---
 = コントロールプレーンとデータプレーンの比較
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

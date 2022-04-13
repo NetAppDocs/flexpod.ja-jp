@@ -6,6 +6,7 @@ summary: 特定の FlexPod 環境のスイッチングコンポーネントと�
 ---
 = Cisco Nexus スイッチング動作モード
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

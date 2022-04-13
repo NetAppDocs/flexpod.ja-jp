@@ -6,6 +6,7 @@ summary: これらは、 Cisco Intersight のネットアップストレージ�
 ---
 = ユースケース
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

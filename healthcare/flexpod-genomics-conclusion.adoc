@@ -6,6 +6,7 @@ summary: 世界中の多くの医療機関が、 FlexPod を共通のプラッ�
 ---
 = まとめ
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

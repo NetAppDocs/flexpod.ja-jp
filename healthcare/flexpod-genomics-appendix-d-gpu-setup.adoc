@@ -6,6 +6,7 @@ summary: GATK ツールは、公開時点で、オンプレミスでの GPU ベ�
 ---
 = GPU セットアップ
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

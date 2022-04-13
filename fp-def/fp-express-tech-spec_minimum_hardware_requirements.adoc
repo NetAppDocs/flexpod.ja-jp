@@ -6,6 +6,7 @@ summary: ここでは、 FlexPod Express の各バージョンに必要なハー
 ---
 = ハードウェアの最小要件
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

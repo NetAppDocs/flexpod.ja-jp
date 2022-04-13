@@ -6,6 +6,7 @@ summary: リファレンス検証のケーブル接続については、次の�
 ---
 = FlexPod エクスプレスケーブル接続情報
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

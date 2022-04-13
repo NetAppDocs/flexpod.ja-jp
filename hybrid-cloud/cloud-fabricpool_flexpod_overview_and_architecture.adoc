@@ -6,6 +6,7 @@ summary: FlexPod は、仮想化ソリューションと非仮想化ソリュー
 ---
 = FlexPod の概要とアーキテクチャ
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

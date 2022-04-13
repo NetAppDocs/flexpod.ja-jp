@@ -6,6 +6,7 @@ summary: このページでは、 SAP HANA などの SAP アプリケーショ�
 ---
 = FlexPod での SAP の紹介
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

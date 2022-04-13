@@ -8372,4 +8372,591 @@
   <block id="3537e24e4745c06b41a151532f5f0cd1" category="paragraph">Active IQ Unified Manager をインストールまたはアップグレードしていない場合は、インストールするかアップグレードしてください（最新バージョンを推奨します。現在 9.10P1 です）。手順については、を参照してください <block ref="b713007c96ed5cceca9ab6b5776ab58a" category="inline-link-macro-rx"></block>。</block>
   <block id="f2fe8cac791595f71f03311fed4e6b2f" category="admonition">NetApp AIQ UM ターゲットを要求すると、 Active IQ Unified Manager で管理されるすべてのクラスタが自動的にサイト間に追加されます。</block>
   <block id="707a0e6f55c6b411d13ca40e08c31e14" category="cell">最新バージョンの NetApp Active IQ Unified Manager を推奨（現在は 9.10P1 ）</block>
+  <block id="07360078de4b958f771427531bf4153f" category="summary">SM-BC を備えた FlexPod データセンターは、アクティブ / アクティブのデータセンター設計を使用して、ビジネスクリティカルなワークロードのビジネス継続性とディザスタリカバリを実現します。解決策 は通常、地理的に分散した別々の場所に導入された 2 つのデータセンターをメトロエリア内で相互接続します。NetApp SM-BC 解決策 は、同期レプリケーションを使用して、ビジネスクリティカルなデータサービスをサイト障害から保護します。解決策 では、 2 つの FlexPod 配置サイトのラウンドトリップネットワークレイテンシが 10 ミリ秒未満である必要があります。</block>
+  <block id="68465e6ec95e3e079a2ce31285c5ffca" category="inline-link-macro">前のバージョン：解決策 の検証済みのシナリオ</block>
+  <block id="a14aa7b4eddc474a1b6e4d9e952daca6" category="paragraph"><block ref="a14aa7b4eddc474a1b6e4d9e952daca6" category="inline-link-macro-rx"></block></block>
+  <block id="7aba7461f6fcaebac35dffb91f314616" category="paragraph">第 3 のサイトに導入された NetApp ONTAP メディエーターは、 SM-BC 解決策 を監視し、サイト障害が検出されると自動フェイルオーバーを可能にします。VMware HA 構成および拡張された VMware vSphere Metro Storage Cluster 構成と NetApp SM-BC をシームレスに連携させて、解決策 が目的のゼロ RPO とほぼゼロ RTO 目標を達成できるようにします。</block>
+  <block id="3e037da4c687e36a67b82b75747ae958" category="paragraph">FlexPod SM-BC 解決策 は、要件を満たしている場合には既存の FlexPod インフラにも導入できます。また、既存の FlexPod に FlexPod 解決策 を追加してビジネス継続性の目標を達成することもできます。管理、監視、自動化のための Cisco Intersight 、 Ansible 、橋本テルクラフォームベースの自動化などの追加ツールがネットアップと Cisco から提供されるため、解決策 の監視や運用に関する分析情報の取得、導入と運用の自動化を簡単に行うことができます。</block>
+  <block id="b52806cef125f9b9bee0c116a208a855" category="paragraph">Microsoft SQL Server などのビジネスクリティカルなアプリケーションの観点からは、 ONTAP SM-BC CG 関係で保護された VMware データストア上にあるデータベースは、サイトストレージが停止しても引き続き使用できます。検証テストで確認したように、データベースが存在するストレージクラスタの停電後、 SM-BC CG 関係のフェイルオーバーが発生し、 Microsoft SQL Server トランザクションがアプリケーションを停止することなく再開します。</block>
+  <block id="6064e07e43446e6aee4d94abadbddd44" category="paragraph">アプリケーション単位のきめ細かなデータ保護により、ビジネスクリティカルなアプリケーション向けに ONTAP SM-BC CG 関係を作成して、 RPO ゼロや RTO ほぼゼロの要件を満たすことができます。Microsoft SQL Server アプリケーションが実行されている VMware クラスタがサイトストレージの停止時にも運用を継続できるように、各サイトの ESXi ホストのブート LUN も SM-BC CG 関係によって保護されます。</block>
+  <block id="b8a64195f6bd6275799f5d7da0c8911e" category="paragraph">FlexPod の柔軟性と拡張性により、ビジネス要件の変化に応じて拡張および拡張できる適切なサイズのインフラから始めることができます。この検証済みの設計により、 VMware vSphere ベースのプライベートクラウドを分散型統合インフラに確実に導入できるため、単一点障害の多いシナリオや、重要なビジネスデータサービスを保護するためのサイト障害に対して耐障害性のある解決策 を提供できます。</block>
+  <block id="fa85857e13e0f6d7620479158c9f3416" category="inline-link-macro">次へ：追加情報 およびバージョン履歴の参照先。</block>
+  <block id="0dece230b7642f557d0efdba6bae8825" category="paragraph"><block ref="0dece230b7642f557d0efdba6bae8825" category="inline-link-macro-rx"></block></block>
+  <block id="24c974dec7e9ebb820775f4ee5e928ae" category="summary">FlexPod SM-BC 解決策 の設計および実装の詳細は、特定の FlexPod 状況の設定および解決策 の目的によって異なります。ビジネス継続性に関する一般的な要件を定義したあと、 FlexPod SM-BC 解決策 を作成するには、 2 つの新しい FlexPod システムを使用してまったく新しい解決策 を実装し、別のサイトに新しい FlexPod を追加して既存の FlexPod とペアリングするか、 2 つの既存の FlexPod システムをペアリングします。</block>
+  <block id="956f695311b03a7263d73658e1850744" category="doc">解決策 の検証 - 概要</block>
+  <block id="85c5fef27abce385b4a32476257223aa" category="inline-link-macro">前のページ： FlexPod SM-BC 解決策</block>
+  <block id="f68e3104da8796e46150aaa480eac54d" category="paragraph"><block ref="f68e3104da8796e46150aaa480eac54d" category="inline-link-macro-rx"></block></block>
+  <block id="c9c8ce1b9ebbc43c5758733a06925275" category="paragraph">FlexPod ソリューションは構成に柔軟性があるため、サポートされるすべての FlexPod 構成とコンポーネントを使用できます。このセクションの残りの部分では、 VMware ベースの仮想インフラストラクチャ解決策 に対して実行される実装検証について説明します。SM-BC に関連する要素を除き、実装は標準の FlexPod 配置プロセスに従います。FlexPod の実装の一般的な詳細については、ご使用の構成に適した FlexPod CVD および NVA を参照してください。</block>
+  <block id="89800aa027a8c30ffa7d0d1985f266ad" category="section-title">検証トポロジ</block>
+  <block id="67e5f25dfe5b0ba1bd54503333235c7b" category="paragraph">FlexPod SM-BC 解決策 の検証には、ネットアップ、 Cisco 、 VMware が提供するサポート対象のテクノロジコンポーネントを使用します。解決策 には、 ONTAP 9.10.1 を実行する NetApp AFF A250 HA ペア、サイト A にデュアル Cisco Nexus 9336C-FX2 スイッチ、サイト B にデュアル Cisco Nexus 3232C スイッチ、両方のサイトに Cisco UCS 6454 FI が搭載されています。 VMware vSphere 7.0u2 を実行し、 UCS Manager および VMware vCenter サーバによって管理される各サイトの 3 台の Cisco UCS B200 M5 サーバ次の図は、 2 つの FlexPod システムをサイト A で実行し、サイト B は拡張レイヤ 2 サイト間リンクで接続し、 ONTAP メディエーターはサイト C で実行しているコンポーネントレベルの解決策 検証トポロジを示しています</block>
+  <block id="24a78c21308239818de1b915e881a401" category="paragraph"><block ref="24a78c21308239818de1b915e881a401" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="fec970de22ce00287e2503c38bda96b7" category="paragraph">次の表に、解決策 の検証に使用したハードウェアとソフトウェアを示します。Cisco 、ネットアップ、 VMware は、 FlexPod の具体的な実装のサポートを判断するために相互運用性マトリックスを使用します。</block>
+  <block id="592b2496cc4352ed1aeae5591919a086" category="list-text"><block ref="592b2496cc4352ed1aeae5591919a086" category="inline-link-rx"></block></block>
+  <block id="d44473496d593c44d9be3c18a5efaaf7" category="inline-link"><block ref="d44473496d593c44d9be3c18a5efaaf7" category="inline-link-rx"></block></block>
+  <block id="28e0d45b8cdcfb41fad36d71152dbc1c" category="list-text"><block ref="28e0d45b8cdcfb41fad36d71152dbc1c" category="inline-link-rx"></block></block>
+  <block id="3adbdb3ac060038aa0e6e6c138ef9873" category="cell">カテゴリ</block>
+  <block id="40ddf58fef213ff0d6433ef322edfe2e" category="cell">ソフトウェアのバージョン</block>
+  <block id="1fa97e20c6dbbcab41f1f53b9ab7e789" category="cell">Cisco UCS ファブリックインターコネクト 6454</block>
+  <block id="5dcff1dc74d6cd6238f8d5cc7488fb2c" category="cell">4.2 （ 1f ）</block>
+  <block id="b7933d51de958f89ea9939c93a0a2f96" category="cell">4 （ 1 サイトにつき 2 つ）</block>
+  <block id="c7bd7c637a80e45c3d999c7a0ca18d89" category="cell">Cisco UCS B200 M5 サーバ</block>
+  <block id="07dfd7ac7ac23089d7f24a99d6a481bf" category="cell">6 （ 1 サイトにつき 3 つ）</block>
+  <block id="0572d19c4ead9f14d01e55483846a150" category="cell">Cisco UCS IOM 2204XP</block>
+  <block id="fc39ad5276920a19c10cf8badc5f5add" category="cell">Cisco VIC 1440 （ PID ： UCSB-mLOM40G-04 ）</block>
+  <block id="cc9d6832894e6279591b356d941c410d" category="cell">5.2 （ 1a ）</block>
+  <block id="4f1ab794051f11e06eb8f369921a3421" category="cell">2 （ 1 サイトにつき 1 つ）</block>
+  <block id="e03cb690f20e789dd93a34ed8805481d" category="cell">Cisco VIC 1340 （ PID ： UCSB-mLOM-40G-03 ）</block>
+  <block id="e2f81fb0163e07bf1c1ee0e1fd36056d" category="cell">4.5 （ 1a ）</block>
+  <block id="bccca60e2580f06daac38cd6d61844a2" category="cell">9.3 （ 6 ）</block>
+  <block id="acc750a7ef19585007a275340240087a" category="cell">2 （サイト A ）</block>
+  <block id="21cefb007c9064d8adcf6c162e74b0bf" category="cell">Cisco Nexus 3232C</block>
+  <block id="4147e83589a0fca953d8a5ebe484072c" category="cell">2 （サイト B ）</block>
+  <block id="ea2aca94e5b174a1b84f2c3891379526" category="cell">9.10.1</block>
+  <block id="03b0980fed141ff65a4ee480b9f3b94c" category="cell">NetApp System Manager の略</block>
+  <block id="41457fb5d8e3c193881f54acf22a93b3" category="cell">9.10</block>
+  <block id="2ffe7358ce461fb4d630742ed966cf0b" category="cell">NetApp ONTAP Tools for VMware vSphere の略</block>
+  <block id="d8ee09e7304a78e9ed280f17fb6f1043" category="cell">NetApp SnapCenter Plugin for VMware vSphere 用です</block>
+  <block id="231910ff513901af9c1921224df901ba" category="cell">4.6</block>
+  <block id="f1fa5e6ccdbac25bb63068aebd57b7c2" category="cell">NetApp ONTAP メディエーター</block>
+  <block id="0b0ec9f1cc28b3c19dc6c36dcd5af7cc" category="cell">1.3</block>
+  <block id="6ccd248cd02313575b465988f62f783e" category="cell">ナボックス</block>
+  <block id="93541ca844cc8e0766af2148bee73692" category="cell">3.0.2</block>
+  <block id="a514874e2673f726592fdc81e33d378e" category="cell">ネットアップハーベスト</block>
+  <block id="e6cbdf49c3f71c2274e05d1a6c692f1a" category="cell">21.11.1-1.</block>
+  <block id="70962288c4edc19aa40f0b953095c224" category="cell">VMware ESXi nenic イーサネットドライバ</block>
+  <block id="43e02e05b2879c1406a010bf6a28f8f7" category="cell">VMware vCenter</block>
+  <block id="bf25ac3fc5bee2b3ec36e32661767682" category="cell">NetApp NFS Plug-in for VMware VAAI</block>
+  <block id="d1bd83a33f1a841ab7fda32449746cc4" category="cell">"2.0"</block>
+  <block id="fa6a5a3224d7da66d9e0bdec25f62cf0" category="cell">テスト中です</block>
+  <block id="3a824154b16ed7dab899bf000b80eeee" category="cell">2022</block>
+  <block id="ea6b2efbdd4255a9f1b3bbc6399b58f4" category="cell">2019 年</block>
+  <block id="81b43651c3a694ee2791f1f72e535088" category="cell">Microsoft SQL Server Management Studio の略</block>
+  <block id="b1d8969d01aa0304dd3465c7e39361e0" category="cell">18.10</block>
+  <block id="e3cf940afa524b20b15c43b20405be77" category="cell">HammerDB</block>
+  <block id="a16b0b39889181577ded41b49cd80b1b" category="cell">4.3</block>
+  <block id="dd8f1e8a4b71cba95f086a5df0073935" category="cell">Iometer</block>
+  <block id="7d23ff901039aef6293954d33d23c066" category="cell">1.1.0</block>
+  <block id="bd92f26c426509a602e4e071a55dd7d4" category="inline-link-macro">次のステップ：解決策 の検証 - コンピューティング。</block>
+  <block id="e2ae000c1e1ce6a7571ee607596d9c48" category="paragraph"><block ref="e2ae000c1e1ce6a7571ee607596d9c48" category="inline-link-macro-rx"></block></block>
+  <block id="b39aed889c382b6901948c53e4f93baa" category="summary">FlexPod Datacenter SM-BC 解決策 は、さまざまな単一点障害のシナリオやサイト障害に対するデータサービスを保護します。各サイトに実装された冗長設計は高可用性を提供し、サイト間で同期データレプリケーションを行う SM-BC 実装は、サイト規模の災害からデータサービスを保護します。導入した解決策 は、目的の解決策 機能や、解決策 が保護対象として設計されたさまざまな障害シナリオに対して検証されます。</block>
+  <block id="62685e8381365cd8914177b38786cc9f" category="doc">解決策 の検証済みのシナリオ</block>
+  <block id="cfd19a385bc77472210a50ca20d669fb" category="inline-link-macro">前のバージョン：解決策 の検証 - 仮想化。</block>
+  <block id="ab7e34b23710acd06c346b984f8813fc" category="paragraph"><block ref="ab7e34b23710acd06c346b984f8813fc" category="inline-link-macro-rx"></block></block>
+  <block id="7a06599d60e94ff767c7f9c30aa59241" category="section-title">解決策 関数の検証</block>
+  <block id="858e84b5670f24c73fac74a1d335e223" category="paragraph">解決策 の機能を検証し、部分的および完全なサイト障害シナリオをシミュレートするために、さまざまなテストケースが使用されます。シスコ検証済み設計プログラムの既存の FlexPod データセンターソリューションですでに実行されているテストで重複を最小限に抑えるため、このレポートでは、解決策 の SM-BC 関連の側面に焦点を当てています。実践者が実装検証に使用する一般的な FlexPod 検証が含まれています。</block>
+  <block id="a8fcb4424ad51a51d04b83f538136e73" category="paragraph">解決策 の検証では、両方のサイトのすべての ESXi ホストに、 ESXi ホストごとに 1 台の Windows 10 仮想マシンが作成されました。IOMeter ツールがインストールされ、共有ローカル iSCSI データストアからマッピングされた 2 つの仮想データディスクへの I/O を生成するために使用されました。IOMeter ワークロードパラメータは、 8 KB の I/O 、 75% の読み取り、 50% のランダムで、各データディスクに 8 つの未処理 I/O コマンドを設定しました。実行されたテストシナリオのほとんどでは、 IOMeter I/O の継続は、シナリオがデータサービスの停止を原因 しなかったことを示すものです。</block>
+  <block id="30bf13d55e83bb6392b76d92aabe6690" category="paragraph">SM-BC はデータベース・サーバなどのビジネス・アプリケーションにとって重要であるため ' Windows Server 2022 仮想マシン上の Microsoft SQL Server 2019 インスタンスもテストの一環として提供されました。ローカルサイトのストレージが使用できず、アプリケーションがない状態でリモートサイトのストレージでデータサービスが再開される場合に、アプリケーションの実行が継続されることを確認しました 中断：</block>
+  <block id="dd3f17458866cabb06103ffd7c5dd98a" category="section-title">ESXi ホスト iSCSI SAN ブートテスト</block>
+  <block id="b7e25394cdd58976445d42c9accba7c0" category="paragraph">解決策 内の ESXi ホストは、 iSCSI SAN からブートするように設定されます。SAN ブートを使用すると、サーバを交換する際のサーバ管理が簡素化されます。これは、サーバのサービスプロファイルを新しいサーバに関連付けて、サーバが起動するために追加の設定変更を行う必要がないためです。</block>
+  <block id="2c79110ea66dbf59c30607ec5c964ab4" category="paragraph">サイトにある ESXi ホストをローカルの iSCSI ブート LUN からブートする以外に、ローカルのストレージコントローラがテイクオーバー状態のときやローカルのストレージクラスタが完全に使用できないときに ESXi ホストをブートするテストも実施しました。これらの検証シナリオでは、 ESXi ホストが設計に従って適切に構成されており、ストレージのメンテナンス時やディザスタリカバリの際にブートしてビジネス継続性を実現できることを確認します。</block>
+  <block id="effe6740451e770b2c99f6470ee924b9" category="paragraph">SM-BC 整合グループ関係を設定する前に、ストレージコントローラ HA ペアでホストされる iSCSI LUN には、ベストプラクティスの実装に基づいて、各 iSCSI ファブリックに 2 つずつ、合計 4 つのパスがあります。ホストは、 2 つの iSCSI VLAN / ファブリック経由で LUN にアクセスでき、 LUN ホスティングコントローラやコントローラのハイアベイラビリティパートナー経由で LUN にアクセスできます。</block>
+  <block id="779f9d72487bc06de1d4dd6575cf1abc" category="paragraph">SM-BC 整合グループ関係を設定し、ミラーリングされた LUN をイニシエータに適切にマッピングすると、 LUN のパス数は 2 倍になります。この実装では、 2 つのアクティブ / 最適化パスと 2 つのアクティブ / 非最適化パスがあることから、 2 つのアクティブ / 最適化パスと 6 つのアクティブ / 非最適化パスがあることになります。</block>
+  <block id="01d3af4aa938319d3230fd9227032d20" category="paragraph">次の図は、 LUN 0 など、 ESXi ホストから LUN にアクセスするためのパスを示しています。LUN はサイト A のコントローラ 01 に接続されているため、そのコントローラを介して LUN に直接アクセスする 2 つのパスのみがアクティブ / 最適化され、残りの 6 つのパスはすべてアクティブ / 非最適化されます。</block>
+  <block id="68c0826dc3cc47ed3a809a39395a1944" category="paragraph"><block ref="68c0826dc3cc47ed3a809a39395a1944" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e9bfcc66125565f8d0783b206973c8a1" category="paragraph">次のスクリーンショットは、 ESXi ホストが 2 種類のデバイスパスを認識する方法を示しています。2 つのアクティブ / 最適化されたパスは ' アクティブ (I/O) パスステータスであると表示されます一方 ' アクティブ / 非最適化パスはアクティブパスとしてのみ表示されますまた、 Target 列には、ターゲットに到達するための 2 つの iSCSI ターゲットとそれぞれの iSCSI LIF の IP アドレスが表示されます。</block>
+  <block id="976e15be3669a59aa4ee855de1055973" category="paragraph"><block ref="976e15be3669a59aa4ee855de1055973" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="93e70340052732a2ab34f29ad1a7b8a8" category="paragraph">メンテナンスやアップグレードのために一方のストレージコントローラが停止した場合、停止しているコントローラに到達する 2 つのパスは使用できなくなり、パスステータスが「 dead 」と表示されます。</block>
+  <block id="4a50d18bba95021fefe36cc740160a98" category="paragraph">手動フェイルオーバーテストまたは自動ディザスタフェイルオーバーのために、プライマリストレージクラスタで整合性グループのフェイルオーバーが発生した場合、セカンダリストレージクラスタは引き続き、 SM-BC 整合グループ内の LUN にデータサービスを提供します。LUN ID が保持され、データが同期的にレプリケートされているため、 SM-BC 整合グループで保護された ESXi ホストブート LUN は、すべてリモートストレージクラスタから引き続き使用できます。</block>
+  <block id="e6dffdc8f6d0dfeeb8be7d38628997a3" category="section-title">VMware vMotion と VM とホストのアフィニティテスト</block>
+  <block id="ac27418936f343a79345273f45126dbf" category="paragraph">汎用の FlexPod VMware Datacenter 解決策 は、 FC 、 iSCSI 、 NVMe 、 NFS などのマルチプロトコルをサポートしていますが、 FlexPod SM-BC 解決策 機能は、一般にビジネスクリティカルなソリューションに使用される FC および iSCSI SAN プロトコルをサポートしています。この検証で使用されるのは、 iSCSI プロトコルベースのデータストアと iSCSI SAN ブートのみです。</block>
+  <block id="10ed02be76241c0c94216e379600b108" category="paragraph">いずれかの SM-BC サイトのストレージサービスを仮想マシンで使用できるようにするには、 2 つのサイト間で仮想マシンを移行したり、災害時のフェイルオーバー・シナリオに備えて、両方のサイトの iSCSI データストアをクラスタ内のすべてのホストにマウントする必要があります。</block>
+  <block id="9fc6df3d1f096fd6eef2d6324efb64b9" category="paragraph">サイト間での SM-BC 整合グループ保護を必要としない仮想インフラ上で実行されるアプリケーションの場合は、 NFS プロトコルと NFS データストアも使用できます。その場合、ビジネス継続性を確保するために、ビジネスクリティカルなアプリケーションが SM-BC 整合グループで保護された SAN データストアを適切に使用しているように、 VM にストレージを割り当てるときは注意が必要です。</block>
+  <block id="96a9dfe952daba8fef3e00253fb12af1" category="paragraph">次のスクリーンショットは、両方のサイトの iSCSI データストアをマウントするようにホストが設定されていることを示しています。</block>
+  <block id="dec5cbb3a951fa6d35079531698f83eb" category="paragraph"><block ref="dec5cbb3a951fa6d35079531698f83eb" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="060c73be745b11b3a01d9ff618e0a328" category="paragraph">次の図に示すように、両方のサイトの使用可能な iSCSI データストア間で仮想マシンディスクを移行することもできます。パフォーマンスに関する考慮事項としては、ディスク I/O レイテンシを低減するために、ローカルストレージクラスタのストレージを使用する仮想マシンを用意することを推奨します。これは、 2 つのサイトが距離を隔てた場所にある場合に特に該当します。これは、距離が 100km ごとに約 1 ミリ秒という物理的なラウンドトリップ距離によるレイテンシによるものです。</block>
+  <block id="2c52e19006187a938678027788550da8" category="paragraph"><block ref="2c52e19006187a938678027788550da8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="10d35814901409091a7af569605345c2" category="paragraph">同じサイトにある別のホスト、およびサイト間で仮想マシンの vMotion をテストし、正常に実行された。サイト間で仮想マシンを手動で移行すると、 VM とホストのアフィニティルールがアクティブになり、仮想マシンが通常の状態にあるグループに移行されます。</block>
+  <block id="005c15308fc282c14f74fc423aadd9c4" category="section-title">ストレージのフェイルオーバーを計画</block>
+  <block id="2eeac46aa1c00254aab234b4ea3ade9b" category="paragraph">ストレージフェイルオーバー後に解決策 が適切に機能しているかどうかを確認するには、初期設定後に解決策 で計画的なストレージフェイルオーバー処理を実行する必要があります。このテストは、 I/O の停止を招く可能性のある接続や構成の問題を特定するのに役立ちます。接続や設定の問題を定期的にテストして解決することで、実際のサイトで障害が発生してもデータサービスを中断なく提供できます。計画的ストレージフェイルオーバーは、スケジュールされたストレージメンテナンスアクティビティの前にも使用できます。これにより、影響を受けないサイトからデータサービスを提供できます。</block>
+  <block id="de38bbec025684a26af05f74b6ed4f94" category="paragraph">サイト A のストレージデータサービスをサイト B に手動でフェイルオーバーするには、サイト B の ONTAP システムマネージャを使用して処理を実行します。</block>
+  <block id="fcaf9961b012e44c6c032ee99672f775" category="list-text">Protection &gt; Relationships 画面に移動して ' コンシステンシ・グループの関係状態が In Sync' であることを確認しますまだ「同期中」状態の場合は、状態が「同期中」になるまで待ってからフェイルオーバーを実行します。</block>
+  <block id="1161fec7b25d7cf23a19d6c672d4f86c" category="list-text">ソース名の横にあるドットを展開し、フェイルオーバーをクリックします。</block>
+  <block id="e5137e4f8e06f10e33011dcd2d73da8f" category="paragraph"><block ref="e5137e4f8e06f10e33011dcd2d73da8f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="b693449c463380c29eec4c11104bfe14" category="list-text">処理を開始するには、フェイルオーバーを確認してください。</block>
+  <block id="42677b8e6a37924af563e0ebe782efc5" category="paragraph"><block ref="42677b8e6a37924af563e0ebe782efc5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2d8f3a0a44af6cd64d05bf48813bd594" category="paragraph">2 つのコンシステンシグループ「 cg_esxi_a 」および「 cg_infra_datastore_a 」のフェイルオーバーがサイト B の System Manager GUI で開始された直後に、これら 2 つのコンシステンシグループを処理するサイト A の I/O がサイト B に移動されましたそのため、サイト A の System Manager のパフォーマンスペインでは、サイト A の I/O が大幅に削減されました。</block>
+  <block id="9881fdc2069e5f2583af734ff7465fde" category="paragraph"><block ref="9881fdc2069e5f2583af734ff7465fde" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9c99852f17a0d53a681c03fe4dc154e5" category="paragraph">一方、サイト B の System Manager ダッシュボードの Performance ペインでは、サイト A から約 130K IOPS に移動された追加の I/O を処理するため、 IOPS が大幅に増加しています。 1 ミリ秒未満の I/O レイテンシを維持したまま、約 1GB/s のスループットを実現しました。</block>
+  <block id="16c6afdf305438c2ed12ef39b6df8c96" category="paragraph"><block ref="16c6afdf305438c2ed12ef39b6df8c96" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8bb3a3cb1654ec8cab43949210d4d898" category="paragraph">I/O をサイト A からサイト B に透過的に移行することで、計画的なメンテナンスのためにサイト A のストレージコントローラを停止できるようになります。メンテナンス作業またはテストが完了し ' サイト A のストレージ・クラスタが稼働状態に戻ったら ' フェイルオーバーを実行してサイト B からサイト A へのフェイルオーバー I/O を返す前に ' コンシステンシ・グループの保護状態が同期状態に戻るまでチェックして待機しますメンテナンスまたはテストのためにサイトが停止される時間が長くなると ' データが同期されるまでの時間が長くなり ' コンシステンシ・グループは同期状態に戻ります</block>
+  <block id="b102de62ff98238287aff2fba0812737" category="paragraph"><block ref="b102de62ff98238287aff2fba0812737" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6d8b9cb0819076358b7dd488b2e3fbd2" category="section-title">ストレージの計画外フェイルオーバー</block>
+  <block id="3453e5c1f7fee8331d17af3a001b4f20" category="paragraph">実際に災害が発生した場合や災害シミュレーション中に、計画外のストレージフェイルオーバーが発生することがあります。たとえば、次の図では、サイト A のストレージシステムで停電が発生し、計画外のストレージフェイルオーバーがトリガーされたあと、サイト A の LUN が SM-BC 関係で保護されている場合、サイト B から続行します</block>
+  <block id="391e7083306f139b4130dee44743cb82" category="paragraph"><block ref="391e7083306f139b4130dee44743cb82" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="dbfec800f7b65de48d694e095d88e10d" category="paragraph">サイト A でストレージ災害をシミュレートするために、サイト A の両方のストレージコントローラの電源スイッチを物理的にオフにしてコントローラへの電源供給を停止することで、両方のコントローラの電源をオフにできます。 または、ストレージコントローラのサービスプロセッサの system power management コマンドを使用してコントローラの電源をオフにします。</block>
+  <block id="64751fdba03d43500681f3ab1bb778dc" category="paragraph">サイト A のストレージクラスタが電力を喪失した場合は、サイト A のストレージクラスタが提供するデータサービスが突然停止します。次に、第 3 のサイトから SM-BC 解決策 を監視する ONTAP メディエーターが、サイト A のストレージ障害状態を検出し、 SM-BC 解決策 で自動計画外フェイルオーバーを実行できるようにします。これにより、サイト B のストレージコントローラは、サイト A との SM-BC 整合グループ関係で設定された LUN のデータサービスを継続できます</block>
+  <block id="2cfdb538aed18fffc7018c7b39abb185" category="paragraph">アプリケーション側では、オペレーティングシステムが LUN のパスステータスを確認し、稼働しているサイト B のストレージコントローラへの利用可能なパスで I/O を再開する間、データサービスは一時的に停止します。</block>
+  <block id="564a86177f3a50d7f9c0fcb62c7aea4d" category="paragraph">検証テストでは、両方のサイトの VM の IOMeter ツールがローカルデータストアへの I/O を生成します。サイト A のクラスタの電源をオフにすると、 I/O が一時停止してから再開されます。災害発生前は、サイト A とサイト B のストレージクラスタのダッシュボードについて、次の 2 つの図をそれぞれ参照してください。各サイトでの約 80 、 000 IOPS と 600 MB/ 秒のスループットを示しています。</block>
+  <block id="f6adbb8fc80b9d9c2084a93242639f73" category="paragraph"><block ref="f6adbb8fc80b9d9c2084a93242639f73" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="55210cd28d413b1aceffbd374e20b9de" category="paragraph"><block ref="55210cd28d413b1aceffbd374e20b9de" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a9c040da50755f0706931f8bdad30931" category="paragraph">サイト A のストレージコントローラの電源をオフにしたあと、サイト A に代わって追加のデータサービスを提供するために、サイト B のストレージコントローラの I/O が大幅に増加したことを視覚的に確認できます（次の図を参照）。また、 IOMeter VM の GUI には、サイト A のストレージクラスタが停止しても I/O が継続することが示されました。SM-BC 関係で保護されていない LUN から作成されたデータストアがほかにもある場合、ストレージ災害の発生時にこれらのデータストアにアクセスできなくなります。そのため、さまざまなアプリケーションデータのビジネスニーズを評価し、ビジネス継続性を確保するために、 SM-BC 関係で保護されたデータストアに適切に配置することが重要です。</block>
+  <block id="e3ecab7648df8217681ed35970733c7c" category="paragraph"><block ref="e3ecab7648df8217681ed35970733c7c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="809cc5e94479b45f3e3aee800ba39572" category="paragraph">次の図に示すように ' サイト A のクラスタがダウンしている間 ' 整合性のあるグループの関係のステータスは非同期状態になりますサイト A のストレージコントローラの電源をオンに戻すと、ストレージクラスタがブートし、サイト A とサイト B の間のデータ同期が自動的に実行されます。</block>
+  <block id="c8dcf7928124fde6db9db80701ebc68a" category="paragraph"><block ref="c8dcf7928124fde6db9db80701ebc68a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c13b800dbe9192deeaebbbccebd0d6fc" category="paragraph">サイト B からサイト A にデータサービスを戻す前に、サイト A の System Manager を調べて、 SM-BC 関係がキャッチされ、ステータスが同期されていることを確認する必要があります。整合グループが同期されていることを確認したら、手動のフェイルオーバー処理を開始して、整合グループ関係のデータサービスをサイト A に戻すことができます</block>
+  <block id="1eeb5f24fc3939d51bfee5788ed8905d" category="paragraph"><block ref="1eeb5f24fc3939d51bfee5788ed8905d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a3e7907d9d92abafe948272003b2cfda" category="section-title">サイトのメンテナンスやサイト障害が発生したときの対処</block>
+  <block id="94e1f67a9eaa3debcd9c5921a6fe8751" category="paragraph">サイトのメンテナンスや停電が発生したり、ハリケーンや地震などの自然災害によって影響が及ぶ可能性があります。そのため、計画的および計画外のサイト障害シナリオを実施して、 FlexPod SM-BC 解決策 が、ビジネスクリティカルなすべてのアプリケーションおよびデータサービスでこのような障害が発生しても運用を継続できるように適切に設定されていることを確認することが重要です。検証されたサイト関連のシナリオは次のとおりです。</block>
+  <block id="e0953b89b7f701d0e7e7c04baebc697d" category="list-text">仮想マシンと重要なデータサービスをもう一方のサイトに移行することで、サイトの計画的なメンテナンスシナリオを実施します</block>
+  <block id="f25c2923b6a057e53249a6c23de5fc8b" category="list-text">ディザスタシミュレーション用にサーバとストレージコントローラの電源をオフにして、サイトが計画外停止になる状況です</block>
+  <block id="4518b03678a4ceb2aa5bcd6f5f25ff1a" category="paragraph">サイトを計画的なサイトメンテナンスにするには、影響を受けた仮想マシンを vMotion と組み合わせてサイトから移行し、 SM-BC 整合グループ関係を手動でフェイルオーバーして、仮想マシンと重要なデータサービスを代替サイトに移行する必要があります。テストは、まず vMotion 、次に SM-BC フェイルオーバーと SM-BC フェイルオーバー、続いて vMotion という 2 つの順序で実行され、仮想マシンが引き続き実行され、データサービスが中断されないことを確認します。</block>
+  <block id="2529342fe0b49ceead1124cdd0985c74" category="paragraph">計画的な移行を実行する前に、 VM とホストのアフィニティルールを更新して、サイトで現在実行されている VM がメンテナンス中のサイトから自動的に移行されるようにします。次のスクリーンショットは、サイト A の VM とホストのアフィニティルールを変更し、サイト A からサイト B に VM を自動的に移行する例を示しています。VM をサイト B で実行するように指定する代わりに、アフィニティルールを一時的に無効にして VM を手動で移行することもできます。</block>
+  <block id="6a5233f0e7c5c47e7647a49d3a7e773d" category="paragraph"><block ref="6a5233f0e7c5c47e7647a49d3a7e773d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6d74d923e145c1aad92758827d849e91" category="paragraph">仮想マシンとストレージサービスの移行が完了したら、サーバ、ストレージコントローラ、ディスクシェルフ、およびスイッチの電源をオフにし、必要なサイトのメンテナンス作業を実行できます。サイトのメンテナンスが完了し、 FlexPod インスタンスが稼働状態に戻ったら、 VM のホストグループのアフィニティを変更して元のサイトに戻すことができます。その後、「グループ内のホストで実行する必要があります」 VM/ ホストサイトアフィニティルールを「グループ内のホストで実行する必要があります」に戻して、災害が発生した場合に、他のサイトのホストで仮想マシンを実行できるようにします。検証テストでは、すべての仮想マシンがもう一方のサイトに正常に移行され、データサービスは SM-BC 関係のフェイルオーバーの実行後も問題なく継続されました。</block>
+  <block id="94e3e7ba85557776c1293f8556d55cd3" category="paragraph">計画外のサイトディザスタシミュレーションでは、サイト障害をシミュレーションするためにサーバとストレージコントローラの電源をオフにしました。VMware HA 機能は、停止した仮想マシンを検出し、サバイバーサイトでその仮想マシンを再起動します。さらに、第 3 のサイトで実行されている ONTAP メディエーターでサイト障害が検出されると、サバイバーサイトがフェイルオーバーを開始して、想定どおりに停止しているサイトのデータサービスの提供を開始します。</block>
+  <block id="d50edfe267cec15d690ec015a7156e39" category="paragraph">次のスクリーンショットは、ストレージコントローラのサービスプロセッサ CLI を使用して、サイト A のストレージ障害をシミュレートするために、クラスターの電源を突然オフにしたことを示しています。</block>
+  <block id="2b0620efb1a7f731997edf6317a12174" category="paragraph"><block ref="2b0620efb1a7f731997edf6317a12174" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d494470e2cbfb6c2f4f7e78037299573" category="paragraph">NetApp Harvest データ収集ツールでキャプチャされ、 NAbox 監視ツールで Grafana ダッシュボードに表示されるストレージクラスタの Storage Virtual Machine ダッシュボードは、次の 2 つのスクリーンショットで示されています。IOPS グラフとスループットグラフの右側にあるように、サイト B のクラスタは、サイト A のクラスタが停止したあとすぐにクラスタ A のストレージワークロードを取得します。</block>
+  <block id="5c2d61ae9704cebfe8150f81696530ff" category="paragraph"><block ref="5c2d61ae9704cebfe8150f81696530ff" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ac4c49b6a5447a461af32ba2d8e6966f" category="paragraph"><block ref="ac4c49b6a5447a461af32ba2d8e6966f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6f171c5c1d5ae4c8e70d1b33c3ceada9" category="paragraph">Microsoft SQL Server は、エンタープライズ IT に広く採用され、導入されているデータベースプラットフォームです。Microsoft SQL Server 2019 リリースでは、リレーショナルエンジンと分析エンジンに多数の新機能と機能拡張が導入されています。オンプレミス、クラウド、ハイブリッド環境で実行されているアプリケーションのワークロードをサポートし、この 2 つを組み合わせて使用できます。また、 Windows 、 Linux 、コンテナなど、複数のプラットフォームに導入することもできます。</block>
+  <block id="d23e0b67e4eb3eb198b6bc355999516c" category="paragraph">FlexPod SM-BC 解決策 のビジネスクリティカルなワークロード検証の一環として、 Windows Server 2022 VM にインストールされた Microsoft SQL Server 2019 が、 SM-BC が計画的および計画外のストレージフェイルオーバーテスト用の IOMeter VM に含まれています。Windows Server 2022 VM に SQL Server Management Studio をインストールして、 SQL Server を管理します。テストには、 HammerDB データベースツールを使用してデータベーストランザクションが生成されます。</block>
+  <block id="b351abc44f63df299b47b6ffed47c5ce" category="paragraph">HammerDB データベーステストツールは、 Microsoft SQL Server TPROC-C ワークロードでのテスト用に設定されました。スキーマビルドの構成では、次のスクリーンショットに示すように、オプションが更新され、 10 人の仮想ユーザを持つ 100 個のウェアハウスが使用されるようになりました。</block>
+  <block id="87f99ef6fa5be0ed57c5dbf0a419b070" category="paragraph"><block ref="87f99ef6fa5be0ed57c5dbf0a419b070" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9e2d2b46f15ab19122ed8e0a97a74014" category="paragraph">スキーマビルドオプションが更新された後、スキーマビルドプロセスが開始されました。数分後に、 system processor CLI コマンドを使用して、 2 ノード AFF A250 ストレージクラスタの両方のノードの電源をほぼ同時にオフにすることで、サイト B の予期しないシミュレートのストレージクラスタ障害が導入されました。</block>
+  <block id="47189c011b8e846918efcf2311e491ec" category="paragraph">データベーストランザクションが短時間中断されると、災害対策の自動フェイルオーバーが開始され、トランザクションが再開されます。次のスクリーンショットは、 HammerDB トランザクションカウンタのスクリーンショットです。通常、 Microsoft SQL Server のデータベースはサイト B のストレージクラスタにあるため、サイト B のストレージが停止したときにトランザクションが一時停止され、自動フェイルオーバーの発生後に再開されます。</block>
+  <block id="70e4185b9daa95bdd38c763537c51dab" category="paragraph"><block ref="70e4185b9daa95bdd38c763537c51dab" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="0cfbccf792115fc29e978aecb3c82a2a" category="paragraph">ストレージクラスタの指標は、 NetApp Harvest 監視ツールがインストールされた NAbox ツールを使用して収集しました。結果は、 Storage Virtual Machine とその他のストレージオブジェクトに対応した事前定義された Grafana ダッシュボードに表示されます。このダッシュボードでは、レイテンシ、スループット、 IOPS 、およびその他の詳細情報が、サイト B とサイト A の両方で分けて表示されます</block>
+  <block id="c84be84ab2121fb2e8ab240e966d920d" category="paragraph">このスクリーンショットは、サイト B のストレージクラスタ用の NABox Grafana パフォーマンスダッシュボードを示しています。</block>
+  <block id="d5cdf555ee7df233cf973ce326d19ab0" category="paragraph"><block ref="d5cdf555ee7df233cf973ce326d19ab0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1387596ae133caf422ffc9241ba216b6" category="paragraph">サイト B のストレージクラスタの IOPS は、災害発生前は約 10 万 IOPS でした。その後、災害によってグラフの右側にパフォーマンス指標の値が急激にゼロまで減少しました。サイト B のストレージクラスタが停止しているため、災害発生後にサイト B のクラスタから何も収集できませんでした。</block>
+  <block id="2a14ff89df5dda027fda4cf42047a1f6" category="paragraph">一方、サイト A のストレージクラスタの IOPS は、自動フェイルオーバー後にサイト B から追加のワークロードを受け取りました。次のスクリーンショットでは、 IOPS およびスループットのグラフの右側に、追加のワークロードが簡単に表示されています。このスクリーンショットは、サイト A のストレージクラスタの NAbox Grafana パフォーマンスダッシュボードを示しています。</block>
+  <block id="df6fb0c4cb3df54105dbbc86c219957e" category="paragraph"><block ref="df6fb0c4cb3df54105dbbc86c219957e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="61ee2ddd1ac5ffc022e2da8b2cf9e931" category="paragraph">上記のストレージディザスタテストのシナリオでは、データベースが配置されたサイト B で Microsoft SQL Server ワークロードのストレージクラスタが完全に停止しても運用が継続できることが確認されました。アプリケーションは、災害の検出とフェイルオーバーの発生後、サイト A のストレージクラスタが提供するデータサービスを透過的に使用しました。</block>
+  <block id="f5c451f1cedf3e66c63549acb1998ee3" category="paragraph">コンピューティングレイヤでは、特定のサイトで稼働している VM にホスト障害が発生すると、 VMware HA 機能によって自動的に再起動するように設計されています。サイト全体が停止した場合、 VM とホストのアフィニティルールを使用して、サバイバーサイトで VM を再起動できます。ただし、ビジネスクリティカルなアプリケーションで中断のないサービスを提供するには、アプリケーションのダウンタイムを回避するために、 Microsoft Failover Cluster や Kubernetes コンテナベースのアプリケーションアーキテクチャなどのアプリケーションベースのクラスタリングが必要です。アプリケーションベースのクラスタリングの実装については、このテクニカルレポートでは説明していません。関連するドキュメントを参照してください。</block>
+  <block id="fc37581a93e14f865030ca55b7270290" category="paragraph"><block ref="fc37581a93e14f865030ca55b7270290" category="inline-link-macro-rx"></block></block>
+  <block id="9bba922e59a4daeddb1809c2781a44a1" category="summary">FlexPod SM-BC 解決策 のコンピューティング設定は、一般的な FlexPod 解決策 のベストプラクティスに従います。以降のセクションでは、検証に使用する接続と構成の一部を紹介します。また、 SM-BC に関連する考慮事項の一部は、実装のリファレンスとガイダンスを提供するために強調表示されています。</block>
+  <block id="bc8a1d734e83e27cc8a2adc1858d6959" category="doc">解決策 の検証 - コンピューティング</block>
+  <block id="ed0d7e76ce8e3038702fbab0cb9524ab" category="inline-link-macro">前提：概要。</block>
+  <block id="e38775cef86d4cc66d36ea249100c217" category="paragraph"><block ref="e38775cef86d4cc66d36ea249100c217" category="inline-link-macro-rx"></block></block>
+  <block id="3f0294fb25b6df81fd5b767f0d74974f" category="paragraph">UCS B200 ブレードサーバと IOM 間の接続は、 UCS 5108 シャーシバックプレーン接続を介して UCS VIC カードによって提供されます。検証に使用する UCS 2204XP ファブリックエクステンダには、それぞれ 16 個の 10G ポートがあり、それぞれ 8 台のハーフ幅ブレードサーバに接続します（たとえば、サーバごとに 2 個）。サーバの接続帯域幅を増やすために、メザニンベースの VIC を追加して、サーバを代替 UCS 2408 IOM に接続し、各サーバに 4 つの 10G 接続を提供できます。</block>
+  <block id="faf94a25f3b3dbcdc7d8df2b1e466b18" category="paragraph"><block ref="faf94a25f3b3dbcdc7d8df2b1e466b18" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3e760ed69fcce8d06a007f41a5c61d17" category="paragraph">検証に使用される UCS 5108 シャーシと UCS 6454 FI 間の接続は、 4 つの 10G 接続を使用する IOM 2204XP によって提供されます。FI ポート 1 ～ 4 は、これらの接続用のサーバーポートとして設定されます。FI ポート 25 ～ 28 は、ローカルサイトの Nexus スイッチ A および B へのネットワークアップリンクポートとして設定されます。次の図と表に、 UCS 5108 シャーシおよび Nexus スイッチに接続する UCS 6454 FI の接続図とポート接続の詳細を示します。</block>
+  <block id="c6dd3a48117647945bebcc115abb8629" category="paragraph"><block ref="c6dd3a48117647945bebcc115abb8629" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4dd5e1c262b334b75713798615378310" category="cell">UCS 6454 FI A</block>
+  <block id="5cdf02cc1cc523d3abdae4b7fa856dd8" category="cell">IOM A</block>
+  <block id="8e296a067a37563370ded05f5a3bf3ec" category="cell">25</block>
+  <block id="19630796906a81f321eb2c76bbb10bac" category="cell">Nexus A</block>
+  <block id="26501ba97c684cd722b33b9755ef0dba" category="cell">1/13/1</block>
+  <block id="4e732ced3463d06de0ca9a15b6153677" category="cell">26</block>
+  <block id="4cdb91f64bcc968939cab93b46464b40" category="cell">1/13/2</block>
+  <block id="7456d96f8c8db139387a6120d3d24d55" category="cell">Nexus B</block>
+  <block id="7789aa4bac3f89f6033c10cbdd67d334" category="cell">1/3</block>
+  <block id="33e75ff09dd601bbe69f351039152189" category="cell">28</block>
+  <block id="2d73824c65cba850008ab880aae967f1" category="cell">1/4</block>
+  <block id="9ec4c0afd450ceac7adb81c3bcfc9732" category="cell">L1</block>
+  <block id="d65e9db3ca9fe5a5b3409c6676068511" category="cell">UCS 6454 FI B</block>
+  <block id="7e6aa2d53f6ee2b1a34b017fa403cb76" category="cell">L2 （ L2 ）</block>
+  <block id="977159f7bb4f0bab752c1b340782e48c" category="cell">IOM B</block>
+  <block id="d1846819f7e6f286fed6fa7a54dbb257" category="admonition">Nexus 9336C-FX2switches を使用したサイト A と Nexus 3232C スイッチを使用したサイト B にもかかわらず、上記の接続はサイト A とサイト B の両方で同様です。40G ~ 4x10G ブレークアウトケーブルは、 Nexus から FI への接続に使用されます。Nexus への FI 接続はポートチャネルを使用し、 Nexus スイッチで仮想ポートチャネルが設定されて各 FI への接続が集約されます。</block>
+  <block id="5db79ec7bffed5b6b6af4d52ad6b2241" category="admonition">IOM 、 FI 、 Nexus スイッチの各コンポーネントを別々に組み合わせて使用する場合は、環境の組み合わせに適したケーブルとポート速度を使用してください。</block>
+  <block id="6df25b5fb39ff5fa539e727e2254a866" category="admonition">より高速な接続またはより多くの接続をサポートするコンポーネントを使用することで、帯域幅を増やすことができます。冗長性をさらに高めるには、それをサポートするコンポーネントとの接続を追加します。</block>
+  <block id="4b86591776fc42ddcf8cb89e01768aaf" category="section-title">サービスプロファイル</block>
+  <block id="e233bcb8957b6e6f4b1933c238a30273" category="paragraph">UCS Manager （ UCSM ）または Cisco Intersight によって管理されるファブリックインターコネクトを備えたブレードサーバシャーシは、 UCSM で使用可能なサービスプロファイルと Intersight のサーバプロファイルを使用して、サーバを抽象化できます。この検証では、 UCSM とサービスプロファイルを使用してサーバ管理を簡素化します。サービスプロファイルを使用すると、元のサービスプロファイルを新しいハードウェアに関連付けるだけで、サーバを交換またはアップグレードできます。</block>
+  <block id="5a8a8c704590cbdb2553107bdaf0fb82" category="paragraph">作成されるサービスプロファイルでは、 VMware ESXi ホストに対して次の情報がサポートされます。</block>
+  <block id="0a980278599a7a8f202edf452fb52785" category="list-text">iSCSI プロトコルを使用して、いずれかのサイトの AFF A250 ストレージから SAN をブートします。</block>
+  <block id="e48a1c6b4c86f73671741df9ae65050a" category="list-text">サーバには次の 6 つの vNIC が作成されます。</block>
+  <block id="e42f1656522f026a4a7201fda2534a16" category="list-text">2 つの冗長 vNIC （ vSwitch0-A と vSwitch0-B ）がインバンド管理トラフィックを伝送します。オプションで、これらの vNIC は、 SM-BC で保護されていない NFS プロトコルデータでも使用できます。</block>
+  <block id="877cc12ba9cd72dc90bf3e7f3ecb2885" category="list-text">VMware vMotion およびその他のアプリケーショントラフィックを伝送するために、 vSphere Distributed Switch によって 2 つの冗長 vNIC （ vDS-A および vDS-B ）が使用されます。</block>
+  <block id="96de6cb5ae7ab86747558a7756243087" category="list-text">iSCSI-A vSwitch が使用する vNIC で、 iSCSI-A パスへのアクセスを提供します。</block>
+  <block id="35fc2427b2a52b34587ab7a3a4b9daac" category="list-text">iSCSI-B vSwitch が iSCSI-B パスへのアクセスを提供するために使用する iSCSI-B vNIC 。</block>
+  <block id="445bfa48fdef1999bb00d0ae561f8e01" category="paragraph">iSCSI SAN ブート構成では、 iSCSI ブートパラメータは、両方の iSCSI ファブリックからの iSCSI ブートを許可するように設定されています。プライマリクラスタが使用できない場合に、 iSCSI SAN ブート LUN がセカンダリクラスタから提供される SM-BC フェイルオーバーシナリオに対応するには、 iSCSI 静的ターゲット構成にサイト A とサイト B の両方のターゲットを含める必要がありますさらに、ブート LUN の可用性を最大限に高めるために、すべてのストレージコントローラからブートするように iSCSI ブートパラメータを設定します。</block>
+  <block id="2341218b89ffeb0e95de8a94808dc1af" category="paragraph">iSCSI スタティックターゲットは、次の図に示すように、 Set iSCSI Boot Parameter （ iSCSI ブートパラメータの設定）ダイアログの下にあるサービスプロファイルテンプレートのブートポリシーで設定できます。推奨される iSCSI ブートパラメータ設定を次の表に示します。この表には、高可用性を実現するために前述したブート戦略が実装されています。</block>
+  <block id="b3360862d0e98ea04db2b2c54d13c081" category="paragraph"><block ref="b3360862d0e98ea04db2b2c54d13c081" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3bdc6d549899cc7ea734bf186a7df1c7" category="cell">iSCSI ファブリック</block>
+  <block id="502996d9790340c5fd7b86a5b93b1c9f" category="cell">優先度</block>
+  <block id="ba168a9601baaefb6e715226a8be8629" category="cell">iSCSI ターゲット</block>
+  <block id="78ad16677c3c367a8a8aec744bff8555" category="cell">iSCSI LIF</block>
+  <block id="9eab269a8ed687dd91b11209ed6284eb" category="cell">iSCSI A</block>
+  <block id="579e78241cf6a4652ac73bf45787d704" category="cell">サイト A の iSCSI ターゲット</block>
+  <block id="8cfa0bf1642b326dc134539a161216cf" category="cell">サイト A のコントローラ 1 の iSCSI A LIF</block>
+  <block id="8f952d17ea2abbbc5a2748b95e5b4944" category="cell">iSCSI ターゲット：サイト B</block>
+  <block id="7bcaa8316e0807fd4f1560e5e852138d" category="cell">サイト B コントローラ 2 の iSCSI A LIF</block>
+  <block id="6add07bc86a316af4f25422f4c8887b7" category="cell">iSCSI B</block>
+  <block id="56d1b12d5a4e9f59a4453bb6a7cb7b08" category="cell">サイト B コントローラ 1 の iSCSI B LIF</block>
+  <block id="5975420dbf2246f6edb6a902578b5ff1" category="cell">サイト A コントローラ 2 の iSCSI B LIF</block>
+  <block id="5e7b9ab3adef639ef9c61005fee6237c" category="list-text">タイトル：ネットワーク URL ： /Flexpo-d/sm-bcs-network.html</block>
+  <block id="efa3c8203ca8f331abebfd2b1b8197b6" category="summary">FlexPod SM-BC 解決策 のネットワーク設定は、各サイトでの一般的な FlexPod 解決策 のベストプラクティスに従います。サイト間接続の場合、解決策 検証設定では、 2 つのサイトの FlexPod Nexus スイッチを相互に接続して、 2 つのサイト間に VLAN を拡張するサイト間接続を提供します。以降のセクションでは、検証に使用する接続と構成の一部を紹介します。</block>
+  <block id="74b5d0143f42e7eea9541ccef14b9fb7" category="doc">解決策 の検証 - ネットワーク</block>
+  <block id="698c40fe15891da5bf5654625e3efc65" category="paragraph">各サイトの FlexPod Nexus スイッチは、可用性の高い構成で UCS コンピューティングと ONTAP ストレージの間をローカルで接続します。冗長コンポーネントと冗長接続により、単一点障害に対する耐障害性が確保されます。</block>
+  <block id="b1cb4f7e68966720bb2fb6ab56947b83" category="paragraph">次の図は、各サイトでの Nexus スイッチのローカル接続を示しています。図に示されている内容に加えて、図に示されていない各コンポーネントのコンソールネットワーク接続と管理ネットワーク接続もあります。40G ~ 4 x 10G ブレークアウトケーブルは、 Nexus スイッチを UCS FI および ONTAP AFF A250 ストレージコントローラに接続するために使用します。また、 100G から 4 x 25G ブレークアウトケーブルを使用して、 Nexus スイッチと AFF A250 ストレージコントローラ間の通信速度を向上させることもできます。わかりやすいように、 2 台の AFF A250 コントローラは、ケーブル接続の図のために論理的に並べて表示されています。2 台のストレージコントローラを 2 つの接続で接続することで、ストレージがスイッチレスクラスタを形成できます。</block>
+  <block id="4ba70b31ad5c60939fec9e9be3382a39" category="paragraph"><block ref="4ba70b31ad5c60939fec9e9be3382a39" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a39991fd2cc5d1a162e80a5a0b5dc413" category="paragraph">次の表に、各サイトの Nexus スイッチと AFF A250 ストレージコントローラの接続を示します。</block>
+  <block id="02ebbe4b6f7e4f1b43260e942cc56d56" category="cell">1/10/1.</block>
+  <block id="1b16a119f87dee2f17d519dc3a7ca80c" category="cell">AFF A250 A</block>
+  <block id="9cb7b36b3f2bccc776862e6f2f494077" category="cell">E1A</block>
+  <block id="faa1f67856ad0ffedb981039b287dfb5" category="cell">1/10/2.</block>
+  <block id="e737b5ac24a63afc00e81377a906728d" category="cell">e1b</block>
+  <block id="648d85b1b558eb14dd08a38f4e342b9c" category="cell">1/10/3.</block>
+  <block id="d7167d4973554d077458158ba905b5a8" category="cell">AFF A250 B</block>
+  <block id="d5aafa08f3301b85d82fefb677c74a90" category="cell">1/10/4.</block>
+  <block id="3a080b2a2f11ddee1a665fb9807eec24" category="cell">E1C</block>
+  <block id="7d4ab9ed3c0110be73af0fcd7e353f5d" category="cell">e1d</block>
+  <block id="8488d5257822f6fb065e88d06fa3992f" category="paragraph">次の図に、サイト A とサイト B の FlexPod スイッチ間の接続を示します。ケーブル接続の詳細については、次の表を参照してください。各サイトの 2 つのスイッチ間の接続は、 vPC ピアリンク用です。一方、サイト間のスイッチ間の接続はサイト間リンクを提供します。リンクを使用することで、クラスタ間通信、 SM-BC データレプリケーション、インバンド管理、およびリモートサイトのリソースへのデータアクセス用に、サイト間で VLAN を拡張できます。</block>
+  <block id="560c8a216aaf0a8175bd1c490ba14806" category="paragraph"><block ref="560c8a216aaf0a8175bd1c490ba14806" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="68cf320e1ad0a674f48ca2a74fba0bae" category="cell">サイト A のスイッチ A</block>
+  <block id="182be0c5cdcd5072bb1864cdee4d3d6e" category="cell">33</block>
+  <block id="91a6ad14308435c69100cc91ff6ff248" category="cell">サイト B のスイッチ A</block>
+  <block id="c16a5320fa475530d9583c34fd356ef5" category="cell">31.</block>
+  <block id="e369853df766fa44e1ed0ff613f563bd" category="cell">34</block>
+  <block id="6364d3f0f495b6ab9dcf8d3b5c6e0b01" category="cell">32</block>
+  <block id="9d842db30672923722d95b54c2f4ee64" category="cell">サイト A のスイッチ B</block>
+  <block id="94a6b1c7756fbbdac699d7a97eda30fc" category="cell">サイト B のスイッチ B</block>
+  <block id="d86b6dd5a7865845ef10607ad1527ff3" category="admonition">上記の表は、各 FlexPod スイッチの観点からの接続を示しています。このため、表内で読みやすくするために情報が重複しています。</block>
+  <block id="2acff16d6784867d4d2d2bbda158c6c0" category="section-title">ポートチャネルと仮想ポートチャネル</block>
+  <block id="27923238cea40df4cb1391b537629a8f" category="paragraph">ポートチャネルを使用すると、 Link Aggregation Control Protocol （ LACP ）を使用して帯域幅の集約とリンク障害の耐障害性を実現し、リンクアグリゲーションを実現できます。仮想ポートチャネル（ vPC ）を使用すると、 2 つの Nexus スイッチ間のポートチャネル接続を 1 つのポートとして論理的に認識できます。これにより、単一リンク障害や単一スイッチ障害などの障害に対する耐障害性がさらに向上します。</block>
+  <block id="f38b37d866c20c890fc1a7483c54f820" category="paragraph">UCS サーバからストレージへのトラフィックは、 Nexus スイッチに到達する前に、 IOM A から FI A へ、 IOM B から FI B へのパスを経由します。Nexus スイッチへの FI 接続は、 FI 側のポートチャネルと Nexus スイッチ側の仮想ポートチャネルを利用するため、 UCS サーバは両方の Nexus スイッチを介したパスを効果的に使用でき、単一点障害が発生しても運用できます。2 つのサイト間では、前の図に示すように、 Nexus スイッチは相互接続されています。サイト間でスイッチペアを接続するリンクと、ポートチャネル構成を使用するリンクがそれぞれ 2 つあります。</block>
+  <block id="daea38d83b283fd14f6b63858872a799" category="paragraph">インバンド管理、クラスタ間、および iSCSI/NFS データストレージプロトコル接続は、各サイトのストレージコントローラを冗長構成のローカル Nexus スイッチに相互接続することによって提供されます。各ストレージコントローラは 2 つの Nexus スイッチに接続されます。耐障害性を高めるために、 4 つの接続がストレージのインターフェイスグループの一部として設定されます。Nexus スイッチ側では、これらのポートはスイッチ間の vPC の一部でもあります。</block>
+  <block id="fd1b3e9213e316dc1eb0902973bb8068" category="paragraph">次の表に、各サイトのポートチャネル ID と使用状況を示します。</block>
+  <block id="0eca0ee5c011f7fbfe0916ad0a5e0b05" category="cell">ポートチャネル ID</block>
+  <block id="c64518704ce0c0d5501a45763f464276" category="cell">使用方法</block>
+  <block id="d6e0666e2a456f5d77f6e18373092fe6" category="cell">ローカル Nexus ピアリンク</block>
+  <block id="77b575a922ebd0de9af42f1012a915aa" category="cell">ファブリックインターコネクト A リンク</block>
+  <block id="ade197264e891e882499adfb88c13f81" category="cell">ファブリックインターコネクト B リンク</block>
+  <block id="116a0b6a71c744bf4634ab7969a55b15" category="cell">ストレージコントローラ A のリンク</block>
+  <block id="b498b5e98a8791b15bb784668713ed85" category="cell">ストレージコントローラ B のリンク</block>
+  <block id="f899139df5e1059396431415e770c6dd" category="cell">100</block>
+  <block id="5079f34eca8e111842431425b7af4101" category="cell">サイト間スイッチ A のリンク</block>
+  <block id="3644a684f98ea8fe223c713b77189a77" category="cell">200</block>
+  <block id="8a448f82fc906d5783a1fdec09476125" category="cell">サイト間スイッチ B リンク</block>
+  <block id="87495e311a3944910e3cc0c7bee3d754" category="section-title">VLAN</block>
+  <block id="d0fccd96812e9060947e921b7bb488b7" category="paragraph">次の表に、 FlexPod SM-BC 解決策 検証環境をセットアップするために設定された VLAN とその使用方法を示します。</block>
+  <block id="49ee3087348e8d44e1feda1917443987" category="cell">名前</block>
+  <block id="a94423b85557ae3746b860781f6b49ee" category="cell">ネイティブ VLAN</block>
+  <block id="acfe0550b27169cff6127ec69ce18cca" category="cell">VLAN 2 がデフォルト VLAN ではなくネイティブ VLAN として使用される（ 1 ）</block>
+  <block id="efd6214a93c0d74dc05cdd319b18364a" category="cell">OOB-MGMT-VLAN</block>
+  <block id="2be9bd7a3434f7038ca27d1918de58bd" category="cell">3333</block>
+  <block id="4f317d7b1e3519d9d2bf2fa2d8336cb4" category="cell">デバイスのアウトオブバンド管理 VLAN</block>
+  <block id="97fdfddeebc2ba811d7fbc0c68f49843" category="cell">IB-MGMT-vlan</block>
+  <block id="331316d4efb44682092a006307b9ae3a" category="cell">3334</block>
+  <block id="ea76b0fe19ec3d10fd0f1dd8f05d1fd4" category="cell">ESXi ホスト、 VM 管理などのインバンド管理 VLAN</block>
+  <block id="b18880b438397d829ae559fcd6cec9c3" category="cell">NFS-VLAN</block>
+  <block id="59a3adea76fadcb6dd9e54c96fc155d1" category="cell">3335</block>
+  <block id="370d9092e1637bcff15d3d02725fbbc1" category="cell">NFS トラフィック用のオプションの NFS VLAN</block>
+  <block id="98bd65207ee83bfd17ebb0db971eddf9" category="cell">3336</block>
+  <block id="9fecbc1245a71b86a4063d382dd1b924" category="cell">iSCSI- iSCSI トラフィック用のファブリック VLAN</block>
+  <block id="a4fa7175d4757e45eac71a8487751f63" category="cell">3337</block>
+  <block id="2d266ed8b228b49e3e8966a724bdcd9a" category="cell">iSCSI トラフィック用の iSCSI-B ファブリック VLAN</block>
+  <block id="e112bcac4afaa30ed9ccb59b9e0b06cb" category="cell">vMotion - VLAN</block>
+  <block id="2de7cf2043693db2ee898479a6e44529" category="cell">3338</block>
+  <block id="8146886324c60518c6f897b17bd218f9" category="cell">VMware vMotion トラフィック VLAN</block>
+  <block id="79be4b1857439c33a2a470d993d3eca6" category="cell">vm-traffic-vlan</block>
+  <block id="7ba0691b7777b6581397456412a41390" category="cell">3339</block>
+  <block id="112f1a9e12ed6a86ebb72e2ecc18c07f" category="cell">VMware VM トラフィック VLAN</block>
+  <block id="8bcaeab695054b959c9ab15d28174f67" category="cell">インタークラスタ VLAN</block>
+  <block id="f471223d1a1614b58a7dc45c9d01df19" category="cell">3340</block>
+  <block id="58d4d8fd300f92c3bac8231ae2a1b9ee" category="cell">ONTAP クラスタピア通信用のクラスタ間 VLAN</block>
+  <block id="02154716f03ff4e1482b38c58ed2d8cf" category="admonition">SM-BC は、 NFS プロトコルまたは CIFS プロトコルをサポートしていないため、ビジネス継続性を確保する必要がないワークロードにも使用できます。この検証で使用する NFS データストアは作成されませんでした。</block>
+  <block id="8d5ef1ff8ff6d0fcdbc8e9a431c6cf69" category="summary">マルチサイトの FlexPod SM-BC 解決策 では、 1 つの VMware vCenter が解決策 全体の仮想インフラストラクチャリソースを管理します。両方のデータセンターのホストは、両方のデータセンターにまたがる単一の VMware HA クラスタに参加します。ホストは、 NetApp SM-BC 解決策 にアクセスできます。このでは、定義済みの SM-BC 関係にあるストレージに両方のサイトからアクセスできます。</block>
+  <block id="ec5040ac921964cc196a3adba148d2bb" category="doc">解決策 の検証：仮想化</block>
+  <block id="c5e72f7daa822cf194f3859af7a1910f" category="inline-link-macro">前のバージョン：解決策 の検証 - ストレージ。</block>
+  <block id="7377f7c70d91b3224b98ca91011cc2c9" category="paragraph"><block ref="7377f7c70d91b3224b98ca91011cc2c9" category="inline-link-macro-rx"></block></block>
+  <block id="a228baed6afc642e3c7a6aa967a4f7e1" category="paragraph">SM-BC 解決策 ストレージは、災害やダウンタイムを避けるために、 VMware vSphere Metro Storage Cluster （ vMSC ）機能の統一されたアクセスモデルに準拠しています。仮想マシンのパフォーマンスを最適化するには、通常運用時の WAN リンク経由のレイテンシとトラフィックを最小限に抑えるために、仮想マシンディスクをローカルの NetApp AFF A250 システム上にホストする必要があります。</block>
+  <block id="cd60e2316ddd792a67c9d799e88980f5" category="paragraph">設計実装の一環として、 2 つのサイト間での仮想マシンの分散を決定する必要があります。この仮想マシンサイトのアフィニティとアプリケーションの 2 つのサイト間での分散は、サイトの設定とアプリケーションの要件に応じて決定できます。VMware クラスタの VM/ ホストグループおよび VM/ ホストルールを使用して、 VM/ ホストアフィニティを設定し、 VM が目的のサイトのホストで実行されていることを確認します。</block>
+  <block id="389ab4e0b3a788e3909cce9eda41904b" category="paragraph">ただし、両方のサイトで VM を実行できる構成では、リモートサイトのホストで VMware HA によって VM を再起動し、解決策 の耐障害性を確保できます。両方のサイトで仮想マシンを実行する場合は、サイト間で仮想マシンの vMotion を円滑に実行するために、すべての ESXi ホストに iSCSI 共有データストアをマウントする必要があります。</block>
+  <block id="27f059ef259584a1b824e765cdd0e9d0" category="paragraph">次の図は、 FlexPod SM-BC 解決策 の仮想化ビューの概要を示しています。このビューには、 VMware HA と vMSC の両方の機能が含まれており、コンピューティングサービスとストレージサービスの高可用性を実現します。アクティブ / アクティブのデータセンター解決策 アーキテクチャにより、サイト間でのワークロードの移動が可能になり、 DR / BC 保護が提供されます。</block>
+  <block id="a147a552c32d5037b987ab2312e69d7c" category="paragraph"><block ref="a147a552c32d5037b987ab2312e69d7c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="186dd87f4e04649aa13ab6280b6c9f56" category="section-title">エンドツーエンドのネットワーク接続</block>
+  <block id="1a3e67186367dcdcd8767a83f26e215c" category="paragraph">FlexPod SM-BC 解決策 には、各サイトに FlexPod インフラストラクチャ、サイト間のネットワーク接続、および 3 番目のサイトに導入された ONTAP メディエーターが含まれており、必要な RPO と RTO の目標を達成します。次の図に、各サイトの Cisco UCS B200M5 サーバと、サイト内およびサイト間の SM-BC 機能を備えたネットアップストレージとのエンドツーエンドのネットワーク接続を示します。</block>
+  <block id="053a2ac180463981566102bfcfad8e9d" category="paragraph"><block ref="053a2ac180463981566102bfcfad8e9d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d764408dc842bea0b64076752e22142c" category="paragraph">FlexPod の導入アーキテクチャは、この解決策 検証で各サイトで同じです。ただし、解決策 は非対称型の導入をサポートしており、要件を満たす既存の FlexPod ソリューションに追加することもできます。</block>
+  <block id="22884a3cdeeeeb7dad2ea9a498fa8e37" category="paragraph">拡張レイヤ 2 アーキテクチャは、各データセンターにおけるポートチャネルの Cisco UCS コンピューティングとネットアップストレージの間の接続、およびデータセンター間の接続を提供する、シームレスなマルチサイトデータファブリックに使用されます。ポートチャネルの構成、および必要に応じて仮想ポートチャネルの構成は、コンピューティングレイヤ、ネットワークレイヤ、ストレージレイヤ間の帯域幅集約とフォールトトレランス、およびクロスサイトリンクに使用されます。その結果、 UCS ブレードサーバは、ローカルとリモートの両方のネットアップストレージに接続され、マルチパスアクセスを提供します。</block>
+  <block id="ce5ffb451af47dfa2491eb63c5143d6d" category="section-title">仮想ネットワーク</block>
+  <block id="a36a62d7f651f0199b63aad7ba80cfb0" category="paragraph">クラスタ内の各ホストは、場所に関係なく同一の仮想ネットワークを使用して導入されます。この設計では、 VMware 仮想スイッチ（ vSwitch ）と VMware 仮想分散スイッチ（ vDS ）を使用して、さまざまなトラフィックタイプを分離しています。VMware vSwitch は主に FlexPod インフラネットワーク用、 vDS はアプリケーションネットワーク用ですが、必須ではありません。</block>
+  <block id="3b7a3052edf1e478832ea4d7ace49f8a" category="paragraph">仮想スイッチ（ vSwitch 、 vDS ）は、仮想スイッチごとに 2 つのアップリンクで展開されます。 ESXi ハイパーバイザーレベルのアップリンクは、 Cisco UCS ソフトウェアでは vmnic および仮想 NIC （ vNIC ）と呼ばれます。vNIC は、 Cisco UCS サービスプロファイルを使用して、各サーバの Cisco UCS VIC アダプタ上に作成されます。次の図に示すように、 6 つの vNIC が定義され、 vSwitch0 に 2 つ、 vDS0 に 2 つ、 vSwitch1 に 2 つ、 iSCSI アップリンクに 2 つです。</block>
+  <block id="9f183657927c112be3e7cd269ec8c091" category="paragraph"><block ref="9f183657927c112be3e7cd269ec8c091" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="686c074d49721a316f632385b9203318" category="paragraph">vSwitch0 は VMware ESXi ホストの設定中に定義され、管理用に FlexPod インフラ管理 VLAN と ESXi ホスト VMkernel （ VMK ）ポートが含まれています。インフラ管理仮想マシンポートグループも、必要な重要なインフラ管理仮想マシン用の vSwitch0 に配置されます。</block>
+  <block id="19e8dd753125c0dfd41811cd6a73bce4" category="paragraph">このような管理インフラストラクチャ仮想マシンは、 vDS ではなく vSwitch0 に配置することが重要です。これは、 FlexPod インフラストラクチャがシャットダウンまたは電源の再投入された場合に、その管理仮想マシンが最初に実行されていたホスト以外のホストで、仮想マシンをアクティブ化しようとするためです。 vSwitch0 のネットワークで正常にブートします。このプロセスは、 VMware vCenter が管理仮想マシンである場合は特に重要です。vCenter が vDS 上にあり、別のホストに移動してブートした場合、起動後にネットワークに接続されません。</block>
+  <block id="ba931ab340d3854ea4b99e903ecc28dd" category="paragraph">この設計では、 2 つの iSCSI ブート vSwitch を使用します。Cisco UCS iSCSI ブートには、 iSCSI ブート用に個別の vNIC が必要です。これらの vNIC は、適切なファブリックの iSCSI VLAN をネイティブ VLAN として使用し、適切な iSCSI ブート vSwitch に接続されます。また、新しい vDS を導入するか、既存の vDS を使用して、 vDS に iSCSI ネットワークを導入することもできます。</block>
+  <block id="f75bfddb1eecf3b144615b95d65a7c9a" category="section-title">VM とホストのアフィニティグループとルール</block>
+  <block id="7886b5fd570cb4a0ac1afa513b8bb583" category="paragraph">両方の SM-BC サイトで任意の ESXi ホスト上で仮想マシンを実行できるようにするには、すべての ESXi ホストが両方のサイトから iSCSI データストアをマウントする必要があります。両方のサイトのデータストアがすべての ESXi ホストで適切にマウントされている場合は、 vMotion を使用するすべてのホスト間で仮想マシンを移行しても、それらのデータストアから作成されたすべての仮想ディスクへのアクセスは維持されます。</block>
+  <block id="47255a6cccc113ca9b4b931d0052da9f" category="paragraph">ローカルデータストアを使用する仮想マシンの場合、仮想ディスクがリモートサイトのホストに移行されると、仮想ディスクへのアクセスがリモートになり、サイト間の物理的な距離による読み取り処理のレイテンシが増加します。そのため、ローカルホストに仮想マシンを保持し、サイトでローカルストレージを利用することを推奨します。</block>
+  <block id="e1601d0972684722879adfb7a305e296" category="paragraph">VM とホストのアフィニティメカニズムを使用すると、 VM / ホストグループを作成して、特定のサイトに配置された仮想マシンとホストの VM グループとホストグループを作成できます。VM/ ホストルールを使用して、 VM とホストが従うポリシーを指定できます。サイトのメンテナンスまたは災害時にサイト間で仮想マシンを移行できるようにするには、その柔軟性のため、「グループ内のホストで実行する」ポリシー仕様を使用します。</block>
+  <block id="b9e562fbb462b9be2f3e290d60547d73" category="paragraph">次のスクリーンショットは、サイト A とサイト B のホストおよび VM について、 2 つのホストグループと 2 つの VM グループが作成されたことを示しています</block>
+  <block id="01b148bd0fb942366a52b413b45d5f52" category="paragraph"><block ref="01b148bd0fb942366a52b413b45d5f52" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="38bb03bcade9630945dd6d8bcfff7dfd" category="paragraph">さらに、次の 2 つの図は、「グループ内のホストで実行する必要があります」ポリシーを使用して、サイト A およびサイト B の VM がそれぞれのサイトのホストで実行されるように作成された VM/ ホストルールを示しています。</block>
+  <block id="5bb0c28b54b5f67f2b7a73129cc0182f" category="paragraph"><block ref="5bb0c28b54b5f67f2b7a73129cc0182f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="282079ecc0078000644d18fca4709052" category="paragraph"><block ref="282079ecc0078000644d18fca4709052" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6bd1ed4b0ed716bf9b964ae5ea8a4397" category="section-title">vSphere HA ハートビート</block>
+  <block id="172ba0f1e9e72809918e4f8b777adcd2" category="paragraph">VMware vSphere HA は、ホストの状態を検証するためのハートビートメカニズムを備えています。一次ハートビートメカニズムはネットワーク経由で行われ、二次ハートビートメカニズムはデータストアを経由します。ハートビートを受信しない場合は、デフォルトゲートウェイに ping を送信するか、手動で設定した隔離アドレスに基づいて、ハートビートをネットワークから隔離するかを決定します。データストアのハートビートでは、ストレッチクラスタのハートビートデータストアを最小構成から 4 つに増やすことを推奨します。</block>
+  <block id="0323b32e97bf4ad40c68f0b32844cb6b" category="paragraph">解決策 の検証では、 2 つの ONTAP クラスタ管理 IP アドレスを隔離アドレスとして使用します。また、次の図に示すように、推奨される vSphere HA の詳細オプション「 DS.heartbeatDsPerHost 」の値が 4 に追加されました。</block>
+  <block id="6a43b8562de203cf6c04bcb09d868c1c" category="paragraph"><block ref="6a43b8562de203cf6c04bcb09d868c1c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4833f38d3ef45f44218f78ed6d010a1e" category="paragraph">ハートビートデータストアの場合、クラスタから 4 つの共有データストアを指定し、次の図に示すようにそれを補完します。</block>
+  <block id="beaa9bcc804e12c2597167f766b7c9aa" category="paragraph"><block ref="beaa9bcc804e12c2597167f766b7c9aa" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9eb2bd2480a35c698be7fc3c56207ade" category="inline-link">vSphere HA クラスタを作成および使用する</block>
+  <block id="58486898b4fe52f80d7a134d74186a4c" category="inline-link">VMware vSphere Metro Storage Cluster （ vMSC ）</block>
+  <block id="af5299e77d937d0f90b53f5c8d31f369" category="inline-link">NetApp ONTAP と NetApp SnapMirror のビジネス継続性（ SM-BC ）および VMware vSphere Metro Storage Cluster （ vMSC ）</block>
+  <block id="fbf1a5366eed75e49cdd525f7972eadc" category="paragraph">VMware HA Cluster および VMware vSphere Metro ストレージクラスタのその他のベストプラクティスおよび設定については、を参照してください<block ref="e1c1274de4ccc0d5560df65f90d3e6aa" category="inline-link-rx"></block>、<block ref="4f7c5688f5dfddf1590f2246102bcda0" category="inline-link-rx"></block> およびの VMware KB です<block ref="82bb4696814a89c9685efdd36751466a" category="inline-link-rx"></block>。</block>
+  <block id="04efca99cb9ed979fd07e0b0adfcd574" category="inline-link-macro">次：解決策 の検証済みのシナリオ</block>
+  <block id="3af9ad1096d1f95cac10da1c470c8ede" category="paragraph"><block ref="3af9ad1096d1f95cac10da1c470c8ede" category="inline-link-macro-rx"></block></block>
+  <block id="276f6adc3fdf9f6540c8de077b236afa" category="summary">FlexPod SM-BC 解決策 は、高いレベルで 2 つの FlexPod システムで構成されています。これらのシステムは、ある程度離れた場所に設置され、接続され、ペアリングされているため、可用性が高く、柔軟性と信頼性に優れたデータセンター解決策 を提供し、サイト障害時にもビジネス継続性を提供できます。</block>
+  <block id="9af5ccbc39ef9aaa593f52b2f61e513b" category="doc">FlexPod SM-BC 解決策 の略</block>
+  <block id="d6ea02e137d772bf4a6d50ea64e92259" category="paragraph"><block ref="d6ea02e137d772bf4a6d50ea64e92259" category="inline-link-macro-rx"></block></block>
+  <block id="30ff361479db216fbf25e9b5d21572e5" category="paragraph">2 つの新しい FlexPod インフラを導入して FlexPod SM-BC 解決策 を作成するだけでなく、 SM-BC と互換性のある既存の 2 つの FlexPod インフラに解決策 を実装したり、既存の FlexPod とピア関係を構築するために新しい FlexPod を追加したりすることもできます。</block>
+  <block id="e2b7862864feaaf0fc2ab902c6d5c536" category="paragraph">FlexPod SM-BC 解決策 の 2 つの FlexPod システムは、設定で同じである必要はありません。ただし、 2 つの ONTAP クラスタは同じストレージファミリーである必要があります。 2 つの AFF システムまたは 2 つの ASA システムのどちらかですが、必ずしも同じハードウェアモデルである必要はありません。SM-BC 解決策 は FAS システムをサポートしません。</block>
+  <block id="22f7bbb4f3ccb6be869f61075736a37f" category="paragraph">2 つの FlexPod サイトには、解決策 の帯域幅とサービス品質の要件を満たすネットワーク接続が必要です。また、 ONTAP SM-BC 解決策 で必要とされる、サイト間のラウンドトリップレイテンシは 10 ミリ秒（ 10 ミリ秒）未満です。この FlexPod SM-BC 解決策 検証では、同じラボの拡張レイヤ 2 ネットワークを介して 2 つの FlexPod サイトが相互接続されます。</block>
+  <block id="50479180c763aab6165404a4ab431c12" category="paragraph">NetApp ONTAP SM-BC 解決策 は、キャンパスエリアまたはメトロポリタンエリアにおける高可用性とディザスタリカバリを実現するために、 2 つのネットアップストレージクラスタ間で同期レプリケーションを提供します。第 3 のサイトに導入された ONTAP メディエーターは解決策 を監視し、サイト障害が発生した場合に自動フェイルオーバーを可能にします。次の図に、解決策 コンポーネントの概要を示します。</block>
+  <block id="88e2670c42a759ff89cc5580aa14c867" category="paragraph"><block ref="88e2670c42a759ff89cc5580aa14c867" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="61f2be6cbf24e7c92dc2edfb8f2fb54d" category="paragraph">FlexPod SM-BC 解決策 を使用すると、 VMware vSphere ベースのプライベートクラウドを、分散した統合インフラストラクチャ上に導入できます。解決策 の統合により、複数のサイトを単一の解決策 インフラとして調整し、さまざまな単一点障害のシナリオとサイト全体の障害からデータサービスを保護することができます。</block>
+  <block id="f70547bb7e90203dfbd186b062251235" category="paragraph">このテクニカルレポートでは、 FlexPod SM-BC 解決策 の設計に関するエンドツーエンドの考慮事項をいくつか紹介します。その他の FlexPod 解決策 実装の詳細については、 FlexPod CVD や NVA に掲載されている情報を参照することを推奨します。</block>
+  <block id="ee8a8d1c326a758e8bbce6904b954221" category="paragraph">解決策 は、 CVD に記載されている FlexPod のベストプラクティスに基づいて 2 つの FlexPod システムを導入することで検証されましたが、 SM-BC 解決策 の要件を考慮しています。このレポートで説明している FlexPod SM-BC 解決策 は、さまざまな障害シナリオでの耐障害性とフォールトトレランスのほか、サイト障害のシミュレーションシナリオで検証されています。</block>
+  <block id="5f95fbda20eeb9ce0859afe2ac6f42fa" category="section-title">解決策の要件</block>
+  <block id="d55296f4b026e62a918241b622da3019" category="paragraph">FlexPod SM-BC 解決策 は、次の主要な要件に対応するように設計されています。</block>
+  <block id="9301701eb20799a5377cbb244546c8bf" category="list-text">データセンター（サイト）全体で障害が発生した場合の、ビジネスクリティカルなアプリケーションおよびデータサービスのビジネス継続性</block>
+  <block id="418c9ae18f07098eebf00a990e90f160" category="list-text">データセンター間でワークロードを移動できる柔軟な分散型ワークロード配置</block>
+  <block id="cfa5ddb0c2614aae7bad0ecc332e80bd" category="list-text">通常運用時に、同じデータセンターサイトからローカルに仮想マシンデータがアクセスされるサイトアフィニティ</block>
+  <block id="b849aa70383a86467dc914361535be70" category="list-text">サイト障害発生時にデータ損失ゼロで迅速にリカバリできます</block>
+  <block id="7e897f23ed71aef1c0a8acf1ae54e9e4" category="section-title">解決策コンポーネント</block>
+  <block id="ff5962f66a546cab0b5c1d09acdc96bf" category="section-title">Cisco のコンピューティングコンポーネント</block>
+  <block id="0fddfe4f687bfe7be984708ccac8ea1e" category="paragraph">Cisco UCS は、ユニファイドコンピューティングリソース、ユニファイドファブリック、統合管理を提供する統合コンピューティングインフラです。仮想化やベアメタルワークロードなどのアプリケーションの導入を自動化し、高速化できます。Cisco UCS は、リモートとブランチオフィス、データセンター、ハイブリッドクラウドのユースケースなど、さまざまな導入ユースケースに対応しています。解決策 の具体的な要件に応じて、 FlexPod のシスコのコンピューティング実装では、さまざまな規模のコンポーネントを利用できます。次のサブセクションでは、一部の UCS コンポーネントについて追加情報 を説明します。</block>
+  <block id="1c1324773aa16af39308c092452bba66" category="section-title">UCS サーバとコンピューティングノード</block>
+  <block id="cbf2c961915d245c5bc4dbe6e9f03e9f" category="paragraph">次の図に、 UCS C シリーズラックサーバ、 B シリーズブレードサーバを搭載した UCS 5108 シャーシ、 X シリーズコンピューティングノードを搭載した新しい UCS X9508 シャーシなど、 UCS サーバコンポーネントの例を示します。Cisco UCS C シリーズラックサーバには、 1 ラックユニット（ RU ）と 2 ラックユニット（ RU ）のフォームファクタ、 Intel および AMD CPU ベースのモデル、およびさまざまな CPU 速度とコア、メモリ、 I/O オプションが用意されています。Cisco UCS B シリーズブレードサーバと新しい X シリーズコンピューティングノードには、さまざまな CPU 、メモリ、 I/O オプションが用意されており、これらはすべて FlexPod アーキテクチャでサポートされているため、多様なビジネス要件に対応できます。</block>
+  <block id="b151b6585232af32237f041490ff3138" category="paragraph"><block ref="b151b6585232af32237f041490ff3138" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="67dfbae173a16bb9b4212febac631ca3" category="paragraph">この図に示す最新世代の C220 、 C225 、 C240 、 C245 M6 ラックサーバ、 B200 M6 ブレードサーバ、および X210c コンピューティングノードに加えて、従来世代のラックサーバおよびブレードサーバも引き続きサポートされている場合に使用できます。</block>
+  <block id="137da4195668819859d586a01dedf130" category="section-title">I/O モジュールおよびインテリジェントファブリックモジュール</block>
+  <block id="d1716f8ac396e71d8e8e6994441c7da8" category="paragraph">I/O モジュール（ IOM ） / ファブリックエクステンダおよび Intelligent Fabric Module （ IFM ）は、 Cisco UCS 5108 ブレードサーバシャーシと Cisco UCS X9508 X シリーズシャーシのユニファイドファブリック接続を提供します。</block>
+  <block id="da6bb411d50f863cf84182075f1567fa" category="paragraph">第 4 世代の UCS IOM 2408 には、 UCS 5108 シャーシとファブリックインターコネクト（ FI ）を接続するための 8 つの 25 G ユニファイドイーサネットポートがあります。各 2408 には、ミッドプレーン経由でシャーシ内の各ブレードサーバへの 4 つの 10-G バックプレーンイーサネット接続があります。</block>
+  <block id="499454a33348a1b03fb6f906647fc1f1" category="paragraph">UCSX 9108 25G IFM には、ファブリックインターコネクトを使用して UCS X9508 シャーシ内のブレードサーバを接続するための、 8 個の 25 G ユニファイドイーサネットポートがあります。各 9108 には、 X9108 シャーシの各 UCS X210c コンピューティングノードへの 25 G 接続が 4 つあります。9108 IFM は、ファブリックインターコネクトと連携してシャーシ環境を管理します。</block>
+  <block id="e3602a6de7a1f5b1512e48791e0dc249" category="paragraph">次の図は、 UCS 5108 シャーシの場合は UCS 2408 以前の IOM 世代、 X9508 シャーシの場合は 9108 IFM を示しています。</block>
+  <block id="ba5a5683193c8cbfe4814060da408c75" category="paragraph"><block ref="ba5a5683193c8cbfe4814060da408c75" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="865f1fa02c43bb64704d961f4dfdec88" category="section-title">UCS ファブリックインターコネクト</block>
+  <block id="8a3f2923cd31b679d734278ed58a2e62" category="paragraph">Cisco UCS Fabric Interconnect （ FI ）は、 Cisco UCS 全体の接続性と管理を提供します。通常、システムの FI はアクティブ / アクティブペアとして展開され、すべてのコンポーネントを Cisco UCS Manager または Cisco Intersight によって制御される、可用性の高い単一の管理ドメインに統合します。Cisco UCS FI は、単一のケーブルセットを使用して LAN 、 SAN 、および管理トラフィックをサポートする低遅延でロスレスなカットスルースイッチングを提供する、単一のユニファイドファブリックをシステムに提供します。</block>
+  <block id="f251e9c5fd5520519a13968cc733d9d3" category="paragraph">第 4 世代の Cisco UCS FI には、 UCS FI 6454 と 64108 の 2 つのバリエーションがあります。10 / 25GbE イーサネットポート、 1 / 10 / 25Gbps イーサネットポート、 40 / 100Gbps イーサネットアップリンクポート、および 10 / ギガビットイーサネットまたは 8 / 16 / 32 Gbps ファイバチャネルをサポートするユニファイドポートのサポートが含まれます。次の図に、第 4 世代の Cisco UCS FI と、サポートされている第 3 世代のモデルを示します。</block>
+  <block id="61ea2a31c9217928f9ea8d75cf1a2967" category="paragraph"><block ref="61ea2a31c9217928f9ea8d75cf1a2967" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="57cb5ae4f8a0ecc07803f2d384dd8fa9" category="admonition">Cisco UCS X シリーズシャーシをサポートするには、 Intersight Managed Mode （ IMM ）で設定された第 4 世代のファブリックインターコネクトが必要です。ただし、 Cisco UCS 5108 B シリーズシャーシは、 IMM モードと UCSM 管理モードの両方でサポートできます。</block>
+  <block id="52c695853e43619847d8405057610e1e" category="admonition">UCS FI 6324 は IOM フォームファクタを使用し、 UCS Mini シャーシに組み込まれているため、小規模な UCS ドメインだけを必要とする導入に適しています。</block>
+  <block id="3cacd032a25fe82301a65cf290e0040b" category="section-title">UCS 仮想インターフェイスカード</block>
+  <block id="ba382b2c0e15cf03e7aec9f9d06d324b" category="paragraph">Cisco UCS 仮想インターフェイスカード（ VIC ）は、ラックサーバやブレードサーバのシステム管理と LAN および SAN 接続を統合します。仮想ネットワークインターフェイスカード（ vNIC ）として、または Cisco SingleConnect テクノロジーを使用する仮想ホストバスアダプタ（ vHBA ）として、最大 256 の仮想デバイスをサポートします。仮想化の結果、 VIC カードによってネットワーク接続が大幅に簡易化され、解決策 の導入に必要なネットワークアダプタ、ケーブル、スイッチポートの数が削減されます。次の図は、 B シリーズおよび C シリーズのサーバと X シリーズのコンピューティングノードで使用できる Cisco UCS VIC の一部を示しています。</block>
+  <block id="e4bd8cdd88e968cab636ac39cac6fcfd" category="paragraph"><block ref="e4bd8cdd88e968cab636ac39cac6fcfd" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2ad3ddc9acd4f860fe2c398d9366d702" category="paragraph">アダプタモデルによって、ポート数、ポート速度、モジュラ LAN on Motherboard （ mLOM ）、メザニンカード、 PCIe インターフェイスのフォームファクタが異なるブレードサーバとラックサーバがサポートされます。このアダプタは、 10/25/40/100-G イーサネットと Fibre Channel over Ethernet （ FCoE ）の組み合わせをサポートしています。シスコの Converged Network Adapter （ CNA; 統合ネットワークアダプタ）テクノロジーを採用し、包括的な機能セットをサポートし、アダプタ管理とアプリケーションの導入を簡素化します。たとえば、 VIC は、 Cisco UCS ファブリックインターコネクトポートを仮想マシンに拡張するシスコのデータセンター仮想マシンファブリックエクステンダ（ VM-FEX ）テクノロジーをサポートしているため、サーバ仮想化の導入が簡素化されます。</block>
+  <block id="17e203aab8d4072397615b333b8f9cfc" category="paragraph">mLOM 、メザニン、およびポートエキスパンダとブリッジカード構成に Cisco VIC を組み合わせることで、ブレードサーバで利用できる帯域幅と接続性を最大限に活用できます。たとえば、 VIC 14825 （ mLOM ）と 14425 （メザニン）の 2 つの 25 G リンクと、 X210c コンピューティングノードの 14000 （ブリッジカード）を使用することで、 VIC 帯域幅の組み合わせは 2 x 50 - G + 2 x 50 - G 、 または、ファブリック /IFM あたり 100G 、およびデュアル IFM 構成のサーバあたり合計 200G 。</block>
+  <block id="8b3c2a8f703d14f1847400f765000c3b" category="inline-link">Cisco UCS の場合</block>
+  <block id="aadc15f6998b9c88df15d3c5ca31c972" category="paragraph">Cisco UCS 製品ファミリ、技術仕様、およびマニュアルの詳細については、を参照してください<block ref="bcb0aaa6cd00f9ce97e568312fbca54f" category="inline-link-rx"></block> Web サイトを参照してください。</block>
+  <block id="58ad6353bd749ce60542e9a1dc2da72c" category="section-title">Cisco スイッチングコンポーネント</block>
+  <block id="32d10992b210b4704a64acfc286014e5" category="paragraph">FlexPod は、 Cisco Nexus シリーズスイッチを使用して、 Cisco UCS とネットアップストレージコントローラ間の通信用のイーサネットスイッチファブリックを提供します。現在サポートされている Cisco Nexus スイッチモデル（ Cisco Nexus 3000 、 5000 、 7000 、 9000 シリーズを含む）は、すべて FlexPod 環境でサポートされています。</block>
+  <block id="0eaa3c550576ab6a5a7a6f8d94d6690c" category="paragraph">FlexPod 環境のスイッチモデルを選択する際には、パフォーマンス、ポート速度、ポート密度、スイッチング遅延など、さまざまな要因を考慮する必要があります。 また、 ACI や VXLAN などのプロトコルをサポートしているため、設計目的やスイッチのタイムスパンがサポートされます。</block>
+  <block id="febf5b21efd458dcd08118fd63bc4e23" category="paragraph">最近の FlexPod CVD の多くは、 Nexus 9336C-FX2 や Nexus 93180YC-FX3 などの Cisco Nexus 9000 シリーズスイッチを使用して検証されています。このスイッチは、 40 / 100G および 10 / 25G ポート、低レイテンシ、優れた電力効率をコンパクトな 1U フォームファクタで提供します。アップリンクポートとブレークアウトケーブルを使用して、さらに速度をサポートします。次の図に、この検証に使用される Nexus 9336C-FX2 および Nexus 3232C を含む、いくつかの Cisco Nexus 9K および 3k スイッチを示します。</block>
+  <block id="62975fbc145c03e0b3ee3bef4794986c" category="paragraph"><block ref="62975fbc145c03e0b3ee3bef4794986c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="00b72b9c60d99dffe6e5389480cd8ba5" category="inline-link">Cisco データセンタースイッチ</block>
+  <block id="a7d8e8f019be4a66106ed930b22aaf86" category="paragraph">を参照してください<block ref="dd5f74353659ef96ab60875379009895" category="inline-link-rx"></block> 使用可能な Nexus スイッチとその仕様およびマニュアルの詳細については、を参照してください。</block>
+  <block id="0770fc8319897f8444acad85a7dec263" category="section-title">MDS スイッチ</block>
+  <block id="7d1b814bca229019bf2699315a374bf5" category="paragraph">Cisco MDS 9100/9200/9300 シリーズファブリックスイッチは、 FlexPod アーキテクチャのオプションコンポーネントです。これらのスイッチは、信頼性と柔軟性が高く、セキュアであり、ファブリック内のトラフィックフローを可視化できます。次の図は、 FlexPod 解決策 用の冗長 FC SAN ファブリックを構築してアプリケーションとビジネスの要件を満たす MDS スイッチの例を示しています。</block>
+  <block id="1c9c2abf5a68dc60b6bd853d9db75408" category="paragraph"><block ref="1c9c2abf5a68dc60b6bd853d9db75408" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c133fcf9dd074ad5c1961f224a67c3b1" category="paragraph">Cisco MDS 9132T/9148T/9396T ハイパフォーマンス 32G マルチレイヤファブリックスイッチはコスト効率が高く、信頼性、柔軟性、拡張性に優れています。高度なストレージネットワーキング機能は管理が容易で、 Cisco MDS 9000 ファミリポートフォリオ全体と互換性があり、信頼性の高い SAN を実装できます。</block>
+  <block id="0ab60c8932ff5ce20b5435dd4ead51d2" category="paragraph">最新の SAN 分析機能と計測機能がこの次世代ハードウェアプラットフォームに組み込まれています。フレームヘッダーの検査から抽出されたテレメトリデータは、 Cisco Data Center Network Manager を含む分析視覚化プラットフォームにストリーミングできます。MDS 9148S など、 16G FC をサポートする MDS スイッチも FlexPod でサポートされます。また、 FC プロトコルに加えて FCoE プロトコルと FCIP プロトコルをサポートする MDS 9250i などのマルチサービス MDS スイッチも、 FlexPod 解決策 ポートフォリオに含まれます。</block>
+  <block id="538eb82bb05d5deebb7268362852c7a1" category="paragraph">9132T や 9396T などの半モジュラー型 MDS スイッチでは、追加のデバイス接続をサポートするために、ポート拡張モジュールとポートライセンスを追加できます。9148T などの固定スイッチでは、必要に応じてポートライセンスを追加できます。このようなビジネスの成長に応じた柔軟性により、運用コストが発生します。 MDS スイッチベースの SAN インフラの導入と運用にかかるコストを削減できます。</block>
+  <block id="a4a1f1ade604d49da8231eac6a2a4240" category="inline-link">Cisco MDS ファブリックスイッチ</block>
+  <block id="8c3bc47cd13b79709265f1dc8f5010be" category="paragraph">を参照してください<block ref="5a625fda7351d34515186d7331bfcf20" category="inline-link-rx"></block> 使用可能な MDS ファブリックスイッチの詳細については、を参照してください<block ref="9276805d6b0dd5ecb28d9ad89af92eab" category="inline-link-rx"></block> および<block ref="9663e16401acc5458c2d08f12e7ec029" category="inline-link-rx"></block> サポートされる SAN スイッチの一覧を確認できます。</block>
+  <block id="dc4bc50705ba670ab0e5e3a38fb42338" category="paragraph">FlexPod SM-BC 解決策 を作成するには、 ONTAP ソフトウェア 9.8 以降のリリースを実行している冗長な NetApp AFF コントローラまたは ASA コントローラが必要です。SM-BC を導入する場合は、最新の ONTAP リリース 9.10.1 が推奨されます。これにより、 ONTAP の継続的な革新的技術、パフォーマンス、品質の向上、および SM-BC サポートでの最大オブジェクト数の増加を活用できます。</block>
+  <block id="0a8b52d930014bbe307146d18b325b63" category="paragraph">業界をリードするパフォーマンスと革新的なテクノロジを搭載した NetApp AFF および ASA コントローラは、エンタープライズデータを保護し、機能豊富なデータ管理機能を提供します。AFF システムと ASA システムは、 NVMe に接続された SSD や NVMe over Fibre Channel （ NVMe/FC ）フロントエンドホスト接続など、エンドツーエンドの NVMe テクノロジをサポートしています。NVMe/FC ベースの SAN インフラを採用することで、ワークロードのスループットを向上させ、 I/O レイテンシを低減できます。ただし、現在 NVMe / FC ベースのデータストアは、 SM-BC で保護されていないワークロードにのみ使用できます。これは、 SM-BC 解決策 では現在 iSCSI プロトコルと FC プロトコルしかサポートされていないためです。</block>
+  <block id="1fd8840850e07e757d99d362e5fdbd02" category="paragraph">また、 NetApp AFF と ASA ストレージコントローラは、ネットアップデータファブリックによって実現されるシームレスなデータ移動のメリットをお客様に提供するためのハイブリッドクラウド基盤を提供します。データファブリックを使用すると、生成されたエッジから使用されるコア、クラウドまで容易にデータを取得でき、オンデマンドで柔軟なコンピューティング機能と AI 機能、 ML 機能を活用して、実用的なビジネスインサイトを獲得できます。</block>
+  <block id="b18e01c669760da29746d740d29840d1" category="paragraph">次の図に示すように、ネットアップでは、パフォーマンスと容量の要件を満たすためにさまざまなストレージコントローラとディスクシェルフを提供しています。NetApp AFF および ASA コントローラの機能と仕様に関する製品ページへのリンクについては、次の表を参照してください。</block>
+  <block id="5307013968ce8ca68927da621ab25f67" category="paragraph"><block ref="5307013968ce8ca68927da621ab25f67" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8fcb4cf909a1e717c8e14cba12717e1d" category="cell">AFF シリーズ</block>
+  <block id="0f8dd7cba67dcc47444d804a7106cd3c" category="inline-link-macro">AFF シリーズのドキュメント</block>
+  <block id="15da6d8626b1765a984b122772587fc9" category="cell"><block ref="15da6d8626b1765a984b122772587fc9" category="inline-link-macro-rx"></block></block>
+  <block id="7c108156e35361e38bd149e0cd5192f0" category="cell">ASA シリーズ</block>
+  <block id="d97374ec4f5cfe9d6dc727396402521d" category="inline-link-macro">ASA シリーズのドキュメント</block>
+  <block id="3fc681e7694b642c59733ee9ee571332" category="cell"><block ref="3fc681e7694b642c59733ee9ee571332" category="inline-link-macro-rx"></block></block>
+  <block id="029f6f3d6d94376868a542dc9f992a86" category="inline-link">ネットアップのディスクシェルフとストレージメディアのドキュメント</block>
+  <block id="c25fd9b70494845a20dd21814241524d" category="paragraph">を参照してください<block ref="dad413ffea13e60f46bf0b7da6acba7e" category="inline-link-rx"></block> および<block ref="bb9c67b5a4c15a85b5e6aa6c9afd0285" category="inline-link-rx"></block> ディスクシェルフ、および各ストレージコントローラモデルでサポートされているディスクシェルフの詳細については、を参照してください。</block>
+  <block id="8b68a94e939becf799000e74594ceec1" category="section-title">解決策 トポロジ</block>
+  <block id="849cdcc0290877dcdcdc288864fc273f" category="paragraph">FlexPod ソリューションはトポロジに柔軟に対応しており、さまざまな解決策 要件に合わせてスケールアップまたはスケールアウトすることができます。次の図に示すように、ビジネス継続性保護を必要とし、最小限のコンピューティングリソースとストレージリソースしか使用できない解決策 では、単純な解決策 トポロジを使用できます。この単純なトポロジでは、 UCS C シリーズラックサーバと、ディスクシェルフを追加せずにコントローラ内の SSD を搭載した AFF / ASA コントローラを使用します。</block>
+  <block id="5082a4434d976e5a6455354fa5cc6950" category="paragraph"><block ref="5082a4434d976e5a6455354fa5cc6950" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6b173d0cede30ee7d46fdfb1033b909b" category="paragraph">コンピューティング、ネットワーク、ストレージの冗長コンポーネントは、コンポーネント間の冗長な接続によって相互接続されます。この高可用性設計は、解決策 の耐障害性を提供し、単一点障害のシナリオに耐えることができます。マルチサイト設計と ONTAP SM-BC 同期データレプリケーション関係により、単一サイトのストレージ障害が発生しても、ビジネスクリティカルなデータサービスを提供します。</block>
+  <block id="271f9b5d9a6d430b924c85d080bc4ee4" category="paragraph">データセンターとメトロポリタンエリア内のブランチオフィスの間の企業が使用できる非対称展開トポロジは、次のようになります。この非対称設計の場合、データセンターには、より多くのコンピューティングリソースとストレージリソースを備えた、より高いパフォーマンスの FlexPod が必要です。ただし、ブランチオフィスの要件は小さく、はるかに小さな FlexPod で満たすことができます。</block>
+  <block id="80eecd57b5fc9633a123b989c0b55aa5" category="paragraph"><block ref="80eecd57b5fc9633a123b989c0b55aa5" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="70386b41b4b650f2b140ca020de291bd" category="paragraph">VXLAN ベースのマルチサイトファブリックを使用すると、コンピューティングリソースとストレージリソースの要件が大きくなり、複数のサイトにシームレスなネットワークファブリックを構築して、アプリケーションのモビリティを促進し、アプリケーションを任意のサイトから提供できるようになります。</block>
+  <block id="51ccc8f1fcc2135dce8bfff469482f2d" category="paragraph">新しい FlexPod インスタンスで保護する必要がある Cisco UCS 5108 シャーシおよび B シリーズブレードサーバを使用する既存の FlexPod 解決策 がある場合があります。新しい FlexPod インスタンスは、次の図に示すように、 Cisco Intersight で管理される X210c コンピューティングノードを搭載した最新の UCS X9508 シャーシを使用できます。この場合、各サイトの FlexPod システムはより大規模なデータセンターファブリックに接続され、サイトはインターコネクトネットワークを介して VXLAN マルチサイトファブリックを形成します。</block>
+  <block id="2b80351477a32cc101ae034494c3ed09" category="paragraph"><block ref="2b80351477a32cc101ae034494c3ed09" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a09b49349906a5c6fc7c466b71f682c9" category="paragraph">データセンターと複数のブランチオフィスがある企業が、ビジネス継続性を確保するために保護する必要がある場合は、次の手順を実行します。 次の図に示す FlexPod SM-BC 導入トポロジを実装して、重要なアプリケーションおよびデータサービスを保護し、すべてのブランチサイトで RPO ゼロおよび RTO ほぼゼロを達成できます。</block>
+  <block id="15a42d0cf8468dfb5ad24d2529d273e4" category="paragraph"><block ref="15a42d0cf8468dfb5ad24d2529d273e4" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="cad73cdbb5479bd1c54e58c21c9608d6" category="paragraph">この導入モデルでは、各ブランチオフィスが、データセンターで必要とする SM-BC 関係と整合グループを確立します。サポートされる SM-BC オブジェクトの制限を考慮する必要があります。そのため、整合グループ関係およびエンドポイント数全体が、データセンターでサポートされる最大数を超えないようにする必要があります。</block>
+  <block id="7a2e958fb7c5046e59035ba1726ad02b" category="inline-link-macro">次：解決策 の検証の概要</block>
+  <block id="3fc165d3b04f40190da4689cdf0e0853" category="paragraph"><block ref="3fc165d3b04f40190da4689cdf0e0853" category="inline-link-macro-rx"></block></block>
+  <block id="9fc7e91d0cfa196bee652e5b3ab8991b" category="doc">解決策の検証</block>
+  <block id="29f5f58038d9fc18e3673d9f64beb81c" category="summary">このページでは、ネットアップの SnapMirror ビジネス継続性機能と ONTAP 9.10 を使用した FlexPod Datacenter 解決策 の概要を説明します。</block>
+  <block id="ed7f5de9cce855ce8d22d0d26afcdfd0" category="doc">TR-4920 ：『 FlexPod Datacenter with NetApp SnapMirror Business Continuity and ONTAP 9.10 』</block>
+  <block id="b51c42078dea4cad69d330e2e65bf73e" category="paragraph">Jyh - ネットアップの陳氏をたたきます</block>
+  <block id="b3a453722b38c1104de9561b33f9de2b" category="section-title">FlexPod 解決策</block>
+  <block id="5964ddd52cd2fc9ce93694e8ae4e3014" category="paragraph">FlexPod は、 Cisco とネットアップが提供する次のコンポーネントで構成される、統合インフラのベストプラクティスデータセンターアーキテクチャです。</block>
+  <block id="f431b7cb714f9a8378b57b6f8ef92ab6" category="list-text">Cisco Unified Computing System （ Cisco UCS ）</block>
+  <block id="3584b38b025e179747a58996a30623c2" category="list-text">Cisco Nexus および MDS ファミリーのスイッチ</block>
+  <block id="5c927677aae2a75bc0bce175f0d8721e" category="list-text">NetApp FAS 、 NetApp AFF 、ネットアップオール SAN アレイ（ ASA ）システム</block>
+  <block id="afccd3e97cff2cb182efde52a8c9ba77" category="paragraph">次の図は、 FlexPod ソリューションの作成に使用するコンポーネントの一部を示しています。これらのコンポーネントは、 Cisco とネットアップの両方のベストプラクティスに従って接続および構成されており、さまざまなエンタープライズワークロードを確実に実行するための理想的なプラットフォームを提供します。</block>
+  <block id="e45496f48ee3edb8aea9e00ad6f4a493" category="paragraph"><block ref="e45496f48ee3edb8aea9e00ad6f4a493" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d053a252411ec8347c2220434bc68511" category="paragraph">Cisco Validated Design （ CVD ）や NetApp Verified Architectures （ NVA ）が幅広く用意されています。これらの CVD と NVA は、主要なデータセンターワークロードをすべてカバーしており、ネットアップと Cisco on FlexPod ソリューションとの間で継続的なコラボレーションやイノベーションの成果です。</block>
+  <block id="738c77b57bbb8696160cdd1ca725a9f9" category="paragraph">作成プロセスに広範なテストと検証を組み込むことで、 FlexPod CVD と NVA は、解決策 アーキテクチャのリファレンス設計と段階的な導入ガイドを提供し、パートナー様やお客様が FlexPod ソリューションを導入して採用できるよう支援します。これらの CVD と NVA を設計と実装のガイドとして使用することで、リスクを軽減し、解決策 のダウンタイムを短縮し、導入する FlexPod ソリューションの可用性、拡張性、柔軟性、セキュリティを向上させることができます。</block>
+  <block id="b36481fbcb76752b7c6862e9a567e4b6" category="paragraph">ここに示す FlexPod コンポーネントファミリー（ Cisco UCS 、 Cisco Nexus / MDS スイッチ、ネットアップストレージ）には、インフラをスケールアップまたはスケールダウンするためのプラットフォームオプションとリソースオプションが用意されており、 FlexPod の設定と接続のベストプラクティスに基づいて必要な機能がサポートされています。FlexPod は、複数の一貫した導入が必要な環境でも、追加の FlexPod スタックをロールアウトしてスケールアウトすることができます。</block>
+  <block id="e4696c4718fd3cdeb771bd13a2469f6a" category="section-title">ディザスタリカバリとビジネス継続性</block>
+  <block id="36da1149b7c346ffc03a7f9be2631271" category="paragraph">企業がアプリケーションとデータサービスを災害から迅速にリカバリできるようにするためには、さまざまな方法を採用できます。ディザスタリカバリ（ DR ）とビジネス継続性（ BC ）を計画し、ビジネス目標を達成する解決策 を実装し、災害シナリオを定期的にテストすることで、企業は災害からのリカバリが可能となり、災害発生後も重要なビジネスサービスを継続できます。</block>
+  <block id="2974a37910d6b9a22cecf7d9cacc35d2" category="paragraph">アプリケーションやデータサービスの種類によって、 DR や BC の要件が異なる場合があります。緊急時や災害時には必要としないアプリケーションやデータもあれば、ビジネス要件に対応するために継続的な可用性が必要となるアプリケーションやデータもあります。</block>
+  <block id="75faab0b3cb14d5bfd20e377a120804e" category="paragraph">ミッションクリティカルなアプリケーションやデータサービスを利用できない場合は、ビジネスで考慮すべきメンテナンスや災害のシナリオなど、回答 の質問に対して慎重な評価が必要です。 災害発生時にどの程度のデータ損失を許容できるか、リカバリをどのくらいの時間で実施できるか。</block>
+  <block id="88781bc78d3ab90ea0630c4156fecc89" category="paragraph">収益創出のためにデータサービスに依存解決策 している企業では、さまざまな単一点障害のシナリオに耐えられるだけでなく、継続的なビジネス運用を可能にするためにサイト障害のシナリオによってデータサービスを保護する必要があります。</block>
+  <block id="27873d50d29dbb90b764c150fdc767bd" category="section-title">目標復旧時点と目標復旧時間</block>
+  <block id="16c13429b2100171458973a13f863bb9" category="paragraph">Recovery Point Objective （ RPO ；目標復旧時点）は、損失やデータのリカバリ先となるデータの量を、時間の観点から測定します。日々のバックアップ計画では、企業が 1 日分のデータを失うことがあります。これは、前回のバックアップ以降に行われたデータの変更が災害で失われる可能性があるためです。ビジネスクリティカルなデータサービスやミッションクリティカルなデータサービスの場合、 RPO ゼロ、およびデータ損失ゼロの関連計画とインフラが求められることがあります。</block>
+  <block id="503c0362dd209631b96351a010cf6e37" category="paragraph">Recovery Time Objective （ RTO ；目標復旧時間）は、データを使用できない時間、またはデータサービスを復旧するまでにどれくらいの時間がかかるかを測定します。たとえば、バックアップとリカバリを実装しており、サイズによっては特定のデータセットに対して従来のテープを使用する場合があります。このため、バックアップテープからデータをリストアするには、数時間かかる場合もあれば、インフラに障害が発生している場合は数日かかる場合もあります。時間の考慮事項には、データのリストアに加えて、インフラをバックアップする時間も考慮する必要があります。ミッションクリティカルなデータサービスの場合、 RTO が非常に低く、ビジネスの継続性を維持するためにデータサービスを迅速にオンラインに戻すために数秒から数分のフェイルオーバー時間しか許容されないことがあります。</block>
+  <block id="152bd193ad82e78daa1aeac187780314" category="section-title">SM-BC です</block>
+  <block id="c085087673f5bd7a3b0fa950792847b2" category="paragraph">ONTAP 9.8 以降では、 NetApp SM-BC を使用して、 SAN ワークロードを保護して透過的なアプリケーションフェイルオーバーを実現できます。データレプリケーション用に 2 つの AFF クラスタ間または 2 つの ASA クラスタ間に整合グループ関係を作成することで、 RPO をゼロ、 RTO をほぼゼロにすることができます。</block>
+  <block id="a6c6fc6de80f2efe2880bfd79ba5a506" category="paragraph">SM-BC 解決策 は、 IP ネットワーク上で SnapMirror Synchronous テクノロジを使用してデータを複製します。アプリケーションレベルのきめ細かさと自動フェイルオーバー機能を提供し、 iSCSI または FC プロトコルベースの SAN LUN を使用して、 Microsoft SQL Server や Oracle などのビジネスクリティカルなデータサービスを保護します。3 番目のサイトに導入された ONTAP メディエーターは、 SM-BC 解決策 を監視し、サイト障害時の自動フェイルオーバーを有効にします。</block>
+  <block id="30a3c42957ac38f5bb5b42bc4f0ff852" category="paragraph">整合グループ（ CG ）は、アプリケーションワークロードに対して書き込み順序の整合性が保証される FlexVol ボリュームの集まりで、ビジネス継続性のために保護する必要があります。一度に複数のボリュームについて、 crash-consistent Snapshot コピーを同時に作成できます。SnapMirror 関係は、 CG 関係とも呼ばれ、ソース CG とデスティネーション CG の間に確立されます。CG に属するボリュームグループを、アプリケーションインスタンス、アプリケーションインスタンスのグループ、または解決策 全体にマッピングできます。また、ビジネス要件や変更に基づいて、 SM-BC 整合グループ関係をオンデマンドで作成または削除できます。</block>
+  <block id="1fa08e94e60e2700844c8771baab0ea1" category="paragraph">次の図に示すように、整合グループ内のデータは、ディザスタリカバリとビジネス継続性のために 2 つ目の ONTAP クラスタにレプリケートされます。アプリケーションは両方の ONTAP クラスタ内の LUN に接続されています。通常はプライマリクラスタが I/O を処理し、プライマリで災害が発生するとセカンダリクラスタから自動的に再開します。SM-BC 解決策 を設計する場合は、サポートされる制限を超えないように、 CG 関係でサポートされるオブジェクト数（最大 20 個の CG 、最大 200 個のエンドポイントなど）を確認する必要があります。</block>
+  <block id="4a7da73f847d9f12eb7e453d01604ab8" category="paragraph"><block ref="4a7da73f847d9f12eb7e453d01604ab8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="babf43012b910d7f98ae060e8f718349" category="inline-link-macro">次の例は、 FlexPod SM-BC 解決策 です。</block>
+  <block id="7db90d25efb147bf4878f6fec9466170" category="paragraph"><block ref="7db90d25efb147bf4878f6fec9466170" category="inline-link-macro-rx"></block></block>
+  <block id="093a45d87b6b8692e6c9a73c1a04c137" category="doc">追加情報およびバージョン履歴の参照先</block>
+  <block id="05a45991363cf9b2d3487c588a24c16b" category="paragraph"><block ref="05a45991363cf9b2d3487c588a24c16b" category="inline-link-macro-rx"></block></block>
+  <block id="2b700c19ef20ee180935ccd2eb7dddd1" category="list-text">FlexPod ホームページ</block>
+  <block id="7e2e9ba533867bc2e0337175d24205ca" category="list-text">FlexPod のシスコ検証済み設計および導入ガイド</block>
+  <block id="895f63a6e9912cd9f4cff1fa786be7a2" category="list-text">Cisco サーバ - Unified Computing System （ UCS ）</block>
+  <block id="3cd8b5fe5ca94a9fdb5caaf96875ef7e" category="inline-link"><block ref="3cd8b5fe5ca94a9fdb5caaf96875ef7e" category="inline-link-rx"></block></block>
+  <block id="6bfac05f3cc2c0adace9c385ef708fd9" category="paragraph"><block ref="6bfac05f3cc2c0adace9c385ef708fd9" category="inline-link-rx"></block></block>
+  <block id="60912794da9f465a275c0f0eb81e242c" category="list-text">UCS 管理モードの FlexPod データセンター、 VMware vSphere 7.0 U2 、および NetApp ONTAP 9.9 設計ガイド</block>
+  <block id="070aab031dbd1f01b07e6d74522ad4af" category="inline-link"><block ref="070aab031dbd1f01b07e6d74522ad4af" category="inline-link-rx"></block></block>
+  <block id="e865ddbce846644ac8a203fbf896a951" category="paragraph"><block ref="e865ddbce846644ac8a203fbf896a951" category="inline-link-rx"></block></block>
+  <block id="3fb886f7d378f8993086b399cbc42dfa" category="list-text">『 FlexPod Datacenter with Cisco UCS 4.2(1) in UCS Managed Mode 』、『 VMware vSphere 7.0 U2 and NetApp ONTAP 9.9 Deployment Guide 』</block>
+  <block id="ee94f02a3ab62318d9af06b2b2cb3991" category="inline-link"><block ref="ee94f02a3ab62318d9af06b2b2cb3991" category="inline-link-rx"></block></block>
+  <block id="ac977a73f1cb59251e7b2919b2069f41" category="paragraph"><block ref="ac977a73f1cb59251e7b2919b2069f41" category="inline-link-rx"></block></block>
+  <block id="4a8df3ad772c408338bf3b14f5fcf7b9" category="list-text">FlexPod Datacenter with Cisco UCS X シリーズ、 VMware 7.0 U2 、 and NetApp ONTAP 9.9 設計ガイド</block>
+  <block id="177190825c127fb85928d6705e05cbe9" category="inline-link"><block ref="177190825c127fb85928d6705e05cbe9" category="inline-link-rx"></block></block>
+  <block id="16c4284420fc680417cef199f93ab137" category="paragraph"><block ref="16c4284420fc680417cef199f93ab137" category="inline-link-rx"></block></block>
+  <block id="8344230dacf5765b09ccbf005c7a6ac0" category="list-text">『 FlexPod Datacenter with Cisco UCS X Series 、 VMware 7.0 U2 and NetApp ONTAP 9.9 Deployment Guide 』</block>
+  <block id="9c4917cae82b3b77f4e5655173e8d546" category="inline-link"><block ref="9c4917cae82b3b77f4e5655173e8d546" category="inline-link-rx"></block></block>
+  <block id="27c758d585ce4e93c483fd6f6c95dddc" category="paragraph"><block ref="27c758d585ce4e93c483fd6f6c95dddc" category="inline-link-rx"></block></block>
+  <block id="04a3344cda9c34adafc53a3a845cf96e" category="list-text">FlexPod Express for VMware vSphere 7.0 と Cisco UCS Mini および NetApp AFF / FAS NVA 設計ガイド</block>
+  <block id="2eaaed414f833a584e30dd5a33d13e0c" category="paragraph"><block ref="2eaaed414f833a584e30dd5a33d13e0c" category="inline-link-rx"></block></block>
+  <block id="d32a057bfbbbc089d69a8f97ce2b63eb" category="list-text">『 FlexPod Express for VMware vSphere 7.0 with Cisco UCS Mini and NetApp AFF / FAS NVA Deployment Guide 』</block>
+  <block id="68e019739173183f72d148751f45b0c1" category="paragraph"><block ref="68e019739173183f72d148751f45b0c1" category="inline-link-rx"></block></block>
+  <block id="b316806ad7781b9ba4c7a357182173a1" category="list-text">FlexPod MetroCluster IP と VXLAN マルチサイトフロントエンドファブリック</block>
+  <block id="c5904944998c9d8971f82e838aa20aae" category="inline-link"><block ref="c5904944998c9d8971f82e838aa20aae" category="inline-link-rx"></block></block>
+  <block id="a9da560cfa7afb0e337b53562318198d" category="paragraph"><block ref="a9da560cfa7afb0e337b53562318198d" category="inline-link-rx"></block></block>
+  <block id="548154ef6ff2d5d9d7b0e2270128b0ab" category="inline-link"><block ref="548154ef6ff2d5d9d7b0e2270128b0ab" category="inline-link-rx"></block></block>
+  <block id="c433b7eb50bc88ded8f9c48135130e28" category="paragraph"><block ref="c433b7eb50bc88ded8f9c48135130e28" category="inline-link-rx"></block></block>
+  <block id="f7080908d8b268ad04ad99671289ee7a" category="inline-link"><block ref="f7080908d8b268ad04ad99671289ee7a" category="inline-link-rx"></block></block>
+  <block id="3df26ff7ed45549c7227d7c11ac64481" category="paragraph"><block ref="3df26ff7ed45549c7227d7c11ac64481" category="inline-link-rx"></block></block>
+  <block id="df7b6f99cac600ea13a6b3d9bda08e5f" category="inline-link"><block ref="df7b6f99cac600ea13a6b3d9bda08e5f" category="inline-link-rx"></block></block>
+  <block id="643be86208528436ffbb2e32c951a9e9" category="paragraph"><block ref="643be86208528436ffbb2e32c951a9e9" category="inline-link-rx"></block></block>
+  <block id="1989c908909050dc1f8610bb560fecba" category="list-text">TR-4978 ：『 SnapMirror Business Continuity （ SM-BC ） ONTAP 9.8 』</block>
+  <block id="9038a93557de432fcfaca71342a59971" category="inline-link"><block ref="9038a93557de432fcfaca71342a59971" category="inline-link-rx"></block></block>
+  <block id="841e048e22838f566123911f3e0be2b3" category="paragraph"><block ref="841e048e22838f566123911f3e0be2b3" category="inline-link-rx"></block></block>
+  <block id="6a3ced0e806303d25bd9470e394e3916" category="list-text">SnapMirror 関係 ONTAP 9 を正しく削除する方法</block>
+  <block id="7ae5f66d4ce65a0584b430cf8358e94f" category="inline-link"><block ref="7ae5f66d4ce65a0584b430cf8358e94f" category="inline-link-rx"></block></block>
+  <block id="15f6ac2f75a004ac74fc2bf633751d77" category="paragraph"><block ref="15f6ac2f75a004ac74fc2bf633751d77" category="inline-link-rx"></block></block>
+  <block id="58749e1fa46114aab2056041133a84b9" category="list-text">SnapMirror Synchronous ディザスタリカバリの基本</block>
+  <block id="9d44e2e91088d41a986c68b35e7addb1" category="inline-link"><block ref="9d44e2e91088d41a986c68b35e7addb1" category="inline-link-rx"></block></block>
+  <block id="1726ceb383554e9feadccf93460453d4" category="paragraph"><block ref="1726ceb383554e9feadccf93460453d4" category="inline-link-rx"></block></block>
+  <block id="882884d52fb8d922c4576ca62aa00f6f" category="list-text">非同期 SnapMirror ディザスタリカバリの基本</block>
+  <block id="94e1d7d3198aa2c25d5656bb140edbcc" category="inline-link"><block ref="94e1d7d3198aa2c25d5656bb140edbcc" category="inline-link-rx"></block></block>
+  <block id="15a8e730a99ac3951725ec26a2303de8" category="paragraph"><block ref="15a8e730a99ac3951725ec26a2303de8" category="inline-link-rx"></block></block>
+  <block id="03c39d763ca15978d9ef16c2ba5fe98a" category="list-text">データ保護とディザスタリカバリ</block>
+  <block id="e708f30d18e0c35946ecf377308668ea" category="inline-link"><block ref="e708f30d18e0c35946ecf377308668ea" category="inline-link-rx"></block></block>
+  <block id="e23356d1f27b95964905abe3ede1030b" category="paragraph"><block ref="e23356d1f27b95964905abe3ede1030b" category="inline-link-rx"></block></block>
+  <block id="71a38375f76a7ed87f8e28fa9645d356" category="list-text">ONTAP メディエーターサービスをインストールまたはアップグレードします</block>
+  <block id="e38e35c79a69f1b3454bc51321bf3046" category="inline-link"><block ref="e38e35c79a69f1b3454bc51321bf3046" category="inline-link-rx"></block></block>
+  <block id="247926d418ad56ee7198494c45019659" category="paragraph"><block ref="247926d418ad56ee7198494c45019659" category="inline-link-rx"></block></block>
+  <block id="21e41f19959ca7dea2ba5cf3729eeb5d" category="section-title">『 VMware vSphere HA and vSphere Metro Storage Cluster 』を参照してください</block>
+  <block id="ae37e8baa68245d9d2c894d2da1bab32" category="inline-link"><block ref="ae37e8baa68245d9d2c894d2da1bab32" category="inline-link-rx"></block></block>
+  <block id="33add6e3cb0eb6498644cf9001f98fd5" category="paragraph"><block ref="33add6e3cb0eb6498644cf9001f98fd5" category="inline-link-rx"></block></block>
+  <block id="de8402faa342fc9625bdaa3961573a1b" category="inline-link"><block ref="de8402faa342fc9625bdaa3961573a1b" category="inline-link-rx"></block></block>
+  <block id="eda0ad9ec468bbcaad6eca5eb6ef6925" category="paragraph"><block ref="eda0ad9ec468bbcaad6eca5eb6ef6925" category="inline-link-rx"></block></block>
+  <block id="d50e63b9f70efedde8dc093be8ec12b2" category="list-text">『 VMware vSphere Metro Storage Cluster Recommended Practices 』を参照してください</block>
+  <block id="9e211a0ec0ebb7c473ed61cbc37819a8" category="inline-link"><block ref="9e211a0ec0ebb7c473ed61cbc37819a8" category="inline-link-rx"></block></block>
+  <block id="734feebed99ef4959e1522728f6dbd8a" category="paragraph"><block ref="734feebed99ef4959e1522728f6dbd8a" category="inline-link-rx"></block></block>
+  <block id="c912dc73def9e5758eb6e130fd3b21ee" category="list-text">NetApp ONTAP と NetApp SnapMirror ビジネス継続性（ SM-BC ）、 VMware vSphere Metro Storage Cluster （ vMSC ）（ 83370 ）</block>
+  <block id="e42e1f7327a67ae6a4439a303fc9c81d" category="inline-link"><block ref="e42e1f7327a67ae6a4439a303fc9c81d" category="inline-link-rx"></block></block>
+  <block id="077317c6b779e004e75e33d28168bab8" category="paragraph"><block ref="077317c6b779e004e75e33d28168bab8" category="inline-link-rx"></block></block>
+  <block id="0fb53f6fd950dbb18a8f27d8735f5ed7" category="list-text">VMware vSphere Metro Storage Cluster および ONTAP を使用してティア 1 のアプリケーションとデータベースを保護します</block>
+  <block id="1fb0c828050c8732d84945ca6ded7c37" category="inline-link"><block ref="1fb0c828050c8732d84945ca6ded7c37" category="inline-link-rx"></block></block>
+  <block id="7105f117d2822e18aa8b108416306262" category="paragraph"><block ref="7105f117d2822e18aa8b108416306262" category="inline-link-rx"></block></block>
+  <block id="c0ff01bc62a5fd31ba0e537030243f17" category="section-title">Microsoft SQL と HammerDB</block>
+  <block id="f6d2c8f6c5f57ce5542457131b856e66" category="list-text">Microsoft SQL Server 2019</block>
+  <block id="a0ce43473bf333ef719887f309aa1a01" category="inline-link"><block ref="a0ce43473bf333ef719887f309aa1a01" category="inline-link-rx"></block></block>
+  <block id="4f04e1cba6b79808453a88555b1b8b9c" category="paragraph"><block ref="4f04e1cba6b79808453a88555b1b8b9c" category="inline-link-rx"></block></block>
+  <block id="ced5bb365341602e07a076509e79d013" category="list-text">『 Architecting Microsoft SQL Server on VMware vSphere Best Practices Guide 』を参照してください</block>
+  <block id="0e3bf5e326af487aef0404982ac6b6bd" category="inline-link"><block ref="0e3bf5e326af487aef0404982ac6b6bd" category="inline-link-rx"></block></block>
+  <block id="f46bc0bb92b41bfe04d99b9ecc22fb8d" category="paragraph"><block ref="f46bc0bb92b41bfe04d99b9ecc22fb8d" category="inline-link-rx"></block></block>
+  <block id="9a7ba451c083642a4249fcb908d1e675" category="list-text">HammerDB の Web サイト</block>
+  <block id="2275bc8a958a9046b4c1fb9447a632cd" category="inline-link"><block ref="2275bc8a958a9046b4c1fb9447a632cd" category="inline-link-rx"></block></block>
+  <block id="b6529ced98949d9a27cefcb6c236e24e" category="paragraph"><block ref="b6529ced98949d9a27cefcb6c236e24e" category="inline-link-rx"></block></block>
+  <block id="2827ebfd09192aa78e8ebf5fc1e5b769" category="section-title">互換性マトリックス</block>
+  <block id="18c8dc765719dd560c9a80ef03cf87e2" category="inline-link"><block ref="18c8dc765719dd560c9a80ef03cf87e2" category="inline-link-rx"></block></block>
+  <block id="864917b1ac2563708daec0b6fb665d8b" category="paragraph"><block ref="864917b1ac2563708daec0b6fb665d8b" category="inline-link-rx"></block></block>
+  <block id="0cf6fdc2108556d64f002f7b2bff8700" category="inline-link"><block ref="0cf6fdc2108556d64f002f7b2bff8700" category="inline-link-rx"></block></block>
+  <block id="373f063717834529bc600f08b98fc66c" category="paragraph"><block ref="373f063717834529bc600f08b98fc66c" category="inline-link-rx"></block></block>
+  <block id="cbb9a6e025db26e6e93575dee2958256" category="paragraph">FlexPod データセンターに NetApp SnapMirror Business Continuity （ SM-BC ）を配置し、 ONTAP 9.10 解決策 を使用すると、単一点障害のシナリオに加えて、サイト障害からビジネスクリティカルなデータを保護できます。このテクニカルレポートでは、 FlexPod SM-BC 解決策 とその解決策 コンポーネントの概要を示し、解決策 の設定と検証の側面をいくつか紹介します。</block>
+  <block id="11d56047eb2c0edaf57e943fb8e6a2af" category="summary">FlexPod SM-BC 解決策 のストレージ構成は、各サイトでの一般的な FlexPod 解決策 のベストプラクティスに従います。SM-BC クラスタピアリングおよびデータレプリケーションでは、両方のサイトの FlexPod スイッチ間に確立されたサイト間リンクを使用します。以降のセクションでは、検証に使用する接続と構成の一部を紹介します。</block>
+  <block id="d996e1a7c19a3c614597fe3d017735e3" category="doc">解決策 の検証 - ストレージ</block>
+  <block id="a5c83135920d14aae2bfd3bb752f5726" category="inline-link-macro">前のバージョン：解決策 の検証 - 概要</block>
+  <block id="41b051617d64484449db4f9e8900e50c" category="paragraph"><block ref="41b051617d64484449db4f9e8900e50c" category="inline-link-macro-rx"></block></block>
+  <block id="06a162921ff2263e0d2871473d84695c" category="paragraph">ローカル UCS FI およびブレードサーバへのストレージ接続は、ローカルサイトの Nexus スイッチによって提供されます。サイト間の Nexus スイッチ接続を介して、リモートの UCS ブレードサーバからストレージにアクセスすることもできます。次の図と表は、各サイトのストレージ接続図とストレージコントローラの接続リストを示しています。</block>
+  <block id="8d5a21ecdaacb7041f30f1ec08f09734" category="paragraph"><block ref="8d5a21ecdaacb7041f30f1ec08f09734" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="cfde5efedf8c38f0dabe7dd36607a381" category="section-title">接続およびインターフェイス</block>
+  <block id="e5676954a0640c487fa545ebf76683c3" category="paragraph">この検証では、帯域幅の集約と冗長性のために、各ストレージコントローラの 2 つの物理ポートが各 Nexus スイッチに接続されます。これら 4 つの接続は、ストレージ上のインターフェイスグループ構成に参加します。Nexus スイッチの対応するポートは、リンクアグリゲーションと耐障害性のために vPC に参加します。</block>
+  <block id="9cbd0bfae1c6b1fd16d45c202ec7079d" category="paragraph">インバンド管理、クラスタ間、および NFS / iSCSI データストレージプロトコルでは、 VLAN を使用します。インターフェイスグループに VLAN ポートが作成され、さまざまなタイプのトラフィックを分離します。それぞれの機能に対応する LIF が、対応する VLAN ポートの上に作成されます。次の図は、物理接続、インターフェイスグループ、 VLAN ポート、および論理インターフェイスの関係を示しています。</block>
+  <block id="e54c07bea9f9ec56e70f7617e6655e0a" category="paragraph"><block ref="e54c07bea9f9ec56e70f7617e6655e0a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a0cbdd0f9fa2b6b926f068804645359d" category="paragraph">FlexPod 解決策 で Cisco UCS サーバの SAN ブートを実装することを推奨します。SAN ブートを実装すると、ネットアップストレージシステム内でオペレーティングシステムを安全に保護できるため、パフォーマンスと柔軟性が向上します。この解決策 では、 iSCSI SAN ブートが検証されました。</block>
+  <block id="28d253d13551c6a1fdcd21944f3d5cca" category="paragraph">次の図は、ネットアップストレージから Cisco UCS サーバの iSCSI SAN ブートの接続を示しています。iSCSI SAN ブートでは、各 Cisco UCS サーバに 2 つの iSCSI vNIC （各 SAN ファブリックに 1 つずつ）が割り当てられ、サーバからストレージへの冗長接続が提供されます。Nexus スイッチに接続された 10 / 25 G イーサネットストレージポート（この例では e1a 、 e1b 、 e1c 、 e1d ）をグループ化して、 1 つのインターフェイスグループ（ ifgrp ）になります（この例では a0a ）。iSCSI VLAN ポートは ifgrp に作成され、 iSCSI LIF は iSCSI VLAN ポートに作成されます。</block>
+  <block id="cb41f38ec7e49697e0d27007ac150944" category="paragraph">各 iSCSI ブート LUN は、ブート LUN と、そのブート igroup 内のサーバの iSCSI Qualified Names （ IQNs ）を関連付けて、 iSCSI LIF を介して起動するサーバにマッピングされます。サーバのブート igroup には、各 vNIC-SAN ファブリックに対して 1 つずつ、 2 つの IQN が含まれています。この機能を使用すると、許可されたサーバだけが、そのサーバ専用に作成されたブート LUN にアクセスできます。</block>
+  <block id="55ac8f95de03dae63e773cf18fa9e42c" category="paragraph"><block ref="55ac8f95de03dae63e773cf18fa9e42c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="fa823ae2ebe162d7679db67051dbcec5" category="section-title">クラスタピアリング</block>
+  <block id="5523ee15c7f11760b1c12c909bb93f73" category="paragraph">ONTAP クラスタピアは、クラスタ間 LIF を介して通信します。2 つのクラスタで ONTAP System Manager を使用すると、 Protection &gt; Overview ペインに、必要なクラスタ間 LIF を作成できます。</block>
+  <block id="2ef037e6fd3215a5e5f43453eb38fd9f" category="paragraph"><block ref="2ef037e6fd3215a5e5f43453eb38fd9f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3994219c5d8592586d602006783ccde8" category="paragraph">2 つのクラスタ間にピア関係を設定するには、次の手順を実行します。</block>
+  <block id="418040e7ecd8f332fdbb7c9d2e17c503" category="list-text">1 つ目のクラスタでクラスタピアパスフレーズを生成</block>
+  <block id="d7482f3c9d6aeec74e75962e8dd48e9b" category="paragraph"><block ref="d7482f3c9d6aeec74e75962e8dd48e9b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7f0a4d0b4aa8a7b2219a12713ede495a" category="list-text">2 番目のクラスタで Peer Cluster オプションを呼び出し、パスフレーズとクラスタ間 LIF の情報を指定します。</block>
+  <block id="8ebe8c770968c184503552f19042f546" category="paragraph"><block ref="8ebe8c770968c184503552f19042f546" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6e6e55dbd232503db3d7ce09f1d55067" category="list-text">System Manager Protection &gt; Overview ペインには、クラスタピアの情報が表示されます。</block>
+  <block id="c340f73561a220e105229294aa9d0139" category="paragraph"><block ref="c340f73561a220e105229294aa9d0139" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="0ef91273109acbed8effcf5b1be24116" category="section-title">ONTAP メディエーターのインストールと設定</block>
+  <block id="bd32fe592cad4acb8313af5687a61387" category="paragraph">ONTAP メディエーターは、 SM-BC 関係にある ONTAP クラスタのクォーラムを確立します。この機能は、障害が検出されたときの自動フェイルオーバーを調整し、各クラスタが同時にプライマリクラスタとして制御を確立しようとしたときにスプリットブレインのシナリオを回避するのに役立ちます。</block>
+  <block id="f3d138059c90d7379267d72988cf023b" category="paragraph">ONTAP メディエーターをインストールする前に、を確認します<block ref="8286668f8f150ad8639fad5d717953b0" category="inline-link-rx"></block> の各ページでは、前提条件、サポートされている Linux のバージョン、およびそれらをサポートされている各種 Linux オペレーティングシステムにインストールする手順について説明します。</block>
+  <block id="ad580b3d90a601ed6970a73155cceef1" category="paragraph">ONTAP メディエーターをインストールしたら、 ONTAP メディエーターのセキュリティ証明書を ONTAP クラスタに追加し、 System Manager の Protection &gt; Overview ペインで ONTAP メディエーターを設定できます。次のスクリーンショットは、 ONTAP メディエーターの設定 GUI を示しています。</block>
+  <block id="a3c3465ab2f22395f2c552ae6d0faee7" category="paragraph"><block ref="a3c3465ab2f22395f2c552ae6d0faee7" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="276ec2da41abd62121ae9d50c680f9f2" category="paragraph">必要な情報を入力すると、設定された ONTAP メディエーターが System Manager の Protection &gt; Overview ペインに表示されます。</block>
+  <block id="476d6e2be625e9f0b52f2fa23edac311" category="paragraph"><block ref="476d6e2be625e9f0b52f2fa23edac311" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="91396f32084a9998cb0143b6427a9e1c" category="section-title">SM-BC 整合グループ</block>
+  <block id="6fe78c84732eb9b36fc9158ee16ef46f" category="paragraph">整合グループは、指定されたボリュームの集まりにまたがるアプリケーションワークロードに対して書き込み順序の整合性を保証します。ONTAP 9.10.1 では、いくつかの重要な制限事項があります。</block>
+  <block id="78352ff4c785a1d0437f0fc1e1c67ceb" category="list-text">クラスタ内の SM-BC 整合グループ関係の最大数は 20 です。</block>
+  <block id="43d4069eb239ba838fc082850887f934" category="list-text">各 SM-BC 関係でサポートされる最大ボリューム数は 16 です。</block>
+  <block id="d76bce2b9d2e4187054b98c5d875cbff" category="list-text">クラスタ内のソースエンドポイントとデスティネーションエンドポイントの最大合計数は 200 です。</block>
+  <block id="f129f10b239e6d4050491901be3a8a29" category="inline-link">制限事項と制限事項</block>
+  <block id="05e4b2d9ec40019e07ce6bde5ed92eb5" category="paragraph">詳細については、の ONTAP SM-BC のマニュアルを参照してください<block ref="2b9ee9e7077ed59597a8e36380145b36" category="inline-link-rx"></block>。</block>
+  <block id="6b7d2b918d790ac901761dcac7291c41" category="paragraph">検証構成では、 ONTAP System Manager を使用して整合グループを作成し、両方のサイトの ESXi ブート LUN と共有データストア LUN の両方を保護しました。コンシステンシ・グループの作成ダイアログにアクセスするには '[ 保護 ] ＞ [ 概要 ] ＞ [ ビジネス継続性の保護 ] ＞ [ コンシステンシ・グループの保護 ] を選択します整合グループを作成するには、作成に必要なソースボリューム、デスティネーションクラスタ、およびデスティネーション SVM の情報を指定します。</block>
+  <block id="d07f3b4d4b8a441b456537ec163ed5af" category="paragraph"><block ref="d07f3b4d4b8a441b456537ec163ed5af" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5d7e4c0a4f8aebc3ece496af69e138ce" category="paragraph">次の表に、検証テストで作成される 4 つの整合グループと各整合グループに含まれるボリュームを示します。</block>
+  <block id="26ed02718973e705cd69ee6e109400e0" category="cell">System Manager の略</block>
+  <block id="ae9e13b66877a85be97724063f459ec2" category="cell">整合グループ</block>
+  <block id="564a95e2696af68aa1c3a4953ecd1ce9" category="cell">サイト A</block>
+  <block id="ba1ebd1e1e2245fa87263eda5dba5471" category="cell">CG_ESXi_a のようになります</block>
+  <block id="ba53713f8e79803793a4194009c5ebf7" category="cell">esxi_a です</block>
+  <block id="2cd730287a3329495c24f79df61c62fd" category="cell">cG_infra_a_a</block>
+  <block id="70b3634f10ae5a6bf44eb1bf8ba96d2b" category="cell">infra_datastore_a_01 infra_a_02</block>
+  <block id="bb713afeab82bcb45a45d3cc1411e3eb" category="cell">サイト B</block>
+  <block id="fdf8707b5db2d54d9a74aef7ae263c20" category="cell">cG_esxi_b</block>
+  <block id="45a2db8a4219a462f57d6e7ab58147df" category="cell">esxi_b</block>
+  <block id="6da1db591917cf5fc22ae3ce17b426f6" category="cell">cG_infra_datastore_b</block>
+  <block id="fe1d4fc67faf81ca96cd377b1fcf913a" category="cell">infra_datastore_b_01 infra_datastore_b_02</block>
+  <block id="c509a982b5d03a70dd249079a1b9778d" category="paragraph">作成された整合グループは、サイト A とサイト B のそれぞれの保護関係の下に表示されます</block>
+  <block id="b70bea0f1a6d707e69c6b7c9d4edb42b" category="paragraph">このスクリーンショットは、サイト A の整合グループ関係を示しています</block>
+  <block id="e3c14bd2eb264e172c1d8d0b4e6ca18d" category="paragraph"><block ref="e3c14bd2eb264e172c1d8d0b4e6ca18d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="546972fb4d05b96ea4543b38bd362780" category="paragraph">このスクリーンショットは、サイト B における整合グループ関係を示しています</block>
+  <block id="81fda0bef41eea0774ec8eafd653e1aa" category="paragraph"><block ref="81fda0bef41eea0774ec8eafd653e1aa" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8a91f7851ff41198009931e0638b682e" category="paragraph">次のスクリーンショットは、 cg_infra_datastore_b グループの整合グループ関係の詳細を示しています。</block>
+  <block id="a0e6bfc59ba895e9122ebfb6462a1ac4" category="paragraph"><block ref="a0e6bfc59ba895e9122ebfb6462a1ac4" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="bd413320f29058521b15e80d18cebd3b" category="section-title">ボリューム、 LUN 、およびホストのマッピング</block>
+  <block id="6564ddd31817f3c2ca6e76c4634dd89d" category="paragraph">整合グループの作成後、 SnapMirror はソースボリュームとデスティネーションボリュームを同期するため、データは常に同期された状態になります。リモートサイトのデスティネーションボリュームは、 _dest 終了中のボリューム名を伝送します。たとえば、サイト A のクラスタ内の esxi_a ボリュームには、サイト B に対応する esxi_a_dest データ保護（ DP ）ボリュームがあります</block>
+  <block id="c6e12ac81b9fdfe7758da0cedec13578" category="paragraph">このスクリーンショットは、サイト A のボリューム情報を示しています</block>
+  <block id="85ac4d8dafd13306e842035ab093815b" category="paragraph"><block ref="85ac4d8dafd13306e842035ab093815b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f414a5a361a296288e3479f40a488be5" category="paragraph">このスクリーンショットは、サイト B のボリューム情報を示しています</block>
+  <block id="1dec3a6773b283635108af7e39c2ea93" category="paragraph"><block ref="1dec3a6773b283635108af7e39c2ea93" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="30c2d0e3e8f3be4a108053cf24dc5f53" category="paragraph">透過的なアプリケーションフェイルオーバーを可能にするには、ミラーリングされた SM-BC LUN もデスティネーションクラスタからホストにマッピングする必要があります。これにより、ホストは、ソースとデスティネーションの両方のクラスタから LUN へのパスを適切に認識できます。サイト A とサイト B の両方の「 igroup show 」出力と「 lun show 」出力は、次の 2 つのスクリーンショットでキャプチャされています。作成されたマッピングでは、クラスタ内の各 ESXi ホストが自身の SAN ブート LUN を ID 0 、 4 つすべての共有 iSCSI データストア LUN として認識します。</block>
+  <block id="c85dcc7a58bce2a7b09436fe6df63c20" category="paragraph">このスクリーンショットは、サイト A のクラスタのホスト igroup と LUN マッピングを示しています。</block>
+  <block id="70454f7d864dcb1bcd98ae914297eb70" category="paragraph"><block ref="70454f7d864dcb1bcd98ae914297eb70" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="edd1aecfd23dac52aaa6864e47531f66" category="paragraph">このスクリーンショットは、サイト B のクラスタのホスト igroup と LUN マッピングを示しています。</block>
+  <block id="816e6c704d1dad7cb3a94e32c2da8ffe" category="paragraph"><block ref="816e6c704d1dad7cb3a94e32c2da8ffe" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="bac8b52ac8113098f074ef33a0441eb1" category="inline-link-macro">次に、解決策 の検証と仮想化を行います。</block>
+  <block id="aa81b985470b358604c301c837d7c91b" category="paragraph"><block ref="aa81b985470b358604c301c837d7c91b" category="inline-link-macro-rx"></block></block>
+  <block id="c1d535c9a4692514b630f09f40f0b0dc" category="sidebar">ネットアップの SnapMirror によるビジネス継続性機能と ONTAP 9.10 を使用した FlexPod データセンター</block>
+  <block id="097c7979ec41d500c7beaecba9d80bfd" category="sidebar">検証済みのシナリオ</block>
 </blocks>

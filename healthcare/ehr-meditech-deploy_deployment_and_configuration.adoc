@@ -6,6 +6,7 @@ summary:
 ---
 = 導入と設定
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

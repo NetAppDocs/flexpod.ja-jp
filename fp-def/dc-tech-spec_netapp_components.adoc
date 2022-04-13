@@ -6,6 +6,7 @@ summary: ネットアップのストレージコントローラは、ブート�
 ---
 = NetApp コンポーネント
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

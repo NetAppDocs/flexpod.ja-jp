@@ -6,6 +6,7 @@ summary: FC をデータネットワークプロトコルとして使用する�
 ---
 = イニシエータグループの構成
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

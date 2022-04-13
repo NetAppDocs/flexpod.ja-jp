@@ -6,6 +6,7 @@ summary: 医療アプリケーションを FlexPod プラットフォームで�
 ---
 = まとめ
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

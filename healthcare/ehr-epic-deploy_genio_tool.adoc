@@ -6,6 +6,7 @@ summary: Genio は Epic で使用されているストレージパフォーマ�
 ---
 = GenIO ツール
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

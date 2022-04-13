@@ -6,6 +6,7 @@ summary: このセクションでは、 NetApp AFF ストレージ導入手順�
 ---
 = ネットアップストレージ導入手順（パート 1 ）
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: MEDITECH ホスト専用の MEDITECH ボリュームはシックプロ�
 ---
 = ボリューム構成
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary:
 ---
 = リファレンスアーキテクチャ
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

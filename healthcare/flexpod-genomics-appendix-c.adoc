@@ -6,6 +6,7 @@ summary: このセクションでは、 Cromwell エンジンを使用して GAT
 ---
 = クロムウェルエンジンを使用した GATK 実行用出力
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

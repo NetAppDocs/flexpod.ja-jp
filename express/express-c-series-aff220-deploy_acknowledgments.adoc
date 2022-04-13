@@ -6,6 +6,7 @@ summary: 作成者は、特定の個人のサポートとこの設計への貢�
 ---
 = 謝辞
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

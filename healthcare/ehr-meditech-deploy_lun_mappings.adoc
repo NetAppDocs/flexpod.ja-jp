@@ -6,6 +6,7 @@ summary: MEDITECH ホストの LUN マッピングは、 LUN の作成時に確�
 ---
 = LUN マッピング
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

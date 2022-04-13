@@ -6,6 +6,7 @@ summary: Epic ソフトウェア環境向けに導入されたネットアップ
 ---
 = NetApp の設定
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

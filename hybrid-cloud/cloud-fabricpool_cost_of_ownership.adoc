@@ -6,6 +6,7 @@ summary: FabricPool の経済計算ツールは、独立した IT アナリス�
 ---
 = 所有コスト
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

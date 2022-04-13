@@ -6,6 +6,7 @@ summary: ネットアップと Cisco は提携を通じて、 FlexPod エコシ�
 ---
 = はじめに
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

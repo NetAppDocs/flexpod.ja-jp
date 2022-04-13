@@ -6,6 +6,7 @@ summary: FlexPod Express システムには、ハードウェアコンポーネ�
 ---
 = テクノロジ要件
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

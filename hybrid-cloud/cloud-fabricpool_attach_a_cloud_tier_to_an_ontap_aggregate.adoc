@@ -6,6 +6,7 @@ summary: ONTAP でオブジェクトストアを追加して識別したら、�
 ---
 = ONTAP アグリゲートにクラウド階層を接続する
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

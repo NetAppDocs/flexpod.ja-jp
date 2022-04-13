@@ -6,6 +6,7 @@ summary: このセクションでは、ネットアップの従来型ディス�
 ---
 = レガシー機器
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

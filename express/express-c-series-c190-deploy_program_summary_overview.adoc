@@ -6,6 +6,7 @@ summary: FlexPod Datacenter と FlexPod Express は、ベースライン構成�
 ---
 = NVA-1142-deploy ： FlexPod Express with Cisco UCS C シリーズ and NetApp AFF C190 Series - NVA Deployment （英語
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

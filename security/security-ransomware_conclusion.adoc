@@ -6,6 +6,7 @@ summary: 攻撃が発生した場合に身代金を支払わないことを著�
 ---
 = まとめ
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary: このテクニカルレポートは、 FlexPod システムに Epic �
 ---
 = TR-4693 ：『 FlexPod Datacenter for Epic EHR Deployment Guide 』
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

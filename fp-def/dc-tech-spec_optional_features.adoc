@@ -6,6 +6,7 @@ summary: ネットアップは、 FlexPod データセンターのアーキテ�
 ---
 = オプション機能
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

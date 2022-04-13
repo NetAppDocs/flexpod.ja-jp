@@ -6,6 +6,7 @@ summary: FlexPod アーキテクチャは、 FIPS 140-2 に準拠した Cisco UC
 ---
 = FlexPod Cisco UCS のコンピューティングと FIPS 140-2
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

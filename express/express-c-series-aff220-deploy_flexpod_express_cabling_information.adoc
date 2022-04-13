@@ -6,6 +6,7 @@ summary: このセクションでは、 Cisco Nexus スイッチ 3172P A およ�
 ---
 = FlexPod エクスプレスケーブル接続情報
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

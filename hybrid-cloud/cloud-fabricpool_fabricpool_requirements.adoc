@@ -6,6 +6,7 @@ summary: FabricPool を使用するには、 ONTAP 9.2 以降と、このセク�
 ---
 = FabricPool の要件
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

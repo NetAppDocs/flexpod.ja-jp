@@ -6,6 +6,7 @@ summary: 本ドキュメントでは、 MEDITECH ソフトウェア向け FlexPo
 ---
 = Cisco UCS ブレードサーバとスイッチの構成
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

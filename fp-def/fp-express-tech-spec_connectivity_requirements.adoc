@@ -6,6 +6,7 @@ summary: ここでは、 FlexPod Express の各バージョンの接続要件に
 ---
 = 接続要件
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

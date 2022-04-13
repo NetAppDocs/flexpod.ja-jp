@@ -6,6 +6,7 @@ summary: Cisco MDS 9100 シリーズ FC スイッチは、 NetApp AFF A700 コ�
 ---
 = Cisco MDS 9148S の構成
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

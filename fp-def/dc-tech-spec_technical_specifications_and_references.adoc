@@ -6,6 +6,7 @@ summary: 技術仕様は、シャーシ、 FEX 、サーバ、スイッチなど
 ---
 = 技術仕様および参考資料
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -332,7 +333,7 @@ SFP モジュールの詳細については、次のリソースを参照して�
 * Cisco QSFP モジュールの詳細については、を参照してください https://www.cisco.com/c/en/us/products/collateral/interfaces-modules/transceiver-modules/data_sheet_c78-660083.html["Cisco 40GBASE QSFP モジュールデータシート"^]。
 * Cisco 100Gb SFP の詳細については、を参照してください https://www.cisco.com/c/en/us/products/interfaces-modules/100-gigabit-modules/index.html["Cisco 100 ギガビットモジュール"^]。
 * Cisco FC SFP モジュールの詳細については、を参照してください https://www.cisco.com/c/en/us/products/collateral/storage-networking/mds-9000-series-multilayer-switches/product_data_sheet09186a00801bc698.html?dtid=osscdc000283["Cisco MDS 9000 ファミリ Pluggable Transceiver データシート"^]。
-* サポートされているすべての Cisco SFP およびトランシーバモジュールについては、を参照してください http://www.cisco.com/en/US/docs/interfaces_modules/transceiver_modules/installation/note/78_15160.html["『 Cisco SFP and SFP+ Transceiver Module Installation Notes 』"^] および。
+* サポートされているすべての Cisco SFP およびトランシーバモジュールについては、を参照してください http://www.cisco.com/en/US/docs/interfaces_modules/transceiver_modules/installation/note/78_15160.html["『 Cisco SFP and SFP+ Transceiver Module Installation Notes 』"^] および http://www.cisco.com/en/US/products/hw/modules/ps5455/prod_module_series_home.html["Cisco トランシーバモジュール"^]。
 
 
 
@@ -382,7 +383,7 @@ FAS データセンターでは、使用可能な FlexPod ストレージコン�
 
 === AFF A シリーズ
 
-最新モデルの NetApp AFF A シリーズストレージコントローラは、いずれも FlexPod で使用できます。追加情報はにあります https://www.netapp.com/us/media/ds-3582.pdf["AFF 技術仕様"^] データシートおよびのデータシート。特定の AFF モデルの詳細については、次の表に示すプラットフォーム固有のドキュメントを参照してください。
+最新モデルの NetApp AFF A シリーズストレージコントローラは、いずれも FlexPod で使用できます。追加情報はにあります https://www.netapp.com/us/media/ds-3582.pdf["AFF 技術仕様"^] データシートおよびのデータシート https://hwu.netapp.com/["NetApp Hardware Universe の略"^]。特定の AFF モデルの詳細については、次の表に示すプラットフォーム固有のドキュメントを参照してください。
 
 |===
 | コンポーネント | AFF A シリーズコントローラプラットフォームのドキュメント 
@@ -430,7 +431,7 @@ FAS データセンターでは、使用可能な FlexPod ストレージコン�
 
 === NetApp ディスクシェルフ
 
-ネットアップのディスクシェルフの技術仕様には、フォームファクタサイズ、エンクロージャあたりのドライブ数、シェルフ I/O モジュールなどが含まれます。このドキュメントは、次の表に記載されています。詳細については、を参照してください http://www.netapp.com/us/products/storage-systems/disk-shelves-and-storage-media/disk-shelves-tech-specs.aspx["ネットアップのディスクシェルフとストレージメディア技術仕様"^] および。
+ネットアップのディスクシェルフの技術仕様には、フォームファクタサイズ、エンクロージャあたりのドライブ数、シェルフ I/O モジュールなどが含まれます。このドキュメントは、次の表に記載されています。詳細については、を参照してください http://www.netapp.com/us/products/storage-systems/disk-shelves-and-storage-media/disk-shelves-tech-specs.aspx["ネットアップのディスクシェルフとストレージメディア技術仕様"^] および https://hwu.netapp.com/["NetApp Hardware Universe の略"^]。
 
 |===
 | コンポーネント | NetApp FAS / AFF ディスクシェルフのドキュメント 

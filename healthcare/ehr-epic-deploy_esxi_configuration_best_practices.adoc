@@ -6,6 +6,7 @@ summary: このドキュメントでは、 ESXi 構成のベストプラクテ�
 ---
 = ESXi 構成のベストプラクティス
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

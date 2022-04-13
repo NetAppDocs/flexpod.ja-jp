@@ -6,6 +6,7 @@ summary: シスコは、 FlexPod Express の設計およびアーキテクチャ
 ---
 = シスコのコンポーネント
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

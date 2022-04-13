@@ -6,6 +6,7 @@ summary: FlexPod をセットアップし、解決策 Datacenter Cloud Insights 
 ---
 = ユースケース
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

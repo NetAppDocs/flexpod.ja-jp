@@ -6,6 +6,7 @@ summary: ターゲットへの請求が完了すると、 Advantage Tier ライ�
 ---
 = Cisco Intersight からネットアップストレージを監視
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

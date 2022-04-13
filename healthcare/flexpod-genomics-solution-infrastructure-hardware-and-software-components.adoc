@@ -6,6 +6,7 @@ summary: このセクションでは、この解決策で使用する解決策�
 ---
 = 解決策インフラのハードウェアコンポーネントとソフトウェアコンポーネント
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -22,7 +23,7 @@ image:flexpod-genomics-image6.png["エラー：グラフィックイメージが
 
 image:flexpod-genomics-image7.png["エラー：グラフィックイメージがありません"]
 
-次の表に、 FlexPod で有効にする GATK テスト中に使用されるハードウェアコンポーネントを示します。はこちらです https://mysupport.netapp.com/matrix/["NetApp Interoperability Matrix Tool で確認できます"^] （ IMT ）および。
+次の表に、 FlexPod で有効にする GATK テスト中に使用されるハードウェアコンポーネントを示します。はこちらです https://mysupport.netapp.com/matrix/["NetApp Interoperability Matrix Tool で確認できます"^] （ IMT ）および https://ucshcltool.cloudapps.cisco.com/public/["シスコハードウェア互換性リスト（ HCL ）"^]。
 
 |===
 | レイヤー（ Layer ） | 製品ファミリー | 数量とモデル | 詳細 

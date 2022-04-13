@@ -6,6 +6,7 @@ summary: 環境内の MEDITECH ホストの数によって、 NetApp FAS また�
 ---
 = LUN の設定
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

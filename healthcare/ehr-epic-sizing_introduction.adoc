@@ -5,6 +5,7 @@ keywords: flexpod, epic, directional, sizing, solution, benefits, scope
 summary: このテクニカルレポートでは、 Epic EHR （電子カルテ）アプリケーションソフトウェア環境向けに FlexPod （ネットアップストレージと Cisco Unified Computing System ）のサイジングに関するガイダンスを提供します。 
 ---
 = FlexPod for Epic Directional サイジングガイド
+:allow-uri-read: 
 
 
 Brian O'Meony 、 Ganesh Kamath 、 Atul Bhalodia 、 NetApp Mike Brennan 、 Jon Ebmeier 、 シスコ

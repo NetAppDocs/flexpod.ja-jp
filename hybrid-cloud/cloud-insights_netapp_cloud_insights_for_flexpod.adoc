@@ -6,6 +6,7 @@ summary: このテクニカルレポートで詳述されている解決策は�
 ---
 = TR-4868 ：『 NetApp Cloud Insights for FlexPod 』
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

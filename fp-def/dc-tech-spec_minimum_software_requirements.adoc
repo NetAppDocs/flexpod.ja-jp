@@ -6,6 +6,7 @@ summary: 次の情報は、 FlexPod 構成のソフトウェアの最小要件�
 ---
 = ソフトウェアの最小要件
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

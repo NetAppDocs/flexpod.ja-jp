@@ -6,6 +6,7 @@ summary: このドキュメントでは、完全な冗長性と高可用性を�
 ---
 = 導入手順
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

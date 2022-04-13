@@ -6,6 +6,7 @@ summary: このセクションでは、 GATK からの jar ファイル出力に
 ---
 = jar ファイルを使用して GATK を実行するための出力
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

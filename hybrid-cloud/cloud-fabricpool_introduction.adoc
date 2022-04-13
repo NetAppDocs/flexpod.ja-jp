@@ -6,6 +6,7 @@ summary: このテクニカルレポートでは、ネットアップと Cisco �
 ---
 = TR-4801 ：『 FlexPod with FabricPool - Inactive Data Tiering to Amazon AWS S3 』
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

@@ -6,6 +6,7 @@ summary:
 ---
 = ボリューム階層化ポリシーを設定します
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

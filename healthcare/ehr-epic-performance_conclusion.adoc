@@ -6,6 +6,7 @@ summary: 2020 年までに、 Epic の利用者はすべてフラッシュスト
 ---
 = まとめ
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

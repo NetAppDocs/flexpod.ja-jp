@@ -6,6 +6,7 @@ summary: このセクションでは、攻撃が発生した場合にエンド�
 ---
 = FlexPod でデータを保護し、リカバリできます
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

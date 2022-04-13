@@ -6,6 +6,7 @@ summary: ネットアップの All Flash FAS プラットフォームのスト�
 ---
 = エグゼクティブサマリー
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

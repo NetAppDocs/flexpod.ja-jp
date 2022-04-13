@@ -6,6 +6,7 @@ summary: このセクションでは、以前に使用した FlexPod Express の
 ---
 = 以前のアーキテクチャと機器
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

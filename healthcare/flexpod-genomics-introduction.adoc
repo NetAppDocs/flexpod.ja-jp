@@ -6,6 +6,7 @@ summary: FlexPod コンバージドインフラプラットフォームを使用
 ---
 = TR-4911 ：『 FlexPod Genomics 』
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

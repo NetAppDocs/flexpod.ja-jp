@@ -6,6 +6,7 @@ summary: バケットは、データを保持するオブジェクトストレ�
 ---
 = AWS S3 バケットを作成する
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

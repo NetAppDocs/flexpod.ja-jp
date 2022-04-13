@@ -6,6 +6,7 @@ summary: FlexPod データセンター構成には、スイッチ、ファブリ
 ---
 = ハードウェアの最小要件
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

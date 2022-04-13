@@ -6,6 +6,7 @@ summary: この FlexPod Express 解決策は、 FlexPod コンバージドイン
 ---
 = 解決策の概要
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -72,4 +73,4 @@ FlexPod Express は、仮想ワークロードと混在ワークロードに最�
 * vSphere Update Manager （ VUM ）と vSphere Client の機能強化が追加されました。アタッチ、チェックコンプライアンス、修正の各アクションを 1 つの画面で実行できるようになりました。
 
 
-この問題の詳細については、を参照してください https://blogs.vmware.com/vsphere/2019/04/vcenter-server-6-7-update-2-whats-new.html["vSphere 6.7U2 ページ"^] および。
+この問題の詳細については、を参照してください https://blogs.vmware.com/vsphere/2019/04/vcenter-server-6-7-update-2-whats-new.html["vSphere 6.7U2 ページ"^] および https://docs.vmware.com/en/VMware-vSphere/6.7/rn/vsphere-vcenter-server-67u2-release-notes.html["vCenter Server 6.7U2 リリースノート"^]。

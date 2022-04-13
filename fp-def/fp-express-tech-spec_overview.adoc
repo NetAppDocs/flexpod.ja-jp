@@ -6,6 +6,7 @@ summary: FlexPod Express は、 Cisco Unified Computing System （ Cisco UCS ）
 ---
 = TR-4293 ：『 FlexPod Express Technical Specifications 』
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

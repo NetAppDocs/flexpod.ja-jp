@@ -6,6 +6,7 @@ summary: このドキュメントでは、完全な冗長性と高可用性を�
 ---
 = 導入手順
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -458,7 +459,7 @@ NOTE: この解決策検証では、最大伝送ユニット（ MTU ） 9 、 00
 
 ==== 設定ワークシート
 
-セットアップスクリプトを実行する前に、製品マニュアルから構成ワークシートに情報を記入してください。設定ワークシートは、で使用できます http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-ssg/home.html["ONTAP 9.5 ソフトウェアセットアップガイド"^] （で使用できます）。次の表は、 ONTAP 9.5 のインストールと設定の情報を示しています。
+セットアップスクリプトを実行する前に、製品マニュアルから構成ワークシートに情報を記入してください。設定ワークシートは、で使用できます http://docs.netapp.com/ontap-9/topic/com.netapp.doc.dot-cm-ssg/home.html["ONTAP 9.5 ソフトウェアセットアップガイド"^] （で使用できます http://docs.netapp.com/ontap-9/index.jsp["ONTAP 9 ドキュメンテーション・センター"^]）。次の表は、 ONTAP 9.5 のインストールと設定の情報を示しています。
 
 
 NOTE: このシステムは、 2 ノードスイッチレスクラスタ構成でセットアップされます。

@@ -6,6 +6,7 @@ summary: 本ドキュメントは、 FIPS 140-2 のセキュリティコンプ�
 ---
 = TR-4892 ：『 FIPS 140-2 security Compliant FlexPod 解決策 for HealthCare 』
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 

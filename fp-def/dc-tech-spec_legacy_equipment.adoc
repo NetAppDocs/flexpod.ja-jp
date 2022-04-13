@@ -6,6 +6,7 @@ summary: FlexPod は、 Cisco とネットアップが現在販売している�
 ---
 = レガシー機器
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
@@ -16,7 +17,7 @@ FlexPod は、 Cisco とネットアップが現在販売している既存の�
 
 これらの機器モデルは提供されなくなりましたが、販売終了（ EOA ）の前にこれらのモデルのいずれかを購入した場合は、 FlexPod 構成でその機器を使用できます。FlexPod でサポートされていて、販売されなくなった従来の機器モデルの完全なリストは、で参照できます https://mysupport.netapp.com/info/eoa/index.html["ネットアップサービスおよびサポート製品プログラム可用性インデックス"^]。
 
-シスコのレガシー機器の詳細については、のシスコ EOL および EOA に関する通知を参照してください http://www.cisco.com/c/en/us/products/servers-unified-computing/ucs-c-series-rack-servers/eos-eol-notice-listing.html["Cisco UCS C シリーズラックサーバ"^]、および。
+シスコのレガシー機器の詳細については、のシスコ EOL および EOA に関する通知を参照してください http://www.cisco.com/c/en/us/products/servers-unified-computing/ucs-c-series-rack-servers/eos-eol-notice-listing.html["Cisco UCS C シリーズラックサーバ"^]、 http://www.cisco.com/c/en/us/products/servers-unified-computing/ucs-b-series-blade-servers/eos-eol-notice-listing.html["Cisco UCS B シリーズブレードサーバ"^]および https://www.cisco.com/c/en/us/products/eos-eol-listing.html["Nexus スイッチ"^]。
 
 従来の FC ファブリックのサポートには、次のものが含まれます。
 

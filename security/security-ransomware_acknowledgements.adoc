@@ -6,6 +6,7 @@ summary: 本ガイドの作成にご協力いただいたことに、以下の�
 ---
 = 謝辞
 :hardbreaks:
+:allow-uri-read: 
 :nofooter: 
 :icons: font
 :linkattrs: 
