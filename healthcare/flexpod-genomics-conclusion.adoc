@@ -35,10 +35,6 @@ https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_vmware_v
 +
 http://docs.netapp.com["http://docs.netapp.com"^]
 
-* EPIC 名誉の転がる
-+
-https://www.netapp.com/blog/achieving-epic-honor-roll/["https://www.netapp.com/blog/achieving-epic-honor-roll/"^]
-
 * 即応性と効率性— FlexPod がデータセンターの最新化をどのように推進するか
 +
 https://www.flexpod.com/idc-white-paper/["https://www.flexpod.com/idc-white-paper/"^]
