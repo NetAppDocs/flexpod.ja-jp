@@ -992,7 +992,6 @@
   <block id="84daec59b75a10e0cd013d1db7a434f5" category="paragraph">基盤となるストレージにネットアップの FAS コントローラを使用する FlexPod Express ソリューションのハードウェア要件として、このセクションで説明する構成があります。</block>
   <block id="d889bada95a4507597263f4085f7eb35" category="section-title">CIMC ベースの設定（スタンドアロンラックサーバ）</block>
   <block id="dbf88aea6907acd1a2ddf8af6778500b" category="paragraph">Cisco Integrated Management Controller （ CIMC ）の設定には、次のハードウェアコンポーネントが含まれています。</block>
-  <block id="7522eca6f14a81cd40ef3209e540e583" category="list-text">冗長構成の 10Gbps 標準イーサネットスイッチ × 2 （ Cisco Nexus 0808 を推奨、 Cisco Nexus 3000 モデルと 9000 モデルをサポート）</block>
   <block id="98b00d8d43ad07f702f22f5c8b541ca2" category="list-text">Cisco UCS C シリーズスタンドアロンラックサーバ</block>
   <block id="1bd4b426108264f2676dc78d9d2018da" category="section-title">Cisco UCS で管理される構成</block>
   <block id="b2d15a256201c5ef01bc4171f55f63a5" category="paragraph">Cisco UCS が管理する確認には、次のハードウェアコンポーネントが含まれます。</block>
@@ -1946,66 +1945,7 @@
   <block id="35e6d0a83f214bfb7e13505c0dea39d0" category="cell">Cisco UCS ファブリックインターコネクト</block>
   <block id="69145b1a02ee505baf6d6d8506924db1" category="cell">2 x 6332</block>
   <block id="ed38874183f73e374cbbb3c0f4153523" category="doc">導入と設定</block>
-  <block id="88b26a2a43a7b948265880caf8a37ba6" category="summary">データベースの全体的なサイズと合計 IOPS によって、適切なストレージアーキテクチャを決定できます。パフォーマンスだけを重視するわけではなく、お客様の追加の要件に基づいて、より大きなノード数を使用する場合もあります。</block>
-  <block id="009bad2e653df41b97c05b47965de568" category="doc">Epic に対応したネットアップストレージリファレンスアーキテクチャ</block>
-  <block id="e9bf68ed54b6d1ff63e8bda8c0b6a70f" category="inline-link">TR-3930i ：『 NetApp Sizing Guidelines for Epic 』</block>
-  <block id="5f27692148d0258d491eb56c542205ac" category="paragraph">Epic ソフトウェア環境のストレージ要件を考慮すると、ネットアップは環境の規模に応じて 3 種類のリファレンスアーキテクチャを用意しています。Epic では、ネットアップのサイジング手法を使用して、 Epic 環境で使用するネットアップストレージシステムのサイズを適切に設定する必要があります。パフォーマンス要件とサイジングに関する定量的なガイダンスについては、ネットアップを参照してください<block ref="157aaed491ff6c4c1674a6d17016af89" category="inline-link-rx"></block>。このドキュメントを参照するには、 NetApp Field Portal へのアクセスが必要です。</block>
-  <block id="527c2557c52787373565e0e4d3678848" category="paragraph">ここに示すアーキテクチャは、設計の出発点です。ディスク数とコントローラ利用率について、 SPM ツールでワークロードを検証する必要があります。ネットアップの Epic チームと協力して、すべての設計を検証します。</block>
-  <block id="b24258fcfd062abea7a02faa7859904c" category="paragraph">オールフラッシュアレイに導入された Epic 本番環境本レポートでは、回転式ディスクに必要なディスクプールを、オールフラッシュアレイの 3 つのディスクプールに統合しました。このセクションを読む前に、 Epic ストレージレイアウトの要件について Epic オールフラッシュリファレンスアーキテクチャ戦略ハンドブックを確認してください。</block>
-  <block id="8a7b8d0297d6c72a693058bbfe44c66d" category="paragraph">3 つのストレージリファレンスアーキテクチャは次のとおりです。</block>
-  <block id="9a4f5d68a07824ef3c0a32afba723ba2" category="list-text">* 小規模 * 本番環境に 2 ノード、 DR 環境に 2 ノード構成の 4 ノードアーキテクチャ（グローバルリファレンスが 5 万未満）</block>
-  <block id="a7c052069fa7ee03b2468ce7aa1f8496" category="list-text">* 中規模 * 6 ノードアーキテクチャで、本番環境に 4 ノード、 DR 環境に 2 ノード（ 5M を超えるグローバルリファレンス）</block>
-  <block id="ca6a3231a40c1dc960d22c19c2679708" category="list-text">* 大規模 * 本番環境に 6 ~ 10 ノードの 12 以上のノードアーキテクチャ（ 5M-10M グローバルリファレンス）</block>
-  <block id="9b8a43403f1d29b1500d844ee0b87085" category="admonition">グローバルリファレンス = （読み取り IOPS + （書き込み処理数 / 80 秒書き込みバースト / 45 ）） * 225これらの数値は、お客様向けの Epic Hardware Configuration Guide に記載されています。</block>
-  <block id="861784db9f0bc1ae9a67c8e774cf8471" category="section-title">ストレージレイアウトと LUN 構成</block>
-  <block id="5c198594c9373d622b08ecc7f531156c" category="paragraph">Epic の高可用性（ HA_/ 冗長性の要件）を満たすための最初のステップは、 Epic ソフトウェア環境に特化したストレージレイアウトの設計です。設計上の考慮事項には、ディスクプール 1 をディスクプール 2 から専用のハイパフォーマンスストレージに分離することが含まれている必要があります。各ディスクプールのワークロードについては、『 Epic All-Flash Reference Architecture Strategy 』を参照してください。</block>
-  <block id="a0eb292f12089a8264d1e2b072cb388e" category="paragraph">各ディスクプールを別々のノードに配置すると、 Epic の本番ワークロードと非本番ワークロードの分離に必要なフォールトドメインが作成されます。ノードごとに 1 つのアグリゲートを使用すると、ディスク利用率とアグリゲートアフィニティが最大化され、パフォーマンスが向上しますまた、アグリゲートレベルの重複排除により、ストレージ効率も最大化されます。</block>
-  <block id="c69ff345a5131d8cdf4b6aba970b7c08" category="paragraph">Epic を使用すると非本番環境のニーズに合わせてストレージリソースを共有できるため、 Clarity サーバと本番環境サービスに必要な仮想デスクトップインフラ（ VDI ）、 CIFS 、その他のエンタープライズ機能の両方に対応できるストレージシステムが多くなります。</block>
-  <block id="e480f53fc0142602e12654945d6b1fc1" category="paragraph">Epic Database Storage Layout Recommendations ドキュメントには、各データベースの LUN のサイズと数に関する推奨事項が記載されています。これらの推奨事項は、環境に応じて調整する必要があります。Epic のサポートでこれらの推奨事項を確認し、 LUN と LUN のサイズの決定を行うことが重要です。</block>
-  <block id="e2478286e5820c4389cb6f28ce90071f" category="paragraph">LUN 自体のサイズはストレージコストを含まないため、サイズの大きい LUN から開始することを推奨します。運用を容易にするため、 LUN の数と初期サイズは、 3 年後に想定される要件を大きく超えても大きくなることを確認してください。LUN の拡張は、拡張時に LUN を追加する場合よりも管理しやすくなります。シンプロビジョニングされた LUN とボリュームでは、ストレージの使用済みスペースがアグリゲートに表示されます。</block>
-  <block id="177c8dfcc8963ec3f56bc82bc30c8b27" category="paragraph">EPIC を使用するには、データベース、ジャーナル、アプリケーション、またはシステムのストレージを、 FC 経由でデータベースサーバに LUN として提供する必要があります。</block>
-  <block id="3cbd41842348185388541f1f4feba820" category="paragraph">Epic の本番用と Clarity には、ボリュームごとに 1 つの LUN を使用します。大規模な導入では、 Epic データベースに 24 ~ 32 個の LUN を推奨しています。使用する LUN の数を決定する要因は次のとおりです。</block>
-  <block id="09c2f69192afdcc0e1428319eb315b78" category="list-text">3 年後の Epic DB の全体的なサイズ。DB のサイズが大きい場合は、そのオペレーティングシステム（ OS ）用の LUN の最大サイズを確認し、拡張可能な LUN が十分にあることを確認してください。たとえば、 60TB の Epic データベースを必要とし、 OS LUN の最大容量が 4TB の場合、拡張性とヘッドルームを確保するには、 24~32 個の LUN が必要です。</block>
-  <block id="c0c39b5359e74406420e9a303c20185e" category="paragraph">小規模、中規模、大規模のいずれのアーキテクチャであるかに関係なく、次の点に注意してください。</block>
-  <block id="43610b4fcc97d37e58847aa4dc812d4c" category="list-text">ONTAP では、システムを停止することなく簡単にスケールアップおよびスケールアウトできます。ONTAP のノンストップオペレーションを使用して、ディスクとノードをアップグレード、追加、または削除できます。システムを停止することなく、 4 ノード構成から始めて 6 ノード構成に移行したり、大容量のコントローラにアップグレードしたりできます。</block>
-  <block id="51b3712736430a157a99898a9c28c377" category="list-text">ネットアップの OnCommand Workflow Automation ワークフローでは、 Epic のフルコピーテスト環境のバックアップと更新が可能です。この解決策は、アーキテクチャを簡易化し、ストレージ容量を削減すると同時に効率化も実現します。</block>
-  <block id="d0d14d36d98064d61804ee627f554d33" category="list-text">DR シャドウデータベースサーバは、お客様のビジネス継続性戦略の一部です（ SRO 機能をサポートするために使用され、 SRW インスタンスとして設定される可能性があります）。したがって、 3 つ目のストレージシステムの配置とサイジングは、通常、本番用データベースストレージシステムの場合と同じです。</block>
   <block id="cf88100598cbddbdaefcdf61df162f6c" category="inline-link">TR-3446 ：『非同期 SnapMirror ベストプラクティスガイド』</block>
-  <block id="faef4a16d4760c1fc2ee14b99d1b056e" category="list-text">データベースの整合性を確保するにはいくつか考慮するビジネス継続性に関する NetApp SnapMirror バックアップコピーを使用している場合は、 Epic ドキュメント『 Business Continuity Technical Solutions Guide 』を参照してください。SnapMirror テクノロジの使用方法については、を参照してください<block ref="45531869b54af9b60b0c919daf20d24b" category="inline-link-rx"></block>。</block>
-  <block id="a022912cbecb4b63af8df01258df7d65" category="list-text">Epic の主要な設計目標は、本番環境と潜在的な Bully ワークロードを分離することです。ストレージプールは、ワークロードのパフォーマンスを分離して保護する必要がある障害ドメインです。ONTAP クラスタ内の各ノードはフォールトドメインであり、ストレージプールとみなすことができます。</block>
-  <block id="e803d3af670a41355bc08f478905136d" category="paragraph">ONTAP ファミリーのすべてのプラットフォームで、 Epic ワークロードに対応した多数の機能セットを実行できます。</block>
-  <block id="1cbc76ab0d406cdf4fb7d8b3d30e328c" category="section-title">小規模構成： 5 万未満のグローバルリファレンス（最大 2 万 2 、 000 IOPS ）に対応する 4 ノードリファレンスアーキテクチャ</block>
-  <block id="456c9ca28d5568552e4e0f93fa9064e7" category="paragraph">小規模リファレンスアーキテクチャは 4 ノードアーキテクチャで、本番環境に 2 つのノード、 DR に 2 つのノードを配置し、 5M 以下のグローバルリファレンスで構成されています。このアーキテクチャは、グローバルリファレンスが 5 万未満のお客様に使用できます。このサイズでは、レポートと Clarity を分離する必要はありません。</block>
-  <block id="1f150a5dcebec8b8773008b918ae21eb" category="paragraph">ネットアップ独自のマルチプロトコルサポート、 QoS 、障害ドメインを同じクラスタ内に作成できるため、ディスクプール 1 とディスクプール 2 のすべての本番ワークロードを単一の HA ペア上で実行し、ネットアップのベストプラクティスと Epic High Comfort の評価要件をすべて満たすことができます。ディスクプール 1 はすべてノード 1 で実行され、ディスクプール 2 はすべてプール 2 で実行されます。</block>
-  <block id="7da3ffd1aebd60c68ed79af970717547" category="paragraph">ONTAP を使用して同じクラスタ内のワークロードを分離し、 ONTAP マルチプロトコルをサポートすることで、本番環境の Epic ワークロード（ Production 、 Report 、 Clarity 、 VMware 、 Citrix 、 CIFS や Epic 関連のワークロードなど）は、単一クラスタの単一の HA ペアで実行できます。この機能により、 Epic のすべての要件（ Epic All Flash Reference Architecture Strategy Handbook に記載）やネットアップのすべてのベストプラクティスに対応できるようになります。基本的に、次の図に示すように、 pool1 はノード pro-01 で、 pool2 は prod -02 で実行されます。NAS 1 のワークロードは、ネットアップのマルチプロトコル NAS および SAN 機能を備えたノード 2 に配置できます。</block>
-  <block id="9b6a020522ecedb0775be751deb6a692" category="paragraph">ディザスタリカバリのために、 Epic DR pool 3 が HA ペアの 2 つのノードに分割されています。EPIC DR はノード DR-01 で実行され、 DR サービスは DR-02 で実行されます。</block>
-  <block id="3328398a32fe23e5769436c49c087b88" category="paragraph">ワークロードに対して、 NetApp SnapMirror または SnapVault レプリケーションを必要に応じて設定できます。</block>
-  <block id="d51ef2924c21f8f75c17e5970b6f3fbf" category="paragraph"><block ref="d51ef2924c21f8f75c17e5970b6f3fbf" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="38462cca14e4e52d0928dc502e1e0bbf" category="paragraph">ストレージの設計とレイアウトの観点から見た場合、次の図は、本番環境のデータベースのストレージレイアウトの概要と、 Epic ワークロードを構成するその他の構成要素を示しています。</block>
-  <block id="10c05569e16259a2148f0c0cbf12fdba" category="paragraph"><block ref="10c05569e16259a2148f0c0cbf12fdba" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="bd45ebb964ec1275bc8162f53198677b" category="section-title">中規模構成： 5 万件を超えるグローバルリファレンスに対応した 6 ノードリファレンスアーキテクチャ（合計 2 、 000 万 ~5 、 000 IOPS ）</block>
-  <block id="8dd6f6556bd7f8e6daaa73ca165d8528" category="paragraph">中規模リファレンスアーキテクチャは本番環境に 4 ノード、 DR 環境に 2 ノードの構成で、 5M-10M のグローバルリファレンスを持つ 6 ノードアーキテクチャです。</block>
-  <block id="c8d11b8d13e6e283a239f04b24c43444" category="paragraph">このサイズの『オールフラッシュリファレンスアーキテクチャ戦略ハンドブック』では、 Epic Report のワークロードを Clarity から分離する必要があり、本番環境に少なくとも 4 つのノードが必要であると記載しています。</block>
-  <block id="5e2e24e8a131704a27d83ab514092294" category="paragraph">6 ノードアーキテクチャは、 Epic 環境で最も一般的に導入されているアーキテクチャです。500 万を超えるグローバルリファレンスを持つお客様は、 Report と Clarity を別々のフォールトドメインに配置する必要があります。Epic オールフラッシュリファレンスアーキテクチャ戦略ハンドブックを参照</block>
-  <block id="5aecd07742be24ffcd88be07bb736d17" category="paragraph">グローバルリファレンスが 5 、 000 、 000 個未満のお客様は、次の主なメリットを得るために、 4 つのノードではなく 6 つのノードを使用することを選択できます。</block>
-  <block id="82f9c17375067945fa2552aab1319012" category="list-text">バックアップアーカイブプロセスを本番環境からオフロード</block>
-  <block id="e7909c7203d257a37f38bcd8c221d607" category="list-text">すべてのテスト環境を本番環境からオフロード</block>
-  <block id="ce63d6206c3dbf67237dd4eff6526dbf" category="paragraph">本番環境はノード pro-01 で実行レポートは本番環境の最新の Epic ミラーコピーである node-02 で実行されます。サポート、リリース、リリース検証などのテスト環境は、 Epic 本番、 Report 、 DR のいずれかからクローニングできます。次の図は、本番環境からフルコピーテスト環境用に作成されたクローンを示しています。</block>
-  <block id="aadca7c22ba4f017d822c4754d9e9dd2" category="paragraph">2 つ目の HA ペアは、本番用サービスのストレージ要件に使用されます。これらのワークロードには、 Clarity データベースサーバ（ SQL または Oracle ）、 VMware 、ハイパースペース、 CIFS 用のストレージが含まれます。このアーキテクチャでは、 Epic 対応ではないワークロードをノード 3 とノード 4 に追加したり、可能であれば同じクラスタ内の別の HA ペアに追加したりすることができます。</block>
-  <block id="0b59683c616a7c0320b48d82859678b0" category="paragraph">SnapMirror テクノロジは、本番環境のデータベースを 2 つ目の HA ペアにストレージレベルでレプリケートするために使用されます。SnapMirror バックアップコピーを使用して、サポート、リリース、リリース検証などの非本番環境用の NetApp FlexClone ボリュームを 2 つ目のストレージシステムに作成できます。本番データベースのストレージ・レベルのレプリカは ' お客様の DR 戦略の導入にも対応できます</block>
-  <block id="5ca40e36a24e196ac976502bd22806a8" category="paragraph">ストレージ効率を高めるために、 Report NetApp Snapshot コピーバックアップからフルテストクローンを作成し、ノード 2 で直接実行することもできます。この設計では、 SnapMirror デスティネーションのコピーをディスクに保存する必要はありません。</block>
-  <block id="34fb91ef2f877ee511566fd4e1d9c9c7" category="paragraph"><block ref="34fb91ef2f877ee511566fd4e1d9c9c7" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="2456d5be525e509f5b6397d8c64bfc0e" category="paragraph">次の図は、 6 ノードアーキテクチャのストレージレイアウトを示しています。</block>
-  <block id="6562c5ad2648e13c32602c816f8c9afd" category="paragraph"><block ref="6562c5ad2648e13c32602c816f8c9afd" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="8321a11d5131a1e0702890d7db967b91" category="section-title">大規模な設定： 1 、 000 万を超えるグローバルリファレンス（ 5 万以上の IOPS ）に対応するリファレンスアーキテクチャ</block>
-  <block id="d9fab33573544508f60838aa6f187b2d" category="paragraph">大規模なアーキテクチャは通常 12 ノード以上のノードアーキテクチャで、本番用ノードは 6 ~ 10 ノードで構成されており、これには 10 万を超えるグローバルリファレンスが含まれています。大規模な Epic 環境では、次の図に示すように、 Epic Production 、 Epic Report 、 Clarity を専用の HA ペアに配置し、ノード間でストレージを均等に分散させることができます。</block>
-  <block id="6ae5b3c4ee1c888755d915261dca5268" category="paragraph">大規模なお客様には 2 つのオプションがあります</block>
-  <block id="55f96fd56f4dc3aeee28715b566a3e7e" category="list-text">6 ノードアーキテクチャを維持し、 AFF A700 コントローラを使用する。</block>
-  <block id="f3afb9762df884568de465907e080eb5" category="list-text">AFF A300 の専用 HA ペアで、 Epic 本番、 Report 、 DR を実行</block>
-  <block id="0e2f8f9fc07ffc70c330385e18bc77df" category="paragraph">コントローラ利用率を比較するには、 SPM を使用する必要があります。また、コントローラを選択する際にはラックスペースと電源も考慮してください。</block>
-  <block id="b62c68bf1025badfc43a1eb0a8011634" category="paragraph"><block ref="b62c68bf1025badfc43a1eb0a8011634" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="ada371b21b163b59338dae41ede1a954" category="paragraph">次の図に、大規模なリファレンスアーキテクチャのストレージレイアウトを示します。</block>
-  <block id="5de5468479b8c22922d9ea75197c9ea0" category="paragraph"><block ref="5de5468479b8c22922d9ea75197c9ea0" category="inline-image-macro-rx" type="image"></block></block>
   <block id="1967302950c727fc26511a7a801bcb41" category="summary">このセクションでは、 MEDITECH 環境に当てはまるコンピューティングワークロードとストレージワークロードの種類について説明します。</block>
   <block id="841762089e5f9303f335b8a5550f3dfa" category="doc">MEDITECH ワークロードの概要</block>
   <block id="789ae08bd96234d6c462e26b2c7a6251" category="section-title">MEDITECH とバックアップのワークロード</block>
@@ -2191,109 +2131,42 @@
   <block id="9b4b208365ad07b36658adef98d477e8" category="section-title">ネットアップのサポートツールおよびサービス</block>
   <block id="7a1fabc75e2bb969a80ba5f7123be4e5" category="paragraph">ネットアップでは、包括的なサポートツールとサービスを提供しています。NetApp AutoSupport ツールを有効にして、ハードウェア障害やシステム構成ミスが発生した場合にホームコールできるように NetApp AFF / FAS システムで設定する必要があります。ホームアラートをネットアップサポートチームに連絡することで、問題を迅速に解決できます。NetApp Active IQ は、ネットアップシステムの AutoSupport 情報に基づいた Web ベースのアプリケーションです。予測に基づいてプロアクティブに分析情報を提供することで、可用性、効率性、パフォーマンスの向上を支援します。</block>
   <block id="51f4112cb2d63d46680fde0358a5c441" category="section-title">FlexPod デザインゾーン</block>
-  <block id="27fe566bf0d9fe09b8d56d5f3d6b55d5" category="list-text">Cisco UCS で Epic を使用した Cisco のベストプラクティス</block>
-  <block id="8c28944e40532ac4e2107d1b34b4fad9" category="inline-link"><block ref="8c28944e40532ac4e2107d1b34b4fad9" category="inline-link-rx"></block></block>
-  <block id="2ead0a50f7fb5a9595d246c872851790" category="paragraph"><block ref="2ead0a50f7fb5a9595d246c872851790" category="inline-link-rx"></block></block>
   <block id="74cd4baf4935b804c7b41efa8252a5dc" category="section-title">ネットアップテクニカルレポート</block>
   <block id="2702d8e9b5a6f4444fe8c4713a33e624" category="list-text">TR-3929 ：『 Reallocate Best Practices Guide 』</block>
-  <block id="399964245f0ea2bb9ca79e2a5bc1e70d" category="inline-link"><block ref="399964245f0ea2bb9ca79e2a5bc1e70d" category="inline-link-rx"></block></block>
-  <block id="833c2eacb2f7829d8398a89f58b5b8f6" category="paragraph"><block ref="833c2eacb2f7829d8398a89f58b5b8f6" category="inline-link-rx"></block></block>
   <block id="c74501d85312f910195088df9c776a98" category="list-text">TR-3987 ：『 Snap Creator Framework Plug-in for Intersystems Cach é 』</block>
-  <block id="148d4c620d84a428e80187d692cde02b" category="inline-link"><block ref="148d4c620d84a428e80187d692cde02b" category="inline-link-rx"></block></block>
-  <block id="f5877944589a2b7aa98879884a30b262" category="paragraph"><block ref="f5877944589a2b7aa98879884a30b262" category="inline-link-rx"></block></block>
-  <block id="6cc83d0792a7ca247319af6f8bd3e7e2" category="list-text">TR-3928 ：『 NetApp Best Practices for Epic 』</block>
-  <block id="c744313fb652bfbbc1bfebf3af8d6a8d" category="inline-link"><block ref="c744313fb652bfbbc1bfebf3af8d6a8d" category="inline-link-rx"></block></block>
-  <block id="cbd8428d9964d4cb7fe9842019bd4009" category="paragraph"><block ref="cbd8428d9964d4cb7fe9842019bd4009" category="inline-link-rx"></block></block>
   <block id="85d4f8c7b3f03a6761d13807079142fe" category="list-text">TR-4017 ：『 FC SAN Best Practices 』</block>
-  <block id="1ba9e2e690ac480cf8fd2b0b8b870249" category="inline-link"><block ref="1ba9e2e690ac480cf8fd2b0b8b870249" category="inline-link-rx"></block></block>
-  <block id="d78e3a7998c0d635678e2195ddc8dfff" category="paragraph"><block ref="d78e3a7998c0d635678e2195ddc8dfff" category="inline-link-rx"></block></block>
-  <block id="09ea71362c0382a39f3ab61f215efe0c" category="inline-link"><block ref="09ea71362c0382a39f3ab61f215efe0c" category="inline-link-rx"></block></block>
-  <block id="267ec75c8eb84d51de95de5fd99d29a8" category="paragraph"><block ref="267ec75c8eb84d51de95de5fd99d29a8" category="inline-link-rx"></block></block>
   <block id="eb75aeb3b4b2b9734ba3e52f5483f0b2" category="section-title">ONTAP のドキュメント</block>
   <block id="c9617ae303d0bce89d13bebecca2ea1b" category="inline-link"><block ref="c9617ae303d0bce89d13bebecca2ea1b" category="inline-link-rx"></block></block>
   <block id="bf78332b32395471af72955679895502" category="paragraph"><block ref="bf78332b32395471af72955679895502" category="inline-link-rx"></block></block>
   <block id="faa9b209c7df426f5e60bb9bdc8dfb09" category="list-text">Virtual Storage Console （ VSC ） for vSphere のドキュメント</block>
-  <block id="f0364e4ad871d66511b5fc6d53cbcfb3" category="inline-link"><block ref="f0364e4ad871d66511b5fc6d53cbcfb3" category="inline-link-rx"></block></block>
-  <block id="0d72922248da0d3056aeee0f966d7670" category="paragraph"><block ref="0d72922248da0d3056aeee0f966d7670" category="inline-link-rx"></block></block>
   <block id="6cd10930a4fa296fb47f14826dacbe19" category="inline-link"><block ref="6cd10930a4fa296fb47f14826dacbe19" category="inline-link-rx"></block></block>
   <block id="02ac65abd5347fb1bd8118ec873ab81b" category="paragraph"><block ref="02ac65abd5347fb1bd8118ec873ab81b" category="inline-link-rx"></block></block>
   <block id="c11ae620bbb94d6dc060c801fab49d56" category="list-text">ESXi 向け FC エクスプレスガイド</block>
-  <block id="a2d4658fbf58b202d3414a78d658bf9b" category="inline-link"><block ref="a2d4658fbf58b202d3414a78d658bf9b" category="inline-link-rx"></block></block>
-  <block id="9cc987fc439c39063aee72da8bf1900f" category="paragraph"><block ref="9cc987fc439c39063aee72da8bf1900f" category="inline-link-rx"></block></block>
   <block id="92a316e39c62e388cd3025d820669829" category="list-text">ONTAP 9.3 のすべてのドキュメント</block>
-  <block id="0eab8ef9f3192950ba1235a6263168d0" category="inline-link"><block ref="0eab8ef9f3192950ba1235a6263168d0" category="inline-link-rx"></block></block>
-  <block id="fe909237dd19341fa40070c4946372bd" category="paragraph"><block ref="fe909237dd19341fa40070c4946372bd" category="inline-link-rx"></block></block>
   <block id="5b54d138cff1c5c86e5799b875279b81" category="list-text">『 Software Setup Guide 』を参照して</block>
-  <block id="0fe13acbdd9436bc5c77f8204518b195" category="inline-link"><block ref="0fe13acbdd9436bc5c77f8204518b195" category="inline-link-rx"></block></block>
-  <block id="0dd2777843bf7c27c1a81bcddc82ff10" category="paragraph"><block ref="0dd2777843bf7c27c1a81bcddc82ff10" category="inline-link-rx"></block></block>
   <block id="7e6d4063c199f76c46fecd71f3fd63f9" category="list-text">『 Disks and Aggregates Power Guide 』を参照してください</block>
-  <block id="0ac8de1fddec417698a68fef1798a147" category="inline-link"><block ref="0ac8de1fddec417698a68fef1798a147" category="inline-link-rx"></block></block>
-  <block id="a8498b0906ccd4abc8a23d076c276112" category="paragraph"><block ref="a8498b0906ccd4abc8a23d076c276112" category="inline-link-rx"></block></block>
   <block id="a76193f5d9397d9c49ca283a20ccf649" category="list-text">『 SAN アドミニストレーションガイド』</block>
-  <block id="db35c87b644b2c54696f756bde7e20b9" category="inline-link"><block ref="db35c87b644b2c54696f756bde7e20b9" category="inline-link-rx"></block></block>
-  <block id="fdc823976b2526bb3c33db9473419ca8" category="paragraph"><block ref="fdc823976b2526bb3c33db9473419ca8" category="inline-link-rx"></block></block>
   <block id="8cb9ee34636093f5ba25008ebc7b7287" category="list-text">『 SAN 構成ガイド』</block>
-  <block id="acf12ea52d92c47ea6b6f8194eba33d4" category="inline-link"><block ref="acf12ea52d92c47ea6b6f8194eba33d4" category="inline-link-rx"></block></block>
-  <block id="60f8b6928473c9bcdabe0610a187ddc1" category="paragraph"><block ref="60f8b6928473c9bcdabe0610a187ddc1" category="inline-link-rx"></block></block>
-  <block id="1493fda2c3cb99290e8fb4ba6acf89b2" category="list-text">『 FC Configuration for Red Hat Enterprise Linux Express Guide 』</block>
-  <block id="144c42e3c53611ad690e16fa94401f0c" category="inline-link"><block ref="144c42e3c53611ad690e16fa94401f0c" category="inline-link-rx"></block></block>
-  <block id="7bc62d6b48ce15becbe1bd4084ce7490" category="paragraph"><block ref="7bc62d6b48ce15becbe1bd4084ce7490" category="inline-link-rx"></block></block>
   <block id="c3d70d54f560e8e0f0c366ec0087e194" category="list-text">『 FC Configuration for Windows Express Guide 』を参照してください</block>
-  <block id="12172e01e9c186d2dc470613225f18b8" category="inline-link"><block ref="12172e01e9c186d2dc470613225f18b8" category="inline-link-rx"></block></block>
-  <block id="e0d9b1da83b682940364a2ee22816b62" category="paragraph"><block ref="e0d9b1da83b682940364a2ee22816b62" category="inline-link-rx"></block></block>
   <block id="2fc892a07617a9dc5ce581f242865c48" category="list-text">『 FC SAN 向け AFF セットアップガイド』</block>
-  <block id="0714e56f20697c28b852362ec0673c0e" category="inline-link"><block ref="0714e56f20697c28b852362ec0673c0e" category="inline-link-rx"></block></block>
-  <block id="e68429fbc82939d3900a3c282a74b1cc" category="paragraph"><block ref="e68429fbc82939d3900a3c282a74b1cc" category="inline-link-rx"></block></block>
   <block id="d3045df3df90cab89f90d0d37c532251" category="list-text">『 High-Availability 構成ガイド』</block>
-  <block id="8e6d96cf1cc08e03fcbea1b3ef621e99" category="inline-link"><block ref="8e6d96cf1cc08e03fcbea1b3ef621e99" category="inline-link-rx"></block></block>
-  <block id="28989b90c306fb26f2a7e67baec8c471" category="paragraph"><block ref="28989b90c306fb26f2a7e67baec8c471" category="inline-link-rx"></block></block>
   <block id="a08d0ca7bd8524176f9e086cd68875ee" category="list-text">論理ストレージ管理ガイド』を参照してください</block>
-  <block id="9f7615326423ad46d31799df9a8be01b" category="inline-link"><block ref="9f7615326423ad46d31799df9a8be01b" category="inline-link-rx"></block></block>
-  <block id="703063388971abed570ec3b097cb1842" category="paragraph"><block ref="703063388971abed570ec3b097cb1842" category="inline-link-rx"></block></block>
   <block id="ec49151b952b3d31a6798d4806d04b16" category="list-text">パフォーマンス管理パワーガイド</block>
-  <block id="673a6545df6d6b6f4f4b54d39d6bb45b" category="inline-link"><block ref="673a6545df6d6b6f4f4b54d39d6bb45b" category="inline-link-rx"></block></block>
-  <block id="215fe76acf8d23318698034d5f393385" category="paragraph"><block ref="215fe76acf8d23318698034d5f393385" category="inline-link-rx"></block></block>
   <block id="c2549eb1aedeb146d603f141e0cc0ffa" category="list-text">SMB/CIFS 構成パワーガイド</block>
-  <block id="b1af71c6be15132f050a25644152fe96" category="inline-link"><block ref="b1af71c6be15132f050a25644152fe96" category="inline-link-rx"></block></block>
-  <block id="0c019aaa7e500332371f2c2391adb2da" category="paragraph"><block ref="0c019aaa7e500332371f2c2391adb2da" category="inline-link-rx"></block></block>
   <block id="a0a59362e21ec3c80e71e3d02aa6a8b8" category="list-text">SMB/CIFS Reference 』を参照してください</block>
-  <block id="7b9a522fcc10c87375f1eb885c38416a" category="inline-link"><block ref="7b9a522fcc10c87375f1eb885c38416a" category="inline-link-rx"></block></block>
-  <block id="3dd5d7752f23c0ca9c4f50d9af644dec" category="paragraph"><block ref="3dd5d7752f23c0ca9c4f50d9af644dec" category="inline-link-rx"></block></block>
   <block id="9739187f50db857f27b204b12e6d365e" category="list-text">データ保護パワーガイド</block>
-  <block id="226918d56707f49bc9e76663b876e8d3" category="inline-link"><block ref="226918d56707f49bc9e76663b876e8d3" category="inline-link-rx"></block></block>
-  <block id="daba2c4513b64a917670c012aa0dc518" category="paragraph"><block ref="daba2c4513b64a917670c012aa0dc518" category="inline-link-rx"></block></block>
   <block id="81082b4a9d156a771a100d0e4e8fc15d" category="list-text">『データ保護：テープバックアップおよびリカバリガイド』</block>
-  <block id="980e2e75eb08658938b014b35a532628" category="inline-link"><block ref="980e2e75eb08658938b014b35a532628" category="inline-link-rx"></block></block>
-  <block id="0c85ac3c154442d3b524faa5c93fbbdd" category="paragraph"><block ref="0c85ac3c154442d3b524faa5c93fbbdd" category="inline-link-rx"></block></block>
   <block id="58c291db828d7a4127186176941d0d5b" category="list-text">NetApp Encryption パワーガイド』を参照してください</block>
-  <block id="5d5a37ba57b8fb7a75add1e312f8f99d" category="inline-link"><block ref="5d5a37ba57b8fb7a75add1e312f8f99d" category="inline-link-rx"></block></block>
-  <block id="6abdfa45bfc13fdae41a50035be43b43" category="paragraph"><block ref="6abdfa45bfc13fdae41a50035be43b43" category="inline-link-rx"></block></block>
   <block id="08a140811c847d2c6e0ea3628a3f4287" category="list-text">ネットワーク管理ガイド</block>
-  <block id="f31fa3bb2bee2b9bb9d705a524a98639" category="inline-link"><block ref="f31fa3bb2bee2b9bb9d705a524a98639" category="inline-link-rx"></block></block>
-  <block id="f9928f9fc7cf87a77b00b70aca02137b" category="paragraph"><block ref="f9928f9fc7cf87a77b00b70aca02137b" category="inline-link-rx"></block></block>
   <block id="03a44c9aa18c11dcca89fdef4aafbe0f" category="list-text">『コマンド：マニュアルページリファレンスガイド - ONTAP 9.3 』</block>
-  <block id="775225fe0ecfcaf14edb976911eca2ea" category="inline-link"><block ref="775225fe0ecfcaf14edb976911eca2ea" category="inline-link-rx"></block></block>
-  <block id="cc198d6fc10efd5a0321fae4c34b38ea" category="paragraph"><block ref="cc198d6fc10efd5a0321fae4c34b38ea" category="inline-link-rx"></block></block>
   <block id="b814e78bcf0a01ed4aae9eff1d4c136c" category="section-title">Cisco Nexus 、 MDS 、 Cisco UCS 、および Cisco UCS Manager の各ガイドを参照してください</block>
   <block id="ec933c934bea1d3e878210c936167726" category="list-text">Cisco UCS サーバの概要</block>
   <block id="dccb0f527753e20a1f5236458d03c64d" category="inline-link"><block ref="dccb0f527753e20a1f5236458d03c64d" category="inline-link-rx"></block></block>
   <block id="9b259f004a6bc0470e95eacbff8a3232" category="paragraph"><block ref="9b259f004a6bc0470e95eacbff8a3232" category="inline-link-rx"></block></block>
   <block id="d2686ba543c609968f6c7c9116a68e00" category="list-text">Cisco UCS ブレードサーバの概要</block>
-  <block id="c865e50ce15657e0ebddb0324c821e48" category="inline-link"><block ref="c865e50ce15657e0ebddb0324c821e48" category="inline-link-rx"></block></block>
-  <block id="190e32b1a11a225096d33067b3fcb260" category="paragraph"><block ref="190e32b1a11a225096d33067b3fcb260" category="inline-link-rx"></block></block>
   <block id="3e8f78de9bcbcb50a70c1dd6b1aa67de" category="list-text">Cisco UCS B200 M5 データシート</block>
   <block id="8818f2fb023bbe1b5e3f07d2cfd9cffb" category="list-text">Cisco UCS Manager の概要</block>
-  <block id="9a843a4ab0a3b940220e382c63719789" category="inline-link"><block ref="9a843a4ab0a3b940220e382c63719789" category="inline-link-rx"></block></block>
-  <block id="b1363e4b6145dee2f7248d96d259c0d6" category="paragraph"><block ref="b1363e4b6145dee2f7248d96d259c0d6" category="inline-link-rx"></block></block>
-  <block id="1405e34f9097a3e011e1e6702febf38b" category="list-text">Cisco UCS Manager 3.2 （ 3a ）インフラストラクチャバンドル（ Cisco.com の権限が必要）</block>
-  <block id="c92ccaac6fb6ce3762e7e4f6dd8bee6d" category="inline-link"><block ref="c92ccaac6fb6ce3762e7e4f6dd8bee6d" category="inline-link-rx"></block></block>
-  <block id="99bccea9697590838b4052f9e21abe2c" category="paragraph"><block ref="99bccea9697590838b4052f9e21abe2c" category="inline-link-rx"></block></block>
   <block id="0baa6249e3b620f94845e5f9d3ba2ea4" category="list-text">Cisco Nexus 9300 プラットフォームスイッチ</block>
-  <block id="a0f60ef1c87752bc6f78f6f2a09689db" category="inline-link"><block ref="a0f60ef1c87752bc6f78f6f2a09689db" category="inline-link-rx"></block></block>
-  <block id="6e3ec990c2749760d56d5f5a92eeabda" category="paragraph"><block ref="6e3ec990c2749760d56d5f5a92eeabda" category="inline-link-rx"></block></block>
-  <block id="9def77bbebe626dd7e6149782228fd4a" category="list-text">Cisco MDS 9148S FC スイッチ</block>
-  <block id="fc4ef427f0598947b6fb99689c93e80b" category="inline-link"><block ref="fc4ef427f0598947b6fb99689c93e80b" category="inline-link-rx"></block></block>
-  <block id="0db2fe56e3c64312a0cae9d7263612f4" category="paragraph"><block ref="0db2fe56e3c64312a0cae9d7263612f4" category="inline-link-rx"></block></block>
   <block id="df915ca44dfbf766140548415b4ed697" category="summary">MEDITECH アプリケーションは複数のモジュールとコンポーネントに対応しています。</block>
   <block id="463ab6fdbf0e97d2b9ffd8444397e952" category="doc">MEDITECH のモジュールとコンポーネント</block>
   <block id="29bb9635229fa03ce92a9f922a4cbdfa" category="paragraph">MEDITECH アプリケーションは複数のモジュールとコンポーネントに対応しています。次の表に、これらのモジュールでカバーされる機能を示します。これらのモジュールの設定と導入については、 MEDITECH のマニュアルを参照してください。追加情報</block>
@@ -2679,92 +2552,12 @@
   <block id="eecfabc7f0efee8d39bbf58ca9da0f13" category="cell">DS224C ディスクシェルフ × 1</block>
   <block id="c06a3ad948ce876ff1edb0573bfc643c" category="cell">3.8TB × 19</block>
   <block id="3350c3bf1228026294ce0e7f9235937f" category="admonition">これらの構成は、サイジングのガイダンスの開始点となります。一部のお客様の環境で、 MEDITECH の本番ワークロードと MEDITECH 以外のワークロードが同時に実行されている場合や、 IOP 要件が高い場合があります。ネットアップアカウントチームと協力して、必要な IOPS 、ワークロード、容量に基づいてストレージシステムのサイジングを行い、ワークロードに対応するプラットフォームを決定する必要があります。</block>
-  <block id="a2f7287cd019dd858724c14547187f48" category="summary">Genio は Epic で使用されているストレージパフォーマンステストツールです。書き込みサイクルパターンなど、 Epic の本番環境で使用される、システム間の Cach é データベースによって生成されたワークロードをシミュレートします。Cach é が導入されているさまざまなホストオペレーティングシステムで、コマンドラインアプリケーションとして使用できます。Epic の Genio ツールの最新のコピーでテストしてください。</block>
-  <block id="e507e33c12800570fd6ac4c11974389f" category="doc">GenIO ツール</block>
-  <block id="c2f7f8d3acd3dc65ab0fa649d531debe" category="paragraph">Genio は Epic で使用されているストレージパフォーマンステストツールです。書き込みサイクルパターンなど、 Epic の本番環境で使用される、システム間の Cach é データベースによって生成されたワークロードをシミュレートします。Cach é が導入されているさまざまなホストオペレーティングシステムで、コマンドラインアプリケーションとして使用できます。Epic の Genio ツールの最新のコピーでテストしてください。</block>
-  <block id="99023123d980e7f1add5959348030815" category="paragraph">パフォーマンステストの実行では、 I/O パラメータのセットを使用して、本番環境の Epic データベースホストで Genio アプリケーションを実行します。これらのパラメータは、書き込みサイクルを含む、お客様の Epic 環境での I/O パターンをシミュレートします。</block>
-  <block id="0e7fe8e4f62bbf819a709404a497e36d" category="paragraph">EPIC は、コントローラのヘッドルームの容量を決定するために、ハードウェアコンフィギュレーションガイドに詳述されている 100% の負荷を超えてコントローラをプッシュします。EPIC はフルロードテストも実行し、バックアップ操作をシミュレートします。</block>
-  <block id="7bb35ddfcc8264e8332afa6e4b48e7fa" category="paragraph">EPIC サーバのサポート担当者は、これを使用して、ホストの観点からストレージのパフォーマンスを検証します。また、ネットアップでは Genio を使用してラボ環境のネットアップストレージシステムのパフォーマンスを検証しています。</block>
-  <block id="69f73d34f9cb66b64eaccc67959121ec" category="summary">このセクションでは、インフラを設定するために必要なネットワーク接続、ストレージ接続、およびソフトウェアについて説明します。</block>
-  <block id="ba70f1b4cd9c2101da3fd6435f5e37b6" category="paragraph">インフラを設定する前に、次のネットワーク接続を確立しておく必要があります。</block>
-  <block id="7d1399d08cd57f6f6bc6d613fd2548dc" category="list-text">全体を通して、ポートチャネルと仮想ポートチャネルを使用したリンクアグリゲーションが使用されるため、より広い帯域幅と HA を実現できます。</block>
-  <block id="5df927a7a1d33fc9afb74658198469cc" category="list-text">仮想ポートチャネルは、 Cisco FI スイッチと Cisco Nexus スイッチの間で使用されます。</block>
-  <block id="4f7824e307a02a18358f07c7c4ec6e03" category="list-text">各サーバには、ユニファイドファブリックへの冗長接続を持つ vNIC があります。NIC フェイルオーバーは、 FI 間で冗長性を確保するために使用されます。</block>
-  <block id="8bbe85ddec828679b9ccadea21a435d0" category="list-text">各サーバには、ユニファイドファブリックに冗長接続された vHBA があります。</block>
-  <block id="53e293342c64a44a35ceb996f5674dc6" category="list-text">Cisco UCS FI は推奨されるエンドホストモードで設定され、アップリンクスイッチへの vNIC のダイナミックなピン接続を提供します。</block>
-  <block id="d883cfc4d0bda231d980ec277a7ddc25" category="paragraph">インフラを設定する前に、次のストレージ接続を確立しておく必要があります。</block>
-  <block id="99ea2a5003e224dbc6ffff72260b2cee" category="list-text">ストレージポート ifgroup （ vPC ）</block>
-  <block id="db1d2914189f3203a5cef6f1e980cfa0" category="list-text">スイッチ N9k- A への 10G リンク</block>
-  <block id="fa5644f3ad66999ee965988d6efd01c1" category="list-text">スイッチ N9k-B への 10G リンク</block>
-  <block id="3be15e2681389d7a77f653790f9b4629" category="list-text">管理スイッチ N9k-A への 1G リンク</block>
-  <block id="e120fa261f826afe1ad37a7166b00214" category="list-text">管理スイッチ N9k-B への 1G リンク</block>
-  <block id="ac0ca4fcb972dc247a54919ff2a993ff" category="list-text">Cisco MDS スイッチを介した 16G FC のエンドツーエンド接続。単一イニシエータのゾーニングが設定さ</block>
-  <block id="c1bb11de0c14f6a9c03ce157698695fb" category="list-text">FC SAN ブートでは、ステートレスコンピューティングを完全に実現します。サーバは、 AFF ストレージクラスタでホストされているブートボリューム内の LUN からブートされます。</block>
-  <block id="9257fadc8912a486487e0f4b9baf4821" category="list-text">Epic ワークロードはすべて FC LUN でホストされており、 FC LUN はストレージコントローラノード全体に分散されています。</block>
-  <block id="bfcceb580131cc0969f6f346da7a69fe" category="list-text">ESXi は Cisco UCS ブレードにインストールされます。</block>
-  <block id="dded19937efb354e497c153c92d7912b" category="list-text">vCenter をインストールして設定し、すべてのホストを vCenter に登録します。</block>
-  <block id="4ae0a837a9b8ff3194da80893ed8642e" category="list-text">VSC が vCenter にインストールされて登録されている。</block>
-  <block id="f1bfd4b2301b41748884dbebf9602824" category="list-text">ネットアップクラスタが設定されている。</block>
-  <block id="c7415f369b7f31a5cb996491636ff762" category="inline-link-macro">次に、 Cisco UCS ブレードサーバとスイッチの設定を行います</block>
-  <block id="fff24ef686c660d031c52b12ddad2609" category="paragraph"><block ref="fff24ef686c660d031c52b12ddad2609" category="inline-link-macro-rx"></block></block>
-  <block id="9a6132044392e6c981db4c2b1f224151" category="summary">本ガイドの執筆には、以下の方々が協力していただきました。</block>
   <block id="0407c27180c9b019e644e8ad4c6a9324" category="doc">謝辞</block>
-  <block id="c2fd88ad01f2e0ff628bfc26cd7da5a5" category="list-text">ネットアップ、テクニカルマーケティングエンジニア、 Ganesh Kamath 氏</block>
   <block id="98beb79b2f2d86652394e80d1e65420d" category="list-text">ネットアップ、テクニカルマーケティングエンジニア、 Atul Bhalodia 氏</block>
   <block id="49d7c87eb6e1417e303008c5907f9d07" category="list-text">ネットアップ、プロダクトマネージャー、 Ketan Mota</block>
-  <block id="8990784705f2f30ecf3cf153e934b1a9" category="list-text">Cisco Systems, Inc. 、 Jon Ebmeier 氏</block>
-  <block id="ac050c15f598ad106e5b99329e4e209c" category="list-text">Cisco Systems, Inc. 、 Mike Brennan 氏</block>
-  <block id="40e9ace7390b9651f314786639bac190" category="summary">Epic 対応 FlexPod のアーキテクチャは、 Epic 、 Cisco 、ネットアップのいずれの導入ガイドにも基づいており、 Epic をご利用のお客様のサポート経験も豊富であるため、このアーキテクチャは適応性が高く、小規模なデータセンターや大規模なデータセンター、一元化、分散、マルチテナントのいずれの場合でも、 Epic のベストプラクティスを適用します。</block>
-  <block id="91bc7ce7fdd9cb711142ddd3403880fe" category="paragraph">適切なストレージアーキテクチャは、合計 IOPS を使用した全体的なサイズによって決まります。パフォーマンスだけを重視するわけではなく、お客様の追加の要件に基づいて、ノード数を増やすこともできます。ネットアップの利点は、要件の変化に応じてクラスタを無停止で簡単にスケールアップできることです。また、ノードをクラスタから無停止で削除して、転用したり機器の更新時に利用したりすることもできます。</block>
-  <block id="b07356d8d75f7c0e44b56ff4619b4a88" category="list-text">* システム停止なしで簡単にスケールアップ / スケールアウトできます。 * ONTAP のノンストップオペレーション機能を使用して、ディスクとノードをアップグレード、追加、または削除できます。システムを停止することなく、 4 ノード構成から始めて 6 ノード構成に移行したり、大容量のコントローラにアップグレードしたりできます。</block>
-  <block id="150d02891c3c5abffbdd8a34deccaeb5" category="list-text">* Storage Efficiency 。 * 重複排除、 FlexClone 、インライン圧縮、インラインコンパクション、シンレプリケーションにより、必要な総容量を削減 シンプロビジョニング、およびアグリゲートの重複排除：FlexClone 機能を使用すると、バックアップおよびテスト環境の更新に対応するクローンをほぼ瞬時に作成できます。これらのクローンは、変更が行われた場合にのみストレージを消費します。</block>
-  <block id="6f29bbe7322471165635f3b0bb247237" category="list-text">* OnCommand WFA ワークフローの機能により、 Epic フルコピーテスト環境のバックアップと更新が可能 * 。この解決策はアーキテクチャを簡易化し、ストレージ容量を削減しながら効率化を実現します。これらのアーキテクチャは、 Epic 対応のバックアップ解決策を考慮しており、ストレージ統合を活用して任意のバックアップ解決策と統合できます。</block>
-  <block id="7d75924fa99567c41384fda46a5e42db" category="list-text">* DR シャドウ・データベース・サーバ * DR シャドウ・データベース・サーバは ' お客様のビジネス継続性戦略の一部です（ストレージの読み取り専用 [SRO] 機能をサポートするために使用され ' ストレージの読み取り / 書き込み [SRW] インスタンスとして構成される可能性があります）したがって、 3 つ目のストレージシステムの配置とサイジングは、ほとんどの場合、本番用データベースストレージシステムと同じです。</block>
-  <block id="fdb5c732cd36daa962784ea05945785e" category="list-text">* データベースの整合性（多少の考慮事項が必要）。 * SnapMirror バックアップコピーがビジネス継続性に関連して使用されている場合は、『 Epic Business Continuity Technical Solutions Guide 』（ Epic Business Continuity Technical Solutions Guide ）を参照してください。SnapMirror テクノロジの使用方法については、を参照してください<block ref="6f3c1dad0e99b4c05e6145259cddeecb" category="inline-link-rx"></block>。</block>
-  <block id="6991613dbf67070a63f8678316cf90f5" category="list-text">* 潜在的な Bully ワークロードから本番環境を分離することは、 Epic の主要な設計目標です。 * ストレージプールは、ワークロードのパフォーマンスを分離して保護する必要があるフォールトドメインです。ONTAP クラスタ内の各ノードはフォールトドメインであり、ストレージプールとみなすことができます。</block>
   <block id="028f1a38910f83032d7207681cbb26a8" category="section-title">ストレージアーキテクチャ</block>
-  <block id="2a70fb7477c294559ceb246e1109879f" category="inline-link">SPM</block>
-  <block id="07e7fe68482abf7cf5cdd4a682fab8ac" category="paragraph">次の図は 6 ノードアーキテクチャを示しています。これは Epic 環境で一般に導入されているアーキテクチャです。また、 4 ノードまたは 12 ノードの導入もありますが、これらのアーキテクチャは単に設計の基準となる点です。でワークロードを検証する必要があります<block ref="728fb07f2693d78c16a85dedc11be23d" category="inline-link-rx"></block> ディスク数とコントローラ利用率のサイジングツールAFF アレイにはすべての Epic 本番環境が導入されています。Epic ストレージレイアウトの要件については、 Epic All Flash Reference Architecture Strategy Handbook を参照してください。</block>
-  <block id="7568824894a154fdaf5933be99d1ec82" category="admonition">ネットアップの Epic チームと協力して、すべての設計を検証します。Epic では、ネットアップのサイジング手法を使用して、 Epic 環境で使用するネットアップストレージシステムのサイズを適切に設定する必要があります。詳細については、を参照してください<block ref="dd4cdf12b1a2f7591d8859eee1d859d8" category="inline-link-rx"></block>。このドキュメントを参照するには、 NetApp Field Portal へのアクセスが必要です。</block>
-  <block id="27068280656ee8c1f91b340d0fad8143" category="paragraph">6 ノードのアーキテクチャには、本番用に 4 つのノードがあり、 DR 用に 2 つのノードが含まれています。このアーキテクチャでは、 4 ノードの運用が可能な Epic オールフラッシュリファレンスアーキテクチャ戦略ハンドブックに、 Clarity の Epic Report ワークロードを分離できると記載されています。</block>
-  <block id="e93dfc645cdb784f7f0827c81f707b87" category="paragraph">ノードを 6 つ配置することには、次の主な利点があります。</block>
-  <block id="743febaeb2c7493c1e6b72020c8db3f4" category="list-text">バックアップアーカイブプロセスを本番環境からオフロードできます</block>
-  <block id="ae889725f35911cee06be192f50d4be8" category="list-text">すべてのテスト環境を本番環境からオフロードできます</block>
-  <block id="e0369b99183d8b6fc35c0bbcc6762e7c" category="paragraph">本番環境はノード pro-01 で実行レポートは本番環境の最新の Epic ミラーコピーである node-02 で実行されます。サポート、リリース、およびリリース検証（ SUP 、 REL 、 RELVAL ）などのテスト環境は、 Epic の本番、レポート、 DR から瞬時にクローニングできます。次の図に、本番環境からフルコピーテスト環境用に作成されたクローンを示します。</block>
-  <block id="025225f44fe23b8fc064aa44d122ab12" category="paragraph">2 つ目の HA ペアは、本番用サービスのストレージ要件に使用されます。これらのワークロードには、 Clarity データベースサーバ（ SQL または Oracle ）、 VMware 、ハイパースペース、 CIFS 用のストレージが含まれます。このアーキテクチャでは、 Epic に対応していないワークロードをノード 3 やノード 4 に追加したり、可能であれば同じクラスタの別の HA ペアに追加したりすることができます。</block>
-  <block id="83cfdb0ae31584c251dff0a630370674" category="paragraph">SnapMirror テクノロジは、本番環境のデータベースを 2 つ目の HA にストレージレベルでレプリケートするために使用されます。SnapMirror バックアップコピーを使用して、サポート、リリース、リリース検証などの非本番環境用の FlexClone ボリュームを 2 つ目のストレージシステムに作成できます。本番データベースのストレージ・レベルのレプリカは ' お客様の DR 戦略の導入にも対応できます</block>
-  <block id="8cb20c6932cada415b34e417271d8879" category="paragraph">また、ストレージ効率を高めるために、レポートの Snapshot コピーバックアップからフルテストクローンを作成し、ノード 2 で直接実行することもできます。この設計では、 SnapMirror デスティネーションのコピーをディスクに保存する必要はありません。</block>
-  <block id="b8c20f15e93e9265e39d80acc40da057" category="paragraph"><block ref="b8c20f15e93e9265e39d80acc40da057" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="2cf72fc786dbcd14e94751e67191a423" category="section-title">ストレージの設計とレイアウト</block>
-  <block id="66a168719e79e9b2fbe7e0e550c5ffca" category="paragraph">Epic の HA と冗長性の要件を満たすための最初のステップは、 Epic ソフトウェア環境に特化したストレージレイアウトの設計です。たとえば、ディスクプール 1 をディスクプール 2 から専用の高性能ストレージに分離します。各ディスクプールのワークロードについては、『 Epic All-Flash Reference Architecture Strategy 』を参照してください。</block>
-  <block id="86ea3029b46c8fae64f3b0bd7f0242d2" category="paragraph">各ディスクプールを別々のノードに配置することで、本番ワークロードと非本番ワークロードの Epic 分離に必要な障害ドメインが作成されます。ノードごとに 1 つのアグリゲートを使用すると、ディスク利用率とアグリゲートアフィニティが最大化され、パフォーマンスが向上しますまた、アグリゲートレベルの重複排除により、ストレージ効率も最大化されます。</block>
-  <block id="7d32b484ffb8a71750d827238a67c40b" category="paragraph">Epic を使用すると非本番環境のニーズに合わせてストレージリソースを共有できるため、 Clarity サーバと本番環境サービスのストレージニーズ（ VDI 、 CIFS 、その他のエンタープライズ機能など）に対応できるストレージシステムが多くなります。</block>
-  <block id="ab6b049dae67046036f86fbdca72abbd" category="paragraph">次の図は、 6 ノードアーキテクチャのストレージレイアウトを示しています。各ストレージシステムは、完全に冗長な HA ペアのシングルノードです。このレイアウトにより、各コントローラでの利用率とストレージ効率が最大限に高まります。</block>
-  <block id="e39c04242eda56f01aadb4f8437c5281" category="paragraph"><block ref="e39c04242eda56f01aadb4f8437c5281" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="1ccaa39e410a70899a9f5bc45be5cf18" category="section-title">ストレージノードの構成</block>
-  <block id="6fa6373c8ea233e568425788e0466a3b" category="paragraph">* 高可用性 *</block>
-  <block id="3eda1383db3fe8ff0f6c8ddac9cfe5a9" category="paragraph">HA ペアのノードで構成されているストレージシステムは、ノード障害の影響を軽減し、ストレージシステムの無停止アップグレードを可能にします。複数のパスを使用してノードに接続されたディスクシェルフは、シングルパス障害から保護することでストレージの耐障害性を高め、ノードフェイルオーバー時のパフォーマンスの一貫性を向上させます。</block>
-  <block id="008e50a8dfb51a25b5f88bbd9ca90a84" category="paragraph">* ハードウェアアシストフェイルオーバー *</block>
-  <block id="fa82954ddd8299c18f58e8a6ef613d0f" category="paragraph">ハードウェアアシストフェイルオーバーでは、 1 つのノードのリモート LAN モジュールまたはサービスプロセッサモジュールがハートビートタイムアウトトリガーよりも早くノード障害をパートナーに通知できるようにすることで、ストレージノードのフェイルオーバー時間を最小限に抑えます。これにより、フェイルオーバー前の経過時間を短縮できます。ストレージが仮想化されている場合、フェイルオーバー中にコントローラの ID を移動する必要がないため、フェイルオーバーにかかる時間が短縮されます。ソフトウェアディスクの所有権のみが変更されます。</block>
-  <block id="4a8340c12206c306d63eb7e76edc11e9" category="paragraph">* ネットアップのサポートツールとサービス *</block>
-  <block id="b7dfc707b737a434d4ab9f4f26aa174c" category="paragraph">ネットアップでは、包括的なサポートツールとサービスを提供しています。ネットアップストレージシステムでは、ハードウェア障害やシステムの構成ミスが発生した場合にホームコールを行うために、 NetApp AutoSupport ツールを有効にして設定する必要があります。ミッションクリティカルな環境については、ネットアップでは SupportEdge Premium パッケージも推奨しています。このパッケージを使用すると、運用に関する専門知識の習得、サポート時間の延長、パーツ交換の所要時間の短縮を実現できます。</block>
-  <block id="323b9e730516f163fb399d78b095e241" category="paragraph">* AFF A300 および AFF A700 コントローラでオールフラッシュに最適化されたパーソナリティ *</block>
-  <block id="5c679b1d44f869537a29afa9ff7ee075" category="paragraph">AFF 解決策が正しく機能するには、完全にフラッシュで最適化された FAS80x0 システムの HA ペアの両方のノードで、環境変数「 bootarg.init.flash_optimized` 」を「 true 」に設定する必要があります。オールフラッシュで最適化されたプラットフォームでは、 SSD のみがサポートされます。</block>
   <block id="305160d35c5eb375133b99844c5c9c60" category="section-title">ボリューム構成</block>
-  <block id="0d9e0e6c5891f37f04e7052b70c11640" category="paragraph">* Snapshot コピー *</block>
-  <block id="f9a5f7bf9d03c5c5a8652a132f73694c" category="paragraph">本番環境のデータベースにストレージを提供するボリュームに対しては、夜間ボリュームレベルの Snapshot スケジュールを設定する必要があります。ボリュームレベルの Snapshot コピーは、開発、テスト、ステージングなどの非本番環境で使用する本番環境データベースのクローニングのソースとしても使用できます。ネットアップでは、 Epic を使用した OnCommand WFA ワークフローを開発し、本番環境のデータベースのバックアップやテスト環境の更新を自動化しています。これらのワークフローは、アプリケーションと整合性のある Snapshot コピー用にデータベースをフリーズして解凍します。本番環境のバックアップコピーは、サーバのサポート、リリース、およびリリースの検証をテストするために自動的に提示されます。これらのワークフローは、バックアップのストリーミングと整合性チェックにも使用できます。</block>
-  <block id="de12db4e55a7c25cd0f19ba2396764c7" category="paragraph">スナップショットコピーを使用して、 Epic の本番データベースの復元操作をサポートできます。</block>
-  <block id="8dd4e86207ea15a59d461c6deeead905" category="paragraph">SnapMirror を使用すると、本番環境とは別のストレージシステムに Snapshot コピーを保持できます。</block>
-  <block id="03f322205a24140e3aae3e6267d0c406" category="paragraph">SAN ボリュームの場合は、各ボリュームでデフォルトの Snapshot ポリシーを無効にします。作成される Snapshot コピーは、通常、バックアップアプリケーションまたは OnCommand の WFA ワークフローによって管理されます。ディスク利用率を最大限に高めるために、すべての効率化設定を有効にすることを推奨します。</block>
-  <block id="78affddc1437c1085fdf159da17d99bb" category="paragraph">* ボリュームアフィニティ *</block>
-  <block id="a8223e662e0acad25f129e6f9195eb6e" category="paragraph">ONTAP は、同時処理をサポートするために、起動時に使用可能なハードウェアを評価し、アグリゲートとボリュームをアフィニティと呼ばれる別のクラスに分割します。一般に、アフィニティに属するボリュームは、他のアフィニティにあるボリュームと並行して処理できます。対照的に、同じアフィニティ内にある 2 つのボリュームでは、ノードの CPU でスケジューリング時間（シリアル処理）を待つ必要があります。</block>
-  <block id="aa517899743b6ccb3e85d8457e529e94" category="paragraph">AFF A300 および AFF A700 には、アグリゲートアフィニティが 1 つと、ノードごとにボリュームアフィニティが 4 つあります。ノードの利用率を最大限にし、ボリュームアフィニティを使用するには、ストレージレイアウトをノードごとに 1 つのアグリゲートにし、ノードごとに少なくとも 4 つのボリュームにする必要があります。通常、 Epic データベースには 8 つのボリュームまたは LUN が使用されます。</block>
   <block id="db8880d80ab20f2f01a010e5c454f7fb" category="section-title">LUN の設定</block>
-  <block id="5f52bc23f17d716c3361d239ef6ddac4" category="paragraph">『 Epic Database Storage Layout Recommendations 』ドキュメントには、各データベースの LUN のサイズと数が詳しく記載されています。Epic のサポート状況を確認し、 LUN や LUN のサイズの最終決定を行うことが重要で、多少の調整が必要な場合があります。</block>
-  <block id="eb799e9050dec41fb9a9bc817885ae5a" category="paragraph">LUN 自体のサイズはストレージにコストをかけずに済むため、 LUN のサイズを大きくしておくことを推奨します。運用を容易にするため、 LUN の数と初期サイズは、 3 年後に想定される要件を大きく超えても大きくなることを確認してください。LUN の拡張は、拡張時に LUN を追加する場合よりも管理しやすくなります。LUN とボリュームのシンプロビジョニングでは、アグリゲートで表示されるのはストレージだけです。</block>
-  <block id="1eba5ac2ac347549949e6e9e479d7f61" category="paragraph">Epic の本番用と Clarity には、ボリュームごとに 1 つの LUN を使用します。大規模な導入では、 Epic データベースに 24 ~ 32 個の LUN を推奨しています。</block>
-  <block id="9dbee62adc9deab99e055a4224131068" category="paragraph">使用する LUN の数を決定する要因は次のとおりです。</block>
-  <block id="c39e7648a8e7ce3761007fc274973c2a" category="list-text">3 年後の Epic DB の全体的なサイズ。DB のサイズが大きい場合は、その OS の LUN の最大サイズを確認し、拡張可能な LUN が十分にあることを確認してください。たとえば、 60TB の Epic データベースが必要で、 OS LUN の最大容量が 4TB の場合、拡張性とヘッドルームを確保するには、 24~32 個の LUN が必要になります。</block>
   <block id="f0f4f4ee07bd69ccda90258104d093f0" category="summary">このセクションでは、 ONTAP 8.3 以降のバージョンへの導入について説明します。</block>
   <block id="4e777d3b2a8b458c7f1f8e99e8ee985b" category="doc">Storage Virtual Machine の設定</block>
   <block id="5e8e41e494c729b71c38199837d82c03" category="admonition">Storage Virtual Machine （ SVM ）は、 ONTAP API および ONTAP CLI では Vserver とも呼ばれます。</block>
@@ -2816,598 +2609,45 @@
   <block id="6b7b598323e29ffec89272c7a4dab997" category="list-text"><block ref="6b7b598323e29ffec89272c7a4dab997" category="inline-link-rx"></block></block>
   <block id="8f87ca3825cf554e2054b8d53073840e" category="inline-link">Cisco MDS 9132T FC スイッチ</block>
   <block id="2cb00c21fb6289fb3fd2ceea04738a2a" category="list-text"><block ref="2cb00c21fb6289fb3fd2ceea04738a2a" category="inline-link-rx"></block></block>
-  <block id="f13522757699caa4bef7a36bfc8b9b25" category="summary">必ず Interoperability Matrix Tool （ IMT ）を使用して、ソフトウェアとファームウェアのすべてのバージョンがサポートされていることを確認してください。</block>
-  <block id="eb6491aa5f55e5c1e497b995fa4b77d1" category="doc">インフラのハードウェアコンポーネントとソフトウェアコンポーネント</block>
   <block id="c9dd6bad4c7d561872f2e2d498a990bf" category="inline-link">Interoperability Matrix Tool （ IMT ）</block>
-  <block id="3a4b7d39db7d11d4d1898ec408f0bd41" category="paragraph">必ずを使用してください<block ref="e24f898abe90ef46a13b3eea3ae2cf9c" category="inline-link-rx"></block> ソフトウェアとファームウェアのすべてのバージョンがサポートされていることを検証します。次の表に、テストで使用したインフラのハードウェアとソフトウェアのコンポーネントを示します。</block>
-  <block id="cbb780fc3810cb30cb2db1ee902d477a" category="cell">1 台のシャーシ</block>
-  <block id="de1066314108713cf3ccc30839cb17b1" category="cell">各 CPU コア × 18 、 RAM BIOS が 768GB （ 2.2(8) ）</block>
-  <block id="90df3395bc80227b4b9fbf85613a5db5" category="cell">Cisco UCS VIC</block>
-  <block id="a839f7fa15411c1f2abff6b81b28a9f0" category="cell">UCS 1340 × 4</block>
-  <block id="1c43eb1e6c62c3c378ea34e40c4b1164" category="cell">VMware ESXi fNIC FC ドライバ： 1.0.34 VMware ESXi eNIC イーサネットドライバ： 1.0.6.0</block>
-  <block id="9198fe7a65f8b2d47f34b90ea821d156" category="cell">Cisco UCS FI × 2</block>
-  <block id="d2da2cbe42c22ed3b6616b6c11bc2d43" category="cell">6332-16UP と Cisco UCSM 3.2(2f )</block>
-  <block id="501b7e3d88baf1a5e26339a0206a15e1" category="cell">7.0 （ 3 ） I7 （ 2 ）</block>
-  <block id="30757242b418b8d368fe95a4ddbb9d5d" category="cell">Cisco Nexus 9372PX-E × 2</block>
-  <block id="60e6d39242e7f8a195d0bade741e3f2f" category="cell">iSCSI ： N9k を使用する IP 解決策</block>
-  <block id="f7a4aef8f369d68a12451f474f653edd" category="cell">FC ： Cisco MDS 9148S</block>
-  <block id="8318994c4a60d776e9144a146aeca1d5" category="cell">8.2 （ 2 ）</block>
-  <block id="7cbf49439212dfd9b01aa8916ba48c7f" category="cell">Cisco 9148S スイッチ × 2</block>
-  <block id="1a7bbb1bdfc9c306ac96577d63cd4c75" category="cell">NetApp AFF A700s × 2</block>
-  <block id="65068dcf2fb2dc043d2a32c78ca7e76c" category="cell">ONTAP 9.3 一般提供</block>
-  <block id="ee54d40275e0e1586ce6d459748e3c12" category="cell">2 ノードクラスタ × 1</block>
-  <block id="b5258c4a080e08fb0d34de5b2dd7ce5e" category="cell">DS224C ディスクシェルフ × 2</block>
-  <block id="7c70559aebb45e8e2de11fe3aa2098db" category="cell">960GB × 48</block>
-  <block id="df5dc4e033f2d11ab92f2297fc2b7463" category="cell">VMware vSphere ESXi 6.5 U1</block>
   <block id="d3d9fdef0e91fc4aba18e57475fd74ea" category="cell">仮想マシン</block>
-  <block id="381fbbd27845d2e8335b3da7ac170ebf" category="cell">RHEL 7.4</block>
-  <block id="01cac2b0ec40e9e509ec3915e2e9d81a" category="cell">VMware vCenter Server 6.5 U1 （ vCSA ）</block>
-  <block id="1eac26855b47184ec2df273b62d70b59" category="cell">vCenter Server Appliance の略</block>
   <block id="16da49795bbc4995de01070dd3b75a98" category="cell">NetApp Virtual Storage Console の略</block>
   <block id="5c014f8939a89da0166a347a0237cf4f" category="cell">SnapCenter</block>
-  <block id="042d24bff6ec5e4d7f194f9ad13316a6" category="cell">3.2 （ 2f ） *</block>
-  <block id="38b343d1c582fa297010445eced177ad" category="inline-link-macro">次の手順：基本インフラの構成。</block>
-  <block id="fd332577a04b5a9b7e78568a8e272590" category="paragraph"><block ref="fd332577a04b5a9b7e78568a8e272590" category="inline-link-macro-rx"></block></block>
-  <block id="07e6efaeefb46513eb2c26b98e2f4ee1" category="summary">本レポートの目的は、 Epic Healthcare のワークロードをサポートするネットアップオールフラッシュ A300 および A700 ストレージシステムで FlexPod のパフォーマンスを強調することです。</block>
-  <block id="83642a888abdb57d5022737c2a7047ee" category="doc">TR-4784 ：『 FlexPod for Epic Performance Testing 』</block>
-  <block id="a95b4d4ce30b353ade4cf41225da0b53" category="paragraph">Brian O'Menahony 、 Ganesh Kamath Atul Bhalodia Brandon AGEE</block>
   <block id="40b796b77b40775e1361ce398a9a783c" category="section-title">目的</block>
-  <block id="3c273e7fca001c9bf71292455f82c202" category="section-title">EPIC ハードウェアコンフィギュレーションガイド</block>
-  <block id="cf967a14166f977ac5a3b8778e58ad33" category="paragraph">許容可能なエンドユーザパフォーマンスを実現するために、 Epic 本番環境やディザスタリカバリ運用データベース（ ODB ）のターゲット読み取り / ターゲット書き込みの時間要件は次のとおりです。</block>
-  <block id="7b99dedef21695e1d3276aad64345368" category="list-text">システムコールレベルで測定されたデータベースファイルへのランダム配置読み取りの場合：</block>
-  <block id="5e8d5eba3fa8c39fa6c420d4d21bf61f" category="list-text">平均読み取りレイテンシは 2 ミリ秒以下である必要があります</block>
-  <block id="a836e1929127adc5d2a32e476b07cb4d" category="list-text">読み取りレイテンシの 99% が 60ms 未満であることが必要です</block>
-  <block id="b75d9998ce0a0cf441bda4711f699baa" category="list-text">99.9% の読み取りレイテンシが 200 ミリ秒未満であることが必要です</block>
-  <block id="581b01b6eca13c03eca6e22227c3aa68" category="list-text">読み取りレイテンシの 99.99% は 600 ミリ秒未満である必要があります</block>
-  <block id="eafda77579f0073b0dce290723b7cf44" category="list-text">システムコールレベルで測定されたデータベースファイルへのランダム配置書き込みの場合：</block>
-  <block id="e26d7fe987f575ce7c3e718aa0098920" category="list-text">平均書き込みレイテンシは、サイズに応じて 1 ミリ秒以下にする必要があります</block>
-  <block id="0927387e2ad8fbaa485eded5dcad9fff" category="admonition">これらの要件は時間とともに変化します。EPIC が、お客様固有の Epic Hardware Configuration Guide （ HCG ）を用意要件の詳細については、 HCG を参照してください。</block>
-  <block id="15bc590da3e553f8138a7ce60c2f0f47" category="paragraph">FlexPod アーキテクチャを基盤に Epic 環境を導入することで、医療機関はスタッフの生産性が向上し、設備投資や運用コストも削減されます。Epic 対応の FlexPod Datacenter には、医療業界に特有のメリットがいくつかあります。</block>
-  <block id="b4c16f083b1a715e73e16858afc44af0" category="list-text">* 運用の簡素化とコストの削減 * 従来の独自仕様の RISC/UNIX プラットフォームを、どこにいても臨床医をサポートできる、より効率的でスケーラブルな共有リソースに置き換えることで、コストと複雑さを排除します。この解決策は、リソースの使用率を高め、 ROI を向上させます。</block>
-  <block id="f5dbda2697b226d834c0036bd4cd45d5" category="list-text">* インフラストラクチャの迅速な導入。 * 既存のデータセンターにあるかリモートサイトにあるかにかかわらず、 Epic を使用した FlexPod データセンターの統合されたテスト済みの設計により、お客様は少ない労力で新しいインフラストラクチャをより短時間で稼働させることができます。</block>
-  <block id="659261367807f7fb944bd4c20f5f9247" category="list-text">* スケールアウトアーキテクチャ。 * 実行中のアプリケーションを再構成することなく、 SAN と NAS を数テラバイトから数十ペタバイトまで拡張できます。</block>
-  <block id="57456c79a1e37dd7739838a6bf0558e3" category="list-text">* ノンストップオペレーション。 * ストレージの保守、ハードウェアのライフサイクル処理、ソフトウェアのアップグレードを、業務を中断することなく実行できます。</block>
-  <block id="96ac4107fa07074fc9ec062bff5b5ba8" category="list-text">* セキュアマルチテナンシー。 FlexPod は、共有仮想化サーバおよびストレージインフラストラクチャのニーズをサポートし、特にデータベースとソフトウェアの複数のインスタンスをホストする場合に、施設固有の情報のセキュアマルチテナンシーを実現します。</block>
-  <block id="f8ed602939f6a2630d692b1db1c8bd51" category="list-text">* プールされたリソースの最適化。 * FlexPod を使用すると、物理サーバとストレージコントローラの数を減らし、ワークロードの負荷を分散させることができます。また、パフォーマンスを向上させながら、利用率を向上させることもできます。</block>
-  <block id="16e12ced36cf703fa7bcf011efe4d5e6" category="list-text">* サービス品質（ QoS ）。 * FlexPod は、スタック全体で QoS を提供します。業界をリードする QoS ストレージポリシーにより、共有環境で差別化されたサービスレベルを実現します。これらのポリシーを使用することで、ワークロードに最適なパフォーマンスを提供し、過負荷のアプリケーションを分離して制御できます。</block>
-  <block id="db4a4e5bfc624217ddecb48707db3975" category="list-text">* ストレージ効率。 * ネットアップの 7 ： 1 ストレージ容量削減保証により、ストレージコストを削減できます。</block>
-  <block id="7db0ebb487acd3e6ab40ee6dce5355d6" category="list-text">* 俊敏性。 * FlexPod システムが提供する業界トップのワークフロー自動化、オーケストレーション、管理ツールにより、 IT 部門はビジネス要求への対応力を大幅に高めることができます。こうしたビジネス要求は、 Epic によるバックアップや追加のテスト / トレーニング環境のプロビジョニングから、人口健全性管理イニシアチブのための分析データベースのレプリケーションまで多岐にわたります。</block>
-  <block id="cbedf6b5ec12dd98591eb6972b338e46" category="list-text">* 生産性。 * この解決策は迅速に導入および拡張できるため、医療従事者のエンドユーザエクスペリエンスを最適化できます。</block>
-  <block id="d5eba277872544309f2b285748223706" category="list-text">* データファブリック。 * ネットアップデータファブリックアーキテクチャは、サイト間、物理的な境界を越えて、アプリケーション間でデータを結び付けます。ネットアップデータファブリックは、 Data-Centric の世界におけるデータ主体の企業向けに構築されています。データは複数の場所に作成されて使用されるため、多くの場合、他の場所、アプリケーション、インフラとの間で利用および共有する必要があります。お客様は、整合性と統合性に優れたデータの管理方法を求めています。IT を管理し、増え続ける IT の複雑さを軽減するデータ管理の手法を提供します。</block>
-  <block id="c42cbc15d98b2d88ce66732a5166dd85" category="section-title">Cisco Unified Computing System 、 Cisco Nexus および MDS スイッチング、および ONTAP オールフラッシュストレージ</block>
-  <block id="e52db12fc8345842729a4e2199510c66" category="paragraph">FlexPod for Epic Healthcare は、 IT 部門が求めるパフォーマンス、効率性、管理性、拡張性、データ保護を提供し、厳しい Epic の要件に応えます。FlexPod は、 Epic の本番データベースのパフォーマンス向上と、アプリケーション導入時間の短縮により、 Epic への投資から最大化を支援します。</block>
-  <block id="ae3d9e9236e37858694b97ff5f73f4d5" category="paragraph">Cisco Unified Computing System （ UCS ）は、自己統合型の自己認識システムとして、統合 I/O インフラストラクチャと相互接続された単一の管理ドメインで構成されています。Epic 環境に対応した Cisco UCS は、 Epic インフラに関する推奨事項やベストプラクティスに対応しており、インフラによって重要な患者情報を最大限に利用できるようになっています。</block>
-  <block id="518c59f5f043597f8e660b614ef74784" category="paragraph">Cisco UCS アーキテクチャ上で Epic を基盤とする Cisco UCS テクノロジには、統合システム管理、 Intel Xeon プロセッサ、サーバ仮想化が含まれています。これらの統合テクノロジにより、データセンターの課題を解決し、 Epic をサポートするデータセンター設計の目標を達成できます。Cisco UCS は、 LAN 、 SAN 、およびシステム管理を 1 つのシンプルなリンクに統合して、ラックサーバ、ブレードサーバ、および仮想マシンを実現します。Cisco UCS は、シスコユニファイドファブリックおよびシスコファブリックエクステンダ（ FEX ）テクノロジーを組み込んだエンドツーエンドの I/O アーキテクチャであり、 Cisco UCS のすべてのコンポーネントを単一のネットワークファブリックおよび単一のネットワークレイヤで接続します。</block>
-  <block id="9abb7361b1f556d02a520d9c598ebe2f" category="paragraph">このシステムは、複数のブレードシャーシに組み込まれ、複数のブレードシャーシにわたって拡張できる単一の仮想ブレードシャーシとして設計されています。このシステムは徹底的に簡素化されたアーキテクチャを実装しており、従来のブレードサーバシャーシに搭載された複数の冗長デバイスが不要になり、複雑さが増す結果となります。例としては、イーサネットスイッチ、ファイバチャネルスイッチ、シャーシ管理モジュールなどがあります。Cisco UCS には、冗長ペアの Cisco ファブリックインターコネクトが搭載されており、すべての I/O トラフィックを単一の管理ポイントで制御できます。</block>
-  <block id="e7b88aff85f537a7ecc1f93f089e457b" category="paragraph">Cisco UCS は、サービスプロファイルを使用して、 UCS インフラストラクチャ内の仮想サーバが正しく設定されるようにします。サービスプロファイルには、 LAN および SAN アドレッシング、 I/O 設定、ファームウェアバージョン、ブート順、ネットワーク VLAN 、などのサーバ ID に関する重要なサーバ情報が含まれます。 物理ポートおよび Quality of Service （ QoS ；サービス品質）ポリシー。サービスプロファイルは、数時間や数日以内ではなく、数分以内に動的に作成してシステム内の任意の物理サーバに関連付けることができます。サービスプロファイルと物理サーバの関連付けは、 1 回のシンプルな操作として実行されます。この操作により、物理的な設定変更を行わずに、環境内のサーバ間で ID を移行できます。障害が発生したサーバの代わりに、ベアメタルプロビジョニングを迅速に実行できます。</block>
-  <block id="528a879dd77b9eac499474db461d5226" category="paragraph">サービスプロファイルを使用すると、企業全体で一貫したサーバを設定できます。複数の Cisco UCS 管理ドメインを使用する場合、 UCS Central はグローバルサービスプロファイルを使用して、ドメイン間で設定およびポリシー情報を同期できます。あるドメインでメンテナンスが必要な場合は、仮想インフラストラクチャを別のドメインに移行できます。そのため、単一のドメインがオフラインの場合でも、アプリケーションはハイアベイラビリティを維持したまま実行されます。</block>
-  <block id="311676cd9cca336aa70c049119377bba" category="paragraph">Cisco UCS は複数年にわたって Epic を利用したテストを幅広く実施しており、サーバ構成の要件を満たしていることが実証されています。Cisco UCS は、「 Epic Hardware Configuration Guide 」に記載されたサポート対象のサーバプラットフォームです。</block>
-  <block id="0f8800d71d667547850f85ed17c081fc" category="section-title">Cisco Nexus および Cisco MDS イーサネットおよびファイバチャネルスイッチング</block>
-  <block id="a804697b8a5dca7049afba1c91f22fbf" category="paragraph">Cisco Nexus スイッチおよび MDS マルチレイヤディレクタは、エンタープライズクラスの接続と SAN 統合を実現します。Cisco マルチプロトコルストレージネットワーキングは、柔軟性とオプションを提供することで、ビジネスリスクを軽減します。サポートされるプロトコルには、 Fibre Channel （ FC ；ファイバチャネル）、 Fibre Connection （ FICON ；ファイバ接続）、 FC over Ethernet （ FCoE ）、 SCSI over IP （ iSCSI ）、 FC over IP （ FCIP ）があります。</block>
-  <block id="016f004fbf72e5a7cd42fe569d4ffa0d" category="paragraph">Cisco Nexus スイッチは、単一プラットフォームで最も包括的なデータセンターネットワーク機能セットの 1 つです。データセンターとキャンパスコアの両方で、高いパフォーマンスと密度を実現します。また、耐障害性に優れたモジュラプラットフォームでのデータセンターアグリゲーション、エンドツーエンドの導入、データセンターインターコネクトの導入に対応する完全な機能セットも提供します。</block>
-  <block id="2fd70c95b28e4909e3abe4b975d64055" category="paragraph">Cisco UCS はコンピューティングリソースを Cisco Nexus スイッチと統合し、ユニファイド I/O ファブリックを提供します。このファブリックは、ストレージ I/O 、ストリームデスクトップトラフィック、管理、臨床アプリケーションやビジネスアプリケーションへのアクセスなど、さまざまなタイプのネットワークトラフィックを識別して処理します。</block>
-  <block id="bc21000aba734c49f852c55de37fa931" category="paragraph">要約すると、 Cisco UCS には Epic の導入に次のような重要なメリットがあります。</block>
-  <block id="a3a79019796b227a4d001c6fb71a1235" category="list-text">* インフラストラクチャの拡張性。 * 仮想化、電力と冷却の効率化、自動化によるクラウドの拡張、高密度、およびパフォーマンスのすべてが、効率的なデータセンターの拡張をサポートします。</block>
   <block id="0be5b3d60fa1a62fc1c4b46695cbefff" category="list-text">* 運用継続性。 * この設計では、ハードウェア、 NX-OS ソフトウェアの機能、および管理を統合して、ダウンタイムゼロの環境をサポートします。</block>
   <block id="7c43b4cfb6124eac10c88babdf3b2e38" category="list-text">* 転送の柔軟性。 * コスト効率の高い解決策を使用して、新しいネットワークテクノロジーを段階的に導入します。</block>
-  <block id="4a386624aff981558c1ad4de9035f5f8" category="paragraph">Cisco UCS と Cisco Nexus スイッチ、 MDS マルチレイヤディレクタを組み合わせることで、 Epic に対応した魅力的なコンピュータ、ネットワーク、 SAN 接続の解決策を実現できます。</block>
-  <block id="c3bf016fc68bb0c11881799bb320f994" category="section-title">ネットアップのオールフラッシュストレージシステム</block>
-  <block id="31e465d6883564d8df8f09d297d4b16c" category="paragraph">NetApp AFF システムは、ハイパフォーマンス、卓越した柔軟性、業界最高のデータ管理機能によって、エンタープライズストレージの要件に対応します。ONTAP データ管理ソフトウェアを基盤とする AFF システムは、 IT 運用の効率性、信頼性、柔軟性を損なうことなく、ビジネスを高速化します。エンタープライズクラスのオールフラッシュアレイを搭載した AFF システムは、ビジネスクリティカルなデータの高速化、管理、保護を実現し、データセンターのフラッシュメディアへの移行をリスクなしで簡単に実行できます。</block>
-  <block id="d4cb9f5c992a3fe86f30320888bae2db" category="paragraph">フラッシュに特化して設計された AFF A シリーズオールフラッシュシステムは、業界をリードするパフォーマンス、容量、密度、拡張性、セキュリティ、 高密度なフォームファクタでネットワーク接続を実現します。新しい AFF A シリーズファミリは、エントリレベルのシステムを新たに追加したことで、エンタープライズクラスのフラッシュを中堅企業向けに拡張しました。1 クラスタあたり最大 700 万 IOPS で 1 ミリ秒未満のレイテンシを実現する AFF A シリーズは、真のユニファイドスケールアウトアーキテクチャを基盤として構築された、オールフラッシュアレイで最速のファミリーです。</block>
-  <block id="98cc502c279f3c9d062baa031bd85b8b" category="paragraph">AFF A シリーズを使用すると、旧世代の AFF システムと比較して、 2 倍の処理を半分のレイテンシで完了できます。AFF A シリーズのメンバーは、 40 Gb イーサネット（ 40GbE ）と 32Gb ファイバチャネル（ FC ）の両方の接続を提供する業界初のオールフラッシュアレイです。そのため、フラッシュの高速化と高速化が進むにつれて、ストレージからネットワークへと移行する帯域幅のボトルネックが解消されます。</block>
-  <block id="9e8a314593ed27e058966730a576b116" category="paragraph">ネットアップは、最新のソリッドステートドライブ（ SSD ）テクノロジを使用して、オールフラッシュストレージのイノベーションで業界をリードしています。15TB の SSD をサポートする初のオールフラッシュアレイとして、 A シリーズの登場とともに AFF システムもマルチストリーム書き込み SSD の業界初となりました。マルチストリーム書き込み機能により、 SSD の使用可能容量が大幅に増加します。</block>
-  <block id="9edd11c957d916999ebcc3bd361255c1" category="paragraph">NetApp ONTAP Flash Essentials は、オールフラッシュ FAS のパフォーマンスを支える強力な基盤です。ONTAP は、業界をリードするデータ管理ソフトウェアです。ただし、 ONTAP は NetApp WAFL （ Write Anywhere File Layout ）ファイルシステムを備えており、フラッシュメディア向けに標準で最適化されていることは広く知られていません。</block>
-  <block id="073ceccce39122cf4ba669165b4e8f84" category="paragraph">ONTAP フラッシュ Essentials は、 SSD のパフォーマンスと耐久性を最適化する以下の機能を備えています。</block>
-  <block id="4c32fd0dd84ab55de1716075af5112f5" category="list-text">インライン圧縮、インライン重複排除、インラインデータコンパクションなどのネットアップのデータ削減テクノロジにより、スペースを大幅に削減できます。NetApp Snapshot テクノロジと NetApp FlexClone テクノロジを使用すれば、削減効果をさらに高めることができます。お客様の導入事例を基にした調査では、これらのデータ削減テクノロジにより、スペースを最大 933 分の 1 に削減できることがわかりました。</block>
-  <block id="586fbf85f26c4c5e43550f4f1ab7eb7f" category="list-text">空きブロック内の連続領域への書き込みで、パフォーマンスとフラッシュメディアの寿命を最大化</block>
-  <block id="f801d5d6b1fdf46575584e7f12fbb5ed" category="list-text">フラッシュ固有の読み取りパスの最適化により、一貫した低レイテンシが実現します。</block>
-  <block id="06e86951dc6e1b9692162277ef02f5e8" category="list-text">並行処理では、一度に処理する要求が増えます。</block>
-  <block id="6b5795f5c0e3fadd65baa6316d87b70b" category="list-text">フラッシュへの Software-Defined アクセスにより、導入の柔軟性を最大限に高めることができます。</block>
-  <block id="d7fc77fa744052f21af0404ebee7888c" category="list-text">アドバンストディスクパーティショニング（ ADP ）を使用すると、ストレージ効率が向上し、使用可能な容量が約 20% 拡張されます。</block>
-  <block id="a7db4d8f08bf9b2be47d082a89386494" category="list-text">データファブリックを使用すると、オンプレミスまたはクラウドのフラッシュとハードディスクドライブティア間でワークロードのライブマイグレーションを実行できます。</block>
-  <block id="455fed0cad7e745fc4fed31f7203c3af" category="paragraph">QoS 機能により、マルチワークロード環境とマルチテナント環境で最低限のサービスレベル目標を保証</block>
-  <block id="8cfa7a718485043f388e1ce0a10cccfd" category="paragraph">アダプティブ QoS の主な差別化要因は次のとおりです。</block>
-  <block id="43dd7ef47304b5ca3e279ddc6c169dee" category="list-text">シンプルな自己管理型 IOPS/TB またはスループット MB/TB 。データ容量が増えるにつれて、パフォーマンスも向上します。</block>
-  <block id="94d14c54b3964ba704619a20a4c3692f" category="list-text">サービスレベルのパフォーマンスポリシーに基づいてストレージ消費を簡易化。</block>
-  <block id="0f1c31666a071c06dd8a3601e603f324" category="list-text">混在ワークロードを単一クラスタに統合し、パフォーマンスサービスレベルを保証重要なアプリケーションをサイロ化する必要はもうありません。</block>
-  <block id="e4087e5a0c6d18e249493d1f1becf526" category="list-text">ノードとディスクを統合してコストを大幅に削減</block>
-  <block id="7f0cfe102d906b3c83b8de2c65cd58a2" category="summary">このドキュメントでは、 ESXi 構成のベストプラクティスについて説明します。 ESXi 構成は、 VMware のシステム間のベストプラクティスに記載されています。</block>
   <block id="14344c7e1407102dba356f3a96926a7f" category="doc">ESXi 構成のベストプラクティス</block>
-  <block id="b6f58dc2d6de93a1ce946eee7b9cb5d3" category="inline-link">VMware の相互運用性のベストプラクティスです</block>
-  <block id="9e3d028ac8808decfd008af6570d77ea" category="paragraph">ESXi ホスト側の設定については、を参照してください<block ref="571aec3e212a7f28f53e52e01424675a" category="inline-link-rx"></block>。エンタープライズデータベースのワークロードを実行する場合と同様に、 VMware ホストを設定します。</block>
-  <block id="959603f23dbeee62ce786063e72ce161" category="list-text">Virtual Storage Console （ VSC ） for VMware vSphere は、 ESXi ホストのマルチパス設定と HBA タイムアウト設定をチェックし、ネットアップストレージシステムに合わせて設定します。VSC で設定される値は、ネットアップによる厳格な内部テストに基づいています。</block>
-  <block id="69e58d3ca3c8da9feb3b5b6afd5ee9f1" category="list-text">ストレージのパフォーマンスを最大限に高めるには、 VMware vStorage APIs for Array Integration （ VAAI ）対応のストレージハードウェアの使用を検討する必要があります。NetApp Plug-in for VAAI は、 ESXi ホストにインストールされている VMware の仮想ディスクライブラリを統合するソフトウェアライブラリです。VMware VAAI パッケージを使用すると、特定のタスクを物理ホストからストレージアレイにオフロードできます。</block>
   <block id="df299b055549bc8ca66052728afa46a7" category="paragraph">シンプロビジョニングやハードウェアアクセラレーションなどのタスクをアレイレベルで実行して、 ESXi ホスト上のワークロードを削減できます。コピーオフロード機能やスペースリザベーション機能によって、 VSC の処理のパフォーマンスが向上します。ネットアップサポートサイトから、このプラグインのインストールパッケージをダウンロードして、インストール手順を確認できます。</block>
-  <block id="613e8e7bf589f31e9d839a920dbe2be0" category="paragraph">VSC は、ネットアップストレージコントローラのパフォーマンスの最適化とフェイルオーバーを実現するために、 ESXi ホストのタイムアウト、マルチパス設定、 HBA タイムアウト設定などの値を設定します。</block>
-  <block id="bb050ea3dc7f994ebd24d6ec5ebad89e" category="list-text">VMware vSphere Web Client のホームページで、 vCenter &gt; Hosts をクリックします。</block>
   <block id="119532d922c9cb5a03ab543abab4b39b" category="list-text">ホストを右クリックし、 Actions &gt; NetApp VSC &gt; Set Recommended Values を選択します。</block>
   <block id="4c53150a7d5b0d30a5be88983c1b112f" category="list-text">NetApp Recommended Settings （ネットアップの推奨設定）ダイアログボックスで、システムに最も適した値を選択します。</block>
   <block id="5bdf7813f1843ab7cbdb024ffe39d76d" category="paragraph">標準の推奨値がデフォルトで設定されます。</block>
-  <block id="6c4db28a24c43663ac7c0a45cffb21da" category="paragraph"><block ref="6c4db28a24c43663ac7c0a45cffb21da" category="inline-image-macro-rx" type="image"></block></block>
   <block id="18d0ad44a1e563aaf9f5871e32535a6c" category="list-text">[OK] をクリックします。</block>
   <block id="41b7c35b4ecadf2ab857e78756379638" category="inline-link-macro">次：ネットアップの構成</block>
-  <block id="d2e9a03a96ddc6969831336f42b9d574" category="paragraph"><block ref="d2e9a03a96ddc6969831336f42b9d574" category="inline-link-macro-rx"></block></block>
-  <block id="6a931de2d0c435c616d893d70a0f5d67" category="summary">このテクニカルレポートでは、 Epic EHR （電子カルテ）アプリケーションソフトウェア環境向けに FlexPod （ネットアップストレージと Cisco Unified Computing System ）のサイジングに関するガイダンスを提供します。</block>
-  <block id="d47e4c0b89154b4f02f15622e2f3937e" category="doc">FlexPod for Epic Directional サイジングガイド</block>
-  <block id="3abe1136b0067d363c8e2e2c2e7fc8f7" category="paragraph">Brian O'Meony 、 Ganesh Kamath 、 Atul Bhalodia 、 NetApp Mike Brennan 、 Jon Ebmeier 、 シスコ</block>
   <block id="261addf78c7b2c961032b3dd08ba0b1f" category="section-title">目的</block>
-  <block id="bc5ff0bb16ec5347cffaaff3e42b4822" category="paragraph">Epic Hyperspace 、 Intersystems Cach é データベース、 Cogito Clarity 分析 / レポートスイート、 Epic アプリケーションレイヤをホストするサービスサーバをホストする FlexPod システムは、信頼性の高いハイパフォーマンスインフラを迅速に導入できる統合プラットフォームを提供します。FlexPod 統合プラットフォームは、高度なスキルを持つ FlexPod チャネルパートナーが導入し、 Cisco とネットアップのテクニカルアシスタンスセンターがサポートします。</block>
-  <block id="b2d41c9782437ef4eecf42aca655dbf7" category="paragraph">本ドキュメントで説明するサイジングの演習では、ユーザ、グローバルリファレンス数、可用性、ディザスタリカバリ（ DR ）に関する要件について説明します。コンピューティング、ネットワーク、ストレージのインフラコンポーネントの最適なサイズを判断することがその目的です。</block>
-  <block id="cdf4b607b60143d3bd8215337f520a02" category="paragraph">このマニュアルの主な内容は、次のとおりです。</block>
-  <block id="4ee2bcec265f41a5c011850eb9ea191a" category="inline-link-macro">リファレンスアーキテクチャ</block>
-  <block id="52ffe9cd4e6eda50941f06cb7bb0f9d6" category="list-text"><block ref="9be0395381baebe6c30b43ef2b6e5f8b" category="inline-link-macro-rx"></block>では、 Epic 本番データベースのワークロードをホストするために使用できる、小規模、中規模、大規模のコンピューティングストレージアーキテクチャについて説明しています。</block>
-  <block id="17d4132ac821bd09472bda468a3bb511" category="list-text"><block ref="5ad1e5149f76e1d2b0e0f01dc674f98e" category="inline-link-macro-rx"></block>ストレージアーキテクチャの構成部品表の例を示しています。ここで説明する構成は、一般的なガイダンスを目的としています。システムのサイズはワークロードに応じて必ず設定し、必要に応じて調整してください。</block>
-  <block id="cda1b25f3e8183161db8886a4ea679f0" category="paragraph">FlexPod のアーキテクチャ基盤で Epic 環境を運用することで、医療機関はスタッフの生産性向上と設備投資や運用コストの削減を期待できます。FlexPod は、 Cisco とネットアップの戦略的パートナーシップによる検証済みで厳格にテストされた統合インフラです。予測可能な低レイテンシのシステムパフォーマンスと高可用性を実現するように特別に設計および設計されています。このアプローチにより、 Epic EHR システムのユーザは快適性が向上し、最高の応答時間を実現できます。</block>
-  <block id="5d366dfacc2e1f1d537020a69da1ad30" category="paragraph">Cisco とネットアップが提供する FlexPod 解決策は、パフォーマンスに優れたモジュラ設計、検証済み、統合、仮想化により、 Epic システムの要件を満たしています。 効率性、拡張性、コスト効率に優れたプラットフォーム。Epic 対応の FlexPod Datacenter には、ヘルスケア業界に特有の次のようなメリットがあります。</block>
-  <block id="818a0a53674ef2bfa164563e5bb519b1" category="list-text">* モジュラアーキテクチャ。 * FlexPod は、 Epic モジュラーアーキテクチャの様々なニーズに対応し、特定のワークロードごとに専用の FlexPod プラットフォームを構成しています。すべてのコンポーネントは、クラスタ化されたサーバとストレージの管理ファブリックと統合された管理ツールセットによって接続されます。</block>
-  <block id="e0eea07a82d1a2c3aefb5516dfd86e0a" category="list-text">* アプリケーションの導入時間を短縮 * 検証済みのアーキテクチャにより、導入の統合時間とリスクが短縮され、 Epic プロジェクト計画を迅速化できます。Epic をサポートする NetApp OnCommand Workforce Automation （ WFA ）のワークフローにより、 Epic のバックアップや更新が自動化され、サポートされていないカスタムスクリプトは不要になりました。解決策を使用して Epic の初期導入、ハードウェアの更新、拡張を行う場合でも、プロジェクトのビジネスバリューに移行できるリソースが増えています。</block>
-  <block id="44d0d78246accd622cdb88b6e16ae1cd" category="list-text">* 運用の簡素化とコストの削減。 * 従来の独自の RISC および UNIX プラットフォームを、どこにいても臨床医をサポートできるより効率的でスケーラブルな共有リソースに置き換えることで、コストと複雑さを解消します。この解決策は、リソースの使用率を高め、 ROI を向上させます。</block>
-  <block id="bc779e63424873eadc016e508d25ae88" category="list-text">* インフラストラクチャの迅速な導入。 * 既存のデータセンターでもリモートロケーションでも、 Epic を使用した FlexPod データセンターの統合されたテスト済みの設計により、新しいインフラストラクチャをより少ない労力でより短時間で稼働させることができます。</block>
-  <block id="11bd23e97b7442580f1d2e203c2e7d67" category="list-text">* ノンストップオペレーション。 * ストレージの保守、ハードウェアのライフサイクル処理、ソフトウェアのアップグレードを、ビジネスを中断することなく実行できます。</block>
-  <block id="21c0785c905dbac148c29dbd2600a871" category="list-text">* セキュアマルチテナンシー。仮想化されたサーバおよびストレージ共有インフラストラクチャのニーズの増大をサポートし、特にデータベースとソフトウェアの複数のインスタンスをホストする場合に、施設固有の情報のセキュアマルチテナンシーを実現します。</block>
-  <block id="beba974a5deddf3ffa53bff86389e9f5" category="list-text">* プールされたリソースの最適化。 * 物理サーバとストレージコントローラの数を減らし、ワークロードの負荷分散を行い、パフォーマンスを向上させながら使用率を向上させます。</block>
-  <block id="28f0324adaf6afdb3ef2666ca3c4e9c5" category="list-text">* サービス品質（ QoS ）。 * FlexPod は、スタック全体で QoS を提供します。業界をリードする QoS ストレージポリシーにより、共有環境で差別化されたサービスレベルを実現します。これらのポリシーを使用することで、ワークロードに最適なパフォーマンスを提供し、過負荷のアプリケーションを分離および制御できます。</block>
-  <block id="e4408096d206b1fb1a79ce8ad173f2fe" category="inline-link">ストレージ容量削減保証</block>
-  <block id="027acbd0c587106c65f47e53b1a5c877" category="list-text">* ストレージ効率。 * NetApp 7 ： 1 でストレージコストを削減<block ref="e9c2f221ac001573dfbf766458b9c402" category="inline-link-rx"></block>。</block>
-  <block id="219631d27044b5bcc2a3d983415132b1" category="list-text">* 俊敏性。 * FlexPod システムが提供する業界トップのワークフロー自動化、オーケストレーション、管理ツールにより、 IT 部門はビジネス要求への対応力を大幅に高めることができます。こうした要求は、 Epic によるバックアップや追加テスト / トレーニング環境のプロビジョニングから、人口の健康管理イニシアチブのための分析データベースのレプリケーションまで多岐にわたります。</block>
-  <block id="c513033095bb02d55791dacde3bf6bfa" category="list-text">* 生産性。 * この解決策は迅速に導入および拡張できるため、医療従事者によるエンドユーザーの操作性が最適化されます。</block>
-  <block id="5ad9e9dfee445c0fa5078bd891c7e6b1" category="list-text">* データファブリック。 * ネットアップデータファブリックアーキテクチャは、サイト間、物理的な境界を越えて、アプリケーション間でデータを結び付けます。データファブリックは、 Data-Centric の世界におけるデータ主体の企業向けに構築されています。データは複数の場所に作成されて使用されるため、多くの場合、他の場所、アプリケーション、インフラとの利用や共有が必要になります。お客様は、整合性と統合性に優れたデータの管理方法を求めています。データファブリックは、 IT を管理し、増え続ける IT の複雑さを軽減するデータ管理の方法を提供します。</block>
-  <block id="d734a6e4575c33f0dd0bb5a0d5a3df3d" category="paragraph">このドキュメントでは、 Cisco Unified Computing System （ Cisco UCS ）と NetApp ONTAP ベースのストレージを使用する環境について説明します。Epic をホストするためのサンプルリファレンスアーキテクチャが用意されています。</block>
   <block id="a8f0bd5f9473b195579882fa581c7357" category="paragraph">次の内容は含まれません。</block>
-  <block id="8d5c36a3673e1b8077c9c1de4494f726" category="list-text">NetApp System Performance Modeler （ SPM ）またはその他のネットアップサイジングツールを使用する際の、詳細なサイジングガイダンス</block>
-  <block id="757d2e40bc2916f480fccdb6512621d6" category="list-text">非本番ワークロード向けのサイジング</block>
-  <block id="6ca4766d90d524c225cf7e21cc7c3def" category="paragraph">本ドキュメントは、ネットアップおよびパートナーのシステムエンジニアとプロフェッショナルサービス担当者を対象としています。本ドキュメントは、コンピューティングとストレージのサイジングの概念を十分に理解していること、および Cisco UCS とネットアップストレージシステムに関する技術的な知識があることを前提としています。</block>
-  <block id="a52f60aff1e118fcd45a4fc38acd5219" category="section-title">関連ドキュメント</block>
-  <block id="67c2eb04c83c0cc76b3870adf0376e13" category="paragraph">このテクニカルレポートに関連するテクニカルレポートを次に示します。FlexPod インフラストラクチャで Epic のサイジング、設計、導入に必要なドキュメントをまとめています。</block>
-  <block id="ecb1e944e8a3d37434536fd21a2927ae" category="inline-link">TR-4693 ：『 FlexPod Datacenter for Epic EHR Deployment Guide 』</block>
-  <block id="392107ed1220f85046efce431024fa57" category="list-text"><block ref="392107ed1220f85046efce431024fa57" category="inline-link-rx"></block></block>
-  <block id="28784e4d250e5f3d5396d8af3461ed50" category="list-text"><block ref="cd5e7c005bde3a65779866d41d2ae37c" category="inline-link-rx"></block> （ Field Portal へのアクセスが必要です）。</block>
-  <block id="a7828ffbf91528ecedfcc824a719b423" category="list-text"><block ref="4decdb7e2bf71c5815ff018a74f9774b" category="inline-link-rx"></block></block>
-  <block id="216d242d79e7dcc9c61e4d2c865eae2d" category="summary">AFF A300 HA ペアでは、存在する大規模な Epic インスタンスを快適に実行できます。非常に大規模な Epic インスタンスが 2 つ以上ある場合、 NetApp SPM ツールの結果に基づいて、 AFF A700 の使用が必要になることがあります。</block>
-  <block id="510bd156fd7b26082c5f7c62bd2ba947" category="doc">ワークロードのテスト</block>
-  <block id="428cac60a6b385d620b8368307ff7a3b" category="section-title">AFF A300 手順の略</block>
-  <block id="87dc154a226feafc8c0f6636a4ea0662" category="section-title">データ生成</block>
-  <block id="8af879a3e40ebce2f34b4e6aff012d4a" category="paragraph">エピックの Dgen.pl スクリプトを使用して、 LUN 内のデータが生成されました。このスクリプトは、 Epic データベースと同様のデータを作成するように設計されています。</block>
-  <block id="5aa54005d1e216630ce21afdeb82fb58" category="paragraph">次の Dgen コマンドは、 RHEL VM 、 Epic rhel1 、 Epic rhel2 から実行しました。</block>
-  <block id="d9bbc6f8903918932c73dc2331c6b3b2" category="paragraph">「 -pctfull 」はオプションで、データを格納する LUN の割合を定義します。デフォルトは 95% です。サイズはパフォーマンスには影響しませんが、 LUN へのデータの書き込み時間には影響します。</block>
-  <block id="084fb9aa1abedcfa50609ec2fd33a05f" category="paragraph">dgen プロセスが完了したら、各サーバーに対して Genio テストを実行できます。</block>
-  <block id="998f9f11a502c14cb2153d6420c39b94" category="section-title">Genio を実行します</block>
-  <block id="8264c9b3bd8cde2d74139ae382bb31b3" category="paragraph">2 台のサーバをテストしました。75 、 000 IOPS から 1 、 000 、 000 IOPS への上昇が発生しましたが、これは非常に大規模な Epic 環境を表しています。両方のテストを同時に実行しました。</block>
-  <block id="4b1907843e321dd98ba33c8a9acc8082" category="paragraph">サーバ epic rhel1 から次の Genio コマンドを実行します。</block>
-  <block id="85bc6ef336f394022028b4ffc2b06be1" category="section-title">AFF A300 の Genio 結果です</block>
-  <block id="a216162129be988c30420cbe22d7413c" category="paragraph">次の表に、 AFF A300 における Genio の結果を示します</block>
-  <block id="ceade3037f194497077d49766908d807" category="cell">読み取り IOPS</block>
-  <block id="096e7655a5c94dec635d9fe59470dded" category="cell">書き込み IOPS</block>
-  <block id="73ff86be5df61807378775041d12e37c" category="cell">合計 IOPS</block>
-  <block id="57fde1c1968f5991d8e1ce0e6ebf42f8" category="cell">最長書き込みサイクル（秒）</block>
-  <block id="cd9acc1a2167065172720c215039815e" category="cell">実効書き込みレイテンシ（ミリ秒）</block>
-  <block id="679b9ae9597ece2341cda489b55d77fc" category="cell">読み取り / 読み取りの平均値（ミリ秒）</block>
-  <block id="f7e8d0ee77dd6dd04c05932f79efcdb4" category="cell">142505</block>
-  <block id="e79b743519dc083a9d431d0f6cc9724e" category="cell">46442</block>
-  <block id="d3c9d42e943ee1029c57faea3ffc8ed9" category="cell">188929</block>
-  <block id="354317d50d0a86258dbf4c3899677678" category="cell">44.68</block>
-  <block id="599cc7775df4b8f839fba86d2b9d7177" category="cell">0.115</block>
-  <block id="7dbf455f8e8e1a7afd34ceb81beb1523" category="cell">0.66</block>
-  <block id="cd0444886586e349ac6a2b7bff76f3cf" category="section-title">AFF A700 手順</block>
-  <block id="582229b5c095de0771bb56a57bade970" category="paragraph">大規模な Epic 環境、一般に 10 百万件を超えるグローバルリファレンスの場合、お客様は AFF A700 を選択できます。</block>
-  <block id="5b4a96ab039ca55a02f6b276f8de3c98" category="paragraph">エピックの Dgen.pl スクリプトを使用して、 LUN 内のデータが生成されました。このスクリプトは、 Epic データベースと同様のデータを作成するように設計されています。</block>
-  <block id="2d4fe01b3afd886a83201d722ef0280a" category="paragraph">3 つすべての RHEL VM で次の Dgen コマンドを実行します。</block>
-  <block id="fd8a51355a64362de898afe9d11e5c52" category="paragraph">dgen プロセスが完了したら、各サーバーの Genio テストを実行する準備ができました。</block>
-  <block id="83a55e0255883208723c63e26f1a850f" category="paragraph">3 台のサーバをテストしました。2 台のサーバでは、 75 、 000 IOPS から 10 、 000 IOPS への上昇が発生しました。これは非常に大規模な Epic 環境を表しています。3 台目のサーバは、 75,000 IOPS から 170,000 IOPS に増加する Bully サーバとして設定されています。3 つのテストをすべて同時に実行しました。</block>
-  <block id="3c0a18acac66a6fa1aa20c6f8849dfb0" category="section-title">AFF A700 での Genio の結果</block>
-  <block id="3dd69e24ace683629910339ab0ec39be" category="paragraph">次の表に、 AFF A700 の Genio の結果を示します。</block>
-  <block id="ecb0318b015b832ed5c04dbbeab6c2c1" category="cell">241,180</block>
-  <block id="16232e1a3821c982fc3c7d3556f6763a" category="cell">78,654</block>
-  <block id="bd31db8bca3018e405832743d4407523" category="cell">319,837</block>
-  <block id="2c7e75278e407194705486fb7bcff935" category="cell">43.24</block>
-  <block id="305cf1fb13b9539dcd317a0354c9ed61" category="cell">0.09</block>
-  <block id="c7522ce359dcd5a0ebdaeb22a34f6b89" category="cell">1.05</block>
-  <block id="53e5c2be5112a9f30330aa7748248ef0" category="section-title">AQOS を使用したパフォーマンス SLA</block>
-  <block id="37738e8cbb0ad8092882b2d6aed563c9" category="paragraph">ネットアップでは、 AQOS ポリシーを使用して、ワークロードのパフォーマンス値の下限と上限を設定できます。フロア設定により、最小のパフォーマンスが保証されます。Epic などのアプリケーションでは、ボリュームのグループに IOPS/TB を適用できます。QoS ポリシーに割り当てられた Epic ワークロードが、同じクラスタ上の他のワークロードから保護されています。最小要件が保証されると同時に、ワークロードのピーク時にコントローラ上の利用可能なリソースを使用できるようになります。</block>
-  <block id="f2dde399e30b3fa14984bdfe2eef1307" category="paragraph">このテストでは、サーバ 1 とサーバ 2 を AQOS で保護し、 3 台目のサーバをクラスタ内の原因のパフォーマンス低下に対する Bully ワークロードとして機能させました。AQOS では、サーバ 1 とサーバ 2 が指定された SLA で実行されることが許可されましたが、 Bully ワークロードでは、書き込みサイクルが長くなるとパフォーマンスが低下している兆候が見られました。</block>
-  <block id="a4477f17229495dfd8e9ef39456e0e23" category="section-title">アダプティブ QoS のデフォルト</block>
-  <block id="c0c09e3519d715f55bb6170567a98c1b" category="paragraph">ONTAP には、 Value 、 Performance 、 Extreme の 3 つのデフォルト AQOS ポリシーが用意されています。各ポリシーの値は 'qos' コマンドを使用して表示できますすべての AQOS 設定を表示するには、コマンドの最後に「 -instant 」を使用します。</block>
-  <block id="d0a96fbfa430640fab5fac4d5ca365c2" category="paragraph">AQOS ポリシーを作成する構文は次のとおりです。</block>
-  <block id="883a8b3bf2f3fb6d5b71f53a844fe2fb" category="paragraph">AQOS ポリシーには、いくつかの重要な設定があります。</block>
-  <block id="a0e138fc7727d5fbd206ee48a7ad1838" category="list-text">* 想定 IOPS 。 * このアダプティブ設定は、ポリシーの最小 IOPS/TB 値です。ワークロードは、少なくともこのレベルの IOPS/TB が保証されます。これは、このテストで最も重要な設定です。この例のテストでは、パフォーマンス AQOS ポリシーは 20TB あたり 2048IOPS/TB に設定しました。</block>
-  <block id="d3f5579b8c8f62bfd7ce4446e3e671ea" category="list-text">* ピーク IOPS 。 * このアダプティブ設定は、ポリシーの最大 IOPS/TB 値です。この例のテストでは、パフォーマンス AQOS ポリシーを TB あたり 4096IOPS/TB に設定しました。</block>
-  <block id="140e2ab3152595f0f3d794bc22175509" category="list-text">* ピーク IOPS の割り当て。 * オプションは割り当てスペースまたは使用済みスペースです。このパラメータは、データベースが LUN のサイズを大きくするにつれて変化するため、使用済みスペースに設定します。</block>
-  <block id="f4246790721ac311ff6b78c23c5deae2" category="list-text">* 絶対最小 IOPS 。 * この設定は静的で、アダプティブではありません。このパラメータは、サイズに関係なく最小 IOPS を設定します。この値は、サイズが 1TB 未満で、このテストには影響しない場合にのみ使用されます。</block>
-  <block id="9975ac1402087f1a86bc33c5302f4298" category="paragraph">一般に、本番環境の Epic ワークロードは約 1 、 000IOPS/TB のストレージと容量で実行され、 IOPS は直線的に増加します。デフォルトの AQOS パフォーマンスプロファイルは、 Epic ワークロードには十分ではありません。</block>
-  <block id="1cd64115730bb56b4b6d6c341f275a2c" category="paragraph">このテストでは、 5TB 未満の本番サイズのデータベースは反映しませんでした。目標は、各テストを 75 、 000 IOPS で実行することです。EpicProd AQOS ポリシーの設定は次のとおりです。</block>
-  <block id="273bd6d818fc0c0660390919c81df32f" category="list-text">想定 IOPS/TB = 合計 IOPS / 使用済みスペース</block>
-  <block id="cb6c94be46a2930c9bec8e9422f228ff" category="list-text">15 、 000 IOPS/TB = 75 、 000 IOPS / 5TB</block>
-  <block id="5e33456de378d8beb39a441e8cd6ee4a" category="paragraph">次の表に、 EpicProd AQOS ポリシーで使用された設定を示します。</block>
-  <block id="51ac4bf63a0c6a9cefa7ba69b4154ef1" category="cell">設定</block>
   <block id="689202409e48743b914713f96d93947c" category="cell">価値</block>
-  <block id="84fb7b98e6e50302bf6cc709c92a6192" category="cell">5TB</block>
-  <block id="f91ac817558ad058b8bc10a62b9ff990" category="cell">必要な IOPS</block>
-  <block id="87cb3514b03d2ccb9e04625ceea22d1f" category="cell">75,000</block>
-  <block id="ed552a7e6158615d8b259ef83127639d" category="cell">peak-iops-allocation のようになります</block>
-  <block id="aa06850d5c9d77127d7340a724cb89be" category="cell">使用済みスペース</block>
-  <block id="4dff4e68eb1da9bee708bd0f4361d4ff" category="cell">絶対最小 IOPS</block>
-  <block id="25f2f59ca889b1b5858411ddd8cab983" category="cell">7,500</block>
-  <block id="921ad87862a6cb534bf64a36dc685190" category="cell">想定 IOPS/TB</block>
-  <block id="b971529933d7df53a1bbf1328809f595" category="cell">15,000</block>
-  <block id="eddcc0fdb991cbf3e872a7d78bdaebf5" category="cell">最大 IOPS/TB</block>
-  <block id="8487699fb65ed58bf886a609cc850b23" category="cell">30,000</block>
-  <block id="7efd3479aa85f058c1026b85f2ea2e97" category="paragraph">次の図に、使用済みスペースが時間の経過とともに増加するにつれて、下限の IOPS と上限の IOPS がどのように計算されるかを示します。</block>
-  <block id="3d0738f5cbc3079aa42d97f8658b50b6" category="paragraph"><block ref="3d0738f5cbc3079aa42d97f8658b50b6" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="3839295e41817070de1685ad173173e3" category="paragraph">本番サイズのデータベースでは、最後の例のようなカスタム AQOS プロファイルを作成するか、デフォルトのパフォーマンス AQOS ポリシーを使用できます。パフォーマンス AQOS ポリシーの設定を次の表に示します。</block>
-  <block id="de560b4aa51741aaf70431dd132eec9a" category="cell">75TB</block>
-  <block id="cee631121c2ec9232f3a2f028ad5c89b" category="cell">500</block>
-  <block id="c9e919815777627095c51eda50c5713a" category="cell">1,000</block>
-  <block id="20191cac600c0c3cb3137c4cf87bbe12" category="cell">2,000</block>
-  <block id="ae99bf0f349727e90b79977da4df3950" category="paragraph">次の図に、デフォルトのパフォーマンス AQOS ポリシーで使用されるスペースが時間の経過とともに増加するにつれて、下限と上限の IOPS がどのように計算されるかを示します。</block>
-  <block id="9513f35d0d2e1dae99fce4bab3db1d27" category="paragraph"><block ref="9513f35d0d2e1dae99fce4bab3db1d27" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="3225a10b07f1580f10dee4abc3779e6c" category="section-title">パラメータ</block>
-  <block id="8ce3f5af4db4a9bf4a1857a6b236c5bb" category="list-text">次のパラメータは、アダプティブポリシーグループの名前を指定します。</block>
-  <block id="d317b6690109f7c7cd94eddd22f4d111" category="paragraph">アダプティブポリシーグループの名前は、英数字、およびアンダースコアとハイフンを使用し、 127 文字以内の一意な名前にする必要があります。アダプティブポリシーグループ名の 1 文字目は英数字でなければなりません。アダプティブ・ポリシー・グループ名を変更するには 'qos adaptive-policy-group rename コマンドを使用します</block>
-  <block id="7912855635aeac570aee1a5730b647d5" category="list-text">次のパラメータは、このアダプティブポリシーグループが属するデータ SVM （コマンドラインでは vserver と呼ばれます）を指定します。</block>
-  <block id="c8cacdce8c767ff5493fb7e46ba6c9bb" category="paragraph">このアダプティブポリシーグループは、指定した SVM に含まれるストレージオブジェクトにのみ適用できます。システムに SVM が 1 つしかない場合は、その SVM がデフォルトで使用されます。</block>
-  <block id="f4e30fdff321d94a2e26847386407c34" category="list-text">次のパラメータは、ストレージオブジェクトの割り当てサイズに基づいて、割り当てられる最小想定 IOPS/TB または IOPS/GB を指定します。</block>
-  <block id="46b916f14be5bbe8bd689ed84741a4ab" category="list-text">次のパラメータは、ストレージオブジェクトの割り当てサイズまたは使用済みサイズに基づいて、割り当て可能な最大 IOPS/TB または割り当て済み IOPS を指定します。</block>
-  <block id="670e25b37d51d8400f31f5d96a2fb556" category="list-text">次のパラメータは、想定 IOPS がこの値より低い場合に上書き値として使用される絶対最小 IOPS を指定します。</block>
-  <block id="f7528253f30faa748e631559c6872737" category="paragraph">デフォルト値は次のように計算されます。</block>
-  <block id="0ef74de93067656dc8b8849c585481f6" category="paragraph">エピック「 gen.pl 」スクリプトを使用して、 LUN 内のデータが生成されました。このスクリプトは、 Epic データベースと同様のデータを作成するように設計されています。</block>
-  <block id="c04f2edc2955f85fb7771e75c2fc2cdf" category="paragraph">次の Dgen コマンドが、 3 台すべての RHEL VM で実行されました。</block>
-  <block id="8306b0e6f2677aaa75c1377a3e7c5e01" category="paragraph">3 台のサーバをテストしました。2 つの IOPS は一定で 75 、 000 IOPS を達成しましたが、これは非常に大きな Epic 環境であるためです。3 台目のサーバは、 75,000 IOPS から 150,000 IOPS に増加する Bully として設定されています。3 つのテストをすべて同時に実行しました。</block>
-  <block id="5f5c3bac5b6d1be8e8b92bf6bf98b9b1" category="section-title">Server epal_rhel1 Genio テスト</block>
-  <block id="23c9b94fc5f76d5866edfeb71ab77772" category="paragraph">次のコマンドが実行され、各ボリュームに EpicProd AQOS 設定が割り当てられました。</block>
-  <block id="52174463399be0a45eb975e20184a336" category="paragraph">サーバ epic rhel1 から次の Genio コマンドが実行されました。</block>
-  <block id="8c4322b63764a7c2ee74f30a48c7d7bc" category="section-title">Server epal_rhel2 Genio テスト</block>
-  <block id="e6b0b9afc76df60d3586953345003027" category="paragraph">次の Genio コマンドが、サーバ ep-rhel2 から実行されました。</block>
-  <block id="2a95364ef0cd702ef123e763eb2b3891" category="section-title">サーバ ep_RHEL3 Genio テスト（ Bully ）</block>
-  <block id="9ab9a90f87e4303aef9b1affb049438e" category="paragraph">次のコマンドでは、各ボリュームに AQOS ポリシーは割り当てられません。</block>
-  <block id="6e29ef275cd9594b4df47813d7159559" category="paragraph">サーバ epic RHEL3 から次の Genio コマンドが実行されました。</block>
-  <block id="bef75565e7cb3547d22d6ac16d709047" category="section-title">AQOS のテスト結果</block>
-  <block id="b22246de55c181d77d493574d988cb32" category="paragraph">以降のセクションの表には、各コンカレント Genio テストの summary.csv ファイルからの出力が含まれています。テストに合格するには、最長の書き込みサイクルが 45 秒未満である必要があります。有効な書き込みレイテンシは 1 ミリ秒未満である必要があります。</block>
-  <block id="cad03f16a4dd01d3977f4f6184e61bc1" category="section-title">Server epal_rhel1 の Genio の結果</block>
-  <block id="b17794fce50933163729b4224b6a6177" category="paragraph">次の表に、 AQOS サーバ ep_rhel1 の Genio 結果を示します。</block>
-  <block id="c5301693c4e792bcd5a479ef38fb8f8d" category="cell">を実行します</block>
-  <block id="86cfa2758dc24270f86861fe92aedae4" category="cell">読み取り IOPS</block>
-  <block id="06dfefa7d295854682c6a6f2f613ca2d" category="cell">書き込み IOPS</block>
-  <block id="9c31318fd616fab347dd8f689e8e6be1" category="cell">55655</block>
-  <block id="460d2456c49e58dbb01c6723f6a3a560" category="cell">18176</block>
-  <block id="be5abab81bae109e1a01ea0ac2f6dde7" category="cell">73832</block>
-  <block id="5d869a02b689532bccd89660142d444a" category="cell">32.66</block>
-  <block id="b1659515b9d1a59ebbc790e01084a8f0" category="cell">0.12</block>
-  <block id="6512bd43d9caa6e02c990b0a82652dca" category="cell">11.</block>
-  <block id="3d37445d31b65d4ec0e2539a769273da" category="cell">55653</block>
-  <block id="6ab7fa24224ddd2c8cf2f573e68f8b13" category="cell">18114</block>
-  <block id="bf0552607a32015c010c166f9771efe9" category="cell">73768</block>
-  <block id="67de30a1ce381e819644b6d09650c96c" category="cell">34.66</block>
-  <block id="cb5ae17636e975f9bf71ddf5bc542075" category="cell">0.1</block>
-  <block id="efb1a00af0eb90f71cb142729b47dcb5" category="cell">55623</block>
-  <block id="c4896e2b7f31bdb285363d1ef8ce327e" category="cell">18099 年</block>
-  <block id="c65a46c16b70bf886e62e791cd4a80b3" category="cell">73722</block>
-  <block id="fa5ecfda8d920e44c6486545154331d6" category="cell">35.17</block>
-  <block id="c51ce410c124a10e0db5e4b97fc2af39" category="cell">13</block>
-  <block id="7eeb15d6027a367ea82bc7c5e9f25abd" category="cell">55646</block>
-  <block id="4bdef5fb6ba59b1bfe0db68275c452ab" category="cell">18093 年</block>
-  <block id="6c5f850767ec606ecf7ddcab72ad8b6e" category="cell">73740</block>
-  <block id="b604a37867f67206be0559fb1add75f0" category="cell">35.16</block>
-  <block id="aab3238922bcc25a6f606eb525ffdc56" category="cell">14</block>
-  <block id="889c522de6762367fdbcd152e4c381c7" category="cell">55643</block>
-  <block id="ad5db5924e3e97ed8a387a499efa9fa0" category="cell">18082 年</block>
-  <block id="21fe20409703d8de3b0005d87e3e01ca" category="cell">73726</block>
-  <block id="923ba08a5c804041f8c55140bc90cee9" category="cell">35.66</block>
-  <block id="a80b0d78801cbc324e13fa9e0df7e4b5" category="cell">55634</block>
-  <block id="2509e9380eb3623ef61046dcd190275d" category="cell">18156 年に</block>
-  <block id="61a9f87a3003b93c1f64904bfe305414" category="cell">73791</block>
-  <block id="f4353cdb61d6d4d199b8834ecbee79a0" category="cell">32.54</block>
   <block id="c74d97b01eae257e44aa9d5bade97baf" category="cell">16</block>
-  <block id="89da5fbf7c4df3fad9fba0cb7e4e57ee" category="cell">55629</block>
-  <block id="440be16e6577fac91de2fbfee4b91503" category="cell">18138</block>
-  <block id="39f351988d304b68b3bac5bdc5cd955e" category="cell">73767</block>
-  <block id="6e89f8537dc3cf6978c0e41283d0fd23" category="cell">34.74</block>
-  <block id="27e795eb0f314edf0479737480ab0f2a" category="cell">0.11</block>
-  <block id="2635749c5721bb3d5021ce2144ca0146" category="cell">18131</block>
-  <block id="9775efcc70ff0918ad952cc9c48a511a" category="cell">73777</block>
-  <block id="b6a24579469bd50190497b941fd04c6b" category="cell">35.81</block>
   <block id="6f4922f45568161a8cdf4ad2299f6d23" category="cell">18</block>
-  <block id="14a6038d23924c4761ebfa9f6fc7d89f" category="cell">55639</block>
-  <block id="a2b58f07313388cd23868784a6759b64" category="cell">18136</block>
-  <block id="22ec872ee633043cc5aece5adb261367" category="cell">73775</block>
-  <block id="6dd6c2720fb41f0152e796554e023767" category="cell">35.48</block>
-  <block id="1f0e3dad99908345f7439f8ffabdffc4" category="cell">19</block>
-  <block id="bc24d2f78cc508b3bf9156f59a4ff060" category="cell">55597</block>
-  <block id="2302d39c909793e04e6b01806c3bd60d" category="cell">18141</block>
-  <block id="521de458cb610efb7947719bd8f7b801" category="cell">73739</block>
-  <block id="b367f5cc0b5eebe9e4a595c0ecdff85f" category="cell">35.42</block>
-  <block id="2e23e58d16ab62220d13131acaadeba8" category="section-title">Server epal_rhel2 の Genio の結果</block>
-  <block id="081154faf8e18ce373113e50532d069f" category="paragraph">次の表に、 AQOS サーバ ep_rhel2 の Genio 結果を示します。</block>
-  <block id="fb4d518989bdeae9784d99c398f86f1f" category="cell">18081 年</block>
-  <block id="eb0700925102789f92551f4e03740e02" category="cell">73711</block>
-  <block id="9bdf62cf400dca55bd413a97d86d89b0" category="cell">33.96</block>
-  <block id="6f27749bf039dfb3e4c4200d81bcf4c8" category="cell">55635</block>
-  <block id="cea82cba7b2d06851ba0448f43b1fdc1" category="cell">18152</block>
-  <block id="79d42eab00a128a46e98b8b109001eb9" category="cell">73788</block>
-  <block id="49c9fba3337d8209ac0b442e76cb93fc" category="cell">28.59</block>
-  <block id="081b26a8bdc5222518e51ecdbcc2021c" category="cell">55606</block>
-  <block id="d3481ae553dc4bb6b970b151fbc0ec59" category="cell">18154 年</block>
-  <block id="f960ece51976c3196e8347f8fa6d09c9" category="cell">73761</block>
-  <block id="4eee988a0fe5823bd3b836fead3216f2" category="cell">30.44</block>
-  <block id="4602b477ded0c16df6befcd8447cea0d" category="cell">18148</block>
-  <block id="9191e0c0fc4f0ff1d9e4bae7e118944e" category="cell">73787</block>
-  <block id="188f3dd812186119c45e1d534b908741" category="cell">30.37</block>
-  <block id="74df7f44a49a4ceaee2a955bd1e9d705" category="cell">18145 年になります</block>
-  <block id="52ec3baefcf93a558d994e1bcd3b5c3d" category="cell">73774</block>
-  <block id="66a59c2f4a516b791ac3feff56468a9e" category="cell">30.13</block>
-  <block id="53401e69b53e492be14d7a532c521e3c" category="cell">55619</block>
-  <block id="f2853e5de732df8a70c4ca081fc81119" category="cell">18125</block>
-  <block id="823d21584d1c5fe5ea643bc15d17251f" category="cell">73745</block>
-  <block id="60e6381569658ff877f5793afbca9ab5" category="cell">30.03</block>
-  <block id="41e01f746ab5fcf05ed8be1d738bd405" category="cell">55640</block>
-  <block id="5c80428f70abbc7e1df381f00eeddf74" category="cell">73796</block>
-  <block id="bb73ba626d19989f0c57576e71039b4b" category="cell">33.48</block>
-  <block id="6fb6646fd754ad4b8a6f0a88f7801f9a" category="cell">55613</block>
-  <block id="8288eb462e80418e70a393d245a984ce" category="cell">18177.</block>
-  <block id="295616927f6d6477e7e8e507b3dca993" category="cell">73790</block>
-  <block id="28f04d65f08c9a19b6f1577294ed1f87" category="cell">33.32</block>
-  <block id="4a176dc4d5182a4c465e1a043aaa0a10" category="cell">55605</block>
-  <block id="9ebd41e6cbc1e14780805f6fc0d65867" category="cell">18173.</block>
-  <block id="2c790f933dcb0c7a747741780c6b435d" category="cell">73779</block>
-  <block id="0182c31c443c1e50d85b1d98680c7f3e" category="cell">32.11</block>
-  <block id="821e779cfa8e08b266028c1955cf8ab7" category="cell">18178</block>
-  <block id="f985f43b4ba330d5282dfd9be8003e62" category="cell">73785</block>
-  <block id="5109f9ef60bd297bd14810cd81083f35" category="cell">33.19</block>
-  <block id="22525b7ac93c38dc7be1512e25c6b9b7" category="section-title">サーバーの ep_RHEL3 Genio の結果（ Bully ）</block>
-  <block id="d089e2bfe2c922f61e2c11c35d7aa41d" category="paragraph">次の表は、 AQOS サーバ ep_RHEL3 の Genio 結果を示しています。</block>
-  <block id="e19e97de451de87ed914b775b9b68071" category="cell">最長ワイヤ時間（秒）</block>
-  <block id="12d5c8d75feca181c3522ab2a59b1be7" category="cell">最長書き込みサイクル（秒）</block>
-  <block id="984fabd247157d62d64d3179969e3bbc" category="cell">有効な書き込みレイテンシ（ミリ秒）</block>
-  <block id="81517079882bbb04ab3b2c1fb244f336" category="cell">19980</block>
-  <block id="cdcd8f28ccc4334ee689906332eb2d65" category="cell">81207.</block>
-  <block id="80cea8e3ea0c775628280d850f32f102" category="cell">21.48</block>
-  <block id="81b037f345c625d505ec5e3986052869" category="cell">40.05</block>
-  <block id="ec3dd4dc9a1084b24b736a18994e0bd6" category="cell">21835 年</block>
-  <block id="d3648b20cef64c86522d371f253cf92d" category="cell">88610</block>
-  <block id="cb8ef8a7d3c03b26ea9f8ef6e2d3255c" category="cell">17.57</block>
-  <block id="bb89b94b92abca46a3b7d6cafe52eb04" category="cell">46.32</block>
-  <block id="6c73721a871329829847f6285edeb2e9" category="cell">23657.</block>
-  <block id="5ff2953731e1b4d8d781ebf09ce29ac0" category="cell">95959555</block>
-  <block id="198e02534510fa4ae5473cdaf4102a47" category="cell">19.77</block>
-  <block id="00fb6cced08872c4d156801e3a97a4e9" category="cell">53.03</block>
-  <block id="8eedf769a83524a00a200373ce900374" category="cell">25493</block>
-  <block id="4bebc22c0573635129e2323839cc33c3" category="cell">103387</block>
-  <block id="cf0e01a8a97821d36f8c170b20289726" category="cell">21.93</block>
-  <block id="d5b0943aa7a87e6288250503f7aad282" category="cell">57.53</block>
-  <block id="387634a1c9e6dad2026967f0a0f844f6" category="cell">27331</block>
-  <block id="bb6be86ee5fee71b737ca41c334165ea" category="cell">110766</block>
-  <block id="d2dcd216e803a98cd11dde2140ef671b" category="cell">23.17</block>
-  <block id="18d417b730f24d8122a80395406ae4dc" category="cell">60.57</block>
-  <block id="6e0b4ddb9f9bea023d5e1074b1d1ca82" category="cell">28893</block>
-  <block id="7959d20b8565c7f4884b94d26696d679" category="cell">117906</block>
-  <block id="3e6b79242d9303d058e0d35c09bebdb0" category="cell">26.93</block>
-  <block id="0e4ddc72c2332969db783d67ce46ff42" category="cell">56.56</block>
-  <block id="95d40515d78b92d75f485224d51a7ea6" category="cell">30704</block>
-  <block id="5caffa74376b9bdced4aaa3758cae536" category="cell">125233</block>
-  <block id="d6766dd4dbd5a43a3144bc5ff58b3016" category="cell">28.05</block>
-  <block id="486830d795c4c3d7791ec3ba2171e0c7" category="cell">60.5</block>
-  <block id="e8660ee8b41231074f2d9f16adb2ea71" category="cell">32521</block>
-  <block id="2e5f4f4f432203ace38b1c9a02704735" category="cell">132585</block>
-  <block id="d6d1fd4c301c4424f8af2b1cebb08a66" category="cell">28.43</block>
-  <block id="1712bd0645d4aa7cd73731b568693528" category="cell">64.38</block>
-  <block id="76116a8b8f5da981ab90769dcf68a207" category="cell">34335</block>
-  <block id="34ce626fba0340195e7873e84bf6681a" category="cell">139881</block>
-  <block id="34173cb38f07f89ddbebc2ac9128303f" category="cell">30</block>
-  <block id="84ac1b6e8ecc8341529d86f0ec449929" category="cell">70.38</block>
-  <block id="a8c3f9e540b2045222eca45155f96053" category="cell">36361</block>
-  <block id="80a047c2f6ad45caf870c95560ae2a13" category="cell">147633</block>
-  <block id="86f140cdafb73e7c2baaa83527025da8" category="cell">22.78</block>
-  <block id="0340c4db7aa9b6c3a8253c258fe99ab2" category="cell">73.66</block>
-  <block id="679f47e946645e35bc0d606f07a1217e" category="cell">0.13</block>
-  <block id="d29ad3e3b6d768a1134650e20ee582d1" category="section-title">AQOS のテスト結果の分析</block>
-  <block id="5d8c29403ee15d50ff909af33bb3ec1a" category="paragraph">前のセクションの結果は、サーバーの epal_rhel1 および epm_rhel2 のパフォーマンスが、 epic _RHEL3 の Bully ワークロードの影響を受けていないことを示しています。Epic RHEL3 は最大 150,000 IOPS を上昇させ、コントローラの制限に達して Genio テストに失敗し始めます。Epic rhel1 と Epic rhel2 での書き込みサイクルとレイテンシーは一定で、 Bully サーバのスパイラルは制御不能です。</block>
-  <block id="ca161e7d7134426ad178799950a992f9" category="paragraph">これは、 AQOS の最小ポリシーが、ワークロードを Bully から効果的に分離し、最小レベルのパフォーマンスを保証する仕組みを示しています。</block>
-  <block id="5660563c7def80409a573963d73add7e" category="paragraph">AQOS には次のようなメリットがあります。</block>
-  <block id="ff61bfd075d9ab96089c6b4fd5a4e717" category="list-text">これにより、より柔軟でシンプルなアーキテクチャが実現します。クリティカルなワークロードをサイロ化する必要がなくなり、重要でないワークロードと共存させることができるようになりました。すべての容量とパフォーマンスは、物理的な分離ではなくソフトウェアで管理および割り当てできます。</block>
-  <block id="c1c582a3278792e95a5c5a7a8b3c6525" category="list-text">ONTAP クラスタで Epic を実行する際に必要なディスクやコントローラの容量を節約できます。</block>
-  <block id="a5aea0074c99c378551d8147b8521687" category="list-text">一貫したパフォーマンスを保証するパフォーマンスポリシーにワークロードを簡単にプロビジョニングできます。</block>
-  <block id="220d706ac32390e8b79bab1f5fde772e" category="list-text">必要に応じて、 NetApp Service Level Manager のを実装し、次のタスクを実行することもできます。</block>
-  <block id="799faf6335bd8741a53a6d1237c985f1" category="list-text">ストレージのプロビジョニングを簡易化するサービスカタログを作成</block>
-  <block id="18fe9de433e4ae5f2661ea8a4ec7c155" category="list-text">予測可能なサービスレベルを提供することで、利用率の目標を常に達成できます。</block>
-  <block id="c402e13b67393b57eb8f605f27babf8a" category="list-text">サービスレベル目標を定義する。</block>
-  <block id="ab30d7ae48ab4b6431352e29acb8487f" category="list-text">NetApp FlexPod の設計ゾーン</block>
-  <block id="5d140892abb19870dbdb16a66ce30e73" category="inline-link"><block ref="5d140892abb19870dbdb16a66ce30e73" category="inline-link-rx"></block></block>
-  <block id="d855195c180c14facde524c007fee672" category="paragraph"><block ref="d855195c180c14facde524c007fee672" category="inline-link-rx"></block></block>
-  <block id="3648de5424ada8e3867e3fc60630450d" category="list-text">TR-4707 ：『 FlexPod for Epic Directional Sizing Guide 』</block>
-  <block id="ce071e08b47212b6998fe10d8eaa0395" category="inline-link"><block ref="ce071e08b47212b6998fe10d8eaa0395" category="inline-link-rx"></block></block>
-  <block id="a23fdd07c4cca8f8ced58a7aa49840aa" category="paragraph"><block ref="a23fdd07c4cca8f8ced58a7aa49840aa" category="inline-link-rx"></block></block>
-  <block id="124d27b716e656beadd45c90884189ca" category="paragraph"><block ref="124d27b716e656beadd45c90884189ca" category="inline-link-rx"></block></block>
-  <block id="bba24a5cc560ec63acfd6a431784d76d" category="paragraph"><block ref="bba24a5cc560ec63acfd6a431784d76d" category="inline-link-rx"></block></block>
-  <block id="ac925a8d7365a2b0789a1d5fb516f454" category="inline-link"><block ref="ac925a8d7365a2b0789a1d5fb516f454" category="inline-link-rx"></block></block>
-  <block id="56970dd50312ea1a2c998ab42ac7cebb" category="paragraph"><block ref="56970dd50312ea1a2c998ab42ac7cebb" category="inline-link-rx"></block></block>
-  <block id="a264f2b46191cd47156d840e69784452" category="inline-link"><block ref="a264f2b46191cd47156d840e69784452" category="inline-link-rx"></block></block>
-  <block id="43a30e14bdc6cddfd9137e0b7a81e058" category="paragraph"><block ref="43a30e14bdc6cddfd9137e0b7a81e058" category="inline-link-rx"></block></block>
-  <block id="fee815755bdf964574066d8b5fa90186" category="inline-link"><block ref="fee815755bdf964574066d8b5fa90186" category="inline-link-rx"></block></block>
-  <block id="b026789a1232b01911aa3deade359937" category="paragraph"><block ref="b026789a1232b01911aa3deade359937" category="inline-link-rx"></block></block>
   <block id="02aed7d7f25878a636d26b696ed151bb" category="list-text">ネットアップの製品マニュアル</block>
-  <block id="43bf53828bdbe4c3ac04baf46b878311" category="summary">このテクニカルレポートは、 FlexPod システムに Epic を導入する予定のお客様を対象としています。Epic 対応の FlexPod アーキテクチャの概要を紹介し、ヘルスケア向けに Epic を導入するための FlexPod のセットアップとインストールについて説明しています。</block>
-  <block id="e29116bce52fd5c40d792c36797e61cd" category="paragraph">Brian O'Meynahony 、 NetApp Ganesh Kamath 、 NetApp Mike Brennan 、 Cisco</block>
-  <block id="c40476186bd8ae6e874aca9a74b64280" category="paragraph">Epic Hyperspace 、 Intersystems Caché データベース、 Cogito Clarity 分析 / レポートスイート、 Epic アプリケーションレイヤをホストするサービスサーバに FlexPod システムを導入すると、信頼性の高いハイパフォーマンスインフラを迅速に導入できる統合プラットフォームが実現します。FlexPod 統合プラットフォームは、高度なスキルを持つ FlexPod チャネルパートナーが導入し、 Cisco とネットアップのテクニカルアシスタンスセンターがサポートします。</block>
-  <block id="c68ac1bc070a95a769515f856d562d9d" category="paragraph">FlexPod のアーキテクチャ基盤で Epic 環境を運用することで、医療機関はスタッフの生産性向上と設備投資や運用コストの削減を期待できます。Epic 対応の FlexPod Datacenter には、医療業界に特有のメリットがいくつかあります。</block>
-  <block id="00f44ac52a8aeefbd72039b335d8ee64" category="list-text">* セキュアマルチテナンシー。この利点は、仮想化されたサーバおよびストレージ共有インフラストラクチャのニーズの増大に対応し、特にデータベースやソフトウェアの複数のインスタンスをホストする場合に、施設固有の情報のセキュアマルチテナンシーを可能にします。</block>
-  <block id="b5f225edacc7188ca9dd554853e5cb82" category="list-text">* プールされたリソースの最適化。 * この利点は、物理サーバとストレージコントローラの数を減らし、ワークロードの負荷を分散し、使用率を高めながらパフォーマンスを向上させることができます。</block>
-  <block id="101b309fe308a64804e3eef696251faf" category="list-text">* ストレージ効率。 * ネットアップの 7 ： 1 ストレージ容量削減保証により、ストレージコストを削減できます。</block>
-  <block id="d8713500fe5d265eb10fafb88e4bd0e1" category="list-text">* 生産性。 * この解決策は迅速に導入および拡張できるため、医療従事者のエンドユーザエクスペリエンスを最適化できます。</block>
-  <block id="52e2c25d79896d6b65913390a5d9abc1" category="list-text">* データファブリック。 * ネットアップデータファブリックアーキテクチャは、サイト間、物理的な境界を越えて、アプリケーション間でデータを結び付けます。ネットアップデータファブリックは、 Data-Centric の世界におけるデータ主体の企業向けに構築されています。データは複数の場所に作成されて使用されるため、多くの場合、他の場所、アプリケーション、インフラとの利用や共有が必要になります。お客様は、整合性と統合性に優れたデータの管理方法を求めています。IT を管理し、増え続ける IT の複雑さを軽減するデータ管理の手法を提供します。</block>
-  <block id="39befed38c190d431ecbddd701e984f1" category="section-title">Epic EHR 向けインフラの新しいアプローチ</block>
-  <block id="a906e7083fe469000f9cbe778e1265e8" category="paragraph">ヘルスケアプロバイダ企業は、業界をリードする Epic 電子カルテ（ EHR ）への多額の投資から最大限のメリットを引き出す必要に迫られています。ミッションクリティカルなアプリケーション向けに Epic ソリューション用のデータセンターを設計する際に、データセンターアーキテクチャに関して次のような目標を設定することがよくあります。</block>
-  <block id="4826c8dd474833f7d8d6cbb797d909ad" category="list-text">Epic アプリケーションの高可用性</block>
-  <block id="75b80abab9cf9091659f77ac4f9e0adb" category="list-text">データセンターに Epic を導入しやすくなっています</block>
-  <block id="09ca18498bb944f7c7b6c3bb9a66bb09" category="list-text">新しい Epic リリースやアプリケーションでの拡張に対応した即応性と拡張性</block>
   <block id="74a37ca3fc803ac7184526cec2956f18" category="list-text">コスト効率</block>
-  <block id="5ac7ba2385a615c2e7f580add16d3f0b" category="list-text">Epic のガイダンスやターゲットプラットフォームに対応</block>
   <block id="7cc87e587436554fb34e0b0439e40a1b" category="list-text">管理性、安定性、および容易なサポート</block>
   <block id="4edb8c45f4cbd29586b5571a2de557eb" category="list-text">堅牢なデータ保護、バックアップ、リカバリ、ビジネス継続性</block>
-  <block id="bc1dd2385c6aa71581176f1ca8efae3d" category="paragraph">Epic のユーザーが組織を進化させて担当責任ある医療組織になり、条件が厳しくバンドルされた償還モデルに適応するようになると、より効率的で俊敏な IT 提供モデルで必要な Epic インフラを提供するという課題が生じます。</block>
-  <block id="a524bf8b764b772ef564315321e0f2d0" category="paragraph">この 10 年間、 Epic インフラストラクチャは、独自のバージョンの UNIX および従来の SAN ストレージアレイを実行する独自の RISC プロセッサベースのサーバーで構成されていました。これらのサーバおよびストレージプラットフォームは、仮想化をほとんど提供しません。 IT 予算の制約が増えるため、資本コストや運用コストの大幅な増加につながります。</block>
-  <block id="55537fdea3bec0c7ec4fd0f735fcd17c" category="paragraph">EPIC は、 Red Hat Enterprise Linux （ RHEL ）を実行する VMware ESXi で仮想化された、 Intel Xeon プロセッサを搭載した Cisco Unified Computing System （ Cisco UCS ）で構成される本番ターゲットプラットフォームをサポートするようになりました。このプラットフォームは、 ONTAP を実行するネットアップストレージ向けの Epic の High Comfort Level ランキングと組み合わせることで、 Epic データセンターの最適化という新たな時代が始まりました。</block>
   <block id="688e83d48398765ecdeafdc1b67aad0d" category="section-title">検証済みの統合インフラがもたらす価値</block>
-  <block id="09079ffa3a254fc9a7f3a536747ce1e2" category="paragraph">EPIC は、予測可能な低レイテンシのシステムパフォーマンスと高可用性を提供するための包括的な要件を持つため、お客様のハードウェア要件に対して規定されています。</block>
-  <block id="0d18b40acca184b948b7b28fc167283d" category="paragraph">FlexPod は、 Cisco とネットアップの戦略的パートナーシップによる、検証済みで厳格にテストされた統合インフラです。予測可能な低レイテンシのシステムパフォーマンスと高可用性を実現するように特別に設計および設計されています。このアプローチにより、 Epic EHR システムのユーザーは Epic High Comfort レベルを維持し、最終的に最適な応答時間を実現できます。</block>
-  <block id="3938104c29424ad864fe3552094afda6" category="paragraph">Cisco とネットアップが提供する FlexPod 解決策は、高パフォーマンスでモジュラ設計、検証済み、統合、仮想化によって Epic システムの要件を満たしています。 効率性、拡張性、コスト効率に優れたプラットフォーム。次の機能を提供します</block>
-  <block id="9a54c55c51aab750f56bc0985f691468" category="list-text">* アプリケーションの導入時間を短縮 * 検証済みのアーキテクチャにより、導入の統合時間とリスクが短縮され、 Epic プロジェクト計画を迅速化できます。Epic を導入した NetApp OnCommand Workforce Automation （ OnCommand WFA ）のワークフローにより、 Epic のバックアップや更新を自動化し、サポートされていないカスタムスクリプトの必要性を解消解決策を使用して Epic の初期導入、ハードウェアの更新、拡張を行う場合でも、プロジェクトのビジネスバリューに移行できるリソースが増えています。</block>
-  <block id="784374b7a748eba9a2c7a65e0621729a" category="list-text">* 統合スタックの各レベルで業界をリードするテクノロジ。 * Cisco 、ネットアップ、 VMware 、 Red Hat は、業界アナリストのそれぞれのサーバ、ネットワーク、ストレージ、オープンシステム Linux カテゴリで第 1 位または第 2 位にランクされています。</block>
   <block id="9218e5d248bc5f6bee747b524fa747c7" category="list-text">* 標準化された柔軟な IT による投資保護 * FlexPod リファレンス・アーキテクチャでは、新しい製品バージョンとアップデートを予測し、今後のテクノロジーが利用可能になったときに対応できるよう、継続的な厳格な相互運用性テストを実施します。</block>
-  <block id="bd468a9302806cd6dedfe289263a2b54" category="list-text">* 幅広い環境に導入されていることは実証済みです。 * 広く普及しているハイパーバイザ、オペレーティングシステム、アプリケーション、インフラソフトウェアとの間で、テストと共同検証が行われています。 FlexPod は、 Epic の大規模な顧客企業の一部に導入されています。</block>
   <block id="a3453c43e6bbaeaca31aea0d1865e1b8" category="section-title">実証済みの FlexPod アーキテクチャと共同サポート</block>
-  <block id="a24055664798c941b3982771ab1bf3f9" category="paragraph">FlexPod は、実績のあるデータセンター解決策です。柔軟性に優れた共有インフラを提供し、パフォーマンスに影響を及ぼすことなく、増大するワークロードのニーズに容易に対応できるように拡張できます。この解決策は、 FlexPod アーキテクチャを活用することで、次のような FlexPod のメリットをフルに活用できます。</block>
-  <block id="5ea8e849dd409d1f3e23fe688eced0fb" category="list-text">* パフォーマンス - Epic ワークロードの要件に対応。 * リファレンスワークロードの要件（小規模、中規模、大規模）に応じて、必要な I/O プロファイルに合わせて異なる ONTAP プラットフォームを導入できます。</block>
   <block id="7f67a0b8dcd150e2511111003e2cf729" category="list-text">* 臨床データの増加に容易に対応できる拡張性。 * 従来の制限なしに、仮想マシン（ VM ）、サーバ、ストレージ容量をオンデマンドで動的に拡張できます。</block>
-  <block id="2176db8ead6687a69881b8451c84640f" category="list-text">* 効率性の向上。 * 統合型の仮想化インフラストラクチャにより、管理時間と TCO の両方を削減できます。これにより、データの管理と保存がより効率的になり、 Epic ソフトウェアによるパフォーマンスの向上が実現します。NetApp OnCommand WFA の自動化機能により、解決策が簡易化され、テスト環境の更新時間が数時間から数日から数分に短縮されます。</block>
-  <block id="99856f22753a025907ac1e04758fb14e" category="list-text">* リスクを軽減。 * 導入による憶測による導入を排除し、継続的なワークロードの最適化に対応する、事前検証済みのアーキテクチャを基盤に構築された検証済みプラットフォームにより、ビジネスの中断を最小限に抑えます。</block>
-  <block id="ede982fe45905b15aa0106c99e3ff3a0" category="list-text">* FlexPod 共同サポート * ネットアップと Cisco は共同サポートを設立しました。共同サポートは、 FlexPod コンバージドインフラに固有のサポート要件に対応する、拡張性と柔軟性に優れた強力なサポートモデルです。このモデルでは、ネットアップとシスコの経験、リソース、およびテクニカルサポートの専門知識を組み合わせて、問題の発生場所に関係なく、お客様の FlexPod サポート問題を特定して解決するための合理的なプロセスを提供します。FlexPod 共同サポートモデルは、お客様の FlexPod システムが効率的に動作し、最新のテクノロジのメリットを享受できるよう支援すると同時に、経験豊富なチームが統合の問題を解決できるよう支援します。</block>
-  <block id="978814af8d8264e2045a63e7181b8e85" category="paragraph">FlexPod 共同サポートは、 FlexPod コンバージドインフラで Epic などのビジネスクリティカルなアプリケーションを実行している医療機関にとって特に有効です。</block>
-  <block id="debc016d047e61c65c77d50c9d6a43d0" category="paragraph">次の図に、 FlexPod 共同サポートモデルを示します。</block>
-  <block id="c0d7cee6c778f72edf4be945c3c2087b" category="paragraph"><block ref="c0d7cee6c778f72edf4be945c3c2087b" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="3eac479c2edf57846d3ba8ed7a2da7f0" category="paragraph">Epic 解決策を搭載した FlexPod データセンタースタックの各コンポーネントには、こうしたメリットに加えて、 Epic EHR ワークフロー向けの具体的なメリットがあります。</block>
-  <block id="0ed8114c034a2c90f609e87de481bcd1" category="paragraph">自己統合型の自己認識システムである Cisco UCS は、統合 I/O インフラストラクチャと相互接続された単一の管理ドメインで構成されます。Epic 環境に対応した Cisco UCS は、 Epic インフラに関する推奨事項やベストプラクティスに対応しているため、可用性を最大限に高めながら重要な患者情報を確実に提供できます。</block>
-  <block id="3c61a6f6fd03e5e7fce1512cecc133f2" category="paragraph">Cisco UCS アーキテクチャ上の Epic の基盤にあるのは Cisco UCS テクノロジで、その統合システム管理、 Intel Xeon プロセッサ、サーバ仮想化が含まれています。これらの統合されたテクノロジにより、データセンターの課題を解決し、 Epic に関するデータセンター設計の目標を達成できます。Cisco UCS は、 LAN 、 SAN 、およびシステム管理を 1 つのシンプルなリンクに統合して、ラックサーバ、ブレードサーバ、 VM に対応します。Cisco UCS は、 Cisco Unified Fabric Extender （ FEX ）テクノロジーと Cisco UCS のすべてのコンポーネントを単一のネットワークファブリックおよび単一のネットワークレイヤと接続するエンドツーエンドの I/O アーキテクチャです。</block>
-  <block id="cadfbe46bf1fe4dd4d32f9466421d154" category="paragraph">このシステムは、複数のブレードシャーシ、ラックサーバ、およびラックに組み込まれ、拡張可能な単一の仮想ブレードシャーシとして設計されています。このシステムは徹底的に簡素化されたアーキテクチャを実装しており、従来のブレードサーバシャーシに搭載された複数の冗長デバイスを排除し、イーサネットスイッチと FC スイッチ、シャーシ管理モジュールといった複雑さの層を取り除きます。Cisco UCS は、単一の管理ポイントを提供する冗長な Cisco Fabric Interconnect （ FI ）ペアで構成されており、すべての I/O トラフィックを単一の制御ポイントで制御できます。</block>
-  <block id="a0273b7305e707ced5077a10c343cd11" category="paragraph">Cisco UCS では、サービスプロファイルを使用して、 Cisco UCS インフラストラクチャ内の仮想サーバが正しく設定されるようにします。サービスプロファイルには、 LAN および SAN アドレッシング、 I/O 設定、ファームウェアバージョン、ブート順、ネットワーク VLAN 、などのサーバ ID に関する重要なサーバ情報が含まれます。 物理ポート、 QoS ポリシーサービスプロファイルは動的に作成され、システム内の任意の物理サーバに関連付けられるため、数時間や数日かかっていた作業を数分で完了できます。サービスプロファイルと物理サーバの関連付けは、シンプルな単一の操作として実行され、物理的な設定変更を必要とせずに、環境内のサーバ間でアイデンティティを移行できます。障害が発生したサーバの代わりに、ベアメタルプロビジョニングを迅速に実行できます。</block>
-  <block id="cc205a0cb9722d83adbac436f1ca9734" category="paragraph">サービスプロファイルを使用すると、企業全体で一貫したサーバを設定できます。複数の Cisco UCS 管理ドメインを使用する場合、 Cisco UCS Central はグローバルサービスプロファイルを使用して、ドメイン間で設定およびポリシー情報を同期できます。1 つのドメインでメンテナンスを実行する必要がある場合は、仮想インフラストラクチャを別のドメインに移行できます。このアプローチにより、単一ドメインがオフラインの場合でも、アプリケーションは高可用性で実行され続けます。</block>
-  <block id="2f9839a8abb5cb9b245ab9677526fd9e" category="paragraph">Cisco UCS は、複数年にわたって Epic を利用したテストを幅広く実施しており、サーバ構成の要件を満たしていることが実証されています。Cisco UCS は、「 Epic Hardware Configuration Guide 」に記載されたサポート対象のサーバプラットフォームです。</block>
   <block id="48def1be7a1b40b720ff1892a761e8c8" category="section-title">Cisco Nexus の場合</block>
-  <block id="9009fbf1615a3645d0a0e44cb6b27dc8" category="paragraph">Cisco Nexus スイッチおよび MDS マルチレイヤディレクタは、エンタープライズクラスの接続と SAN 統合を実現します。シスコのマルチプロトコルストレージネットワーキングは、 FC 、 Fibre Connection （ FICON ）、 FC over Ethernet （ FCoE ）、 SCSI over IP （ iSCSI ）、 FC over IP （ FCIP ）などの柔軟性とオプションを提供することで、ビジネスリスクを軽減します。</block>
-  <block id="fc15f820579a060cececb55b255916fc" category="paragraph">Cisco Nexus スイッチは、単一プラットフォームで最も包括的なデータセンターネットワーク機能セットの 1 つです。データセンターとキャンパスコアの両方で、高いパフォーマンスと密度を実現します。また、耐障害性に優れたモジュラプラットフォームで、データセンターのアグリゲーション、行の終わり、およびデータセンターのインターコネクト環境に完全な機能セットを提供します。</block>
-  <block id="67058156d9e591d2cc589b06602110ba" category="paragraph">Cisco UCS はコンピューティングリソースを Cisco Nexus スイッチと統合し、ユニファイド I/O ファブリックを提供します。このファブリックは、ストレージ I/O 、ストリームデスクトップトラフィック、管理、臨床アプリケーションやビジネスアプリケーションへのアクセスなど、さまざまなタイプのネットワークトラフィックを識別して処理します。</block>
-  <block id="011803b1939bd3fc74528f0e5adf798f" category="paragraph">Cisco UCS と Cisco Nexus スイッチ、 MDS マルチレイヤディレクタを組み合わせることで、 Epic に対応したコンピューティング、ネットワーク、 SAN 接続の解決策が実現します。</block>
-  <block id="fc260e8e25efb9689440f79a555f170d" category="paragraph">ONTAP ソフトウェアを実行するネットアップストレージは、ストレージの総コストを削減すると同時に、 Epic ワークロードで必要とされる読み取り / 書き込みの応答時間と IOPS を低レイテンシで実現します。ONTAP は、オールフラッシュストレージとハイブリッドストレージの両方の構成をサポートしているため、 Epic の要件に対応した最適なストレージプラットフォームを構築できます。ネットアップのフラッシュ高速化システムが Epic High Comfort Level を獲得し、 Epic を利用したお客様にレイテンシの影響を受けやすい Epic 操作に対するパフォーマンスと応答性の鍵を提供しています。ネットアップでは、単一のクラスタに複数の障害ドメインを作成することで、本番環境を非本番環境から分離することもできます。ネットアップは、 ONTAP の最小 QoS によってワークロードの最小パフォーマンスレベルを保証することで、パフォーマンスの問題を軽減します。</block>
-  <block id="fe30d4f693426c00a97a0d7741b86107" category="paragraph">ONTAP ソフトウェアのスケールアウトアーキテクチャは、さまざまな I/O ワークロードに柔軟に対応できます。臨床アプリケーションに必要なスループットと低レイテンシを実現するとともに、モジュラ型のスケールアウトアーキテクチャを提供するために、一般に ONTAP アーキテクチャで使用されます。オールフラッシュアレイは 2020 年までに Epic に対応する予定であり、現在では 500 万件を超える導入事例があるお客様のために Epic に対応しています。AFF ノードは、高スループットで大規模なデータセットを格納するのに適した、ハイブリッド（ HDD およびフラッシュ）ストレージノードと同じスケールアウトクラスタに混在させることができます。高価な SSD ストレージから、 Epic 環境の複製、複製、バックアップを他のノード上でより経済的な HDD ストレージに実行したり、 SAN ベースのクローニングや本番ディスクプールのバックアップに関する Epic のガイドラインに準拠したり、以上の成果を達成したりすることができます。ネットアップのクラウド対応ストレージとデータファブリックを使用すれば、オンプレミスまたはクラウドのオブジェクトストレージにバックアップできます。</block>
-  <block id="60b9029657fcb7de360f30df535fff73" category="paragraph">ONTAP は、 Epic 環境で非常に便利な機能を提供し、管理の簡易化、可用性と自動化の向上、必要なストレージの総容量の削減を実現しています。</block>
-  <block id="d819b4b8101f3ea1a80676aa29865309" category="list-text">* 卓越したパフォーマンス。 * NetApp AFF 解決策は、他の FAS 製品ファミリーと同じユニファイドストレージアーキテクチャ、 ONTAP ソフトウェア、管理インターフェイス、充実したデータサービス、高度な機能セットを提供します。オールフラッシュメディアと ONTAP を組み合わせたこの革新的なソリューションは、業界をリードする ONTAP ソフトウェアを使用して、オールフラッシュストレージの一貫した低レイテンシと高 IOPS を実現します。</block>
-  <block id="1d4b2bbbffd4c91a0530ed2dce306f90" category="list-text">* Storage Efficiency 。 * 重複排除、 NetApp FlexClone 、インライン圧縮、インラインコンパクション、シンレプリケーションにより、必要な総容量を削減 シンプロビジョニング、およびアグリゲートの重複排除：</block>
-  <block id="8f93cf96e2bc2091004568831b0fac00" category="paragraph">ネットアップの重複排除機能は、 FlexVol またはデータ構成要素でブロックレベルの重複排除を実行します。重複排除機能は、基本的に、重複ブロックを削除して、 FlexVol またはデータ構成要素内で一意のブロックのみを保存します。</block>
-  <block id="e9f8347242ee1a5a2c19276bc863894d" category="paragraph">重複排除は非常にきめ細かな単位で機能し、 FlexVol またはデータ構成要素のアクティブファイルシステムで機能します。この機能はアプリケーションに対して透過的であるため、ネットアップシステムを使用するすべてのアプリケーションのデータの重複を排除できます。ボリューム重複排除はインラインプロセス（ Data ONTAP 8.3.2 以降）として実行できるほか、自動で実行されるように設定したり、スケジュールを設定したり、 CLI 、 NetApp System Manager 、 NetApp OnCommand Unified Manager を通じて手動で実行したりできるバックグラウンドプロセスとして実行できます。</block>
   <block id="8ddb2bf3b62633b9268ac2f3c0af0b29" category="paragraph">次の図に、ネットアップの重複排除機能の仕組みを示します。</block>
-  <block id="1f9aa7577c690f8139def1f10bab0c6a" category="paragraph"><block ref="1f9aa7577c690f8139def1f10bab0c6a" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="b884ff3c2fe17ac15cec364e2127c954" category="list-text">* スペース効率に優れたクローニング。 * FlexClone 機能により、クローンをほぼ瞬時に作成して、バックアップおよびテスト環境の更新をサポートできます。これらのクローンは、変更が行われた場合にのみストレージを消費します。</block>
-  <block id="5fd59004edeeb97440d4b3d301220738" category="list-text">* 統合されたデータ保護。 * 完全なデータ保護と災害復旧機能により、お客様は重要なデータ資産を保護し、災害復旧を実現できます。</block>
-  <block id="9978927cbc0df18c38f95e6bdc0deaf7" category="list-text">* ノンストップオペレーション。 * アップグレードとメンテナンスは、データをオフラインにすることなく実行できます。</block>
-  <block id="28ff5ec66a48f6813900671c0bbff553" category="list-text">* Epic ワークフローの自動化 * ネットアップは解決策 WFA ワークフローを設計し、 Epic のバックアップ OnCommand の自動化と簡易化、 SUP 、 REL 、 REL VAL などのテスト環境の更新を実現しました。このアプローチにより、サポートされていないカスタムスクリプトが不要になるため、ネットアップや Epic のベストプラクティスに必要な導入時間、運用時間、ディスク容量を削減できます。</block>
-  <block id="40b9cc218d358cc132988c9ba8b7606c" category="list-text">* QoS 。 * ストレージ QoS により、潜在的な Bully ワークロードを制限できます。さらに重要なのは、 QoS によって Epic 対応などの重要なワークロードのパフォーマンスを最小化できる点です。ネットアップの QoS は、競合を限定することでパフォーマンス関連の問題を軽減できます。</block>
-  <block id="8e60c88a06a6e6b1c74bf0b7972f628c" category="list-text">* OnCommand Insight Epic ダッシュボード * Epic Pulse ツールでは、アプリケーション問題とそのエンドユーザーへの影響を確認できます。OnCommand Insight の Epic ダッシュボードでは、問題のルート原因を特定し、インフラスタック全体を完全に可視化できます。</block>
-  <block id="869b8904724fe1bfb88f2e820abd9209" category="list-text">* データファブリック。 * ネットアップデータファブリックは、クラウドとオンプレミス全体でデータ管理を簡易化、統合することで、デジタル変革を加速します。データ管理のための一貫した統合的サービスとアプリケーションを提供することで、データの可視性と分析、データのアクセスと制御、データの保護とセキュリティを実現します。ネットアップは、 AWS 、 Azure 、 Google パブリッククラウド、 IBM クラウドと統合されており、幅広い選択肢をお客様に提供します。</block>
-  <block id="88e634ad320d502c0645ac4290e04b29" category="paragraph">次の図は、 Epic ワークロード向けの FlexPod を示しています。</block>
-  <block id="b2973a57a413e667139c6b40823375fb" category="paragraph"><block ref="b2973a57a413e667139c6b40823375fb" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="ac8b2ec48bf6ceb3bd3d310028c3f2c4" category="section-title">EPIC の概要</block>
   <block id="3b878279a04dc47d60932cb294d96259" category="section-title">概要</block>
-  <block id="d6d213124f9f1b5cb0bc5ed74dcbde0e" category="paragraph">EPIC は、ウィスコンシン州ベローナに本社を置くソフトウェア企業です。次の会社の Web サイトからの抜粋では、 Epic ソフトウェアでサポートされている機能の範囲について説明しています。</block>
-  <block id="181a32cdf9126904cdb2b30536a99585" category="paragraph">「 Epic は、中規模から大規模の医療グループ、病院、統合医療機関向けのソフトウェアを開発しており、コミュニティ病院、学術施設、子供の組織、安全ネットプロバイダ、複数の病院システムなどの顧客と連携しています。当社の統合ソフトウェアは、臨床機能、アクセス機能、収益機能を網羅し、家庭にも拡大しています。」</block>
-  <block id="b9a6be60f524d866b888203831ca366e" category="paragraph">Epic ソフトウェアでサポートされる幅広い機能については、本ドキュメントでは説明していません。しかし、ストレージシステムの観点から見ると、導入ごとに、 1 つの患者中心のデータベースをすべての Epic ソフトウェアで共有しています。EPIC は、 IBM AIX や Linux などのさまざまなオペレーティングシステムで使用できる、 Intersystems Cach データベースを使用します。</block>
-  <block id="ba4cfbcbef993fbdff1e76ddc9df7954" category="paragraph">このドキュメントでは、 FlexPod スタック（サーバとストレージ）が、 Epic ソフトウェア環境で使用されている Intersystems Caché データベースのパフォーマンス重視の要件を満たすことを主に説明しています。一般に、本番データベースには専用のストレージリソースが提供されますが、シャドウデータベースインスタンスは、 Clarity レポートツールなどの他の Epic ソフトウェア関連コンポーネントとセカンダリストレージリソースを共有します。アプリケーションファイルやシステムファイルなど、他のソフトウェア環境ストレージも、セカンダリストレージリソースから提供されます。</block>
-  <block id="5ead9d34cdee1665bf8705cd9f95bd34" category="section-title">特定の Epic ワークロードに特化した設計</block>
-  <block id="189691b0fa500e83be6980e263496e2e" category="paragraph">Epic ではサーバ、ネットワーク、ストレージハードウェア、ハイパーバイザー、オペレーティングシステムは再販されていませんが、 会社には、インフラストラクチャスタックの各コンポーネントに固有の要件があります。そのため、シスコとネットアップは協力して、 FlexPod データセンターの構成、導入、サポートをテストし、顧客の Epic 実稼働環境の要件を満たすことができるようにしました。このテスト、テクニカルドキュメント、および相互に成功しているお客様の数が増加していることから、 Epic の導入により、 FlexPod Datacenter の顧客のニーズを満たす能力がますます向上し、その快適性が高まっています。『 Epic Storage Products and Technology Status 』ドキュメントおよび『 Epic Hardware Configuration Guide 』を参照してください。」</block>
-  <block id="3aab99964928cf7f5ed9c1e54ed3ed47" category="paragraph">エンドツーエンドの Epic リファレンスアーキテクチャはモノリシックではなく、モジュラ型です。次の図は、 5 つのモジュールの概要を示したもので、それぞれにワークロードの特性が異なります。</block>
-  <block id="e30bef9903befbfb56c1ef943cb5a1bc" category="paragraph"><block ref="e30bef9903befbfb56c1ef943cb5a1bc" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="716aaa64e393aad9ac614dfb28bf3254" category="paragraph">相互接続されているが別々のモジュールがあることから、 Epic を利用しているお客様はストレージやサーバのサイロを購入して管理する必要が生じています。これには、従来のティア 1 SAN 向けのベンダーのプラットフォーム、 NAS ファイルサービス用の異なるプラットフォーム、 FC 、 FCoE 、 iSCSI 、 NFS 、 SMB/CIFS のプロトコル要件に固有のプラットフォームなどが含まれます。 フラッシュストレージ用のプラットフォームが個別に用意されています。アプライアンスやツールを使用して、サイロを仮想ストレージプールとして管理しようとします。</block>
-  <block id="78866daecbc5879136f4eda046e955fe" category="paragraph">ONTAP を FlexPod 経由で接続することで、目標とするワークロードごとに最適化された専用ノードを実装し、スケールメリットを達成し、一貫性のあるコンピューティング、ネットワーク、ストレージデータセンターの運用管理を合理化できます。</block>
-  <block id="7c5498fdf469564f0f1b3d32d9def057" category="section-title">Cach é の本番データベース</block>
-  <block id="0681c20fe39339c9fab458f86f9938ce" category="paragraph">Cach é は、システム間で製造された Epic が構築されたデータベースシステムです。Epic の患者データはすべて Caché データベースに保存されています。</block>
-  <block id="8c6b45a838122b60aa2806a5c2cc37cc" category="paragraph">Intersystems の Cach é データベースでは、データサーバは永続的に保存されるデータのアクセスポイントです。アプリケーションサーバは、データベースを照会し、データサーバにデータ要求を行います。大部分の Epic ソフトウェア環境では、 1 台のデータベースサーバで対称型マルチプロセッサアーキテクチャを使用して Epic アプリケーションのデータベース要求に対応しています。大規模な導入では、 InterSystems の Enterprise Caché Protocol を使用して分散データベースモデルをサポートできます。</block>
-  <block id="56ef02445940926b99bdd9319d368322" category="paragraph">フェイルオーバーに対応したクラスタハードウェアを使用することで、スタンバイデータサーバがプライマリデータサーバと同じディスク（ストレージ）にアクセスし、ハードウェア障害の発生時に処理を引き継ぐことができます。</block>
-  <block id="40dfd73de0256664675abd959ffa618f" category="paragraph">また、シャドウ、ディザスタリカバリ、ハイアベイラビリティ（ HA ）の要件を満たすテクノロジも提供されます。InterSystems のシャドウ・テクノロジーを使用すると ' プライマリ・データ・サーバから 1 つ以上のセカンダリ・データ・サーバに Cach データベースを非同期で複製できます</block>
-  <block id="fa54535a9a58caee3acde3f426c724d4" category="section-title">Cogito Clarity</block>
-  <block id="f556ae3298a4ca16524b0ef157d07743" category="paragraph">Cogito Clarity は Epic の統合分析およびレポート作成スイートです。cognito Clarity は、生産用の Cach é データベースのコピーから始まり、患者ケアの向上、臨床性能の分析、収益の管理、コンプライアンスの測定に役立つ情報を提供します。OLAP 環境では、 cogito Clarity で Microsoft SQL Server または Oracle RDBMS を利用します。この環境は Cach é の本番データベース環境とは異なるため、 FlexPod およびネットアップが公開している SQL Server および Oracle 環境向けの検証済み設計ガイドに従って、 cogito Clarity 要件をサポートする プラットフォームを設計することが重要です。</block>
-  <block id="ee37749cf8cecc94b1aabb67acaad6f3" category="section-title">EPIC Hyperspace デスクトップサービス</block>
-  <block id="15e9403300fe58cb587c43b16ab81a5f" category="paragraph">Hyperspace は Epic スイートのプレゼンテーションコンポーネントです。Cach é データベースからデータを読み書きし、ユーザに提供します。ほとんどの病院や診療所のスタッフは、ハイパーススペースアプリケーションを使用して Epic に対応しています。</block>
-  <block id="cfd761e26074ddf9adf0288ecf170177" category="paragraph">Hyperspace はクライアントワークステーションに直接インストールできますが、多くの医療機関では、 Citrix XenApp ファームまたは仮想デスクトップインフラ（ VDI ）を介してアプリケーションの仮想化を使用して、アプリケーションをユーザーに提供しています。ESXi を使用した XenApp サーバーファームの仮想化がサポートされています。設定と実装のガイドラインについては、「参考資料」セクションの FlexPod for ESXi の事前検証済みの設計を参照してください。</block>
-  <block id="6001cfe916681e30c54eed9f9aaaa403" category="paragraph">VDI Citrix XenDesktop システムまたは VMware Horizon View システムを完全に導入することを検討しているお客様は、臨床ワークフローを最適な状態にするために慎重に検討する必要があります。正確な構成を取得するための基本的な手順は、ユーザープロファイルの詳細なマッピングなど、プロジェクトの範囲を明確に理解して文書化することです。ユーザプロファイルの多くには Epic を超えたアプリケーションへのアクセスが含まれています。プロファイルの変数には次のものがあります</block>
-  <block id="b47c241320997cdd2488d69f297da5e1" category="list-text">認証、特に Imprivata または同様のシングルサインオン（ SSO ）、遊牧民の臨床医ユーザー用</block>
-  <block id="6648dc22fb0c910f205ea56ea1611f8d" category="list-text">PACS 画像ビューア</block>
-  <block id="12dabe73360bf8bfd1432eacb99f0c60" category="list-text">Dragon NaturallySpeaking などのディクテーションソフトウェアとデバイス</block>
-  <block id="528e73e793b8231555d88af87ae29a6f" category="list-text">Hyland OnBase や Perceptive Software Integration などのドキュメント管理</block>
-  <block id="eff384e7dfc858eb95ecbcf7eea4a1de" category="list-text">3M Health Care または OptumHealth の医療情報管理コーディングなどの部門アプリケーション</block>
-  <block id="abcc300423dae92c81490905507e3186" category="list-text">Epic 利用前の従来型 EMR アプリケーションや収益サイクルアプリケーションなど、現在も利用されている可能性があります</block>
-  <block id="1dfc11c7c89fac0c8f549e80d7314044" category="list-text">サーバでビデオアクセラレーションカードを使用する必要があるビデオ会議機能</block>
-  <block id="9250dc49c6509cf47654469cd70b292e" category="paragraph">VMware Horizon View または Citrix XenDesktop で特定の認定を受けた FlexPod 認定リセラーは、お客様の Cisco やネットアップの Epic ソリューションアーキテクト、プロフェッショナルサービスプロバイダと協力して、 VDI の特定の要件に合わせて解決策の範囲設定や設計を行います。</block>
-  <block id="21c6827b7fbb6b25ac7961e3ee545cec" category="section-title">ディザスタリカバリとシャドウコピー</block>
-  <block id="cd3c32908bb7de091120e4d4f4846dc3" category="paragraph">* アクティブ / アクティブのデュアル・データ・センターへの進化 *</block>
-  <block id="2b0e087fa8e9cfe5fbf23b145caea4e2" category="paragraph">Epic ソフトウェア環境では、患者中心の単一のデータベースが導入されています。EPIC のハードウェア要件は、プライマリ Cach データサーバをホストする物理サーバを本番データベースサーバとして参照することです。このサーバには、プライマリデータベースインスタンスに属するファイル用に、専用のハイパフォーマンスストレージが必要です。HA の場合、 Epic では、同じファイルにアクセスできるフェイルオーバーデータベースサーバーの使用がサポートされています。</block>
-  <block id="c201d49abbe14d9ea120aaa6392972d9" category="paragraph">通常、レポート作成シャドウデータベースサーバは、本番データへの読み取り専用アクセスを提供するために導入されます。本番 Cach é データサーバのバックアップシャドウとして設定された Cach é データサーバをホストします。このデータベースサーバには、本番用データベースサーバと同じストレージ容量要件があります。ワークロードの特性が異なるため、このストレージのサイズはパフォーマンスの観点とは異なります。</block>
-  <block id="89235c5030a0b39f6122a6ceec9fe1d6" category="paragraph">シャドウ・データベース・サーバを導入して 'Epic の読み取り専用（ SRO ）機能をサポートすることもできますこの機能では ' 読み取り専用モードで本番環境のコピーにアクセスできますこのタイプのデータベースサーバは、ビジネス継続性を確保するために読み取り / 書き込みモードに切り替えることができます。</block>
-  <block id="e37c2560b27f5fecd9c7df9cf212bd34" category="paragraph">ビジネス継続性とディザスタリカバリ（ DR ）の目標を達成するために、 DR シャドウデータベースサーバは一般に、本番用データベースサーバやレポート用シャドウデータベースサーバとは地理的に離れたサイトに導入されます。DR シャドウ・データベース・サーバは ' 本番キャッシュ・データ・サーバのバックアップ・シャドウとして構成された Cach é データ・サーバもホストします本番用サイトが長時間使用できない場合に、シャドウの読み取り / 書き込みインスタンスとして機能するように設定できます。レポート作成時のシャドウデータベースサーバと同様に、データベースファイル用のストレージには、本番用データベースサーバと同じ容量要件があります。一方、ビジネス継続性を重視する場合、このストレージのサイズは本番環境と同じになります。</block>
-  <block id="51d6715f99aa185584b091c8521d70b1" category="paragraph">Epic の継続的なアップタイムを必要とし、データセンターが複数ある医療機関では、 FlexPod を使用して Epic 導入に対応したアクティブ / アクティブ構成の設計を構築できます。アクティブ / アクティブのシナリオでは、 FlexPod ハードウェアが 2 つ目のデータセンターに導入され、 Epic に継続的可用性、迅速なフェイルオーバー、ディザスタリカバリソリューションを提供するために使用されます。お客様に提供される『 Epic Hardware Configuration Guide 』は、シスコとネットアップと共有して、 Epic のガイドラインに準拠したアクティブ / アクティブアーキテクチャの設計を促進する必要があります。</block>
-  <block id="fbe3afc17014945c02c3ae95aa19ab45" category="section-title">Cach é のライセンス</block>
-  <block id="1219611db266c91d3f9a6b45e72d1e92" category="paragraph">ネットアップと Cisco は、プラットフォーム移行に関する Epic のベストプラクティスに準拠した、従来の Epic 導入環境から FlexPod システムへの移行経験があります。プラットフォームの移行が必要な場合は、どのような方法でも作業できます。</block>
-  <block id="3ba72244f03917c4313edb766d3dfb8a" category="paragraph">ハードウェアとソフトウェアの更新を評価している Epic または既存のお客様に移行する新規のお客様には、 Caché データベースのライセンスが検討されています。Intersystems Cach は、プラットフォーム固有のライセンス（単一のハードウェア OS アーキテクチャに限定）またはプラットフォームに依存しないライセンスのいずれかで購入できます。プラットフォームに依存しないライセンスを使用すると、 Cach é データベースをあるアーキテクチャから別のアーキテクチャに移行できますが、プラットフォーム固有のライセンスよりもコストが高くなります。</block>
-  <block id="a33d8a9d235134a6335afb455e71ea9b" category="admonition">プラットフォーム固有のライセンスをお持ちのお客様は、プラットフォームを切り替えるために追加のライセンスコストが必要になる場合があります。</block>
-  <block id="beb611d717a7561129649533fe64dc30" category="section-title">EPIC ストレージに関する考慮事項</block>
-  <block id="b64b49888a07fd0af469decd85c72954" category="paragraph">* RAID のパフォーマンスと保護 *</block>
-  <block id="0d417bf6ff172c1a47e0fd3bc8149bb9" category="paragraph">Epic は、ネットアップの RAID DP 、 RAID-TEC 、 WAFL テクノロジの価値を認識し、 Epic で定義された要件を満たすレベルのデータ保護とパフォーマンスを実現しています。さらに、ネットアップの効率化テクノロジを使用することで、 Epic 環境で必要とされる全体的な読み取りパフォーマンスを実現しながら、使用するディスクドライブの数を減らすことができます。</block>
-  <block id="7d847633a02e48082018c6bbdb62b93c" category="paragraph">Epic では、ネットアップのサイジング手法を使用して、 Epic 環境で使用するネットアップストレージシステムのサイズを適切に設定する必要があります。詳細については、 TR-3930i ：『 NetApp Sizing Guidelines for Epic 』を参照してください。このドキュメントを参照するには、 NetApp Field Portal へのアクセスが必要です。</block>
-  <block id="074da3d80baffd3534ef152e8f577300" category="paragraph">* 本番ディスク・グループの分離 *</block>
-  <block id="f36c392bd6e5c9717c450108fa8c2c9c" category="paragraph">オールフラッシュアレイのストレージレイアウトの詳細については、『 Epic All Flash Reference Architecture Strategy 』を参照してください。要約すると、ディスクプール 1 （本番）は、ディスクプール 2 とは別のストレージ障害ドメインに格納する必要があります。同じクラスタ内の ONTAP ノードは障害ドメインです。</block>
-  <block id="dd1f7508a9af8398ab43ca7cd9a89b0a" category="paragraph">EPIC は、本番環境のデータベースだけでなく、あらゆるフルサイズの運用データベースにフラッシュを使用することを推奨します。現在、このアプローチは推奨事項にすぎませんが、 2020 年の暦年までにはすべてのお客様の要件になります。</block>
-  <block id="646fae7d1c8a60f4b81d4cf6d5697ad5" category="paragraph">非常に大規模なサイトで、本番用 OLTP データベースが 1 秒あたり 500 万件のグローバル参照を超えると予想される場合は、本番用 OLTP データベースのパフォーマンスへの影響を最小限に抑えるために、コニートのワークロードを 3 番目のアレイに配置する必要があります。本ドキュメントで使用しているテストベッド構成は、オールフラッシュアレイです。</block>
-  <block id="0ba685fe4b1388577f1c457133b2a4a0" category="paragraph">* 高可用性と冗長性 *</block>
-  <block id="134830020c52d265ed5ef070c8d987d1" category="paragraph">EPIC は、 HA ストレージシステムを使用してハードウェアコンポーネントの障害を軽減することを推奨している。この推奨事項は、冗長な電源装置などの基本的なハードウェアから、マルチパスネットワークなどのネットワークまで拡張されています。</block>
-  <block id="6b42de8d6ff295787b74a8e20fd7ab30" category="paragraph">ストレージノードレベルでは、冗長性を使用して無停止アップグレードと無停止でのストレージ拡張を実現することが Epic のハイライトとなっています。</block>
-  <block id="499789cabf28c1c7125c2af787ce53e4" category="paragraph">プール 1 のストレージは、前述したパフォーマンスの分離のため、プール 2 のストレージとは別のディスクに配置する必要があります。どちらのストレージアレイもデフォルトで提供されます。また、ディスクレベルの障害がデータレベルで発生した場合も、データレベルの冗長性が確保されます。</block>
-  <block id="60cd81eda1b1374d75e618c212fd2ae8" category="paragraph">* ストレージ監視 *</block>
-  <block id="4824d2e225ffbfdc59aaa90520eaff55" category="paragraph">EPIC は、効果的な監視ツールを使用して、ストレージシステムのボトルネックを特定または予測することを推奨します。</block>
-  <block id="beb1270d8fdffff592809d54fb127fe4" category="paragraph">OnCommand にバンドルされている NetApp ONTAP Unified Manager を使用して、容量、パフォーマンス、ヘッドルームを監視できます。OnCommand Insight をご利用のお客様向けに、 Epic Pulse 監視ツールではカバーできないストレージ、ネットワーク、コンピューティングの完全な可視性を実現する Insight Dashboard が開発されました。Pulse は問題を検出できますが、影響が出る前に問題を早期に特定できます。</block>
-  <block id="813d9e39126919acb264b77664a1fc4d" category="paragraph">* スナップショット・テクノロジー *</block>
-  <block id="880bb7da7ba7320c99fe6c685ad45258" category="paragraph">EPIC は、ストレージノードベースの NetApp Snapshot テクノロジが、従来のファイルベースのバックアップと比較して、本番ワークロードへのパフォーマンスの影響を最小限に抑えることを認識しています。Snapshot バックアップを本番環境のデータベースのリカバリソースとして使用する場合は、データベース整合性を考慮してバックアップ方法を実装する必要があります。</block>
-  <block id="36fe5c7cee31a3e492ec2ce3ac8b697a" category="paragraph">* ストレージ拡張 *</block>
-  <block id="dc7c88628cf2a5d2eeedb16e60bc2b6f" category="paragraph">ストレージのホットスポットを考慮せずにストレージを拡張する場合の EPIC の注意事項。たとえば、ストレージを細かく追加するケースが少ないと、データがディスク間で均等に分散されない場所にストレージホットスポットが配置されます。</block>
   <block id="33bfa28f826a0e5090569298da0ca5b0" category="section-title">包括的な管理ツールと自動化機能</block>
-  <block id="d1c9f4f24871bde2d6a91d1e5bc2fbbc" category="section-title">Cisco UCS Manager を搭載した Cisco Unified Computing System</block>
-  <block id="19bb33a07f99aec785611e076ed48291" category="paragraph">シスコでは、シンプル化、セキュリティ、拡張性という、最高のデータセンターインフラストラクチャを実現するための 3 つの主要要素に重点を置いています。Cisco UCS Manager ソフトウェアとプラットフォームのモジュール性を組み合わせることで、簡素化され、セキュアでスケーラブルなデスクトップ仮想化プラットフォームを実現できます。</block>
-  <block id="53d7c5a468521e1b8b5a97a6632a9385" category="list-text">* シンプル。 * Cisco UCS は、業界標準のコンピューティングに対する抜本的な新しいアプローチを提供し、すべてのワークロードに対応するデータセンターインフラストラクチャのコアを提供します。Cisco UCS の多くの機能とメリットの中には、必要なサーバ数の削減、サーバあたりのケーブル数の削減、 Cisco UCS サービスプロファイルを使用したサーバの迅速な導入または再プロビジョニング機能などがあります。サーバとアプリケーションのワークロードのプロビジョニングを合理化することで、管理対象のサーバやケーブルを削減できるため、運用が大幅に簡易化されます。Cisco UCS Manager サービスプロファイルを使用すると、ブレードサーバとラックサーバの数を数分でプロビジョニングできます。Cisco UCS サービスプロファイルにより、サーバ統合の実行ブックが不要になり、設定のずれが解消されます。このアプローチにより、エンドユーザの生産性向上、ビジネスの俊敏性の向上、 IT リソースの他のタスクへの割り当てが可能になります。</block>
-  <block id="6752c28d88100674dbcf7647c82303da" category="paragraph">Cisco UCS Manager （ UCSM ）は、サーバ、ネットワーク、ストレージアクセスインフラの設定やプロビジョニングなど、エラーが発生しやすい多くのデータセンター処理を自動化します。また、 Cisco UCS B シリーズブレードサーバと、メモリフットプリントの大きい C シリーズラックサーバは、アプリケーションの高密度化を可能にし、サーバインフラストラクチャ要件の軽減に役立ちます。</block>
-  <block id="0bb4e6c3b49c1f2b4a09f7e92c080877" category="paragraph">シンプル化を実現することで、 Epic の導入をさらに高速化し、成功を促進できます。シスコと、 VMware や Citrix 、ストレージパートナーの IBM 、ネットアップ、 Pure Storage などのテクノロジパートナーは、 FlexPod などの事前定義された統合アーキテクチャインフラパッケージを含む、統合された検証済みアーキテクチャを開発しました。Cisco の仮想化ソリューションは、 VMware vSphere 、 Linux 、 Citrix XenDesktop 、および XenApp でテスト済みです。</block>
-  <block id="f5ec6fd02101f543263e117c694bd74d" category="list-text">* セキュア * 仮想マシンは、従来の物理マシンよりも本質的に安全性が高くなっていますが、新たなセキュリティ上の課題が生じています。仮想デスクトップなどの共通インフラストラクチャを使用するミッションクリティカルな Web サーバおよびアプリケーションサーバは、セキュリティの脅威に対するリスクが高くなっています。仮想マシン間のトラフィックには、特に VMware vMotion を使用してサーバインフラストラクチャ間を移動する動的な環境では、 IT 管理者が対処する必要があるという重要なセキュリティ上の考慮事項があります。</block>
-  <block id="e1f6ce8583b4b1be0fbe1f088276c238" category="paragraph">そのため、仮想化では、ポリシーとセキュリティの仮想マシンレベルの認識が大幅に向上します。特に、拡張コンピューティングインフラストラクチャ全体で仮想マシンのモビリティが動的かつ流動的であることが前提となります。新しい仮想デスクトップを簡単に拡張できることは、仮想化対応のネットワークおよびセキュリティインフラストラクチャの重要性をさらに高めます。デスクトップ仮想化のための Cisco データセンターインフラストラクチャ（ Cisco UCS 、 Cisco MDS 、および Cisco Nexus ファミリソリューション）は、強力なデータセンター、ネットワーク、およびデスクトップセキュリティを提供し、デスクトップからハイパーバイザまで、包括的なセキュリティを提供します。セキュリティは、仮想デスクトップ、仮想マシン対応のポリシーと管理、および LAN および WAN インフラストラクチャ全体のネットワークセキュリティをセグメント化することで強化されます。</block>
-  <block id="92ceeadd0f25bc4af33309d01c6c475e" category="list-text">* 拡張性。 * 仮想化ソリューションの成長はすべて避けられないため、解決策はその成長に合わせて拡張でき、予測どおりに拡張できる必要があります。シスコの仮想化ソリューションは、高い仮想マシン密度（サーバあたりの VM 数）をサポートし、ほぼリニアなパフォーマンスでサーバを拡張します。シスコのデータセンターインフラストラクチャは、成長のための柔軟なプラットフォームを提供し、ビジネスの俊敏性を向上させます。Cisco UCS Manager のサービスプロファイルを使用すると、ホストのプロビジョニングをオンデマンドで実行できるため、数百台のホストを導入する場合と同様に簡単に多数のホストを導入できます。</block>
-  <block id="46a5ea381a8ea5b5506ccff12a575f06" category="paragraph">Cisco UCS サーバは、ほぼリニアなパフォーマンスと拡張性を提供します。Cisco UCS は、特許取得済みの Cisco 拡張メモリテクノロジーを実装して、ソケット数が少ない大容量のメモリを提供します（ 2 ソケットおよび 4 ソケットサーバで最大 1 TB のメモリを拡張可能）。ユニファイドファブリックテクノロジーをビルディングブロックとして使用すると、 Cisco UCS サーバの総帯域幅をサーバあたり最大 80Gbps まで拡張できます。また、ノースバウンド Cisco UCS ファブリックインターコネクトを使用すると、 2Tbps のラインレートで出力できるため、デスクトップ仮想化 I/O とメモリのボトルネックを回避できます。高性能で低遅延のユニファイドファブリックベースのネットワーキングアーキテクチャを備えた Cisco UCS は、高解像度のビデオトラフィックや通信トラフィックなど、大量の仮想デスクトップトラフィックをサポートします。さらに、 Cisco の仮想化ソリューションの一部として、ブートストームおよびログインストーム時のデータ可用性と最適なパフォーマンスを維持することもできます。</block>
-  <block id="2b09c337ee1733d639895b04c5196a99" category="paragraph">Cisco UCS 、 Cisco MDS 、および Cisco Nexus データセンターインフラストラクチャ設計は、拡張に最適なプラットフォームを提供します。また、サーバ、ネットワーク、ストレージリソースを透過的に拡張して、デスクトップ仮想化、データセンターアプリケーション、クラウドコンピューティングをサポートします。</block>
-  <block id="5421e83bdef8abf4103a2c2e454b0850" category="paragraph">VMware vCenter Server は Epic 環境を管理するための一元化されたプラットフォームを提供するため、医療機関は仮想インフラを自動化して、信頼性の高い方法で提供できます。</block>
-  <block id="b7cedb3b3f8d017b8091600199ba81d5" category="list-text">* シンプルな導入。 * 仮想アプライアンスを使用して、 vCenter Server を迅速かつ簡単に導入できます。</block>
   <block id="a12d886950a0804b79b6aafa30630b76" category="list-text">* プロアクティブな最適化。 * リソースを割り当てて最適化し、効率を最大限に高めます。</block>
-  <block id="0d47669b296fab05dc77e184cb7603f6" category="list-text">* 管理。 * 強力なプラグインとツールを使用して、管理を簡素化し、制御を拡張します。</block>
   <block id="8bee8a4fc5b5bcf0c54218c00ea1ffae" category="section-title">Virtual Storage Console for VMware vSphere</block>
-  <block id="4f8e9fb182fb01a90de85bd9bea101b9" category="paragraph">ネットアップの Virtual Storage Console （ VSC ）、 VASA Provider 、 Storage Replication Adapter （ SRA ） for VMware vSphere は仮想アプライアンスです。この製品スイートには、 VSC 、 VASA Provider 、 SRA の機能が含まれています。この製品スイートには、 vCenter Server のプラグインとして SRA と VASA Provider が含まれています。これらは、ネットアップストレージシステムを使用する VMware 環境で、 VM のエンドツーエンドのライフサイクル管理を実現します。</block>
-  <block id="1b247b8d34912850b3abb5713e3505a6" category="paragraph">VSC 、 VASA Provider 、 SRA 仮想アプライアンスは VMware vSphere Web Client とシームレスに統合されており、 SSO サービスを使用できます。複数の vCenter Server インスタンスがある環境では、管理する vCenter Server インスタンスごとに固有の VSC インスタンスを登録する必要があります。VSC のダッシュボードページでは、データストアと VM の全体的なステータスを簡単に確認できます。</block>
   <block id="5555b713522d1619f6f4f6538b1733d1" category="paragraph">VSC 、 VASA Provider 、 SRA 仮想アプライアンスを導入すると、次のタスクを実行できます。</block>
-  <block id="e09e2a026437a9d520e032040adb1a88" category="list-text">* VSC を使用して、ストレージの導入と管理、 ESXi ホストの構成を行います。 * VSC を使用して、クレデンシャルの追加、削除、クレデンシャルの割り当て、 VMware 環境内のストレージコントローラのアクセス許可の設定を行うことができます。また、ネットアップストレージシステムに接続された ESXi サーバを管理することもできます。ホストのタイムアウト、 NAS 、マルチパスの推奨されるベストプラクティス値を、数回のクリックですべてのホストに設定できます。ストレージの詳細を表示したり、診断情報を収集したりすることもできます。</block>
-  <block id="49b0472122182b397e1f90d18047582e" category="list-text">* VASA Provider を使用してストレージ機能プロファイルを作成し、アラームを設定します。 * VASA Provider for ONTAP は、 VASA Provider 拡張機能を有効にするとすぐに VSC に登録されます。ストレージ機能プロファイルと仮想データストアを作成して使用できます。また、アラームを設定して、ボリュームやアグリゲートがほぼいっぱいになったときに通知することもできます。仮想データストアに作成された仮想マシンディスク（ VMDK ）と VM のパフォーマンスを監視できます。</block>
-  <block id="c92bb7ace633a95c41f69b4f6972e118" category="list-text">* SRA をディザスタリカバリに使用します。 * SRA を使用して、障害時のディザスタリカバリ用に、環境内の保護対象サイトとリカバリサイトを設定できます。</block>
   <block id="8d9ea1d14ceacbc9f14eae283c25248d" category="section-title">NetApp OnCommand Insight と ONTAP</block>
-  <block id="740bb41b7a1e6f43e69987e96965b855" category="paragraph">NetApp OnCommand Insight は、インフラ管理を Epic サービス提供チェーンに統合します。このアプローチにより、医療機関は、ストレージ、ネットワーク、コンピューティングのインフラをより適切に制御、自動化、分析できるようになります。IT 部門は、現在のインフラを最適化して最大限のメリットを得られるようにすると同時に、購入するリソースや購入時期を簡単に判断できるようにします。また、複雑なテクノロジの移行に伴うリスクも軽減されます。エージェントが不要なため、インストールは簡単で、システムを停止する必要がありません。インストール済みのストレージデバイスと SAN デバイスは継続的に検出され、ストレージ環境全体を可視化するために詳細情報が収集されます。未使用の資産、ミスアライメント資産、利用率の低い資産、孤立した資産をすばやく特定し、将来の拡張に備えて再利用することができます。</block>
-  <block id="7bee8c319cbc5c175b53942140afd985" category="list-text">* 既存のリソースを最適化。 * 活用されていない資産、利用率の低い資産、孤立した資産を特定するためのベストプラクティスを確立し、問題を回避してサービスレベルを満たすことができます。</block>
-  <block id="6caa2b3fb3ab6f741b4a287166a760a1" category="list-text">* より的確な意思決定。 * リアルタイム・データにより、容量の問題をより迅速に解決し、将来の購入計画を正確に立て、過剰支出を回避し、設備投資を先送りできます。</block>
-  <block id="965e8f632079449042763aaeec951d60" category="list-text">* IT イニシアチブを加速 * 仮想環境をよりよく理解し、リスク管理、ダウンタイムの最小化、クラウド導入の高速化を実現します。</block>
-  <block id="9fbe6944d6545020be3aa4362813616a" category="list-text">* OnCommand Insight ダッシュボード。 * この Epic ダッシュボードは、 Epic 対応のネットアップによって開発されたもので、包括的なインフラスタックのビューを提供し、 Pulse 監視の枠を超えています。OnCommand Insight では、コンピューティング、ネットワーク、ストレージの競合の問題をプロアクティブに特定できます。</block>
-  <block id="b7483173771cad0916150aa3ed7f3c8d" category="section-title">NetApp OnCommand Workflow Automation の略</block>
-  <block id="6c3d6e7503d9351fa4c607ece2ef3ed8" category="paragraph">OnCommand WFA は、プロビジョニング、移行、運用停止、データ保護設定などのストレージ管理タスクの自動化に役立つ無償のソフトウェア解決策です。 およびストレージのクローニングOnCommand WFA を使用して、プロセスで指定されたタスクを実行するためのワークフローを構築できます。</block>
-  <block id="20358f21053298c9371ed9a1e31140a4" category="paragraph">ワークフローは、繰り返し実行される手順のタスクで、次の種類のタスクを含みます。</block>
-  <block id="03dd9057ac39ccc8f271eac4578a799b" category="list-text">データベースまたはファイルシステム用のストレージのプロビジョニング、移行、または運用停止</block>
-  <block id="99456eb3256df14bd77314762d92fb62" category="list-text">ストレージスイッチやデータストアなど、新しい仮想化環境をセットアップする</block>
-  <block id="0a552e96d71236176d7c44df529ee3eb" category="list-text">エンドツーエンドのオーケストレーションプロセスの一環としてアプリケーション用のストレージをセットアップする</block>
-  <block id="8a2365df00f165b1c1ce2bcad0c372ea" category="paragraph">Epic ワークロードのベストプラクティスに従って、ネットアップストレージのセットアップと設定を迅速に行えるワークフローを構築できます。Epic 対応の OnCommand WFA ワークフローにより、 Epic ワークフローでサポートされていないスクリプトがすべて廃止され、バックアップとテストの環境更新が自動化されました。</block>
-  <block id="3146263136d2d4a328ac9e85acf2ca04" category="paragraph">SnapCenter は、データ保護のための拡張性に優れたユニファイドプラットフォームです。SnapCenter は一元的な管理と監視を実現し、アプリケーションと整合性のあるデータベース整合性のある Snapshot コピーを管理できるようにします。SnapCenter を使用すると、プライマリとセカンダリの両方のデスティネーション（ SnapMirror と SnapVault ）から、仮想マシン（ VM ）のバックアップ、リストア、クローニング、バックアップ、検証を実行できます。SnapCenter を使用すると、データベース、ストレージ、仮想化の管理者は、さまざまなアプリケーション、データベース、 VM のバックアップ、リストア、クローニングの処理を 1 つのツールで管理できます。</block>
-  <block id="48550833c74903581ac72850032156aa" category="paragraph">SnapCenter では、リソースグループとポリシー管理（スケジュール設定や保持設定を含む）を使用して、アプリケーションリソースの一元管理とデータ保護ジョブの実行を簡単に実行できます。SnapCenter では、ダッシュボード、複数のレポート作成オプション、ジョブ監視、ログおよびイベントビューアを使用して、統一されたレポートを作成できます。</block>
-  <block id="bce74566682fe721e67bce25b7172292" category="paragraph">SnapCenter でバックアップできるのは、 VMware 、 RHEL 、 SQL 、 Oracle 、 CIFS です。ネットアップは Epic WFA バックアップワークフローとの統合により、あらゆる Epic 環境に対応したバックアップ解決策を提供しています。</block>
-  <block id="b240db17f82e985f3d0d364567a003be" category="doc">リファレンスアーキテクチャ</block>
   <block id="650a665cd26629cb9bf5396560f70149" category="summary">MEDITECH ホストの LUN マッピングは、 LUN の作成時に確立されます。</block>
   <block id="389e3e53ccb44e580ad6f383cc487612" category="doc">LUN マッピング</block>
-  <block id="9c8a67a52a9329822ce75fb83143f687" category="summary">ネットアップの All Flash FAS プラットフォームのストレージ効率とパフォーマンスを示すために、 AFF A300 および AFF A700 システムで Epic EHR のパフォーマンスを測定する調査を実施しました。</block>
-  <block id="a573d92b77d430af7e424879baf78e94" category="doc">エグゼクティブサマリー</block>
-  <block id="202a7d546070fb5bec7b69ea820f2079" category="paragraph">ネットアップの All Flash FAS プラットフォームのストレージ効率とパフォーマンスを示すために、 AFF A300 および AFF A700 システムで Epic EHR のパフォーマンスを測定する調査を実施しました。ONTAP 9.5 を実行している AFF A300 および ONTAP 9.4 を実行している AFF A700 ストレージコントローラで、 Epic EHR ワークロードを実行しているそれぞれについて、データスループット、ピーク IOPS 、平均レイテンシを測定しました。SPC-2 テストと同様に、インラインの Storage Efficiency 機能もすべて有効にしました。</block>
-  <block id="80c69342f719b9038e22c5e9c61d0aef" category="paragraph">AFF A300 クラスタで Epic Genio ワークロードジェネレータを実行しました。このクラスタには、 3.8TB SSD を合計 24 本、 AFF A700 クラスタには 3.8TB SSD を合計 48 本搭載しています。テストでは、このクラスタにさまざまな負荷をかけて、 CPU の利用率がピークになるようにし、負荷のポイントごとに、ストレージの IOPS とレイテンシに関する情報を収集しました。</block>
-  <block id="54f21be599f10fee37d9245b1697cc2e" category="paragraph">ネットアップでは、ソフトウェアのアップグレードを 1 回行うたびにパフォーマンスが 40~50% 向上しました。パフォーマンスの強化によるイノベーションは、ワークロードやプロトコルによってさまざまです。</block>
-  <block id="82ff7acde89b40c487a0147dba789d83" category="paragraph">Epic のパフォーマンステストで、 AFF A300 クラスタの IOPS が 75 、 000 IOPS 未満で 1 ミリ秒未満になったことが実証され、最大パフォーマンスは 18 、 929 IOPS で 1 ミリ秒未満に達したことが実証されました。IOPS が 200 、 000 以下のすべての負荷のポイントで、ストレージの一貫したレイテンシを 1 ミリ秒以下に抑えることができました。さらに、 AFF A700 クラスタの IOPS が 75 、 000 IOPS 未満で 1 ミリ秒未満で最大パフォーマンスが 319,000 IOPS 未満であったことも、 Epic のパフォーマンステストで実証されました。IOPS が 320 、 000 以下のすべての負荷のポイントで、ストレージの一貫したレイテンシを 1 ミリ秒以下に抑えることができました。</block>
-  <block id="69712b6fbbf0a39f4fda956baee2bf8f" category="summary">2020 年までに、 Epic の利用者はすべてフラッシュストレージに移行する必要があります。NetApp ONTAP は、 Epic で高品質のオールフラッシュアレイとして初めて導入されたソリューションで、エンタープライズストレージアレイにランクインしています。GA バージョンの ONTAP を実行するネットアップのプラットフォームはすべて快適です。</block>
-  <block id="dd96446f0a898f25c48349ae8a0375e4" category="paragraph">EPIC は、本番、レポート、 Clarity などの重要なワークロードを、プールと呼ばれるストレージの割り当てに物理的に分離する必要がある。ネットアップでは、ノードごとに 1 つのクラスタで複数のストレージプールを提供し、 Epic 解決策全体で単一のクラスタと単一の OS を提供しています。ONTAP では、 NAS と SAN のすべてのプロトコルがサポートされており、 SSD 、 HDD 、クラウド向けに異なるストレージ階層が混在しています。</block>
-  <block id="3f2686bd88b14ab02bd064c144c00847" category="paragraph">ONTAP 9.3 でアダプティブ QoS が導入され、 ONTAP 9.4 の大幅な機能拡張が行われたことで、物理的な分離を必要とせずにソフトウェアを使用してストレージプールを作成できるようになりました。この機能は、アーキテクチャ開発を大幅に簡易化し、ノードやディスクを統合できるようにします。また、本番環境のような重要なワークロードでは、ノード間に分散することでパフォーマンスを向上させることができます。また、 Bully が原因のストレージパフォーマンスの問題も解消され、ワークロードのライフサイクルが安定したパフォーマンスが保証されます。</block>
   <block id="0afbeb6bb86d48b82dcde168a1951bb5" category="summary">本ガイドの作成には、以下の方々が関わってきました。</block>
-  <block id="5653fcb2d71901e62d5410b93af27aaa" category="paragraph">本ガイドの作成には、以下の方々が関わってきました。</block>
   <block id="4b7c82b30e98ad9f06ef3dc1e15418ea" category="list-text">Brandon AGEE 、テクニカルマーケティングエンジニア、ネットアップ</block>
-  <block id="c76a95bce3acdcd391af7612d881c878" category="list-text">Brian O'Menahony 、解決策 Architect –ネットアップ、ヘルスケア</block>
   <block id="76b9b3bb37a85d7545736e7b002893e4" category="list-text">Cisco Systems, Inc 、テクニカルソリューションアーキテクト、 Jon Ebmeier 氏</block>
   <block id="37b608112185e7e41b5def8663df7fe4" category="list-text">シスコシステムズ、プロダクトマネージャ、 Mike Brennan 氏</block>
   <block id="7d6806c3b84802991762a6bdef7b61c9" category="summary">FlexPod アーキテクチャ基盤で MEDITECH 環境を運用することで、医療機関はスタッフの生産性向上と設備投資と運用コストの削減を期待できます。</block>
@@ -3528,55 +2768,18 @@
   <block id="fd63a5bc856e3af4599c0b25aef080d9" category="list-text">* 既存のリソースを最適化。 * 活用されていない資産、利用率の低い資産、孤立した資産を特定するために、確立されたベストプラクティスを活用して、問題を回避し、サービスレベルを満たすことができます。</block>
   <block id="c8e69d82d5cd2122117174c8565d2350" category="list-text">* より的確な意思決定。 * リアルタイム・データにより、容量の問題をより迅速に解決し、将来の購入を正確に計画し、過剰支出を回避し、設備投資を先送りすることができます。</block>
   <block id="1fa18e3cb4dc1215944e4785398261ea" category="list-text">* IT イニシアチブを加速 * 仮想環境をよりよく理解し、リスク管理、ダウンタイムの最小化、クラウド導入の高速化を支援します。</block>
-  <block id="793ef4029cd136a285cbbb6d77b06ec2" category="summary">Cisco MDS 9100 シリーズ FC スイッチは、 NetApp AFF A700 コントローラと Cisco UCS コンピューティングファブリック間の冗長 16GB FC 接続を提供します。</block>
-  <block id="e8b558edd748d830251d39a2eef0ee6c" category="doc">Cisco MDS 9148S の構成</block>
-  <block id="64cc8a75dc7fd0ee038ee777e9b2c577" category="inline-link-macro">「配線図」</block>
-  <block id="5d678f8047210722cfd77e201923a557" category="paragraph">Cisco MDS 9100 シリーズ FC スイッチは、 NetApp AFF A700 コントローラと Cisco UCS コンピューティングファブリック間の冗長 16GB FC 接続を提供します。ケーブルは、の説明に従って接続する必要があります <block ref="b94eb338bd34852457376dcfaeb5cdd2" category="inline-link-macro-rx"></block></block>
-  <block id="d7b73255a41fb7f79e9d809d58e00ed7" category="list-text">各 MDS スイッチのスイッチコンソールで、次のコマンドを実行して、解決策に必要な機能を有効にします。</block>
   <block id="490495544d3b2d2d1eda150303b4dc57" category="inline-link">FlexPod データセンターと FC の Cisco Validated Design の 2 つの機能があります</block>
-  <block id="9175a0be73c9067310a164d8052be5ce" category="list-text">の FlexPod Cisco MDS スイッチの設定セクションに従って、個々のポート、ポートチャネル、および説明を設定します<block ref="8c408f7508059ba7cdfe1e4eb9ba9051" category="inline-link-rx"></block>。</block>
-  <block id="28491a781fcedeea763f5fed2bfb0326" category="list-text">Epic 解決策に必要な VSAN を作成するには、グローバルコンフィギュレーションモードで次の手順を実行します。</block>
-  <block id="b39b6557cad826d9db43d253bfd25d88" category="list-text">ファブリック A の MDS スイッチの場合：</block>
-  <block id="f5f807a14d69ce9f2943b922cccec661" category="paragraph">コマンドの最後の 2 行のポートチャネル番号は、リファレンスドキュメントを使用して個々のポート、ポートチャネル、および説明をプロビジョニングしたときに作成されました。</block>
-  <block id="a8022d5297c9e64fd8113db534421075" category="list-text">ファブリック B の MDS スイッチの場合：</block>
-  <block id="b1189778c113d180f7ba76dab999773d" category="list-text">各 FC スイッチについて、デバイスのエイリアス名を作成します。このエイリアス名を使用すると、リファレンスドキュメントの詳細情報を使用して、運用中の各デバイスをわかりやすく識別できます。</block>
-  <block id="ea64b73d71366df31b2380b1bf0afd17" category="list-text">最後に、前の手順で各 MDS スイッチに作成したデバイスエイリアス名を使用して、 FC ゾーンを作成します。</block>
   <block id="dca669a924575921f1c2e9e3cf8bb4da" category="section-title">Cisco UCS の設定に関するガイダンス</block>
-  <block id="5dd940be282dc52b541c98b8360d9b5a" category="paragraph">Cisco UCS を使用することで、 Epic のお客様はネットワーク、ストレージ、コンピューティングの分野でエキスパートを活用して、ポリシーやテンプレートを作成し、それぞれのニーズに合わせて環境をカスタマイズできます。作成されたポリシーとテンプレートをサービスプロファイルに統合することで、シスコのブレードサーバとラックサーバの一貫した、繰り返し可能で信頼性の高い、迅速な導入を実現できます。</block>
-  <block id="0a2f7f87e5c8424e5e4fbe39f7ca8a8e" category="paragraph">Cisco UCS には、 Cisco UCS システム（ドメインと呼ばれる）を管理するための 3 つの方法があります。</block>
-  <block id="9389641a1c24f2930fb4411b40c45c6f" category="list-text">Cisco UCS Manager HTML 5 GUI</block>
   <block id="d218986bb2247c38b40f20dd68e24c12" category="list-text">Cisco UCS CLI</block>
   <block id="05287109d3dc7b5d0023d8c242acf862" category="list-text">マルチドメイン環境向けの Cisco UCS Central</block>
   <block id="e6837a90c0b393f65be16b4d0ecb6782" category="paragraph">次の図に、 Cisco UCS Manager の SAN ノードのサンプルスクリーンショットを示します。</block>
-  <block id="fa9ee02a18b42911fbb16029cd6bc05d" category="paragraph"><block ref="fa9ee02a18b42911fbb16029cd6bc05d" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="25c3964d79e50cd7b54972d4d8453407" category="paragraph">大規模な導入環境では、大規模な Epic 機能コンポーネントレベルで、独立した Cisco UCS ドメインを構築することでフォールトトレランスを強化できます。</block>
-  <block id="79f51702daf493ff9633c9a950e12f19" category="paragraph">2 つ以上のデータセンターを備えた耐障害性の高い設計では、 Cisco UCS Manager がグローバルポリシーとグローバルサービスプロファイルを設定して、企業全体のホスト間で一貫性を確保するうえで重要な役割を果たします。</block>
-  <block id="0b4c60e894555f81fc037a58080905e7" category="paragraph">Cisco UCS コンピューティングプラットフォームをセットアップするには、次の手順を実行します。Cisco UCS B200 M5 ブレードサーバを Cisco UCS 5108AC ブレードシャーシに設置したあと、次の手順を実行します。また、の説明に従ってケーブル接続の要件を満たしている必要があります <block ref="b94eb338bd34852457376dcfaeb5cdd2" category="inline-link-macro-rx"></block></block>
   <block id="e17b2865671fa00385a07a7538a2971e" category="list-text">Cisco UCS Manager ファームウェアをバージョン 3.2(2f) 以降にアップグレードします。</block>
-  <block id="90723a4cc25b6e768a8ef27069b57db3" category="list-text">ドメインのレポート、コールホーム機能、および NTP 設定を行います。</block>
-  <block id="f791182198f6fb703e7f8428f66db0c2" category="list-text">各ファブリックインターコネクトにサーバポートとアップリンクポートを設定します。</block>
   <block id="8859045b1163a725636b1545ad945d05" category="list-text">シャーシ検出ポリシーを編集します。</block>
-  <block id="a5cd0bba9b0212316f9efe0ecd12f280" category="list-text">アウトオブバンド管理用のアドレスプールを作成します。 UUID 、 MAC アドレス、サーバ、 WWNN 、 WWPN を指定します。</block>
   <block id="c7f10dd0c78eba5485a096c3f502cb13" category="list-text">イーサネットおよび FC アップリンクポートチャネルおよび VSAN を作成します。</block>
   <block id="0168a016a3ae1b275741733df46fea0b" category="list-text">SAN 接続、ネットワーク制御、サーバプールの認定、電源制御、サーバ BIOS 、 デフォルトのメンテナンスに使用できます。</block>
   <block id="9fe508bee4aac2b77dbd817f3aa9afe5" category="list-text">vNIC および vHBA テンプレートを作成します。</block>
   <block id="85c0d82db4b58086bb360c5ec755dd40" category="list-text">vMedia ブートポリシーと FC ブートポリシーを作成します。</block>
-  <block id="63cc05deb41c5c9e9d7e565dd8b82313" category="list-text">各 Epic プラットフォーム要素のサービスプロファイルテンプレートとサービスプロファイルを作成します。</block>
   <block id="06ce9b3053e89576060a04a60214d1ed" category="list-text">サービスプロファイルを適切なブレードサーバに関連付けます。</block>
-  <block id="46e11de479244160952629cbc231bf87" category="paragraph">FlexPod の Cisco UCS サービスプロファイルの各主要要素を設定する詳細な手順については、を参照してください<block ref="8c408f7508059ba7cdfe1e4eb9ba9051" category="inline-link-rx"></block> 文書化</block>
-  <block id="f22e2462184283f1e5255b3c25ad8479" category="paragraph">Epic の導入では、導入される Epic エレメントに基づいてさまざまなサービスプロファイルタイプを推奨しています。サーバプールとサーバプールの認定を使用することで、お客様は特定のホストロールへのサービスプロファイルの展開を識別し、自動化することができます。サービスプロファイルのサンプルリストは次のとおりです。</block>
-  <block id="98a98660200ac9fa0b640063a7d03268" category="list-text">Epic Chronicle Cache データベースホストの場合：</block>
-  <block id="0ca13d90361140e6d0ea70c4ca3ca8f6" category="list-text">本番ホストのサービスプロファイル</block>
-  <block id="9d453b2f852010294ac6ccff10e4b8da" category="list-text">Reporting Service のホストプロファイル</block>
-  <block id="57bd69c4ea04f826bfc5c704f14c36b0" category="list-text">ディザスタリカバリホストのサービスプロファイル</block>
-  <block id="d11615a79a34df2dd500a68084d496c6" category="list-text">ホットスペアホストサービスプロファイル</block>
-  <block id="04f87d6896f4d516b8db6ceecd8ff401" category="list-text">Epic Hyperspace ホストの場合：</block>
-  <block id="4fad9abbba6aa57ed6c00f8164500df6" category="list-text">VDI ホストサービスプロファイル</block>
-  <block id="f0525d9ba0b330ec1162811e17da6293" category="list-text">Citrix XenApp ホストサービスプロファイル</block>
-  <block id="4603d0c7225ed561fbeb94ea6c21718c" category="list-text">Epic cogito および Clarity データベースホストの場合：</block>
-  <block id="362892ab12531b2900f173fed3cd9e42" category="list-text">データベースホストサービスプロファイル（ Clarity RDBMS およびビジネスオブジェクト）</block>
-  <block id="74b7d2003c27e0d17ea2ccd41cad8765" category="list-text">Epic Services ホストの場合：</block>
-  <block id="3bbb4324e12d3e1daaef20a8c8f9d3cc" category="list-text">アプリケーションホストプロファイル（印刷形式、リレー、通信、 Web BLOB など）</block>
   <block id="3efd43d603f98d46d6707c05552b037a" category="summary">FlexPod アーキテクチャは、コンピューティング、ネットワーク、ストレージスタック全体でコンポーネントやリンクに障害が発生した場合に高可用性を提供するように設計されています。クライアントアクセスとストレージアクセス用に複数のネットワークパスを用意することで、ロードバランシングとリソース利用率の最適化を実現します。</block>
   <block id="220e76f33c6565f8361231d3fbea063c" category="paragraph">次の図は、医用画像システム解決策環境用の 16Gb FC/40Gb イーサネット（ 40GbE ）トポロジを示しています。</block>
   <block id="0313b0221759818538e9506f841bd57a" category="paragraph"><block ref="0313b0221759818538e9506f841bd57a" category="inline-image-macro-rx" type="image"></block></block>
@@ -3740,215 +2943,12 @@
   <block id="168ae7330efb3bb5034df14e05285c38" category="cell">ビジネスインテリジェンスバックアップ</block>
   <block id="0651aaa42fb9bbf2868735e100e06d6e" category="cell">相互運用性サーバ</block>
   <block id="0188209c75f4c41400984937d1e53419" category="cell">相互運用性データベースサーバ</block>
-  <block id="fa049eae3af0790a555b1c6e2bc15241" category="doc">小規模、中規模、大規模のアーキテクチャ向けの技術仕様</block>
-  <block id="aa47672f5332b2f711e012431874e559" category="paragraph">FlexPod の設計により、多数の異なるコンポーネントとソフトウェアバージョンを含む柔軟なインフラが実現します。使用<block ref="047a979ac548254afa5d2af995fe2a74" category="inline-link-rx"></block> 有効な FlexPod 構成を構築または構築するためのガイドとして。詳細な構成は FlexPod の最小要件にすぎず、単なるサンプルです。また、環境やユースケースに応じて、同梱されている製品ファミリー内で拡張することもできます。</block>
-  <block id="61bee74ae45b09e1b54331a983a386fb" category="paragraph">次の表に、 Epic 本番データベースワークロードの容量構成を示します。リストされている合計容量は、すべての Epic コンポーネントの必要性に対応しています。</block>
-  <block id="f7c765fbd5dd5c7d9c0756f5448d596c" category="cell">AFF A300 HA ペア × 1</block>
-  <block id="89bf4f5fd8b7269f2e3505ab5563b5f6" category="cell">3.8TB × 24</block>
-  <block id="6b2140fc1dcd2afed73c9186c2aee6fb" category="cell">3.8TB × 48</block>
-  <block id="3ddbbdcbee4f8ccde7aea7744506a9f2" category="cell">3.8TB × 96</block>
-  <block id="d0c3a98983430277bff907f98dbd96db" category="cell">EPIC データベースのサイズ</block>
-  <block id="a5304f0225cc16fca490baf76c6bb3d3" category="cell">3 ～ 20TB</block>
-  <block id="25c3e3ffdae4115068e764701bc97824" category="cell">20TB ~ 40TB</block>
-  <block id="bd6b97bfe4274a368daf2b00e4aff2a1" category="cell">40 TB 以上</block>
-  <block id="5e57e0e8038db6acbc9c344ac07250b3" category="cell">22,000</block>
-  <block id="33c3b779b1d887dce94efb73cd8b57b7" category="cell">50,000</block>
-  <block id="3de995d2a6f5f1bf999bc06dfb191880" category="cell">125,000</block>
-  <block id="fdf5856a9d6580cec08b1a3f795e9343" category="cell">92.16 TB</block>
-  <block id="69c78229800a5af89a034407bc995989" category="cell">184.32TB</block>
-  <block id="721772d86e1bd32161b0e7adcdb191e9" category="cell">368.64TB</block>
-  <block id="5a192217c211d31e589e6db99bb79817" category="cell">65.02TiB</block>
-  <block id="761bda44205803a23bece4d56094a432" category="cell">134.36TiB</block>
-  <block id="6d06b771c6f325bff7ab4be38e221938" category="cell">269.51TiB</block>
-  <block id="9bad93a2f79c626de997adbe212ca67d" category="cell">130.04TiB</block>
-  <block id="e2a162936fa4df93ca4a4b816ac80892" category="cell">268.71TiB</block>
-  <block id="ebfb94112573e011313167541e1fa477" category="cell">539.03TiB</block>
-  <block id="ff2df3d4f0e3d38816ccec887f5661a8" category="paragraph">EPIC の本番環境のワークロードには、 1 つの AFF A300 HA ペアで簡単に対応できます。AFF A300 HA ペアでは、最大 20 万 IOPS を達成でき、大規模な Epic 導入に対応し、共有ワークロードをサポートできる余地があります。</block>
-  <block id="40672a5a155e61657d62065a148576d3" category="paragraph">Epic 本番環境の中には、複数のワークロードを同時に実行しているものや、 IOP の要件が高いものがあるものがあります。その場合は、ネットアップアカウントチームと協力して、必要な IOPS と容量に従ってストレージシステムのサイジングを行い、ワークロードに対応する適切なプラットフォームを導入します。AFF A700 HA ペアで複数の Epic 環境を実行しているお客様がいます。</block>
-  <block id="17b68068f1cefd748eb5c2f45b681db4" category="paragraph">次の表に、小規模、中規模、および大規模の構成に必要な標準ソフトウェアを示します。</block>
-  <block id="13816363e2eaa66d7be294be0dbaef8c" category="cell">データ ONTAP</block>
-  <block id="58637bbaad7c04e0642e48d41397709e" category="cell">Cisco UCS-FI</block>
-  <block id="43844b06c2d7e436941f5b70a7238324" category="cell">Cisco UCS Manager 3.2 （ 2f ）</block>
-  <block id="d205e102d957276451a2724f3c77c24c" category="cell">3.2 （ 2f ）以降</block>
-  <block id="2aa2f2e60af88894dfa2bbc7959164c5" category="paragraph">次の表に、小規模構成のインフラコンポーネントを示します。</block>
-  <block id="aada29daee1d64ed0fe907043855cb7e" category="cell">2 つ</block>
-  <block id="b9c87098c12954b3a7641410d986c852" category="cell">ユーザをサポートするために必要なブレードの数に基づきます</block>
-  <block id="8d0270a666914cce444a65e1abaef5e6" category="cell">それぞれ 2 個の 18 コア、 2.7GHz 、 384GB BIOS 3.2(2f )</block>
-  <block id="3492b43fd4dccad4b1487d71329f0bbf" category="cell">VMware ESXi fNIC FC ドライバ： 1.0.34 VMware ESXi eNIC イーサネットドライバ： 1.0.6.0 （マトリックスを参照）</block>
-  <block id="a0d64926d0a8afbbcf7b137ffa0e26e7" category="cell">6332-16UP と Cisco UCS Manager 3.22f</block>
-  <block id="4f32d9278a293f4715635f2ecdeeaecc" category="cell">Cisco Nexus 93180YC-FX × 2</block>
-  <block id="1b1d211580238a7299efd0b703feaee6" category="cell">BLOB ストレージ用の IP ネットワーク N9k</block>
-  <block id="220f5842a211b1e36fe8f6d56ccf8bf8" category="cell">1 つの HA ペア</block>
-  <block id="54053aa02639cf4bf61d56b2224bd956" category="cell">DS224C ディスクシェルフ 1 台（ 24 本のドライブをフル搭載）</block>
-  <block id="ad0c718c969d8af0a09ee727138089a0" category="cell">フル装備のディスクシェルフ × 1</block>
-  <block id="c7c05a8d482a98c4e95caf1d63e6f6ba" category="paragraph">3.8TB SSD ドライブの 1 台のディスクシェルフで十分ですが、大部分の小規模な Epic ユーザ導入には適しています。ただし、共有ワークロードの場合は、追加のディスク容量が必要になることがあります。それに応じて容量をサイジングする必要があります。</block>
-  <block id="c41d42406196cf807c73fba09eb3975e" category="paragraph">次の表に、中規模構成のインフラコンポーネントを示します。</block>
-  <block id="981b8fcee42e1e726a67a2b9a98ea6e9" category="cell">4.</block>
-  <block id="c14ae6472df41f4acb49cef6fd563a2d" category="cell">それぞれ 2 つの 18 コア、 2.7GHz/3.0GHz 、および 384GB 4 ソケットをキャッシュ DB BIOS 3.2(2f ) 用に搭載</block>
-  <block id="e1b85fc064f10f5eb5f25dce70dc69a2" category="cell">6332-16UP と Cisco UCS Manager 3.22f</block>
-  <block id="d50714a1cc958032c55bd4d4aab858e6" category="cell">IP ネットワーク： BLOB ストレージ用の Cisco N9k</block>
-  <block id="69b129f0d0230eea572ce9d12ffa7ce4" category="cell">FI および Cisco UCS シャーシ</block>
-  <block id="5a61ecc2e20ccb9ca8c41017f9d9cb6f" category="cell">2 つの HA ペア</block>
-  <block id="968c5306910e54c0af7b755ec2b2a2dd" category="cell">2 ノードのクラスタで、すべての Epic ワークロード（ Production 、 Report 、 Clarity 、 VMware 、 Citrix 、 CIFS など）</block>
-  <block id="eab8a8e9ee4e0daf662016ee1b2cb444" category="cell">DS224C ディスクシェルフ × 2</block>
-  <block id="471c0da75da1a8d73852a62c77b19515" category="cell">フル搭載のディスクシェルフ × 2</block>
-  <block id="d6d974ddfff90969a58b79bc192c4824" category="paragraph">3.8TB SSD ドライブの 4 台のディスクシェルフで十分です。中規模の Epic を導入したほとんどのお客様に適しています。ただし、それに応じて、必要な容量についてディスク容量の要件とサイズを評価してください。</block>
-  <block id="bb6d0a00ddc5c0410e11edfd282e006c" category="paragraph">次の表に、大規模な構成インフラコンポーネントを示します。</block>
-  <block id="95f49ae402da75dedd4f57c274da6407" category="cell">各に 24 コア、 2.7GHz 、および 576GB BIOS 3.2(2f ) を 2 つ搭載</block>
-  <block id="e3a16ffc5ecdf8b033933b47520703d8" category="cell">FC ： Cisco MDS 9706</block>
-  <block id="5a5e91cddb2e8ecf07cf3186345ea2bd" category="cell">Cisco 9706 スイッチ 2 台</block>
-  <block id="dcbc19e6a32fcf68e9f3d4f68a284384" category="cell">3 つの HA ペア</block>
-  <block id="fa52a9a9ffb98cb64b7a5735aa941c0f" category="cell">Epic ワークロードに対応した 2 ノードクラスタ × 3 （本番、レポート、 Clarity 、 VMware 、 Citrix 、 CIFS など）</block>
-  <block id="e93e30bba375ede1fa713c3cdb475616" category="cell">DS224C ディスクシェルフ × 4</block>
-  <block id="1ade7c73d6f80ad624a2a21b429cc508" category="cell">フル搭載のディスクシェルフ × 4</block>
-  <block id="55491e751309a2a84bf2c75714c26767" category="paragraph">一部の環境では、複数の Epic 本番ワークロードを同時に実行している場合や、 IOPS 要件が高い場合があります。その場合は、ネットアップアカウントチームと協力して、必要な IOPS と容量に基づいてストレージシステムのサイジングを行い、ワークロードに適したプラットフォームを決定します。AFF A700 HA ペアで複数の Epic 環境を実行しているお客様がいます。</block>
-  <block id="b95a6f491bfe74d5e4139d578c808830" category="summary">Epic で GenerationIO ツール（ Genio ）を使用して、ストレージが本番環境に対応しているかどうかを検証しました。このテストでは、ストレージを制限までプッシュし、要件が失敗するまで徐々に稼働させてストレージコントローラのヘッドルームを決定することで、パフォーマンスに焦点を当てます。</block>
-  <block id="1b807fa125a5d0c2b2525f07e4d27e1f" category="doc">テスト方法</block>
   <block id="b3e6ac4f3c523ea5a90f4f79ca3e585d" category="section-title">テスト計画</block>
-  <block id="82b440d35eaa96bac8069fcd6dc86104" category="paragraph">ここで実施するテストでは、ヘッドルームの特定と、アダプティブ Quality of Service （ AQOS ）を使用した重要な Epic ワークロードの保護に焦点を当てています。AFF A300 のテストでは、 2 台のサーバを両方にロードした Genio で使用して、ストレージコントローラ上の I/O を処理します。3 台のサーバをすべての 3 台にロードされた Genio とともに使用して、 AFF A700 ストレージコントローラ上の I/O をドライブします。サーバのパフォーマンス制限のために 3 台のサーバが使用され、 AFF A700 には 3 台のサーバが必要です。</block>
   <block id="c8a1fb794dede8cb2e7c2893248b1d43" category="section-title">テスト環境</block>
   <block id="4aedd7feb44df1595d3db438ed0cb551" category="section-title">ハードウェアとソフトウェア：</block>
-  <block id="e77d3379bd092491f960018b039f19fe" category="paragraph">今回の調査では、 Cisco UCS B200-M5s 上で実行される VMware ESXi 6.5 で 3 台の Red Hat Linux 仮想マシン（ VM ）を構成しました。サーバ側で 16Gb FC を使用し、ストレージ側で 16GB FC を使用して、 ESXi ホストを AFF ストレージコントローラノードに接続しました。AFF A700 ノードは、ネットアップのケーブル配線のベストプラクティスに従って、 3.8TB SSD の DS2446 ディスクシェルフの 1 台に接続しました。</block>
-  <block id="abdf6ef1895ffc7b462df5467fcb02dd" category="paragraph">以下の 3 つの表に、 Epic パフォーマンステスト構成で使用したハードウェアとソフトウェアのコンポーネントを示します。</block>
-  <block id="9366c7b2b5ef1897672c32070ed93820" category="paragraph">次の表に、 Epic Test のハードウェアおよびソフトウェアコンポーネントを示します。</block>
-  <block id="34d0b9b49aa480630e91a3619ba7ffb2" category="cell">ハードウェアおよびソフトウェアコンポーネント</block>
-  <block id="fd4aa9127e2fcd210d399382085d6028" category="cell">VM 用のオペレーティングシステム</block>
-  <block id="efc3a1c529bd08775ec30e286ebe6beb" category="cell">RHEL 7.4 VM</block>
-  <block id="4da2cec3a9e4cb28ee984d60c41bcce7" category="cell">サーバブレード上のオペレーティングシステム</block>
-  <block id="433abae658dcc70d5d3761c8600f7b1f" category="cell">VMware ESXi 6.5 の場合</block>
-  <block id="e042e676706d93b3b14ce12e4d00a002" category="cell">物理サーバ</block>
-  <block id="bdca94d672fd7d92ff8ea4ac0c08a195" category="cell">Cisco UCS B200 M5 × 3</block>
-  <block id="0b429223fa40bae1f57484fc7a23db8a" category="cell">サーバあたりのプロセッサ数</block>
-  <block id="6ebf62ce6fe729a0658f60247091310d" category="cell">20 コア Intel Xeon Gold 6148 2.4GHz x 2</block>
-  <block id="1031916fe3cb32cc33c3500d2653094a" category="cell">サーバあたりの物理メモリ</block>
-  <block id="4a2c071fa681cde76a2155cd103cffda" category="cell">768GB</block>
-  <block id="f740a217496c1f42a51b7a745f62930e" category="cell">FC ネットワーク</block>
-  <block id="cbf5e4815ad4588059cc54f6a631770c" category="cell">16Gb FC 、マルチパス対応</block>
-  <block id="1e37c6e5f678759b5c30da90f48dd91c" category="cell">FC HBA</block>
-  <block id="c49f5b9cd1a8a302ce352b367ffb88c3" category="cell">Cisco UCS VIC 1340 上の FC vHBA</block>
-  <block id="74f8711b479ad7ed378b52210486c7dc" category="cell">クラスタ管理用の専用パブリック 1GbE ポート</block>
-  <block id="57dc2744d338611dbd8deda89a8e4d5f" category="cell">Intel 1350GbE ポート × 2</block>
-  <block id="849a69a42b5d8622d554e546f9bb4d51" category="cell">16Gb FC スイッチ</block>
-  <block id="49527a523536cb0a8ea26291547535b5" category="cell">Cisco MDS 9148s</block>
-  <block id="b718eba2f6ad2badf1092f3fb89cd073" category="cell">40GbE スイッチ</block>
-  <block id="03817c398c0f79eb77d91647e2b656c7" category="cell">Cisco Nexus 9332 スイッチ</block>
-  <block id="27daa34130b7ead42e3e2e7811794480" category="paragraph">次の表に、 NetApp AFF A700 および AFF A300 ストレージシステムのハードウェアとソフトウェアを示します。</block>
-  <block id="b3d29613beffd4378eee7c1fcd5b7595" category="cell">AFF A700 の詳細</block>
-  <block id="3c532f9d06b8fedad2420494344f60c4" category="cell">AFF A300 の詳細</block>
-  <block id="f31303ddb8ada38aed08c2bb8f9d8e6c" category="cell">ストレージシステム</block>
-  <block id="cd764074597079773f9d3d3b2be8497b" category="cell">ハイアベイラビリティ（ HA ）アクティブ / アクティブペアとして構成された AFF A700 コントローラ</block>
-  <block id="576d9c10df4639d786ecab4e158b5a96" category="cell">AFF A300 コントローラがハイアベイラビリティ（ HA ）アクティブ / アクティブペアとして構成されている場合</block>
-  <block id="3b2a75ebc087c7f3c4fa9ac0e2a92ebe" category="cell">ONTAP バージョン</block>
   <block id="b68de8f1f938e0330acdf64c63b08b9a" category="cell">9.4</block>
   <block id="eab7e959c5707439b9e2c1fe3e86d60c" category="cell">9.5</block>
-  <block id="73247cedd25dd5f7e6612727d04c119a" category="cell">ドライブの総数</block>
-  <block id="19ca14e7ea6328a42e0eb13d585e4c22" category="cell">36</block>
-  <block id="ec8691da9bf60fda22f12e08033d054b" category="cell">ドライブサイズ</block>
-  <block id="e0ec5ed632381f5afbd737a7ca158cdb" category="cell">3.8TB</block>
-  <block id="ce1dc110e77caccbe12e51dce2d1c9b7" category="cell">ドライブタイプ</block>
-  <block id="3537e7e929ac4e1b43be2c99dca1d815" category="cell">FC ターゲットポート</block>
-  <block id="1a716b5b1c9ccbfe576b749f6340e14d" category="cell">16Gb ポート × 8 （ノードあたり 4 つ）</block>
-  <block id="34b8a9807da64737f07ac9e419c9f546" category="cell">イーサネットポート</block>
-  <block id="79cc45a3f3d8a71b0bbffdd503bcb706" category="cell">10Gb ポート × 4 （ノードあたり 2 つ）</block>
-  <block id="419acd6d6759fae803ce64f3591a3dde" category="cell">Storage Virtual Machine （ SVM ）</block>
-  <block id="e1f245dc8402eeb2e43a7c3626a66be9" category="cell">両方のノードのアグリゲートに 1 つの SVM</block>
-  <block id="3a128f76a5613434328fcdc31032f031" category="cell">イーサネット論理インターフェイス（ LIF ）</block>
-  <block id="76fa5b9a3d0b8a9565e1537c801af996" category="cell">1Gb 管理 LIF × 4 （ノードあたり 2 つ。別々のプライベート VLAN に接続）</block>
-  <block id="652659ceac3184b0f744b1aa4a39543a" category="cell">FC LIF</block>
-  <block id="07e51ffc1dbdfc64634b825c8aab756c" category="cell">16Gb データ LIF × 4</block>
-  <block id="ce4ea4ad46a1595e950c671ad1eee5ce" category="paragraph">次の表に、 NetApp AFF A700 と AFF A300 ストレージシステムのレイアウトを示します。</block>
-  <block id="0b7e67b6cdcf0432b624d53588d520fb" category="cell">SVM</block>
-  <block id="a19f05342fef37d1a30df931b17b95f9" category="cell">Epic アプリケーションデータベース対応の SVM が 1 つ</block>
   <block id="d5350d8759b1ec84607e47908809058e" category="cell">アグリゲート</block>
-  <block id="22c13b5cc0908ae2ee315e49fe99819e" category="cell">それぞれ 2 台の 20TB</block>
-  <block id="64ab1b9a51657ca07cbefed0200a042c" category="cell">それぞれ 2 つの 30TB です</block>
-  <block id="d62affd6dcf3554cea8b76c641887f5d" category="cell">本番用のボリューム</block>
-  <block id="260c7c0c2649d054f4d4a6e3f56a805c" category="cell">RHEL VM あたり 342GB のボリューム × 16</block>
-  <block id="c9589d53bc576411ed281326e757c7b2" category="cell">RHEL VM あたり 16 個の 512GB ボリューム</block>
-  <block id="0c2714b6ee34d1b452ce9c6f0b2011d8" category="cell">本番用の LUN</block>
-  <block id="ba06f132c62446a81a215bfeca5afe4e" category="cell">307GB LUN × 16 、ボリュームあたり 1 個</block>
-  <block id="00d499cad7c0fcdeda411c29cd0d7e6f" category="cell">460GB の LUN を 16 個、ボリュームごとに 1 個</block>
-  <block id="09f91fee92ba44d295781867a9551c95" category="cell">ジャーナル用のボリューム</block>
-  <block id="ae5b20da27d7b72e84e96aef3a96e756" category="cell">RHEL VM ごとに 2 つの 95Gb ボリューム</block>
-  <block id="678651e9ea0f72c1e1b9d2bfac3728d6" category="cell">RHEL VM ごとに 240GB のボリュームを 2 個</block>
-  <block id="d70042023215d90f6c127b03eab30514" category="cell">ジャーナル用の LUN</block>
-  <block id="b558a4d6257d53b14b7e3ffd5e4505f0" category="cell">75GB の LUN が 2 つ、ボリュームごとに 1 つ</block>
-  <block id="02a35661c5ea82e9af227689cc8799e1" category="cell">190Gb LUN 2 個（ボリュームごとに 1 個</block>
-  <block id="0bf1d83e3faa65c3de511963a14646f5" category="summary">Epic ソフトウェア環境向けに導入されたネットアップストレージでは、ハイアベイラビリティ（ HA ）ペア構成のストレージコントローラを使用します。FC プロトコル（ FCP ）を介して、両方のコントローラから Epic データベースサーバにストレージを提供する必要があります。</block>
-  <block id="9ccd4c993c20544cd46c9baa22201922" category="paragraph">Epic ソフトウェア環境向けに導入されたネットアップストレージでは、ハイアベイラビリティ（ HA ）ペア構成のストレージコントローラを使用します。FC プロトコル（ FCP ）を介して、両方のコントローラから Epic データベースサーバにストレージを提供する必要があります。この構成では、両方のコントローラのストレージが提供され、通常運用時にアプリケーションの負荷が均等に分散されます。</block>
-  <block id="8d3cca3c99346dc1082ed3c488cd9d5e" category="paragraph">本番ワークロードをフォールトドメインに分離するための EPIC 要件については、『 Epic All-Flash Reference Architecture Strategy Handbook 』を参照してください。作業を続行する前に、このドキュメントを詳しくお読みください。ONTAP ノードは別のストレージプールとみなすことができます。</block>
-  <block id="4cf252b993a77142d6afdc91b816b74d" category="paragraph">ここでは、関連する ONTAP コマンドを使用した導入手順とプロビジョニング手順の例を示します。特に重視するのは、 HA コントローラペアを使用するネットアップが推奨するストレージレイアウトを実装するためのストレージのプロビジョニング方法です。ONTAP の大きなメリットの 1 つは、既存の HA ペアを中断せずにスケールアウトできることです。</block>
-  <block id="c26c1f4f67d56898a432a8f7c5b4863c" category="paragraph">EPIC は、ストレージのパフォーマンス要件とレイアウトに関する詳細なガイダンスを提供し、ストレージのプレゼンテーションやホスト側のストレージレイアウトなどを各お客様に提供します。EPIC は次のカスタムドキュメントを提供します。</block>
-  <block id="4272d60d3a4efe91aa281dc7a0aed05e" category="list-text">プリセールス時のサイジングに使用する Epic Hardware Configuration Guide です。</block>
-  <block id="91a562802963a098a7bd1ac724c3b5fd" category="list-text">導入時の LUN とボリュームのレイアウトに使用する Epic Database Storage Layout の推奨事項。</block>
-  <block id="2bf1e681501e3b1fb86bdd2478794be7" category="paragraph">Epic Database Storage Layout の推奨事項を参照して、これらの要件を満たすお客様固有のストレージシステムレイアウトと構成を開発する必要があります。</block>
-  <block id="c07c67768c78a6847cd3b05890349a9b" category="paragraph">10TB データベースをサポートする AFF A700 ストレージシステムの導入例を次に示します。以下の表に、本番環境のデータベースをサポートするために使用されるストレージのプロビジョニングパラメータを示します。</block>
-  <block id="8d1fc7e767a7204d770eb56c7989e03b" category="cell">コントローラ 1</block>
-  <block id="48ed192757d1bc6d4a36d16a10893f48" category="cell">コントローラ 2</block>
-  <block id="dac455ed495998f5ec194c45d3bc82c6" category="cell">コントローラのホスト名</block>
-  <block id="63ec7deb4958d42496d3231e53e05a90" category="cell">Prod1-01</block>
-  <block id="10c9f9bda9e7d88b03bc641aff1c57cc" category="cell">Prod1-02</block>
-  <block id="a2cc183e9caf4a70afe494cd728b25ba" category="cell">Aggregate ONTAP の略</block>
-  <block id="b23ac62090504500ceeb46ae45d44bf5" category="cell">aggr0_cluster1_01 （ ADP 11 パーティション）</block>
-  <block id="18b226124e17bacf73b1226df38204e2" category="cell">aggr0_cluster1_01 （ ADP 11 パーティション）</block>
-  <block id="9123326ed0309cac8e047e46a2468006" category="cell">データを集約します</block>
-  <block id="cfd8fdd14f5e9b075ddd9f17de1fad0a" category="cell">Prod1-01_aggr1 （ 22 パーティション）</block>
-  <block id="a45055094a4f7af89c29004d32bd25ca" category="cell">Prod1-02_aggr1 （ 22 パーティション）</block>
-  <block id="2aae051506a0a6ce78d97d64d25ea057" category="cell">ボリューム（サイズ）</block>
-  <block id="d39e7e8c8a4edafea4ad25f8c69a9e48" category="cell">Epic prod_db1 （ 2TB ） ep_prod_db2 （ 2TB ） ep_prod_db3 （ 2TB ） ep_prod_db4 （ 2TB ） ep_prod_db5 （ 2TB ） ep_prod_db6 （ 2TB ） ep_prod_db7 （ 2TB ） ep_prod_db7 （ 2TB ） ep_prod_inst （ 1TB ） ep_prod_inst(1td_200Gb ） prod_prop2d_prod_p2d_prod_prod_prod_prod_p2d_prod_prod_pro_n2 ）</block>
-  <block id="e500a5a99e2c7f3b4830a17698cf2f1e" category="cell">Epic _report_db1 （ 2TB ） ep_report_db2 （ 2TB ） ep_report_db3 （ 2TB ） ep_report_db4 （ 2TB ） ep_report_db5 （ 2TB ） ep_report_db6 （ 2TB ） ep_report_db7 （ 2TB ） ep_report_db7 （ 2TB ） ep_report_db7 （ 2TB ） ep_report_db7 （ 2TB ） ep_report_inst （ 1TB ） ep_report （ 1TB ）</block>
-  <block id="395f1ed28a1483bf4574bb041938afec" category="cell">LUN パス（サイズ）</block>
-  <block id="01c625ec930c176340219a858a231754" category="cell">/ep_prod_db1/ep_prod_db1 （ 1.4TB ） /ep_prod_db2/ep_prod_db3 （ 1.4TB ） /ep_prod_db3 （ 1.4TB ） /ep_prod_prod_db3 （ 1.4TB ） /ep_prod_pld_db3 （ 1.4TB ） /ep_prod_prod_db prod_db prop_dpro_ep_db （ 1.4TB ） /r00ep_prod_prop_dupic ）</block>
-  <block id="ebbece496a52d850eaa5bd7054f78515" category="cell">/ep_prod_db1/ep_report_db1 （ 1.4TB ） /epm_prod_db2/epm_report_db2 （ 1.4TB ） /epm_prod_db3 （ 1.4TB ） /epm_report_bd3 （ 1.4TB ） /ep_report_db3 （ 1.4TB ） /ep_prod_report_bep_db4 （ 1.4TB ） /epm_report_depic r100c_epic レポート（ 1.4TB ）</block>
-  <block id="8b6f93f33bce541c7f50f8aff637e2e1" category="cell">RHEL</block>
-  <block id="11c76853affe30341b8a8626ce44e513" category="cell">LUN タイプ</block>
-  <block id="3d559d0cb7f5915e044c45b5c0a9a8bd" category="cell">Linux （ FC を使用して RHEL VM から RDM として直接マウント）</block>
-  <block id="41db713fc1031de1cfdfd30f34cc0b79" category="cell">FCP イニシエータグループ（ igroup ）の名前</block>
-  <block id="8b6023648d2e984adf8b63f996438d6d" category="cell">IG_EOG_PROCd （ Linux ）</block>
-  <block id="41748205006ee0d16ceb81488556a31b" category="cell">IG_EOF_REPORT （ Linux ）</block>
-  <block id="1af248136829615eac4fb39a00df1558" category="cell">ホストオペレーティングシステム</block>
-  <block id="56079badd056a19303cc26e6a4fcc7e0" category="cell">VMware</block>
-  <block id="2578749dce9595845ad35dec04f91f42" category="cell">EPIC データベースサーバのホスト名</block>
-  <block id="d4e150c08f5eea0b659e0f8f0210cd19" category="cell">Epic 本番環境</block>
-  <block id="11d036ad9b1abf6a6c1fa47325ce0020" category="cell">Epic レポート</block>
-  <block id="96853bd655b87a18c58211a883bb1382" category="cell">svm_prod</block>
-  <block id="ae2535a4525e64750824225f8c17bb79" category="cell">SVM_PS （本番用サービス） SVM_CIFS</block>
-  <block id="f8e0fad434075062a1bf437657ab2f65" category="paragraph">ストレージコントローラのセットアップが完了したら、ライセンスを適用して、ネットアップ推奨の ONTAP 機能を有効にします。Epic ワークロードに必要なライセンスには、 FC 、 CIFS 、 Snapshot 、 SnapRestore 、 FlexClone 、 」を参照してください。</block>
-  <block id="0d5ef9eab45b80a882bae65e0fb25d85" category="paragraph">ライセンスを適用するには、 NetApp System Manager を開いて、「 Configuration - Licenses 」に移動し、該当するライセンスを追加します。または、次のコマンドを実行して、 CLI を使用してライセンスを追加します。</block>
-  <block id="67a20fe12a868943818549440c3d047e" category="paragraph">AutoSupport ツールは、概要のサポート情報を HTTPS 経由でネットアップに送信します。AutoSupport を設定するには、次の ONTAP コマンドを実行します。</block>
-  <block id="7b493f6e7181f5d0bf764806a48563ca" category="paragraph">各ノードで、ハードウェアアシストテイクオーバーを有効にして、コントローラで万一障害が発生した場合にテイクオーバーを開始する時間を最小限に抑えてください。ハードウェアアシストテイクオーバーを設定するには、次の手順を実行します。</block>
-  <block id="0bf598bd2ec26b99f70794caa0551078" category="list-text">次の ONTAP コマンドを実行します。パートナーアドレスオプションを prod1-01 の管理ポートの IP アドレスに設定します。</block>
-  <block id="626effe0e6bb794a3f97af6874cae1fe" category="list-text">次の ONTAP コマンドを実行します。パートナーアドレスのオプションを cluster1-02 の管理ポートの IP アドレスに設定します。</block>
-  <block id="9a0e81bee2ada1121392310e9765de1e" category="list-text">次の ONTAP コマンドを実行して、 prod1-01 と prod1-02 の両方の HA コントローラペアでハードウェアアシストテイクオーバーを有効にします。</block>
-  <block id="d422f38ef432f92f355639173fc3e400" category="section-title">ONTAP ストレージプロビジョニング</block>
-  <block id="97ffdf918c35b13dd5fca7d5bb32c776" category="paragraph">ストレージプロビジョニングワークフローは次のとおりです。</block>
-  <block id="05ee867622d35f075b5a6daaf0135427" category="list-text">アグリゲートを作成します。</block>
-  <block id="a1c2ba0380a69e7c7cb7bb29efec2f8f" category="list-text">Storage Virtual Machine （ SVM ）を作成します。</block>
-  <block id="e788b5bb3774a128112d93c01d16c119" category="paragraph">アグリゲートの作成が完了したら、次は SVM を作成します。ONTAP では、ストレージは SVM として仮想化されます。ホストとクライアントは物理ストレージハードウェアにアクセスできなくなります。System Manager の GUI または CLI を使用して SVM を作成します。</block>
-  <block id="55a783e186591b50fd6e53a7cdf21d35" category="list-text">FC LIF を作成</block>
-  <block id="1321f692afba4fcf069f20bd350812c6" category="paragraph">SVM 上でポートとストレージがプロビジョニングされ、 LIF と呼ばれる仮想ポートを介してホストとクライアントに提供されます。</block>
-  <block id="f36ae4240dccf157851581d2c0cd8c70" category="paragraph">すべてのワークロードを 1 つの SVM ですべてのプロトコルを使用して実行できます。Epic では、本番用 FC 用の SVM と CIFS 用の SVM を 1 つ使用することを推奨しています。</block>
-  <block id="85f3337d61da3f223cdde49bbe7b1fb1" category="list-text">System Manager GUI の SVM 設定から FC を有効化、開始する。</block>
-  <block id="4e2f36fc439d7074350ab6d2adece6a7" category="list-text">SVM に FC LIF を追加LUN ごとに構築されたパスの数に応じて、各ストレージノードに複数の FC LIF を設定します。</block>
-  <block id="16a00f3ed39cb5694c41ac7da47d6372" category="list-text">イニシエータグループ（ igroup ）を作成します。</block>
-  <block id="3d6ad2202400dc3593373dfcb0b6d9b0" category="paragraph">igroup は、 FC プロトコルのホスト WWPN または iSCSI ホストノード名のテーブルであり、ホストで使用できる LUN を定義します。たとえば、ホストクラスタを使用している場合、いくつかの igroup を使用して、クラスタ内の 1 つのホストだけ、またはすべてのホストに特定の LUN が認識されるように設定できます。複数の igroup を定義して LUN にマッピングし、どのイニシエータが LUN にアクセスできるかを制御することができます。</block>
-  <block id="20f5df0e81e7cf4fc5bc47caa4ad5b10" category="paragraph">System Manager の GUI または CLI を使用して、 VMware タイプの FC igroup を作成します。</block>
-  <block id="bca8a803a22079061b1cd5e62c8b6e98" category="list-text">FC スイッチ上にゾーンを作成します。</block>
-  <block id="327b321bead70f42f07be4c5919022c9" category="paragraph">FC ゾーンまたは FCoE ゾーンは、ファブリック内の 1 つ以上のポートを論理的にグループ化したものです。デバイス同士が互いを認識し、接続し、相互にセッションを作成して通信できるようにするには、両方のポートに共通のゾーンメンバーシップが必要です。シングルイニシエータのゾーニングを推奨します。</block>
-  <block id="69a59be02887a86bc7c77d7017effe4e" category="list-text">スイッチにゾーンを作成し、ネットアップターゲットと Cisco UCS ブレードイニシエータをゾーンに追加します。</block>
-  <block id="c7acb4770a3532b53a3d5ce5aeaf1ed2" category="paragraph">ネットアップのベストプラクティスは、シングルイニシエータゾーニングです。各ゾーンには、コントローラのイニシエータとターゲット WWPN が 1 つだけ含まれています。ゾーンには、ノード名ではなくポート名が使用されます。</block>
-  <block id="6eb8b7a8dd3046302df74a9a62580921" category="list-text">ボリュームと LUN を作成</block>
-  <block id="456e1d7a6a264545ffbfffc44f2cae69" category="list-text">System Manager の GUI （または CLI ）を使用して、 LUN をホストするボリュームを作成します。ボリュームに対しては、 Storage Efficiency の設定とデータ保護がすべてデフォルトで設定されます。オプションで 'vol modify コマンドを使用して ' ボリュームのボリューム暗号化および QoS ポリシーをオンにできますボリュームには、 LUN および Snapshot コピーを格納できるだけの十分な容量が必要です。容量の問題からボリュームを保護するには 'autosize オプションと 'autodelete オプションを有効にしますボリュームを作成したら、 Epic ワークロードを格納する LUN を作成します。</block>
-  <block id="af85fb3f0cdd0f4f6f0476ab81ee5492" category="list-text">System Manager GUI （または CLI ）を使用して 'Epic ワークロードをホストするタイプ vmware' の FC LUN を作成しますLUN の作成は、 System Manager のウィザードを使用して簡単に実行できるようになりました。</block>
-  <block id="a0045ac437fee857d8c601db860fee79" category="inline-link">『 FC Configuration for ESX Express Guide 』を参照してください</block>
-  <block id="b5f051f3ad3764574c8025514af90f78" category="paragraph">VSC を使用してボリュームや LUN をプロビジョニングすることもできます。を参照してください<block ref="d3db6153351bd614c061efa85839c93a" category="inline-link-rx"></block>。</block>
-  <block id="3bd893704a4c67ccbb9015719d6fca7c" category="inline-link">『 SAN アドミニストレーションガイド』および『 SAN 構成ガイド』を参照してください</block>
-  <block id="c0c8ef8da484a98063d746c7ecd33d56" category="paragraph">を参照してください<block ref="c66f1b4b1a2d765434224b96acd40f27" category="inline-link-rx"></block> VSC を使用しない場合。</block>
-  <block id="05ee172aaf8499916e393fb120670a4c" category="list-text">LUN を igroup にマッピングします。</block>
-  <block id="562c308bc7935bb083e5f95554e55c64" category="paragraph">LUN と igroup が作成されたら、適切なホストに LUN へのアクセスを許可する関連 igroup に LUN をマッピングします。</block>
-  <block id="bdf9467d87b040b8ab1613328b695a7f" category="paragraph">これで、 LUN を検出して ESXi サーバにマッピングする準備ができました。ESXi ホストのストレージを更新し、新たに検出された LUN を追加します。</block>
-  <block id="a73f7cd81e3b4403baa49dbfb96aa619" category="inline-link-macro">次は Genio ツールです。</block>
-  <block id="20beb3ab79553264af9b61d84ad35892" category="paragraph"><block ref="20beb3ab79553264af9b61d84ad35892" category="inline-link-macro-rx"></block></block>
   <block id="84ffd62e595c9d0122e136c3b255f4df" category="doc">謝辞</block>
   <block id="11ce79f812406bc51fe9b7234783e48b" category="list-text">ネットアップシニアプロダクトマネージャー、 Ketan Mota 氏</block>
   <block id="1da328dab34341112c5ea191bbdc87ff" category="list-text">ネットアップ、ヘルスケア、ソリューションアーキテクト、 John Duignan 氏</block>
@@ -3956,21 +2956,6 @@
   <block id="d3cd6fb5e055b6cf26840a09d580c8b1" category="list-text">シスコ、マイク・ブレナン</block>
   <block id="83e7705bd84427a330d9d7e0fa059be5" category="summary">本ガイドの執筆および作成には、以下の方々が協力していただきました。</block>
   <block id="ff911ddf6eef032578e398f364581a85" category="list-text">ネットアップ、ヘルスケア、ソリューションアーキテクト、 John Duignan 氏</block>
-  <block id="77e3c327136eda568a914537f3139b20" category="summary">Epic を導入する際に、シスコは Epic のベストプラクティスに直接対応した Cisco UCS リファレンスアーキテクチャを設計しました。Cisco UCS は、高性能、高可用性、信頼性、拡張性を備えた緊密に統合された解決策を提供し、医師の診療や病院のシステムに数千台のベッドを使用しています。</block>
-  <block id="93eb1e5941aef3ddf20c5feaed2113d4" category="doc">Epic に対応した Cisco UCS リファレンスアーキテクチャ</block>
-  <block id="f8344cfc1c01dd336814d24efcb747ea" category="paragraph">FlexPod を基盤とした Epic のアーキテクチャは、 Epic 、 Cisco 、ネットアップのいずれの導入事例でも、 Epic を利用したさまざまな規模のお客様との連携におけるパートナー様の経験に基づいています。このアーキテクチャは適応性が高く、小規模から大規模まで、また中央集中型、分散型、マルチテナントのいずれの場合でも、お客様のデータセンター戦略に応じて Epic のベストプラクティスを適用します。</block>
-  <block id="e4368785cc0ee0fbfca62bc53f7f25b4" category="section-title">小規模な実装向けの基本設計</block>
-  <block id="8c20045fd466cf85286d0087a7989f22" category="paragraph">Cisco UCS 上の Epic の基本設計は、拡張された設計に比べてそれほど広汎ではありません。基本的な設計事例の例として、外来診療所を使用した医師の診療所が挙げられます。このような組織では、 Epic 利用者がほとんどいないか、 Epic のコンポーネントの一部が必要でない可能性があります。たとえば、医師の診療グループでは、患者のモニタリングに Epic Willow Pharmacy アプリケーションや Epic Monitor が不要な場合があります。基本設計では、必要な仮想ホスト数が少なく、物理サーバ数も少なくて済みます。SAN の要件も少なくなる可能性があり、セカンダリデータセンターへの WAN 接続は基本的なルーティングと TCP/IP で処理される場合があります。</block>
-  <block id="5a0518af5fd7fb75af9cea1d57262f8f" category="paragraph">次の図は、基本的な小さな Epic 構成の例を示しています。</block>
-  <block id="bff47ff0dcaecdbd897f68a0ac3b3b31" category="paragraph"><block ref="bff47ff0dcaecdbd897f68a0ac3b3b31" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="8cab13de93538609085b176c847ef342" category="section-title">より大規模な実装向けに設計を拡張</block>
-  <block id="ccf618b78b453c63be5fffb2f44ecccf" category="paragraph">Cisco UCS 上の Epic の拡張設計には、基本設計と同じベストプラクティスが採用されています。主な違いは、拡張された設計のスケールです。大規模な環境では、 Cach é データベースのコアスイッチング、 SAN 、プロセッサの要件でパフォーマンスを向上させる必要があります。大規模な実装では通常、ハイパースペースユーザが多く、ハイパースペースまたはその他の仮想アプリケーションサーバに追加の XenApp が必要です。また、より高い処理能力を必要とする Cisco UCS クアッドソケットサーバには、インテル Skylake プロセッサを搭載した Cisco UCS サーバが採用されており、 Chronicles Caché データベースや、関連する Production 、 Reporting 、 Disaster Recovery Cach é サーバに使用されています。</block>
-  <block id="088c96bd47a250b06a352a3b7f3ce478" category="paragraph">次の図は、拡張された Epic デザインの例を示しています。</block>
-  <block id="4c95d3edc135af1d466d526bbe919423" category="paragraph"><block ref="4c95d3edc135af1d466d526bbe919423" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="1a1c3f45bfe7d1e83f2908135c8d29af" category="section-title">ハイパースペースアクティブ–アクティブな実装</block>
-  <block id="18e5a49e782bcc045a53b661a36f4b25" category="paragraph">セカンダリデータセンターでは、使用されていないハードウェアリソースやソフトウェアコストを回避するために、 Epic Hyperspace にアクティブ / アクティブ構成の設計を採用している可能性があります。この設計により、プライマリデータセンターとセカンダリデータセンターの両方からハイパースペースを提供することで、コンピューティングへの投資を最適化できます。</block>
-  <block id="dc14e7069633b54113aa945b83d1b3ff" category="paragraph">次の図に示すハイパースペースアクティブ / アクティブ設計の例では、拡張された設計をさらに進め、 XenApp for Hyperspace などのハイパースペース仮想アプリケーションサーバをセカンダリデータセンターで完全に動作させることができます。</block>
-  <block id="efcd07676a7568d9c21e17529e3e5d71" category="paragraph"><block ref="efcd07676a7568d9c21e17529e3e5d71" category="inline-image-macro-rx" type="image"></block></block>
   <block id="f5ef3ee444a74806df8feb4d18f0d5f2" category="summary">このセクションでは、 NetApp FlexPod Express ストレージクラスタ設計のベストプラクティスについて説明します。</block>
   <block id="c2ffe02d76c4f089648f1647b43e4ee5" category="doc">ベストプラクティス</block>
   <block id="b429096255906489a518c5c505e642b9" category="section-title">ストレージのベストプラクティス</block>
@@ -4210,20 +3195,6 @@
   <block id="587a2e7b7bde90ffa88b19d7f62bbca4" category="paragraph">必ずを使用してください<block ref="e24f898abe90ef46a13b3eea3ae2cf9c" category="inline-link-rx"></block> ソフトウェアとファームウェアのすべてのバージョンがサポートされていることを検証します。セクションの表 <block ref="2b2f01cc46ef9918ef530ffc5737755a" category="inline-link-macro-rx"></block> に、解決策テストで使用したインフラのハードウェアコンポーネントとソフトウェアコンポーネントを示します。</block>
   <block id="e67b1a97e37071df880d20b6fc4a7615" category="inline-link-macro">次のステップ：基本インフラの構成。</block>
   <block id="7978eaf583a156d01cc8ddf89b1da50c" category="paragraph"><block ref="7978eaf583a156d01cc8ddf89b1da50c" category="inline-link-macro-rx"></block></block>
-  <block id="8902e8b32624093255cb9cc535e85080" category="summary">このドキュメントで紹介するネットアップストレージ FlexPod の導入に関するガイダンスは、 ONTAP を使用する環境と、 Cisco UCS ブレードサーバとラックマウントサーバを使用する環境のみを対象としています。また、 Epic 導入に対応した 16Gb FC / 40GbE のトポロジ図も紹介しています。</block>
-  <block id="3253497e2f7e073445bde16c8524ab3d" category="paragraph">本ドキュメントで紹介するネットアップストレージ FlexPod の導入ガイドラインには、次の内容が含まれています。</block>
-  <block id="fbeedbdc3519af88e8305f5bd7c8b3f7" category="list-text">FlexPod データセンター環境の詳細な導入。を参照してください<block ref="8c408f7508059ba7cdfe1e4eb9ba9051" category="inline-link-rx"></block>。</block>
-  <block id="8cf2c98afc5dc23377d669bc398b3fba" category="list-text">Epic ソフトウェア環境、リファレンスアーキテクチャ、統合に関するベストプラクティスの概要NetApp を参照<block ref="cefbbd0059404555fc6d1abe3d71efc5" category="inline-link-rx"></block>。</block>
-  <block id="24cc981b75ebc16258b546ae17420780" category="inline-link">TR-3930 ：『 NetApp Sizing Guidelines for Epic 』</block>
-  <block id="4ccf88a42aa5621b51b6fbe170ecdb2a" category="list-text">パフォーマンス要件とサイジングガイダンスを定量化NetApp を参照<block ref="6fe1d0295ba7ac0c2848d5946ee4f07b" category="inline-link-rx"></block>。</block>
-  <block id="455c7b80ed6ef1e6a8bd554f5161d2dc" category="list-text">SnapCenter を含む EPIC データベースのバックアップとリカバリ。</block>
-  <block id="d19368d82a35deea419c0cd3b524af26" category="inline-link">TR-4590 ：『 Best Practice Guide for Microsoft SQL Server with ONTAP 』</block>
-  <block id="c740c35794daf5b802e80a0e04c155a6" category="list-text">Clarity レポート環境の配置に関するガイダンス。NetApp を参照<block ref="81be91ccd6f889886ee4bd727ecf284e" category="inline-link-rx"></block>。</block>
-  <block id="00fb954e4a5daa2dfa929eaa157c3a54" category="paragraph">このセクションでは、インフラ導入のベストプラクティスを適用したラボ環境のセットアップについて説明します。Genio ツールは、 Epic EHR アプリケーションワークロードのシミュレーションに使用されます。このセクションでは、インフラのさまざまなハードウェアコンポーネントとソフトウェアコンポーネント、および使用しているバージョンを示します。</block>
-  <block id="d48a5a1fa0880c688849d7ff7924eee5" category="paragraph">次の図は、 Epic 導入時の 16Gb FC/40GbE のトポロジ図を示しています。</block>
-  <block id="cd05fd30d0b0165579707171bbd7d015" category="paragraph"><block ref="cd05fd30d0b0165579707171bbd7d015" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="a87a671194c3158c7c728100af4b06cf" category="inline-link-macro">次の手順：インフラストラクチャハードウェアおよびソフトウェアコンポーネント。</block>
-  <block id="abba977f8cb402884611df4042262015" category="paragraph"><block ref="abba977f8cb402884611df4042262015" category="inline-link-macro-rx"></block></block>
   <block id="b7e68d0352de1c804e28d4c0e7d260b7" category="summary">本ドキュメントでは、 MEDITECH ソフトウェア向け FlexPod 環境の基本構成に関する概要を説明します。このセクションでは、 FlexPod 構成の Cisco UCS コンピューティングプラットフォーム要素を準備するための手順の概要と例をいくつか示します。</block>
   <block id="5e8501c202ce099e8c6b9559c865d723" category="doc">Cisco UCS ブレードサーバとスイッチの構成</block>
   <block id="52c26526758e2879666f3330f706c9f9" category="paragraph">FlexPod for MEDITECH ソフトウェアは、あらゆるレベルのフォールトトレランスに対応して設計されています。システムに単一点障害がない。最適なパフォーマンスを得るために、ホットスペアブレードサーバの使用をお勧めします。</block>
@@ -4259,15 +3230,6 @@
   <block id="94e6e1d1c0c67d591be44cd2237b2819" category="paragraph">FlexPod の Cisco UCS サービスプロファイルの各主要要素を設定する詳細な手順については、を参照してください<block ref="8f1525ab792e1982d64749d7e834252e" category="inline-link-rx"></block>CVD ドキュメント</block>
   <block id="1c0111c256303c789d10465f32e35c9f" category="inline-link-macro">次のセクションでは、 ESXi の構成のベストプラクティスを説明します</block>
   <block id="a12882e5c41826585dd001aacca59d17" category="paragraph"><block ref="a12882e5c41826585dd001aacca59d17" category="inline-link-macro-rx"></block></block>
-  <block id="9a56b21b88da0f210b25219e325b77b4" category="list-text">FlexPod データセンターと FC の Cisco Validated Design の 2 つの機能がありますFlexPod データセンター環境の詳細な導入。</block>
-  <block id="e76641d8befb6a11e137ca668bac47fe" category="list-text">TR-3928 ：『 NetApp Best Practices for Epic 』Epic ソフトウェア環境、リファレンスアーキテクチャ、統合に関するベストプラクティスの概要</block>
-  <block id="5265fb5dcd13ca59044c346fd3902d3c" category="list-text">TR-3930i ：『 NetApp Sizing Guidelines for Epic 』（ Field Portal へのアクセスはこのドキュメントで確認する必要がある）</block>
-  <block id="c47f154aba0d602967873e9c8cdcc74e" category="inline-link"><block ref="c47f154aba0d602967873e9c8cdcc74e" category="inline-link-rx"></block></block>
-  <block id="40c72ceaf0315c3a7a385c03b61b7940" category="paragraph"><block ref="40c72ceaf0315c3a7a385c03b61b7940" category="inline-link-rx"></block></block>
-  <block id="622fc0b6147b951a4b5771611e4b862a" category="list-text">Epic on_cisco_UCS_tech_briefCisco UCS で Epic を使用した Cisco のベストプラクティス</block>
-  <block id="c74d12559c29186abcfe3243c05c2412" category="list-text">ネットアップ<block ref="34984e226a94e236933ba9c1f658118e" category="inline-link-rx"></block> 設計ゾーン（ Design Zone ）</block>
-  <block id="4c174d67b3e4b216aa8b15b8c9696633" category="list-text">FlexPod DC とファイバチャネルストレージ（ MDS スイッチ）は、 NetApp AFF 、 vSphere 6.5U1 、および Cisco UCS Manager を使用します</block>
-  <block id="a2bfe3d83bb277a2b9c9fca09fd8e732" category="summary">本ドキュメントおよび FlexPod の導入に関連するリンクとガイドを以下に示します。</block>
   <block id="ace6bc814af688c812d44b9270c7e069" category="summary">MEDITECH ホスト専用の MEDITECH ボリュームはシックプロビジョニングでもシンプロビジョニングでもかまいませんが、 Snapshot コピーを使用してアクセスできます。また、ボリュームレベルの再割り当てを使用してディスク上のデータレイアウトを最適化し、書き込みレイテンシとシーケンシャル読み取りアクセスを改善することもできます。</block>
   <block id="be1b9ef68f31ecee991e2282c1f24f0f" category="section-title">ボリュームのプロビジョニング</block>
   <block id="c8884acd62d57a748f8be9efe002d659" category="paragraph">MEDITECH ホスト専用の MEDITECH ボリュームはシックプロビジョニングでもシンプロビジョニングでもかまいません。</block>
@@ -4285,15 +3247,6 @@
   <block id="9d8be877e207c9d81536923f45975efb" category="paragraph">業務用データベース・ストレージに適したボリューム再配置スケジュールの決定の詳細については、のセクション 3.12 を参照してください<block ref="70de5c2a4b00f75ad58d149f3ef37476" category="inline-link-rx"></block>。また、ビジー状態のサイトに対して週次再配置スケジュールを作成する方法についても説明します。</block>
   <block id="046000dc6863f618d4223f4cff2fdff5" category="inline-link-macro">次の例は、 LUN の構成を示して</block>
   <block id="971da7c141a22f2fb0cc7c604e50f436" category="paragraph"><block ref="971da7c141a22f2fb0cc7c604e50f436" category="inline-link-macro-rx"></block></block>
-  <block id="bd8cbb4e94a54f2142470034b507ae97" category="summary">Epic 対応 FlexPod ソフトウェアは、フォールトトレランスをあらゆるレベルで実現するように設計されています。システムに単一点障害がない。本ドキュメントは、 Epic 対応 FlexPod 環境の基本構成に関する概要を説明したものです。</block>
-  <block id="c55c60a8e53e3269bf7cc495c0a9e75d" category="paragraph">Epic 対応 FlexPod ソフトウェアは、フォールトトレランスをあらゆるレベルで実現するように設計されています。システムに単一点障害がない。最適なパフォーマンスを得るために、ホットスペアブレードサーバの使用をお勧めします。</block>
-  <block id="6f37ac1faac4b71604e5820c7ef0932d" category="paragraph">本ドキュメントは、 Epic 対応 FlexPod 環境の基本構成に関する概要を説明したものです。このセクションでは、 FlexPod 構成の Cisco UCS コンピューティングプラットフォーム要素を準備するための手順の概要と例をいくつか示します。このガイダンスの前提条件として、 FlexPod 構成がラックに設置され、電源が投入されて、 FC ストレージを使用する FlexPod データセンターの手順に従ってケーブル接続されていることが必要です。</block>
-  <block id="35b7b4e3b83ab3d40a32675aa51f5f5c" category="paragraph">耐障害性に優れた Cisco Nexus 9300 シリーズイーサネットスイッチペアが解決策用に導入されます。これらのスイッチは、の説明に従ってケーブル接続する必要があります <block ref="b94eb338bd34852457376dcfaeb5cdd2" category="inline-link-macro-rx"></block> Cisco Nexus 構成では、イーサネットトラフィックフローが Epic アプリケーション向けに最適化されています。</block>
-  <block id="4cb34a88e2c2ac55724230a566b6d903" category="list-text">初期セットアップとライセンスの完了後、次のコマンドを実行して両方のスイッチにグローバル設定パラメータを設定します。</block>
-  <block id="8dbe072f8d0530b5c5e4c4c681681a3e" category="list-text">グローバルコンフィギュレーションモードを使用して、各スイッチに解決策用の VLAN を作成します。</block>
-  <block id="cdbdb107aafddda77440515331eb7278" category="list-text">に従って、トラブルシューティング用の NTP 配信インターフェイス、ポートチャネル、ポートチャネルパラメータ、およびポートの説明を作成します<block ref="8c408f7508059ba7cdfe1e4eb9ba9051" category="inline-link-rx"></block>。</block>
-  <block id="080ce9a877d1b2a63bb788504fc0c4ea" category="inline-link-macro">次のセクションでは、 ESXi の構成のベストプラクティスを説明します</block>
-  <block id="e81ce44721adaf93b40044b200d4eeaa" category="paragraph"><block ref="e81ce44721adaf93b40044b200d4eeaa" category="inline-link-macro-rx"></block></block>
   <block id="883be5383eb8e601c6e739e7d239831d" category="summary">FC をデータネットワークプロトコルとして使用する場合は、各ストレージコントローラに 2 つのイニシエータグループ（ igroup ）を作成します。1 つ目の igroup には、 MEDITECH ホスト VM （ MEDITECH 向け igroup ）をホストしている VMware ESXi サーバ上の FC ホストインターフェイスカードの WWPN が含まれています。</block>
   <block id="dce719a9aac895b223304c1967dcde5c" category="doc">イニシエータグループの構成</block>
   <block id="0d2dd5c6941ece8eb16ab9e78d25270a" category="paragraph">MEDITECH igroup オペレーティングシステムのタイプは環境設定に応じて設定する必要があります。例：</block>
@@ -7316,11 +6269,7 @@
   <block id="11eed465080ae72a7cd51e9e0d769a36" category="sidebar">FlexPod Datacenter with Citrix XenDesktop / XenApp 7.15 および VMware vSphere 6.5 Update 1 for 6000 Seats</block>
   <block id="d6c9d3f77fc86d19e9d1e8e0460783c8" category="sidebar">VMware Horizon View 7.3 および VMware vSphere 6.5 Update 1 を搭載した FlexPod データセンター（ Cisco UCS Manager 3.2 for 5000 ライセンス）</block>
   <block id="4ee2a6c7bb7c40af94c5a15dbf7eb673" category="sidebar">医療機関</block>
-  <block id="0c8981e0a16bb1be37894bb2868f7b65" category="sidebar">FlexPod Datacenter for Epic Directional Sizing Guide 』を参照してください</block>
-  <block id="caec40541fe760d4311744cfa03df82b" category="sidebar">小規模、中規模、大規模アーキテクチャの技術仕様</block>
   <block id="f4bb968e88fa8aec8a3ffd847dc271cd" category="sidebar">Epic EHR 向け FlexPod データセンター導入ガイド</block>
-  <block id="ac19a25d1e08bf6a07d68e990e2d4592" category="sidebar">Epic Performance Testing 向け FlexPod</block>
-  <block id="7919e821dc18f3e88c0201e01bf6a240" category="sidebar">エグゼクティブサマリー</block>
   <block id="a82a8aeb527fe34165f76582a421e44d" category="sidebar">FlexPod for MEDITECH の指向性サイジングガイド</block>
   <block id="e526ac3f58d71b824400abfda793a171" category="sidebar">FlexPod Datacenter for MEDITECH 導入ガイド</block>
   <block id="d44c9646e3d10988230c569ec4cb40d8" category="sidebar">FlexPod for Medical Imaging の略</block>
@@ -7635,8 +6584,6 @@
   <block id="decd3565dd007f2452830c3f826ff704" category="inline-link"><block ref="decd3565dd007f2452830c3f826ff704" category="inline-link-rx"></block></block>
   <block id="3d1da8fafa0a86efa99f98d720b7f205" category="paragraph"><block ref="3d1da8fafa0a86efa99f98d720b7f205" category="inline-link-rx"></block></block>
   <block id="1ae6b2f7f1fad59fc238abf083ff0117" category="list-text">EPIC 名誉の転がる</block>
-  <block id="7d44274174c3d4f450aa686fa446d669" category="inline-link"><block ref="7d44274174c3d4f450aa686fa446d669" category="inline-link-rx"></block></block>
-  <block id="bf53074ecbd16fa4c8bb41af82ad5d90" category="paragraph"><block ref="bf53074ecbd16fa4c8bb41af82ad5d90" category="inline-link-rx"></block></block>
   <block id="7817e57b6ff0d2856eead20c15935bc7" category="list-text">即応性と効率性— FlexPod がデータセンターの最新化をどのように推進するか</block>
   <block id="f7926fcf44693494ebd39d451b62f973" category="inline-link"><block ref="f7926fcf44693494ebd39d451b62f973" category="inline-link-rx"></block></block>
   <block id="5846e1714fe6b3a59fbf92fb13144912" category="paragraph"><block ref="5846e1714fe6b3a59fbf92fb13144912" category="inline-link-rx"></block></block>
@@ -8964,4 +7911,5 @@
   <block id="182b99dd6e6e03bd87c6e4742f0efe61" category="inline-link-macro">前のバージョン：解決策 の検証 - ネットワーク。</block>
   <block id="b039f508b07fa442d12ced167cdee4ab" category="paragraph"><block ref="b039f508b07fa442d12ced167cdee4ab" category="inline-link-macro-rx"></block></block>
   <block id="a400e1c221e8c3e8b80a81f5085a481d" category="paragraph"><block ref="a400e1c221e8c3e8b80a81f5085a481d" category="inline-link-macro-rx"></block></block>
+  <block id="77adde3767ae2cc82097445aa8b15e86" category="list-text">冗長構成の10Gbps標準イーサネットスイッチ×2（Cisco Nexus 31108を推奨、Cisco Nexus 3000および9000モデルをサポート）</block>
 </blocks>

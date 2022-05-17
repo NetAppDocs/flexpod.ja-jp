@@ -27,7 +27,7 @@ summary: ここでは、 FlexPod Express の各バージョンに必要なハー
 
 Cisco Integrated Management Controller （ CIMC ）の設定には、次のハードウェアコンポーネントが含まれています。
 
-* 冗長構成の 10Gbps 標準イーサネットスイッチ × 2 （ Cisco Nexus 0808 を推奨、 Cisco Nexus 3000 モデルと 9000 モデルをサポート）
+* 冗長構成の10Gbps標準イーサネットスイッチ×2（Cisco Nexus 31108を推奨、Cisco Nexus 3000および9000モデルをサポート）
 * Cisco UCS C シリーズスタンドアロンラックサーバ
 * AFF C190 、 AFF A250 、 FAS2600 、または FAS 2700 シリーズのコントローラが 2 ノードクラスタとして導入されたハイアベイラビリティ（ HA ）ペア構成で 2 台
 
