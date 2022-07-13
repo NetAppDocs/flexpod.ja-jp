@@ -169,7 +169,7 @@
   
   <!-- Start Page Toolbar -->
   
-  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/flexpod/issues/new?body=Page%3A%20[イニシエータグループの構成](https://docs.netapp.com/ja-jp/flexpod/healthcare/ehr-meditech-deploy_initiator_group_configuration.html)" class="page-nav-contribute-link" role="button"><img src="/ja-jp/flexpod/images/discuss-sm.svg" class="github-icon" />ドキュメントの変更をリクエスト</a><a target="_blank" href="https://github.com/NetAppDocs/flexpod/blob/main/healthcare/ehr-meditech-deploy_initiator_group_configuration.adoc" class="page-nav-contribute-link" role="button"><img src="/ja-jp/flexpod/images/edit-sm.svg" class="github-icon" />GitHub で編集</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/ja-jp/flexpod/images/article-sm.svg" class="github-icon" />寄稿者向けガイド</a></div>
+  <div class="page-nav-toolbar"><div class="page-nav-contribute"><a target="_blank" href="https://github.com/NetAppDocs/flexpod/issues/new?body=Page%3A%20[イニシエータグループの構成](https://docs.netapp.com/ja-jp/flexpod/healthcare/ehr-meditech-deploy_initiator_group_configuration.html)" class="page-nav-contribute-link" role="button"><img src="/ja-jp/flexpod/images/discuss-sm.svg" alt="" class="github-icon" />ドキュメントの変更をリクエスト</a><a target="_blank" href="https://github.com/NetAppDocs/flexpod/blob/main/healthcare/ehr-meditech-deploy_initiator_group_configuration.adoc" class="page-nav-contribute-link" role="button"><img src="/ja-jp/flexpod/images/edit-sm.svg" alt="" class="github-icon" />GitHub で編集</a><a target="_blank" href="https://docs.netapp.com/us-en/contribute/" class="page-nav-contribute-link"  ><img src="/ja-jp/flexpod/images/article-sm.svg" alt="" class="github-icon" />寄稿者向けガイド</a></div>
     <div class="page-nav-container">
       <nav class="page-nav-fixed">
         <div class="page-nav-title">このページ</div>
@@ -258,11 +258,13 @@
           <div id="react-search" 
           data-search-html="/ja-jp/flexpod/search.html"
           data-type="widget" 
-          data-placeholder="ドキュメントを検索" 
-          data-no-results-found="{query}に該当する結果はありません" 
-          data-did-you-mean="{suggestion} を検索" 
-          data-no-results-found-did-you-mean="{query} に該当する結果はありません。{suggestion} の間違いではありませんか?" 
-          data-results-found="{hitCount} 件見つかりました"  
+          data-placeholder="ドキュメントを検索"
+          data-no-results-found="{query}に該当する結果はありません"
+          data-did-you-mean="{suggestion} を検索"
+          data-no-results-found-did-you-mean="{query} に該当する結果はありません。{suggestion} の間違いではありませんか?"
+          data-results-found="{hitCount} 件見つかりました"
+          data-error-message="We're sorry, an issue occurred when fetching your results. Please try again."
+          data-error-reset="Reset Search"
           data-sk-es-pf-indexes=""
           data-flavor=""></div>
           <button class="n-property-bar__search-toggle-button" type="button">
@@ -277,35 +279,27 @@
     </div>
   </div>
   <div class="n-property-bar__toolbar">
-    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
-      <div id="ie-i18n-menu">
-      <span class="ie-i18n-lang">日本語</span>
-        <button class="ie-i18n-icon-container" type="button">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">日本語</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/ja-jp/flexpod/common/svg/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
-      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
-        <div class="n-language-selector-menu">
-          <ul class="n-menu__list">
-            <li class="n-menu__list-column">
-              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/flexpod/healthcare/ehr-meditech-deploy_initiator_group_configuration.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/flexpod/healthcare/ehr-meditech-deploy_initiator_group_configuration.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/flexpod/healthcare/ehr-meditech-deploy_initiator_group_configuration.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/flexpod/healthcare/ehr-meditech-deploy_initiator_group_configuration.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-tw/flexpod/healthcare/ehr-meditech-deploy_initiator_group_configuration.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
-                </li></ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/ja-jp/flexpod/healthcare/ehr-meditech-deploy_initiator_group_configuration.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/us-en/flexpod/healthcare/ehr-meditech-deploy_initiator_group_configuration.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-cn/flexpod/healthcare/ehr-meditech-deploy_initiator_group_configuration.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-tw/flexpod/healthcare/ehr-meditech-deploy_initiator_group_configuration.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/flexpod/healthcare/ehr-meditech-deploy_initiator_group_configuration.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li></ul>
     </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
@@ -349,7 +343,7 @@
   <div class="col-md-3" id="sidebar-height">
       <div class="n-pdf-header">
   <a id="toggleButtonPdf" class="n-pdf-button" type="button">
-    <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>利用可能なPDF<span>
+    <img src="/ja-jp/flexpod/images/pdf.png" alt="" width="16" height="16"/>利用可能なPDF<span>
     </span>
   </a>
 </div>
@@ -359,7 +353,7 @@
         
         
         <a target="_blank" href="/ja-jp/flexpod/pdfs/fullsite-sidebar/FlexPod_ソリューション.pdf" >
-          <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>このドキュメントサイトのPDF</a>
+          <img src="/ja-jp/flexpod/images/pdf.png" alt="" width="16" height="16"/>このドキュメントサイトのPDF</a>
 
 
 
@@ -374,7 +368,7 @@
               href="/ja-jp/flexpod/pdfs/sidebar/FlexPod_の定義.pdf" 
             
           >
-            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            <img src="/ja-jp/flexpod/images/pdf.png" alt="" width="16" height="16"/>
             FlexPod の定義
           </a>
           
@@ -390,7 +384,7 @@
               href="/ja-jp/flexpod/pdfs/sidebar/FlexPod_Express_技術仕様.pdf" 
             
           >
-            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            <img src="/ja-jp/flexpod/images/pdf.png" alt="" width="16" height="16"/>
             FlexPod Express 技術仕様
           </a>
           
@@ -428,8 +422,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -449,7 +441,7 @@
               href="/ja-jp/flexpod/pdfs/sidebar/FlexPod_データセンター技術仕様.pdf" 
             
           >
-            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            <img src="/ja-jp/flexpod/images/pdf.png" alt="" width="16" height="16"/>
             FlexPod データセンター技術仕様
           </a>
           
@@ -487,8 +479,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -496,8 +486,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -517,7 +505,7 @@
               href="/ja-jp/flexpod/pdfs/sidebar/FlexPod_データセンター.pdf" 
             
           >
-            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            <img src="/ja-jp/flexpod/images/pdf.png" alt="" width="16" height="16"/>
             FlexPod データセンター
           </a>
           
@@ -533,7 +521,7 @@
               href="/ja-jp/flexpod/pdfs/sidebar/ネットアップの_SnapMirror_によるビジネス継続性機能と_ONTAP_9_10_を使用した_FlexPod_データセンター.pdf" 
             
           >
-            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            <img src="/ja-jp/flexpod/images/pdf.png" alt="" width="16" height="16"/>
             ネットアップの SnapMirror によるビジネス継続性機能と ONTAP 9.10 を使用した FlexPod データセンター
           </a>
           
@@ -553,7 +541,7 @@
               href="/ja-jp/flexpod/pdfs/sidebar/解決策の検証.pdf" 
             
           >
-            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            <img src="/ja-jp/flexpod/images/pdf.png" alt="" width="16" height="16"/>
             解決策の検証
           </a>
           
@@ -569,8 +557,17 @@
 
 
 
+        </li>
+      </ul>
+    
 
-          
+  
+
+
+
+
+
+
         </li>
       </ul>
     
@@ -583,12 +580,6 @@
 
 
 
-          
-        </li>
-      </ul>
-    
-
-  
 
 
 
@@ -606,15 +597,6 @@
 
 
 
-
-
-
-
-
-
-
-
-          
         </li>
       </ul>
     
@@ -634,7 +616,7 @@
               href="/ja-jp/flexpod/pdfs/sidebar/ハイブリッドクラウド.pdf" 
             
           >
-            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            <img src="/ja-jp/flexpod/images/pdf.png" alt="" width="16" height="16"/>
             ハイブリッドクラウド
           </a>
           
@@ -650,7 +632,7 @@
               href="/ja-jp/flexpod/pdfs/sidebar/NetApp_Cloud_Insights_for_FlexPod_の略.pdf" 
             
           >
-            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            <img src="/ja-jp/flexpod/images/pdf.png" alt="" width="16" height="16"/>
             NetApp Cloud Insights for FlexPod の略
           </a>
           
@@ -670,8 +652,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -691,7 +671,7 @@
               href="/ja-jp/flexpod/pdfs/sidebar/FabricPool_with_FlexPod___Amazon_AWS_S3_への非アクティブなデータ階層化.pdf" 
             
           >
-            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            <img src="/ja-jp/flexpod/images/pdf.png" alt="" width="16" height="16"/>
             FabricPool with FlexPod - Amazon AWS S3 への非アクティブなデータ階層化
           </a>
           
@@ -715,7 +695,7 @@
               href="/ja-jp/flexpod/pdfs/sidebar/設定.pdf" 
             
           >
-            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            <img src="/ja-jp/flexpod/images/pdf.png" alt="" width="16" height="16"/>
             設定
           </a>
           
@@ -733,8 +713,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -750,8 +728,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -767,8 +743,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -788,7 +762,7 @@
               href="/ja-jp/flexpod/pdfs/sidebar/エンタープライズデータベース.pdf" 
             
           >
-            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            <img src="/ja-jp/flexpod/images/pdf.png" alt="" width="16" height="16"/>
             エンタープライズデータベース
           </a>
           
@@ -804,7 +778,7 @@
               href="/ja-jp/flexpod/pdfs/sidebar/SAP.pdf" 
             
           >
-            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            <img src="/ja-jp/flexpod/images/pdf.png" alt="" width="16" height="16"/>
             SAP
           </a>
           
@@ -848,8 +822,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -869,7 +841,7 @@
               href="/ja-jp/flexpod/pdfs/sidebar/Oracle_の場合.pdf" 
             
           >
-            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            <img src="/ja-jp/flexpod/images/pdf.png" alt="" width="16" height="16"/>
             Oracle の場合
           </a>
           
@@ -881,8 +853,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -902,7 +872,7 @@
               href="/ja-jp/flexpod/pdfs/sidebar/Microsoft_SQL_Server_の場合.pdf" 
             
           >
-            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            <img src="/ja-jp/flexpod/images/pdf.png" alt="" width="16" height="16"/>
             Microsoft SQL Server の場合
           </a>
           
@@ -916,8 +886,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -925,8 +893,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -946,7 +912,7 @@
               href="/ja-jp/flexpod/pdfs/sidebar/医療機関.pdf" 
             
           >
-            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            <img src="/ja-jp/flexpod/images/pdf.png" alt="" width="16" height="16"/>
             医療機関
           </a>
           
@@ -962,7 +928,7 @@
               href="/ja-jp/flexpod/pdfs/sidebar/ゲノム解析のための_FlexPod.pdf" 
             
           >
-            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            <img src="/ja-jp/flexpod/images/pdf.png" alt="" width="16" height="16"/>
             ゲノム解析のための FlexPod
           </a>
           
@@ -984,8 +950,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1005,7 +969,7 @@
               href="/ja-jp/flexpod/pdfs/sidebar/FlexPod_for_MEDITECH_の指向性サイジングガイド.pdf" 
             
           >
-            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            <img src="/ja-jp/flexpod/images/pdf.png" alt="" width="16" height="16"/>
             FlexPod for MEDITECH の指向性サイジングガイド
           </a>
           
@@ -1019,8 +983,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1040,7 +1002,7 @@
               href="/ja-jp/flexpod/pdfs/sidebar/FlexPod_Datacenter_for_MEDITECH_導入ガイド.pdf" 
             
           >
-            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            <img src="/ja-jp/flexpod/images/pdf.png" alt="" width="16" height="16"/>
             FlexPod Datacenter for MEDITECH 導入ガイド
           </a>
           
@@ -1060,7 +1022,7 @@
               href="/ja-jp/flexpod/pdfs/sidebar/導入と設定.pdf" 
             
           >
-            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            <img src="/ja-jp/flexpod/images/pdf.png" alt="" width="16" height="16"/>
             導入と設定
           </a>
           
@@ -1082,21 +1044,12 @@
 
 
 
-    <ul class="subfolders" style="display:none;"><li class="active pdf-hide">
-  <a target="_blank" href="/ja-jp/flexpod/pdfs/pages/healthcare/ehr-meditech-deploy_initiator_group_configuration.pdf" >
-    <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
-    PDF of this page
-  </a>
-</li>
-
-</ul>
+    <ul class="subfolders" id="pdf-remove" style="display:none;"><li class="active"></li></ul>
   
 
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1110,8 +1063,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1131,7 +1082,7 @@
               href="/ja-jp/flexpod/pdfs/sidebar/FlexPod_for_Medical_Imaging_の略.pdf" 
             
           >
-            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            <img src="/ja-jp/flexpod/images/pdf.png" alt="" width="16" height="16"/>
             FlexPod for Medical Imaging の略
           </a>
           
@@ -1149,8 +1100,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1158,8 +1107,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -1179,7 +1126,7 @@
               href="/ja-jp/flexpod/pdfs/sidebar/仮想デスクトップインフラ.pdf" 
             
           >
-            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            <img src="/ja-jp/flexpod/images/pdf.png" alt="" width="16" height="16"/>
             仮想デスクトップインフラ
           </a>
           
@@ -1195,8 +1142,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1216,7 +1161,7 @@
               href="/ja-jp/flexpod/pdfs/sidebar/最新のアプリケーション.pdf" 
             
           >
-            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            <img src="/ja-jp/flexpod/images/pdf.png" alt="" width="16" height="16"/>
             最新のアプリケーション
           </a>
           
@@ -1242,8 +1187,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1263,7 +1206,7 @@
               href="/ja-jp/flexpod/pdfs/sidebar/Microsoft_アプリケーション.pdf" 
             
           >
-            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            <img src="/ja-jp/flexpod/images/pdf.png" alt="" width="16" height="16"/>
             Microsoft アプリケーション
           </a>
           
@@ -1275,8 +1218,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1296,7 +1237,7 @@
               href="/ja-jp/flexpod/pdfs/sidebar/FlexPod_エクスプレスの略.pdf" 
             
           >
-            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            <img src="/ja-jp/flexpod/images/pdf.png" alt="" width="16" height="16"/>
             FlexPod エクスプレスの略
           </a>
           
@@ -1312,7 +1253,7 @@
               href="/ja-jp/flexpod/pdfs/sidebar/FlexPod_Express_with_Cisco_UCS_C_シリーズおよび_NetApp_AFF_C190_シリーズ設計ガイド.pdf" 
             
           >
-            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            <img src="/ja-jp/flexpod/images/pdf.png" alt="" width="16" height="16"/>
             FlexPod Express with Cisco UCS C シリーズおよび NetApp AFF C190 シリーズ設計ガイド
           </a>
           
@@ -1328,8 +1269,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1349,7 +1288,7 @@
               href="/ja-jp/flexpod/pdfs/sidebar/FlexPod_Express_with_Cisco_UCS_C_シリーズおよび_NetApp_AFF_C190_シリーズ導入ガイド.pdf" 
             
           >
-            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            <img src="/ja-jp/flexpod/images/pdf.png" alt="" width="16" height="16"/>
             FlexPod Express with Cisco UCS C シリーズおよび NetApp AFF C190 シリーズ導入ガイド
           </a>
           
@@ -1373,7 +1312,7 @@
               href="/ja-jp/flexpod/pdfs/sidebar/導入手順.pdf" 
             
           >
-            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            <img src="/ja-jp/flexpod/images/pdf.png" alt="" width="16" height="16"/>
             導入手順
           </a>
           
@@ -1395,8 +1334,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1412,8 +1349,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1433,7 +1368,7 @@
               href="/ja-jp/flexpod/pdfs/sidebar/FlexPod_Express_with_Cisco_UCS_C_シリーズおよび_AFF_A220_シリーズ設計ガイド.pdf" 
             
           >
-            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            <img src="/ja-jp/flexpod/images/pdf.png" alt="" width="16" height="16"/>
             FlexPod Express with Cisco UCS C シリーズおよび AFF A220 シリーズ設計ガイド
           </a>
           
@@ -1453,8 +1388,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1474,7 +1407,7 @@
               href="/ja-jp/flexpod/pdfs/sidebar/__FlexPod_Express_with_Cisco_UCS_C_Series_and_AFF_A220_Series_Deployment_Guide__.pdf" 
             
           >
-            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            <img src="/ja-jp/flexpod/images/pdf.png" alt="" width="16" height="16"/>
             『 FlexPod Express with Cisco UCS C Series and AFF A220 Series Deployment Guide 』
           </a>
           
@@ -1498,7 +1431,7 @@
               href="/ja-jp/flexpod/pdfs/sidebar/導入手順.pdf" 
             
           >
-            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            <img src="/ja-jp/flexpod/images/pdf.png" alt="" width="16" height="16"/>
             導入手順
           </a>
           
@@ -1516,8 +1449,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1529,8 +1460,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1550,7 +1479,7 @@
               href="/ja-jp/flexpod/pdfs/sidebar/FlexPod_Express_with_VMware_vSphere_6_7U1_and_NetApp_AFF_A220_with_Direct_Attached_IP_Based_Storage_Design_Guide__.pdf" 
             
           >
-            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            <img src="/ja-jp/flexpod/images/pdf.png" alt="" width="16" height="16"/>
             FlexPod Express with VMware vSphere 6.7U1 and NetApp AFF A220 with Direct-Attached IP Based Storage Design Guide 』
           </a>
           
@@ -1570,8 +1499,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1591,7 +1518,7 @@
               href="/ja-jp/flexpod/pdfs/sidebar/FlexPod_Express_と_VMware_vSphere_6_7U1__および直接接続型の_IP_ベースストレージを搭載した_NetApp_AFF_A220.pdf" 
             
           >
-            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            <img src="/ja-jp/flexpod/images/pdf.png" alt="" width="16" height="16"/>
             FlexPod Express と VMware vSphere 6.7U1 、および直接接続型の IP ベースストレージを搭載した NetApp AFF A220
           </a>
           
@@ -1609,8 +1536,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1620,8 +1545,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1641,7 +1564,7 @@
               href="/ja-jp/flexpod/pdfs/sidebar/FlexPod_とセキュリティ.pdf" 
             
           >
-            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            <img src="/ja-jp/flexpod/images/pdf.png" alt="" width="16" height="16"/>
             FlexPod とセキュリティ
           </a>
           
@@ -1657,7 +1580,7 @@
               href="/ja-jp/flexpod/pdfs/sidebar/解決策__FlexPod_によるランサムウェア対策.pdf" 
             
           >
-            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            <img src="/ja-jp/flexpod/images/pdf.png" alt="" width="16" height="16"/>
             解決策、 FlexPod によるランサムウェア対策
           </a>
           
@@ -1677,8 +1600,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1698,7 +1619,7 @@
               href="/ja-jp/flexpod/pdfs/sidebar/医療機関向けの_FIPS_140_2_セキュリティ準拠の_FlexPod_解決策.pdf" 
             
           >
-            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            <img src="/ja-jp/flexpod/images/pdf.png" alt="" width="16" height="16"/>
             医療機関向けの FIPS 140-2 セキュリティ準拠の FlexPod 解決策
           </a>
           
@@ -1724,8 +1645,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1733,8 +1652,6 @@
   
 
 
-
-          
         </li>
       </ul>
     
@@ -1754,7 +1671,7 @@
               href="/ja-jp/flexpod/pdfs/sidebar/Cisco_Intersight_と_NetApp_ONTAP_ストレージクイックスタートガイド.pdf" 
             
           >
-            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            <img src="/ja-jp/flexpod/images/pdf.png" alt="" width="16" height="16"/>
             Cisco Intersight と NetApp ONTAP ストレージクイックスタートガイド
           </a>
           
@@ -1774,8 +1691,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1795,7 +1710,7 @@
               href="/ja-jp/flexpod/pdfs/sidebar/インフラ.pdf" 
             
           >
-            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            <img src="/ja-jp/flexpod/images/pdf.png" alt="" width="16" height="16"/>
             インフラ
           </a>
           
@@ -1811,7 +1726,7 @@
               href="/ja-jp/flexpod/pdfs/sidebar/Cisco_UCSM___VMware_vSphere_7_0__および_NetApp_ONTAP_9_を使用した_FlexPod_向けのエンドツーエンド_NVMe.pdf" 
             
           >
-            <img src="/ja-jp/flexpod/images/pdf.png" width="16" height="16"/>
+            <img src="/ja-jp/flexpod/images/pdf.png" alt="" width="16" height="16"/>
             Cisco UCSM 、 VMware vSphere 7.0 、および NetApp ONTAP 9 を使用した FlexPod 向けのエンドツーエンド NVMe
           </a>
           
@@ -1823,8 +1738,6 @@
 
 
 
-
-          
         </li>
       </ul>
     
@@ -1832,19 +1745,16 @@
   
 
 
-
-          
         </li>
       </ul>
     
 
   
-
 
 </li></ul>
   <div class="zip-pdf-link-container" style="display: none;">   
     <a href="#" id="zipPdf">
-      <img src="/ja-jp/flexpod/images/pdf-zip.png" width="16" height="16"/>
+      <img src="/ja-jp/flexpod/images/pdf-zip.png" alt="" width="16" height="16"/>
       <pre>個別のPDFドキュメントのコレクション<span class="zip-size"></span></pre>
     </a><div id="zip-link-popup" class="hide">
     <div class="inner-modal">
@@ -1877,7 +1787,7 @@
     $("#toggleContainerPdf").toggle('display');
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><div class="sidebar-nav-container">
+</script><div class="sidebar-nav-container" id="mysidebardiv">
   <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/ja-jp/flexpod/index.html">
         FlexPod ソリューションのドキュメント
       </a></li><li class="subfolders "><a href="#">
@@ -2762,4 +2672,5 @@ igroup のオペレーティングシステムのタイプは、 LUN のオペ�
     </script>
     <script src='/ja-jp/flexpod/js/www-ntap.js'></script>
     <script src='/ja-jp/flexpod/js/tabbed-blocks.js'></script>
+    <script src='/ja-jp/flexpod/js/sidebar.js'></script>
   </body></html>
