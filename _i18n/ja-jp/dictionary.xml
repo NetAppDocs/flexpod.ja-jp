@@ -366,8 +366,6 @@
   <block id="7501c5e58e67ce758d854a0f76243785" category="doc">FlexPod プラットフォーム</block>
   <block id="929267c420e3d3c55cf94c77cb6278ff" category="paragraph">FlexPod プラットフォームには、次の 3 つがあります。</block>
   <block id="ec80c81f43eaed2db319aaaddeb1b47c" category="list-text">* FlexPod Express. * このプラットフォームは、リモートオフィスやエッジのユースケース向けのコンパクトな統合インフラストラクチャです。</block>
-  <block id="82da3c7bdf42770183f1b2651ae3ac0a" category="inline-link">FlexPod Select for High-Performance Oracle RAC.</block>
-  <block id="ea29f1a94a5cc0b3c2459d7f61b47043" category="list-text">* FlexPod Select 。 * このプラットフォームは、などの高性能アプリケーションに特化したアーキテクチャです<block ref="6aad01ba0b9744c0d680fcb06a4741ad" category="inline-link-rx"></block></block>
   <block id="fdcc3f708755fca6b29fa368ab162e64" category="summary">このセクションでは、 FlexPod Express のオプション機能について説明します。</block>
   <block id="3fbddd58f80c4f4429699e25eb1b4a26" category="doc">オプション機能</block>
   <block id="710a236c4f9d25ef81dee7911c0555af" category="section-title">iSCSI ブートオプション</block>
@@ -1182,7 +1180,6 @@
   <block id="7b3308b95aec192d46bc92dd7fb02cb2" category="inline-link">FlexPod 用 Cisco Intersight 管理モード</block>
   <block id="2155a8941fd728202c18dade730100d6" category="paragraph"><block ref="2155a8941fd728202c18dade730100d6" category="inline-link-rx"></block></block>
   <block id="0580772620331f949057ed6afbb098ea" category="inline-link">Cisco Intersight の概要</block>
-  <block id="c126a38a1e6af9c2dcbdc8fc12037c4b" category="paragraph"><block ref="c126a38a1e6af9c2dcbdc8fc12037c4b" category="inline-link-rx"></block></block>
   <block id="4d49c14c4afe96eb88aaef6d6588599b" category="inline-link">『 Intersight Appliance Install and Upgrade Guide 』を参照してください</block>
   <block id="5cce77ecfcdbd5857d67110262f7b5a9" category="paragraph"><block ref="5cce77ecfcdbd5857d67110262f7b5a9" category="inline-link-rx"></block></block>
   <block id="125b1abfe1e20b5d3d6794b8dcc47618" category="summary">開始する前に、 AIQ UM をインストールまたはアップグレードし、 Cisco Intersight アカウントを作成し、 Intersight Assist をインストールします。</block>
@@ -1212,15 +1209,10 @@
   <block id="88ade68952e1a8d9f1c49b5ed85b5af5" category="list-text">Intersight Assist アプライアンスの導入後。</block>
   <block id="dba06e35ee25a3095d873c4534514037" category="list-text">に移動します<block ref="f9e0ea639036dbfc655ff5cf553db753" category="inline-link-rx"></block> アプライアンスの設置後のセットアップを完了するには、次の手順を実行します。</block>
   <block id="bca0d681ab79310b7d18a7976928af12" category="paragraph">インストールプロセスが自動的に開始されます。Intersight.com への帯域幅によっては、インストールに最大 1 時間かかる場合があります。また、 VM の電源がオンになったあとでセキュアなサイトが稼働するまでに数秒かかることもあります。</block>
-  <block id="275571fec9813ba1f9a0316d6c6f2fb6" category="list-text">導入後のプロセスで、インストール対象を選択します。</block>
-  <block id="c00e17d94315de3169768bef7aab5657" category="list-text">* Intersight Connected Virtual Appliance 。 * この導入では、 Intersight.com の全機能を利用するために必要なサービスを更新したり、利用したりするために、シスコおよびサイト間サービスに接続する必要があります。</block>
-  <block id="393c0ea686ccae41560844de6267272c" category="list-text">* Intersight プライベート仮想アプライアンス。 * この導入は、データセンターを切断（エアギャップ）モードで運用する環境を想定しています。</block>
   <block id="3920eddb38a93c54b93b962bbdea7c26" category="list-text">* Intersight Assist 。 * この導入により、 SaaS モデルを Cisco Intersight に接続できるようになりました。</block>
-  <block id="1453aed754bf50218b4f4d0151fdacf0" category="admonition">「 Intersight Assist 」を選択した場合は、続行する前にデバイス ID と請求コードをメモしておきます。</block>
   <block id="32f55ec9f00aee8539ca16e146d53713" category="inline-image-macro">サイト間展開オプションのスクリーンショット</block>
   <block id="df2ced2f2ca7e12619f0e054224c6230" category="paragraph"><block ref="df2ced2f2ca7e12619f0e054224c6230" category="inline-image-macro-rx" type="image"></block></block>
   <block id="2f88e5cbd35ab951b0bce5a96b06bb36" category="list-text">[* Proceed] をクリックします。</block>
-  <block id="1943b315b7a1e50917c318abee014486" category="list-text">「 * Intersight Assist * 」を選択した場合は、次の手順を実行します。</block>
   <block id="6f6002ff113b47d720b948fdbd799d5c" category="inline-link"><block ref="6f6002ff113b47d720b948fdbd799d5c" category="inline-link-rx"></block></block>
   <block id="3aa4c250877220ced11dd5118f05b73c" category="list-text">SaaS Intersight のアカウントに移動します<block ref="b140963de237118a210eda3a58c6a981" category="inline-link-rx"></block>。</block>
   <block id="66b6809a917e6f7acac28f8accbdedc3" category="list-text">[*Targets*,*Cisco Intersight Assist*] 、 [*Start*] の順にクリックします。</block>
@@ -7278,21 +7270,11 @@
   <block id="6b2cd9fd5e6df687c3d2d950a0504cb2" category="list-text">CDP ネイバーのオブジェクトを追加しました</block>
   <block id="1b178e202b7d2a2988fd16b3b67c6a9b" category="list-text">Cisco Intersight にネットアップワークフローのストレージタスクが追加されました。を参照してください <block ref="026b254cc8ff2f5d36709bcf93418a5f" category="inline-link-macro-rx"></block> NetApp ストレージ・タスクの一覧を表示します。</block>
   <block id="054ea9c656473e275b7ae5b69269cc81" category="list-text">ストレージエクスポートポリシーをボリュームに追加します</block>
-  <block id="005bfd913eb29ed0d97dbcf92a1dc44b" category="list-text">イニシエータのストレージホストへの接続（ igroup ）</block>
   <block id="aa4edcb7e57123151162ef878a3a3bb4" category="list-text">ストレージ LUN を展開します</block>
   <block id="cb036c70939fadc3637cbeb990d0a969" category="list-text">[ ストレージボリューム ] を展開します</block>
   <block id="01b698a596504162b7fcdf910e9175db" category="list-text">NetApp igroup LUN Map を探します</block>
   <block id="9e5d320b5556f2516f70b24e91d5f757" category="list-text">ID でストレージ LUN を検索します</block>
   <block id="783d5727a583df3d75bb078907ef7716" category="list-text">ID でストレージボリュームを検索します</block>
-  <block id="2e98a15a497ccdd705c1aacbc2565767" category="list-text">新しいストレージ Fibre Channel インターフェイス</block>
-  <block id="a2e112440799116f544e38030177ebc7" category="list-text">新しいストレージ IP インターフェイス</block>
-  <block id="97ac0e10ec1653fdd6d33b534b4fb581" category="list-text">新しいストレージ LUN</block>
-  <block id="194f7608b74b74a368090a870f7d5fcb" category="list-text">新しいストレージ LUN ID</block>
-  <block id="8984b5a23cc2d3327a7853fd1f99478b" category="list-text">新しいストレージボリューム</block>
-  <block id="306682b00b95423c3808ed174d82d2b5" category="list-text">ストレージエクスポートポリシーを削除します</block>
-  <block id="51509d7e2140913e263274d44c95a454" category="list-text">ストレージホストを削除します</block>
-  <block id="e85a681fd3a43de819202fa65bd57afb" category="list-text">ストレージ LUN を削除します</block>
-  <block id="4b80c44802bcd924cae1f359acfed1d8" category="list-text">ストレージ LUN ID を削除します</block>
   <block id="f44bd35636cd69c25b2f240a770ab0a5" category="list-text">ストレージボリュームを削除する</block>
   <block id="5cb81d48ffabbd08e273eb1371ff2113" category="list-text">新しいストレージ Snapshot ポリシー</block>
   <block id="46c325550313b45bd974662a8ba5d5c5" category="list-text">新しいストレージ Snapshot ポリシースケジュール</block>
@@ -7311,9 +7293,6 @@
   <block id="0027d78119d537368b4fd4055fdfdd69" category="list-text">ストレージ IP インターフェイスを削除します</block>
   <block id="2205b729cc3612050bfabb80d4d267a0" category="list-text">Storage Virtual Machine を削除してください</block>
   <block id="091e9fb66636892d6015097e15c3353a" category="list-text">Storage Virtual Machine のアグリゲートを編集します</block>
-  <block id="c124f401989eb56f128d81a49069b568" category="list-text">新しい Storage NAS Smart Volume</block>
-  <block id="961513c69619cf93fef1cda04ea9a298" category="list-text">新しい Storage Smart LUN</block>
-  <block id="207134fdf4cc60a2571bb638077b925c" category="list-text">Storage Smart LUN を削除します</block>
   <block id="fc763aee087e01aba254202f6cfd6ba9" category="admonition">新規ストレージ NAS スマートボリュームおよび新規ストレージスマート LUN タスクは、 ONTAP 9.8 以降でのみ機能します。ONTAP 9.7P1 は、現在、サポートされる最小バージョンです。</block>
   <block id="d3723866fd8ed566ec4269ff8a1cde80" category="inline-link-macro">NetApp Active IQ Unified Manager のドキュメント</block>
   <block id="3537e24e4745c06b41a151532f5f0cd1" category="paragraph">Active IQ Unified Manager をインストールまたはアップグレードしていない場合は、インストールするかアップグレードしてください（最新バージョンを推奨します。現在 9.10P1 です）。手順については、を参照してください <block ref="b713007c96ed5cceca9ab6b5776ab58a" category="inline-link-macro-rx"></block>。</block>
@@ -7912,4 +7891,35 @@
   <block id="b039f508b07fa442d12ced167cdee4ab" category="paragraph"><block ref="b039f508b07fa442d12ced167cdee4ab" category="inline-link-macro-rx"></block></block>
   <block id="a400e1c221e8c3e8b80a81f5085a481d" category="paragraph"><block ref="a400e1c221e8c3e8b80a81f5085a481d" category="inline-link-macro-rx"></block></block>
   <block id="77adde3767ae2cc82097445aa8b15e86" category="list-text">冗長構成の10Gbps標準イーサネットスイッチ×2（Cisco Nexus 31108を推奨、Cisco Nexus 3000および9000モデルをサポート）</block>
+  <block id="40ad3b682c80f313282c440b74ef7360" category="paragraph"><block ref="40ad3b682c80f313282c440b74ef7360" category="inline-link-rx"></block></block>
+  <block id="d1cdbd3c8324f3afbc5b420ce471feff" category="section-title">2022年7月</block>
+  <block id="f4b185ec676b1beb34726576b20e3951" category="list-text">Capacityウィジェットでクラスタデータ削減比率のビジュアルが向上しました</block>
+  <block id="451cf77b3f516b53f84c38860a146687" category="list-text">[Network Interfaces]ページにFCインターフェイスタブを追加しました</block>
+  <block id="5a2fc567d92a62161d2b6939225dc099" category="list-text">汎用の「新しいストレージボリューム」タスクを使用して新しいボリュームを作成すると、ボリュームのスペースギャランティがnoneに設定され、Snapshotリザーブの割合が0%に設定されるようになりました</block>
+  <block id="f4735a0179c438df4f0652a2213627a4" category="list-text">Edit Snapshot PolicyタスクのCommentフィールドは省略可能になり、必須ではなくなりました</block>
+  <block id="8666295a1715993c51aadd871206b296" category="list-text">UIインベントリとオーケストレーションの一貫性が向上</block>
+  <block id="c913ce3283ef4e82118b70e853725332" category="list-text">Cluster Capacityのサイト間の容量情報がSystem Managerと同じになりました</block>
+  <block id="351ddfe27ca97ad456ea7b228dc67218" category="list-text">操作性を向上させるために新しい管理インターフェイスを作成する際にすべてのパラメータを表示するチェックボックスをStorage Virtual Machineタスクの下に追加しました</block>
+  <block id="ab652f6ea9944d5915c3894a6de4a64f" category="list-text">クライアント一致より下にプロトコルを移動しましたが、System Managerと同じ結果が得られました</block>
+  <block id="f4e3ab18e9c0fc16b6bf62f0f2357c60" category="list-text">エクスポートポリシーの一般ページにアクセスプロトコルが表示されるようになりました</block>
+  <block id="f44e0c940713ce3079a40ba9bc222f07" category="list-text">igroupの削除は、条件付きでログに記録される</block>
+  <block id="fa4af406aa8e6bea78d3f4f656f199fe" category="list-text">新しいストレージNASデータインタフェースと新しいストレージiSCSIデータインタフェースの下に、NASの「フェールオーバーポリシー」および「自動設定」パラメータを追加</block>
+  <block id="5f5cca73b8e0b0dcf13ae37abd1b30a6" category="list-text">新規ストレージNASスマートボリュームのロールバックタスクで、他のボリュームが関連付けられていない場合にエクスポートポリシーが削除されるようになりました</block>
+  <block id="85c1767724516ce4c530e386f6a8e04e" category="list-text">Smart VolumeとSmart LUNタスクの機能強化</block>
+  <block id="0de3d10d428301dc752a4aea634acb40" category="list-text">イニシエータをストレージホストに接続する</block>
+  <block id="9fc1d1408b035b5f699e246b36f2e395" category="list-text">新しいネットアップストレージFibre Channelインターフェイス</block>
+  <block id="a5df94fc588067cf92394a3554329601" category="list-text">新しいストレージIPインターフェイス</block>
+  <block id="d7e057b4be4f5aec2f39a363e6970a26" category="list-text">新しいストレージLUN</block>
+  <block id="4c807515ded4b2b7b3cea9068a98c67c" category="list-text">新しいストレージLUN ID</block>
+  <block id="c6751b7723c681fbbc53d1ece3f78e57" category="list-text">新しいNetApp Storage NASスマートボリューム</block>
+  <block id="8221f154a0cd2642f264529279893b96" category="list-text">新しいNetApp Storage Smart LUN</block>
+  <block id="e86a1c0d2603c82b6b81f234dae454af" category="list-text">新しいストレージボリューム</block>
+  <block id="40f53794e58186747b2ca794fc115708" category="list-text">ストレージエクスポートポリシーを削除します</block>
+  <block id="92deb106459eb050b785db2fe57cce48" category="list-text">ストレージホストを削除します</block>
+  <block id="bd400b36b257aae8e728e6440fee9fe6" category="list-text">ストレージLUNを削除します</block>
+  <block id="020226a8130f1d7d0a9df708c3d7b600" category="list-text">ストレージLUN IDを削除します</block>
+  <block id="93eafe4433d296a1dd07b95ce951c9a7" category="list-text">NetApp Storage Smart LUNを削除します</block>
+  <block id="b8a3a6101b5ada36c1e5927fd398157d" category="list-text">導入後のプロセスで、次のオプションを選択します。</block>
+  <block id="05b3bc98db36aa487224a23de09ab3be" category="admonition">「Intersight Assist」を選択する場合は、続行する前にデバイスIDと請求コードをメモしておきます。</block>
+  <block id="fd7b91f0228fe4adf25f7fca76314e8d" category="list-text">「* Intersight Assist *」を選択し、次の手順を実行します。</block>
 </blocks>

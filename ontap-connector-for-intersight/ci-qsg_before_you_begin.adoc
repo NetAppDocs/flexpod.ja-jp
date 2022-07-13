@@ -61,14 +61,12 @@ image:ci-qsg_image4.png["エラー：グラフィックイメージがありま�
 +
 インストールプロセスが自動的に開始されます。Intersight.com への帯域幅によっては、インストールに最大 1 時間かかる場合があります。また、 VM の電源がオンになったあとでセキュアなサイトが稼働するまでに数秒かかることもあります。
 
-.. 導入後のプロセスで、インストール対象を選択します。
+.. 導入後のプロセスで、次のオプションを選択します。
 +
-*** * Intersight Connected Virtual Appliance 。 * この導入では、 Intersight.com の全機能を利用するために必要なサービスを更新したり、利用したりするために、シスコおよびサイト間サービスに接続する必要があります。
-*** * Intersight プライベート仮想アプライアンス。 * この導入は、データセンターを切断（エアギャップ）モードで運用する環境を想定しています。
 *** * Intersight Assist 。 * この導入により、 SaaS モデルを Cisco Intersight に接続できるようになりました。
 +
 
-NOTE: 「 Intersight Assist 」を選択した場合は、続行する前にデバイス ID と請求コードをメモしておきます。
+NOTE: 「Intersight Assist」を選択する場合は、続行する前にデバイスIDと請求コードをメモしておきます。
 
 +
 image:ci-qsg_image5.png["サイト間展開オプションのスクリーンショット"]
@@ -76,7 +74,7 @@ image:ci-qsg_image5.png["サイト間展開オプションのスクリーンシ�
 
 
 .. [* Proceed] をクリックします。
-.. 「 * Intersight Assist * 」を選択した場合は、次の手順を実行します。
+.. 「* Intersight Assist *」を選択し、次の手順を実行します。
 +
 ... SaaS Intersight のアカウントに移動します https://intersight.com["https://intersight.com"^]。
 ... [*Targets*,*Cisco Intersight Assist*] 、 [*Start*] の順にクリックします。
