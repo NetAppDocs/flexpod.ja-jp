@@ -1,0 +1,294 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/flexpod-rho-cvo-solution-components.html 
+keywords: astra control, trident, storage backend, cloud central, cloud manager, Active IQ Unified Manager 
+summary: このセクションでは、この解決策 に電力を供給するさまざまなコンポーネントについて説明します。 
+---
+= 解決策コンポーネント
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:flexpod-rho-cvo-solution-overview.html["Previous ：解決策の概要を示します。"]
+
+
+
+== FlexPod
+
+FlexPod は、仮想化ソリューションと非仮想化ソリューションの両方の統合基盤となるハードウェアとソフトウェアの定義済みセットです。FlexPod には、NetApp ONTAP ストレージ、Cisco Nexusネットワーク、Cisco MDSストレージネットワーク、Cisco Unified Computing System（Cisco UCS）が含まれています。この設計は、ネットワーク、コンピューティング、ストレージを1つのデータセンターラックに収容できる柔軟性を備えています。また、お客様のデータセンター設計に従って導入することもできます。ポート密度を使用すると、ネットワークコンポーネントは複数の構成に対応できます。
+
+
+
+== Astra Control の略
+
+Astra Controlは、パブリッククラウドとオンプレミスの両方でホストされるクラウドネイティブアプリケーションに対して、アプリケーション対応のデータ保護サービスを提供します。Astra Controlは、Kubernetesで実行されるコンテナ化されたアプリケーションに、データ保護、ディザスタリカバリ、移行の機能を提供します。
+
+
+
+=== の機能
+
+Astra Control は、 Kubernetes アプリケーションデータのライフサイクル管理に不可欠な機能を提供
+
+* 永続的ストレージを自動的に管理
+* アプリケーションと整合性のあるオンデマンドのSnapshotとバックアップを作成
+* ポリシーベースのスナップショット処理とバックアップ処理を自動化
+* ハイブリッドクラウド環境で、アプリケーションと関連データをKubernetesクラスタから別のクラスタに移行する
+* 同じKubernetesクラスタまたは別のKubernetesクラスタにアプリケーションをクローニングする
+* アプリケーション保護ステータスを視覚化します
+* グラフィカルユーザインターフェイスとすべての保護ワークフローを社内ツールから実装するためのREST APIの完全なリストを提供します。
+
+
+Astra Controlを使用すると、Kubernetesクラスタで作成された関連リソースの情報を含む、コンテナ化されたアプリケーションを一元的に可視化できます。すべてのクラスタ、すべてのアプリケーション、すべてのクラウド、またはすべてのデータセンターを1つのポータルで表示できます。オンプレミスまたはパブリッククラウドのすべての環境でAstra Control APIを使用して、データ管理ワークフローを実装できます。
+
+次の図は、Astra Controlの機能を示しています。
+
+image:flexpod-rho-cvo-image4.png["エラー：グラフィックイメージがありません"]
+
+
+
+=== Astra Control消費モデル
+
+Astra Controlには、次の2つの消費モデルがあります。
+
+* * Astra Control Service。ネットアップがホストするフルマネージドサービス。Google Kubernetes Engine（GKE）、Azure Kubernetes Service（AKS）でKubernetesクラスタのアプリケーション対応データ管理を実現します。
+* * Astra Control Center。*オンプレミスおよびハイブリッドクラウド環境で実行されるKubernetesクラスタのアプリケーション対応データ管理を提供する、自己管理ソフトウェアです。
+
+
+このテクニカルレポートでは、Kubernetesで実行されるクラウドネイティブアプリケーションを管理するために、Astra Control Centerを活用しています。
+
+次の図は、Astra Controlアーキテクチャを示しています。
+
+image:flexpod-rho-cvo-image5.png["エラー：グラフィックイメージがありません"]
+
+
+
+== Astra Trident
+
+Astra Tridentは、コンテナやKubernetesディストリビューション向けの、完全にサポートされているオープンソースのストレージオーケストレーションツールです。コンテナ化されたアプリケーションの永続性に対する要求を、業界標準のインターフェイス（など）を使用して満たすことができるように、最初から設計されています https://kubernetes-csi.github.io/docs/introduction.html["CSI（Container Storage Interface）"^]。Astra Tridentを使用すると、マイクロサービスやコンテナ化されたアプリケーションを利用して、ネットアップのストレージシステムポートフォリオが提供するエンタープライズクラスのストレージサービスを活用できます。
+
+Kubernetesクラスタにポッドとして導入されるAstra Tridentは、Kubernetesワークロードに動的なストレージオーケストレーションサービスを提供します。コンテナ化されたアプリケーションは、NetApp ONTAP （NetApp AFF 、NetApp FAS 、NetApp ONTAP Select 、Cloudなど）を含むネットアップの幅広いポートフォリオから、永続的ストレージをすばやく簡単に消費できます。 さらに、Amazon FSX for NetApp ONTAP ）、NetApp Element ソフトウェア（NetApp SolidFire ）、Azure NetApp Files サービス、Google Cloud上のクラウドボリュームサービス、AWS上のクラウドボリュームサービスも利用できます。FlexPod 環境では、Astra Tridentを使用して、ネットアップのFlexVol ボリュームをベースとするコンテナや、ONTAP AFF やFAS システム、Cloud Volumes ONTAP などのストレージプラットフォームでホストされるLUNに対応するコンテナの永続的ボリュームを動的にプロビジョニングおよび管理できます。Tridentは、Astra Controlが提供するアプリケーション保護スキームの実装においても重要な役割を果たします。Astra Tridentの詳細については、を参照してください https://docs.netapp.com/us-en/trident/index.html["Astra Tridentのドキュメント"^]
+
+
+
+== ストレージバックエンド
+
+Astra Tridentを使用するには、サポートされているストレージバックエンドが必要です。Tridentバックエンドは、Tridentとストレージシステムの関係を定義します。Tridentは、そのストレージシステムとの通信方法や、Tridentがそのシステムからボリュームをプロビジョニングする方法を解説します。Tridentは、あるストレージクラスが定義した要件を満たしたストレージプールをバックエンドから自動的に提供します。
+
+* ONTAP AFF と FAS のストレージバックエンド。ONTAP は、ストレージソフトウェアおよびハードウェアプラットフォームとして、コアストレージサービス、複数のストレージアクセスプロトコルのサポート、およびネットアップのSnapshotコピーやミラーリングなどのストレージ管理機能を提供します。
+* Cloud Volumes ONTAP ストレージバックエンド
+* https://docs.netapp.com/us-en/astra-data-store/index.html["Astra データストア"^] ストレージバックエンド
+
+
+
+
+== NetApp Cloud Volumes ONTAP の略
+
+NetApp Cloud Volumes ONTAP は、ファイルワークロードとブロックワークロードに高度なデータ管理機能を提供するSoftware-Defined Storageです。Cloud Volumes ONTAP を使用すると、データ保護、セキュリティ、コンプライアンスを強化しながら、クラウドストレージのコストを最適化し、アプリケーションのパフォーマンスを向上させることができます。
+
+主なメリットは次のとおりです。
+
+* 組み込みのデータ重複排除、データ圧縮、シンプロビジョニング、クローニングを活用して、ストレージコストを最小限に抑えます。
+* クラウド環境で障害が発生した場合でも、エンタープライズクラスの信頼性と継続的な運用を確保できます。
+* Cloud Volumes ONTAP は、業界をリードするネットアップのレプリケーションテクノロジであるSnapMirrorを活用して、オンプレミスのデータをクラウドにレプリケートします。これにより、複数のユースケースでセカンダリコピーを簡単に利用できます。
+* また、 Cloud Volumes ONTAP は Cloud Backup Service との統合により、保護のためのバックアップとリストア機能、およびクラウドデータの長期アーカイブ機能を提供します。
+* アプリケーションをオフラインにすることなく、ハイパフォーマンスとローパフォーマンスのストレージプールをオンデマンドで切り替えます。
+* NetApp SnapCenter を使用してSnapshotコピーの整合性を確保します。
+* Cloud Volumes ONTAP は、データ暗号化をサポートし、ウィルスやランサムウェアからの保護を提供します。
+* クラウドデータセンスとの統合により、データコンテキストを把握し、機密データを識別できます。
+
+
+
+
+== Cloud Central にアクセスできます
+
+Cloud Centralは、ネットアップのクラウドデータサービスにアクセスして管理するための一元的な場所を提供します。これらのサービスにより、重要なアプリケーションのクラウドでの実行、自動化されたDRサイトの作成、データのバックアップ、複数のクラウド間でのデータの効果的な移行と制御が可能になります。詳細については、を参照してください https://docs.netapp.com/us-en/occm35/concept_cloud_central.html["Cloud Centralにアクセスできます。"^]
+
+
+
+== クラウドマネージャ
+
+Cloud Managerは、エンタープライズクラスのSaaSベースの管理プラットフォームです。ITエキスパートとクラウドアーキテクトは、ネットアップのクラウドソリューションを使用して、ハイブリッドマルチクラウドインフラを一元管理できます。オンプレミスとクラウドのストレージを表示および管理する一元化されたシステムを提供し、ハイブリッドクラウド、複数のクラウドプロバイダ、アカウントをサポートします。詳細については、を参照してください https://docs.netapp.com/us-en/occm/index.html["クラウドマネージャ"^]。
+
+
+
+== コネクタ
+
+Connectorは、Cloud Managerがパブリッククラウド環境内のリソースとプロセスを管理できるようにするインスタンスです。Cloud Managerのさまざまな機能を使用するには、コネクタが必要です。コネクタは、クラウドまたはオンプレミスネットワークに導入できます。
+
+Connectorは次の場所でサポートされます。
+
+* AWS
+* Microsoft Azure
+* Google Cloud
+* オンプレミス
+
+
+コネクタの詳細については、を参照してください https://docs.netapp.com/us-en/occm/concept_connectors.html["リンクをクリックしてください"^]
+
+
+
+== NetApp Cloud Insights の略
+
+ネットアップのクラウドインフラ監視ツールであるCloud Insights を使用すると、Astra Control Centerで管理されるKubernetesクラスタのパフォーマンスと利用率を監視できます。Cloud Insights ：ストレージ使用率とワークロードの相関関係を示します。Cloud Insights 接続を Astra コントロールセンターで有効にすると、テレメータの情報が Astra コントロールセンターの UI ページに表示されます。
+
+
+
+== NetApp Active IQ Unified Manager の略
+
+NetApp Active IQ Unified Manager では、デザインが一新され、直感的に操作できるインターフェイスからONTAP ストレージクラスタを監視できます。コミュニティの情報やAI分析から得た情報を活用できます。運用、パフォーマンス、プロアクティブな分析情報を提供し、ストレージ環境と仮想マシン（VM）で実行される環境を包括的に分析します。ストレージインフラで問題 が発生すると、Unified Managerから問題 の詳細情報を通知して、ルート原因 の特定に役立てることができます。VMダッシュボードにはVMのパフォーマンス統計が表示されるため、VMware vSphereホストからネットワーク経由で最後にストレージへのI/Oパス全体を調査できます。一部のイベントには、問題 を修正するための対応策も用意されています。問題が発生したときにEメールやSNMPトラップで通知されるように、イベントにカスタムアラートを設定できます。Active IQ Unified Manager を使用すると、容量や使用状況の傾向を予測して問題が発生する前にプロアクティブに対処することができるため、長期的な問題につながる短期的な事後対処策を実施する必要がなくなり、ユーザのストレージ要件に合わせて計画を立てることができます。
+
+
+
+== Cisco Intersightの
+
+Cisco Intersightは、従来のアプリケーションやクラウドネイティブなインフラに向けて、インテリジェントな自動化、オブザーバビリティ、最適化を実現するSaaSプラットフォームです。このプラットフォームは、ITチームの変化を促進し、ハイブリッドクラウド向けに設計された運用モデルを提供します。
+
+Cisco Intersightには、次のようなメリットがあります。
+
+* *迅速な提供。*俊敏性に優れたソフトウェア開発モデルにより、クラウドまたはお客様のデータセンターからサービスとして提供され、頻繁な更新と継続的な技術革新を実現します。このようにして、お客様は基幹業務の提供を加速することに集中できます。
+* *運用の簡素化。*共通のインベントリ、認証、APIを備えた単一のセキュアなSaaS提供ツールを使用して、スタック全体とすべての場所で作業し、チーム間のサイロを排除し、運用を簡素化します。オンプレミスの物理サーバやハイパーバイザーの管理からVM、Kubernetes、サーバレス、自動化、 オンプレミスとパブリッククラウドの両方にわたって最適化とコスト管理を実現
+* *継続的な最適化。* Cisco Intersightが提供するインテリジェンスを、Cisco TACだけでなくすべてのレイヤで使用して、環境を継続的に最適化します。このインテリジェンスは、推奨される自動化可能なアクションに変換されるため、ワークロードの移動や物理サーバの稼働状態の監視からKubernetesクラスタの自動サイジングまで、あらゆる変更にリアルタイムで対応できます。また、コスト削減のために、作業中のパブリッククラウドが推奨されます。
+
+
+Cisco Intersightには、UCSM Managed Mode（UMM）とIntersight Managed Mode（IMM）という2つの管理操作モードがあります。ファブリックインターコネクトの初期セットアップ中に、ファブリック接続Cisco UCSシステムのネイティブUmmまたはIMMを選択できます。この解決策 では、ネイティブUmmが使用されます。
+
+次の図は、Cisco Intersightのダッシュボードを示しています。
+
+image:flexpod-rho-cvo-image6.png["エラー：グラフィックイメージがありません"]
+
+
+
+== Red Hat OpenShift Container Platform
+
+Red Hat OpenShift Container Platformは、CRI-OとKubernetesを統合し、これらのサービスを管理するためのAPIとWebインターフェイスを提供するコンテナアプリケーションプラットフォームです。CRI-Oは、Kubernetes Container Runtime Interface（CRI）を実装したもので、Open Container Initiative（OCI）互換のランタイムを使用した実行を可能にします。Kubernetesの実行時にDockerを使用する代わりに、軽量なソリューションです。
+
+OpenShift Container Platformにより、お客様はコンテナを作成および管理できます。コンテナは、オペレーティングシステムや基盤のインフラとは無関係に、それぞれの環境で実行されるスタンドアロンプロセスです。OpenShift Container Platformは、コンテナベースのアプリケーションの開発、導入、管理を支援します。アプリケーションをオンデマンドで作成、変更、および導入できるセルフサービスプラットフォームを提供し、開発とリリースのライフサイクルを短縮します。OpenShift Container Platformには、より小規模で分離されたユニットで構成されるマイクロサービスベースのアーキテクチャがあり、連携して機能します。Kubernetesクラスタ上で実行され、信頼性の高いクラスタキーバリュー型データストアであるetcdに格納されているオブジェクトに関するデータが含まれます。
+
+次の図は、Red Hat OpenShift Containerプラットフォームの概要を示しています。
+
+image:flexpod-rho-cvo-image7.png["エラー：グラフィックイメージがありません"]
+
+
+
+=== Kubernetesインフラ
+
+Kubernetesは、OpenShift Container Platform内で、コンテナ化されたアプリケーションを一連のCRI-Oランタイムホスト全体で管理し、導入、メンテナンス、アプリケーション拡張のためのメカニズムを提供します。CRI-Oサービスは、コンテナ化されたアプリケーションをインスタンス化し、実行します。
+
+Kubernetesクラスタは、1つ以上のマスターノードと一連のワーカーノードで構成されます。この解決策 設計には、ハードウェアのハイアベイラビリティ（HA）機能とソフトウェアスタックが含まれています。Kubernetesクラスタは、3つのマスターノードと最低2つのワーカーノードでHAモードで実行されるように設計されており、クラスタに単一点障害がないようにします。
+
+
+
+=== Red HatコアOS
+
+OpenShift Container Platformは、Red Hat Enterprise Linux CoreOS（RHCOS）を使用します。RHCOSは、CoreOSとRed Hat Atomic Host OSの優れた機能を組み合わせたコンテナ指向のオペレーティングシステムです。RHCOSは、コンテナ化されたアプリケーションをOpenShift Container Platformから実行できるように特別に設計されており、新しいツールと連携して、迅速なインストール、オペレータベースの管理、簡単なアップグレードを実現します。
+
+RHCOSには次の機能があります。
+
+* イグニションは、最初にマシンを起動して構成する際に、OpenShift Container Platformが最初のブートシステム構成として使用するものです。
+* Kubernetesネイティブのコンテナランタイム実装であるCRI-Oは、オペレーティングシステムと緊密に統合して、Kubernetes環境を効率的かつ最適化します。CRI-Oには、コンテナの実行、停止、再起動を行う機能があります。これは、OpenShift Container Platform 3で使用されていたDocker Container Engineに完全に代わるものです。
+* Kubernetesの主要ノードエージェントであるKubeletはコンテナの起動と監視を担当しています。
+
+
+
+
+== VMware vSphere 7.0
+
+VMware vSphereは、大量のインフラ（CPU、ストレージ、ネットワークなどのリソース）をシームレスで汎用性に優れた動的な運用環境として包括的に管理する仮想化プラットフォームです。個々のマシンを管理する従来のオペレーティングシステムとは異なり、VMware vSphereはデータセンター全体のインフラストラクチャを集約して、必要なアプリケーションに迅速かつ動的に割り当てられるリソースを備えた単一の強力なサーバを作成します。
+
+詳細については、を参照してください https://www.vmware.com/products/vsphere.html["VMware vSphere の場合"^]。
+
+
+
+=== VMware vSphere vCenterの場合
+
+VMware vCenter Serverでは、1つのコンソールからすべてのホストとVMを統合的に管理でき、クラスタ、ホスト、およびVMのパフォーマンス監視を集約できます。VMware vCenter Serverを使用すると、管理者は、コンピューティングクラスタ、ホスト、VM、ストレージ、ゲストOS、 仮想インフラストラクチャのその他の重要なコンポーネントVMware vCenterは、VMware vSphere環境で使用できる豊富な機能を管理します。
+
+
+
+== ハードウェアおよびソフトウェアのリビジョン
+
+この解決策 は、で定義されている、サポートされているバージョンのソフトウェア、ファームウェア、およびハードウェアを実行している任意のFlexPod 環境に拡張できます http://support.netapp.com/matrix/["NetApp Interoperability Matrix Tool で確認できます"^] および https://www.cisco.com/web/techdoc/ucs/interoperability/matrix/matrix.html["Cisco UCSハードウェア互換性リスト。"^] OpenShiftクラスタは、VMware vSphereだけでなくベアメタル方式でFlexPod にインストールされます。
+
+複数のOpenShift（k8s）クラスタを管理するために必要なのはAstra Control Centerの1つのインスタンスだけです。各OpenShiftクラスタにはTrident CSIがインストールされています。Astra Control Centerは、このようなOpenShiftクラスタのいずれにもインストールできます。この解決策 では、OpenShiftベアメタルクラスタにAstraコントロールセンターをインストールします。
+
+次の表に、OpenShift用のFlexPod ハードウェアおよびソフトウェアのリビジョンを示します。
+
+|===
+| コンポーネント | プロダクト | バージョン 
+
+
+| コンピューティング | Cisco UCSファブリックインターコネクト6454 | 4.1（3c） 
+
+
+|  | Cisco UCS B200 M5サーバ | 4.1（3c） 
+
+
+| ネットワーク | Cisco Nexus 9336C-FX2 NX-OS | 9.3（8） 
+
+
+| ストレージ | NetApp AFF A700 | 9.11.1 
+
+
+|  | ネットアップアストラコントロールセンター | 22.04.0 
+
+
+|  | NetApp Astra Trident CSIプラグイン | 22.04.0 
+
+
+|  | NetApp Active IQ Unified Manager の略 | 9.11 
+
+
+| ソフトウェア | VMware ESXi nenic イーサネットドライバ | 1.0.35.0 
+
+
+|  | vSphere ESXiの場合 | 7.0（U2） 
+
+
+|  | VMware vCenter Applianceの略 | 7.0 U2b 
+
+
+|  | Cisco Intersight Assist仮想アプライアンス | 1.0.9-342 
+
+
+|  | OpenShift Container Platform | 4.9 
+
+
+|  | OpenShift Container Platformマスターノード | RHCOS 4.9 
+
+
+|  | OpenShift Container Platform Workerノード | RHCOS 4.9 
+|===
+次の表に、AWS上のOpenShift用のソフトウェアバージョンを示します。
+
+|===
+| コンポーネント | プロダクト | バージョン 
+
+
+| コンピューティング | マスターインスタンスタイプ：m5.xlarge | 該当なし 
+
+
+|  | ワーカーインスタンスタイプ：m5.large | 該当なし 
+
+
+| ネットワーク | Virtual Private Cloud Transit Gatewayの略 | 該当なし 
+
+
+| ストレージ | NetApp Cloud Volumes ONTAP の略 | 9.11.1 
+
+
+|  | NetApp Astra Trident CSIプラグイン | 22.04.0 
+
+
+| ソフトウェア | OpenShift Container Platform | 4.9 
+
+
+|  | OpenShift Container Platformマスターノード | RHCOS 4.9 
+
+
+|  | OpenShift Container Platform Workerノード | RHCOS 4.9 
+|===
+link:flexpod-rho-cvo-flexpod-for-openshift-container-platform-4-bare-metal-installation.html["次の例：FlexPod for OpenShift Container Platform 4ベアメタルインストール"]

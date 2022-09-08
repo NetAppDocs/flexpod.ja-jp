@@ -4,7 +4,7 @@ permalink: ontap-connector-for-intersight/index.html
 keywords: netapp, cisco, ontap, intersight, flexpod, infrastructure, solution, storage, compute, VMware, virtualization, monitor, orchestrate, automate 
 summary: ネットアップと Cisco は提携を通じて、 FlexPod エコシステムの単一コンソールビューである Cisco Intersight を提供しています。 
 ---
-= Cisco Intersight と NetApp ONTAP ストレージ：クイックスタートガイド
+= 『Cisco Intersight with NetApp Storage Quick Start Guide』
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -12,8 +12,6 @@ summary: ネットアップと Cisco は提携を通じて、 FlexPod エコシ�
 :linkattrs: 
 :imagesdir: ./../media/
 
-
-ネットアップ Rachel Lithman と Jyh Shing Chen
 
 協力：image:cisco logo.png["エラー：グラフィックイメージがありません"]
 

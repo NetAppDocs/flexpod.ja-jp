@@ -1,0 +1,24 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/flexpod-rho-cvo-netapp-cloud-volumes-ontap.html 
+keywords: cvo, astra, connector, cloud manager, storage backend, snapshot 
+summary: このセクションでは、AWSにCloud Volumes ONTAP とAstra Tridentを導入する方法について説明します。 
+---
+= NetApp Cloud Volumes ONTAP の略
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:flexpod-rho-cvo-red-hat-openshift-on-aws.html["以前は、AWSでRed Hat OpenShiftを利用していました。"]
+
+NetApp Cloud Volumes ONTAP インスタンスはAWSに導入され、Astra Tridentのバックエンドストレージとして機能します。Cloud Volumes ONTAP 作業環境を追加する前に、コネクタを配置する必要があります。コネクタを配置せずにCloud Volumes ONTAP の最初の作業環境を作成するかどうかを確認するメッセージが表示されます。AWSにコネクタを導入するには、を参照してください https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-aws.html["コネクタを作成します"^]。
+
+AWSにCloud Volumes ONTAP を導入する手順については、を参照してください https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-aws.html["AWSでのクイックスタート"^]。
+
+Cloud Volumes ONTAP を導入したら、Astra Tridentをインストールし、OpenShift Container Platformクラスタでストレージバックエンドとスナップショットクラスを設定できます。
+
+link:flexpod-rho-cvo-astra-control-center-installation-on-openshift-container-platform.html["次は、OpenShift Container PlatformにAstra Control Centerをインストールする方法です。"]

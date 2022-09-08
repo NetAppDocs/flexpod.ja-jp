@@ -19,7 +19,7 @@ Cisco Intersight Assist をインストールすると、ネットアップの�
 
 NOTE: NetApp Active IQ Unified Manager （ AIQ UM ） API ゲートウェイが有効になっていることを確認します。
 
-「 * 設定」 > 「一般」 > 「機能設定 * 」の順に選択します。
+NetApp IQ Unified Managerで、* Settings > General > Feature Settings *の順に選択します。
 
 image:ci-qsg_image7.png["有効な NetApp AIQ UM API ゲートウェイのスクリーンショット"]
 

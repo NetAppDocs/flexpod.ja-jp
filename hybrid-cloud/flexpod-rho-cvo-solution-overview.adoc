@@ -1,0 +1,64 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/flexpod-rho-cvo-solution-overview.html 
+keywords: tr4936, 4936, containers, kubernetes, introduction, Astra, openshift, cvo, intersight 
+summary: このテクニカルレポートでは、FlexPod コンバージドインフラ解決策 上にNetApp Astra Control CenterとRed Hat OpenShift Container Platformを統合し、Amazon Web Services（AWS）に拡張してハイブリッドクラウドデータセンターを構築しました。 
+---
+= TR-4936：『FlexPod hybrid cloud with NetApp Astra and Cisco Intersight for Red Hat OpenShift』
+:allow-uri-read: 
+
+
+Abhinav Singhの
+
+
+
+== はじめに
+
+コンテナ化されたアプリケーションの開発、導入、実行、管理、拡張のための事実上の選択肢となるコンテナとKubernetesは、ビジネスクリティカルなアプリケーションを実行する企業の増加に伴いつつあります。ビジネスクリティカルなアプリケーションは、状態に大きく依存しています。ステートフルアプリケーションには、状態、データ、および設定情報が関連付けられており、ビジネスロジックを実行する前のデータトランザクションに依存します。Kubernetes上で実行されるビジネスクリティカルなアプリケーションには、従来型アプリケーションのような可用性とビジネス継続性の要件が引き続きあります。サービスの停止は、収益の損失、生産性、会社の評判に深刻な影響を与える可能性があります。そのため、Kubernetesワークロードをクラスタ、オンプレミスデータセンター、ハイブリッドクラウド環境内およびクラスタ間で迅速かつ容易に保護、リカバリ、移動することが非常に重要です。企業は、ビジネスをハイブリッドクラウドモデルに移行し、アプリケーションをクラウドネイティブなフォームファクタに刷新するメリットを高く挙げています。
+
+このテクニカルレポートでは、FlexPod コンバージドインフラ解決策 上にNetApp Astra Control CenterとRed Hat OpenShift Container Platformを統合し、Amazon Web Services（AWS）に拡張してハイブリッドクラウドデータセンターを構築しました。使い慣れたことに基づいて作成されています https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_iac_redhat_openshift.html["FlexPod とRed Hat OpenShift"^]このドキュメントでは、ネットアップのAstra Control Centerについて説明します。インストール、設定、アプリケーション保護ワークフロー、オンプレミスとクラウド間でのアプリケーション移行から始まります。また、Red Hat OpenShiftで実行されるコンテナ化アプリケーションにNetApp Astra Control Centerを使用する場合の、アプリケーション対応データ管理機能（バックアップとリカバリ、ビジネス継続性など）の利点についても説明します。
+
+次の図に、解決策 の概要を示します。
+
+image:flexpod-rho-cvo-image2.png["エラー：グラフィックイメージがありません"]
+
+
+
+== 対象者
+
+このドキュメントは、CTO（最高技術責任者）、アプリケーション開発者、クラウド解決策 アーキテクト、サイト信頼性エンジニア（SRE）、DevOpsエンジニア、ITOps、コンテナ化されたアプリケーションの設計、ホスティング、管理に重点を置いたプロフェッショナルサービスチームなど、読者を想定しています。
+
+
+
+== NetApp Astra Control–主なユースケース
+
+ネットアップのAstra Controlは、クラウドネイティブなマイクロサービスを利用するお客様にアプリケーション保護を簡易化することを目的としています。
+
+* *スナップショットを使用したポイントインタイム（PiT）アプリケーションリプレゼンテーション。* Astra Controlを使用すると、Kubernetesで実行されているアプリケーションの構成の詳細や、関連付けられた永続的ストレージを含む、コンテナ化されたアプリケーションのエンドツーエンドのスナップショットを作成できます。インシデントが発生した場合は、ボタンクリックでアプリケーションを正常な状態に復元できます。
+* *フルコピー・アプリケーション・バックアップ* Astra Controlを使用すると'事前に定義されたスケジュールでフル・アプリケーション・バックアップを実行できますこのスケジュールを使用すると'アプリケーションを同じKubernetesクラスタにリストアしたり'別のKubernetesクラスタにオンデマンドで自動化された方法でリストアしたりできます
+* *クローンを使用したアプリケーションの移植と移行* Astra Controlを使用すると、アプリケーション全体をKubernetesクラスタ間または同じKubernetesクラスタ内のデータとともにクローニングできます。この機能は、クラスタがどこにあるかに関係なく、Kubernetesクラスタ間でアプリケーションを移植または移行する場合にも役立ちます（クローニング後にソースアプリケーションインスタンスを削除するだけです）。
+* *アプリケーションの一貫性をカスタマイズできます。* Astra Controlを使用すると、実行フックを活用してアプリケーションの休止状態を定義できます。「実行前」と「実行後」のフックをスナップショットおよびバックアップのワークフローにドロップすると、スナップショットまたはバックアップが作成される前に、アプリケーションが独自の方法で休止されます。
+* *アプリケーションレベルのディザスタリカバリ（DR）を自動化。* Astra Controlを使用すると、コンテナ化されたアプリケーション用にBCDR（ビジネス継続性ディザスタリカバリ）計画を設定できます。NetApp SnapMirrorはバックエンドで使用されるため、DRワークフローの実装はすべて自動化されます。
+
+
+
+
+=== 解決策 トポロジ
+
+このセクションでは、解決策 の論理トポロジについて説明します。
+
+次の図は、OpenShift Container Platformクラスタを実行するFlexPod オンプレミス環境と、NetApp Cloud Volumes ONTAP 、Cisco Intersight、NetApp Cloud Manager SaaSプラットフォームを使用するAWS上の自己管理型OpenShift Container Platformクラスタからなる解決策 トポロジを示しています。
+
+image:flexpod-rho-cvo-image3.png["エラー：グラフィックイメージがありません"]
+
+最初のOpenShift Container PlatformクラスタはFlexPod 上にベアメタルインストールされ、2番目のOpenShift Container PlatformクラスタはFlexPod 上で実行されるVMware vSphereに導入され、3番目のOpenShift Container Platformクラスタはとして導入されます https://docs.openshift.com/container-platform/4.8/installing/installing_aws/installing-aws-private.html["プライベートクラスタ"^] 自社で管理するインフラとして、AWS上の既存の仮想プライベートクラウド（VPC）に導入できます。
+
+この解決策 では、FlexPod はサイト間VPNを介してAWSに接続されますが、直接接続の実装を使用してハイブリッドクラウドに拡張することもできます。Cisco Intersightは、FlexPod インフラストラクチャコンポーネントの管理に使用されます。
+
+この解決策 では、Astra Control Centerが、FlexPod およびAWSで実行されているOpenShift Container Platformクラスタでホストされているコンテナ化アプリケーションを管理します。FlexPod で実行されているOpenShiftベアメタルインスタンスにAstraコントロールセンターをインストールします。Astra Controlは、マスターノードのkube-APIと通信し、Kubernetesクラスタの変更を継続的に監視します。Kubernetesクラスタに追加した新しいアプリケーションは自動的に検出され、管理用に使用できるようになります。
+
+コンテナ化されたアプリケーションのPiT表現は、Astra Control Centerを使用してスナップショットとしてキャプチャできます。アプリケーションスナップショットは、スケジュールされた保護ポリシーまたはオンデマンドで開始できます。Astraがサポートしているアプリケーションの場合、スナップショットはクラッシュ整合性があります。アプリケーションスナップショットは、永続ボリューム内のアプリケーションデータのスナップショットと、そのアプリケーションに関連付けられているさまざまなKubernetesリソースのアプリケーションメタデータを構成します。
+
+アプリケーションのフルコピーバックアップは、事前定義されたバックアップスケジュールまたはオンデマンドを使用して、Astra Controlを使用して作成できます。オブジェクトストレージは、アプリケーションデータのバックアップを格納するために使用されます。NetApp ONTAP S3、NetApp StorageGRID 、および汎用のS3実装をオブジェクトストアとして使用できます。
+
+link:flexpod-rho-cvo-solution-components.html["次の例は、解決策 コンポーネントです。"]

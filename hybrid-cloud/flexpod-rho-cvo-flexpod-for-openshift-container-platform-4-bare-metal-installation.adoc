@@ -1,0 +1,34 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/flexpod-rho-cvo-flexpod-for-openshift-container-platform-4-bare-metal-installation.html 
+keywords: platform 4, openshift, bare-metal, vmware, installation 
+summary: このページでは、FlexPod for OpenShift Container Platform 4ベアメタルの論理トポロジとインストールについて説明します。 
+---
+= FlexPod for OpenShift Container Platform 4ベアメタルインストール
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:flexpod-rho-cvo-solution-components.html["前の図：解決策 コンポーネント。"]
+
+FlexPod for OpenShift Container Platform 4のベアメタル設計、導入の詳細、およびNetApp Astra Tridentのインストールと設定については、を参照してください https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_iac_redhat_openshift.html["FlexPod with OpenShift Cisco Validated Design and Deploymentガイド（CVD）"^]。このCVDでは、Ansibleを使用したFlexPod およびOpenShift Container Platformの導入について説明します。CVDには、ワーカーノード、Astra Tridentインストール、ストレージバックエンド、ストレージクラス構成の準備に関する詳細も記載されています。この構成は、Astra Control Centerの導入と構成を行うためのいくつかの前提条件です。
+
+次の図は、FlexPod 上のOpenShift Container Platform 4ベアメタルを示しています。
+
+image:flexpod-rho-cvo-image8.png["エラー：グラフィックイメージがありません"]
+
+
+
+== VMware環境に実装されたOpenShift Container Platform 4用FlexPod
+
+VMware vSphereを実行しているFlexPod にRed Hat OpenShift Container Platform 4を導入する方法については、を参照してください https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_openshift_platform_4.html["OpenShift Container Platform 4のFlexPod データセンター"^]。
+
+次の図は、vSphere上のOpenShift Container Platform 4のFlexPod を示しています。
+
+image:flexpod-rho-cvo-image9.png["エラー：グラフィックイメージがありません"]
+
+link:flexpod-rho-cvo-red-hat-openshift-on-aws.html["次の例は、AWSでRed Hat OpenShiftを実装したものです。"]

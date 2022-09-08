@@ -1245,7 +1245,6 @@
   <block id="97f9beafe8a267c8b35e2fb7235394ab" category="list-text">* Cisco Intersight Premier は、 Advantage 層で提供される機能に加えて、 Cisco UCS 全体でプライベートクラウドインフラサービス（ IaaS ）オーケストレーションを提供します。これには仮想マシン（ VM ）や物理ストレージ（ネットアップストレージ）などのサードパーティシステムも含まれます。</block>
   <block id="d4780504a816544f6e2645b57ea78a79" category="inline-link">シスコのライセンス</block>
   <block id="926dfe010cd806b1815f2e2e910d07ee" category="paragraph">さまざまなライセンスレベルでサポートされる機能の詳細については、を参照してください<block ref="8697cd039441f6238fc2562e0fa792ae" category="inline-link-rx"></block>。</block>
-  <block id="220a07bd22d8383b964d4c6d90dbe241" category="doc">Cisco Intersight と NetApp ONTAP ストレージ：クイックスタートガイド</block>
   <block id="f870dce89b1a86f562fc0615d943bfa6" category="paragraph">協力：<block ref="4d9c1ec1584e887e0af42904bd173b15" category="inline-image-macro-rx" type="image"></block></block>
   <block id="efc7d87f859f5f426ae59b13b26a5e7f" category="summary">ターゲットへの請求が完了すると、 Advantage Tier ライセンスがある場合は、ネットアップストレージウィジェット、ストレージインベントリ、および仮想化の各タブを使用できるようになります。Premier Tier ライセンスがある場合は、オーケストレーションタブを使用できます。</block>
   <block id="c093ae35c304b80ba64b56e6cd80eccf" category="doc">Cisco Intersight からネットアップストレージを監視</block>
@@ -1311,7 +1310,6 @@
   <block id="ff2e4aa830d38c99b2010a91bd562775" category="inline-link">Cisco Intersight Assist を使用してターゲットを請求します。</block>
   <block id="6bc0022874ff4b98cf45584e525e1f00" category="paragraph">Cisco Intersight Assist をインストールすると、ネットアップのストレージデバイスと仮想化デバイスを請求できます。「 * Intersight Targets * 」ページに戻り、 vCenter と NetApp Active IQ Unified Manager のターゲットを追加します。請求プロセスの詳細については、ビデオをご覧ください<block ref="30d5424c5fce71a06fbbaa3ffc76fb0e" category="inline-link-rx"></block></block>
   <block id="c27675fd33dbae852257d83ae0b40ee3" category="admonition">NetApp Active IQ Unified Manager （ AIQ UM ） API ゲートウェイが有効になっていることを確認します。</block>
-  <block id="97ff7ede8d5a11036c03fe02e9edd554" category="paragraph">「 * 設定」 &gt; 「一般」 &gt; 「機能設定 * 」の順に選択します。</block>
   <block id="94a25ce3cfde50ac05004124838a8585" category="inline-image-macro">有効な NetApp AIQ UM API ゲートウェイのスクリーンショット</block>
   <block id="ad16b87ea1c3124b9265af68c137ab53" category="paragraph"><block ref="ad16b87ea1c3124b9265af68c137ab53" category="inline-image-macro-rx" type="image"></block></block>
   <block id="5604f474d145b4043eae9c5abb20bfd2" category="paragraph">次の例は、 Cisco Intersight の NetApp AIQ UM ターゲットを請求する方法を示しています。</block>
@@ -6236,7 +6234,6 @@
   <block id="b7f6937afb2ac572e85fafcf50b151fb" category="sidebar">FlexPod Datacenter for Microsoft SQL Server 2019 および VMware vSphere 6.7 [ 設計 ]</block>
   <block id="2835677e55c267b9487bf0cd7ec57d47" category="sidebar">FlexPod Datacenter with Microsoft SQL Server 2016 and VMware vSphere 6.5 」を参照してください</block>
   <block id="5a91246f2391e8586cc13a5ae7cafc47" category="sidebar">VMware および Hyper-V で実行されている Linux VM 上の FlexPod データセンターと Microsoft SQL Server 2017 [ 設計 ]</block>
-  <block id="d90239d336ad9bbae46de5d6581486dd" category="sidebar">Cisco Intersight と NetApp ONTAP ストレージクイックスタートガイド</block>
   <block id="43f525b2ba4507a58d4e269ebf496239" category="sidebar">Microsoft アプリケーション</block>
   <block id="58bac3bd3dd08716b6abf9729763782b" category="sidebar">Microsoft Exchange 2013 、 F5 BIG-IP 、および Cisco ACI を使用した FlexPod データセンター [ 設計 ]</block>
   <block id="ed609149cd8fcd8e70769839d3ae0d24" category="sidebar">Microsoft Exchange 2013 、 F5 BIG-IP 、および Cisco ACI を使用した FlexPod データセンター [ 導入 ]</block>
@@ -6346,7 +6343,6 @@
   <block id="cbc1bce1da822fe664e5f3e591f9ff5c" category="list-text">ボリューム合計容量テーブルに追加された合計データ容量列。</block>
   <block id="b475ee88bad1c3a8e0c02734aa611a21" category="list-text">Average Volume Statistics テーブル、 Average LUN Statistics テーブル、 Average Aggregate Statistics テーブル、 Average Storage VM Statistics テーブル、および Average Node Statistics テーブルに追加されたレイテンシ、 IOPS 、およびスループットの列</block>
   <block id="5c90847404629f1a208160217f5678bb" category="admonition">上記のパフォーマンス指標は、 NetApp Active IQ Unified Manager 9.9 以降で監視されるストレージアレイでのみ使用できます。</block>
-  <block id="f639dd547fc10c6cec8e186b3a4524c8" category="paragraph">ネットアップ Rachel Lithman と Jyh Shing Chen</block>
   <block id="2dd892d3836e4f76d33d56d0c04079e2" category="summary">このセクションでは、 FlexPod および GATK のセットアップと、 Cromwell エンジン、 jar ファイル、または .GATK スクリプトを使用した GATK の実行について説明します。</block>
   <block id="97b65a4d825b764508962d3d74abfe45" category="doc">ゲノム - GATK のセットアップと実行</block>
   <block id="38dae60f2d18d1ce05ef80cec3185805" category="inline-link-macro">以前：解決策インフラのハードウェアコンポーネントとソフトウェアコンポーネント。</block>
@@ -7295,9 +7291,7 @@
   <block id="091e9fb66636892d6015097e15c3353a" category="list-text">Storage Virtual Machine のアグリゲートを編集します</block>
   <block id="fc763aee087e01aba254202f6cfd6ba9" category="admonition">新規ストレージ NAS スマートボリュームおよび新規ストレージスマート LUN タスクは、 ONTAP 9.8 以降でのみ機能します。ONTAP 9.7P1 は、現在、サポートされる最小バージョンです。</block>
   <block id="d3723866fd8ed566ec4269ff8a1cde80" category="inline-link-macro">NetApp Active IQ Unified Manager のドキュメント</block>
-  <block id="3537e24e4745c06b41a151532f5f0cd1" category="paragraph">Active IQ Unified Manager をインストールまたはアップグレードしていない場合は、インストールするかアップグレードしてください（最新バージョンを推奨します。現在 9.10P1 です）。手順については、を参照してください <block ref="b713007c96ed5cceca9ab6b5776ab58a" category="inline-link-macro-rx"></block>。</block>
   <block id="f2fe8cac791595f71f03311fed4e6b2f" category="admonition">NetApp AIQ UM ターゲットを要求すると、 Active IQ Unified Manager で管理されるすべてのクラスタが自動的にサイト間に追加されます。</block>
-  <block id="707a0e6f55c6b411d13ca40e08c31e14" category="cell">最新バージョンの NetApp Active IQ Unified Manager を推奨（現在は 9.10P1 ）</block>
   <block id="07360078de4b958f771427531bf4153f" category="summary">SM-BC を備えた FlexPod データセンターは、アクティブ / アクティブのデータセンター設計を使用して、ビジネスクリティカルなワークロードのビジネス継続性とディザスタリカバリを実現します。解決策 は通常、地理的に分散した別々の場所に導入された 2 つのデータセンターをメトロエリア内で相互接続します。NetApp SM-BC 解決策 は、同期レプリケーションを使用して、ビジネスクリティカルなデータサービスをサイト障害から保護します。解決策 では、 2 つの FlexPod 配置サイトのラウンドトリップネットワークレイテンシが 10 ミリ秒未満である必要があります。</block>
   <block id="68465e6ec95e3e079a2ce31285c5ffca" category="inline-link-macro">前のバージョン：解決策 の検証済みのシナリオ</block>
   <block id="a14aa7b4eddc474a1b6e4d9e952daca6" category="paragraph"><block ref="a14aa7b4eddc474a1b6e4d9e952daca6" category="inline-link-macro-rx"></block></block>
@@ -7922,4 +7916,516 @@
   <block id="b8a3a6101b5ada36c1e5927fd398157d" category="list-text">導入後のプロセスで、次のオプションを選択します。</block>
   <block id="05b3bc98db36aa487224a23de09ab3be" category="admonition">「Intersight Assist」を選択する場合は、続行する前にデバイスIDと請求コードをメモしておきます。</block>
   <block id="fd7b91f0228fe4adf25f7fca76314e8d" category="list-text">「* Intersight Assist *」を選択し、次の手順を実行します。</block>
+  <block id="8c8498202f001fd26ea4173271ec8a24" category="paragraph">Active IQ Unified Manager をインストールまたはアップグレードしていない場合は（最新バージョンが必要、現在は9.11 GA）にアップグレードします。手順については、を参照してください <block ref="b713007c96ed5cceca9ab6b5776ab58a" category="inline-link-macro-rx"></block>。</block>
+  <block id="8bab215794a736f6f876eac0eeb23923" category="section-title">2022年8月</block>
+  <block id="d8f8a4fb7ebbb1310ca5d01f756e92d0" category="admonition">最新リリースとの互換性を確保し、すべての機能を利用するには、NetApp Active IQ Unified Manager 9.11 GAへのアップグレードが必要です。このリリースに関連する既知の問題のリストについては、を参照してください <block ref="1e93e2dfe5ecbece98249e8c1a59713c" category="inline-xref-macro-rx"></block>。</block>
+  <block id="42bd0f13ec20ddd3964630f6646c2136" category="list-text">クラスタの使用可能容量の計算方法がSystem Managerに合わせて更新されました</block>
+  <block id="c380b3320025347a929239a0073327b2" category="list-text">クラスタの全般ページが更新され、パフォーマンスデータが表示されるまでパフォーマンス指標の概要が非表示になりました</block>
+  <block id="613a310e40c6bd822fdcfcd0eba92643" category="list-text">クラスタの全般ページUI問題 が修正され、ページがハングする場合がある</block>
+  <block id="30ffb8174b79d2e22a54dd5e500ff70f" category="list-text">CIFS共有、CIFSサービス、qtree、およびSVM SnapMirrorポリシーがバックエンドインベントリに追加されました。</block>
+  <block id="e146fa63a38e675821a4c48bf62b287d" category="list-text">Logical inventoryセクションのUIナビゲーションメニューに共有およびqtreeを追加しました</block>
+  <block id="5ca8d8157671c02d6daa94b3aea5fbeb" category="list-text">選択したStorage VMから共有をタブとして追加しました</block>
+  <block id="9cdaae7b657bf23b6c320b1cd28c4c36" category="list-text">Storage VMでCIFSが有効になっている場合に、Storage VMのGeneralタブにCIFSサービス情報が追加されました</block>
+  <block id="bd6cfb91907acb62b03084843321ec2a" category="list-text">ネットアップストレージシステムの構成の検証に使用するクラスタチェックページがベストプラクティスに準拠していることを確認できるようになりました</block>
+  <block id="558ab0bef1894a7a726109d36632d09d" category="section-title">既知の問題</block>
+  <block id="fe9b57b6a58a76519ec48d5a08f3c9b0" category="list-text">データ収集プロセス中にサイト間ストレージのインベントリデータに影響がないようにするには、サポートされていないONTAP クラスタ（ONTAP 9.7P1）をActive IQ Unified Manager （AIQUM）から削除する必要があります。</block>
+  <block id="e8c4ec43528d3a582dd7b32616a88eb9" category="list-text">要求されているすべてのターゲットで、FlexPod 統合システム相互運用性クエリーを正常に完了するには、9.11以上のAIQUMバージョンが必要です。</block>
+  <block id="b1b25033ea7463aca79f95ef822af033" category="list-text">ONTAP クラスタがFQDNを使用してAIQ -UMに追加されている場合、ストレージインベントリのチェックページは表示されません。ユーザがIPアドレスを使用してAIQ -UMにONTAP クラスタを追加する必要があります。</block>
+  <block id="914be32cb08524e05323b3adb9bc0c3f" category="paragraph">NetApp IQ Unified Managerで、* Settings &gt; General &gt; Feature Settings *の順に選択します。</block>
+  <block id="ad180dc1b01f328b8c0230d111d11d5d" category="cell">最新バージョンのNetApp Active IQ Unified Manager が必要（現在は9.11 GA）</block>
+  <block id="1f0c1e64448622e1d184d478ed9ef6d1" category="doc">『Cisco Intersight with NetApp Storage Quick Start Guide』</block>
+  <block id="e47450d255414e1f34605a681b2919e6" category="summary">このセクションでは、この解決策 に電力を供給するさまざまなコンポーネントについて説明します。</block>
+  <block id="32e0d2b797e6706a73e8146d103572c7" category="inline-link-macro">Previous ：解決策の概要を示します。</block>
+  <block id="eb2be7a91b02c0827e8e6228cd75a97f" category="paragraph"><block ref="eb2be7a91b02c0827e8e6228cd75a97f" category="inline-link-macro-rx"></block></block>
+  <block id="b13d8cee842e1d64a7a4366fac2978b4" category="paragraph">FlexPod は、仮想化ソリューションと非仮想化ソリューションの両方の統合基盤となるハードウェアとソフトウェアの定義済みセットです。FlexPod には、NetApp ONTAP ストレージ、Cisco Nexusネットワーク、Cisco MDSストレージネットワーク、Cisco Unified Computing System（Cisco UCS）が含まれています。この設計は、ネットワーク、コンピューティング、ストレージを1つのデータセンターラックに収容できる柔軟性を備えています。また、お客様のデータセンター設計に従って導入することもできます。ポート密度を使用すると、ネットワークコンポーネントは複数の構成に対応できます。</block>
+  <block id="aabd9360d69086aa78c24d087317998e" category="section-title">Astra Control の略</block>
+  <block id="b3bb152d74e902e8930652c5a4dd6041" category="paragraph">Astra Controlは、パブリッククラウドとオンプレミスの両方でホストされるクラウドネイティブアプリケーションに対して、アプリケーション対応のデータ保護サービスを提供します。Astra Controlは、Kubernetesで実行されるコンテナ化されたアプリケーションに、データ保護、ディザスタリカバリ、移行の機能を提供します。</block>
+  <block id="98f770b0af18ca763421bac22b4b6805" category="section-title">の機能</block>
+  <block id="c66fd3d61ca9e5331b05a6bd70d4a1df" category="paragraph">Astra Control は、 Kubernetes アプリケーションデータのライフサイクル管理に不可欠な機能を提供</block>
+  <block id="842f680f400de3b6ee92728ef695d366" category="list-text">永続的ストレージを自動的に管理</block>
+  <block id="a4c47a67cd13bb8c69c7dfbb777482d8" category="list-text">アプリケーションと整合性のあるオンデマンドのSnapshotとバックアップを作成</block>
+  <block id="7617bf0237311cb0ed801df52bb177cc" category="list-text">ポリシーベースのスナップショット処理とバックアップ処理を自動化</block>
+  <block id="21993e1968d08893f354bed6738af100" category="list-text">ハイブリッドクラウド環境で、アプリケーションと関連データをKubernetesクラスタから別のクラスタに移行する</block>
+  <block id="5b032bf60bb8730b0e9ecc6b50d8965e" category="list-text">同じKubernetesクラスタまたは別のKubernetesクラスタにアプリケーションをクローニングする</block>
+  <block id="b596eced9c4bc9f16313b3284fb13e58" category="list-text">アプリケーション保護ステータスを視覚化します</block>
+  <block id="6df472bda93f54acbbf206fa2d41e28f" category="list-text">グラフィカルユーザインターフェイスとすべての保護ワークフローを社内ツールから実装するためのREST APIの完全なリストを提供します。</block>
+  <block id="b59f8a067fecf2cfbbc4d3b401d296e0" category="paragraph">Astra Controlを使用すると、Kubernetesクラスタで作成された関連リソースの情報を含む、コンテナ化されたアプリケーションを一元的に可視化できます。すべてのクラスタ、すべてのアプリケーション、すべてのクラウド、またはすべてのデータセンターを1つのポータルで表示できます。オンプレミスまたはパブリッククラウドのすべての環境でAstra Control APIを使用して、データ管理ワークフローを実装できます。</block>
+  <block id="ee47d1958f4c072c5167bf6b0f0a3f51" category="paragraph">次の図は、Astra Controlの機能を示しています。</block>
+  <block id="1a6732bb27af95bdf03fb9cb071efccb" category="paragraph"><block ref="1a6732bb27af95bdf03fb9cb071efccb" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="71bf9ca6a7b88a4ef85430ead5e3b166" category="section-title">Astra Control消費モデル</block>
+  <block id="f243566699578a9ff810689c2063fea0" category="paragraph">Astra Controlには、次の2つの消費モデルがあります。</block>
+  <block id="c21e5f421922cf6741556e0df776fc32" category="list-text">* Astra Control Service。ネットアップがホストするフルマネージドサービス。Google Kubernetes Engine（GKE）、Azure Kubernetes Service（AKS）でKubernetesクラスタのアプリケーション対応データ管理を実現します。</block>
+  <block id="a186d51e6c0fdf7cf244ebe443eb218a" category="list-text">* Astra Control Center。*オンプレミスおよびハイブリッドクラウド環境で実行されるKubernetesクラスタのアプリケーション対応データ管理を提供する、自己管理ソフトウェアです。</block>
+  <block id="da218a5bb418a0aa8a29cea5846e0dfc" category="paragraph">このテクニカルレポートでは、Kubernetesで実行されるクラウドネイティブアプリケーションを管理するために、Astra Control Centerを活用しています。</block>
+  <block id="fa05d0c0435a45f7abc87843c7a0289a" category="paragraph">次の図は、Astra Controlアーキテクチャを示しています。</block>
+  <block id="f14aca58e9bc1cec3baa80ff8a0b431c" category="paragraph"><block ref="f14aca58e9bc1cec3baa80ff8a0b431c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="086e6c16e3fe8e13c336612ef636aa02" category="section-title">Astra Trident</block>
+  <block id="e7862e4a1b1c0e48518ef7f2dbbb569b" category="inline-link">CSI（Container Storage Interface）</block>
+  <block id="e9e07505524402c434cb37baf0452959" category="paragraph">Astra Tridentは、コンテナやKubernetesディストリビューション向けの、完全にサポートされているオープンソースのストレージオーケストレーションツールです。コンテナ化されたアプリケーションの永続性に対する要求を、業界標準のインターフェイス（など）を使用して満たすことができるように、最初から設計されています<block ref="11b176de1fd0554cff9c8a0e426a44c0" category="inline-link-rx"></block>。Astra Tridentを使用すると、マイクロサービスやコンテナ化されたアプリケーションを利用して、ネットアップのストレージシステムポートフォリオが提供するエンタープライズクラスのストレージサービスを活用できます。</block>
+  <block id="e9fe0fa2a72714d675e5bd084dea14bc" category="inline-link">Astra Tridentのドキュメント</block>
+  <block id="d0cc985f877a5098e0a069b8c9928ada" category="paragraph">Kubernetesクラスタにポッドとして導入されるAstra Tridentは、Kubernetesワークロードに動的なストレージオーケストレーションサービスを提供します。コンテナ化されたアプリケーションは、NetApp ONTAP （NetApp AFF 、NetApp FAS 、NetApp ONTAP Select 、Cloudなど）を含むネットアップの幅広いポートフォリオから、永続的ストレージをすばやく簡単に消費できます。 さらに、Amazon FSX for NetApp ONTAP ）、NetApp Element ソフトウェア（NetApp SolidFire ）、Azure NetApp Files サービス、Google Cloud上のクラウドボリュームサービス、AWS上のクラウドボリュームサービスも利用できます。FlexPod 環境では、Astra Tridentを使用して、ネットアップのFlexVol ボリュームをベースとするコンテナや、ONTAP AFF やFAS システム、Cloud Volumes ONTAP などのストレージプラットフォームでホストされるLUNに対応するコンテナの永続的ボリュームを動的にプロビジョニングおよび管理できます。Tridentは、Astra Controlが提供するアプリケーション保護スキームの実装においても重要な役割を果たします。Astra Tridentの詳細については、を参照してください<block ref="a4e84d4448e67c302cfd652fac18bef7" category="inline-link-rx"></block></block>
+  <block id="6c5e678cf147ef415c2e584ba561bce7" category="section-title">ストレージバックエンド</block>
+  <block id="0758e335e69d93b347e2ccbb437ef2e3" category="paragraph">Astra Tridentを使用するには、サポートされているストレージバックエンドが必要です。Tridentバックエンドは、Tridentとストレージシステムの関係を定義します。Tridentは、そのストレージシステムとの通信方法や、Tridentがそのシステムからボリュームをプロビジョニングする方法を解説します。Tridentは、あるストレージクラスが定義した要件を満たしたストレージプールをバックエンドから自動的に提供します。</block>
+  <block id="264d52a2ee63227a064803bbca685d76" category="list-text">ONTAP AFF と FAS のストレージバックエンド。ONTAP は、ストレージソフトウェアおよびハードウェアプラットフォームとして、コアストレージサービス、複数のストレージアクセスプロトコルのサポート、およびネットアップのSnapshotコピーやミラーリングなどのストレージ管理機能を提供します。</block>
+  <block id="570fa99ce4fbf8deb198b97a6931d63a" category="list-text">Cloud Volumes ONTAP ストレージバックエンド</block>
+  <block id="8035d5d39b2b48f6ec1a3133b688513c" category="inline-link">Astra データストア</block>
+  <block id="669f585974ae8a7aad2324c8ea7a3c98" category="list-text"><block ref="5b5d917f19a2849fca0bcf9ca6a27dec" category="inline-link-rx"></block> ストレージバックエンド</block>
+  <block id="0f0b99ea2f70cd363c2c6a279f74e760" category="section-title">NetApp Cloud Volumes ONTAP の略</block>
+  <block id="17c646c0f720b8a05c6406960057d084" category="paragraph">NetApp Cloud Volumes ONTAP は、ファイルワークロードとブロックワークロードに高度なデータ管理機能を提供するSoftware-Defined Storageです。Cloud Volumes ONTAP を使用すると、データ保護、セキュリティ、コンプライアンスを強化しながら、クラウドストレージのコストを最適化し、アプリケーションのパフォーマンスを向上させることができます。</block>
+  <block id="950a30dbe6160d51c93dd8570573b0b1" category="paragraph">主なメリットは次のとおりです。</block>
+  <block id="18b6826f1d119f55347e1db9badac2c3" category="list-text">組み込みのデータ重複排除、データ圧縮、シンプロビジョニング、クローニングを活用して、ストレージコストを最小限に抑えます。</block>
+  <block id="61c29f4de87ac3f0e40f3b743f97c61a" category="list-text">クラウド環境で障害が発生した場合でも、エンタープライズクラスの信頼性と継続的な運用を確保できます。</block>
+  <block id="dfa5b6bd94a406fe54edbce47e68d496" category="list-text">Cloud Volumes ONTAP は、業界をリードするネットアップのレプリケーションテクノロジであるSnapMirrorを活用して、オンプレミスのデータをクラウドにレプリケートします。これにより、複数のユースケースでセカンダリコピーを簡単に利用できます。</block>
+  <block id="54eb3027a5a5c6efd7867ee34d94ef85" category="list-text">また、 Cloud Volumes ONTAP は Cloud Backup Service との統合により、保護のためのバックアップとリストア機能、およびクラウドデータの長期アーカイブ機能を提供します。</block>
+  <block id="012f898c6125c28106c72227bcb70637" category="list-text">アプリケーションをオフラインにすることなく、ハイパフォーマンスとローパフォーマンスのストレージプールをオンデマンドで切り替えます。</block>
+  <block id="9a06d9749bd65ba69b5840223871c79b" category="list-text">NetApp SnapCenter を使用してSnapshotコピーの整合性を確保します。</block>
+  <block id="286994e9e1269d98948cb886c01ca156" category="list-text">Cloud Volumes ONTAP は、データ暗号化をサポートし、ウィルスやランサムウェアからの保護を提供します。</block>
+  <block id="263abbafbe140ca10e57e519da88e057" category="list-text">クラウドデータセンスとの統合により、データコンテキストを把握し、機密データを識別できます。</block>
+  <block id="8ee8d65142a1b5ef6e397b75587b4e61" category="section-title">Cloud Central にアクセスできます</block>
+  <block id="052efd24090fd11c3d6dfca62d719cf1" category="inline-link">Cloud Centralにアクセスできます。</block>
+  <block id="51b94a4b2b8a038f10a8d101a622c967" category="paragraph">Cloud Centralは、ネットアップのクラウドデータサービスにアクセスして管理するための一元的な場所を提供します。これらのサービスにより、重要なアプリケーションのクラウドでの実行、自動化されたDRサイトの作成、データのバックアップ、複数のクラウド間でのデータの効果的な移行と制御が可能になります。詳細については、を参照してください<block ref="4f07a0cbf03fd0617f920e5ca4c0c63b" category="inline-link-rx"></block></block>
+  <block id="315474a8ef79b74899073fc979f12da4" category="section-title">クラウドマネージャ</block>
+  <block id="027964ddd1801b04e51766bf73b36910" category="paragraph">Cloud Managerは、エンタープライズクラスのSaaSベースの管理プラットフォームです。ITエキスパートとクラウドアーキテクトは、ネットアップのクラウドソリューションを使用して、ハイブリッドマルチクラウドインフラを一元管理できます。オンプレミスとクラウドのストレージを表示および管理する一元化されたシステムを提供し、ハイブリッドクラウド、複数のクラウドプロバイダ、アカウントをサポートします。詳細については、を参照してください<block ref="78eaae3c42f31156debba144f4ad7dca" category="inline-link-rx"></block>。</block>
+  <block id="edf21d7ecb364e8210ddd3dfaeca6fbf" category="section-title">コネクタ</block>
+  <block id="2c6eb8870c8b80a0bddf6fe220536ece" category="paragraph">Connectorは、Cloud Managerがパブリッククラウド環境内のリソースとプロセスを管理できるようにするインスタンスです。Cloud Managerのさまざまな機能を使用するには、コネクタが必要です。コネクタは、クラウドまたはオンプレミスネットワークに導入できます。</block>
+  <block id="b5da69e8a6f5548f4b32964f4c4b362d" category="paragraph">Connectorは次の場所でサポートされます。</block>
+  <block id="4847e034bb0a55fcbc8a3380d6a3ab80" category="list-text">AWS</block>
+  <block id="1668ca1bd914c1d847f23b491319ac91" category="list-text">Microsoft Azure</block>
+  <block id="56ef2682280ac110060b881925a87b80" category="list-text">Google Cloud</block>
+  <block id="695e0a47c56539eb9bcf6290d1c797d8" category="list-text">オンプレミス</block>
+  <block id="9a04c053eaff60b85a2cae86b2356445" category="inline-link">リンクをクリックしてください</block>
+  <block id="bf991f37b2864ddc62c54178aa817020" category="paragraph">コネクタの詳細については、を参照してください<block ref="83c4b85d01cddc8809f4a9cd744295ca" category="inline-link-rx"></block></block>
+  <block id="f3f740b379cfba7b308b18548a38a0b8" category="paragraph">ネットアップのクラウドインフラ監視ツールであるCloud Insights を使用すると、Astra Control Centerで管理されるKubernetesクラスタのパフォーマンスと利用率を監視できます。Cloud Insights ：ストレージ使用率とワークロードの相関関係を示します。Cloud Insights 接続を Astra コントロールセンターで有効にすると、テレメータの情報が Astra コントロールセンターの UI ページに表示されます。</block>
+  <block id="4d2abceee90713acea40a3f24ce8e1fe" category="paragraph">NetApp Active IQ Unified Manager では、デザインが一新され、直感的に操作できるインターフェイスからONTAP ストレージクラスタを監視できます。コミュニティの情報やAI分析から得た情報を活用できます。運用、パフォーマンス、プロアクティブな分析情報を提供し、ストレージ環境と仮想マシン（VM）で実行される環境を包括的に分析します。ストレージインフラで問題 が発生すると、Unified Managerから問題 の詳細情報を通知して、ルート原因 の特定に役立てることができます。VMダッシュボードにはVMのパフォーマンス統計が表示されるため、VMware vSphereホストからネットワーク経由で最後にストレージへのI/Oパス全体を調査できます。一部のイベントには、問題 を修正するための対応策も用意されています。問題が発生したときにEメールやSNMPトラップで通知されるように、イベントにカスタムアラートを設定できます。Active IQ Unified Manager を使用すると、容量や使用状況の傾向を予測して問題が発生する前にプロアクティブに対処することができるため、長期的な問題につながる短期的な事後対処策を実施する必要がなくなり、ユーザのストレージ要件に合わせて計画を立てることができます。</block>
+  <block id="eb305742decf50535e6fd77239f604b7" category="section-title">Cisco Intersightの</block>
+  <block id="f9eb988a1a7d2a12e6669f2b10bae221" category="paragraph">Cisco Intersightは、従来のアプリケーションやクラウドネイティブなインフラに向けて、インテリジェントな自動化、オブザーバビリティ、最適化を実現するSaaSプラットフォームです。このプラットフォームは、ITチームの変化を促進し、ハイブリッドクラウド向けに設計された運用モデルを提供します。</block>
+  <block id="9deac9d4663ff0bab9a7e0f0a6bfcb70" category="paragraph">Cisco Intersightには、次のようなメリットがあります。</block>
+  <block id="b35cf9b4c3059c69c5e99830469ef014" category="list-text">*迅速な提供。*俊敏性に優れたソフトウェア開発モデルにより、クラウドまたはお客様のデータセンターからサービスとして提供され、頻繁な更新と継続的な技術革新を実現します。このようにして、お客様は基幹業務の提供を加速することに集中できます。</block>
+  <block id="b2fd8ed8439a0be7861c50572a9d6a8d" category="list-text">*運用の簡素化。*共通のインベントリ、認証、APIを備えた単一のセキュアなSaaS提供ツールを使用して、スタック全体とすべての場所で作業し、チーム間のサイロを排除し、運用を簡素化します。オンプレミスの物理サーバやハイパーバイザーの管理からVM、Kubernetes、サーバレス、自動化、 オンプレミスとパブリッククラウドの両方にわたって最適化とコスト管理を実現</block>
+  <block id="f0a289280071311ecbfa5b7165cad617" category="list-text">*継続的な最適化。* Cisco Intersightが提供するインテリジェンスを、Cisco TACだけでなくすべてのレイヤで使用して、環境を継続的に最適化します。このインテリジェンスは、推奨される自動化可能なアクションに変換されるため、ワークロードの移動や物理サーバの稼働状態の監視からKubernetesクラスタの自動サイジングまで、あらゆる変更にリアルタイムで対応できます。また、コスト削減のために、作業中のパブリッククラウドが推奨されます。</block>
+  <block id="c7147476332f1e44f269416f51c15e19" category="paragraph">Cisco Intersightには、UCSM Managed Mode（UMM）とIntersight Managed Mode（IMM）という2つの管理操作モードがあります。ファブリックインターコネクトの初期セットアップ中に、ファブリック接続Cisco UCSシステムのネイティブUmmまたはIMMを選択できます。この解決策 では、ネイティブUmmが使用されます。</block>
+  <block id="0c73bb7902b2e7c97ea82b754aff5f99" category="paragraph">次の図は、Cisco Intersightのダッシュボードを示しています。</block>
+  <block id="468f3a1a6f7595918821e9176af66e32" category="paragraph"><block ref="468f3a1a6f7595918821e9176af66e32" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="fd89bb4228981d3b22187eb451421cd6" category="section-title">Red Hat OpenShift Container Platform</block>
+  <block id="c523c0cdd3813f2fcf747b074f1e4e38" category="paragraph">Red Hat OpenShift Container Platformは、CRI-OとKubernetesを統合し、これらのサービスを管理するためのAPIとWebインターフェイスを提供するコンテナアプリケーションプラットフォームです。CRI-Oは、Kubernetes Container Runtime Interface（CRI）を実装したもので、Open Container Initiative（OCI）互換のランタイムを使用した実行を可能にします。Kubernetesの実行時にDockerを使用する代わりに、軽量なソリューションです。</block>
+  <block id="6d2baea0b33b07f63dfdb92938fce74e" category="paragraph">OpenShift Container Platformにより、お客様はコンテナを作成および管理できます。コンテナは、オペレーティングシステムや基盤のインフラとは無関係に、それぞれの環境で実行されるスタンドアロンプロセスです。OpenShift Container Platformは、コンテナベースのアプリケーションの開発、導入、管理を支援します。アプリケーションをオンデマンドで作成、変更、および導入できるセルフサービスプラットフォームを提供し、開発とリリースのライフサイクルを短縮します。OpenShift Container Platformには、より小規模で分離されたユニットで構成されるマイクロサービスベースのアーキテクチャがあり、連携して機能します。Kubernetesクラスタ上で実行され、信頼性の高いクラスタキーバリュー型データストアであるetcdに格納されているオブジェクトに関するデータが含まれます。</block>
+  <block id="acc70e57eb6b97bc301539cb38d1966d" category="paragraph">次の図は、Red Hat OpenShift Containerプラットフォームの概要を示しています。</block>
+  <block id="0c7a9e2f08624e7b87913ecf9286d71e" category="paragraph"><block ref="0c7a9e2f08624e7b87913ecf9286d71e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a89cbdf63053889346eff5b606980423" category="section-title">Kubernetesインフラ</block>
+  <block id="529e287e2f207422d4270595b5a5aa04" category="paragraph">Kubernetesは、OpenShift Container Platform内で、コンテナ化されたアプリケーションを一連のCRI-Oランタイムホスト全体で管理し、導入、メンテナンス、アプリケーション拡張のためのメカニズムを提供します。CRI-Oサービスは、コンテナ化されたアプリケーションをインスタンス化し、実行します。</block>
+  <block id="6066bcf83f07d47fe995bf7112f82a47" category="paragraph">Kubernetesクラスタは、1つ以上のマスターノードと一連のワーカーノードで構成されます。この解決策 設計には、ハードウェアのハイアベイラビリティ（HA）機能とソフトウェアスタックが含まれています。Kubernetesクラスタは、3つのマスターノードと最低2つのワーカーノードでHAモードで実行されるように設計されており、クラスタに単一点障害がないようにします。</block>
+  <block id="380d4d789a03fedcd1c1c9c2d39e6e5c" category="section-title">Red HatコアOS</block>
+  <block id="4b0daa653b908f2e95efbf63345f631b" category="paragraph">OpenShift Container Platformは、Red Hat Enterprise Linux CoreOS（RHCOS）を使用します。RHCOSは、CoreOSとRed Hat Atomic Host OSの優れた機能を組み合わせたコンテナ指向のオペレーティングシステムです。RHCOSは、コンテナ化されたアプリケーションをOpenShift Container Platformから実行できるように特別に設計されており、新しいツールと連携して、迅速なインストール、オペレータベースの管理、簡単なアップグレードを実現します。</block>
+  <block id="a744bb3e6a86a7d585241c661dab35b4" category="paragraph">RHCOSには次の機能があります。</block>
+  <block id="6e9235741135970ca611d4fc2636336b" category="list-text">イグニションは、最初にマシンを起動して構成する際に、OpenShift Container Platformが最初のブートシステム構成として使用するものです。</block>
+  <block id="b28aadf6b337cb42536413edfc6b155c" category="list-text">Kubernetesネイティブのコンテナランタイム実装であるCRI-Oは、オペレーティングシステムと緊密に統合して、Kubernetes環境を効率的かつ最適化します。CRI-Oには、コンテナの実行、停止、再起動を行う機能があります。これは、OpenShift Container Platform 3で使用されていたDocker Container Engineに完全に代わるものです。</block>
+  <block id="40955f5c2ef6e950fbfa487455a96e02" category="list-text">Kubernetesの主要ノードエージェントであるKubeletはコンテナの起動と監視を担当しています。</block>
+  <block id="ed6822c6f8960bb32c4ed03a66869011" category="section-title">VMware vSphere 7.0</block>
+  <block id="9dd822b8b4981c38b7475545d846d8be" category="paragraph">VMware vSphereは、大量のインフラ（CPU、ストレージ、ネットワークなどのリソース）をシームレスで汎用性に優れた動的な運用環境として包括的に管理する仮想化プラットフォームです。個々のマシンを管理する従来のオペレーティングシステムとは異なり、VMware vSphereはデータセンター全体のインフラストラクチャを集約して、必要なアプリケーションに迅速かつ動的に割り当てられるリソースを備えた単一の強力なサーバを作成します。</block>
+  <block id="1a57f6c59b4f815aab8aa1b477096309" category="paragraph">詳細については、を参照してください<block ref="132550c60ca513f9467cdf8b8e5be374" category="inline-link-rx"></block>。</block>
+  <block id="b6182361fe83a7b5550df8ce4e673022" category="section-title">VMware vSphere vCenterの場合</block>
+  <block id="eae141b11103b82e8d72fd508dad3016" category="paragraph">VMware vCenter Serverでは、1つのコンソールからすべてのホストとVMを統合的に管理でき、クラスタ、ホスト、およびVMのパフォーマンス監視を集約できます。VMware vCenter Serverを使用すると、管理者は、コンピューティングクラスタ、ホスト、VM、ストレージ、ゲストOS、 仮想インフラストラクチャのその他の重要なコンポーネントVMware vCenterは、VMware vSphere環境で使用できる豊富な機能を管理します。</block>
+  <block id="1257ecda4a37b70ec7542079b2f9e13c" category="section-title">ハードウェアおよびソフトウェアのリビジョン</block>
+  <block id="6e306cef9d67c5a67ca5930c4eea0af7" category="inline-link">Cisco UCSハードウェア互換性リスト。</block>
+  <block id="472426c86933d812f902d54eed00190c" category="paragraph">この解決策 は、で定義されている、サポートされているバージョンのソフトウェア、ファームウェア、およびハードウェアを実行している任意のFlexPod 環境に拡張できます<block ref="f0e87d28a2a99025f9c80d8d1bdd0531" category="inline-link-rx"></block> および<block ref="3732666ee2ac4a00c2a6760c99004ecc" category="inline-link-rx"></block> OpenShiftクラスタは、VMware vSphereだけでなくベアメタル方式でFlexPod にインストールされます。</block>
+  <block id="4f5740fc0abe61afc192bb911341a97c" category="paragraph">複数のOpenShift（k8s）クラスタを管理するために必要なのはAstra Control Centerの1つのインスタンスだけです。各OpenShiftクラスタにはTrident CSIがインストールされています。Astra Control Centerは、このようなOpenShiftクラスタのいずれにもインストールできます。この解決策 では、OpenShiftベアメタルクラスタにAstraコントロールセンターをインストールします。</block>
+  <block id="b0032451b6f7b8e5e412cb5f82a4da0a" category="paragraph">次の表に、OpenShift用のFlexPod ハードウェアおよびソフトウェアのリビジョンを示します。</block>
+  <block id="deb10517653c255364175796ace3553f" category="cell">プロダクト</block>
+  <block id="2217a73f220cd96bb2bc674cd4d8da67" category="cell">Cisco UCSファブリックインターコネクト6454</block>
+  <block id="b9faa673913f79bcfe8fc377629ab36b" category="cell">4.1（3c）</block>
+  <block id="e2fea0bd3c5a191ab48c9c90fd4c4c8b" category="cell">Cisco UCS B200 M5サーバ</block>
+  <block id="3c16dc6e4994c02025537635379f5c21" category="cell">Cisco Nexus 9336C-FX2 NX-OS</block>
+  <block id="71ef8bda0f6a317641f393b177a247cd" category="cell">9.3（8）</block>
+  <block id="11efa46f237387b311e6ed482756ac49" category="cell">9.11.1</block>
+  <block id="12c17259bf3f3b36e970c9e3abbc6b43" category="cell">ネットアップアストラコントロールセンター</block>
+  <block id="63355c54bd7e8ff73915da41610ec6f7" category="cell">22.04.0</block>
+  <block id="3dda76b2029bed78e1e8d507a008c774" category="cell">NetApp Astra Trident CSIプラグイン</block>
+  <block id="13bcbd2102f5a2f8d8f403a286a53f91" category="cell">9.11</block>
+  <block id="2654ea741947ea67de78ffec09b5d13f" category="cell">vSphere ESXiの場合</block>
+  <block id="ba27499f2190dd5e4b91917cb1a34016" category="cell">7.0（U2）</block>
+  <block id="09c799887b55f536c22e1344ff72e21f" category="cell">VMware vCenter Applianceの略</block>
+  <block id="3dab94a3335186b7fc7a7769729e2d1f" category="cell">7.0 U2b</block>
+  <block id="fab735c206753ca8f75f495b50e8bd51" category="cell">Cisco Intersight Assist仮想アプライアンス</block>
+  <block id="8d35abcbb3ffaa92e615d991eeb769e8" category="cell">1.0.9-342</block>
+  <block id="4ef2dcb544f4c7e2a832081732cf434c" category="cell">OpenShift Container Platform</block>
+  <block id="622fbbcf746903b903f2af5462c8550a" category="cell">4.9</block>
+  <block id="1e9a06ef5944b218017c8b58b400327d" category="cell">OpenShift Container Platformマスターノード</block>
+  <block id="7e97f647a14224330e23fe5a1697b534" category="cell">RHCOS 4.9</block>
+  <block id="2fd8da0a76b79da3083d61519e8d17c0" category="cell">OpenShift Container Platform Workerノード</block>
+  <block id="7860ea8f92b7efc5370436b2ac16d19c" category="paragraph">次の表に、AWS上のOpenShift用のソフトウェアバージョンを示します。</block>
+  <block id="19b4d1bdb41036cb2e66f3253d60f778" category="cell">マスターインスタンスタイプ：m5.xlarge</block>
+  <block id="274b68192b056e268f128ff63bfcd4a4" category="cell">該当なし</block>
+  <block id="30c42cc47da9aa255f6e7cc05b4846b4" category="cell">ワーカーインスタンスタイプ：m5.large</block>
+  <block id="6adc53a1c7bfdc84db888d91e67f6eb0" category="cell">Virtual Private Cloud Transit Gatewayの略</block>
+  <block id="e6b251b0056db702f87168d58f035d17" category="inline-link-macro">次の例：FlexPod for OpenShift Container Platform 4ベアメタルインストール</block>
+  <block id="8e0821bded9c5bf56c2be43d457cdce6" category="paragraph"><block ref="8e0821bded9c5bf56c2be43d457cdce6" category="inline-link-macro-rx"></block></block>
+  <block id="dc6c419f6f79fe4f1d72690da2e59b43" category="summary">Astraでは、アプリケーションと整合性のあるフルバックアップを作成できます。このバックアップを使用すると、アプリケーションのデータを使用して、オンプレミスのデータセンターやパブリッククラウドで実行されている別のKubernetesクラスタにリストアできます。アプリケーションのリカバリが正常に行われるかどうかを検証するには、FlexPod システムで実行されているアプリケーションのオンプレミス障害をシミュレートし、リモートバックアップを使用してクラウドで実行されているKubernetesクラスタにアプリケーションをリストアします。</block>
+  <block id="5867b8e6979e602059ba59d6e3736a5c" category="doc">リモートバックアップによるアプリケーションのリカバリ</block>
+  <block id="75ad3e486123e096429222bc734835bc" category="inline-link-macro">Previous：解決策 の検証の概要を示します。</block>
+  <block id="c9fc3dd44194481a892604c99ce7ce0b" category="paragraph"><block ref="c9fc3dd44194481a892604c99ce7ce0b" category="inline-link-macro-rx"></block></block>
+  <block id="3a55656bd3f20ee729beef62812f5d02" category="paragraph">Astraでは、アプリケーションと整合性のあるフルバックアップを作成できます。このバックアップを使用すると、アプリケーションのデータを使用して、オンプレミスのデータセンターやパブリッククラウドで実行されている別のKubernetesクラスタにリストアできます。</block>
+  <block id="428dec8227d7428fa29d0b2f4133cf53" category="paragraph">アプリケーションのリカバリが正常に行われるかどうかを検証するには、FlexPod システムで実行されているアプリケーションのオンプレミス障害をシミュレートし、リモートバックアップを使用してクラウドで実行されているKubernetesクラスタにアプリケーションをリストアします。</block>
+  <block id="49fcad8238c8f88a4434a2cd29a1e24e" category="inline-link">Argo CD</block>
+  <block id="8d9015d7f31b70763327a70890a3bd01" category="paragraph">サンプルアプリケーションは、データベースにMySQLを使用する価格表アプリケーションです。導入を自動化するために、を使用しました<block ref="ad8e3f3de012bf7c1ae965f01e3093d2" category="inline-link-rx"></block> ツール。Argo CDは、Kubernetes向けの宣言型、GitOps、継続的デリバリーツールです。</block>
+  <block id="aeca73786ef87eac84d8a2d59e9e7e52" category="list-text">オンプレミスOpenShiftクラスタにログインし、「argocd」という名前の新しいプロジェクトを作成します。</block>
+  <block id="eff5a8116e0b1c6747475076c185f1a9" category="paragraph"><block ref="eff5a8116e0b1c6747475076c185f1a9" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="bf096200a4e51e0a847219c159ff94db" category="list-text">OperatorHubで'argocd'を検索し'Argo CD operatorを選択します</block>
+  <block id="6c27b5c03610a3ee7694d74a1dd15973" category="paragraph"><block ref="6c27b5c03610a3ee7694d74a1dd15973" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="bbfe72b9bf15eafac1d4c55a94c0cf93" category="list-text">「argocd」名前空間に演算子をインストールします。</block>
+  <block id="06c999261033f3499d5be9d341a16a59" category="paragraph"><block ref="06c999261033f3499d5be9d341a16a59" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="18c3da749f2569aed37b9dc111c30635" category="list-text">オペレータに移動し、Create ArgCDをクリックします。</block>
+  <block id="6a65fdd1ff107a47825be2df0c895ed8" category="paragraph"><block ref="6a65fdd1ff107a47825be2df0c895ed8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e3eb16d925a9a797f9c5dc06bc16c2b2" category="list-text">Argo CDインスタンスを'argocd'プロジェクトに配備するには'名前を指定してCreateをクリックします</block>
+  <block id="3c6486785093e7ea0e922a7ed901c1b0" category="paragraph"><block ref="3c6486785093e7ea0e922a7ed901c1b0" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7fdd09a389647d4abe31fa53d00827a1" category="list-text">Argo CDにログインするには、デフォルトのユーザはadminで、パスワードは「argocd -NetApp-cluster」という名前のシークレットファイルに含まれています。</block>
+  <block id="85c4294dc7cfa845c7a19913483f4633" category="paragraph"><block ref="85c4294dc7cfa845c7a19913483f4633" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="cdc1b26a5fdad11390c63e209eeee0b9" category="list-text">サイド・メニューから'ルート&gt;ロケーションを選択し'argocd'ルートのURLをクリックしますユーザ名とパスワードを入力します。</block>
+  <block id="75e4e2e264f2d5c258b3162939b388c2" category="paragraph"><block ref="75e4e2e264f2d5c258b3162939b388c2" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ff827f48f751fb860a0923ade46b20c6" category="list-text">CLIを使用して、Argo CDにオンプレミスOpenShiftクラスタを追加します。</block>
+  <block id="ef08a0a136ab22e4e5fb4f1df926d525" category="list-text">ArgodCD UIで、[新しいアプリ]をクリックし、アプリ名とコードリポジトリの詳細を入力します。</block>
+  <block id="b5637435fca8339f6fb0c48c7a7e543f" category="paragraph"><block ref="b5637435fca8339f6fb0c48c7a7e543f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4d5abe3d84025e992ddc2be4cf12d65d" category="list-text">ネームスペースとともにアプリケーションを導入するOpenShiftクラスタを入力します。</block>
+  <block id="7f7b19a5851bee1fc93338962b437664" category="paragraph"><block ref="7f7b19a5851bee1fc93338962b437664" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="09527a7f5f469605a1087d89c6abc896" category="list-text">オンプレミスOpenShiftクラスタにアプリを導入するには、[同期]をクリックします。</block>
+  <block id="d241ebf51a2cd6f60adb312f8c0bcffc" category="paragraph"><block ref="d241ebf51a2cd6f60adb312f8c0bcffc" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="cee74bcd00d7e1a1c83b9a074c4cf5ff" category="list-text">OpenShift Container Platformコンソールで、プロジェクト価格表に移動し、ストレージでPVCの名前とサイズを確認します。</block>
+  <block id="36693d6826be06f0f575f1c5a552e48b" category="paragraph"><block ref="36693d6826be06f0f575f1c5a552e48b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6fac36b94adad2d1fa2dba595bad0e21" category="list-text">System Managerにログインし、PVCを確認します。</block>
+  <block id="085db6f4e43229a4937a8f6f74368bcf" category="paragraph"><block ref="085db6f4e43229a4937a8f6f74368bcf" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8c8d1c0bdbea6391f8afe3f0e08332c9" category="list-text">ポッドが実行されたら、サイドメニューからネットワーキング／ルートを選択し、「場所」の下のURLをクリックします。</block>
+  <block id="2635e73b9158e5dad91d3b4cd686557b" category="paragraph"><block ref="2635e73b9158e5dad91d3b4cd686557b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ab2342ea51dfdbf938a9639c3957fead" category="list-text">価格表アプリのホームページが表示されます。</block>
+  <block id="ef84c4f9738c5adac3ce6a47c2b678af" category="paragraph"><block ref="ef84c4f9738c5adac3ce6a47c2b678af" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9c90c8d476f89a2592fe8bb154fa5bdb" category="list-text">Webページにレコードをいくつか作成します。</block>
+  <block id="b2f24ecf5018cf7c1d198eb427f0b555" category="paragraph"><block ref="b2f24ecf5018cf7c1d198eb427f0b555" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="1f5cb6063e8d37aa54e5face78f3f4ff" category="list-text">アプリケーションはAstra Control Centerで検出されます。アプリを管理するには、[アプリケーション]&gt;[検出済み]に移動し、価格表アプリを選択して、[アクション]の[アプリケーションの管理]をクリックします。</block>
+  <block id="22dbf5b3b52dcc520d3543a1489968f8" category="paragraph"><block ref="22dbf5b3b52dcc520d3543a1489968f8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="cebda398afecf245bb7b2b57e8fd5e18" category="list-text">価格表アプリをクリックし、[データ保護]を選択します。この時点では、Snapshotやバックアップは作成されていません。スナップショットの作成をクリックして、オンデマンドスナップショットを作成します。</block>
+  <block id="c00e4f4728913157eccc688942a1eaf2" category="paragraph"><block ref="c00e4f4728913157eccc688942a1eaf2" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="bc21a3456aa7f09faeede37871be4e1e" category="admonition">NetApp Astra Control Centerは、オンデマンドおよびスケジュールされたスナップショットとバックアップの両方をサポートします。</block>
+  <block id="122adc20c5c62c1195ce98c86558837a" category="list-text">スナップショットが作成され、状態が正常になったら、そのスナップショットを使用してリモートバックアップを作成します。このバックアップはS3バケットに格納されます。</block>
+  <block id="752463e78378617e06d61158adcb9973" category="paragraph"><block ref="752463e78378617e06d61158adcb9973" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7b9739e6c9c96cd10e3e37d1b0a4d64b" category="list-text">AWS S3バケットを選択してバックアップ処理を開始します。</block>
+  <block id="5cbf3c161960206cad6fe866343c076f" category="paragraph"><block ref="5cbf3c161960206cad6fe866343c076f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8b40db2762fd24bd5746199d1d6446d7" category="list-text">バックアップ処理では、AWS S3バケットに複数のオブジェクトを含むフォルダを作成する必要があります。</block>
+  <block id="168e1662fce955a4ef3edb74d712c560" category="paragraph"><block ref="168e1662fce955a4ef3edb74d712c560" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6ca458f6ce2755db56d244b35c297646" category="list-text">リモートバックアップが完了したら、PVの元のボリュームをホストするStorage Virtual Machine（SVM）を停止して、オンプレミスでの災害をシミュレートします。</block>
+  <block id="8c4b2b38355eec3a8fcef294468b3430" category="paragraph"><block ref="8c4b2b38355eec3a8fcef294468b3430" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f1d50e4ec222224148f01316149332a2" category="list-text">Webページを更新してシステム停止を確認します。Webページは使用できません。</block>
+  <block id="f1ccc81d970bbad1e838c81217621f88" category="paragraph"><block ref="f1ccc81d970bbad1e838c81217621f88" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6ba1c2bf5551094f2f030f655d852b7c" category="paragraph">ウェブサイトは予想どおりに停止しているので、AWSで実行されているOpenShiftクラスタにAstraを使用して、リモートバックアップからアプリケーションを迅速にリカバリしてみましょう。</block>
+  <block id="3919c456d46867d68530facb8a294e5b" category="list-text">Astra Control Centerで、価格表アプリをクリックし、[データ保護]&gt;[バックアップ]を選択します。バックアップを選択し、[操作]の下の[アプリケーションの復元]をクリックします。</block>
+  <block id="e6de97f7b376fc4d7d5fc158998ef78b" category="paragraph"><block ref="e6de97f7b376fc4d7d5fc158998ef78b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="36aaf3135b36d58ed328b53ba6a45e54" category="list-text">デスティネーションクラスタとして「OCP-AWS」を選択し、ネームスペースに名前を付けます。[オンデマンドバックアップ]、[次へ]、[復元]の順にクリックします。</block>
+  <block id="bd437ee3c992275a1aafcf6d220627a3" category="paragraph"><block ref="bd437ee3c992275a1aafcf6d220627a3" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="600fc62c4849602c331ba0cf3f4aa6ba" category="list-text">「pricelist-app」という名前の新しいアプリケーションは、AWSで実行されるOpenShiftクラスタでプロビジョニングされます。</block>
+  <block id="67cc808afad9a2103d81ea4a070200ca" category="paragraph"><block ref="67cc808afad9a2103d81ea4a070200ca" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e39c5fe0af730ce83d0258ccdaa80b35" category="list-text">OpenShift Webコンソールで同じことを確認します。</block>
+  <block id="77e34d0cd9093db4fb6869914d989009" category="paragraph"><block ref="77e34d0cd9093db4fb6869914d989009" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="09e7f5c160e9c778059848934261d552" category="list-text">「pricelist -aws」プロジェクトの下のポッドがすべて実行されたら、「Routes」に移動し、URLをクリックしてWebページを起動します。</block>
+  <block id="656f8acae5cd8015e35a809e108d0cc3" category="paragraph"><block ref="656f8acae5cd8015e35a809e108d0cc3" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="82b73b03911a8aa2365b090c8d82af52" category="paragraph">このプロセスでは、貴重なアプリケーションが正常に復元され、Astra Control Centerを利用してAWS上でシームレスに実行されるOpenShiftクラスタでデータの整合性が維持されていることを検証します。</block>
+  <block id="38264421648067c49705c832c9a6abad" category="section-title">SnapshotコピーとDevTestのアプリケーション移動によるデータ保護</block>
+  <block id="062586839f067eaec95ba404a9c7118a" category="paragraph">この使用事例は、次のセクションで説明する2つの部分で構成されています。</block>
+  <block id="f3353b172c62b25c5b5749c72b138281" category="section-title">パート1</block>
+  <block id="985e44108006560e2a507cf5df0a50f5" category="paragraph">Astra Control Centerを使用すると、アプリケーション対応のスナップショットを作成してローカルデータを保護できます。データを誤って削除したり破損したりした場合は、以前に記録したスナップショットを使用して、アプリケーションおよび関連データを既知の正常な状態に戻すことができます。</block>
+  <block id="aff5d9267b599fe61f286401ac3c501d" category="paragraph">このシナリオでは、開発とテスト（DevTest）チームが、Ghostブログアプリケーションであるサンプルのステートフルアプリケーション（ブログサイト）を導入し、コンテンツを追加し、アプリケーションを最新バージョンにアップグレードします。Ghostアプリケーションでは、データベースにSQLiteを使用します。アプリケーションをアップグレードする前に、Astra Control Centerを使用してスナップショット（オンデマンド）を作成し、データを保護します。詳細な手順は次のとおりです。</block>
+  <block id="36f2bb149d32a6cc62ae94fba3303c3a" category="list-text">サンプルブログアプリをデプロイし、ArgoCDから同期します。</block>
+  <block id="898d00f41701affcd3de03f1babb1822" category="paragraph"><block ref="898d00f41701affcd3de03f1babb1822" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2eb2043273665bba56f4d994ac762372" category="list-text">最初のOpenShiftクラスタにログインし、Projectに移動して、検索バーにBlogと入力します。</block>
+  <block id="c7c3988f761c0c78a0037a2e32567221" category="paragraph"><block ref="c7c3988f761c0c78a0037a2e32567221" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4a835fa82e6221f6aaa7c9894843e849" category="list-text">サイドメニューから、[Networking]&gt;[Routes]の順に選択し、URLをクリックします。</block>
+  <block id="10025ffe22a5fcad86cf9a5d3c2a152e" category="paragraph"><block ref="10025ffe22a5fcad86cf9a5d3c2a152e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3643decfa34d971d179ca5ae5d80406a" category="list-text">ブログのホームページが表示されます。ブログサイトにコンテンツを追加して公開します。</block>
+  <block id="abb32921a35b4f1434d79bfc2634240e" category="paragraph"><block ref="abb32921a35b4f1434d79bfc2634240e" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5d7c955e2c709457b79a554544f71e43" category="list-text">Astra Control Centerにアクセスします。最初に検出タブからアプリケーションを管理してから、Snapshotコピーを作成します。</block>
+  <block id="84b09b74b91f4d641031733ca8226cef" category="paragraph"><block ref="84b09b74b91f4d641031733ca8226cef" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c48341950d06dc5b2b657a869930da35" category="inline-link">Snapshot とバックアップでアプリケーションを保護</block>
+  <block id="871cd11d246078051eab485577990938" category="admonition">定義したスケジュールでスナップショット、バックアップ、またはその両方を作成することで、アプリケーションを保護することもできます。詳細については、を参照してください<block ref="f4113928841cc9392d3f4867ece4c35b" category="inline-link-rx"></block>。</block>
+  <block id="1a3864d5015ea84453f3330013809aed" category="list-text">オンデマンドスナップショットが正常に作成されたら、アプリケーションを最新バージョンにアップグレードします。現在のイメージのバージョンは「ghost:3.6 -アルパイン」で、ターゲットのバージョンは「ghost:latest」です。アプリをアップグレードするには、Gitリポジトリに直接変更を加え、Argo CDに同期します。</block>
+  <block id="c9908f6f672739d5675fa011fc426f74" category="paragraph"><block ref="c9908f6f672739d5675fa011fc426f74" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a99bcd6abcf6d9d0f8c8484a4c0227d8" category="list-text">ブログサイトがダウンし、アプリケーション全体が破損しているために、最新バージョンへの直接アップグレードがサポートされていないことがわかります。</block>
+  <block id="6bf8b148f4f5756463960e90eab18eeb" category="paragraph"><block ref="6bf8b148f4f5756463960e90eab18eeb" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8a146efe8b8a92c8938b8cb4382ab490" category="list-text">ブログサイトが利用できないことを確認するには、URLを更新します。</block>
+  <block id="6c8d051935ff24d514e0a1ef7947a20f" category="paragraph"><block ref="6c8d051935ff24d514e0a1ef7947a20f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="f91554382d38247c63c3a1a2deccc759" category="list-text">スナップショットからアプリケーションを復元します。</block>
+  <block id="d735d93d8411e096d6cb56f3b12c82ca" category="paragraph"><block ref="d735d93d8411e096d6cb56f3b12c82ca" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8bef0158d469d7e6a86a85cfdc1b4714" category="list-text">アプリケーションは同じOpenShiftクラスタにリストアされます。</block>
+  <block id="82a349d9c319bc1e7eababcbe8470be2" category="paragraph"><block ref="82a349d9c319bc1e7eababcbe8470be2" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="2a6f8b28fe617a5e5c57c280e78d5cfa" category="list-text">アプリケーションのリストアプロセスがただちに開始されます。</block>
+  <block id="99ae836e446ce391c17fbd23c10ad2b8" category="paragraph"><block ref="99ae836e446ce391c17fbd23c10ad2b8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ebd8041043c88c570ad6a540d16fd78e" category="list-text">数分後に、使用可能なスナップショットからアプリケーションが正常にリストアされます。</block>
+  <block id="63c37fe0b3780197acdce4aca90a0c22" category="paragraph"><block ref="63c37fe0b3780197acdce4aca90a0c22" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="470ddfd45de9ecb8fcaaf72a5ff16e07" category="list-text">Webページが表示されるかどうかを確認するには、URLを更新します。</block>
+  <block id="47bd253037e346cae7c17119fabb14bb" category="paragraph"><block ref="47bd253037e346cae7c17119fabb14bb" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="c1a02fbed0531923c144c3950b4c124e" category="paragraph">DevTestチームは、Astra Control Centerを活用して、ブログサイトアプリとその関連データをスナップショットを使用して正常にリカバリできます。</block>
+  <block id="6417c68d02736b9d6bbccd60d0e3bd39" category="section-title">パート2</block>
+  <block id="03b6d5dbf0ff81cf58c3d900394cea53" category="paragraph">Astra Control Centerを使用すると、クラウド上またはオンプレミスで、クラウド上のどの場所にあるかに関係なく、アプリケーション全体をKubernetesクラスタ間でデータとともに移動できます。</block>
+  <block id="396f0eab74a43e69c5638b2ba641cda1" category="list-text">DevTestチームは、アプリケーションを最初にサポートされているバージョン（「ゴースト- 4.6 -アルプス」）にアップグレードしてから、最終バージョン（「ゴースト-最新」）にアップグレードして、本番環境を準備します。その後、別のFlexPod システムで実行されている本番環境のOpenShiftクラスタにクローニングされているアプリケーションをアップグレードします。</block>
+  <block id="cf7347ddb468e7ce05b5b4736ce1c195" category="list-text">この時点で、アプリケーションが最新バージョンにアップグレードされ、本番環境のクラスタにクローニングできる状態になります。</block>
+  <block id="bab6a40d9fb2a39fb64920ae93fee9d8" category="paragraph"><block ref="bab6a40d9fb2a39fb64920ae93fee9d8" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="fefff30e78a4e3907d1cdbb21da61988" category="list-text">新しいテーマを確認するには、ブログサイトを更新します。</block>
+  <block id="3fcf6ac3f088b383e8ee15dfee50c6e3" category="paragraph"><block ref="3fcf6ac3f088b383e8ee15dfee50c6e3" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="083ae33bce48a8f76b7d6313bf31593a" category="list-text">Astra Control Centerから、VMware vSphereで実行されている他の本番環境OpenShiftクラスタにアプリケーションをクローニングします。</block>
+  <block id="e5056e45ffc6bcc97562215846ca3769" category="paragraph"><block ref="e5056e45ffc6bcc97562215846ca3769" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="48d8a4e7b96837af07b85c1c8e227ae7" category="paragraph">これで、本番環境のOpenShiftクラスタで新しいアプリケーションクローンがプロビジョニングされます。</block>
+  <block id="853f2420e83a7d15f637e0e800caf912" category="paragraph"><block ref="853f2420e83a7d15f637e0e800caf912" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="6e480f943300a8b7c24ae83e94c52b1f" category="list-text">本番環境のOpenShiftクラスタにログインし、プロジェクトブログを検索します。</block>
+  <block id="1d8aec80f0be70275ef8e41422dd0c8d" category="paragraph"><block ref="1d8aec80f0be70275ef8e41422dd0c8d" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="678f70483189f7424f184adb6b49c4de" category="list-text">サイドメニューから、Networking &gt; Routesを選択し、Locationの下のURLをクリックします。同じホームページとコンテンツが表示されます。</block>
+  <block id="f5ce7b7930bd23b6703fa90f01278edf" category="paragraph"><block ref="f5ce7b7930bd23b6703fa90f01278edf" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="889443e49bd32c67a9561aa08a2ac414" category="paragraph">これでAstra Control Center解決策 の検証は終了です。Kubernetesクラスタが配置されている場所に関係なく、アプリケーション全体とそのデータを1つのKubernetesクラスタから別のクラスタにクローニングできるようになりました。</block>
+  <block id="3892d8f529d990970e68f80701065301" category="paragraph"><block ref="3892d8f529d990970e68f80701065301" category="inline-link-macro-rx"></block></block>
+  <block id="86233fc6d802f49b70b962a2469ee2de" category="summary">このセクションでは、AWSにCloud Volumes ONTAP とAstra Tridentを導入する方法について説明します。</block>
+  <block id="1412e3e35f9c20b1fdeee824a035a654" category="inline-link-macro">以前は、AWSでRed Hat OpenShiftを利用していました。</block>
+  <block id="bdcd50354941543dc2e7131b5ad09c1c" category="paragraph"><block ref="bdcd50354941543dc2e7131b5ad09c1c" category="inline-link-macro-rx"></block></block>
+  <block id="94ee7072c2750da1997438a715efb7d4" category="inline-link">コネクタを作成します</block>
+  <block id="d6bd41b8e6f87a1e5b918b25cb3e81b3" category="paragraph">NetApp Cloud Volumes ONTAP インスタンスはAWSに導入され、Astra Tridentのバックエンドストレージとして機能します。Cloud Volumes ONTAP 作業環境を追加する前に、コネクタを配置する必要があります。コネクタを配置せずにCloud Volumes ONTAP の最初の作業環境を作成するかどうかを確認するメッセージが表示されます。AWSにコネクタを導入するには、を参照してください<block ref="5090a65d29a710845284e1d0ac2c45f7" category="inline-link-rx"></block>。</block>
+  <block id="cb986a22a4fee3492df1e27f73b8ac51" category="inline-link">AWSでのクイックスタート</block>
+  <block id="6da32fe5e170e7dae5b894f3090c70ff" category="paragraph">AWSにCloud Volumes ONTAP を導入する手順については、を参照してください<block ref="3f7d6f7f2d3865b483aa674b6ba995e3" category="inline-link-rx"></block>。</block>
+  <block id="39a62c2833c58289fcebd0b1ef55c802" category="paragraph">Cloud Volumes ONTAP を導入したら、Astra Tridentをインストールし、OpenShift Container Platformクラスタでストレージバックエンドとスナップショットクラスを設定できます。</block>
+  <block id="60eb33560ea043dfa7cda115b53b58ad" category="inline-link-macro">次は、OpenShift Container PlatformにAstra Control Centerをインストールする方法です。</block>
+  <block id="4508c419387b5dc5fa188210e0729743" category="paragraph"><block ref="4508c419387b5dc5fa188210e0729743" category="inline-link-macro-rx"></block></block>
+  <block id="7b11f8a58bd3453f7d26adea4a1fc8d7" category="summary">この解決策 では、ネットアップのAstraポートフォリオを使用して、FlexPod とAWSで実行されるコンテナ化アプリケーション向けの保護計画を実装しました。ネットアップのAstra Control CenterとAstra Tridentは、Cloud Volumes ONTAP 、Red Hat OpenShift、FlexPod インフラとともに、この解決策 のコアコンポーネントを形成しました。</block>
+  <block id="1382073bfc91396ffcf6726470271c21" category="inline-link-macro">Previous：リモートバックアップを使用したアプリケーションのリカバリ。</block>
+  <block id="7eca8f6fe808295ab3a4b102cecee4b0" category="paragraph"><block ref="7eca8f6fe808295ab3a4b102cecee4b0" category="inline-link-macro-rx"></block></block>
+  <block id="c18eeb241879fc774249da45c51f5fb2" category="paragraph">Snapshotをキャプチャしてアプリケーションの保護を実証し、クラウド環境とオンプレミス環境で実行されているKubernetesクラスタ間でアプリケーションをリストアするフルコピーバックアップを実行しました。</block>
+  <block id="d5c2abf61a69f4d4b88304e043dd6c0a" category="paragraph">また、Kubernetesクラスタ間でアプリケーションのクローニングを実演し、お客様が希望する場所で選択したKubernetesクラスタにアプリケーションを移行できるようにする方法についても説明しました。</block>
+  <block id="cc8b596e97ebe98b09dd470dd58a26df" category="paragraph">FlexPod は絶えず進化しているため、お客様はアプリケーションやビジネス提供プロセスを最新化できます。この解決策 を使用することで、FlexPod のお客様は、解決策 のコストを低く抑えながら、短期またはフルタイムのDRプランを作成できる場所としてパブリッククラウドを使用して、クラウドネイティブアプリケーション向けのBCDRプランを自信を持って構築できます。</block>
+  <block id="e9df9bb5d0c41e91b20932a6f94e7674" category="paragraph">Astra Controlを使用すると、クラスタの配置場所に関係なく、アプリケーション全体をKubernetesクラスタ間でデータとともに移動できます。また、クラウドネイティブアプリケーションの導入、運用、保護を高速化するのにも役立ちます。</block>
+  <block id="231cf4c70d866b616c21baddaeed0696" category="section-title">トラブルシューティング</block>
+  <block id="bbe8701553ec350cc8626781c50a4d3a" category="inline-link">オンラインドキュメント</block>
+  <block id="76650e433c31ed14d092e894522e9f88" category="paragraph">トラブルシューティングのガイダンスについては、を参照してください<block ref="6b26934cc1e18c2d0c2690a002260636" category="inline-link-rx"></block>。</block>
+  <block id="44ee122b811da35a6712c6885e16343c" category="list-text">FlexPod のシスコ検証済み設計および導入ガイド</block>
+  <block id="be368ff17b3e81589233c5454dbc29de" category="list-text">Ansibleを使用して、VMwareのコードとしてInfrastructureを使用したFlexPod の導入</block>
+  <block id="11e815883f005657fd79ad2c41a47378" category="inline-link"><block ref="11e815883f005657fd79ad2c41a47378" category="inline-link-rx"></block></block>
+  <block id="8c86f914829d894a2da94899d9f3a209" category="paragraph"><block ref="8c86f914829d894a2da94899d9f3a209" category="inline-link-rx"></block></block>
+  <block id="1c917f34cb889c90da6e079c0f77a11a" category="list-text">Ansibleを使用したRed Hat OpenShift Bare Metalのコードとしてのインフラを使用したFlexPod 導入</block>
+  <block id="9bbeb3e9d971c03c81d9aa7d44eb6e50" category="inline-link"><block ref="9bbeb3e9d971c03c81d9aa7d44eb6e50" category="inline-link-rx"></block></block>
+  <block id="1441e014138f070544353f0a40885c10" category="paragraph"><block ref="1441e014138f070544353f0a40885c10" category="inline-link-rx"></block></block>
+  <block id="8e8fc0e7e19023c0232fec039b6df961" category="inline-link"><block ref="8e8fc0e7e19023c0232fec039b6df961" category="inline-link-rx"></block></block>
+  <block id="dfae3900fb7c7a66ef5befc93980eef1" category="paragraph"><block ref="dfae3900fb7c7a66ef5befc93980eef1" category="inline-link-rx"></block></block>
+  <block id="0fe3c69c48bc9700b5dd37f69ca26199" category="list-text">Cisco Intersightのデータシート</block>
+  <block id="c56152678911fb0d557c41fdcf1d3213" category="inline-link"><block ref="c56152678911fb0d557c41fdcf1d3213" category="inline-link-rx"></block></block>
+  <block id="c96bb6046b6069eb7298cd0b0b6b70fd" category="paragraph"><block ref="c96bb6046b6069eb7298cd0b0b6b70fd" category="inline-link-rx"></block></block>
+  <block id="24a34a00f3b41f0c52f29954d6352598" category="list-text">ネットアップAstraのドキュメント</block>
+  <block id="7393b156591c6381ba2a685d983903c7" category="inline-link"><block ref="7393b156591c6381ba2a685d983903c7" category="inline-link-rx"></block></block>
+  <block id="a5b8392a62ed556fcb08309b4205f017" category="paragraph"><block ref="a5b8392a62ed556fcb08309b4205f017" category="inline-link-rx"></block></block>
+  <block id="8de59ec369b10820d0dd336b9765c79b" category="list-text">ネットアップアストラト Trident</block>
+  <block id="b74877ef96b7f6ef3d913a0c3ebca5e8" category="inline-link"><block ref="b74877ef96b7f6ef3d913a0c3ebca5e8" category="inline-link-rx"></block></block>
+  <block id="14998aeaa664c7f299732bf6203694b6" category="paragraph"><block ref="14998aeaa664c7f299732bf6203694b6" category="inline-link-rx"></block></block>
+  <block id="bbd2995f138fe5b371240b2cc17190c1" category="list-text">NetApp Cloud Manager の略</block>
+  <block id="bd7b6098f4f7dbe0051346d24f5d0f68" category="inline-link"><block ref="bd7b6098f4f7dbe0051346d24f5d0f68" category="inline-link-rx"></block></block>
+  <block id="197ee6c8d2fbb82b68e7c9367a5d827f" category="paragraph"><block ref="197ee6c8d2fbb82b68e7c9367a5d827f" category="inline-link-rx"></block></block>
+  <block id="c892f0fdac24e434238098fff7a8b6bd" category="inline-link"><block ref="c892f0fdac24e434238098fff7a8b6bd" category="inline-link-rx"></block></block>
+  <block id="0b7a5473855fb81be20a23f140589b70" category="paragraph"><block ref="0b7a5473855fb81be20a23f140589b70" category="inline-link-rx"></block></block>
+  <block id="b175d08ac03101cd40f077848d436e1f" category="list-text">Red Hat OpenShift のサービスです</block>
+  <block id="1ec6650b54774b39d9e29423517c2747" category="inline-link"><block ref="1ec6650b54774b39d9e29423517c2747" category="inline-link-rx"></block></block>
+  <block id="f905ad0669d00d6ec40ba771cfb4b060" category="paragraph"><block ref="f905ad0669d00d6ec40ba771cfb4b060" category="inline-link-rx"></block></block>
+  <block id="e70a0b693229650146278d707bea4c7d" category="cell">ACC 22.04.0用リリース。</block>
+  <block id="309f12ab1a7353801116cb1fcb67e95f" category="summary">DRサイトとしてAWSに実装された、独立した自己管理OpenShift Container Platform 4クラスタです。マスターノードとワーカーノードは、3つのアベイラビリティゾーンにまたがって配置されるため、高可用性が実現します。</block>
+  <block id="54f3756e2d84752e5c4284697c21d2ac" category="doc">AWSにRed Hat OpenShiftを実装しました</block>
+  <block id="5589576e22e954a0a1401cbb6464f66c" category="inline-link-macro">従来：FlexPod for OpenShift Container Platform 4ベアメタルインストール</block>
+  <block id="eadf725cc67bcaa775e0cea6535000f4" category="paragraph"><block ref="eadf725cc67bcaa775e0cea6535000f4" category="inline-link-macro-rx"></block></block>
+  <block id="03eb7c6cefd2541dda9be58046e788e3" category="paragraph"><block ref="03eb7c6cefd2541dda9be58046e788e3" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="7abe47cfa521f37c92a29f79ad43a38c" category="inline-link">プライベートクラスタ</block>
+  <block id="740769ac2b3ea3b09c31090f4645f7a0" category="paragraph">OpenShiftはとして導入されます<block ref="4283031f2dacf2594133b67e466efc99" category="inline-link-rx"></block> AWS上の既存のVPCに接続できます。プライベートOpenShift Container Platformクラスタは外部エンドポイントを公開しないため、内部ネットワークからのみアクセスでき、インターネットには表示されません。シングルノードのNetApp Cloud Volumes ONTAP は、NetApp Cloud Managerを使用して導入されます。これにより、TridentからAstraにバックエンドとしてストレージが提供されます。</block>
+  <block id="366a1485e4aa704de0dd06d7f56ce08a" category="inline-link">OpenShiftのドキュメント</block>
+  <block id="30b739b95a0414ad769bd2eddffa99ca" category="paragraph">AWSへのOpenShiftのインストールの詳細については、を参照してください<block ref="ab305eff101d6a52db85d887b1fd5821" category="inline-link-rx"></block>。</block>
+  <block id="8b77ce8dbe25a37620c03383d4ad770a" category="inline-link-macro">次のステップ：NetApp Cloud Volumes ONTAP</block>
+  <block id="db386b9e76cceff7a087645b0b44de1e" category="paragraph"><block ref="db386b9e76cceff7a087645b0b44de1e" category="inline-link-macro-rx"></block></block>
+  <block id="e3bca5a253510d774968058cd7916fa8" category="summary">このテクニカルレポートでは、FlexPod コンバージドインフラ解決策 上にNetApp Astra Control CenterとRed Hat OpenShift Container Platformを統合し、Amazon Web Services（AWS）に拡張してハイブリッドクラウドデータセンターを構築しました。</block>
+  <block id="a9cea124fa33cc532aae100a95fa9566" category="doc">TR-4936：『FlexPod hybrid cloud with NetApp Astra and Cisco Intersight for Red Hat OpenShift』</block>
+  <block id="84a60369b238bb4a5dd7a5b1b4c73161" category="paragraph">Abhinav Singhの</block>
+  <block id="35d5594fee83f1db26c8a4d25c3b29c4" category="paragraph">コンテナ化されたアプリケーションの開発、導入、実行、管理、拡張のための事実上の選択肢となるコンテナとKubernetesは、ビジネスクリティカルなアプリケーションを実行する企業の増加に伴いつつあります。ビジネスクリティカルなアプリケーションは、状態に大きく依存しています。ステートフルアプリケーションには、状態、データ、および設定情報が関連付けられており、ビジネスロジックを実行する前のデータトランザクションに依存します。Kubernetes上で実行されるビジネスクリティカルなアプリケーションには、従来型アプリケーションのような可用性とビジネス継続性の要件が引き続きあります。サービスの停止は、収益の損失、生産性、会社の評判に深刻な影響を与える可能性があります。そのため、Kubernetesワークロードをクラスタ、オンプレミスデータセンター、ハイブリッドクラウド環境内およびクラスタ間で迅速かつ容易に保護、リカバリ、移動することが非常に重要です。企業は、ビジネスをハイブリッドクラウドモデルに移行し、アプリケーションをクラウドネイティブなフォームファクタに刷新するメリットを高く挙げています。</block>
+  <block id="d204a8b588acf148f3f0d91f586e6544" category="inline-link">FlexPod とRed Hat OpenShift</block>
+  <block id="55aa681edf688f21e4deb2ab607cead4" category="paragraph">このテクニカルレポートでは、FlexPod コンバージドインフラ解決策 上にNetApp Astra Control CenterとRed Hat OpenShift Container Platformを統合し、Amazon Web Services（AWS）に拡張してハイブリッドクラウドデータセンターを構築しました。使い慣れたことに基づいて作成されています<block ref="4b3892f0f5b8b40c7227d58de15a39d2" category="inline-link-rx"></block>このドキュメントでは、ネットアップのAstra Control Centerについて説明します。インストール、設定、アプリケーション保護ワークフロー、オンプレミスとクラウド間でのアプリケーション移行から始まります。また、Red Hat OpenShiftで実行されるコンテナ化アプリケーションにNetApp Astra Control Centerを使用する場合の、アプリケーション対応データ管理機能（バックアップとリカバリ、ビジネス継続性など）の利点についても説明します。</block>
+  <block id="f62db1f1545d4d6bf39a43f35bd88145" category="paragraph">次の図に、解決策 の概要を示します。</block>
+  <block id="a75392b698d6ae39d077a5133668dae3" category="paragraph"><block ref="a75392b698d6ae39d077a5133668dae3" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="62db6fd4151ad8371bb66b05da0ea100" category="paragraph">このドキュメントは、CTO（最高技術責任者）、アプリケーション開発者、クラウド解決策 アーキテクト、サイト信頼性エンジニア（SRE）、DevOpsエンジニア、ITOps、コンテナ化されたアプリケーションの設計、ホスティング、管理に重点を置いたプロフェッショナルサービスチームなど、読者を想定しています。</block>
+  <block id="3ca8a4776bfa56059f0a8a7d8ffa14ec" category="section-title">NetApp Astra Control–主なユースケース</block>
+  <block id="7b3db1fdc5136cd912b29ac4f9982ea6" category="paragraph">ネットアップのAstra Controlは、クラウドネイティブなマイクロサービスを利用するお客様にアプリケーション保護を簡易化することを目的としています。</block>
+  <block id="e5ba967130e17e83d1dea4e3566db571" category="list-text">*スナップショットを使用したポイントインタイム（PiT）アプリケーションリプレゼンテーション。* Astra Controlを使用すると、Kubernetesで実行されているアプリケーションの構成の詳細や、関連付けられた永続的ストレージを含む、コンテナ化されたアプリケーションのエンドツーエンドのスナップショットを作成できます。インシデントが発生した場合は、ボタンクリックでアプリケーションを正常な状態に復元できます。</block>
+  <block id="55abedc3e70735897bd3c5d162a5303b" category="list-text">*フルコピー・アプリケーション・バックアップ* Astra Controlを使用すると'事前に定義されたスケジュールでフル・アプリケーション・バックアップを実行できますこのスケジュールを使用すると'アプリケーションを同じKubernetesクラスタにリストアしたり'別のKubernetesクラスタにオンデマンドで自動化された方法でリストアしたりできます</block>
+  <block id="db953b8f02cb34da89404efe26605550" category="list-text">*クローンを使用したアプリケーションの移植と移行* Astra Controlを使用すると、アプリケーション全体をKubernetesクラスタ間または同じKubernetesクラスタ内のデータとともにクローニングできます。この機能は、クラスタがどこにあるかに関係なく、Kubernetesクラスタ間でアプリケーションを移植または移行する場合にも役立ちます（クローニング後にソースアプリケーションインスタンスを削除するだけです）。</block>
+  <block id="7b1df8c1be51268d196359876f88a614" category="list-text">*アプリケーションの一貫性をカスタマイズできます。* Astra Controlを使用すると、実行フックを活用してアプリケーションの休止状態を定義できます。「実行前」と「実行後」のフックをスナップショットおよびバックアップのワークフローにドロップすると、スナップショットまたはバックアップが作成される前に、アプリケーションが独自の方法で休止されます。</block>
+  <block id="023e24ac7616748fcf34d6d14a0266a9" category="list-text">*アプリケーションレベルのディザスタリカバリ（DR）を自動化。* Astra Controlを使用すると、コンテナ化されたアプリケーション用にBCDR（ビジネス継続性ディザスタリカバリ）計画を設定できます。NetApp SnapMirrorはバックエンドで使用されるため、DRワークフローの実装はすべて自動化されます。</block>
+  <block id="1071731ddee094093ebd4eb4a8559261" category="section-title">解決策 トポロジ</block>
+  <block id="0e728f6352dd5189fd77275ae42784fe" category="paragraph">このセクションでは、解決策 の論理トポロジについて説明します。</block>
+  <block id="94cab3a589bb098fb4712f2127916d15" category="paragraph">次の図は、OpenShift Container Platformクラスタを実行するFlexPod オンプレミス環境と、NetApp Cloud Volumes ONTAP 、Cisco Intersight、NetApp Cloud Manager SaaSプラットフォームを使用するAWS上の自己管理型OpenShift Container Platformクラスタからなる解決策 トポロジを示しています。</block>
+  <block id="83251359a98a808d93cee6a97116d036" category="paragraph"><block ref="83251359a98a808d93cee6a97116d036" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="06d97393472af1abe6e0186db18a7789" category="paragraph">最初のOpenShift Container PlatformクラスタはFlexPod 上にベアメタルインストールされ、2番目のOpenShift Container PlatformクラスタはFlexPod 上で実行されるVMware vSphereに導入され、3番目のOpenShift Container Platformクラスタはとして導入されます<block ref="4283031f2dacf2594133b67e466efc99" category="inline-link-rx"></block> 自社で管理するインフラとして、AWS上の既存の仮想プライベートクラウド（VPC）に導入できます。</block>
+  <block id="eac9331de49233358aa02bcfe36b57cc" category="paragraph">この解決策 では、FlexPod はサイト間VPNを介してAWSに接続されますが、直接接続の実装を使用してハイブリッドクラウドに拡張することもできます。Cisco Intersightは、FlexPod インフラストラクチャコンポーネントの管理に使用されます。</block>
+  <block id="a6c82c846ccceb18df0d3249a1b9b6b8" category="paragraph">この解決策 では、Astra Control Centerが、FlexPod およびAWSで実行されているOpenShift Container Platformクラスタでホストされているコンテナ化アプリケーションを管理します。FlexPod で実行されているOpenShiftベアメタルインスタンスにAstraコントロールセンターをインストールします。Astra Controlは、マスターノードのkube-APIと通信し、Kubernetesクラスタの変更を継続的に監視します。Kubernetesクラスタに追加した新しいアプリケーションは自動的に検出され、管理用に使用できるようになります。</block>
+  <block id="a5df78cc2053842494b3c05093ec7732" category="paragraph">コンテナ化されたアプリケーションのPiT表現は、Astra Control Centerを使用してスナップショットとしてキャプチャできます。アプリケーションスナップショットは、スケジュールされた保護ポリシーまたはオンデマンドで開始できます。Astraがサポートしているアプリケーションの場合、スナップショットはクラッシュ整合性があります。アプリケーションスナップショットは、永続ボリューム内のアプリケーションデータのスナップショットと、そのアプリケーションに関連付けられているさまざまなKubernetesリソースのアプリケーションメタデータを構成します。</block>
+  <block id="28307797a3974946535c540b49986490" category="paragraph">アプリケーションのフルコピーバックアップは、事前定義されたバックアップスケジュールまたはオンデマンドを使用して、Astra Controlを使用して作成できます。オブジェクトストレージは、アプリケーションデータのバックアップを格納するために使用されます。NetApp ONTAP S3、NetApp StorageGRID 、および汎用のS3実装をオブジェクトストアとして使用できます。</block>
+  <block id="49528b9b8c2513c486a45891563dc129" category="inline-link-macro">次の例は、解決策 コンポーネントです。</block>
+  <block id="6ea7b1c0ec7eb72d3d0a85c1196c6fea" category="paragraph"><block ref="6ea7b1c0ec7eb72d3d0a85c1196c6fea" category="inline-link-macro-rx"></block></block>
+  <block id="1cfbe904270ce36b1f0360ab064cf453" category="doc">インストールと設定</block>
+  <block id="d538efe0042f78745a246962979a6232" category="summary">FlexPod で実行されているOpenShiftクラスタ、またはCloud Volumes ONTAP ストレージバックエンドを使用するAWSにAstraコントロールセンターをインストールできます。この解決策 では、OpenShiftベアメタルクラスタにAstraコントロールセンターを導入します。</block>
+  <block id="0eef84e4b1f1ddc4d7b1abbfccb47625" category="doc">OpenShift Container PlatformにAstra Control Centerをインストールします</block>
+  <block id="3865c3388119fdf51c8398974f20f115" category="inline-link-macro">Previous：NetApp Cloud Volumes ONTAP の略。</block>
+  <block id="ba9a49f46db4217cc60be3d7dd792da7" category="paragraph"><block ref="ba9a49f46db4217cc60be3d7dd792da7" category="inline-link-macro-rx"></block></block>
+  <block id="fe5883865d4340bc373911bb967fb145" category="paragraph">Astra Control Centerは、説明されている標準的なプロセスを使用してインストールできます<block ref="0dd9c7008b1f62bb19aef6fe627a8c01" category="inline-link-rx"></block> または、Red Hat OpenShift OperatorHubから入手してください。Astra Control Operatorは、Red Hat認定オペレータです。この解決策 では、AstraコントロールセンターはRed Hat OperatorHubを使用してインストールされます。</block>
+  <block id="7bbb3c4c475e8e50d99bcf4d1f5999d4" category="section-title">環境要件</block>
+  <block id="4663e63bd04fcf67f3507d82e027aa03" category="list-text">Astra Control Centerは複数のKubernetesディストリビューションをサポートします。Red Hat OpenShiftでは、Red Hat OpenShift Container Platform 4.8または4.9がサポートされます。</block>
+  <block id="c75062cfa1eaf856013fb62277693063" category="list-text">Astra Control Centerでは、環境およびエンドユーザーのアプリケーションリソース要件に加えて、次のリソースが必要です。</block>
+  <block id="05bbb43b3d923283e0b6ffafd088f41f" category="cell">コンポーネント</block>
+  <block id="9b97b7bd5e0a87be7bf218224ada83cf" category="cell">要件</block>
+  <block id="355508832b7eb5caa7423548e7222913" category="cell">ストレージバックエンドの容量</block>
+  <block id="97eba840a0a254e76474a1a32d2f5634" category="cell">500GB以上の容量があります</block>
+  <block id="fcb81a84511da525a1581c4ccc00d0fb" category="cell">ワーカーノード</block>
+  <block id="e5d4ab249a6631d4ddc282e61a6ea4c5" category="cell">少なくとも3つのワーカーノードがあり、それぞれ4つのCPUコアと12GBのRAMが搭載されています</block>
+  <block id="e0317dac48550dcc07e77d4100e04cb1" category="cell">Fully Qualified Domain Name（FQDN；完全修飾ドメイン名）アドレス</block>
+  <block id="b3071c30261a1e065c64f3de227b01ff" category="cell">Astra Control Center の FQDN アドレス</block>
+  <block id="782ddd5eae9f93dbf990bc08c3f35c1a" category="cell">Astra Trident 21.04 以降がインストールおよび設定されている</block>
+  <block id="c6ca9bfa4ec1c3ee70c123f1f3c93f16" category="cell">入力コントローラまたはロードバランサ</block>
+  <block id="e9119b6495de3bb01f427aa75e104e7e" category="cell">入力コントローラでURLまたはロードバランサを使用してAstra Control Centerを公開し、FQDNに解決されるIPアドレスを提供するように設定します</block>
+  <block id="a9288e208a89e03bc7040ba23d0a8923" category="list-text">既存のプライベートイメージレジストリが必要です。このレジストリには、Astra Control Centerビルドイメージをプッシュできます。イメージをアップロードするイメージレジストリのURLを指定する必要があります。</block>
+  <block id="90614711720f05ba72469e62f183aa73" category="admonition">一部のイメージは特定のワークフローの実行中にプルされ、必要に応じてコンテナが作成および破棄されます。</block>
+  <block id="205bd1a2bfaa21034971e3c944124cb5" category="list-text">Astra Control Center を使用するには、ストレージクラスを作成してデフォルトのストレージクラスとして設定する必要があります。Astra Control Center は、 Astra Trident が提供する次の ONTAP ドライバをサポートしています。</block>
+  <block id="8321592ce24c8a122ecf26a63cfca407" category="list-text">ONTAP - NAS</block>
+  <block id="844e84da8e822b4a33c4d8188da97937" category="list-text">ONTAP-NAS-flexgroup</block>
+  <block id="73a3350a1b91aeb6e2836fdf5975672c" category="list-text">ONTAP - SAN</block>
+  <block id="3016c12c1db45f14c80c9c1731b9c26a" category="list-text">ONTAP - SAN - 経済性</block>
+  <block id="de7608849c0f26c7c3f655bbb2528c21" category="admonition">導入したOpenShiftクラスタにAstra Tridentがインストールされ、ONTAP バックエンドで設定されているとします。また、デフォルトのストレージクラスも定義されています。</block>
+  <block id="765c282f25606a5ea4176fc5195e9667" category="list-text">OpenShift環境でアプリケーションクローニングを行う場合、Astra Control CenterはOpenShiftでボリュームをマウントし、ファイルの所有権を変更できるようにする必要があります。これらの処理を許可するようにONTAP エクスポートポリシーを変更するには、次のコマンドを実行します。</block>
+  <block id="c2ef5075ddbbc43ea22ccb3c2bb3d068" category="inline-link">Astra Tridentの手順</block>
+  <block id="dcaddeba606de0dc9403f541dd8d96c6" category="admonition">管理対象のコンピューティングリソースとして2つ目のOpenShift運用環境を追加するには、Astra Tridentボリュームスナップショット機能が有効になっていることを確認します。Tridentを使用してボリュームSnapshotを有効にし、テストする方法については、を参照してください<block ref="d054ead7779b1f4f93ee2e564ab520a7" category="inline-link-rx"></block>。</block>
+  <block id="8f6db951ea3d788955700e4d9ccf6ddc" category="inline-link">VolumeSnapClass</block>
+  <block id="b7c8c8e6deafa3a30b344f15c199ca09" category="list-text">A<block ref="20f8e059f0cdd4b928144cfd1d135160" category="inline-link-rx"></block> アプリケーションの管理元であるすべてのKubernetesクラスタで設定する必要があります。Astra Control CenterがインストールされているKubernetesクラスタも含めることができます。Astra Control Centerでは、実行中のKubernetesクラスタ上のアプリケーションを管理できます。</block>
+  <block id="ca6f33719464e2320b44f90d6ae70eb7" category="section-title">アプリケーション管理の要件</block>
+  <block id="6b0ce3f323c8df21ecc7c8565168d0fc" category="list-text">*ライセンス。* Astra Control Centerを使用してアプリケーションを管理するには、Astra Control Centerライセンスが必要です。</block>
+  <block id="31b0da457d7ae739823ac3e61226ee87" category="list-text">*名前空間。*名前空間は、Astra Control Centerによってアプリケーションとして管理できる最大のエンティティです。既存のネームスペース内のアプリケーションラベルとカスタムラベルに基づいてコンポーネントを除外し、リソースのサブセットをアプリケーションとして管理できます。</block>
+  <block id="2aa60b9834f6aed0336379cdb1424e99" category="list-text">* StorageClass.* StorageClassが明示的に設定されたアプリケーションをインストールし、アプリケーションのクローンを作成する必要がある場合、クローン処理のターゲットクラスタに最初に指定されたStorageClassが必要です。明示的にStorageClassを設定したアプリケーションを、同じストレージクラスを持たないクラスタにクローニングすると失敗します。</block>
+  <block id="6602bf47d8e6975bcd9029b813288201" category="list-text">* Kubernetesのリソース。* Astra ControlではキャプチャされないKubernetesリソースを使用するアプリケーションには、アプリケーションデータの完全な管理機能が備わっていない可能性があります。Astra Controlでは、次のKubernetesリソースをキャプチャできます。</block>
+  <block id="186d4bf61b16ff75063f15a5fef9d6ed" category="cell">Kubernetesのリソース</block>
+  <block id="d7d354d0f9d0780e168c895c92a32c24" category="cell">クラスタロール</block>
+  <block id="e866afd8290d5c73cda6260e04e6eef0" category="cell">ClusterRoleBinding</block>
+  <block id="a941f8adb5ae079ebc739cb59407fd30" category="cell">ConfigMap</block>
+  <block id="99bc4b850e05bafd67cf5f5f49344c1e" category="cell">CustomResourceDefinition の場合</block>
+  <block id="2597d86efa761b80f198c7208e859dd7" category="cell">CustomResource の場合</block>
+  <block id="639125955d3128c08b048bc254433dbf" category="cell">cronjob</block>
+  <block id="0d4eb61dc57afc7f3f8d51439c96eedd" category="cell">デモンセット（ DemonSet ）</block>
+  <block id="f82570cd8dd080fcb0fe525f9b081bdb" category="cell">HorizontalPodAutoscaler のように表示されます</block>
+  <block id="7d05c708b92b4809bfe9bf66edf8f765" category="cell">入力</block>
+  <block id="788c34b60baf42eb1cac433ba1f0b64a" category="cell">DeploymentConfig</block>
+  <block id="1fcd027e4be180b1536eba3afa93e6be" category="cell">MutingWebhook</block>
+  <block id="2b3f8e4d49589c4452db0a07d619d824" category="cell">PersistentVolumeClaim のように表示され</block>
+  <block id="8a0813c70cf4bf1529f25c411a039130" category="cell">ポッド</block>
+  <block id="d8babd242bd93046572e7f50a3fbb394" category="cell">PodDisruptionBudget （予算の廃止）</block>
+  <block id="3f4dbf8b7a689375f651090e7a111098" category="cell">PodTemplate</block>
+  <block id="c794a682153b998c6dca3efddf650512" category="cell">ネットワークポリシー</block>
+  <block id="3f402161942e4154684cf3f56c76cead" category="cell">ReplicaSet</block>
+  <block id="bbbabdbe1b262f75d99d62880b953be1" category="cell">ロール</block>
+  <block id="ec7eab019566cfca91934ab1e0073511" category="cell">RoleBinding です</block>
+  <block id="9405c3aff9112c3c60d03b94792877dc" category="cell">ルート</block>
+  <block id="1e6947ac7fb3a9529a9726eb692c8cc5" category="cell">秘密</block>
+  <block id="91e292ade0a336af19f1ac0977215b91" category="cell">検証 Webhook</block>
+  <block id="d74cdf75cddd8ade6d1b83dd387ec2f2" category="section-title">OpenShift OperatorHub を使用して Astra Control Center をインストールします</block>
+  <block id="5e443eb2da0db751d5f7eabe91ac5de0" category="paragraph">次の手順 は、Red Hat OperatorHubを使用してAstraコントロールセンターをインストールします。この解決策 では、FlexPod 上で動作するベアメタルOpenShiftクラスタにAstraコントロールセンターをインストールします。</block>
+  <block id="8c41baf1ca98e1184f48c4721d44d431" category="inline-link">NetApp Support Site</block>
+  <block id="3b17d8f0676889d303a328918dd54569" category="list-text">から Astra Control Center バンドル（「 Astra - control-ccenter-[version].tar.gz` ）をダウンロードします<block ref="ed74209aa7b0e064261367c862dc3177" category="inline-link-rx"></block>。</block>
+  <block id="071a2a9615ad21025ee81dce34e3420b" category="list-text">からAstra Control Centerの証明書とキーの.zipファイルをダウンロードします<block ref="ed74209aa7b0e064261367c862dc3177" category="inline-link-rx"></block>。</block>
+  <block id="6ca23ae27270cb11bc74e6fddd97a371" category="list-text">バンドルの署名を確認します。</block>
+  <block id="6bcb02856dcde67ff9ffe3b985333943" category="list-text">Astraの画像を抽出します。</block>
+  <block id="f649b0ca3deae5a7d2e60dabf74a0ab4" category="list-text">Astra ディレクトリに移動します。</block>
+  <block id="f3a336387913fb09b49faa1d3e15bdde" category="list-text">イメージをローカルレジストリに追加します。</block>
+  <block id="cbe717f6539d2c2f1ad28aa5bb9769f1" category="list-text">適切なスクリプトを使用して、イメージをロードし、イメージにタグを付け、ローカルレジストリにプッシュします。</block>
+  <block id="8a1bf6a101dd1b45b027b1f821aa60ac" category="paragraph">Docker の場合：</block>
+  <block id="175a4c6a4a71657d0fb6c846c5262661" category="paragraph">Podman の場合：</block>
+  <block id="057ec9b76bdef18315460f3694cd5b11" category="list-text">ベアメタルOpenShiftクラスタのWebコンソールにログインします。サイドメニューから、[演算子]&gt;[演算子ハブ]を選択します。「stra」と入力して、「NetApp-acc-operator」のリストを表示します。</block>
+  <block id="6126235bdbea31bbacde8866394afa2a" category="paragraph"><block ref="6126235bdbea31bbacde8866394afa2a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="974a814446bc76aab73372507d45e43a" category="admonition">「NetApp-acc-operator」は、Red Hat OpenShift Operatorの認定を受けたもので、OperatorHubカタログの下にリストされています。</block>
+  <block id="1c9daf0b08f9d133b246b600ab8207a2" category="list-text">「NetApp-acc-operator」を選択し、「Install」をクリックします。</block>
+  <block id="b08ed73f0447038b95f2b48dc19ae4de" category="paragraph"><block ref="b08ed73f0447038b95f2b48dc19ae4de" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="011458ebb9f725c15dc64d31b2c8da08" category="list-text">適切なオプションを選択し、[インストール]をクリックします。</block>
+  <block id="34228ab26ecc4d96c7489233dfaa7aec" category="paragraph"><block ref="34228ab26ecc4d96c7489233dfaa7aec" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4ff9b0a64935c2ecc86c1f8a64828aeb" category="list-text">インストールを承認し、オペレータがインストールされるまで待ちます。</block>
+  <block id="304c4bd8e7105921eca8c0352d7cddc6" category="paragraph"><block ref="304c4bd8e7105921eca8c0352d7cddc6" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="53e0a6c1a95ced69c04f31a15427c300" category="list-text">この段階で、オペレータは正常にインストールされ、使用可能な状態になります。View Operator（オペレーターの表示）をクリックして、Astra Control Centerのインストールを開始します。</block>
+  <block id="fbb0245c6a7767072ab04419c51840dc" category="paragraph"><block ref="fbb0245c6a7767072ab04419c51840dc" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="0d776fc8b4850f49686798442cf91dcc" category="list-text">Astra Control Centerをインストールする前に、事前にプッシュしたDockerレジストリからAstraイメージをダウンロードするプルシークレットを作成します。</block>
+  <block id="18af2361ff0ba3b248024fb9d6fe4f94" category="paragraph"><block ref="18af2361ff0ba3b248024fb9d6fe4f94" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="8c19ce93be726a03041ac3f89f868efe" category="list-text">Astra Control CenterのイメージをDocker private repoから取得するには、NetApp-acc-operator'ネームスペースにシークレットを作成します。このシークレット名は、後の手順でAstra Control Center YAMLマニフェストに表示されます。</block>
+  <block id="e5113dce4cdeac74feb705bb287a4f3c" category="paragraph"><block ref="e5113dce4cdeac74feb705bb287a4f3c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="95a5ef5680b7f2ecac39af1f05d7da44" category="list-text">サイドメニューから、[演算子]&gt;[インストールされた演算子]を選択し、[提供されたAPI ]セクションの下にある[インスタンスの作成]をクリックします。</block>
+  <block id="79e4147b842de94c1ed2e1a3859ffac2" category="paragraph"><block ref="79e4147b842de94c1ed2e1a3859ffac2" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="97d1bb3a90d32f97f79e6a53dd08d03c" category="list-text">Create AstraControlCenterフォームに入力します名前、Astraアドレス、Astraバージョンを入力します。</block>
+  <block id="8b1e06abd816739a4bf12cc5556217a7" category="paragraph"><block ref="8b1e06abd816739a4bf12cc5556217a7" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="fe2c02c86280bba06337349b166cb9ec" category="admonition">[Astra Address]で、Astra Control CenterのFQDNアドレスを入力します。このアドレスは、Astra Control CenterのWebコンソールにアクセスするために使用されます。FQDNは、到達可能なIPネットワークにも解決される必要があり、DNSで設定する必要があります。</block>
+  <block id="1879b3dbbd0f96a8006586caa5f6acc4" category="list-text">アカウント名、Eメールアドレス、管理者の姓を入力し、デフォルトのボリューム再利用ポリシーをそのまま使用します。ロードバランサを使用している場合は、入力タイプを「AccTraefik」に設定します。それ以外の場合は、「Ingress .Controller」で「Generic」を選択します。イメージレジストリで、コンテナイメージのレジストリパスとシークレットを入力します。</block>
+  <block id="6f80b5d6019e9836173a9c3e73e9bb72" category="paragraph"><block ref="6f80b5d6019e9836173a9c3e73e9bb72" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="4bbb62c95c906d6cae5e35744c045789" category="admonition">この解決策 では、Metallbロードバランサが使用されます。したがって、入力タイプはAccTraefikです。これにより、Astra Control Center traefikゲートウェイが、LoadBalancerタイプのKubernetesサービスとして公開されます。</block>
+  <block id="ca441c58c4b4c99fc2383bb693883aad" category="list-text">管理者の名を入力し、リソースの拡張を設定して、ストレージクラスを指定します。Create をクリックします。 .</block>
+  <block id="fd35f5b06f70bbe7f21bec913bc5c908" category="paragraph"><block ref="fd35f5b06f70bbe7f21bec913bc5c908" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="e8faaaf07038b10285b090f06614a13c" category="paragraph">Astra Control Centerインスタンスのステータスは、[Deploying]から[Ready]に変わります。</block>
+  <block id="013d4c3a27fb49de795677fde0bc5637" category="paragraph"><block ref="013d4c3a27fb49de795677fde0bc5637" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="577e1b27adeadb525cb3822b311b580e" category="list-text">すべてのシステムコンポーネントが正常にインストールされ、すべてのポッドが実行されていることを確認します。</block>
+  <block id="e34e867469b8d6d40e42c1fbcc13a6d8" category="admonition">各ポッドのステータスが「Running」である必要があります。システムのポッドが導入されるまでに数分かかることがあります。</block>
+  <block id="f0715aec950586c7219883a1146313e2" category="list-text">すべてのポッドが実行中の場合は、次のコマンドを実行して1回限りのパスワードを取得します。出力のYAMLバージョンで、「status.deploymentState`」フィールドで展開された値を確認し、「status.uuid」値をコピーします。パスワードは「ACC-」で、その後にUUID値が続きます。（ACC -[UUID]）。</block>
+  <block id="5323e7a8f44f15c4b854425bacae9961" category="list-text">ブラウザで、指定したFQDNを使用してURLに移動します。</block>
+  <block id="b7504c73a319408ba7a31856d3cc33bd" category="list-text">デフォルトのユーザ名（インストール時に指定したEメールアドレス）とワンタイムパスワードACC-[UUID]を使用してログインします。</block>
+  <block id="fa84607b3da85b44ad51a00394b377a3" category="paragraph"><block ref="fa84607b3da85b44ad51a00394b377a3" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ed701e754a08a1db2d6ed7d6b057b677" category="admonition">誤ったパスワードを3回入力すると、管理者アカウントは15分間ロックされます。</block>
+  <block id="2a382eb7da620cf1bf6a9856d184f2ae" category="list-text">パスワードを変更して次に進みます。</block>
+  <block id="f69e71db80caab752e3de48872bc0775" category="paragraph"><block ref="f69e71db80caab752e3de48872bc0775" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5606aa503cb24d632b2d3d6d26bba282" category="inline-link">Astra Control Centerのインストールの概要</block>
+  <block id="3ef8290364229caec08a69a9dc1210a2" category="paragraph">Astra Control Centerのインストールの詳細については、を参照してください<block ref="bc78157234cb949291558917c3ff6530" category="inline-link-rx"></block> ページ</block>
+  <block id="d507eb4e66b24d44edccbe2de081c8ee" category="section-title">Astra Control Center をセットアップします</block>
+  <block id="7d36af14617797dc107c216138e691b8" category="paragraph">Astra Control Centerをインストールしたら、UIにログインし、ライセンスのアップロード、クラスタの追加、ストレージの管理、バケットの追加を行います。</block>
+  <block id="6c1178be2d30653be5bd4d983c0cc063" category="list-text">[アカウント]の下のホームページで、[ライセンス]タブに移動し、[ライセンスの追加]を選択してAstraライセンスをアップロードします。</block>
+  <block id="5ce505ecc4ac2381cf2f6f10c756e12c" category="paragraph"><block ref="5ce505ecc4ac2381cf2f6f10c756e12c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="11e4f085846f57731256b48458d16d14" category="list-text">OpenShiftクラスタを追加する前に、OpenShift WebコンソールからAstra Tridentボリュームスナップショットクラスを作成します。Volumeスナップショット・クラスには'csi.trident.netapp.io`ドライバが設定されています</block>
+  <block id="b7f41e3defbc129fcefeda0bf44c8520" category="paragraph"><block ref="b7f41e3defbc129fcefeda0bf44c8520" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="34790b071e5cae2220b79211e893b25f" category="list-text">Kubernetesクラスタを追加するには、ホームページでクラスタに移動し、Kubernetesクラスタを追加をクリックします。次に、クラスタの「kubeconfig」ファイルをアップロードし、クレデンシャル名を指定します。次へをクリックします。</block>
+  <block id="0daa3e63d38773439077e048a2cef23f" category="paragraph"><block ref="0daa3e63d38773439077e048a2cef23f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="5e9bf5e41a52eda9a2e9cba209976456" category="list-text">既存のストレージクラスは自動的に検出されます。デフォルトのストレージクラスを選択し、Next（次へ）をクリックし、Add cluster（クラスタの追加）をクリックします。</block>
+  <block id="8ce5ab6c9c9713ea4486eee5f9948971" category="paragraph"><block ref="8ce5ab6c9c9713ea4486eee5f9948971" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="ef4d5957882c015cefb490859e4f15d6" category="list-text">クラスタは数分で追加されます。OpenShift Container Platformクラスタを追加するには、手順1~4を繰り返します。</block>
+  <block id="e1fe148edfb186d5da919d8cae6906dc" category="inline-link">VolumeSnapshotClassオブジェクト</block>
+  <block id="ee0ad920dc5829b03e516c5107ad3438" category="admonition">管理対象のコンピューティングリソースとしてOpenShift運用環境を追加するには、Astra Tridentを実行してください<block ref="d15ae237ad3b308a19184f47e50243c7" category="inline-link-rx"></block> が定義されている。</block>
+  <block id="95ebc1f0d7c6454a2b87ff36972f5f34" category="list-text">ストレージを管理するには、バックエンドに移動し、管理するバックエンドに対する処理の下にある3つのドットをクリックします。[管理]をクリックします</block>
+  <block id="d99f2382e4cc5f03c6fed4e3d1f3bd80" category="paragraph"><block ref="d99f2382e4cc5f03c6fed4e3d1f3bd80" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a36dfeec2e98a9c00ff177a65b6225f6" category="list-text">ONTAP の資格情報を入力し、[次へ]をクリックします。情報を確認し、[管理]をクリックします。バックエンドは次の例のようになります。</block>
+  <block id="4cd455b89d9de68d8f9576fd14841a75" category="paragraph"><block ref="4cd455b89d9de68d8f9576fd14841a75" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="994b9ae6ce6143b2a2a8e21778a81a04" category="list-text">Astra Controlにバケットを追加するには、バケットを選択して追加をクリックします。</block>
+  <block id="c2944fb399eafdc70f74eb37d490716c" category="paragraph"><block ref="c2944fb399eafdc70f74eb37d490716c" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="cf38cfd3df92487e9123be954f44104d" category="list-text">バケットタイプを選択し、バケット名、S3サーバ名、またはIPアドレスとS3クレデンシャルを指定します。更新をクリックします。</block>
+  <block id="f28c5e55eadf141a0ea38d6f50e7068a" category="paragraph"><block ref="f28c5e55eadf141a0ea38d6f50e7068a" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="9da7a1f0f7fee71d4f5bd6f1da77b0bb" category="admonition">この解決策 では、AWS S3バケットとONTAP S3バケットの両方が使用されます。StorageGRID を使用することもできます。</block>
+  <block id="c5048148ad7d7ca070fd26190fe6fbbc" category="paragraph">バケットは正常な状態である必要があります。</block>
+  <block id="588a47f8680b394517b7ce47cefa162b" category="paragraph"><block ref="588a47f8680b394517b7ce47cefa162b" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="3c462efa05b868dfa6ad37a770a34b88" category="paragraph">アプリケーション対応データ管理用のAstra Control CenterへのKubernetesクラスタ登録の一部として、Astra Controlは、ロールバインドとネットアップ監視ネームスペースを自動的に作成し、アプリケーションポッドとワーカーノードから指標とログを収集します。サポートされているONTAPベースのストレージクラスのいずれかをデフォルトにします。</block>
+  <block id="1cf97dd1e6f6c8888d8fa6dcede7fac9" category="inline-link">Astra Control 管理にクラスタを追加</block>
+  <block id="7b7f260c982647b3aee51c681be792ef" category="inline-link">アプリケーション管理の要件</block>
+  <block id="7bc570394a747455e5ed6d1e45fea928" category="paragraph">お先にどうぞ<block ref="c05760bbebe492348e11379a4b684f6c" category="inline-link-rx"></block>では、クラスターにアプリケーションをインストールし（Astra Controlの外部）、Astra Controlの[アプリ]ページに移動して、アプリケーションとそのリソースを管理できます。Astraを使用したアプリケーションの管理の詳細については、を参照してください<block ref="951440f66d61a3a208669b9c835a031c" category="inline-link-rx"></block>。</block>
+  <block id="afec64d00ecbb0a170d3923b080dbacb" category="paragraph"><block ref="afec64d00ecbb0a170d3923b080dbacb" category="inline-link-macro-rx"></block></block>
+  <block id="125cef4ef1c84def1e6681dba3a747e2" category="summary">このページでは、FlexPod for OpenShift Container Platform 4ベアメタルの論理トポロジとインストールについて説明します。</block>
+  <block id="a0b6237d44a0d2c21f3d4a620c3985b9" category="doc">FlexPod for OpenShift Container Platform 4ベアメタルインストール</block>
+  <block id="f10e6f4168fd0b7a7938b99cb2a92f1d" category="inline-link-macro">前の図：解決策 コンポーネント。</block>
+  <block id="eb76defd1388bd0bcb80f85c792f7ae5" category="paragraph"><block ref="eb76defd1388bd0bcb80f85c792f7ae5" category="inline-link-macro-rx"></block></block>
+  <block id="49fb95a5bf8ec2fbf8b33e2f7c31fe29" category="inline-link">FlexPod with OpenShift Cisco Validated Design and Deploymentガイド（CVD）</block>
+  <block id="008b944b958a9cfc59f2436678d2218d" category="paragraph">FlexPod for OpenShift Container Platform 4のベアメタル設計、導入の詳細、およびNetApp Astra Tridentのインストールと設定については、を参照してください<block ref="a1cb5768a662f902b313f95b645289f1" category="inline-link-rx"></block>。このCVDでは、Ansibleを使用したFlexPod およびOpenShift Container Platformの導入について説明します。CVDには、ワーカーノード、Astra Tridentインストール、ストレージバックエンド、ストレージクラス構成の準備に関する詳細も記載されています。この構成は、Astra Control Centerの導入と構成を行うためのいくつかの前提条件です。</block>
+  <block id="c2d52e27011d5f3f8bfaac3b8d5a4660" category="paragraph">次の図は、FlexPod 上のOpenShift Container Platform 4ベアメタルを示しています。</block>
+  <block id="00ce1a07690efff1e4feab7bc0956769" category="paragraph"><block ref="00ce1a07690efff1e4feab7bc0956769" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="a4307cd40efb0761d454f4410b6aa2a9" category="section-title">VMware環境に実装されたOpenShift Container Platform 4用FlexPod</block>
+  <block id="d956a6bea51428aaa4953f6370cebb6d" category="inline-link">OpenShift Container Platform 4のFlexPod データセンター</block>
+  <block id="069c6305d743d0580f896751ad108a78" category="paragraph">VMware vSphereを実行しているFlexPod にRed Hat OpenShift Container Platform 4を導入する方法については、を参照してください<block ref="a2d0c54fb4dd644ab00e9ecd40f02c05" category="inline-link-rx"></block>。</block>
+  <block id="dec02db6fa2e343fef05af969396afb1" category="paragraph">次の図は、vSphere上のOpenShift Container Platform 4のFlexPod を示しています。</block>
+  <block id="c65207706ad820c9c1a22f0c2f27bfca" category="paragraph"><block ref="c65207706ad820c9c1a22f0c2f27bfca" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="42b53f21476aa8c4c53a3f38cb4810e7" category="inline-link-macro">次の例は、AWSでRed Hat OpenShiftを実装したものです。</block>
+  <block id="70f195922a6a8320c691239ce6bd1392" category="paragraph"><block ref="70f195922a6a8320c691239ce6bd1392" category="inline-link-macro-rx"></block></block>
+  <block id="7b512a08eb99537a765ea81e147c01fc" category="summary">このセクションでは、さまざまな検証済みのユースケースを使用して解決策 を再確認します。</block>
+  <block id="1b62bfa64f2673cba195487fd8feb18a" category="inline-link-macro">前のレポート：OpenShift Container PlatformにAstra Control Centerをインストールしました。</block>
+  <block id="0e2a25b6bed87f8f40bab007ddf8aa69" category="paragraph"><block ref="0e2a25b6bed87f8f40bab007ddf8aa69" category="inline-link-macro-rx"></block></block>
+  <block id="6dc6f752ebbf33a1e47d6e58b3355a44" category="paragraph">このセクションでは、いくつかのユースケースで解決策 を復習します。</block>
+  <block id="c7e7c6dc1d148c332dac305c5895f19f" category="list-text">リモートバックアップから、クラウドで実行されている別のOpenShiftクラスタへのステートフルアプリケーションのリストア。</block>
+  <block id="0c2fac35b74d2651a0cf203e46b43e81" category="list-text">OpenShiftクラスタ内の同じネームスペースへのステートフルアプリケーションのリストア。</block>
+  <block id="cb50c69a87472d190c5774a3b4a3ba23" category="list-text">あるFlexPod システム（OpenShift Container Platformベアメタル）から別のFlexPod システム（VMware上のOpenShift Container Platform）にクローニングすることでアプリケーションを移動できます。</block>
+  <block id="d99ec67419b81a899072309b77de3b1b" category="paragraph">特に、この解決策 で検証されるのはユースケースが少ないことがわかります。この検証は、Astra Control Centerの全機能を表しているわけではありません。</block>
+  <block id="a9462b7caf51a5f0b6a2b5a33fb45816" category="inline-link-macro">Next：リモートバックアップを使用したアプリケーションのリカバリ。</block>
+  <block id="99e101fa8a67abbcc78b48de44a36fe8" category="paragraph"><block ref="99e101fa8a67abbcc78b48de44a36fe8" category="inline-link-macro-rx"></block></block>
+  <block id="4a4ae8a45209f121c5563aef13d0350d" category="sidebar">Cisco IntersightとNetApp ONTAP ストレージ</block>
+  <block id="791474f815efa1479f85126e0698e330" category="sidebar">ネットアップのAstraとCisco Intersightを活用したFlexPod ハイブリッドクラウドをRed Hat OpenShiftに活用</block>
 </blocks>

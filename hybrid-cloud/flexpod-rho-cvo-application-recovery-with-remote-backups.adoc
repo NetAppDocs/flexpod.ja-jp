@@ -1,0 +1,277 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/flexpod-rho-cvo-application-recovery-with-remote-backups.html 
+keywords: application-consistent backup, recovery, use case, remote, backup, operatorhub 
+summary: Astraでは、アプリケーションと整合性のあるフルバックアップを作成できます。このバックアップを使用すると、アプリケーションのデータを使用して、オンプレミスのデータセンターやパブリッククラウドで実行されている別のKubernetesクラスタにリストアできます。アプリケーションのリカバリが正常に行われるかどうかを検証するには、FlexPod システムで実行されているアプリケーションのオンプレミス障害をシミュレートし、リモートバックアップを使用してクラウドで実行されているKubernetesクラスタにアプリケーションをリストアします。 
+---
+= リモートバックアップによるアプリケーションのリカバリ
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:flexpod-rho-cvo-solution-validation_overview.html["Previous：解決策 の検証の概要を示します。"]
+
+Astraでは、アプリケーションと整合性のあるフルバックアップを作成できます。このバックアップを使用すると、アプリケーションのデータを使用して、オンプレミスのデータセンターやパブリッククラウドで実行されている別のKubernetesクラスタにリストアできます。
+
+アプリケーションのリカバリが正常に行われるかどうかを検証するには、FlexPod システムで実行されているアプリケーションのオンプレミス障害をシミュレートし、リモートバックアップを使用してクラウドで実行されているKubernetesクラスタにアプリケーションをリストアします。
+
+サンプルアプリケーションは、データベースにMySQLを使用する価格表アプリケーションです。導入を自動化するために、を使用しました https://argo-cd.readthedocs.io/en/stable/["Argo CD"^] ツール。Argo CDは、Kubernetes向けの宣言型、GitOps、継続的デリバリーツールです。
+
+. オンプレミスOpenShiftクラスタにログインし、「argocd」という名前の新しいプロジェクトを作成します。
++
+image:flexpod-rho-cvo-image34.png["エラー：グラフィックイメージがありません"]
+
+. OperatorHubで'argocd'を検索し'Argo CD operatorを選択します
++
+image:flexpod-rho-cvo-image35.png["エラー：グラフィックイメージがありません"]
+
+. 「argocd」名前空間に演算子をインストールします。
++
+image:flexpod-rho-cvo-image36.png["エラー：グラフィックイメージがありません"]
+
+. オペレータに移動し、Create ArgCDをクリックします。
++
+image:flexpod-rho-cvo-image37.png["エラー：グラフィックイメージがありません"]
+
+. Argo CDインスタンスを'argocd'プロジェクトに配備するには'名前を指定してCreateをクリックします
++
+image:flexpod-rho-cvo-image38.png["エラー：グラフィックイメージがありません"]
+
+. Argo CDにログインするには、デフォルトのユーザはadminで、パスワードは「argocd -NetApp-cluster」という名前のシークレットファイルに含まれています。
++
+image:flexpod-rho-cvo-image39.png["エラー：グラフィックイメージがありません"]
+
+. サイド・メニューから'ルート>ロケーションを選択し'argocd'ルートのURLをクリックしますユーザ名とパスワードを入力します。
++
+image:flexpod-rho-cvo-image40.png["エラー：グラフィックイメージがありません"]
+
+. CLIを使用して、Argo CDにオンプレミスOpenShiftクラスタを追加します。
++
+....
+####Login to Argo CD####
+abhinav3@abhinav-ansible$ argocd-linux-amd64 login argocd-netapp-server-argocd.apps.ocp.flexpod.netapp.com --insecure
+Username: admin
+Password:
+'admin:login' logged in successfully
+Context'argocd-netapp-server-argocd.apps.ocp.flexpod.netapp.com' updated
+####List the On-Premises OpenShift cluster####
+abhinav3@abhinav-ansible$ argocd-linux-amd64 cluster add
+ERRO[0000] Choose a context name from:
+CURRENT  NAME                                                          CLUSTER              SERVER
+*        default/api-ocp-flexpod-netapp-com:6443/abhinav3              api-ocp-flexpod-netapp-com:6443   https://api.ocp.flexpod.netapp.com:6443
+         default/api-ocp1-flexpod-netapp-com:6443/abhinav3             api-ocp1-flexpod-netapp-com:6443  https://api.ocp1.flexpod.netapp.com:6443
+####Add On-Premises OpenShift cluster###
+abhinav3@abhinav-ansible$ argocd-linux-amd64 cluster add default/api-ocp1-flexpod-netapp-com:6443/abhinav3
+WARNING: This will create a service account `argocd-manager` on the cluster referenced by context `default/api-ocp1-flexpod-netapp-com:6443/abhinav3` with full cluster level admin privileges. Do you want to continue [y/N]? y
+INFO[0002] ServiceAccount "argocd-manager" already exists in namespace "kube-system"
+INFO[0002] ClusterRole "argocd-manager-role" updated
+INFO[0002] ClusterRoleBinding "argocd-manager-role-binding" updated
+Cluster 'https://api.ocp1.flexpod.netapp.com:6443' added
+....
+. ArgodCD UIで、[新しいアプリ]をクリックし、アプリ名とコードリポジトリの詳細を入力します。
++
+image:flexpod-rho-cvo-image41.png["エラー：グラフィックイメージがありません"]
+
+. ネームスペースとともにアプリケーションを導入するOpenShiftクラスタを入力します。
++
+image:flexpod-rho-cvo-image42.png["エラー：グラフィックイメージがありません"]
+
+. オンプレミスOpenShiftクラスタにアプリを導入するには、[同期]をクリックします。
++
+image:flexpod-rho-cvo-image43.png["エラー：グラフィックイメージがありません"]
+
+. OpenShift Container Platformコンソールで、プロジェクト価格表に移動し、ストレージでPVCの名前とサイズを確認します。
++
+image:flexpod-rho-cvo-image44.png["エラー：グラフィックイメージがありません"]
+
+. System Managerにログインし、PVCを確認します。
++
+image:flexpod-rho-cvo-image45.png["エラー：グラフィックイメージがありません"]
+
+. ポッドが実行されたら、サイドメニューからネットワーキング／ルートを選択し、「場所」の下のURLをクリックします。
++
+image:flexpod-rho-cvo-image46.png["エラー：グラフィックイメージがありません"]
+
+. 価格表アプリのホームページが表示されます。
++
+image:flexpod-rho-cvo-image47.png["エラー：グラフィックイメージがありません"]
+
+. Webページにレコードをいくつか作成します。
++
+image:flexpod-rho-cvo-image48.png["エラー：グラフィックイメージがありません"]
+
+. アプリケーションはAstra Control Centerで検出されます。アプリを管理するには、[アプリケーション]>[検出済み]に移動し、価格表アプリを選択して、[アクション]の[アプリケーションの管理]をクリックします。
++
+image:flexpod-rho-cvo-image49.png["エラー：グラフィックイメージがありません"]
+
+. 価格表アプリをクリックし、[データ保護]を選択します。この時点では、Snapshotやバックアップは作成されていません。スナップショットの作成をクリックして、オンデマンドスナップショットを作成します。
++
+image:flexpod-rho-cvo-image50.png["エラー：グラフィックイメージがありません"]
+
++
+
+NOTE: NetApp Astra Control Centerは、オンデマンドおよびスケジュールされたスナップショットとバックアップの両方をサポートします。
+
+. スナップショットが作成され、状態が正常になったら、そのスナップショットを使用してリモートバックアップを作成します。このバックアップはS3バケットに格納されます。
++
+image:flexpod-rho-cvo-image51.png["エラー：グラフィックイメージがありません"]
+
+. AWS S3バケットを選択してバックアップ処理を開始します。
++
+image:flexpod-rho-cvo-image52.png["エラー：グラフィックイメージがありません"]
+
+. バックアップ処理では、AWS S3バケットに複数のオブジェクトを含むフォルダを作成する必要があります。
++
+image:flexpod-rho-cvo-image53.png["エラー：グラフィックイメージがありません"]
+
+. リモートバックアップが完了したら、PVの元のボリュームをホストするStorage Virtual Machine（SVM）を停止して、オンプレミスでの災害をシミュレートします。
++
+image:flexpod-rho-cvo-image54.png["エラー：グラフィックイメージがありません"]
+
+. Webページを更新してシステム停止を確認します。Webページは使用できません。
++
+image:flexpod-rho-cvo-image55.png["エラー：グラフィックイメージがありません"]
+
++
+ウェブサイトは予想どおりに停止しているので、AWSで実行されているOpenShiftクラスタにAstraを使用して、リモートバックアップからアプリケーションを迅速にリカバリしてみましょう。
+
+. Astra Control Centerで、価格表アプリをクリックし、[データ保護]>[バックアップ]を選択します。バックアップを選択し、[操作]の下の[アプリケーションの復元]をクリックします。
++
+image:flexpod-rho-cvo-image56.png["エラー：グラフィックイメージがありません"]
+
+. デスティネーションクラスタとして「OCP-AWS」を選択し、ネームスペースに名前を付けます。[オンデマンドバックアップ]、[次へ]、[復元]の順にクリックします。
++
+image:flexpod-rho-cvo-image57.png["エラー：グラフィックイメージがありません"]
+
+. 「pricelist-app」という名前の新しいアプリケーションは、AWSで実行されるOpenShiftクラスタでプロビジョニングされます。
++
+image:flexpod-rho-cvo-image58.png["エラー：グラフィックイメージがありません"]
+
+. OpenShift Webコンソールで同じことを確認します。
++
+image:flexpod-rho-cvo-image59.png["エラー：グラフィックイメージがありません"]
+
+. 「pricelist -aws」プロジェクトの下のポッドがすべて実行されたら、「Routes」に移動し、URLをクリックしてWebページを起動します。
++
+image:flexpod-rho-cvo-image60.png["エラー：グラフィックイメージがありません"]
+
+
+
+このプロセスでは、貴重なアプリケーションが正常に復元され、Astra Control Centerを利用してAWS上でシームレスに実行されるOpenShiftクラスタでデータの整合性が維持されていることを検証します。
+
+
+
+== SnapshotコピーとDevTestのアプリケーション移動によるデータ保護
+
+この使用事例は、次のセクションで説明する2つの部分で構成されています。
+
+
+
+=== パート1
+
+Astra Control Centerを使用すると、アプリケーション対応のスナップショットを作成してローカルデータを保護できます。データを誤って削除したり破損したりした場合は、以前に記録したスナップショットを使用して、アプリケーションおよび関連データを既知の正常な状態に戻すことができます。
+
+このシナリオでは、開発とテスト（DevTest）チームが、Ghostブログアプリケーションであるサンプルのステートフルアプリケーション（ブログサイト）を導入し、コンテンツを追加し、アプリケーションを最新バージョンにアップグレードします。Ghostアプリケーションでは、データベースにSQLiteを使用します。アプリケーションをアップグレードする前に、Astra Control Centerを使用してスナップショット（オンデマンド）を作成し、データを保護します。詳細な手順は次のとおりです。
+
+. サンプルブログアプリをデプロイし、ArgoCDから同期します。
++
+image:flexpod-rho-cvo-image61.png["エラー：グラフィックイメージがありません"]
+
+. 最初のOpenShiftクラスタにログインし、Projectに移動して、検索バーにBlogと入力します。
++
+image:flexpod-rho-cvo-image62.png["エラー：グラフィックイメージがありません"]
+
+. サイドメニューから、[Networking]>[Routes]の順に選択し、URLをクリックします。
++
+image:flexpod-rho-cvo-image63.png["エラー：グラフィックイメージがありません"]
+
+. ブログのホームページが表示されます。ブログサイトにコンテンツを追加して公開します。
++
+image:flexpod-rho-cvo-image64.png["エラー：グラフィックイメージがありません"]
+
+. Astra Control Centerにアクセスします。最初に検出タブからアプリケーションを管理してから、Snapshotコピーを作成します。
++
+image:flexpod-rho-cvo-image65.png["エラー：グラフィックイメージがありません"]
+
++
+
+NOTE: 定義したスケジュールでスナップショット、バックアップ、またはその両方を作成することで、アプリケーションを保護することもできます。詳細については、を参照してください https://docs.netapp.com/us-en/astra-control-center/use/protect-apps.html["Snapshot とバックアップでアプリケーションを保護"^]。
+
+. オンデマンドスナップショットが正常に作成されたら、アプリケーションを最新バージョンにアップグレードします。現在のイメージのバージョンは「ghost:3.6 -アルパイン」で、ターゲットのバージョンは「ghost:latest」です。アプリをアップグレードするには、Gitリポジトリに直接変更を加え、Argo CDに同期します。
++
+image:flexpod-rho-cvo-image66.png["エラー：グラフィックイメージがありません"]
+
+. ブログサイトがダウンし、アプリケーション全体が破損しているために、最新バージョンへの直接アップグレードがサポートされていないことがわかります。
++
+image:flexpod-rho-cvo-image67.png["エラー：グラフィックイメージがありません"]
+
+. ブログサイトが利用できないことを確認するには、URLを更新します。
++
+image:flexpod-rho-cvo-image68.png["エラー：グラフィックイメージがありません"]
+
+. スナップショットからアプリケーションを復元します。
++
+image:flexpod-rho-cvo-image69.png["エラー：グラフィックイメージがありません"]
+
+. アプリケーションは同じOpenShiftクラスタにリストアされます。
++
+image:flexpod-rho-cvo-image70.png["エラー：グラフィックイメージがありません"]
+
+. アプリケーションのリストアプロセスがただちに開始されます。
++
+image:flexpod-rho-cvo-image71.png["エラー：グラフィックイメージがありません"]
+
+. 数分後に、使用可能なスナップショットからアプリケーションが正常にリストアされます。
++
+image:flexpod-rho-cvo-image72.png["エラー：グラフィックイメージがありません"]
+
+. Webページが表示されるかどうかを確認するには、URLを更新します。
++
+image:flexpod-rho-cvo-image73.png["エラー：グラフィックイメージがありません"]
+
+
+
+DevTestチームは、Astra Control Centerを活用して、ブログサイトアプリとその関連データをスナップショットを使用して正常にリカバリできます。
+
+
+
+=== パート2
+
+Astra Control Centerを使用すると、クラウド上またはオンプレミスで、クラウド上のどの場所にあるかに関係なく、アプリケーション全体をKubernetesクラスタ間でデータとともに移動できます。
+
+. DevTestチームは、アプリケーションを最初にサポートされているバージョン（「ゴースト- 4.6 -アルプス」）にアップグレードしてから、最終バージョン（「ゴースト-最新」）にアップグレードして、本番環境を準備します。その後、別のFlexPod システムで実行されている本番環境のOpenShiftクラスタにクローニングされているアプリケーションをアップグレードします。
+. この時点で、アプリケーションが最新バージョンにアップグレードされ、本番環境のクラスタにクローニングできる状態になります。
++
+image:flexpod-rho-cvo-image74.png["エラー：グラフィックイメージがありません"]
+
+. 新しいテーマを確認するには、ブログサイトを更新します。
++
+image:flexpod-rho-cvo-image75.png["エラー：グラフィックイメージがありません"]
+
+. Astra Control Centerから、VMware vSphereで実行されている他の本番環境OpenShiftクラスタにアプリケーションをクローニングします。
++
+image:flexpod-rho-cvo-image76.png["エラー：グラフィックイメージがありません"]
+
++
+これで、本番環境のOpenShiftクラスタで新しいアプリケーションクローンがプロビジョニングされます。
+
++
+image:flexpod-rho-cvo-image77.png["エラー：グラフィックイメージがありません"]
+
+. 本番環境のOpenShiftクラスタにログインし、プロジェクトブログを検索します。
++
+image:flexpod-rho-cvo-image78.png["エラー：グラフィックイメージがありません"]
+
+. サイドメニューから、Networking > Routesを選択し、Locationの下のURLをクリックします。同じホームページとコンテンツが表示されます。
++
+image:flexpod-rho-cvo-image79.png["エラー：グラフィックイメージがありません"]
+
+
+
+これでAstra Control Center解決策 の検証は終了です。Kubernetesクラスタが配置されている場所に関係なく、アプリケーション全体とそのデータを1つのKubernetesクラスタから別のクラスタにクローニングできるようになりました。
+
+link:flexpod-rho-cvo-conclusion.html["次は終わりです"]

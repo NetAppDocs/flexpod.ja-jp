@@ -1,0 +1,103 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/flexpod-rho-cvo-conclusion.html 
+keywords: conclusion 
+summary: この解決策 では、ネットアップのAstraポートフォリオを使用して、FlexPod とAWSで実行されるコンテナ化アプリケーション向けの保護計画を実装しました。ネットアップのAstra Control CenterとAstra Tridentは、Cloud Volumes ONTAP 、Red Hat OpenShift、FlexPod インフラとともに、この解決策 のコアコンポーネントを形成しました。 
+---
+= まとめ
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:flexpod-rho-cvo-application-recovery-with-remote-backups.html["Previous：リモートバックアップを使用したアプリケーションのリカバリ。"]
+
+この解決策 では、ネットアップのAstraポートフォリオを使用して、FlexPod とAWSで実行されるコンテナ化アプリケーション向けの保護計画を実装しました。ネットアップのAstra Control CenterとAstra Tridentは、Cloud Volumes ONTAP 、Red Hat OpenShift、FlexPod インフラとともに、この解決策 のコアコンポーネントを形成しました。
+
+Snapshotをキャプチャしてアプリケーションの保護を実証し、クラウド環境とオンプレミス環境で実行されているKubernetesクラスタ間でアプリケーションをリストアするフルコピーバックアップを実行しました。
+
+また、Kubernetesクラスタ間でアプリケーションのクローニングを実演し、お客様が希望する場所で選択したKubernetesクラスタにアプリケーションを移行できるようにする方法についても説明しました。
+
+FlexPod は絶えず進化しているため、お客様はアプリケーションやビジネス提供プロセスを最新化できます。この解決策 を使用することで、FlexPod のお客様は、解決策 のコストを低く抑えながら、短期またはフルタイムのDRプランを作成できる場所としてパブリッククラウドを使用して、クラウドネイティブアプリケーション向けのBCDRプランを自信を持って構築できます。
+
+Astra Controlを使用すると、クラスタの配置場所に関係なく、アプリケーション全体をKubernetesクラスタ間でデータとともに移動できます。また、クラウドネイティブアプリケーションの導入、運用、保護を高速化するのにも役立ちます。
+
+
+
+== トラブルシューティング
+
+トラブルシューティングのガイダンスについては、を参照してください https://docs.netapp.com/us-en/astra-control-center/support/troubleshooting-acc.html["オンラインドキュメント"^]。
+
+
+
+== 追加情報の参照先
+
+このドキュメントに記載されている情報の詳細については、以下のドキュメントや Web サイトを参照してください。
+
+* FlexPod ホームページ
++
+https://www.flexpod.com["https://www.flexpod.com"^]
+
+* FlexPod のシスコ検証済み設計および導入ガイド
++
+https://www.cisco.com/c/en/us/solutions/design-zone/data-center-design-guides/flexpod-design-guides.html["https://www.cisco.com/c/en/us/solutions/design-zone/data-center-design-guides/flexpod-design-guides.html"^]
+
+* Ansibleを使用して、VMwareのコードとしてInfrastructureを使用したFlexPod の導入
++
+https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_m6_esxi7u2.html["https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_m6_esxi7u2.html#AnsibleAutomationWorkflowandSolutionDeployment"^]
+
+* Ansibleを使用したRed Hat OpenShift Bare Metalのコードとしてのインフラを使用したFlexPod 導入
++
+https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_iac_redhat_openshift.html["https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_iac_redhat_openshift.html"^]
+
+* Cisco UCS ハードウェアおよびソフトウェア相互運用性ツール
++
+https://www.cisco.com/web/techdoc/ucs/interoperability/matrix/matrix.html["http://www.cisco.com/web/techdoc/ucs/interoperability/matrix/matrix.html"^]
+
+* Cisco Intersightのデータシート
++
+https://intersight.com/help/saas/home["https://intersight.com/help/saas/home"^]
+
+* ネットアップAstraのドキュメント
++
+https://docs.netapp.com/us-en/astra-control-center/index.html["https://docs.netapp.com/us-en/astra-control-center/index.html"^]
+
+* ネットアップアストラコントロールセンター
++
+https://docs.netapp.com/us-en/astra-control-center/index.html["https://docs.netapp.com/us-en/astra-control-center/index.html"^]
+
+* ネットアップアストラト Trident
++
+https://docs.netapp.com/us-en/trident/index.html["https://docs.netapp.com/us-en/trident/index.html"^]
+
+* NetApp Cloud Manager の略
++
+https://docs.netapp.com/us-en/occm/concept_overview.html["https://docs.netapp.com/us-en/occm/concept_overview.html"^]
+
+* NetApp Cloud Volumes ONTAP の略
++
+https://docs.netapp.com/us-en/occm/task_getting_started_aws.html["https://docs.netapp.com/us-en/occm/task_getting_started_aws.html"^]
+
+* Red Hat OpenShift のサービスです
++
+https://www.openshift.com/["https://www.openshift.com/"^]
+
+* NetApp Interoperability Matrix Tool で確認できます
++
+http://support.netapp.com/matrix/["http://support.netapp.com/matrix/"^]
+
+
+
+
+
+== バージョン履歴
+
+|===
+| バージョン | 日付 | ドキュメントのバージョン履歴 
+
+
+| バージョン 1.0 以降 | 2022年7月 | ACC 22.04.0用リリース。 
+|===

@@ -1,0 +1,36 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/flexpod-rho-cvo-red-hat-openshift-on-aws.html 
+keywords: red hat, openshift, aws, deployment, master, worker 
+summary: DRサイトとしてAWSに実装された、独立した自己管理OpenShift Container Platform 4クラスタです。マスターノードとワーカーノードは、3つのアベイラビリティゾーンにまたがって配置されるため、高可用性が実現します。 
+---
+= AWSにRed Hat OpenShiftを実装しました
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:flexpod-rho-cvo-flexpod-for-openshift-container-platform-4-bare-metal-installation.html["従来：FlexPod for OpenShift Container Platform 4ベアメタルインストール"]
+
+DRサイトとしてAWSに実装された、独立した自己管理OpenShift Container Platform 4クラスタです。マスターノードとワーカーノードは、3つのアベイラビリティゾーンにまたがって配置されるため、高可用性が実現します。
+
+image:flexpod-rho-cvo-image10.png["エラー：グラフィックイメージがありません"]
+
+....
+[ec2-user@ip-172-30-164-92 ~]$ oc get nodes
+NAME                             STATUS   ROLES    AGE   VERSION
+ip-172-30-164-128.ec2.internal   Ready    worker   29m   v1.22.8+f34b40c
+ip-172-30-164-209.ec2.internal   Ready    master   36m   v1.22.8+f34b40c
+ip-172-30-165-160.ec2.internal   Ready    master   33m   v1.22.8+f34b40c
+ip-172-30-165-93.ec2.internal    Ready    worker   30m   v1.22.8+f34b40c
+ip-172-30-166-162.ec2.internal   Ready    master   36m   v1.22.8+f34b40c
+ip-172-30-166-51.ec2.internal    Ready    worker   28m   v1.22.8+f34b40c
+....
+OpenShiftはとして導入されます https://docs.openshift.com/container-platform/4.8/installing/installing_aws/installing-aws-private.html["プライベートクラスタ"^] AWS上の既存のVPCに接続できます。プライベートOpenShift Container Platformクラスタは外部エンドポイントを公開しないため、内部ネットワークからのみアクセスでき、インターネットには表示されません。シングルノードのNetApp Cloud Volumes ONTAP は、NetApp Cloud Managerを使用して導入されます。これにより、TridentからAstraにバックエンドとしてストレージが提供されます。
+
+AWSへのOpenShiftのインストールの詳細については、を参照してください https://docs.openshift.com/container-platform/4.8/installing/installing_aws/installing-aws-vpc.html["OpenShiftのドキュメント"^]。
+
+link:flexpod-rho-cvo-netapp-cloud-volumes-ontap.html["次のステップ：NetApp Cloud Volumes ONTAP"]

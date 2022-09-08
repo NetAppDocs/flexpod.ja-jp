@@ -1,0 +1,27 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/flexpod-rho-cvo-solution-validation_overview.html 
+keywords: validation, overview, restoring, application mobility, 
+summary: このセクションでは、さまざまな検証済みのユースケースを使用して解決策 を再確認します。 
+---
+= 概要
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:flexpod-rho-cvo-astra-control-center-installation-on-openshift-container-platform.html["前のレポート：OpenShift Container PlatformにAstra Control Centerをインストールしました。"]
+
+このセクションでは、いくつかのユースケースで解決策 を復習します。
+
+* リモートバックアップから、クラウドで実行されている別のOpenShiftクラスタへのステートフルアプリケーションのリストア。
+* OpenShiftクラスタ内の同じネームスペースへのステートフルアプリケーションのリストア。
+* あるFlexPod システム（OpenShift Container Platformベアメタル）から別のFlexPod システム（VMware上のOpenShift Container Platform）にクローニングすることでアプリケーションを移動できます。
+
+
+特に、この解決策 で検証されるのはユースケースが少ないことがわかります。この検証は、Astra Control Centerの全機能を表しているわけではありません。
+
+link:flexpod-rho-cvo-application-recovery-with-remote-backups.html["Next：リモートバックアップを使用したアプリケーションのリカバリ。"]

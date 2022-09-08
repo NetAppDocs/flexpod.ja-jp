@@ -2,6 +2,31 @@
 section: hybrid-cloud
 title: ハイブリッドクラウド
 entries:
+- title: ネットアップのAstraとCisco Intersightを活用したFlexPod ハイブリッドクラウドをRed Hat OpenShiftに活用
+  type: solutions
+  entries:
+  - title: 解決策の概要
+    url: "/hybrid-cloud/flexpod-rho-cvo-solution-overview.html"
+  - title: 解決策コンポーネント
+    url: "/hybrid-cloud/flexpod-rho-cvo-solution-components.html"
+  - title: インストールと設定
+    entries:
+    - title: FlexPod for OpenShift Container Platform 4ベアメタルインストール
+      url: "/hybrid-cloud/flexpod-rho-cvo-flexpod-for-openshift-container-platform-4-bare-metal-installation.html"
+    - title: AWSにRed Hat OpenShiftを実装しました
+      url: "/hybrid-cloud/flexpod-rho-cvo-red-hat-openshift-on-aws.html"
+    - title: NetApp Cloud Volumes ONTAP の略
+      url: "/hybrid-cloud/flexpod-rho-cvo-netapp-cloud-volumes-ontap.html"
+    - title: OpenShift Container PlatformにAstra Control Centerをインストールします
+      url: "/hybrid-cloud/flexpod-rho-cvo-astra-control-center-installation-on-openshift-container-platform.html"
+  - title: 解決策の検証
+    entries:
+    - title: 概要
+      url: "/hybrid-cloud/flexpod-rho-cvo-solution-validation_overview.html"
+    - title: リモートバックアップによるアプリケーションのリカバリ
+      url: "/hybrid-cloud/flexpod-rho-cvo-application-recovery-with-remote-backups.html"
+  - title: まとめ
+    url: "/hybrid-cloud/flexpod-rho-cvo-conclusion.html"
 - title: NetApp Cloud Insights for FlexPod の略
   type: solutions
   entries:
