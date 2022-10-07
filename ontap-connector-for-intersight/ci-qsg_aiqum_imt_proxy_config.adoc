@@ -1,0 +1,68 @@
+---
+sidebar: sidebar 
+permalink: ontap-connector-for-intersight/ci-qsg_aiqum_imt_proxy_config.html 
+keywords: cisco, intersight, intersight assist, netapp, ontap, connector, configuration, active iq unified manager, proxy, imt, deployment, interoperability, ai qm, ova, cli 
+summary: プロキシサーバを設定するAIQ UMは、IMT サービスを利用するためにCLIでセットアップする必要があります。 
+---
+= IMT サービス用にAIQ UMプロキシサーバを設定
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+NetApp ONTAP ストレージでAIQ UM for Cisco Intersightのプロキシサーバを使用している場合は、Interoperability Matrix Toolサービス（IMT ）を利用するためにコマンドラインインターフェイス（CLI）を使用してセットアップを設定する必要があります。Active IQ Unified Manager UMプロキシサーバの設定には、仮想マシン（OVA）診断シェルを使用する必要があります。
+
+
+NOTE: AIQ UM Diagシェルへのアクセス方法については、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/Active_IQ_Unified_Manager/How_to_access_Active_IQ_Unified_Manager_Virtual_Machine_OVA_DIAG_shell["Active IQ Unified Manager 仮想マシン（OVA）のDIAGシェルへのアクセス方法"]
+
+* 手順 *
+
+. AIQ UMターミナルにログインし、次のコマンドを実行してUMにログインします。
++
+[listing]
+----
+um cli login -u <um maintenance user name>
+----
++
+* 例 *
+
++
+[listing]
+----
+um cli login -u admin
+----
+. 次のコマンドを実行して'imm_proxy_host'およびimm_proxy_port'を設定します
++
+
+NOTE: IMT プロキシは、AutoSupport （ASUP）プロキシ設定とは別の設定です。
+
++
+[listing]
+----
+um option set imt.https.proxy.host=<IMT_PROXY_HOST>
+um option set imt.https.proxy.port=<IMT_PROXY_PORT>
+----
++
+* 例 *
+
++
+[listing]
+----
+um option set imt.https.proxy.host=example-proxy.cls.eng.com
+um option set imt.https.proxy.port=8200
+----
++
+
+NOTE: IMT プロキシサーバ構成では、認証はサポートされていません。
+
+. 次のコマンドを使用してIMT プロキシの詳細を表示し'proxy_host'およびproxy_port'の設定を確認します
++
+[listing]
+----
+um option list |grep imt
+----
+

@@ -581,16 +581,12 @@
   <block id="7f0e76e050a690f383ba518e5dc386f3" category="cell">NetApp FAS / AFF ディスクシェルフのドキュメント</block>
   <block id="e76c07915a60bfdaf4c9dd87979fa449" category="cell">NetApp DS212C ディスクシェルフ</block>
   <block id="b539e925204802559371bf5b81d79954" category="inline-link">DS212C ディスクシェルフのマニュアル</block>
-  <block id="ef162519d16b1936bf31da3a369049a1" category="cell"><block ref="ef162519d16b1936bf31da3a369049a1" category="inline-link-rx"></block></block>
   <block id="215bdc4f5901db3322a51a02e5573550" category="cell">NetApp DS224C ディスクシェルフ</block>
   <block id="2a23643eed53b0879cb9ffff0a404bfb" category="inline-link">DS224C ディスクシェルフのドキュメント</block>
-  <block id="779556aec1edf8b5675c2d3dfa53e0c3" category="cell"><block ref="779556aec1edf8b5675c2d3dfa53e0c3" category="inline-link-rx"></block></block>
   <block id="d7592745d562764dea1fb30de121bb8a" category="cell">NetApp DS460C ディスクシェルフ</block>
   <block id="cc65918bd28bab6767cc0d37580a9bd0" category="inline-link">DS460C ディスクシェルフのドキュメント</block>
-  <block id="c1993083b76561b6cc7488ea49dad053" category="cell"><block ref="c1993083b76561b6cc7488ea49dad053" category="inline-link-rx"></block></block>
   <block id="a3cf3a1f214dd05382c45e1c59088a60" category="cell">NetApp NS224 NVMe SSD ディスクシェルフ</block>
   <block id="87db9ffbb33e8796f7f110bc6b8b591d" category="inline-link">NS224 ディスクシェルフのドキュメント</block>
-  <block id="e509169f7b763c049d6e1cd8959bb624" category="cell"><block ref="68bc1010e02188d9b3d4ec8388e14a51" category="inline-link-rx"></block></block>
   <block id="16f17b706ba2e29ed39978b26d5efd75" category="section-title">ネットアップのドライブ</block>
   <block id="1db61abeed53a1e4b952c0d4bae14ca3" category="paragraph">ネットアップドライブの技術仕様には、フォームファクタサイズ、ディスク容量、ディスク rpm 、サポートするコントローラ、 ONTAP のバージョンなどがあります。これらの仕様は、の「ドライブ」セクションに記載されています<block ref="afd6b1daca313ab42848776252cb3eb9" category="inline-link-rx"></block>。</block>
   <block id="0abcd1fb272492f917788b846dcc6151" category="summary">FlexPod のアーキテクチャは、本ドキュメントで説明する一連のルールで定義されています。ハードウェアコンポーネントとソフトウェア構成は、 Cisco Hardware Compatibility List （ HCL ；ハードウェア互換性リスト）とネットアップの IMT でサポートされている必要があります。</block>
@@ -9192,4 +9188,19 @@
   <block id="b2f3408c9d01ee65202784c85e804e29" category="inline-link-macro">次の例は、コントローラからのTerraformの実行です。</block>
   <block id="b676b4f0a7c70c0b6b427d2d63263495" category="paragraph"><block ref="b676b4f0a7c70c0b6b427d2d63263495" category="inline-link-macro-rx"></block></block>
   <block id="549e147409126d885754994939d9cb6c" category="sidebar">ネットアップのCloud Volumes ONTAP とCisco Intersightを活用したFlexPod ハイブリッドクラウドfor Google Cloud Platform</block>
+  <block id="b77014effa68d8bd1b8a5868123a2a63" category="summary">プロキシサーバを設定するAIQ UMは、IMT サービスを利用するためにCLIでセットアップする必要があります。</block>
+  <block id="e814e5396b09bd235085ad390f6ea986" category="doc">IMT サービス用にAIQ UMプロキシサーバを設定</block>
+  <block id="5a66f19b0ec8be9c2e0a7c58787ea9b1" category="paragraph">NetApp ONTAP ストレージでAIQ UM for Cisco Intersightのプロキシサーバを使用している場合は、Interoperability Matrix Toolサービス（IMT ）を利用するためにコマンドラインインターフェイス（CLI）を使用してセットアップを設定する必要があります。Active IQ Unified Manager UMプロキシサーバの設定には、仮想マシン（OVA）診断シェルを使用する必要があります。</block>
+  <block id="80b32c2ac8f5fd5845a3ccaf583c8c8b" category="inline-link">Active IQ Unified Manager 仮想マシン（OVA）のDIAGシェルへのアクセス方法</block>
+  <block id="baf8ab71191c15b45a74e4bc93f0b0cf" category="admonition">AIQ UM Diagシェルへのアクセス方法については、を参照してください<block ref="6b434b6393786ea1d3dba8a708c6486d" category="inline-link-rx"></block></block>
+  <block id="22b912c9ddb3da961206d948f4472107" category="list-text">AIQ UMターミナルにログインし、次のコマンドを実行してUMにログインします。</block>
+  <block id="938f1047c15f00fdd0cbfc8e4cfa15e1" category="paragraph">* 例 *</block>
+  <block id="6cb809a8bc4e94ce05646c538ea53abd" category="list-text">次のコマンドを実行して'imm_proxy_host'およびimm_proxy_port'を設定します</block>
+  <block id="527a65460dc1c7f686c7683b3ab72495" category="admonition">IMT プロキシは、AutoSupport （ASUP）プロキシ設定とは別の設定です。</block>
+  <block id="37f4f54ba1187a9487a7c7c02790e03e" category="admonition">IMT プロキシサーバ構成では、認証はサポートされていません。</block>
+  <block id="3b9d69f0a29fb6e182f8d000f6c02f3e" category="list-text">次のコマンドを使用してIMT プロキシの詳細を表示し'proxy_host'およびproxy_port'の設定を確認します</block>
+  <block id="1a8a82d18ec89729783cfac8c1b987e5" category="cell"><block ref="1a8a82d18ec89729783cfac8c1b987e5" category="inline-link-rx"></block></block>
+  <block id="f205de40b1d0e559049d3fcc494e1df9" category="cell"><block ref="f205de40b1d0e559049d3fcc494e1df9" category="inline-link-rx"></block></block>
+  <block id="a7925e750bfc040002383b6d7dc9f5ac" category="cell"><block ref="a7925e750bfc040002383b6d7dc9f5ac" category="inline-link-rx"></block></block>
+  <block id="eaa8da373e73883b20c172d7d760cc68" category="cell"><block ref="eaa8da373e73883b20c172d7d760cc68" category="inline-link-rx"></block></block>
 </blocks>

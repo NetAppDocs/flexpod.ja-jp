@@ -11,6 +11,8 @@ entries:
   url: "/ontap-connector-for-intersight/ci-qsg_requirements.html"
 - title: 作業を開始する前に
   url: "/ontap-connector-for-intersight/ci-qsg_before_you_begin.html"
+- title: IMT サービス用にAIQ UMプロキシサーバを設定
+  url: "/ontap-connector-for-intersight/ci-qsg_aiqum_imt_proxy_config.html"
 - title: クレームの目標
   url: "/ontap-connector-for-intersight/ci-qsg_claim_targets.html"
 - title: Cisco Intersight からネットアップストレージを監視

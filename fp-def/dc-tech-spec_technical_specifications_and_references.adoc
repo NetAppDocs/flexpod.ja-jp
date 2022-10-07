@@ -437,16 +437,16 @@ FAS データセンターでは、使用可能な FlexPod ストレージコン�
 | コンポーネント | NetApp FAS / AFF ディスクシェルフのドキュメント 
 
 
-| NetApp DS212C ディスクシェルフ | http://docs.netapp.com/platstor/topic/com.netapp.nav.sas3/home.html["DS212C ディスクシェルフのマニュアル"] 
+| NetApp DS212C ディスクシェルフ | https://www.netapp.com/data-storage/disk-shelves-storage-media/["DS212C ディスクシェルフのマニュアル"] 
 
 
-| NetApp DS224C ディスクシェルフ | http://docs.netapp.com/platstor/topic/com.netapp.nav.sas3/home.html["DS224C ディスクシェルフのドキュメント"] 
+| NetApp DS224C ディスクシェルフ | https://www.netapp.com/data-storage/disk-shelves-storage-media/["DS224C ディスクシェルフのドキュメント"] 
 
 
-| NetApp DS460C ディスクシェルフ | http://docs.netapp.com/platstor/topic/com.netapp.nav.sas3/home.html["DS460C ディスクシェルフのドキュメント"] 
+| NetApp DS460C ディスクシェルフ | https://www.netapp.com/data-storage/disk-shelves-storage-media/["DS460C ディスクシェルフのドキュメント"] 
 
 
-| NetApp NS224 NVMe SSD ディスクシェルフ | https://docs.netapp.com/platstor/index.jsp?topic=%2Fcom.netapp.doc.hw-ds-nvme-shelfid%2FGUID-2C057CF4-8897-4270-BF57-CA90333FBCF4.html&lang=en["NS224 ディスクシェルフのドキュメント"] 
+| NetApp NS224 NVMe SSD ディスクシェルフ | https://www.netapp.com/data-storage/disk-shelves-storage-media/["NS224 ディスクシェルフのドキュメント"] 
 |===
 
 
