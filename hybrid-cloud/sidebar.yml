@@ -2,6 +2,34 @@
 section: hybrid-cloud
 title: ハイブリッドクラウド
 entries:
+- title: ネットアップのCloud Volumes ONTAP とCisco Intersightを活用したFlexPod ハイブリッドクラウドfor Google
+    Cloud Platform
+  type: solutions
+  entries:
+  - title: 解決策の概要
+    url: "/hybrid-cloud/gcp-ncvo-solution-overview.html"
+  - title: 解決策コンポーネント
+    url: "/hybrid-cloud/gcp-ncvo-solution-components.html"
+  - title: インストールと設定
+    entries:
+    - title: FlexPod を導入します
+      url: "/hybrid-cloud/gcp-ncvo-deploy-flexpod.html"
+    - title: Cisco Intersightの設定
+      url: "/hybrid-cloud/gcp-ncvo-cisco-intersight-configuration.html"
+    - title: クラウド統合とICOの統合の前提条件
+      url: "/hybrid-cloud/gcp-ncvo-terraform-cloud-integration-with-ico-prerequisite.html"
+    - title: パブリッククラウドサービスプロバイダを設定
+      url: "/hybrid-cloud/gcp-ncvo-configure-public-cloud-service-provider.html"
+    - title: ハイブリッドクラウドネットアップストレージの導入を自動化
+      url: "/hybrid-cloud/gcp-ncvo-automated-deployment-of-hybrid-cloud-netapp-storage.html"
+    - title: DRワークフロー
+      url: "/hybrid-cloud/gcp-ncvo-dr-workflow.html"
+    - title: コントローラからのTerraformの実行
+      url: "/hybrid-cloud/gcp-ncvo-terraform-execution-from-controller.html"
+  - title: 解決策の検証
+    url: "/hybrid-cloud/gcp-ncvo-solution-validation.html"
+  - title: まとめ
+    url: "/hybrid-cloud/gcp-ncvo-conclusion.html"
 - title: ネットアップのAstraとCisco Intersightを活用したFlexPod ハイブリッドクラウドをRed Hat OpenShiftに活用
   type: solutions
   entries:

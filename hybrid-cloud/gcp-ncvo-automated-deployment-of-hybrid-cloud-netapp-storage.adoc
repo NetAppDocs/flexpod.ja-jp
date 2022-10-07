@@ -1,0 +1,190 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/gcp-ncvo-automated-deployment-of-hybrid-cloud-netapp-storage.html 
+keywords: google cloud, Cloud Volumes ONTAP, google cloud, environmental prerequisites, github repository, NetApp Cloud Manager API 
+summary: このセクションでは、ハイブリッドクラウドネットアップストレージの自動導入について説明します。 
+---
+= ハイブリッドクラウドネットアップストレージの導入を自動化
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:gcp-ncvo-configure-public-cloud-service-provider.html["前のページ：パブリッククラウドサービスプロバイダを設定"]
+
+
+
+== Google Cloud
+
+最初にAPIを有効にし、コネクタまたは異なるプロジェクトにあるCloud Volumes ONTAP システムを導入および管理する権限をCloud Managerに付与するサービスアカウントを作成する必要があります。
+
+Google CloudプロジェクトにConnectorを導入する前に、Connectorがオンプレミスまたは別のクラウドプロバイダで実行されていないことを確認してください。
+
+Cloud Manager からコネクタを直接導入するには、次の 2 組の権限が必要です。
+
+* Cloud ManagerからConnector VMインスタンスを起動する権限があるGoogleアカウントを使用してConnectorを導入する必要があります。
+* Connectorを導入する場合は、VMインスタンスを選択するよう求められます。Cloud Manager は、サービスアカウントから権限を取得して、 Cloud Volumes ONTAP システムを代わりに作成および管理します。権限は、サービスアカウントにカスタムロールを割り当てることによって提供されます。ユーザーとサービスアカウントに必要な権限を含むYAMLファイルを2つ設定する必要があります。の使用方法について説明します https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-gcp.html["権限を設定するYAMLファイル"^] こちらをご覧ください。
+
+
+を参照してください https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f3d0368b-7165-4d43-a76e-ae01011853d6["この詳細なビデオをご覧ください"^] を参照してください。
+
+
+
+=== Cloud Volumes ONTAP の導入モードとアーキテクチャ
+
+Cloud Volumes ONTAP は、シングルノードシステムとして、またハイアベイラビリティ（HA）ペアのノードとしてGoogle Cloudで利用できます。要件に基づいて、Cloud Volumes ONTAP 導入モードを選択できます。シングルノードシステムの HA ペアへのアップグレードはサポートされていません。シングルノードシステムとHAペアを切り替える場合は、新しいシステムを導入し、既存のシステムから新しいシステムにデータをレプリケートする必要があります。
+
+
+
+=== Google Cloudの高可用性Cloud Volumes ONTAP
+
+Google Cloudでは、複数の地域や1つの地域内の複数のゾーンにまたがるリソースの導入をサポートしています。HA導入は、Google Cloudで利用できる強力なn1-standardまたはn2標準のマシンタイプを使用する2つのONTAP ノードで構成されます。2つのCloud Volumes ONTAP ノード間でデータが同期的にレプリケートされ、障害発生時の可用性が確保されます。Cloud Volumes ONTAP のHA導入では、VPCごとに4つのVPCとプライベートサブネットが必要です。4つのVPC内のサブネットは、重複しないCIDR範囲でプロビジョニングする必要があります。
+
+4つのVPCは次の目的に使用されます。
+
+* vPC 0は、データノードおよびCloud Volumes ONTAP ノードへのインバウンド通信を可能にします。
+* vPC 1は、Cloud Volumes ONTAP ノード間のクラスタ接続を提供します。
+* vPC 2を使用すると、ノード間でNVRAM（不揮発性RAM）レプリケーションを実行できます。
+* vPC 3は、HAメディエーターインスタンスへの接続、およびノードの再構築のためのディスクレプリケーショントラフィックに使用されます。
+
+
+次の図は、Goggle Cloudで高可用性Cloud Volumes ONTAP を示しています。
+
+image:gcp-ncvo-image6.png["この図は、Goggle Cloudにおける高可用性Cloud Volumes ONTAP を示しています。"]
+
+詳細については、を参照してください https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-gcp.html["リンクをクリックしてください"^]。
+
+Google CloudでのCloud Volumes ONTAP のネットワーク要件については、を参照してください https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/reference-networking-gcp.html["リンクをクリックしてください"^]。
+
+データ階層化の詳細については、を参照してください https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html["リンクをクリックしてください"^]。
+
+
+
+=== 環境の前提条件を設定する
+
+Cloud Volumes ONTAP クラスタの自動作成、オンプレミスボリュームとクラウドボリューム間のSnapMirror設定、クラウドボリュームの作成などが、Terraform設定を使用して実行されます。これらのTerraform構成は、Terraform Cloud for Businessアカウントでホストされています。Intersight Cloud Orchestratorを使用すると、Terraform Cloud for Businessアカウントでのワークスペースの作成、ワークスペースへの必要な変数の追加、Terraformプランの実行などのタスクをオーケストレーションできます。
+
+これらの自動化タスクとオーケストレーションタスクには、以降のセクションで説明するように、いくつかの要件とデータが必要になります。
+
+
+
+=== GitHub リポジトリ
+
+TerraformコードをホストするにはGitHubアカウントが必要です。Intersight Orchestratorは、Terraform Cloud for Businessアカウントに新しいワークスペースを作成します。このワークスペースには、バージョン管理ワークフローが設定されています。そのためには、Terraformの構成をGitHubリポジトリに保持し、ワークスペースの作成時に入力として提供する必要があります。
+
+https://github.com/NetApp-Automation/FlexPod-hybrid-cloud-for-GCP-with-Intersight-and-CVO["このGitHubリンク"^] は、さまざまなリソースを使用したTerraformの構成を提供します。このリポジトリを作成し、GitHubアカウントにコピーを作成できます。
+
+このリポジトリでは'providator.tf'は'必要なTerraformプロバイダの定義を持っていますNetApp Cloud ManagerのTerraformプロバイダが使用されています。
+
+「variable.tf」には、すべての変数宣言が含まれています。これらの変数の値は、Intersight Cloud Orchestratorのワークフロー入力として入力されます。これにより、値をワークスペースに渡し、Terraform設定を実行するのに便利な方法が提供されます。
+
+「resources.tf」では、作業環境へのオンプレミスONTAP の追加、Google CloudでのシングルノードCloud Volumes ONTAP クラスタの作成、オンプレミスとCloud Volumes ONTAP 間のSnapMirror関係の確立、Cloud Volumes ONTAP でのクラウドボリュームの作成などに必要なさまざまなリソースを定義します。
+
+このリポジトリの内容は次のとおりです
+
+* 「providator.tf」には、必要なTerraformプロバイダの定義としてNetApp Cloud Managerが含まれています。
+* 「variables .tf」には、Intersight Cloud Orchestratorワークフローの入力として使用される変数宣言が含まれています。これにより、値をワークスペースに渡し、Terraform設定を実行する便利な方法が提供されます。
+* 「resources.tf」では、オンプレミスONTAP を作業環境に追加するためのさまざまなリソースを定義し、Google Cloud上でシングルノードCloud Volumes ONTAP クラスタを作成し、オンプレミスとCloud Volumes ONTAP 間のSnapMirror関係を確立し、Cloud Volumes ONTAP 上にクラウドボリュームを作成します。
+
+
+Cloud Volumes ONTAP 上に複数のボリュームを作成する場合は'リソース・ブロックを追加するか'Terraform構造体ごとにcountまたは’for _を使用できます
+
+Terraformのワークスペース、モジュール、およびポリシーセットを、Terraformの構成を含むgitリポジトリに接続するには、Terraform CloudがGitHubレポジトリにアクセスする必要があります。
+
+クライアントを追加すると、そのクライアントのOAuthトークンIDがIntersight Cloud Orchestratorのワークフロー入力の1つとして使用されます。
+
+. Terraform Cloud for Businessアカウントにログインします。[設定]>[プロバイダ]に移動します。
+. [VCSプロバイダの追加*]をクリックします。
+. バージョンを選択します。
+. 「*プロバイダの設定*」の手順に従います。
+. 追加したクライアントが* VCS Providers *に表示されます。OAuthトークンIDをメモします。
+
+
+
+
+=== NetApp Cloud Manager API処理のトークンを更新します
+
+Cloud Manager には、 Web ブラウザインターフェイスに加えて、 SaaS インターフェイスを介して Cloud Manager 機能に直接アクセスできるようにする REST API が用意されています。Cloud Manager サービスは、拡張可能な開発プラットフォームをまとめた複数のコンポーネントで構成されます。リフレッシュトークンを使用すると、API呼び出しごとにAuthorizationヘッダーに追加するアクセストークンを生成できます。
+
+APIを直接呼び出すことなく、cloudmanagerプロバイダは更新トークンを使用し、Terraformリソースを対応するAPI呼び出しに変換します。NetApp Cloud Manager API処理の更新トークンを生成する必要があります https://services.cloud.netapp.com/refresh-token["NetApp Cloud Central"^]。
+
+Cloud Volumes ONTAP クラスタの作成、SnapMirrorの設定などのリソースをCloud Managerで作成するには、Cloud Manager ConnectorのクライアントIDが必要です。
+
+. Cloud Managerにログインします。 https://cloudmanager.netapp.com/["https://cloudmanager.netapp.com/"^]。
+. コネクター（ * Connector ）をクリックします。
+. [ * コネクターの管理 * ] をクリックします。
+. 省略記号をクリックし、コネクタIDをコピーします。
+
+
+
+
+== Cisco Intersight Cloud Orchestratorのワークフローの開発
+
+Cisco Intersight Cloud Orchestratorは、次の場合にCisco Intersightで利用できます。
+
+* Intersight Premierのライセンスがインストールされている。
+* お客様は、アカウント管理者、ストレージ管理者、仮想化管理者、またはサーバ管理者であり、少なくとも1台のサーバを割り当て済みであることが必要です。
+
+
+
+
+=== ワークフローデザイナ
+
+ワークフローデザイナを使用すると、新しいワークフロー(タスクおよびデータ型)の作成や、既存のワークフローの編集を行って、Cisco Intersightでターゲットを管理できます。
+
+Workflow Designerを起動するには、[* Orchestration（*オーケストレーション）]>[Workflows *（ワークフロー*）]ダッシュボードには、[マイワークフロー*]、[サンプルワークフロー*]、[すべてのワークフロー*]タブの下に以下の詳細が表示されます。
+
+* 検証ステータス
+* 前回の実行ステータス
+* 実行数別上位ワークフロー
+* 上位のワークフローカテゴリ
+* システム定義ワークフローの数
+* Top Workflows by Targets（ターゲット別の上位ワークフロー
+
+
+ダッシュボードを使用すると、タブを作成、編集、クローニング、または削除できます。独自のカスタムビュータブを作成するには、*+*をクリックし、名前を指定し、列、タグ列、ウィジェットに表示する必要があるパラメータを選択します。タブに*ロック*アイコンがない場合は、タブの名前を変更できます。
+
+ダッシュボードの下には、次の情報を表示するワークフローが表形式のリストとして表示されます。
+
+* 表示名
+* 説明
+* システム定義
+* デフォルトバージョン
+* 実行
+* 前回の実行ステータス
+* 検証ステータス
+* 前回の更新
+* 組織
+
+
+Actionsカラムでは、次の操作を実行できます。
+
+* *実行。*ワークフローを実行します。
+* *履歴。*ワークフローの実行履歴を表示します。
+* *バージョンの管理。*ワークフローのバージョンを作成および管理します。
+* *削除。*ワークフローを削除します。
+* *再試行*失敗したワークフローを再試行します。
+
+
+
+
+=== ワークフロー
+
+次の手順で構成されるワークフローを作成します。
+
+* *ワークフローの定義。*表示名、概要 、およびその他の重要な属性を指定します。
+* *ワークフローの入力とワークフローの出力を定義します。*ワークフローの実行に必要な入力パラメータと、正常に実行されたときに生成される出力を指定します
+* *ワークフロータスクを追加します。*ワークフローデザイナで、ワークフローの機能を実行するために必要なワークフロータスクを1つ以上追加します。
+* *ワークフローを検証します。*ワークフローを検証して、タスク入出力の接続にエラーがないことを確認します。
+
+
+
+
+=== オンプレミスのFlexPod ストレージ用のワークフローを作成
+
+オンプレミスのFlexPod ストレージのワークフローを設定するには、を参照してください https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_cvo_ico_ntap.html["リンクをクリックしてください"^]。
+
+link:gcp-ncvo-dr-workflow.html["次：DRワークフロー："]

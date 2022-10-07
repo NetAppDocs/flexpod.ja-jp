@@ -1,0 +1,64 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/gcp-ncvo-solution-overview.html 
+keywords: tr4939, 4939, introduction, audience, solution topology 
+summary: 'このテクニカルレポートでは、FlexPod コンバージドインフラ解決策 、Google Cloud上のNetApp Cloud Volumes ONTAP 、およびCisco Intersightを統合して、DR用のハイブリッドクラウドデータセンターを形成しています。この解決策 では、Cisco Intersight Cloud Orchestratorを使用したオンプレミスONTAP ワークフローの設計と実行について説明します。また、ネットアップCloud Volumes ONTAP の導入、FlexPod とCloud Volumes ONTAP 間のデータレプリケーションおよびDRのオーケストレーションと自動化についても、Cisco Intersight Service for橋(Cisco Intersight Service for橋Corp Terraform)を使用して説明します。' 
+---
+= TR-4939：『FlexPod Hybrid Cloud for Google Cloud Platform with NetApp Cloud Volumes ONTAP and Cisco Intersight』
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+Ruchika Lahoti、ネットアップ
+
+
+
+== はじめに
+
+企業の継続性を確保するうえで重要な目標は、ディザスタリカバリ（DR）によってデータを保護することです。DRを使用すると、企業は業務をセカンダリサイトにフェイルオーバーし、あとでプライマリサイトに効率的かつ確実にリカバリおよびフェイルバックできます。自然災害、ネットワーク障害、ソフトウェアの脆弱性、人為的ミスなど、さまざまな懸念があるため、DR戦略を開発することがITの最優先事項となっています。
+
+DRに関しては、プライマリサイトで実行しているすべてのワークロードを、DRサイトで忠実に再現する必要があります。組織には、データベース、ファイルサービス、NFS、iSCSIストレージなど、すべてのエンタープライズデータの最新コピーも必要です。本番環境のデータは常に更新されるため、変更は定期的にDRサイトに転送する必要があります。
+
+DR環境の導入は、インフラやサイトに依存しないことが求められるため、ほとんどの組織にとって困難な課題です。必要なリソースの数や、セカンダリデータセンターのセットアップ、テスト、メンテナンスにかかるコストは、通常、本番環境全体のコストに迫ることがあります。データを継続的に同期し、シームレスなフェイルオーバーとフェイルバックを確立しながら、最小限のデータ容量で十分な保護を維持することは困難です。DRサイトを構築したら、本番環境からデータをレプリケートし、それを同期して先に進めるという課題に直面します。
+
+このテクニカルレポートでは、FlexPod コンバージドインフラ解決策 、Google Cloud上のNetApp Cloud Volumes ONTAP 、およびCisco Intersightを統合して、DR用のハイブリッドクラウドデータセンターを形成しています。この解決策 では、Cisco Intersight Cloud Orchestratorを使用したオンプレミスONTAP ワークフローの設計と実行について説明します。また、ネットアップCloud Volumes ONTAP の導入、FlexPod とCloud Volumes ONTAP 間のデータレプリケーションおよびDRのオーケストレーションと自動化についても、Cisco Intersight Service for橋(Cisco Intersight Service for橋Corp Terraform)を使用して説明します。
+
+次の図は、解決策 の概要を示しています。
+
+image:gcp-ncvo-image1.png["解決策 の概要"]
+
+この解決策 には、次のような複数の利点があります。
+
+* *オーケストレーションと自動化。* Cisco Intersightは、自動化を通じて提供される一貫したオーケストレーションフレームワークを提供することで、FlexPod ハイブリッドクラウドインフラの日常的な運用を簡易化します。
+* *カスタマイズされた保護。* Cloud Volumes ONTAP は、ONTAP からクラウドへのブロックレベルのデータレプリケーションを提供し、差分更新によってデスティネーションを最新の状態に維持します。ユーザは、たとえば、転送されるソースでの変更に基づいて、5分ごとまたは1時間ごとに同期スケジュールを指定できます。
+* *シームレスなフェイルオーバーとフェイルバック。*災害が発生した場合、ストレージ管理者はCloud Volume に迅速にフェイルオーバーできます。プライマリサイトがリカバリされると、DR環境で作成された新しいデータがソースボリュームと同期され、セカンダリデータレプリケーションが再確立されます。
+* *効率性：*データ圧縮、シンプロビジョニング、重複排除により、セカンダリクラウドコピー用のストレージスペースとコストを最適化します。データは圧縮と重複排除が行われた形式でブロックレベルで転送されるため、転送速度が向上します。また、データは低コストのオブジェクトストレージに自動的に階層化され、DRシナリオなどでアクセスされたときにのみハイパフォーマンスストレージに戻されます。これにより、継続的なストレージコストを大幅に削減できます。
+* * ITの生産性向上。* Intersightをインフラストラクチャおよびアプリケーションのライフサイクル管理向けの単一のセキュアなエンタープライズクラスのプラットフォームとして使用することで、解決策 の構成管理と手動タスクの自動化が容易になります。
+
+
+
+
+== 対象者
+
+本ドキュメントが対象とする主な読者は、セールスエンジニア、フィールドコンサルタント、プロフェッショナルサービス、ITマネージャ、 パートナー様のエンジニア、サイト信頼性エンジニア、クラウドアーキテクト、クラウドエンジニア、お客様が、ITの効率化とITイノベーションの実現のために構築されたインフラを活用したいと考えています。
+
+
+
+== 解決策 トポロジ
+
+このセクションでは、解決策 の論理トポロジについて説明します。次の図は、オンプレミスのFlexPod 環境、Google Cloudで実行されているNetApp Cloud Volumes ONTAP 、Cisco Intersight、NetApp Cloud Managerの解決策 トポロジを示しています。
+
+image:gcp-ncvo-image2.png["解決策 トポロジ"]
+
+コントロールプレーンとデータプレーンは、エンドポイント間で明確に示されます。データプレーンは、セキュアなサイト間VPN接続を使用して、FlexPod All Flash FAS で実行されているONTAP インスタンスをGoogle Cloud上のNetApp Cloud Volumes ONTAP インスタンスに接続します。
+
+FlexPod からNetApp Cloud Volumes ONTAP へのワークロードデータのレプリケーションはNetApp SnapMirrorによって処理され、オンプレミス環境とクラウド環境の両方でCisco Intersight Cloud Orchestratorを使用して全体的なプロセスが調整されます。Cisco Intersight Cloud OrchestratorはNetApp Cloud Managerのリソースプロバイダとして、NetApp Cloud Volumes ONTAP の導入に関連する処理を実行し、データレプリケーション関係を確立します。
+
+
+NOTE: この解決策 では、NetApp Cloud Volumes ONTAP インスタンスにあるコールドデータのバックアップと階層化もオプションでサポートされています。
+
+link:gcp-ncvo-solution-components.html["次の例は、解決策 コンポーネントです。"]

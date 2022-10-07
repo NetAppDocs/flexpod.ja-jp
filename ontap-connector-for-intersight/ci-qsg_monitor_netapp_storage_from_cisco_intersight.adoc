@@ -22,7 +22,7 @@ summary: ターゲットへの請求が完了すると、 Advantage Tier ライ�
 
 次のスクリーンショットは、 * Operate > Storage * 画面を示しています。
 
-image:ci-qsg_image9.png["スクリーンショットは、 [Operate &GT; Storage] 画面を示しています"]
+image:ci-qsg_image9.png["スクリーンショットは、 [Operate  Storage] 画面を示しています"]
 
 次のスクリーンショットは、ストレージクラスタの概要を示しています。
 

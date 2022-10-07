@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/gcp-ncvo-deploy-flexpod.html 
+keywords: deploy, installation, flexpod 
+summary: このページには、FlexPod インスタンスの導入に必要なリソースがリストされています。 
+---
+= FlexPod を導入します
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:gcp-ncvo-solution-components.html["前の図：解決策 コンポーネント。"]
+
+設計のさまざまな要素の構成や関連するベストプラクティスなど、FlexPod の設計および導入の詳細については、を参照してください https://www.cisco.com/c/en/us/solutions/design-zone/data-center-design-guides/flexpod-design-guides.html["FlexPod 向けのシスコ検証済み設計"^]。
+
+FlexPod は、UCS管理モードとCisco Intersight管理モードの両方に導入できます。FlexPod をUCS管理モードで導入している場合は、最新のCisco Validated Designが見つかります https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_m6_esxi7u2_design.html["こちらをご覧ください"^]。
+
+Cisco Unified Compute System（Cisco UCS）Xシリーズは、まったく新しいモジュラ型コンピューティングシステムであり、クラウドから構成、管理できます。最新のアプリケーションのニーズを満たし、柔軟性に優れた、将来に対応できるモジュラ設計によって運用効率、即応性、拡張性を向上させるように設計されています。Cisco Intersightが管理するUCS XシリーズプラットフォームをFlexPod インフラに組み込むための設計ガイダンスを提供します https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_xseries_esxi7u2_design.html["こちらをご覧ください"^]。
+
+FlexPod とCisco ACIの導入方法が用意されています https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi65u1_n9k_aci.html["こちらをご覧ください"^]。
+
+link:gcp-ncvo-cisco-intersight-configuration.html["次の例は、Cisco Intersightの設定です。"]

@@ -1,0 +1,99 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/gcp-ncvo-terraform-cloud-integration-with-ico-prerequisite.html 
+keywords: user token, terraform cloud target, agents, api 
+summary: このページでは、Cisco IntersightとTerraform Cloudの接続方法、ユーザトークンの生成方法、テラフォームクラウドターゲットの申し立て方法、およびTerraformクラウドエージェントの追加方法について説明します。 
+---
+= クラウド統合とICOの統合の前提条件
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:gcp-ncvo-cisco-intersight-configuration.html["前の手順：Cisco Intersightの設定。"]
+
+
+
+== 手順 1：Cisco IntersightとTerraform Cloudを接続します
+
+. Terraform Cloudアカウントの詳細情報を提供して、クラウドターゲットを請求または作成します。
+. プライベートクラウド用のTerraform Cloud Agentターゲットを作成して、お客様がデータセンターにエージェントをインストールし、Terraform Cloudと通信できるようにします。
++
+詳細については、を参照してください https://intersight.com/help/saas/features/terraform_cloud/admin["リンクをクリックしてください"^]。
+
+
+
+
+
+== 手順 2:ユーザートークンを生成します
+
+Terraform Cloudのターゲットを追加する際には、Terraform Cloud設定ページからユーザー名とAPIトークンを入力する必要があります。
+
+. Terraform Cloudにログインし、* User Tokens *にアクセスします。 https://app.terraform.io/app/settings/tokens["https://app.terraform.io/app/settings/tokens"^]。
+. [*新しいAPIトークンの作成*]をクリックします。
+. トークンを覚えて安全な場所に保存するための名前を割り当てます。
+
+
+
+
+== 手順 3：クラウドターゲットを要求
+
+. アカウント管理者、デバイス管理者、またはデバイス技術者の権限でIntersightにログインします。
+. [管理者]、[ターゲット]、[新しいターゲットの請求]の順に移動します。*
+. 「*カテゴリ*」で、「*クラウド*」をクリックします。
+. [*Terraform Cloud*]をクリックし、[*Start*]をクリックします。
++
+image:gcp-ncvo-image3.png["Cisco Intersightでのターゲットタイプの選択のスクリーンショット。"]
+
+. 次の図に示すように、ターゲットの名前、Terraform Cloudのユーザー名、APIトークン、およびTerraform Cloudのデフォルトの組織を入力します。
+. [*Default Managed Hosts]フィールドに、他の管理対象ホストと一緒に次のリンクを追加してください。
++
+** github.com
+** github-releases.githubusercontent.com
++
+image:gcp-ncvo-image4.png["Default Managed Hostフィールドのスクリーンショット。"]
+
+
+
+
+
+すべてが正しく入力されていれば、[* Intersight Targets]セクションにTerraform Cloudターゲットが表示されます。
+
+
+
+== 手順 4：クラウドエージェントを追加します
+
+前提条件
+
+* クラウドのターゲットをクラウド化
+* Terraform Cloud Agentを展開する前に、Intersight AssistをIntersightに主張。
+
+
+
+NOTE: 各アシストに対して請求できるエージェントは5人だけです。
+
+
+NOTE: Terraformへの接続を作成したら、Terraform AgentをスピンアップしてTerraformコードを実行する必要があります。
+
+. Terraform Cloudターゲットのドロップダウンリストから*Claim Terraform Cloud Agent *をクリックします。
+. Terraformクラウドエージェントの詳細を入力します。次のスクリーンショットは、Terraformエージェントの構成の詳細を示しています。
++
+image:gcp-ncvo-image5.png["Terraformエージェントの設定の詳細を示すスクリーンショット"]
+
+
+
+
+NOTE: 任意のTerraform Agentプロパティを更新できます。ターゲットが「接続されていない」状態で、「接続されていない」状態になっていない場合、Terraformエージェントに対してトークンが生成されていません。
+
+エージェントの検証が成功し、エージェントトークンが生成された後、組織やエージェントプールを再構成することはできません。Terraformエージェントが正常に配備された場合、ステータスは* Connected *と表示されます。
+
+Terraform Cloud統合を有効にして主張したら、Cisco Intersight Assistで1つ以上のTerraform Cloudエージェントを導入できます。Terraform Cloudエージェントは、クラウドターゲットの子ターゲットとしてモデル化されています。エージェント目標を要求すると、ターゲット請求が進行中であることを示すメッセージが表示されます。
+
+数秒後、ターゲットは「接続済み」状態に移行し、IntersightプラットフォームはエージェントからTerraform CloudゲートウェイにHTTPSパケットをルーティングします。
+
+Terraform Agentは正しく請求され、ターゲットの下に「* Connected *」と表示されます。
+
+link:gcp-ncvo-configure-public-cloud-service-provider.html["次の手順：パブリッククラウドサービスプロバイダを設定します。"]

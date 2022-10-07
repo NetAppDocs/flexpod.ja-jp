@@ -1,0 +1,105 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/gcp-ncvo-solution-validation.html 
+keywords: validation, data replication workflow, measurements 
+summary: このページでは、サンプルのデータレプリケーションワークフローを使用して解決策 を再確認し、測定値をいくつか確認して、FlexPod で実行されているNetApp ONTAP インスタンスからGoogle Cloudで実行されているNetApp Cloud Volumes ONTAP へのデータレプリケーションの整合性を検証します。 
+---
+= 解決策の検証
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:gcp-ncvo-terraform-execution-from-controller.html["前のバージョン：コントローラからのTerraformの実行。"]
+
+このセクションでは、サンプルのデータレプリケーションワークフローを使用して解決策 を再確認し、測定値をいくつか確認して、FlexPod で実行されているNetApp ONTAP インスタンスからGoogle Cloudで実行されているNetApp Cloud Volumes ONTAP へのデータレプリケーションの整合性を検証します。
+
+この解決策 では、Cisco Intersightワークフローオーケストレーションツールを使用しており、今回のユースケースで引き続き使用します。
+
+特に、この解決策 で使用される限定的なCisco Intersightのワークフローは、Cisco Intersightに含まれるすべてのワークフローを表しているわけではありません。独自の要件に基づいてカスタムワークフローを作成し、Cisco Intersightからトリガーされるようにすることができます。
+
+DRシナリオが成功するかどうかを検証するために、最初にSnapMirrorを使用して、FlexPod に含まれるONTAP のボリュームからCloud Volumes ONTAP にデータを移動します。その後、Googleクラウドコンピューティングインスタンスからデータにアクセスし、データ整合性チェックを実行できます。
+
+次に、この解決策 の成功基準を確認する手順の概要を示します。
+
+. FlexPod のONTAP ボリュームにあるサンプルデータセットでSHA256チェックサムを生成します。
+. FlexPod のONTAP とCloud Volumes ONTAP の間にVolume SnapMirror関係を設定します。
+. サンプルデータセットをFlexPod からCloud Volumes ONTAP にレプリケートします。
+. SnapMirror関係を解除し、Cloud Volumes ONTAP 内のボリュームを本番環境に昇格します。
+. Cloud Volumes ONTAP ボリュームとデータセットをGoogle Cloudのコンピューティングインスタンスにマッピングします。
+. Cloud Volumes ONTAP のサンプルデータセットでSHA256チェックサムを生成します。
+. ソースとデスティネーションのチェックサムを比較します。両方のチェックサムが一致していると考えられます。
+
+
+オンプレミスワークフローを実行するには、次の手順を実行します。
+
+. オンプレミスFlexPod のIntersightでワークフローを作成
++
+image:gcp-ncvo-image78.png["スクリーンショット"]
+
+. 必要な入力を指定し、ワークフローを実行します。
++
+image:gcp-ncvo-image79.png["スクリーンショット"]
+
+. システムマネージャで、新しく作成したSVMを確認します。
++
+image:gcp-ncvo-image80.png["スクリーンショット"]
+
+. 別のディザスタリカバリワークフローを作成して実行し、オンプレミスのFlexPod にボリュームを作成して、FlexPod とCloud Volumes ONTAP でこのボリューム間にSnapMirror関係を確立します。
++
+image:gcp-ncvo-image81.png["スクリーンショット"]
+
+. ONTAP システムマネージャで、新しく作成したボリュームを確認します。
++
+image:gcp-ncvo-image82.png["スクリーンショット"]
+
+. 同じNFSボリュームをオンプレミスの仮想マシンにマウントし、サンプルデータセットをコピーしてチェックサムを実行します。
++
+image:gcp-ncvo-image83.png["スクリーンショット"]
+
++
+image:gcp-ncvo-image84.png["スクリーンショット"]
+
+. Cloud Managerでレプリケーションステータスを確認します。データのサイズによっては、データ転送に数分かかることがあります。完了すると、SnapMirrorのステータスが* Idle *と表示されます。
++
+image:gcp-ncvo-image85.png["スクリーンショット"]
+
+. データ転送が完了したら、「Test_vol1」ボリュームをホストしているSVMを停止して、ソース側の災害をシミュレートします。
++
+SVMの停止後、「Test_vol1」ボリュームはCloud Managerに表示されません。
+
++
+image:gcp-ncvo-image86.png["スクリーンショット"]
+
+. レプリケーション関係を解除し、Cloud Volumes ONTAP デスティネーションボリュームを本番環境に昇格
++
+image:gcp-ncvo-image87.png["スクリーンショット"]
+
++
+image:gcp-ncvo-image88.png["スクリーンショット"]
+
+. ボリュームを編集し、エクスポートポリシーに関連付けてクライアントアクセスを有効にします。
++
+image:gcp-ncvo-image89.png["スクリーンショット"]
+
+. ボリュームの使用準備が完了しているマウントコマンドを取得します。
++
+image:gcp-ncvo-image90.png["スクリーンショット"]
+
++
+image:gcp-ncvo-image91.png["スクリーンショット"]
+
+. コンピューティング・インスタンスにボリュームをマウントし'デスティネーション・ボリュームにデータが存在することを確認して'sample_dataset_s2GB'ファイルのSHA256チェックサムを生成します
++
+image:gcp-ncvo-image92.png["スクリーンショット"]
+
+. ソース（FlexPod ）とデスティネーション（Cloud Volumes ONTAP ）の両方でチェックサム値を比較します。
+. チェックサムはソースとデスティネーションのチェックサムと同じです。
+
+
+ソースからデスティネーションへのデータレプリケーションが正常に完了し、データの整合性が維持されていることを確認できます。このデータは、ソースサイトがリストアを実行している間に、アプリケーションがクライアントにデータを提供するために安全に使用できるようになりました。
+
+link:gcp-ncvo-conclusion.html["次は終わりです"]

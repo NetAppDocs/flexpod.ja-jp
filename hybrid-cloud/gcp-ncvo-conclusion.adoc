@@ -1,0 +1,182 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/gcp-ncvo-conclusion.html 
+keywords: conclusion 
+summary: この解決策 では、ネットアップのクラウドデータサービス、Cloud Volumes ONTAP 、FlexPod データセンターインフラを使用して、Cisco Intersightクラウドオーケストレーションツールを基盤とするパブリッククラウドを使用したDR解決策 を構築しました。FlexPod 解決策 は絶えず進化しており、お客様はアプリケーションやビジネス提供プロセスを最新化できるようになっています。この解決策 を使用すると、DR解決策 のコストを低く抑えながら、短期またはフルタイムのDR計画のための移動先としてパブリッククラウドを使用してBCDR計画を構築できます。 
+---
+= まとめ
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:gcp-ncvo-solution-validation.html["前のバージョン：解決策 の検証。"]
+
+この解決策 では、ネットアップのクラウドデータサービス、Cloud Volumes ONTAP 、FlexPod データセンターインフラを使用して、Cisco Intersightクラウドオーケストレーションツールを基盤とするパブリッククラウドを使用したDR解決策 を構築しました。FlexPod 解決策 は絶えず進化しており、お客様はアプリケーションやビジネス提供プロセスを最新化できるようになっています。この解決策 を使用すると、DR解決策 のコストを低く抑えながら、短期またはフルタイムのDR計画のための移動先としてパブリッククラウドを使用してBCDR計画を構築できます。
+
+オンプレミスのFlexPod とNetApp Cloud Volumes ONTAP 間のデータレプリケーションは、実績のあるSnapMirrorテクノロジによって処理されましたが、お客様のデータ移動要件には、Cloud Sync などの他のネットアップのデータ転送ツールや同期ツールも選択できます。TLS/AESをベースとする暗号化テクノロジが組み込まれているため、転送中のデータのセキュリティを確保できます。
+
+アプリケーション向けの一時的なDRプランでも、企業向けのフルタイムのDRプランでも、この解決策 で使用される製品ポートフォリオは、両方の要件を大規模に満たすことができます。Cisco Intersight Workflow Orchestratorを活用することで、構築済みのワークフローを利用して同じワークフローを自動化できます。プロセスの再構築が不要になるだけでなく、BCDRプランの実装も高速化されます。
+
+解決策 を使用すると、Cisco Intersight Cloud Orchestratorが提供する自動化とオーケストレーションによって、ハイブリッドクラウド全体でFlexPod オンプレミスとデータレプリケーションを非常に簡単かつ便利に管理できます。
+
+
+
+== 追加情報の参照先
+
+このドキュメントに記載されている情報の詳細については、以下のドキュメントや Web サイトを参照してください。
+
+
+
+=== GitHub
+
+* 使用されているすべてのTerraform設定
++
+https://github.com/NetApp-Automation/FlexPod-hybrid-cloud-for-GCP-with-Intersight-and-CVO["https://github.com/NetApp-Automation/FlexPod-hybrid-cloud-for-GCP-with-Intersight-and-CVO"^]
+
+* ワークフローをインポートするためのJSONファイル
++
+https://github.com/ucs-compute-solutions/FlexPod_DR_Workflows["https://github.com/ucs-compute-solutions/FlexPod_DR_Workflows"^]
+
+
+
+
+
+=== Cisco Intersightの
+
+* Cisco Intersightのヘルプセンター
++
+https://intersight.com/help/saas/home["https://intersight.com/help/saas/home"^]
+
+* Cisco Intersight Cloud Orchestratorのドキュメント：
++
+https://intersight.com/help/saas/features/orchestration/configure["https://intersight.com/help/saas/features/orchestration/configure#intersight_cloud_orchestrator"^]
+
+* Cisco Intersight Service for橋（橋本）Terraform Documentation
++
+https://intersight.com/help/saas/features/terraform_cloud/admin["https://intersight.com/help/saas/features/terraform_cloud/admin"^]
+
+* Cisco Intersightのデータシート
++
+https://www.cisco.com/c/en/us/products/collateral/cloud-systems-management/intersight/intersight-ds.html["https://www.cisco.com/c/en/us/products/collateral/cloud-systems-management/intersight/intersight-ds.html"^]
+
+* Cisco Intersight Cloud Orchestratorデータシート
++
+https://www.cisco.com/c/en/us/products/collateral/cloud-systems-management/intersight/nb-06-intersight-cloud-orch-aag-cte-en.html["https://www.cisco.com/c/en/us/products/collateral/cloud-systems-management/intersight/nb-06-intersight-cloud-orch-aag-cte-en.html"^]
+
+* Cisco Intersight Service for橋（Cisco Intersight Service for橋）Terraformデータシート
++
+https://www.cisco.com/c/en/us/products/collateral/cloud-systems-management/intersight/nb-06-intersight-terraf-ser-aag-cte-en.html["https://www.cisco.com/c/en/us/products/collateral/cloud-systems-management/intersight/nb-06-intersight-terraf-ser-aag-cte-en.html"^]
+
+
+
+
+
+=== FlexPod
+
+* FlexPod ホームページ
++
+https://www.flexpod.com["https://www.flexpod.com"^]
+
+* FlexPod のシスコ検証済み設計および導入ガイド
++
+https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_m6_esxi7u2_design.html["UCS 管理モードの FlexPod データセンター、 VMware vSphere 7.0 U2 、および NetApp ONTAP 9.9 設計ガイド"^]
+
+* FlexPod データセンターとCisco UCS Xシリーズ
++
+https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_xseries_esxi7u2_design.html["https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_xseries_esxi7u2_design.html"^]
+
+
+
+
+
+=== 相互運用性
+
+* NetApp Interoperability Matrix Tool で確認できます
++
+http://support.netapp.com/matrix/["http://support.netapp.com/matrix/"^]
+
+* Cisco UCS ハードウェアおよびソフトウェア相互運用性ツール
++
+http://www.cisco.com/web/techdoc/ucs/interoperability/matrix/matrix.html["http://www.cisco.com/web/techdoc/ucs/interoperability/matrix/matrix.html"^]
+
+* VMware Compatibility Guide 』を参照してください
++
+http://www.vmware.com/resources/compatibility/search.php["http://www.vmware.com/resources/compatibility/search.php"^]
+
+
+
+
+
+=== NetApp Cloud Volumes ONTAP の参考資料
+
+* NetApp Cloud Manager の略
++
+https://docs.netapp.com/us-en/occm/concept_overview.html["https://docs.netapp.com/us-en/occm/concept_overview.html"^]
+
+* Cloud Volumes ONTAP
++
+https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-gcp.html[]
+
+* Cloud Volumes ONTAP TCO計算ツール
++
+https://cloud.netapp.com/google-cloud-calculator[]
+
+* Cloud Volumes ONTAP サイジングツール
++
+https://cloud.netapp.com/cvo-sizer["https://cloud.netapp.com/cvo-sizer"^]
+
+* クラウド評価ツール
++
+https://cloud.netapp.com/assessments[]
+
+* ネットアップのハイブリッドクラウド
++
+https://cloud.netapp.com/hybrid-cloud[]
+
+* Cloud Manager API ドキュメント
++
+https://docs.netapp.com/us-en/occm/reference_infrastructure_as_code.html["https://docs.netapp.com/us-en/occm/reference_infrastructure_as_code.html"^]
+
+
+
+
+
+=== 問題のトラブルシューティング
+
+https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Cloud_Volumes_ONTAP_(CVO)["https://kb.netapp.com/Advice_and_Troubleshooting/Cloud_Services/Cloud_Volumes_ONTAP_(CVO)"^]
+
+
+
+=== テラフォーム
+
+* クラウドをテラフォーム
++
+https://www.terraform.io/cloud["https://www.terraform.io/cloud"^]
+
+* Terraformドキュメント
++
+https://www.terraform.io/docs/["https://www.terraform.io/docs/"^]
+
+* NetApp Cloud Managerレジストリ
++
+https://registry.terraform.io/providers/NetApp/netapp-cloudmanager/lates["https://registry.terraform.io/providers/NetApp/netapp-cloudmanager/lates"^]
+
+
+
+
+
+=== GCP
+
+* GCPのONTAP ハイアベイラビリティ
++
+https://cloud.netapp.com/blog/gcp-cvo-blg-what-makes-cloud-volumes-ontap-high-availability-for-gcp-tick["https://cloud.netapp.com/blog/gcp-cvo-blg-what-makes-cloud-volumes-ontap-high-availability-for-gcp-tick"^]
+
+* GCPの永続的なサイト
++
+https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f3d0368b-7165-4d43-a76e-ae01011853d6["https://netapp.hosted.panopto.com/Panopto/Pages/Viewer.aspx?id=f3d0368b-7165-4d43-a76e-ae01011853d6"^]
+
+

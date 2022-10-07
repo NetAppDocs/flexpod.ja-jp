@@ -1,0 +1,58 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/gcp-ncvo-terraform-execution-from-controller.html 
+keywords: prerequisites, clone github repo, terraform execution, init, plan, apply, destroy 
+summary: コントローラを使用してTerraformプランを実行できます。ICOワークフローを使用してTerraformプランをすでに実行している場合は、このセクションを省略できます。 
+---
+= コントローラからのTerraformの実行
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:gcp-ncvo-dr-workflow.html["前の手順：DRワークフロー"]
+
+コントローラを使用してTerraformプランを実行できます。ICOワークフローを使用してTerraformプランをすでに実行している場合は、このセクションを省略できます。
+
+
+
+== 前提条件
+
+解決策 のセットアップは、まずインターネットにアクセスできる管理ワークステーションと、Terraformの実際のインストールから始まります。
+
+Terraformをインストールするためのガイドがあります https://learn.hashicorp.com/tutorials/terraform/install-cli["こちらをご覧ください"^]。
+
+
+
+== クローンGitHubリポジトリをリポジトリします
+
+このプロセスの最初のステップでは、GitHubリポジトリを管理ワークステーションの新しい空のフォルダにクローニングします。GitHubリポジトリのクローンを作成するには、次の手順を実行します。
+
+. 管理ワークステーションから、プロジェクトの新しいフォルダを作成します。このフォルダ内に'/root/snapmirror-CVO'という名前の新しいフォルダを作成し'GitHubリポジトリをクローンします
+. 管理ワークステーションでコマンドラインインターフェイスまたはコンソールインターフェイスを開き、作成した新しいフォルダにディレクトリを変更します。
+. 次のコマンドを使用してGitHubコレクションをクローニングします。
+
+
+....
+Git clone https://github.com/NetApp-Automation/FlexPod-hybrid-cloud-for-GCP-with-Intersight-and-CVO
+....
+. ディレクトリを「snapmirror-CVO'」という新しいフォルダに変更します。
+
+
+* Terraformの実行*
+
+image:gcp-ncvo-image77.png["Terraform実行の回路図。"]
+
+* * Init.*(local) Terraform環境を初期化します。通常、1回のセッションで1回のみ実行されます。
+* *計画。*テラフォームの状態をクラウドの現状と比較し、実行計画を作成して表示します。これによって導入環境が変更されることはありません（読み取り専用）。
+* *適用。*計画フェーズから計画を適用します。これにより、導入環境（読み取りと書き込み）が変更される可能性があります。
+* *破棄。*この特定のテラフォーム環境によって管理されるすべてのリソース。
++
+詳細については、を参照してください https://www.terraform.io/cli/commands["こちらをご覧ください"^]。
+
+
+
+link:gcp-ncvo-solution-validation.html["次の例は、解決策の検証です。"]
