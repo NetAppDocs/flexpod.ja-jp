@@ -2983,17 +2983,6 @@
   <block id="d6805acb6dfc9c9a27c05441e138d49d" category="list-text">すべてのイメージングデータは FC LUN でホストされます。FlexVol ボリューム内にこれらの LUN を作成します。これらの LUN は、異なるストレージコントローラノードに所有されているアグリゲート間に分散されています。</block>
   <block id="9b33e5a688f125caa6d59dcbad14cda6" category="paragraph">ストレージボリューム内での LUN の配置については、次のセクションのガイドラインに従ってください。</block>
   <block id="22e802f805cc0ae139fc4fa75879cc1f" category="section-title">ストレージボリューム</block>
-  <block id="ede0f58b02d65e48674f43605d4ddff5" category="paragraph">最適なパフォーマンス、管理、バックアップ処理を実現するために、ボリューム設計に関する次のベストプラクティスを推奨します。</block>
-  <block id="056e750e41892102ae79348e2b9e2f49" category="list-text">1 日のさまざまなボリュームで、大量の I/O が発生するクエリでデータベースを分離し、最終的には個別のジョブを実行してバックアップします。</block>
-  <block id="e975458608b303ba58462de41dcd441e" category="list-text">リカバリを高速化するには、 RTO （目標復旧時間）が最小限である大規模なデータベースとデータベースを別々のボリュームに配置します。</block>
-  <block id="4cf129d5843e23dd548bc4d82794c729" category="list-text">重要度が低い、または I/O 要件が低い小規模から中規模のデータベースを単一のボリュームに統合できます。同じボリューム上にあるデータベースを多数バックアップすると、保持する必要のある Snapshot コピー数が少なくなります。また、 Oracle データベースサーバのインスタンスを統合し、同じボリュームを使用して作成されるバックアップ Snapshot コピーの数を制御することを推奨します。</block>
-  <block id="cbf0715d629bf29c459420acadf976bc" category="list-text">データベースレプリカの場合は、すべてのノードの同一フォルダ構造にレプリカのデータファイルとログファイルを配置します。</block>
-  <block id="188e02487d0c64c88aae3664cf14ed70" category="list-text">データベースファイルを 1 つの FlexVol に配置します。複数の FlexVol に分散しないでください。</block>
-  <block id="9c92316e1a390dff04d96ebb8cabc9b9" category="list-text">必要に応じて、ボリュームの自動サイズポリシーを設定し、スペース不足の状態を防止します。</block>
-  <block id="2e88f8f20e70c0cb2747195410e3f806" category="list-text">データベース I/O プロファイルが、意思決定支援システムのワークロードなど、大部分がラージシーケンシャルリードで構成されている場合は、ボリュームで読み取り再配置を有効にします。読み取りの再割り当ては、パフォーマンスを向上させるためにブロックを最適化します。</block>
-  <block id="6d0d353edf8beab592842c085ad129ec" category="list-text">運用上の観点から簡単に監視できるように、ボリュームの Snapshot コピーリザーブの値を 0 に設定します。</block>
-  <block id="e4692669d2ba2cd6e132b6c3ca5da116" category="list-text">ストレージの Snapshot コピーのスケジュールと保持ポリシーを無効にします。代わりに、 NetApp SnapCenter Plug-in for Oracle Database を使用して、 Oracle データボリュームの Snapshot コピーを調整します。</block>
-  <block id="67d07174c442dd1a0a47543b9fc3abc8" category="list-text">ユーザデータファイルとログファイルは、対応する FlexVol に適切な QoS を設定し、異なるバックアップスケジュールを作成できるように、別々の FlexVol に配置します。</block>
   <block id="e9c694050e93c601dd70234fb234d8cd" category="paragraph">アグリゲートは、ネットアップストレージ構成のプライマリストレージコンテナであり、データディスクとパリティディスクの両方で構成される 1 つ以上の RAID グループを含みます。</block>
   <block id="f631f7430ddf641b7a19f499b140c88c" category="paragraph">ネットアップでは、データファイルとトランザクションログファイルが分離された共有アグリゲートと専用アグリゲートを使用して、さまざまな I/O ワークロード特性分析テストを実施しました。このテストでは、複数の RAID グループとドライブ（ HDD または SSD ）を使用する 1 つの大規模なアグリゲートによって、ストレージパフォーマンスが最適化されて向上するとともに、管理者が次の 2 つの理由から管理しやすくなることが実証されています。</block>
   <block id="1e5a70f617e1a9de603a024906761108" category="list-text">1 つの大きなアグリゲートで、すべてのドライブの I/O 機能をすべてのファイルで使用できます。</block>
@@ -3038,7 +3027,6 @@
   <block id="318245cf077eb2f36c50adf4aa79740e" category="list-text">医療画像システムベンダーと協力して、迅速な導入とメンテナンスのために VM テンプレートを準備する最適な方法を特定します。</block>
   <block id="b122cbb51e08e5873db5c423182f46a5" category="list-text">管理、ストレージ、本番環境のネットワークでは、 VMware vMotion 用に独立した VLAN を使用して、データベースを LAN で分離する必要があります。</block>
   <block id="794cb725c5631ad99b5b7c000307f0df" category="inline-link">SnapMirror</block>
-  <block id="4cdde416153c6d117181383b93534ec1" category="list-text">と呼ばれるネットアップのストレージアレイベースのレプリケーションテクノロジを使用します<block ref="133ca7709616c45e80024be2d7da217e" category="inline-link-rx"></block> vSphere ベースのレプリケーションではなく、</block>
   <block id="e3679fa0631ab408c36d8aed9abdf535" category="list-text">VMware API を活用したバックアップテクノロジを使用します。バックアップウィンドウは通常の業務時間外にする必要があります。</block>
   <block id="cfb5002996819a05fe90d726fd35abef" category="list-text">『 FlexPod Datacenter for AI / ML with Cisco UCS 480 ML for Deep Learning Design Guide 』を参照してください</block>
   <block id="d8db37def441e613da56054e80444482" category="inline-link"><block ref="d8db37def441e613da56054e80444482" category="inline-link-rx"></block></block>
@@ -9203,4 +9191,11 @@
   <block id="f205de40b1d0e559049d3fcc494e1df9" category="cell"><block ref="f205de40b1d0e559049d3fcc494e1df9" category="inline-link-rx"></block></block>
   <block id="a7925e750bfc040002383b6d7dc9f5ac" category="cell"><block ref="a7925e750bfc040002383b6d7dc9f5ac" category="inline-link-rx"></block></block>
   <block id="eaa8da373e73883b20c172d7d760cc68" category="cell"><block ref="eaa8da373e73883b20c172d7d760cc68" category="inline-link-rx"></block></block>
+  <block id="ae2687dae8f23f6af065bc15c7d3826e" category="paragraph">最適なパフォーマンスと管理を実現するために、ボリューム設計に関する次のベストプラクティスを推奨します。</block>
+  <block id="33af7418734d2a05ae9f18eb5524c449" category="list-text">I/O負荷の高いクエリを使用して、別々のストレージボリュームにデータベースを分離します。</block>
+  <block id="7bf8d318ffb4b6475f643ef9cfbbcfee" category="list-text">データファイルは1つのLUNまたはボリュームに配置できますが、スループットを高めるためには複数のボリューム/ LUNを使用することを推奨します。</block>
+  <block id="abf2a187f8a2f19880402e4c694785a4" category="list-text">複数のLUNを使用する場合は、サポートされている任意のファイルシステムを使用してI/Oの並列処理を実現できます。</block>
+  <block id="7ab9ea8d60880f13606485669ddd6049" category="list-text">データベースファイルとトランザクションログは別々のボリュームに配置すると、リカバリの精度が向上します。</block>
+  <block id="8219ca1a94f009ddb8447bb619fb79ce" category="list-text">自動サイズ、Snapshotリザーブ、QoSなどのボリューム属性の使用を検討してください。</block>
+  <block id="7048837fdc10598b502f6bed64d8ef66" category="list-text">と呼ばれるネットアップのストレージアレイベースのレプリケーションテクノロジを使用します<block ref="133ca7709616c45e80024be2d7da217e" category="inline-link-rx"></block> vSphereベースのレプリケーションではなく、</block>
 </blocks>
