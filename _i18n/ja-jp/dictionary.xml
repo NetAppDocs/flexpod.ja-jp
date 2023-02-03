@@ -1193,28 +1193,22 @@
   <block id="2b70343738f7a785cf3d0064f0a39b32" category="list-text">OVA を導入します。OVA を導入するには、 DNS と NTP が必要です。</block>
   <block id="b46368b8756e258c478ad0209aafb836" category="list-text">OVA を導入する前に、 A / PTR レコードと CNAME エイリアスレコードを使用して DNS を設定します。以下の例を参照してください。</block>
   <block id="9d6318b0d30a534802e63b46fbc2f7c1" category="inline-image-macro">A / PTR レコードに使用されるホスト名の例</block>
-  <block id="045ce1f853ba95eeb06d41946cbbe014" category="paragraph"><block ref="045ce1f853ba95eeb06d41946cbbe014" category="inline-image-macro-rx" type="image"></block></block>
   <block id="c1d2c46420fb0fb59479d35168ae1900" category="list-text">サイト間仮想アプライアンスの OVA 導入の要件に基づいて、適切な構成サイズ（小、小、中規模）を選択します。</block>
   <block id="4d612f1b1c407dc59d8ad3e83f7b76ea" category="paragraph">* ヒント：ストレージオブジェクトの数が多い 2 ノード ONTAP クラスタの場合、小規模（ vCPU 16 、 Gi RAM ）オプションを使用することを推奨します。</block>
   <block id="6a63e53ddbe218be4bb2034c0305e630" category="inline-image-macro">Deploy OVF Template ステップ 5 の設定のスクリーンショット</block>
-  <block id="163d67d440d02b8ef7547f4bfe8166de" category="paragraph"><block ref="163d67d440d02b8ef7547f4bfe8166de" category="inline-image-macro-rx" type="image"></block></block>
   <block id="3ee38327895dc648b6f1f999e57babca" category="list-text">[* テンプレートのカスタマイズ * （ Customize Template ） ] ページで、 OVF テンプレートの展開プロパティをカスタマイズします。管理者パスワードはローカル・ユーザに使用されます admin （ WebUI / CLI / ssh ）</block>
-  <block id="318871c35022cd02bcd1bd5839f0d3a8" category="paragraph"><block ref="318871c35022cd02bcd1bd5839f0d3a8" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="f52c8224a9f4defa0e18839412fe673b" category="paragraph"><block ref="f52c8224a9f4defa0e18839412fe673b" category="inline-image-macro-rx" type="image"></block></block>
   <block id="5a378b18f7bf0c4cabc6c655cd2f535e" category="list-text">「 * 次へ * 」をクリックします。</block>
   <block id="88ade68952e1a8d9f1c49b5ed85b5af5" category="list-text">Intersight Assist アプライアンスの導入後。</block>
   <block id="dba06e35ee25a3095d873c4534514037" category="list-text">に移動します<block ref="f9e0ea639036dbfc655ff5cf553db753" category="inline-link-rx"></block> アプライアンスの設置後のセットアップを完了するには、次の手順を実行します。</block>
   <block id="bca0d681ab79310b7d18a7976928af12" category="paragraph">インストールプロセスが自動的に開始されます。Intersight.com への帯域幅によっては、インストールに最大 1 時間かかる場合があります。また、 VM の電源がオンになったあとでセキュアなサイトが稼働するまでに数秒かかることもあります。</block>
   <block id="3920eddb38a93c54b93b962bbdea7c26" category="list-text">* Intersight Assist 。 * この導入により、 SaaS モデルを Cisco Intersight に接続できるようになりました。</block>
   <block id="32f55ec9f00aee8539ca16e146d53713" category="inline-image-macro">サイト間展開オプションのスクリーンショット</block>
-  <block id="df2ced2f2ca7e12619f0e054224c6230" category="paragraph"><block ref="df2ced2f2ca7e12619f0e054224c6230" category="inline-image-macro-rx" type="image"></block></block>
   <block id="2f88e5cbd35ab951b0bce5a96b06bb36" category="list-text">[* Proceed] をクリックします。</block>
   <block id="6f6002ff113b47d720b948fdbd799d5c" category="inline-link"><block ref="6f6002ff113b47d720b948fdbd799d5c" category="inline-link-rx"></block></block>
   <block id="3aa4c250877220ced11dd5118f05b73c" category="list-text">SaaS Intersight のアカウントに移動します<block ref="b140963de237118a210eda3a58c6a981" category="inline-link-rx"></block>。</block>
   <block id="66b6809a917e6f7acac28f8accbdedc3" category="list-text">[*Targets*,*Cisco Intersight Assist*] 、 [*Start*] の順にクリックします。</block>
   <block id="53e0ae9e421ccd8017c4eeb818859f12" category="list-text">新しく導入した Intersight Assist 仮想アプライアンスからデバイス ID と請求コードをコピーして貼り付けることで、 * Cisco Intersight Assist * アプライアンスを要求します。</block>
   <block id="aa934cad8ef62fbb6a89fb41491c988e" category="inline-image-macro">Cisco Intersight Assist を強調表示するターゲットタイプの選択のスクリーンショット</block>
-  <block id="e7934022378c77a43b6c1f0ba4528fa0" category="paragraph"><block ref="e7934022378c77a43b6c1f0ba4528fa0" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b4fc4b024772b963c5f5f7aac44f2918" category="list-text">Cisco Intersight Assist * アプライアンスに戻り、 [* Continue] をクリックします。 * ブラウザの更新が必要になる場合があります。</block>
   <block id="ebd1193b80c5bb1e5a3c2f4ca7d1ad9f" category="paragraph">ダウンロードとインストールのプロセスが開始されます。バイナリは、 Intersight Cloud からオンプレミスアプライアンスに転送されます。完了時間は、 Intersight Cloud への帯域幅によって異なります。</block>
   <block id="dbc336f1f1eca69b9dcbc997457166bc" category="summary">ネットアップと Cisco は提携を通じて、 FlexPod エコシステムの単一コンソールビューである Cisco Intersight を提供しています。</block>
@@ -7897,7 +7891,6 @@
   <block id="b8a3a6101b5ada36c1e5927fd398157d" category="list-text">導入後のプロセスで、次のオプションを選択します。</block>
   <block id="05b3bc98db36aa487224a23de09ab3be" category="admonition">「Intersight Assist」を選択する場合は、続行する前にデバイスIDと請求コードをメモしておきます。</block>
   <block id="fd7b91f0228fe4adf25f7fca76314e8d" category="list-text">「* Intersight Assist *」を選択し、次の手順を実行します。</block>
-  <block id="8c8498202f001fd26ea4173271ec8a24" category="paragraph">Active IQ Unified Manager をインストールまたはアップグレードしていない場合は（最新バージョンが必要、現在は9.11 GA）にアップグレードします。手順については、を参照してください <block ref="b713007c96ed5cceca9ab6b5776ab58a" category="inline-link-macro-rx"></block>。</block>
   <block id="8bab215794a736f6f876eac0eeb23923" category="section-title">2022年8月</block>
   <block id="d8f8a4fb7ebbb1310ca5d01f756e92d0" category="admonition">最新リリースとの互換性を確保し、すべての機能を利用するには、NetApp Active IQ Unified Manager 9.11 GAへのアップグレードが必要です。このリリースに関連する既知の問題のリストについては、を参照してください <block ref="1e93e2dfe5ecbece98249e8c1a59713c" category="inline-xref-macro-rx"></block>。</block>
   <block id="42bd0f13ec20ddd3964630f6646c2136" category="list-text">クラスタの使用可能容量の計算方法がSystem Managerに合わせて更新されました</block>
@@ -7909,11 +7902,9 @@
   <block id="9cdaae7b657bf23b6c320b1cd28c4c36" category="list-text">Storage VMでCIFSが有効になっている場合に、Storage VMのGeneralタブにCIFSサービス情報が追加されました</block>
   <block id="bd6cfb91907acb62b03084843321ec2a" category="list-text">ネットアップストレージシステムの構成の検証に使用するクラスタチェックページがベストプラクティスに準拠していることを確認できるようになりました</block>
   <block id="558ab0bef1894a7a726109d36632d09d" category="section-title">既知の問題</block>
-  <block id="fe9b57b6a58a76519ec48d5a08f3c9b0" category="list-text">データ収集プロセス中にサイト間ストレージのインベントリデータに影響がないようにするには、サポートされていないONTAP クラスタ（ONTAP 9.7P1）をActive IQ Unified Manager （AIQUM）から削除する必要があります。</block>
   <block id="e8c4ec43528d3a582dd7b32616a88eb9" category="list-text">要求されているすべてのターゲットで、FlexPod 統合システム相互運用性クエリーを正常に完了するには、9.11以上のAIQUMバージョンが必要です。</block>
   <block id="b1b25033ea7463aca79f95ef822af033" category="list-text">ONTAP クラスタがFQDNを使用してAIQ -UMに追加されている場合、ストレージインベントリのチェックページは表示されません。ユーザがIPアドレスを使用してAIQ -UMにONTAP クラスタを追加する必要があります。</block>
   <block id="914be32cb08524e05323b3adb9bc0c3f" category="paragraph">NetApp IQ Unified Managerで、* Settings &gt; General &gt; Feature Settings *の順に選択します。</block>
-  <block id="ad180dc1b01f328b8c0230d111d11d5d" category="cell">最新バージョンのNetApp Active IQ Unified Manager が必要（現在は9.11 GA）</block>
   <block id="1f0c1e64448622e1d184d478ed9ef6d1" category="doc">『Cisco Intersight with NetApp Storage Quick Start Guide』</block>
   <block id="e47450d255414e1f34605a681b2919e6" category="summary">このセクションでは、この解決策 に電力を供給するさまざまなコンポーネントについて説明します。</block>
   <block id="32e0d2b797e6706a73e8146d103572c7" category="inline-link-macro">Previous ：解決策の概要を示します。</block>
@@ -9175,7 +9166,6 @@
   <block id="549e147409126d885754994939d9cb6c" category="sidebar">ネットアップのCloud Volumes ONTAP とCisco Intersightを活用したFlexPod ハイブリッドクラウドfor Google Cloud Platform</block>
   <block id="b77014effa68d8bd1b8a5868123a2a63" category="summary">プロキシサーバを設定するAIQ UMは、IMT サービスを利用するためにCLIでセットアップする必要があります。</block>
   <block id="e814e5396b09bd235085ad390f6ea986" category="doc">IMT サービス用にAIQ UMプロキシサーバを設定</block>
-  <block id="5a66f19b0ec8be9c2e0a7c58787ea9b1" category="paragraph">NetApp ONTAP ストレージでAIQ UM for Cisco Intersightのプロキシサーバを使用している場合は、Interoperability Matrix Toolサービス（IMT ）を利用するためにコマンドラインインターフェイス（CLI）を使用してセットアップを設定する必要があります。Active IQ Unified Manager UMプロキシサーバの設定には、仮想マシン（OVA）診断シェルを使用する必要があります。</block>
   <block id="80b32c2ac8f5fd5845a3ccaf583c8c8b" category="inline-link">Active IQ Unified Manager 仮想マシン（OVA）のDIAGシェルへのアクセス方法</block>
   <block id="baf8ab71191c15b45a74e4bc93f0b0cf" category="admonition">AIQ UM Diagシェルへのアクセス方法については、を参照してください<block ref="6b434b6393786ea1d3dba8a708c6486d" category="inline-link-rx"></block></block>
   <block id="22b912c9ddb3da961206d948f4472107" category="list-text">AIQ UMターミナルにログインし、次のコマンドを実行してUMにログインします。</block>
@@ -9198,4 +9188,14 @@
   <block id="ce93121f4d7265c3a12c10d3efa2733d" category="inline-link-macro">以前：&lt;block ref="c04f464a529d08398ebf630bf9c932ed" prefix="" category='inline-code"/&gt;スクリプトを使用したGATKの実行出力。</block>
   <block id="1b04071fa32de2cc62ba81ce722a80de" category="inline-link-macro">&lt;block ref="c04f464a529d08398ebf630bf9c932ed" prefix="" category='inline-code"/&gt;スクリプトを使用したGATKの実行に関する出力。</block>
   <block id="919bcacd06d9ba9c758783027661478b" category="inline-link-macro">次の例：&lt;block ref="c04f464a529d08398ebf630bf9c932ed" prefix="" category='inline-code"/&gt;スクリプトを使用したGATKの実行出力。</block>
+  <block id="4174da9caea2fe6cfb47e03b760a26b4" category="cell">最新バージョンのNetApp Active IQ Unified Manager が必要（現在は9.12 GA）</block>
+  <block id="1ad9d53c3fc2062cfb8cd9f962f46df0" category="paragraph">Active IQ Unified Manager をインストールまたはアップグレードしていない場合は（最新バージョンが必要、現在は9.12 GA）にアップグレードします。手順については、を参照してください <block ref="b713007c96ed5cceca9ab6b5776ab58a" category="inline-link-macro-rx"></block>。</block>
+  <block id="30afe0cd8c37f4391553d8fb227f8dd4" category="paragraph">NetApp ONTAP ストレージでAIQ UM for Cisco Intersightのプロキシサーバを使用している場合は、Interoperability Matrix Toolサービス（IMT ）を利用するためにコマンドラインインターフェイス（CLI）を使用してセットアップを設定する必要があります。IMT サービスは、[Integrated Systems]ページの[*Interoperability *]タブで使用できます。Active IQ Unified Manager UMプロキシサーバの設定には、仮想マシン（OVA）診断シェルを使用する必要があります。</block>
+  <block id="abb14d21829ba186172f6e1d0b64b55b" category="section-title">2023年1月</block>
+  <block id="f58686065d77527c1d5e19130ba1ee62" category="admonition">最新リリースとの互換性を確保し、すべての機能を利用するには、NetApp Active IQ Unified Manager 9.12 GAへのアップグレードが必要です。このリリースに関連する既知の問題のリストについては、を参照してください <block ref="1e93e2dfe5ecbece98249e8c1a59713c" category="inline-xref-macro-rx"></block>。</block>
+  <block id="bcd1997c23df8e33e5754b435a84db65" category="list-text">互換性チェックを実行するときに、相互接続性チェックでUCSMモードとIMMファームウェアモードを区別できるようになりました。</block>
+  <block id="6479629d372a87dcf6f7058a3b415313" category="list-text">ONTAP 9.7の場合、保護関係はサイト間に表示されません。この問題 はONTAP 9.8RC1で修正されました。</block>
+  <block id="481eaf6f556ec962ffcf3a6e3c11049d" category="list-text">AIQUM 9.11以前のバージョンを使用している場合は、ストレージリストページに表示される値とストレージ全般ページの容量バーグラフの値が一致しません。この問題 を解決するには、AIQUM 9.12以降にアップグレードして、表示される容量値が正確であることを確認します。</block>
+  <block id="dd6bef8a9fbb7862bfad4c41ccf7f03d" category="list-text">AIQUM 9.11以前を使用している場合、[Integrated Systems]ページの[Interoperability（相互運用性）]タブで実行されたチェックでは、IMMとUCSMのCiscoコンポーネントを正確に区別できません。この問題 を解決するには、AIQUM 9.12にアップグレードして、すべてのコンポーネントが正しく識別されるようにします。</block>
+  <block id="215f19e5d79256f2e6c09a431d1ee7d7" category="list-text">データ収集プロセス中にサイト間ストレージのインベントリデータに影響がないようにするには、サポートされていないONTAP クラスタ（ONTAP 9.7P1より前のバージョン）をActive IQ Unified Manager （AIQUM）から削除する必要があります。</block>
 </blocks>

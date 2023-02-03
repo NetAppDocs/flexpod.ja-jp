@@ -14,7 +14,7 @@ summary: プロキシサーバを設定するAIQ UMは、IMT サービスを利�
 
 
 [role="lead"]
-NetApp ONTAP ストレージでAIQ UM for Cisco Intersightのプロキシサーバを使用している場合は、Interoperability Matrix Toolサービス（IMT ）を利用するためにコマンドラインインターフェイス（CLI）を使用してセットアップを設定する必要があります。Active IQ Unified Manager UMプロキシサーバの設定には、仮想マシン（OVA）診断シェルを使用する必要があります。
+NetApp ONTAP ストレージでAIQ UM for Cisco Intersightのプロキシサーバを使用している場合は、Interoperability Matrix Toolサービス（IMT ）を利用するためにコマンドラインインターフェイス（CLI）を使用してセットアップを設定する必要があります。IMT サービスは、[Integrated Systems]ページの[*Interoperability *]タブで使用できます。Active IQ Unified Manager UMプロキシサーバの設定には、仮想マシン（OVA）診断シェルを使用する必要があります。
 
 
 NOTE: AIQ UM Diagシェルへのアクセス方法については、を参照してください https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/Active_IQ_Unified_Manager/How_to_access_Active_IQ_Unified_Manager_Virtual_Machine_OVA_DIAG_shell["Active IQ Unified Manager 仮想マシン（OVA）のDIAGシェルへのアクセス方法"]

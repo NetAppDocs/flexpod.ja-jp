@@ -20,7 +20,7 @@ summary: 開始する前に、 AIQ UM をインストールまたはアップグ
 
 == NetApp Active IQ Unified Manager をインストールまたはアップグレードします
 
-Active IQ Unified Manager をインストールまたはアップグレードしていない場合は（最新バージョンが必要、現在は9.11 GA）にアップグレードします。手順については、を参照してください link:https://docs.netapp.com/us-en/active-iq-unified-manager/["NetApp Active IQ Unified Manager のドキュメント"]。
+Active IQ Unified Manager をインストールまたはアップグレードしていない場合は（最新バージョンが必要、現在は9.12 GA）にアップグレードします。手順については、を参照してください link:https://docs.netapp.com/us-en/active-iq-unified-manager/["NetApp Active IQ Unified Manager のドキュメント"]。
 
 
 
@@ -36,21 +36,21 @@ Active IQ Unified Manager をインストールまたはアップグレードし
 +
 .. OVA を導入する前に、 A / PTR レコードと CNAME エイリアスレコードを使用して DNS を設定します。以下の例を参照してください。
 +
-image:ci-qsg_image1.png["A / PTR レコードに使用されるホスト名の例"]
+image::ci-qsg_image1.png[A / PTR レコードに使用されるホスト名の例]
 
 .. サイト間仮想アプライアンスの OVA 導入の要件に基づいて、適切な構成サイズ（小、小、中規模）を選択します。
 +
 * ヒント：ストレージオブジェクトの数が多い 2 ノード ONTAP クラスタの場合、小規模（ vCPU 16 、 Gi RAM ）オプションを使用することを推奨します。
 
 +
-image:ci-qsg_image2.png["Deploy OVF Template ステップ 5 の設定のスクリーンショット"]
+image::ci-qsg_image2.png[Deploy OVF Template ステップ 5 の設定のスクリーンショット]
 
 .. [* テンプレートのカスタマイズ * （ Customize Template ） ] ページで、 OVF テンプレートの展開プロパティをカスタマイズします。管理者パスワードはローカル・ユーザに使用されます admin （ WebUI / CLI / ssh ）
 +
-image:ci-qsg_image3.png["エラー：グラフィックイメージがありません"]
+image::ci-qsg_image3.png[エラー：グラフィックイメージがありません]
 
 +
-image:ci-qsg_image4.png["エラー：グラフィックイメージがありません"]
+image::ci-qsg_image4.png[エラー：グラフィックイメージがありません]
 
 .. 「 * 次へ * 」をクリックします。
 
@@ -69,7 +69,7 @@ image:ci-qsg_image4.png["エラー：グラフィックイメージがありま�
 NOTE: 「Intersight Assist」を選択する場合は、続行する前にデバイスIDと請求コードをメモしておきます。
 
 +
-image:ci-qsg_image5.png["サイト間展開オプションのスクリーンショット"]
+image::ci-qsg_image5.png[サイト間展開オプションのスクリーンショット]
 
 
 
@@ -80,7 +80,7 @@ image:ci-qsg_image5.png["サイト間展開オプションのスクリーンシ�
 ... [*Targets*,*Cisco Intersight Assist*] 、 [*Start*] の順にクリックします。
 ... 新しく導入した Intersight Assist 仮想アプライアンスからデバイス ID と請求コードをコピーして貼り付けることで、 * Cisco Intersight Assist * アプライアンスを要求します。
 +
-image:ci-qsg_image6.png["Cisco Intersight Assist を強調表示するターゲットタイプの選択のスクリーンショット"]
+image::ci-qsg_image6.png[Cisco Intersight Assist を強調表示するターゲットタイプの選択のスクリーンショット]
 
 ... Cisco Intersight Assist * アプライアンスに戻り、 [* Continue] をクリックします。 * ブラウザの更新が必要になる場合があります。
 +
