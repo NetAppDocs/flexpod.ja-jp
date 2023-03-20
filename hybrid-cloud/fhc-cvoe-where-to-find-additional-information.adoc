@@ -1,0 +1,80 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/fhc-cvoe-where-to-find-additional-information.html 
+keywords:  
+summary:  
+---
+= 追加情報の参照先
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:fhc-cvoe-conclusion.html["前へ：終わりに。"]
+
+[role="lead"]
+このドキュメントに記載されている情報の詳細については、以下のドキュメントや Web サイトを参照してください。
+
+* FlexPod ホームページ
++
+https://www.flexpod.com["https://www.flexpod.com"^]
+
+* FlexPod のシスコ検証済み設計および導入ガイド
++
+https://www.cisco.com/c/en/us/solutions/design-zone/data-center-design-guides/flexpod-design-guides.html["https://www.cisco.com/c/en/us/solutions/design-zone/data-center-design-guides/flexpod-design-guides.html"^]
+
+* NetApp BlueXP
++
+https://bluexp.netapp.com/["https://bluexp.netapp.com/"^]
+
+* NetApp Cloud Volumes ONTAP の略
++
+https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-overview-cvo.html["https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-overview-cvo.html"^]
+
+* AWS での Cloud Volumes ONTAP のクイックスタート
++
+https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-aws.html["https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-aws.html"^]
+
+* SnapMirror レプリケーション
++
+https://docs.netapp.com/us-en/cloud-manager-replication/concept-replication.html["https://docs.netapp.com/us-en/cloud-manager-replication/concept-replication.html"^]
+
+* TR-3928：『NetApp Best Practices for Epic』
++
+https://www.netapp.com/pdf.html?item=/media/17137-tr3928pdf.pdf["https://www.netapp.com/pdf.html?item=/media/17137-tr3928pdf.pdf"^]
+
+* TR-4693 ：『 FlexPod Datacenter for Epic EHR Deployment Guide 』
++
+https://www.netapp.com/media/10658-tr-4693.pdf["https://www.netapp.com/media/10658-tr-4693.pdf"^]
+
+* FlexPod for Epicの略
++
+https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_xseries_vmw_epic.html["https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_xseries_vmw_epic.html"^]
+
+* NetApp Interoperability Matrix Tool で確認できます
++
+http://support.netapp.com/matrix/["http://support.netapp.com/matrix/"^]
+
+* Cisco UCS ハードウェアおよびソフトウェア相互運用性ツール
++
+http://www.cisco.com/web/techdoc/ucs/interoperability/matrix/matrix.html["http://www.cisco.com/web/techdoc/ucs/interoperability/matrix/matrix.html"^]
+
+* VMware Compatibility Guide 』を参照してください
++
+http://www.vmware.com/resources/compatibility/search.php["http://www.vmware.com/resources/compatibility/search.php"^]
+
+
+
+
+
+=== バージョン履歴
+
+|===
+| バージョン | 日付 | ドキュメントのバージョン履歴 
+
+
+| バージョン 1.0 以降 | 2023年3月 | 初版 
+|===

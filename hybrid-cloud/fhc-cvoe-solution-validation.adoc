@@ -1,0 +1,313 @@
+---
+sidebar: sidebar 
+permalink: hybrid-cloud/fhc-cvoe-solution-validation.html 
+keywords: application, development, testing, disaster recovery, dr, verification 
+summary: このセクションでは、いくつかのユースケースを使用して解決策 を検証する方法について説明します。 
+---
+= 解決策の検証
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+link:fhc-cvoe-san-configuration.html["前の手順：SAN構成"]
+
+[role="lead"]
+このセクションでは、解決策 のユースケースをいくつか確認します。
+
+* SnapMirrorの主なユースケースの1つに、データバックアップがあります。SnapMirrorは、同じクラスタ内またはリモートターゲットにデータをレプリケートすることで、プライマリバックアップツールとして使用できます。
+* DR環境を使用したアプリケーション開発テスト（開発とテスト）の実行
+* 本番環境で災害が発生した場合のDR。
+* データ配信とリモートデータアクセス：
+
+
+注目すべき点として、この解決策 で検証された比較的少数のユースケースでは、SnapMirrorレプリケーションの全機能を網羅しているわけではありません。
+
+
+
+== アプリケーションの開発とテスト（開発とテスト）
+
+レプリケートされたデータをDRサイトで迅速にクローニングし、開発/テストアプリケーションに使用することで、アプリケーションの開発期間を短縮できます。DR環境と開発/テスト環境をコロケーションすることで、バックアップやDR施設の利用率を大幅に向上できます。また、オンデマンドの開発/テスト用クローンにより、必要な数のデータコピーを迅速に本番環境に移行できます。
+
+NetApp FlexCloneテクノロジを使用すると、セカンダリコピーの読み取り/書き込みアクセスを許可してすべての本番環境データが利用可能かどうかを確認する場合に、SnapMirrorデスティネーションFlexVol ボリュームの読み取り/書き込みコピーを迅速に作成できます。
+
+DR環境を使用してアプリケーションの開発とテストを実行するには、次の手順を実行します。
+
+. 本番環境のデータのコピーを作成します。そのためには、オンプレミスボリュームのアプリケーションスナップショットを実行します。アプリケーションスナップショットの作成は、3つのステップで構成されます。 `Lock`、 `Snap`および `Unlock`。
++
+.. ファイルシステムを休止して、I/Oが中断され、アプリケーションの整合性が維持されるようにします。ファイルシステムにヒットするアプリケーションの書き込みは、手順cで休止解除コマンドが実行されるまで待機状態のままですステップa、b、cは透過的なプロセスまたはワークフローを通じて実行され、アプリケーションのSLAには影響しません。
++
+....
+[root@hc-cloud-secure-1 ~]# fsfreeze -f /file1
+....
++
+このオプションは、指定されたファイルシステムが新しい変更からフリーズされるように要求します。フリーズされたファイルシステムに書き込みを試みるプロセスは、ファイルシステムがフリーズ解除されるまでブロックされます。
+
+.. オンプレミスボリュームのSnapshotを作成
++
+....
+A400-G0312::> snapshot create -vserver Healthcare_SVM -volume hc_iscsi_vol -snapshot kamini
+....
+.. ファイルシステムを休止解除してI/Oを再開します。
++
+....
+[root@hc-cloud-secure-1 ~]# fsfreeze -u /file1
+....
++
+このオプションは、ファイルシステムのフリーズを解除し、操作を続行できるようにするために使用します。フリーズによってブロックされたファイルシステムの変更はブロック解除され、完了することができます。
+
++
+アプリケーションと整合性のあるSnapshotは、前述のワークフローをSnapCenter の一部として完全にオーケストレーションしたNetApp SnapCenter を使用して実行することもできます。詳細については、を参照してください https://docs.netapp.com/us-en/snapcenter/["こちらをご覧ください"^]。
+
+
+
+. SnapMirror更新処理を実行して、業務用システムとDRシステムの同期を維持します。
++
+....
+singlecvoaws::> snapmirror update -destination-path svm_singlecvoaws:hc_iscsi_vol_copy -source-path Healthcare_SVM:hc_iscsi_vol
+
+Operation is queued: snapmirror update of destination “svm_singlecvoaws:hc_iscsi_vol_copy”.
+....
++
+BlueXPのGUIの*[Replication]*タブから、SnapMirrorの更新を実行することもできます。
+
+. 前の手順で作成したアプリケーションSnapshotに基づいてFlexCloneインスタンスを作成します。
++
+....
+singlecvoaws::> volume clone create -flexclone kamini_clone -type RW -parent-vserver svm_singlecvoaws -parent-volume hc_iscsi_vol_copy -junction-active true -foreground true -parent-snapshot kamini
+
+[Job 996] Job succeeded: Successful
+....
++
+前のタスクでは、新しいSnapshotも作成できますが、アプリケーションの整合性を確保するには、上記と同じ手順を実行する必要があります。
+
+. FlexCloneボリュームをアクティブ化して、クラウドでEHRインスタンスを起動します。
++
+....
+singlecvoaws::> lun mapping create –vserver svm_singlecvoaws –path /vol/kamini_clone/iscsi_lun1 -igroup ehr-igroup –lun-id 0
+
+singlecvoaws::> lun mapping show
+Vserver     Path                                  Igroup    LUN ID  Protocol
+---------- -------------- --------------- -----  --------   ------ ---------
+svm_singlecvoaws
+                 /vol/kamini_clone/iscsi_lun1    ehr-igroup   0    iscsi
+....
+. クラウドのEHRインスタンスで次のコマンドを実行して、データまたはファイルシステムにアクセスします。
++
+.. ONTAP ストレージを検出マルチパスのステータスを確認します。
++
+....
+sudo rescan-scsi-bus.sh
+sudo iscsiadm -m discovery -t sendtargets -p <iscsi-lif-ip>
+sudo iscsiadm -m node -L all
+sudo sanlun lun show
+
+Output:
+controller(7mode/E-Series)/         device    host             lun
+vserver(cDOT/FlashRay) lun-pathname filename  adapter protocol size   product
+-----------------------------------------------------------------------------
+svm_singlecvoaws                    /dev/sda  host2   iSCSI    200g    cDOT
+                    /vol/kamini_clone/iscsi_lun1
+sudo multipath -ll
+
+Output:
+3600a09806631755a452b543041313053 dm-0 NETAPP,LUN C-Mode
+size=200G features='3 queue_if_no_path pg_init_retries 50' hwhandler='1 alua' wp=rw
+`-+- policy='service-time 0' prio=50 status=active
+`- 2:0:0:0 sda 8:0 active ready running
+....
+.. ボリュームグループをアクティブ化します。
++
+....
+sudo vgchange -ay datavg
+Output:
+1 logical volume(s) in volume group "datavg" now active
+....
+.. ファイル・システムをマウントし'ファイル・システム情報の概要を表示します
++
+....
+sudo mount -t xfs /dev/datavg/datalv /file1
+
+cd /file1
+df -k .
+Output:
+Filesystem                 1K-blocks  Used     Available  Use%  Mounted on
+/dev/mapper/datavg-datalv  209608708 183987096  25621612  88%    /file1
+....
++
+これにより、アプリケーションの開発とテストにDR環境を使用できるかどうかが検証されます。DRストレージでアプリケーションの開発とテストを実行すると、ほとんどの時間アイドル状態になる可能性のあるリソースをより有効に活用できます。
+
+
+
+
+
+
+
+== ディザスタリカバリ
+
+SnapMirrorテクノロジは、DR計画の一部としても使用されます。重要なデータが物理的に別の場所にレプリケートされている場合、重大な災害が原因 発生しても、ビジネスクリティカルなアプリケーションで長期間データを使用できなくなることはありません。クライアントは、破損、偶発的な削除、自然災害などから本番サイトをリカバリするまで、レプリケートされたデータにネットワーク経由でアクセスできます。
+
+プライマリサイトへのフェイルバックの場合、SnapMirrorを使用すると、SnapMirror関係をDRサイトからプライマリサイトに反転させるだけで、変更されたデータや新しいデータのみをDRサイトからプライマリサイトに転送して、DRサイトとDRサイトを効率的に再同期できます。プライマリサイトで通常のアプリケーション運用が再開されると、SnapMirrorは、ベースライン転送をもう1回行わずにDRサイトへの転送を続行します。
+
+DRシナリオが成功するかどうかを検証するには、次の手順を実行します。
+
+. オンプレミスのONTAP ボリュームをホストするSVMを停止して、ソース（本番）側で災害をシミュレートします (`hc_iscsi_vol`）。
++
+image:fhc-cvoe-image21.png["このスクリーンショットは、[Storage VM]ドロップダウンにある[stop]オプションを示しています。"]
+
++
+アプリケーションのSnapshotを頻繁に作成できるように、FlexPod インスタンスのオンプレミスONTAP とAWSのCloud Volumes ONTAP の間でSnapMirrorレプリケーションがすでに設定されていることを確認します。
+
++
+SVMが停止したあと、 `hc_iscsi_vol` ボリュームはBlueXPに表示されません。
+
++
+image:fhc-cvoe-image22.png["これで、ボリュームの概要画面にボリュームが表示されます。"]
+
+. CVOでDRをアクティブ化
++
+.. オンプレミスのONTAP とCloud Volumes ONTAP の間のSnapMirrorレプリケーション関係を解除し、CVOのデスティネーションボリュームを昇格します (`hc_iscsi_vol_copy`）を本番環境に移行します。
++
+image:fhc-cvoe-image23.png["関係の解除オプション画面が表示されます。"]
+
++
+SnapMirror関係を解除すると、デスティネーションボリュームのタイプがデータ保護（DP）から読み書き可能（rw）に変わります。
+
++
+....
+singlecvoaws::> volume show -volume hc_iscsi_vol_copy -fields typev
+server          volume            type
+---------------- ----------------- ----
+svm_singlecvoaws hc_iscsi_vol_copy RW
+....
+.. Cloud Volumes ONTAP でデスティネーションボリュームをアクティブ化し、クラウド内のEC2インスタンスでEHRインスタンスを起動します。
++
+....
+singlecvoaws::> lun mapping create –vserver svm_singlecvoaws –path /vol/hc_iscsi_vol_copy/iscsi_lun1 -igroup ehr-igroup –lun-id 0
+
+singlecvoaws::> lun mapping show
+Vserver     Path                                Igroup   LUN ID  Protocol
+---------- ----------------------------------  --------  ------ ---------
+svm_singlecvoaws
+            /vol/hc_iscsi_vol_copy/iscsi_lun1  ehr-igroup  0    iscsi
+....
+.. クラウド内のEHRインスタンス上のデータとファイルシステムにアクセスするには、まずONTAP ストレージを検出し、マルチパスのステータスを確認します。
++
+....
+sudo rescan-scsi-bus.sh
+sudo iscsiadm -m discovery -t sendtargets -p <iscsi-lif-ip>
+sudo iscsiadm -m node -L all
+sudo sanlun lun show
+Output:
+controller(7mode/E-Series)/         device    host             lun
+vserver(cDOT/FlashRay) lun-pathname filename  adapter protocol size   product
+-----------------------------------------------------------------------------
+svm_singlecvoaws                    /dev/sda  host2   iSCSI    200g    cDOT
+                  /vol/hc_iscsi_vol_copy/iscsi_lun1
+sudo multipath -ll
+Output:
+3600a09806631755a452b543041313051 dm-0 NETAPP,LUN C-Mode
+size=200G features='3 queue_if_no_path pg_init_retries 50' hwhandler='1 alua' wp=rw
+`-+- policy='service-time 0' prio=50 status=active
+`- 2:0:0:0 sda 8:0 active ready running
+....
+.. ボリュームグループをアクティブ化します。
++
+....
+sudo vgchange -ay datavg
+Output:
+1 logical volume(s) in volume group "datavg" now active
+....
+.. 最後に、ファイルシステムをマウントし、ファイルシステム情報を表示します。
++
+....
+sudo mount -t xfs /dev/datavg/datalv /file1
+
+cd /file1
+df -k .
+Output:
+Filesystem                 1K-blocks  Used      Available  Use%  Mounted on
+/dev/mapper/datavg-datalv  209608708  183987096  25621612  88%   /file1
+....
++
+この出力は、災害から本番サイトがリカバリされるまで、ユーザがネットワーク経由でレプリケートされたデータにアクセスできることを示しています。
+
+.. SnapMirror関係を反転します。この処理では、ソースボリュームとデスティネーションボリュームの役割が入れ替わります。
++
+image:fhc-cvoe-image24.png["このスクリーンショットは、[Reverse Relationship Option]ボックスを示しています。"]
+
++
+この処理を実行すると、元のソースボリュームの内容がデスティネーションボリュームの内容で上書きされます。これは、オフラインになったソースボリュームを再アクティブ化する場合に役立ちます。
+
++
+CVOボリュームに移動します (`hc_iscsi_vol_copy`）がソースボリュームになり、オンプレミスボリュームになります (`hc_iscsi_vol`）がデスティネーションボリュームになります。
+
++
+image:fhc-cvoe-image25.png["このスクリーンショットは、BlueXPで作成されたボリュームレプリケーション関係を示しています。"]
+
++
+前回のデータレプリケーションからソースボリュームが無効になったまでの間に元のソースボリュームに書き込まれたデータは保持されません。
+
+.. CVOボリュームへの書き込みアクセスを確認するには、クラウドのEHRインスタンスに新しいファイルを作成します。
++
+....
+cd /file1/
+sudo touch newfile
+....
+
+
+
+
+業務用サイトが停止しても、クライアントは引き続きデータにアクセスし、Cloud Volumes ONTAP ボリューム（現在はソースボリューム）への書き込みも実行できます。
+
+プライマリサイトへのフェイルバックの場合、SnapMirrorを使用すると、SnapMirror関係をDRサイトからプライマリサイトに反転させるだけで、変更されたデータや新しいデータのみをDRサイトからプライマリサイトに転送して、DRサイトとDRサイトを効率的に再同期できます。プライマリサイトで通常のアプリケーション運用が再開されると、SnapMirrorは、ベースライン転送をもう1回行わずにDRサイトへの転送を続行します。
+
+このセクションでは、業務用サイトで災害が発生した場合のDRシナリオの適切な解決方法について説明します。これで、ソースサイトのリストア中にクライアントにサービスを提供できるアプリケーションが、データを安全に消費できるようになります。
+
+
+
+== 本番サイトでのデータの検証
+
+業務用サイトをリストアしたら、元の構成がリストアされ、クライアントがソースサイトのデータにアクセスできることを確認する必要があります。
+
+このセクションでは、ソースサイトを立ち上げ、オンプレミスのONTAP とCloud Volumes ONTAP 間のSnapMirror関係をリストアし、最後にソース側でデータ整合性チェックを実行します
+
+業務用サイトでは、次の手順 を使用してデータを検証できます。
+
+. ソースサイトが稼働していることを確認します。これを行うには、オンプレミスのONTAP ボリュームをホストするSVMを起動します (`hc_iscsi_vol`）。
++
+image:fhc-cvoe-image26.png["このスクリーンショットは、[Storage VM]ページのドロップダウンメニューを使用して特定のVMを起動する方法を示しています。"]
+
+. Cloud Volumes ONTAP とオンプレミスのONTAP 間のSnapMirrorレプリケーション関係を解除し、オンプレミスボリュームを昇格 (`hc_iscsi_vol`）を本番環境に戻します。
++
+image:fhc-cvoe-image27.png["このスクリーンショットは、関係を解除する方法を示しています。"]
+
++
+SnapMirror関係を解除すると、オンプレミスのボリュームタイプがデータ保護（DP）から読み取り/書き込み（RW）に変わります。
+
++
+....
+A400-G0312::> volume show -volume hc_iscsi_vol -fields type
+vserver        volume       type
+-------------- ------------ ----
+Healthcare_SVM hc_iscsi_vol RW
+....
+. SnapMirror関係を反転します。今度はオンプレミスのONTAP ボリュームです (`hc_iscsi_vol`）がソースボリュームになり、Cloud Volumes ONTAP ボリュームになります (`hc_iscsi_vol_copy`）がデスティネーションボリュームになります。
++
+image:fhc-cvoe-image28.png["このスクリーンショットは、関係を反転する方法を示しています。"]
+
++
+これらの手順を実行することで、元の構成が正常に復元されました。
+
+. オンプレミスのEHRインスタンスをリブートします。ファイルシステムをマウントし、を確認します `newfile` 本番環境がダウンしていたときにクラウドのEHRインスタンスに作成したものもここに存在します。
++
+image:fhc-cvoe-image29.png["このスクリーンショットは、オンプレミスのEHRインスタンスでnewfileを検索する方法を示しています。"]
+
+
+
+ソースからデスティネーションへのデータレプリケーションが正常に完了し、データの整合性が維持されていると推測できます。これで、本番サイトでのデータの検証は完了です。
+
+link:fhc-cvoe-conclusion.html["次は終わりです"]
