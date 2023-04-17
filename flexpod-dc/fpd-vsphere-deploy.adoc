@@ -1,0 +1,26 @@
+---
+sidebar: sidebar 
+permalink: flexpod-dc/fpd-vsphere-deploy.html 
+keywords: cisco, flexpod, data, center, vmware, vsphere, ontap, deployment 
+summary: 'このドキュメントでは、NetApp AFF A400オールフラッシュストレージシステム、第2世代Intel Xeonスケーラブルプロセッサを搭載したCisco UCS Managerユニファイドソフトウェアリリース4.1(2)、およびVMware vSphere 7.0上でNetApp ONTAP 9.7を搭載したCiscoとNetApp FlexPod データセンターについて説明します。' 
+---
+= <xmt-block0>FlexPod</xmt-block> Datacenter with VMware vSphere 7.0 and NetApp<xmt-block1> ONTAP</xmt-block> 9.7 - Deploymentを参照してください
+:allow-uri-read: 
+
+
+John George、Cisco Sree Lakshmi Lanka、ネットアップ
+
+このドキュメントでは、NetApp AFF A400オールフラッシュストレージシステム、第2世代Intel Xeonスケーラブルプロセッサを搭載したCisco UCS Managerユニファイドソフトウェアリリース4.1(2)、およびVMware vSphere 7.0上でNetApp ONTAP 9.7を搭載したCiscoとNetApp FlexPod データセンターについて説明します。Cisco UCS Manager（UCSM）4.1(2)では、次のサポートが統合されています。
+
+* 現行のすべてのCisco UCSファブリックインターコネクトモデル：6200、6300、6324（Cisco UCS Mini）
+* 6400
+* 2200/2300/2400シリーズIOM
+* Cisco UCS B-Series
+* Cisco UCS C-Series
+
+
+また、Cisco IntersightとNetApp Active IQ SaaS管理プラットフォームも含まれます。
+
+NetApp ONTAP 9.7、Cisco UCSユニファイドソフトウェアリリース4.1(2)、VMware vSphere 7.0を搭載したFlexPod データセンターは、Cisco Unified Computing System（Cisco UCS）、Cisco Nexus 9000スイッチファミリ、MDS 9000マルチレイヤファブリックスイッチ、 およびONTAP 9.7データ管理ソフトウェアを実行するNetApp AFF Aシリーズストレージアレイ。
+
+link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_vmware_vsphere_7_0_ontap_9_7.html["FlexPod Datacenter with VMware vSphere 7.0 and NetApp ONTAP 9.7 - Deploymentを参照してください"^]

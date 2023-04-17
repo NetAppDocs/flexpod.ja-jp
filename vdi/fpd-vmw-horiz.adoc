@@ -1,0 +1,15 @@
+---
+sidebar: sidebar 
+permalink: vdi/fpd-vmw-horiz.html 
+keywords: flexpod, cisco, ucs, aff, a300, ontap, data, vmware, vsphere, horizon 
+summary: 本ドキュメントでは、Cisco UCSとNetApp AFF A300、NetApp ONTAP データ管理ソフトウェアを搭載したFlexPod Datacenter上の5000シートから6000シートのデスクトップワークロード、エンドユーザコンピューティング環境を対象としたリファレンスアーキテクチャと設計ガイドを提供します。 
+---
+= FlexPod Datacenter with VMware Horizon View 7.10、VMware vSphere 6.7 U2、Cisco UCS Manager 4.0、およびNetApp ONTAP 9.6（最大6700シート
+:allow-uri-read: 
+
+
+Vadim Lebedev、Cisco Suresh Thoppay、ネットアップ
+
+本ドキュメントでは、Cisco UCSとNetApp AFF A300、NetApp ONTAP データ管理ソフトウェアを搭載したFlexPod Datacenter上の5000シートから6000シートのデスクトップワークロード、エンドユーザコンピューティング環境を対象としたリファレンスアーキテクチャと設計ガイドを提供します。解決策 には、VMware HorizonサーバベースのRDS Windows Server 2019セッション、VMware HorizonパーシステントフルクローンMicrosoft Windows 10仮想デスクトップ、VMware vSphere 6.7U2上のVMware Horizonノンパーシステント/インスタントクローンMicrosoft Windows 10仮想デスクトップが含まれます
+
+link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_ontap96_vmware710_67_u2_ucs_40_6700_seats.html["FlexPod Datacenter with VMware Horizon View 7.10、VMware vSphere 6.7 U2、Cisco UCS Manager 4.0、およびNetApp ONTAP 9.6（最大6700シート"^]

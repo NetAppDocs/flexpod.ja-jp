@@ -1,0 +1,15 @@
+---
+sidebar: sidebar 
+permalink: modern-apps/fpd-ai-dl-design.html 
+keywords: flexpod, cisco, ai, ml, data, center, deep, learning, design 
+summary: このドキュメントでは、FlexPod データセンター解決策 へのCisco UCS C480 ML M5プラットフォームの統合に関する設計の詳細を説明し、統合インフラ内でAIおよびML機能を提供するための統合アプローチを提供します。 
+---
+= FlexPod Datacenter for combined AI and ML with Cisco UCS 480 ML for deep learning - Design
+:allow-uri-read: 
+
+
+ネットアップ、Haseeb Niazi、Cisco Arvind Ramakrishnan
+
+このドキュメントでは、FlexPod データセンター解決策 へのCisco UCS C480 ML M5プラットフォームの統合に関する設計の詳細を説明し、統合インフラ内でAIおよびML機能を提供するための統合アプローチを提供します。従来のFlexPod システムの管理に使用している使い慣れたツールを使用して、AIとMLを組み合わせたサーバを管理できるようにすることで、管理オーバーヘッドとディープラーニングプラットフォームの導入コストを大幅に削減できます。このCVDで提示されている設計には、2つのNVIDIA T4 GPUを搭載したC220 M5サーバや、2つのNVIDIA V100 32GB PCIeカードを搭載したC240 M5サーバなど、他のCisco UCSプラットフォームも含まれています。これは、AIとMLの同時処理ワークロードを処理するための追加オプションです。
+
+link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_c480m5l_aiml_design.html["FlexPod Datacenter for Combined AI and ML with Cisco UCS 480 ML for Deep Learning - Design"^]

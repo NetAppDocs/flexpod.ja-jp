@@ -1,0 +1,19 @@
+---
+sidebar: sidebar 
+permalink: flexpod-dc/fpd-cisco-vsphere-design.html 
+keywords: flexpod, cisco, data, center, vmware, vsphere, 
+summary: 本ドキュメントでは、Ciscoとネットアップのテクノロジを共有クラウドインフラとして導入するための検証済みのアプローチである、CiscoとネットアップのFlexPod 解決策 について説明します。 
+---
+= FlexPod Datacenter with VMware vSphere 6.7 U1、Cisco UCS第4世代ファブリック、およびNetApp AFF Aシリーズ-設計
+:allow-uri-read: 
+
+
+John George、Cisco Sree Lakshmi Lanka、ネットアップ
+
+本ドキュメントでは、Ciscoとネットアップのテクノロジを共有クラウドインフラとして導入するための検証済みのアプローチである、CiscoとネットアップのFlexPod 解決策 について説明します。この検証済みの設計は、エンタープライズクラスのデータセンターで最も人気のある仮想化プラットフォームであるVMware vSphereをFlexPod 上に導入するためのフレームワークを提供します。
+
+FlexPod は業界をリードする統合インフラで、幅広いエンタープライズワークロードとユースケースをサポートしています。この解決策 を使用すると、VMware vSphereベースのプライベートクラウドを統合インフラに迅速かつ確実に導入できます。
+
+推奨される解決策 アーキテクチャは、Cisco UCS BシリーズブレードサーバおよびCシリーズラックサーバ、Cisco UCS 6454ファブリックインターコネクト、Cisco Nexus 9000シリーズスイッチ、Cisco MDSファイバチャネルスイッチなど、Cisco UCSハードウェアプラットフォームをサポートするために、Cisco Unified Computing System（Cisco UCS）上に構築されています。 ネットアップのオールフラッシュシリーズストレージアレイにも対応しています。また、VMware vSphere 6.7 Update 1も含まれています。これは、ストレージ利用率を最適化し、プライベートクラウドを促進するための多数の新機能を提供します。
+
+link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_vmware_netappaffa_design.html["FlexPod Datacenter with VMware vSphere 6.7 U1、Cisco UCS第4世代ファブリック、およびNetApp AFF Aシリーズ-設計"^]

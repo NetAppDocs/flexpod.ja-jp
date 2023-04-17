@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: ent-db/fpd-sap-aci-aseries-design.html 
+keywords: flexpod, cisco, sap, aci, UCS manager, aff, a-series, tdi, sap, hana 
+summary: このドキュメントでは、SAP HANAテーラードデータセンター統合（TDI）環境を導入するための検証済みアプローチとして、Cisco ACI統合FlexPod 解決策 について説明します。 
+---
+= FlexPod Datacenter for SAP解決策 with Cisco ACI、Cisco UCS Manager 4.0、and NetApp AFF A–Series-Design
+:allow-uri-read: 
+
+
+Pramod Ramamurthy、Cisco Marco Schoen、ネットアップ
+
+このドキュメントでは、SAP HANAテーラードデータセンター統合（TDI）環境を導入するための検証済みアプローチとして、Cisco ACI統合FlexPod 解決策 について説明します。この検証済みの設計では、SAP HANAを実装するためのガイドラインとフレームワークを、Ciscoとネットアップのベストプラクティスとともに提供します。
+
+推奨される解決策 アーキテクチャは、Cisco Unified Computing System（Cisco UCS）上に構築され、ユニファイドソフトウェアリリースを使用して、次のコンポーネントを含むCisco UCSハードウェアプラットフォームをサポートします。
+
+* Cisco UCS BシリーズブレードサーバおよびCisco UCS Cシリーズラックサーバは、Intel Optane Data Center Persistent Memory Module（DCPMM）オプションで構成できます
+* Cisco UCS 6400シリーズファブリックインターコネクト
+* Cisco Nexus 9000シリーズリーフ/スパインスイッチ
+* ネットアップオールフラッシュシリーズストレージアレイ
+
+
+また、このドキュメントでは、Red Hat Enterprise LinuxとSUSE Linux Enterprise Server for SAP HANAの両方について検証を行います。
+
+link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_ACI_sap_netappaffa_design.html["FlexPod Datacenter for SAP解決策 with Cisco ACI、Cisco UCS Manager 4.0、and NetApp AFF A–Series-Design"^]

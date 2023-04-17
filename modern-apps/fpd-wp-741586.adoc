@@ -1,0 +1,13 @@
+---
+sidebar: sidebar 
+permalink: modern-apps/fpd-wp-741586.html 
+keywords: flexpod, cisco, citrix, nvidia, white, paper, virtualization 
+summary: SPECviewperf 13を搭載したCisco UCS C240 M5およびB200 M5サーバで、NVIDIA Tesla P4、P6、P40カードを搭載したCitrix XenServer上のCitrix XenDesktopのパフォーマンスを確認します。 
+---
+= CitrixとNVIDIAによる3Dグラフィックスの視覚化-ホワイトペーパー
+:allow-uri-read: 
+
+
+このドキュメントでは、SPECviewperf 13を搭載したCisco UCS C240 M5およびB200 M5サーバで、NVIDIA Tesla P4、P6、およびP40カードを搭載したCitrix XenServer上のCitrix XenDesktopのパフォーマンスについて説明します。
+
+link:https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/whitepaper-c11-741586.pdf["CitrixとNVIDIAによる3Dグラフィックスの視覚化-ホワイトペーパー"^]

@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: ent-db/fpd-oracle-rac-linux.html 
+keywords: flexpod, cisco, datacenter, oracle, rac, linux, ucs 
+summary: Cisco Unified Computing System（Cisco UCS）は、コンピューティング、ネットワーク、ストレージアクセス、仮想化を1つの統合システムに統合する次世代データセンタープラットフォームです。 
+---
+= Oracle Linux 上の Oracle RAC を使用する FlexPod データセンター
+:allow-uri-read: 
+
+
+ネットアップ、Tushar Patel、Cisco Niranjan Mohapatra、Cisco John Elliott
+
+Cisco Unified Computing System（Cisco UCS）は、コンピューティング、ネットワーク、ストレージアクセス、仮想化を1つの統合システムに統合する次世代データセンタープラットフォームです。Cisco UCSは、ミッションクリティカルなデータベースワークロードのアーキテクチャに最適なプラットフォームです。Cisco UCSプラットフォーム、ネットアップストレージ、Oracle Real Application Cluster（RAC）アーキテクチャを組み合わせることで、導入時間の短縮、選択の柔軟性の向上、効率性の向上、リスクの軽減を実現し、ITの変革を加速できます。このCisco Validated Design（CVD）は、Oracle 12c RACデータベースを使用した、柔軟性、マルチテナント、ハイパフォーマンス、耐障害性に優れたFlexPod リファレンスアーキテクチャを強調しています。
+
+ネットアップとCiscoが開発したFlexPod プラットフォームは、ストレージ、ネットワーク、サーバの各テクノロジを事前検証済みで提供する、柔軟性に優れた統合インフラ解決策 です。コンピューティングの全体的なコストを削減しながら、ビジネスニーズへのITの即応性を高めるように設計されています。アップタイムを最大化し、リスクを最小限に抑えます。FlexPod コンポーネントは統合および標準化されているため、タイムリーで反復可能な一貫した導入を実現できます。各FlexPod 環境の電力、設置面積、使用可能な容量、パフォーマンス、コストを正確に計画できます。
+
+FlexPod は最新のテクノロジを採用し、データセンターのワークロードを効率的に簡易化して、価値の提供方法を再定義します。
+
+* NetApp FAS ハイブリッドアレイとFlash Poolフラッシュを組み合わせることで、特定のアプリケーションや環境に合わせて、回転式メディアにフラッシュを正確に割り当てることができます。
+* 事前検証済みのプラットフォームを活用することで、業務の中断を最小限に抑え、ITの即応性を向上させ、導入時間を数カ月から数週間に短縮できます。
+* 管理時間と総所有コスト（TCO）を50%削減
+* データセンターのワークロードに対する、絶えず拡大するハードウェアパフォーマンスのニーズに対応、またはそれ以上のパフォーマンスを提供します。
+
+
+link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_orcrac_12c_bm.html["Oracle Linux 上の Oracle RAC を使用する FlexPod データセンター"^]

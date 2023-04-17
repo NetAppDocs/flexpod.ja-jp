@@ -126,14 +126,12 @@ entries:
     url: "/hybrid-cloud/cloud-fabricpool_conclusion.html"
   - title: 追加情報の参照先
     url: "/hybrid-cloud/cloud-fabricpool_where_to_find_additional_information.html"
-- title: ONTAP データセンターと Cisco UCS Manager 、 NetApp AFF 9.3 FlexPod 、および VMware vSphere
-    6.5U1 [ 設計 ]
-  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_icp_ucsm32.html
-- title: Apprenda 8.2 、 Cisco ACI 3.1 、 Kubernetes 1.9.4 を搭載したプラットフォームサービス向け FlexPod
-    データセンター [ 設計 ]
-  url: https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/whitepaper-c11-740803.pdf
-- title: Cisco CloudCenter とネットアッププライベートストレージを使用したハイブリッドクラウド向け FlexPod データセンター [ 設計
-  url: http://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_hybridcloud_design.html
-- title: Cisco CloudCenter とネットアッププライベートストレージを使用したハイブリッドクラウド向け FlexPod データセンター [ 導入
-    ]
-  url: https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_hybridcloud.html
+- title: FlexPod Datacenter with IBM Cloud Private with Cisco UCS Manager、NetApp ONTAP
+    9.3 AFF 、およびVMware vSphere 6.5U1 -設計
+  url: "/hybrid-cloud/fpd-ibn-cloud-design.html"
+- title: FlexPod Datacenter for Hybrid Cloud with Cisco CloudCenter and NetApp Private
+    Storage - Design
+  url: "/hybrid-cloud/fpd-hc-storage-design.html"
+- title: FlexPod Datacenter for Hybrid Cloud with Cisco CloudCenter and NetApp Private
+    Storage - Deploy
+  url: "/hybrid-cloud/multi-cloud-deploy.html"

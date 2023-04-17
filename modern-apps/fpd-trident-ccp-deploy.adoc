@@ -1,0 +1,13 @@
+---
+sidebar: sidebar 
+permalink: modern-apps/fpd-trident-ccp-deploy.html 
+keywords: flexpod, cisco, trident, container, plug, in, deploy 
+summary: このドキュメントでは、FlexPod 解決策 のCisco Container Platform KubernetesテナントクラスタにNetApp Trident Container Storage Interface（CSI）プラグインを導入する手順を詳しく説明します。 
+---
+= FlexPod を使用したCiscoコンテナプラットフォームにNetApp Trident CSIプラグインを導入
+:allow-uri-read: 
+
+
+このドキュメントでは、FlexPod 解決策 のCisco Container Platform KubernetesテナントクラスタにNetApp Trident Container Storage Interface（CSI）プラグインを導入する手順を詳しく説明します。
+
+link:https://www.cisco.com/c/dam/en/us/solutions/collateral/data-center-virtualization/unified-computing/trident-on-container-platform-with-flexpod.pdf["FlexPod を使用したCiscoコンテナプラットフォームにNetApp Trident CSIプラグインを導入"^]

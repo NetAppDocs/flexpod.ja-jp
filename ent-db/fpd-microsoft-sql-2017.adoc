@@ -1,0 +1,17 @@
+---
+sidebar: sidebar 
+permalink: ent-db/fpd-microsoft-sql-2017.html 
+keywords: flexpod, linux, vmware, microsoft, hyper-v, sql, deploy, cisco 
+summary: このドキュメントでは、最新のハードウェアおよびソフトウェア製品を使用したFlexPod リファレンスアーキテクチャについて説明し、VMware ESXiおよびMicrosoft Windows Hyper-V仮想環境でMicrosoft SQL Serverデータベースをホストする場合の導入に関する推奨事項について説明します。また、MicrosoftによるSQL Server導入のサポートが有効になっています。 
+---
+= VMwareおよびHyper-Vで実行されているLinux VM上のMicrosoft SQL Server 2017を搭載したFlexPod データセンター
+:allow-uri-read: 
+
+
+ネットアップGopu Narasimha Reddy、Cisco Sanjeev Naldurgkar、Cisco Atul Bhalodia
+
+このドキュメントでは、最新のハードウェアおよびソフトウェア製品を使用したFlexPod リファレンスアーキテクチャについて説明し、VMware ESXiおよびMicrosoft Windows Hyper-V仮想環境でMicrosoft SQL Serverデータベースをホストする場合の導入に関する推奨事項について説明します。また、MicrosoftによるSQL Server導入のサポートが有効になっています。
+
+推奨される解決策 アーキテクチャは、Cisco Unified Computing System（Cisco UCS）上に構築され、ユニファイドソフトウェアリリース4.0.1cを使用して、Cisco UCS Bシリーズブレードサーバ、Cisco UCS 6300ファブリックインターコネクト、Cisco Nexus 9000シリーズスイッチ、NetApp AFF シリーズストレージアレイなどのCisco UCSハードウェアプラットフォームをサポートします。
+
+link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/mssql2017_flexpod_linux.html["VMwareおよびHyper-Vで実行されているLinux VM上のMicrosoft SQL Server 2017を搭載したFlexPod データセンター"^]

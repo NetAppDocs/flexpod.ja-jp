@@ -1,0 +1,17 @@
+---
+sidebar: sidebar 
+permalink: flexpod-dc/fpd-inter-design.html 
+keywords: flexpod, cisco, ontap, intersight, cloud, vmware, vsphere, deployment 
+summary: このドキュメントでは、Ciscoとネットアップのテクノロジを共有クラウドインフラとして導入するための検証済みの解決策 について説明します。 
+---
+= FlexPod Datacenter with Cisco Intersight and NetApp ONTAP 9.7-Design
+:allow-uri-read: 
+
+
+John George、Cisco Scott Kovacs、ネットアップ
+
+このドキュメントでは、Ciscoとネットアップのテクノロジを共有クラウドインフラとして導入するための検証済みの解決策 について説明します。この検証済みの設計は、エンタープライズクラスのデータセンターで最も人気のある仮想化プラットフォームであるVMware vSphereをFlexPod 上に導入するためのフレームワークを提供します。
+
+FlexPod は業界をリードする統合インフラで、幅広いエンタープライズワークロードとユースケースをサポートしています。この解決策 を使用すると、VMware vSphereベースのプライベートクラウドを統合インフラに迅速かつ確実に導入できます。
+
+link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_dc_ontap_97_ucs_4_vmw_vs_67_U3_design.html["FlexPod Datacenter with Cisco Intersight and NetApp ONTAP 9.7-Design"^]

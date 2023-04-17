@@ -1,0 +1,15 @@
+---
+sidebar: sidebar 
+permalink: flexpod-dc/fpd-cisco-vm-vs-deploy.html 
+keywords: flexpod, data, center, cisco, intersight, ontap, deployment 
+summary: データセンター設計における業界の現在のトレンドは、共有インフラへの移行です。 
+---
+= <xmt-block0>FlexPod</xmt-block> Datacenter with Cisco Intersight and NetApp<xmt-block1> ONTAP</xmt-block> 9.7 - Deploymentを参照してください
+:allow-uri-read: 
+
+
+John George、Cisco Scott Kovacs、ネットアップ
+
+データセンター設計における業界の現在のトレンドは、共有インフラへの移行です。仮想化と事前検証済みのITプラットフォームを使用することで、大企業のお客様は、アプリケーションサイロから脱却し、迅速に導入できる共有インフラに移行することで、即応性の向上とコストの削減を実現しています。Ciscoとネットアップは提携してFlexPod を提供しています。は、業界最高水準のストレージ、サーバ、ネットワークコンポーネントを使用してさまざまなワークロードの基盤として機能し、迅速かつ確実に導入できる効率的なアーキテクチャ設計を実現しています。
+
+link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_dc_ontap_97_ucs_4_vmw_vs_67_U3.html["FlexPod Datacenter with Cisco Intersight and NetApp ONTAP 9.7 - Deploymentを参照してください"^]

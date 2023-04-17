@@ -1,0 +1,17 @@
+---
+sidebar: sidebar 
+permalink: ent-db/fpd-sap-aseries-design.html 
+keywords: flexpod, cisco, sap, intel, ucs, aff, a-series, nexus 9000 
+summary: 本ドキュメントでは、第2世代Intel XeonスケーラブルプロセッサでサポートされるCisco UCSコンピューティングシステム（Cisco UCS）をベースにした、CiscoとNetApp FlexPod Datacenter for SAP HANAの導入方法について説明します。 
+---
+= FlexPod Datacenter for SAP解決策 with Cisco UCS Third-generation fabric and NetApp AFF A–Series
+:allow-uri-read: 
+
+
+Pramod Ramamurthy、Cisco Marco Schoen、ネットアップ
+
+本ドキュメントでは、第2世代Intel XeonスケーラブルプロセッサでサポートされるCisco UCSコンピューティングシステム（Cisco UCS）をベースにした、CiscoとNetApp FlexPod Datacenter for SAP HANAの導入方法について説明します。
+
+Cisco UCS Manager（UCSM）4.0(4)は、現在のすべてのCisco UCSファブリックインターコネクトモデル（6200、6300、6324、6454）、2200/2300シリーズIOM、Cisco UCS Bシリーズブレード、およびCisco UCS Cシリーズラックフォームファクタサーバの統合サポートを提供します。Cisco UCSユニファイドソフトウェアリリース4.0（4D）とNetApp ONTAP 9.6を搭載したFlexPod データセンターは、Cisco UCS、Cisco Nexus 9000スイッチファミリー、NetApp AFF Aシリーズストレージアレイを基盤に構築された、事前設計されたベストプラクティスに基づくデータセンターアーキテクチャです。
+
+link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_sap_ontap96.html["FlexPod Datacenter for SAP解決策 with Cisco UCS Third-generation Fabric and NetApp AFF A–Series"^]

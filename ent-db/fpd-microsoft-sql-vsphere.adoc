@@ -1,0 +1,17 @@
+---
+sidebar: sidebar 
+permalink: ent-db/fpd-microsoft-sql-vsphere.html 
+keywords: flexpod, microsoft, cisco, sql, vmware, vsphere, ucs 
+summary: このドキュメントでは、最新のハードウェアおよびソフトウェア製品を使用したFlexPod リファレンスアーキテクチャについて説明し、VMware ESXi仮想環境でMicrosoft SQL Server 2019データベースをホストする場合の導入に関する推奨事項を示します。 
+---
+= FlexPod Datacenter for Microsoft SQL Server 2019 および VMware vSphere 6.7
+:allow-uri-read: 
+
+
+ネットアップGopu Narasimha Reddy、Cisco Sanjeev Naldurgkar、Cisco Atul Bhalodia
+
+このドキュメントでは、最新のハードウェアおよびソフトウェア製品を使用したFlexPod リファレンスアーキテクチャについて説明し、VMware ESXi仮想環境でMicrosoft SQL Server 2019データベースをホストする場合の導入に関する推奨事項を示します。この解決策 では、Cisco Workload Optimization Manager（CWOM）も使用されています。CWOMは、両方のSQLワークロードのリソース使用率を最適かつ効率的にするための推奨事項を自動で提供します。
+
+解決策 は、Cisco UCS Bシリーズブレードサーバ、Cisco UCS 6400ファブリックインターコネクト、Cisco Nexus 9000シリーズスイッチ、NetApp AFF シリーズストレージアレイなどのCisco UCSハードウェアプラットフォームをサポートするために、Cisco Unified Computing System（Cisco UCS）上に構築されています。
+
+link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/mssql2019_flexpod.html["FlexPod Datacenter for Microsoft SQL Server 2019 および VMware vSphere 6.7"^]

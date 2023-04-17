@@ -1,0 +1,20 @@
+---
+sidebar: sidebar 
+permalink: ent-db/fpd-sap-aci-ucs.html 
+keywords: flexpod, datacenter, cisco, aci, ucs, aff, a-series 
+summary: このドキュメントでは、FlexPod インフラにおけるSAP HANAテーラードデータセンター統合オプションのアーキテクチャと導入手順について説明します。 
+---
+= FlexPod Datacenter for SAP with Cisco ACI、Cisco UCS Manager 4.0、and NetApp AFF A–Series
+:allow-uri-read: 
+
+
+Pramod Ramamurthy、Cisco Marco Schoen、ネットアップ
+
+本ドキュメントでは、FlexPod インフラにおけるSAP HANAテーラードデータセンター統合オプションのアーキテクチャと導入手順について説明します。このオプションは次の要素で構成されます。
+
+* Cisco UCS Computing System（Cisco UCS）は、第2世代Intel Xeonスケーラブルプロセッサによってサポートされます。
+* Cisco Application Centric Infrastructure（ACI）を活用したスイッチング製品。
+* ネットアップAシリーズAFF アレイ：
+
+
+link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_ACI_sap_netappaffa.html["FlexPod Datacenter for SAP with Cisco ACI、Cisco UCS Manager 4.0、and NetApp AFF A–Series"^]
