@@ -13,6 +13,7 @@ summary: NetApp Cloud Insights の使用方法を示すビデオが表示され�
 :imagesdir: ./../media/
 
 
+[role="lead"]
 ビデオでは、 NetApp Cloud Insights を使用してオンプレミス環境内のリソースを評価する方法を紹介しています https://netapp.hubs.vidyard.com/watch/1ycNWx4hzFsaV1dQHFyxY2?["こちらをご覧ください"^]。
 
 NetApp Cloud Insights を使用してインフラを監視し、インフラのアラートしきい値を設定する方法を紹介するビデオをご覧ください https://netapp.hubs.vidyard.com/watch/DgUxcxES3Ujdqe1JhhkfAW["こちらをご覧ください"^]。

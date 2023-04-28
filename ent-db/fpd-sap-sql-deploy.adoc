@@ -8,6 +8,7 @@ summary: FlexPod は、IT部門の急速に変化するニーズに対応する�
 :allow-uri-read: 
 
 
+[role="lead"]
 FlexPod は、IT部門の急速に変化するニーズに対応するように設計された、事前に検証および設計されたデータセンター解決策 です。Ciscoとネットアップは提携して、業界最高のコンピューティング、ネットワーク、ストレージコンポーネントを、データベース、エンタープライズリソースプランニング（ERP）、顧客関係管理（CRM）、Webアプリケーションなど、さまざまなエンタープライズワークロードの基盤として使用するFlexPod を提供しています。近年、ITアプリケーション、特にデータベースの統合に大きな関心が寄せられています。過去数年間で最も広く採用され、導入されているデータベースプラットフォームは、Microsoft SQL Serverです。SQL Serverデータベースは、データベーススプロールの影響を受けることが多く、サーバの利用率の低さ、ライセンスの不正確さ、セキュリティ上の懸念、管理上の懸念、膨大な運用コストなど、ITの課題につながっています。そのため、SQL Serverデータベースは、堅牢性、柔軟性、耐障害性に優れたプラットフォーム上での統合に適しています。このドキュメントでは、SQL Serverデータベースを導入および統合するためのFlexPod リファレンスアーキテクチャについて説明します。
 
 link:https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/sap-appservers-flexpod-with-sql.pdf["FlexPod with SQLにSAPアプリケーションサーバを導入します"^]

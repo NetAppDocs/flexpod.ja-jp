@@ -10,6 +10,7 @@ summary: このドキュメントでは、最新のハードウェアおよび�
 
 ネットアップGopu Narasimha Reddy、Cisco Sanjeev Naldurgkar、Cisco Atul Bhalodia
 
+[role="lead"]
 このドキュメントでは、最新のハードウェアおよびソフトウェア製品を使用したFlexPod リファレンスアーキテクチャについて説明し、VMware ESXiおよびMicrosoft Windows Hyper-V仮想環境でMicrosoft SQL Serverデータベースをホストする場合の導入に関する推奨事項について説明します。また、MicrosoftによるSQL Server導入のサポートが有効になっています。
 
 推奨される解決策 アーキテクチャは、Cisco UCS Bシリーズブレードサーバ、Cisco UCS 6300ファブリックインターコネクト、Cisco Nexus 9000シリーズスイッチ、NetApp AFF シリーズストレージアレイなど、Cisco UCSハードウェアプラットフォームをサポートするために、ユニファイドソフトウェアリリース4.0.1cを使用してCisco Unified Computing System（Cisco UCS）上に構築されています。

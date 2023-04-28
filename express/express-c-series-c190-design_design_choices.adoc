@@ -8,6 +8,7 @@ summary: このセクションに記載されているテクノロジは、ア�
 :allow-uri-read: 
 
 
+[role="lead"]
 このセクションに記載されているテクノロジは、アーキテクチャ設計フェーズで採用されました。各テクノロジは、 FlexPod Express Infrastructure 解決策の特定の目的に使用されます。
 
 

@@ -13,6 +13,7 @@ summary: シスコは、 FlexPod Express の設計およびアーキテクチャ
 :imagesdir: ./../media/
 
 
+[role="lead"]
 シスコは、 FlexPod Express の設計およびアーキテクチャに大きく貢献しており、解決策のコンピューティングおよびネットワーキングレイヤに貢献しています。ここでは、 FlexPod Express で使用できる Cisco UCS および Cisco Nexus コンポーネントについて説明します。
 
 

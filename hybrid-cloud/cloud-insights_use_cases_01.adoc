@@ -13,6 +13,7 @@ summary: FlexPod をセットアップし、解決策 Datacenter Cloud Insights 
 :imagesdir: ./../media/
 
 
+[role="lead"]
 FlexPod をセットアップし、解決策 Datacenter Cloud Insights を監視するように設定すると、ダッシュボードで実行できるいくつかのタスクを確認して、環境を評価および監視することができます。このセクションでは、 Cloud Insights の主なユースケースを 5 つ紹介します。
 
 * Active IQ 統合

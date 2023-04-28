@@ -10,6 +10,7 @@ summary: IBM Cloud Private（ICP）は、クラウドネイティブやアプリ
 
 Sreenivasa Edula、Cisco Thanachit Wichianchai、IBM Jacky Ben-Bassat、IBM Global Alliance、ネットアップ
 
+[role="lead"]
 IBM Cloud Private（ICP）は、クラウドネイティブやアプリケーション最新化のユースケース向けにコンテナ化されたアプリケーションを開発、管理するためのオンプレミスプラットフォームです。コンテナオーケストレーションとしてKubernetes上に構築された統合環境で、Dockerコンテナ用のプライベートイメージリポジトリ、管理コンソール、監視フレームワーク、多くのオープンソースベースおよびIBMコンテナ化アプリケーションなどが含まれます。Ciscoとネットアップが提供する統合インフラであるFlexPod とICPを組み合わせることで、インフラの導入と管理が簡易化されます。また、ストレージ効率の向上、データ保護の強化、リスクの軽減、この可用性に優れたエンタープライズクラスのインフラスタックを柔軟に拡張できるというメリットも得られ、新しいビジネス要件や長期的なその他の変化に対応できます。
 
 link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_icp_ucsm32.html["IBMクラウドプライベートを使用するFlexPod データセンター"^]

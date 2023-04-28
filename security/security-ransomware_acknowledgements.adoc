@@ -13,6 +13,7 @@ summary: 本ガイドの作成にご協力いただいたことに、以下の�
 :imagesdir: ./../media/
 
 
+[role="lead"]
 このドキュメントの作成にあたり、以下の方々のご協力に感謝します。
 
 * ネットアップ、 Jorge Gomez Navarrete 氏

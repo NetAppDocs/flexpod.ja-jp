@@ -13,6 +13,7 @@ summary: このセクションでは、 FlexPod Express の各コンポーネン
 :imagesdir: ./../media/
 
 
+[role="lead"]
 このセクションでは、 FlexPod Express の各コンポーネントに関するその他の重要な技術仕様について説明します。
 
 

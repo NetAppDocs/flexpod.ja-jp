@@ -10,6 +10,7 @@ summary: Cisco Validated Design（CVD）は、お客様の導入を促進およ�
 
 ネットアップ、Haseeb Niazi、Cisco David Arnette
 
+[role="lead"]
 Cisco Validated Design（CVD）は、お客様の導入を促進および改善するために設計、テスト、文書化されたシステムとソリューションを提供します。これらの設計では、お客様のビジネスニーズに対応し、設計から導入までを支援するために開発されたソリューションポートフォリオに、幅広いテクノロジと製品が組み込まれています。
 
 link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_hybridcloud_design.html["FlexPod Datacenter for Hybrid Cloud with Cisco CloudCenter and NetApp Private Storage -設計"^]

@@ -10,6 +10,7 @@ summary: このドキュメントでは、SAP HANAテーラードデータセン
 
 Pramod Ramamurthy、Cisco Marco Schoen、ネットアップ
 
+[role="lead"]
 このドキュメントでは、SAP HANAテーラードデータセンター統合（TDI）環境を導入するための検証済みアプローチとして、Cisco ACI統合FlexPod 解決策 について説明します。この検証済みの設計では、SAP HANAを実装するためのガイドラインとフレームワークを、Ciscoとネットアップのベストプラクティスとともに提供します。
 
 推奨される解決策 アーキテクチャは、Cisco Unified Computing System（Cisco UCS）上に構築され、ユニファイドソフトウェアリリースを使用して、次のコンポーネントを含むCisco UCSハードウェアプラットフォームをサポートします。

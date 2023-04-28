@@ -13,6 +13,7 @@ summary: 次のセクションでは、 FlexPod Express 環境で使用する Ci
 :imagesdir: ./../media/
 
 
+[role="lead"]
 次のセクションでは、 FlexPod Express 環境で使用する Cisco Nexus 3172P スイッチの構成について詳しく説明します。
 
 

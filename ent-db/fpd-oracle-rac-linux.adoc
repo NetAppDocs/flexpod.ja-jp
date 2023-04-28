@@ -10,6 +10,7 @@ summary: Cisco Unified Computing System（Cisco UCS）は、コンピューテ�
 
 ネットアップ、Tushar Patel、Cisco Niranjan Mohapatra、Cisco John Elliott
 
+[role="lead"]
 Cisco Unified Computing System（Cisco UCS）は、コンピューティング、ネットワーク、ストレージアクセス、仮想化を1つの統合システムに統合する次世代データセンタープラットフォームです。Cisco UCSは、ミッションクリティカルなデータベースワークロードのアーキテクチャに最適なプラットフォームです。Cisco UCSプラットフォーム、ネットアップストレージ、Oracle Real Application Cluster（RAC）アーキテクチャを組み合わせることで、導入時間の短縮、選択の柔軟性の向上、効率性の向上、リスクの軽減を実現し、ITの変革を加速できます。このCisco Validated Design（CVD）は、Oracle 12c RACデータベースを使用した、柔軟性、マルチテナント、ハイパフォーマンス、耐障害性に優れたFlexPod リファレンスアーキテクチャを強調しています。
 
 ネットアップとCiscoが開発したFlexPod プラットフォームは、ストレージ、ネットワーク、サーバの各テクノロジを事前検証済みで提供する、柔軟性に優れた統合インフラ解決策 です。コンピューティングの全体的なコストを削減しながら、ビジネスニーズへのITの即応性を高めるように設計されています。アップタイムを最大化し、リスクを最小限に抑えます。FlexPod コンポーネントは統合および標準化されているため、タイムリーで反復可能な一貫した導入を実現できます。各FlexPod 環境の電力、設置面積、使用可能な容量、パフォーマンス、コストを正確に計画できます。

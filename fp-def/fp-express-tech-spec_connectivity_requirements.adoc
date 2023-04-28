@@ -13,6 +13,7 @@ summary: ここでは、 FlexPod Express の各バージョンの接続要件に
 :imagesdir: ./../media/
 
 
+[role="lead"]
 ここでは、 FlexPod Express の各バージョンの接続要件について説明します。
 
 

@@ -10,6 +10,7 @@ summary: このドキュメントでは、FlexPod インフラにおけるSAP HA
 
 Pramod Ramamurthy、Cisco Marco Schoen、ネットアップ
 
+[role="lead"]
 このドキュメントでは、FlexPod 業界をリードするSoftware-Defined Networking解決策 （SDN）であるCisco Application Centric Infrastructure（ACI）とネットアップAシリーズAFF アレイを活用した、シスコのコンピューティング製品とスイッチング製品で構成される、SAP HANAテーラードデータセンター統合オプションのアーキテクチャと導入手順について説明します。本ドキュメントでは、設計原則と、SAP HANAを導入するための詳細な設定手順について説明します。
 
 link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_saphana_aci_UCSM32.html["SLES 12 SP3およびRHEL 7.4を搭載したCisco UCS M5サーバ上のCisco ACIを搭載したFlexPod Datacenter for SAP解決策"^]

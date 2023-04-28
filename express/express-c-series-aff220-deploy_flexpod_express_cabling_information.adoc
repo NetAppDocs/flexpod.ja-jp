@@ -13,6 +13,7 @@ summary: このセクションでは、 Cisco Nexus スイッチ 3172P A およ�
 :imagesdir: ./../media/
 
 
+[role="lead"]
 次の図に、リファレンス検証のケーブル接続を示します。
 
 image:express-c-series-aff220-deploy_image5.png["エラー：グラフィックイメージがありません"]

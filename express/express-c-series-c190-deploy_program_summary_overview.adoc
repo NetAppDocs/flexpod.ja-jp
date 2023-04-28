@@ -15,6 +15,7 @@ summary: FlexPod Datacenter と FlexPod Express は、ベースライン構成�
 
 ネットアップ、 Savita Kumari 氏
 
+[role="lead"]
 業界の動向から、共有インフラやクラウドコンピューティングへの大規模なデータセンターの移行が進行していることがわかります。さらに、データセンターで使い慣れたテクノロジを使用しているリモートオフィスやブランチオフィスに、シンプルで効果的な解決策を求めています。
 
 FlexPod ® Express は、 Cisco Unified Computing System （ Cisco UCS ）、 Cisco Nexus ファミリースイッチ、およびネットアップストレージテクノロジを基盤とした、事前設計されたベストプラクティスのデータセンターアーキテクチャです。FlexPod Express システムのコンポーネントは、 FlexPod Datacenter と同様に、小規模な IT インフラ環境全体での管理面の相乗効果を実現します。FlexPod Datacenter と FlexPod Express は、仮想化に最適なプラットフォームで、ベアメタルのオペレーティングシステムやエンタープライズワークロードに最適です。

@@ -13,6 +13,7 @@ summary: このセクションでは、 ONTAP または Cisco UCS ブレード�
 :imagesdir: ./../media/
 
 
+[role="lead"]
 本ドキュメントでは、 FlexPod 導入に関するネットアップストレージのガイダンスに以下の内容を記載します。
 
 * ONTAP を使用する環境

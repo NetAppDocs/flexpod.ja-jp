@@ -10,6 +10,7 @@ summary: Dockerは、開発者やIT運用者が分散アプリケーションを
 
 Muhammad Afzal、Cisco John George、Cisco Amit Borulkar、NetApp Uday Shetty、Docker
 
+[role="lead"]
 Dockerは、開発者やIT運用担当者が分散アプリケーションをどこでも構築、出荷、実行できる、世界をリードするソフトウェアコンテナプラットフォームです。マイクロサービスアーキテクチャが次世代のITを形作る中、モノリシックアプリケーションに多額の投資をしている企業は、アプリケーションアーキテクチャを最新化し、組織の競争力とコスト効率を維持するための戦略としてDockerを採用する方法を模索しています。コンテナ化は、開発者やIT運用者がインフラ全体でアプリケーションを構築、導入するために必要な即応性、制御性、モビリティを提供します。Dockerプラットフォームを使用すると、分散したアプリケーションを軽量なアプリケーションコンテナに簡単に構成できます。このコンテナは、システムを停止することなく動的に変更できます。この機能により、ローカル、データセンター、さまざまなクラウドサービスプロバイダのネットワークを介して、物理マシンまたは仮想マシンで実行されている開発、テスト、本番環境全体でアプリケーションを移植できます。
 
 link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_docker_deploy_design.html["FlexPod Datacenter with Docker Enterprise Edition for Container Managementを参照してください"^]

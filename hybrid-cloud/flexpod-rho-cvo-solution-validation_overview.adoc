@@ -15,6 +15,7 @@ summary: このセクションでは、さまざまな検証済みのユース�
 
 link:flexpod-rho-cvo-astra-control-center-installation-on-openshift-container-platform.html["前のレポート：OpenShift Container PlatformにAstra Control Centerをインストールしました。"]
 
+[role="lead"]
 このセクションでは、いくつかのユースケースで解決策 を復習します。
 
 * リモートバックアップから、クラウドで実行されている別のOpenShiftクラスタへのステートフルアプリケーションのリストア。

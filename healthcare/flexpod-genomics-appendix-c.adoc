@@ -15,6 +15,7 @@ summary: このセクションでは、 Cromwell エンジンを使用して GAT
 
 link:flexpod-genomics-appendix-b.html["11fffe01d469840980d9b9a5f45bf9ed"]
 
+[role="lead"]
 Cromwell エンジンを使用して GATK を実行すると、次の出力例が得られます。
 
 ....

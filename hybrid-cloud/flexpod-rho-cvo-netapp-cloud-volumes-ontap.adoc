@@ -15,6 +15,7 @@ summary: このセクションでは、AWSにCloud Volumes ONTAP とAstra Triden
 
 link:flexpod-rho-cvo-red-hat-openshift-on-aws.html["以前は、AWSでRed Hat OpenShiftを利用していました。"]
 
+[role="lead"]
 NetApp Cloud Volumes ONTAP インスタンスはAWSに導入され、Astra Tridentのバックエンドストレージとして機能します。Cloud Volumes ONTAP 作業環境を追加する前に、コネクタを配置する必要があります。コネクタを配置せずにCloud Volumes ONTAP の最初の作業環境を作成するかどうかを確認するメッセージが表示されます。AWSにコネクタを導入するには、を参照してください https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-aws.html["コネクタを作成します"^]。
 
 AWSにCloud Volumes ONTAP を導入する手順については、を参照してください https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-aws.html["AWSでのクイックスタート"^]。

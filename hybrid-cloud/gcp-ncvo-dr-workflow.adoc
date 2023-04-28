@@ -15,6 +15,7 @@ summary: このページには、ディザスタリカバリワークフロー�
 
 link:gcp-ncvo-automated-deployment-of-hybrid-cloud-netapp-storage.html["前：ハイブリッドクラウドネットアップストレージの自動導入。"]
 
+[role="lead"]
 手順は次のとおりです。
 
 . ワークフローを定義します。

@@ -15,6 +15,7 @@ summary: このセクションでは、 GATK からの jar ファイル出力に
 
 link:flexpod-genomics-genomics---gatk-setup-and-execution.html["以前のゲノム - GATK のセットアップと実行。"]
 
+[role="lead"]
 jar ファイルを使用して GATK を実行すると、次のような出力が得られます。
 
 ....

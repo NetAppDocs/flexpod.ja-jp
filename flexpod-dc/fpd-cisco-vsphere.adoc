@@ -10,6 +10,7 @@ summary: 'このドキュメントでは、NetApp ONTAP 9.6を搭載したCisco�
 
 John George、Cisco Sree Lakshmi Lanka、ネットアップ
 
+[role="lead"]
 このドキュメントでは、NetApp ONTAP 9.6を搭載したCiscoとNetApp FlexPod データセンター、第2世代Intel Xeonスケーラブルプロセッサを搭載したCisco UCS Manager Unifiedソフトウェアリリース4.0(4)、およびVMware vSphere 6.7 U2について説明します。Cisco UCS Manager（UCSM）4.0(4)は、次の機能を統合的にサポートします。
 
 * 現行のすべてのCisco UCSファブリックインターコネクトモデル：6200、6300、6324（Cisco UCS Mini）

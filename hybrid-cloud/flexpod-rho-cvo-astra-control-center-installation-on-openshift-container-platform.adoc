@@ -15,6 +15,7 @@ summary: FlexPod で実行されているOpenShiftクラスタ、またはCloud 
 
 link:flexpod-rho-cvo-netapp-cloud-volumes-ontap.html["Previous：NetApp Cloud Volumes ONTAP の略。"]
 
+[role="lead"]
 FlexPod で実行されているOpenShiftクラスタ、またはCloud Volumes ONTAP ストレージバックエンドを使用するAWSにAstraコントロールセンターをインストールできます。この解決策 では、OpenShiftベアメタルクラスタにAstraコントロールセンターを導入します。
 
 Astra Control Centerは、説明されている標準的なプロセスを使用してインストールできます https://docs.netapp.com/us-en/astra-control-center/get-started/install_acc.html["こちらをご覧ください"^] または、Red Hat OpenShift OperatorHubから入手してください。Astra Control Operatorは、Red Hat認定オペレータです。この解決策 では、AstraコントロールセンターはRed Hat OperatorHubを使用してインストールされます。

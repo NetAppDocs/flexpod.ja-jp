@@ -13,6 +13,7 @@ summary: Cisco Intersight には、新機能、拡張機能、バグ修正を提
 :imagesdir: ./../media/
 
 
+[role="lead"]
 このセクションでは、 Cisco Intersight と NetApp ONTAP ストレージに利用できる新機能を紹介します。
 
 

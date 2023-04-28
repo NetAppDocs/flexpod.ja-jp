@@ -15,6 +15,7 @@ summary: このセクションでは、 .GATK 出力の実行について説明�
 
 link:flexpod-genomics-appendix-a.html["Previous ： jar ファイルを使用して GATK を実行するための出力。"]
 
+[role="lead"]
 「 ./GATK` 」スクリプトを使用して GATK を実行すると、次の出力例が得られます。
 
 ....

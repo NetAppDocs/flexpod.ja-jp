@@ -10,6 +10,7 @@ summary: 'このドキュメントでは、NetApp AFF A400オールフラッシ�
 
 John George、Cisco Sree Lakshmi Lanka、ネットアップ
 
+[role="lead"]
 このドキュメントでは、NetApp AFF A400オールフラッシュストレージシステム、第2世代Intel Xeonスケーラブルプロセッサを搭載したCisco UCS Managerユニファイドソフトウェアリリース4.1(2)、およびVMware vSphere 7.0上でNetApp ONTAP 9.7を搭載したCiscoとNetApp FlexPod データセンターについて説明します。Cisco UCS Manager（UCSM）4.1(2)では、次のサポートが統合されています。
 
 * 現行のすべてのCisco UCSファブリックインターコネクトモデル：6200、6300、6324（Cisco UCS Mini）

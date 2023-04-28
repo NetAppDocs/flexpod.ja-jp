@@ -15,6 +15,7 @@ summary: このページには、FlexPod インスタンスの導入に必要な
 
 link:gcp-ncvo-solution-components.html["前の図：解決策 コンポーネント。"]
 
+[role="lead"]
 設計のさまざまな要素の構成や関連するベストプラクティスなど、FlexPod の設計および導入の詳細については、を参照してください https://www.cisco.com/c/en/us/solutions/design-zone/data-center-design-guides/flexpod-design-guides.html["FlexPod 向けのシスコ検証済み設計"^]。
 
 FlexPod は、UCS管理モードとCisco Intersight管理モードの両方に導入できます。FlexPod をUCS管理モードで導入している場合は、最新のCisco Validated Designが見つかります https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_m6_esxi7u2_design.html["こちらをご覧ください"^]。

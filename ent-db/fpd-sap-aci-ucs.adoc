@@ -10,6 +10,7 @@ summary: このドキュメントでは、FlexPod インフラにおけるSAP HA
 
 Pramod Ramamurthy、Cisco Marco Schoen、ネットアップ
 
+[role="lead"]
 本ドキュメントでは、FlexPod インフラにおけるSAP HANAテーラードデータセンター統合オプションのアーキテクチャと導入手順について説明します。このオプションは次の要素で構成されます。
 
 * Cisco UCS Computing System（Cisco UCS）は、第2世代Intel Xeonスケーラブルプロセッサによってサポートされます。

@@ -17,6 +17,7 @@ summary: このテクニカルレポートで詳述されている解決策は�
 
 協力：image:cisco logo.png["エラー：グラフィックイメージがありません"]
 
+[role="lead"]
 このテクニカルレポートで詳述されている解決策は、 ONTAP データセンター解決策の一部として導入されている NetApp AFF を実行している NetApp Cloud Insights A800 ストレージシステムを監視するために、 NetApp FlexPod サービスを設定する方法を示しています。
 
 

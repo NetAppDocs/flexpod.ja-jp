@@ -10,6 +10,7 @@ summary: 本ドキュメントでは、FlexPod Datacenter for Hybrid Cloudをセ
 
 ネットアップ、Haseeb Niazi、Cisco David Arnette
 
+[role="lead"]
 本ドキュメントでは、FlexPod Datacenter for Hybrid Cloudをセットアップするための設定と実装の詳細なガイドラインを提供します。次の設計要素は、このバージョンのFlexPod を以前のモデルと区別します。
 
 * Cisco CloudCenterとFlexPod データセンターの統合（ACIをプライベートクラウドとして使用

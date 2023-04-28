@@ -15,6 +15,7 @@ summary: コントローラを使用してTerraformプランを実行できま�
 
 link:gcp-ncvo-dr-workflow.html["前の手順：DRワークフロー"]
 
+[role="lead"]
 コントローラを使用してTerraformプランを実行できます。ICOワークフローを使用してTerraformプランをすでに実行している場合は、このセクションを省略できます。
 
 

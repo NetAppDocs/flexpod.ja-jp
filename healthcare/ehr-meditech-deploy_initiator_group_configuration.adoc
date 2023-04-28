@@ -13,6 +13,7 @@ summary: FC をデータネットワークプロトコルとして使用する�
 :imagesdir: ./../media/
 
 
+[role="lead"]
 FC をデータネットワークプロトコルとして使用する場合は、各ストレージコントローラに 2 つのイニシエータグループ（ igroup ）を作成します。1 つ目の igroup には、 MEDITECH ホスト VM （ MEDITECH 向け igroup ）をホストしている VMware ESXi サーバ上の FC ホストインターフェイスカードの WWPN が含まれています。
 
 MEDITECH igroup オペレーティングシステムのタイプは環境設定に応じて設定する必要があります。例：

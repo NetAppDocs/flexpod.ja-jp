@@ -13,6 +13,7 @@ summary:
 :imagesdir: ./../media/
 
 
+[role="lead"]
 デフォルトでは、ボリュームは「なし」ボリューム階層化ポリシーを使用します。ボリュームの作成後、 OnCommand システムマネージャまたは ONTAP CLI を使用してボリューム階層化ポリシーを変更できます。
 
 FlexPod で使用する場合、 FabricPool には、「自動」、「 Snapshot のみ」、「なし」の 3 つのボリューム階層化ポリシーが用意されています。

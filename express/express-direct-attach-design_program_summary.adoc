@@ -8,6 +8,7 @@ summary: FlexPod リファレンスアーキテクチャは、 Cisco Validated D
 :allow-uri-read: 
 
 
+[role="lead"]
 この FlexPod Express 解決策は、 FlexPod コンバージドインフラプログラムの一部です。
 
 

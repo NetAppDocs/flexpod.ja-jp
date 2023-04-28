@@ -13,6 +13,7 @@ summary: 環境内の MEDITECH ホストの数によって、 NetApp FAS また�
 :imagesdir: ./../media/
 
 
+[role="lead"]
 環境内の MEDITECH ホストの数によって、 NetApp FAS または AFF システム内に作成される LUN の数が決まります。Hardware Configuration Proposal （ハードウェア構成提案）は、各 LUN のサイズを指定します。
 
 

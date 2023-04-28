@@ -13,6 +13,7 @@ summary: ここでは、 FlexPod Express 構成で使用する Cisco UCS C シ�
 :imagesdir: ./../media/
 
 
+[role="lead"]
 ここでは、 FlexPod Express 構成で使用する Cisco UCS C シリーズスタンドアロンラックサーバを設定するための詳細な手順について説明します。
 
 

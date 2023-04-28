@@ -13,6 +13,7 @@ summary: NetApp AFF ストレージ導入手順を完了するには、次の手
 :imagesdir: ./../media/
 
 
+[role="lead"]
 このセクションでは、 NetApp AFF ストレージ導入手順について説明します。
 
 

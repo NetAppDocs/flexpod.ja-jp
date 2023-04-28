@@ -13,6 +13,7 @@ summary: ここでは、 NetApp ONTAP データ管理ソフトウェアの主な
 :imagesdir: ./../media/
 
 
+[role="lead"]
 ここでは、 NetApp ONTAP データ管理ソフトウェアの主な機能と、ランサムウェア攻撃から効果的に保護してリカバリするために使用できる Cisco UCS および Cisco Nexus のツールについて説明します。
 
 

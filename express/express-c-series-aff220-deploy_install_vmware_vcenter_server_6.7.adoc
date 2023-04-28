@@ -13,6 +13,7 @@ summary: このセクションでは、 FlexPod 構成に VMware vCenter Server 
 :imagesdir: ./../media/
 
 
+[role="lead"]
 このセクションでは、 FlexPod 構成に VMware vCenter Server 6.7 をインストールする詳細な手順について説明します。
 
 

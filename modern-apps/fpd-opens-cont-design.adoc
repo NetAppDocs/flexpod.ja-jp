@@ -10,6 +10,7 @@ summary: Ciscoとネットアップは提携して、戦略的なデータセン
 
 Haseeb Niazi、Cisco Alan Cowles、ネットアップ
 
+[role="lead"]
 Ciscoとネットアップは提携して、戦略的なデータセンタープラットフォームを実現する一連のFlexPod ソリューションを提供しています。FlexPod 解決策 は、コンピューティング、ストレージ、ネットワーク設計のベストプラクティスを組み込んだ統合アーキテクチャを提供します。そのため、統合アーキテクチャを検証してさまざまなコンポーネント間の互換性を確保することで、ITリスクを最小限に抑えることができます。また、解決策 は、導入のさまざまな段階（計画、設計、実装）で使用できる文書化された設計ガイダンス、導入ガイダンス、およびサポートを提供することで、ITの課題にも対処します。
 
 link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_openshift4_design.html["FlexPod Datacenter for OpenShift Container Platform 4-設計"^]

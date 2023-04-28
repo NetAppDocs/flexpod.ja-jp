@@ -13,6 +13,7 @@ summary: ここでは、 FlexPod Express の各バージョンに必要なハー
 :imagesdir: ./../media/
 
 
+[role="lead"]
 ここでは、 FlexPod Express の各バージョンに必要なハードウェアの最小要件について説明します。
 
 

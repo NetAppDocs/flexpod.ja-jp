@@ -10,6 +10,7 @@ summary: 本ドキュメントでは、Cisco ACIマルチポッドとNetApp Metr
 
 ネットアップ、Haseeb Niazi、Cisco Arvind Ramakrishnan
 
+[role="lead"]
 本ドキュメントでは、Cisco ACIマルチポッドとNetApp MetroCluster IP解決策 をFlexPod データセンターに統合して、可用性の高いマルチデータセンター解決策 を実現する方法について説明します。マルチデータセンターアーキテクチャは、無停止でのワークロードモビリティを利用して2つのデータセンター間でワークロードを分散する機能を提供します。これにより、システム停止を維持することなく、サイト間でサービスを移行できます。
 
 FlexPod with ACI Multi-PodおよびNetApp MetroCluster IP解決策 には、次のようなメリットがあります。

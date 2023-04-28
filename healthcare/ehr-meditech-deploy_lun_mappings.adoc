@@ -13,4 +13,5 @@ summary: MEDITECH ホストの LUN マッピングは、 LUN の作成時に確�
 :imagesdir: ./../media/
 
 
+[role="lead"]
 MEDITECH ホストの LUN マッピングは、 LUN の作成時に確立されます。

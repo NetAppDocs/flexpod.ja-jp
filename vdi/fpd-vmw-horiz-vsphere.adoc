@@ -10,6 +10,7 @@ summary: 本ドキュメントでは、Cisco UCSとNetApp All Flash FAS （AFF �
 
 ネットアップ、Cisco David Arnette、Ramesh Guduru
 
+[role="lead"]
 本ドキュメントでは、Cisco UCSとNetApp All Flash FAS （AFF ）A300ストレージを搭載したFlexPod Datacenterに、最大5000シートの混在ワークロードエンドユーザコンピューティング環境を導入するためのリファレンスアーキテクチャ、設計ガイド、および導入について説明します。解決策 には、VMware Horizonサーバベースのリモートデスクトップサーバホストセッション、VMware HorizonのパーシステントMicrosoft Windows 10仮想デスクトップ、VMware vSphere 6.5上のVMware HorizonノンパーシステントMicrosoft Windows 10インスタントクローン仮想デスクトップが含まれます。
 
 link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_vmware_horizon_n9k_aff_ucsm32.html["FlexPod Datacenter with VMware Horizon View 7.3 and VMware vSphere 6.5 Update 1 with Cisco UCS Manager 3.2 for 5000 seats"^]

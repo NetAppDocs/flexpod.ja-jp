@@ -10,6 +10,7 @@ summary: このドキュメントでは、FlexPod データセンター解決策
 
 ネットアップ、Haseeb Niazi、Cisco Arvind Ramakrishnan
 
+[role="lead"]
 このドキュメントでは、FlexPod データセンター解決策 へのCisco UCS C480 ML M5プラットフォームの統合に関する設計の詳細を説明し、統合インフラ内でAIおよびML機能を提供するための統合アプローチを提供します。AIとMLの機能を組み合わせたサーバを、従来のFlexPod システムの管理に使用する使い慣れたツールと組み合わせて管理できるようにすることで、管理オーバーヘッドとディープラーニングプラットフォームの導入コストを大幅に削減できます。このCVDで提示されている設計には、他のCisco UCSプラットフォームも含まれています。たとえば、2つのNVIDIA T4 GPUを搭載したC220 M5サーバ、2つのNVIDIA V100 32GB PCIeカードを搭載したC240 M5サーバなどがあり、AIとMLのワークロードを同時に実行するための追加オプションです。
 
 link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_c480m5l_aiml_design.html["FlexPod Datacenter for combined AI and ML with Cisco UCS 480 ML for deep learning - Design"^]

@@ -13,6 +13,7 @@ summary: このセクションに記載されているストレージオペレ�
 :imagesdir: ./../media/
 
 
+[role="lead"]
 FlexPod Express は、 NetApp ONTAP または SANtricity オペレーティングシステムを実行するストレージシステムをサポートしています。
 
 

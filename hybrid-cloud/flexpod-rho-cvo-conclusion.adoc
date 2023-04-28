@@ -15,6 +15,7 @@ summary: この解決策 では、ネットアップのAstraポートフォリ�
 
 link:flexpod-rho-cvo-application-recovery-with-remote-backups.html["Previous：リモートバックアップを使用したアプリケーションのリカバリ。"]
 
+[role="lead"]
 この解決策 では、ネットアップのAstraポートフォリオを使用して、FlexPod とAWSで実行されるコンテナ化アプリケーション向けの保護計画を実装しました。ネットアップのAstra Control CenterとAstra Tridentは、Cloud Volumes ONTAP 、Red Hat OpenShift、FlexPod インフラとともに、この解決策 のコアコンポーネントを形成しました。
 
 Snapshotをキャプチャしてアプリケーションの保護を実証し、クラウド環境とオンプレミス環境で実行されているKubernetesクラスタ間でアプリケーションをリストアするフルコピーバックアップを実行しました。

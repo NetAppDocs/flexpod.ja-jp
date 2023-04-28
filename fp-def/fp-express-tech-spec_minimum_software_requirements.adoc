@@ -13,6 +13,7 @@ summary: ここでは、 FlexPod Express の各バージョンに最低限必要
 :imagesdir: ./../media/
 
 
+[role="lead"]
 ここでは、 FlexPod Express の各バージョンに最低限必要なソフトウェアについて説明します。
 
 

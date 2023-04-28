@@ -15,6 +15,7 @@ summary: GATK ツールは、公開時点で、オンプレミスでの GPU ベ�
 
 link:flexpod-genomics-appendix-c.html["以前：クロムウェルエンジンを使用した GATK の実行出力。"]
 
+[role="lead"]
 GATK ツールは、公開時点で、オンプレミスでの GPU ベースの実行をネイティブでサポートしていません。以下のセットアップとガイダンスは、 GATK 用の PCIe メザニンカードを使用して、背面取り付けの NVIDIA Tesla P6 GPU で FlexPod を使用する場合の簡単な方法を読者が理解できるようにします。
 
 次の Cisco Validated Design （ CVD ）をリファレンスアーキテクチャとして使用し、 FlexPod 環境をセットアップして GPU を使用するアプリケーションを実行できるようにしました。

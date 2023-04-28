@@ -13,6 +13,7 @@ summary: ここでは、 FlexPod Express 構成に VMware ESXi 6.7U2 をイン�
 :imagesdir: ./../media/
 
 
+[role="lead"]
 ここでは、 FlexPod Express 構成に VMware ESXi 6.7U2 をインストールする手順について説明します。以下に記載する導入手順は、前のセクションで説明した環境変数用にカスタマイズされたものです。
 
 このような環境に VMware ESXi をインストールするには、複数の方法があります。この手順は、 Cisco UCS C シリーズサーバ用 CIMC インターフェイスの仮想 KVM コンソールと仮想メディア機能を使用して、リモートインストールメディアを個々のサーバにマッピングします。

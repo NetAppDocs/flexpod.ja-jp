@@ -13,6 +13,7 @@ summary: FlexPod のアーキテクチャは、本ドキュメントで説明す
 :imagesdir: ./../media/
 
 
+[role="lead"]
 FlexPod のアーキテクチャは、本ドキュメントで説明する一連のルールで定義されています。ハードウェアコンポーネントとソフトウェアの設定は、 Cisco Hardware Compatibility List （ HCL ；ハードウェア互換性リスト）およびでサポートされている必要があります http://mysupport.netapp.com/matrix["ネットアップの Interoperability Matrix Tool （ IMT ）"^]。
 
 各 Cisco Validated Design （ CVD ）または NetApp Verified Architecture （ NVA ）は、 FlexPod 構成の可能性があります。Cisco とネットアップは、これらの構成の組み合わせを文書化し、広範なエンドツーエンドのテストで検証しています。このドキュメントのガイドラインに従っている場合、 FlexPod の導入は完全にサポートされており、すべてのコンポーネントが Cisco HCL とネットアップで互換性があると記載されています http://mysupport.netapp.com/matrix["IMT"^]。

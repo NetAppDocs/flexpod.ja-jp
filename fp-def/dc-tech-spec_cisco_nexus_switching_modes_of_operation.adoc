@@ -13,6 +13,7 @@ summary: 特定の FlexPod 環境のスイッチングコンポーネントと�
 :imagesdir: ./../media/
 
 
+[role="lead"]
 特定の FlexPod 環境のスイッチングコンポーネントとして、さまざまな Cisco Nexus 製品を使用できます。これらのオプションのほとんどは、従来の Cisco Nexus OS または NX-OS ソフトウェアを利用しています。Cisco Nexus ファミリーのスイッチは、製品ライン内でさまざまな機能を提供します。これらの機能については、このドキュメントで後述します。
 
 シスコが提供する Software-Defined ネットワーク分野の製品は、 Application Centric Infrastructure （ ACI ）と呼ばれています。ACI モードをサポートする Cisco Nexus 製品ラインは、ファブリックモードとも呼ばれ、 Cisco Nexus 9300 シリーズです。これらのスイッチは、 NX-OS またはスタンドアロンモードにも導入できます。

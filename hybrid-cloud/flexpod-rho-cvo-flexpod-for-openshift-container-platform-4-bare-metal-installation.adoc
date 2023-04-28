@@ -15,6 +15,7 @@ summary: このページでは、FlexPod for OpenShift Container Platform 4ベ�
 
 link:flexpod-rho-cvo-solution-components.html["前の図：解決策 コンポーネント。"]
 
+[role="lead"]
 FlexPod for OpenShift Container Platform 4のベアメタル設計、導入の詳細、およびNetApp Astra Tridentのインストールと設定については、を参照してください https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_iac_redhat_openshift.html["FlexPod with OpenShift Cisco Validated Design and Deploymentガイド（CVD）"^]。このCVDでは、Ansibleを使用したFlexPod およびOpenShift Container Platformの導入について説明します。CVDには、ワーカーノード、Astra Tridentインストール、ストレージバックエンド、ストレージクラス構成の準備に関する詳細も記載されています。この構成は、Astra Control Centerの導入と構成を行うためのいくつかの前提条件です。
 
 次の図は、FlexPod 上のOpenShift Container Platform 4ベアメタルを示しています。

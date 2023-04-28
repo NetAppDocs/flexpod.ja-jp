@@ -13,6 +13,7 @@ summary: FlexPod アーキテクチャには、相互運用性とサポート関
 :imagesdir: ./../media/
 
 
+[role="lead"]
 FlexPod アーキテクチャには、相互運用性とサポート関連の次の要件が追加で含まれています。
 
 * すべてのハードウェアコンポーネントとソフトウェアコンポーネントがネットアップに記載され、サポートされている必要があります http://mysupport.netapp.com/matrix["IMT"^]、 https://ucshcltool.cloudapps.cisco.com/public/["Cisco UCS ハードウェアおよびソフトウェア互換性リスト"^]、および Cisco UCS Hardware and Software Interoperability Matrix Tool を参照してください。

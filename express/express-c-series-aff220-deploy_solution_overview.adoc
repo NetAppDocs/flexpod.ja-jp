@@ -13,6 +13,7 @@ summary: この FlexPod Express 解決策は、 FlexPod コンバージドイン
 :imagesdir: ./../media/
 
 
+[role="lead"]
 この FlexPod Express 解決策は、 FlexPod コンバージドインフラプログラムの一部です。
 
 

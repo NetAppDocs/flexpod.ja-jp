@@ -13,6 +13,7 @@ summary: VMware vCenter Server 6.7 および vSphere クラスタリングを設
 :imagesdir: ./../media/
 
 
+[role="lead"]
 VMware vCenter Server 6.7 および vSphere クラスタリングを設定するには、次の手順を実行します。
 
 . https://\<<FQDN または IP of vCenter >> /vsphere-client/ に移動します。

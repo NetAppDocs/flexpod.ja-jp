@@ -13,6 +13,7 @@ summary: 次の情報は、 FlexPod 構成のソフトウェアの最小要件�
 :imagesdir: ./../media/
 
 
+[role="lead"]
 FlexPod 構成には、次に示す最小ソフトウェア要件があります。
 
 * NetApp ONTAP

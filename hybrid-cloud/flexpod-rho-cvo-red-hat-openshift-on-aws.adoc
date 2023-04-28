@@ -15,6 +15,7 @@ summary: DRサイトとしてAWSに実装された、独立した自己管理Ope
 
 link:flexpod-rho-cvo-flexpod-for-openshift-container-platform-4-bare-metal-installation.html["従来：FlexPod for OpenShift Container Platform 4ベアメタルインストール"]
 
+[role="lead"]
 DRサイトとしてAWSに実装された、独立した自己管理OpenShift Container Platform 4クラスタです。マスターノードとワーカーノードは、3つのアベイラビリティゾーンにまたがって配置されるため、高可用性が実現します。
 
 image:flexpod-rho-cvo-image10.png["エラー：グラフィックイメージがありません"]

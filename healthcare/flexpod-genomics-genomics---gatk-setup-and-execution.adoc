@@ -15,6 +15,7 @@ summary: このセクションでは、 FlexPod および GATK のセットア�
 
 link:flexpod-genomics-solution-infrastructure-hardware-and-software-components.html["以前：解決策インフラのハードウェアコンポーネントとソフトウェアコンポーネント。"]
 
+[role="lead"]
 国立ヒトゲノム研究所によると https://www.genome.gov/about-genomics/fact-sheets/A-Brief-Guide-to-Genomics["NHGRI"^]) 、「ゲノムとは、人の遺伝子 ( ゲノム ) のすべての研究であり、これらの遺伝子相互作用や人の環境との相互作用を含みます。」
 
 に従って https://www.genome.gov/about-genomics/fact-sheets/A-Brief-Guide-to-Genomics["NHGRI"^]「デオキシリボヌクリク酸（ DNA ）は、ほぼすべての生物の活動を開発し、誘導するために必要な指示を含む化学化合物です。DNA 分子は、二重らせんと呼ばれる 2 つのツイスト、ペアストランドで構成されています。」 「生物の DNA の完全なセットは、ゲノムと呼ばれています。」

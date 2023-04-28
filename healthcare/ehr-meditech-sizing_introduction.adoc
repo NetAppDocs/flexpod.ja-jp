@@ -17,6 +17,7 @@ Brandon AGEE 、 John Duignan 、 NetApp Mike Brennan 、 Cisco 、 Jon Ebmeir
 
 協力：image:cisco logo.png["エラー：グラフィックイメージがありません"]
 
+[role="lead"]
 本レポートは、 MEDITECH EHR アプリケーションソフトウェア環境向け FlexPod のサイジングに関するガイダンスを提供します。
 
 

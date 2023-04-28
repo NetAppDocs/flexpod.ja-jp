@@ -13,6 +13,7 @@ summary: 本ドキュメントでは、 MEDITECH ソフトウェア向け FlexPo
 :imagesdir: ./../media/
 
 
+[role="lead"]
 FlexPod for MEDITECH ソフトウェアは、あらゆるレベルのフォールトトレランスに対応して設計されています。システムに単一点障害がない。最適なパフォーマンスを得るために、ホットスペアブレードサーバの使用をお勧めします。
 
 本ドキュメントでは、 MEDITECH ソフトウェア向け FlexPod 環境の基本構成に関する概要を説明します。このセクションでは、 FlexPod 構成の Cisco UCS コンピューティングプラットフォーム要素を準備するための手順の概要と例をいくつか示します。このガイダンスを開始するには、の手順に従って、 FlexPod 構成がラックに設置され、電源が投入され、ケーブルが接続されている必要があります https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_esxi65u1_n9fc.html["VMware vSphere 6.5 Update 1 、 NetApp AFF A シリーズ、および Cisco UCS Manager 3.2 を使用した、ファイバチャネルストレージを備えた FlexPod データセンター"^]CVD ：

@@ -15,6 +15,7 @@ summary: このページでは、サンプルのデータレプリケーショ�
 
 link:gcp-ncvo-terraform-execution-from-controller.html["前のバージョン：コントローラからのTerraformの実行。"]
 
+[role="lead"]
 このセクションでは、サンプルのデータレプリケーションワークフローを使用して解決策 を再確認し、測定値をいくつか確認して、FlexPod で実行されているNetApp ONTAP インスタンスからGoogle Cloudで実行されているNetApp Cloud Volumes ONTAP へのデータレプリケーションの整合性を検証します。
 
 この解決策 では、Cisco Intersightワークフローオーケストレーションツールを使用しており、今回のユースケースで引き続き使用します。

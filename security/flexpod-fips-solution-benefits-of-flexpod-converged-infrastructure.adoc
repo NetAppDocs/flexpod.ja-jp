@@ -15,6 +15,7 @@ summary: FlexPod システムにおける FIPS の設定を実証するために
 
 link:flexpod-fips-flexpod-netapp-ontap-storage-and-fips-140-2.html["以前のリリース： FlexPod NetApp ONTAP ストレージおよび FIPS 140-2 。"]
 
+[role="lead"]
 医療機関には、いくつかのミッションクリティカルなシステムがあります。最も重要なシステムの 2 つは、電子カルテ（ EHR ）システムと医療画像システムです。FlexPod システムにおける FIPS の設定を実証するために、オープンソースの EHR およびオープンソースの画像アーカイブおよび通信システム（ PACS ）システムを使用して、 FlexPod システムのラボセットアップとワークロード検証を実施しました。EHR 機能、 EHR 論理アプリケーションコンポーネント、および FlexPod システムに実装した場合の EHR システムのメリットの一覧については、を参照してください https://www.netapp.com/pdf.html?item=/media/22199-tr-4881.pdf["TR-4881 ：『 FlexPod for Electronic Health Record Systems 』"^]。医療画像システムの機能、論理アプリケーションコンポーネント、および FlexPod に実装された医療画像システムの利点については、を参照してください https://www.netapp.com/media/19793-tr-4865.pdf["TR-4865 ： FlexPod for Medical Imaging"^]。
 
 FIPS のセットアップとワークロードの検証では、典型的な医療機関の代表的なワークロード特性を行使しました。たとえば、現実的な患者データのアクセスおよび変更シナリオを含むオープンソースの EHR システムをテストしました。さらに、医療用画像ワークロードを実行しました。このワークロードには、医療用（ DICOM ）オブジェクトのデジタル画像処理と通信が含まれていました。dcm ファイル形式メタデータを含む DICOM オブジェクトは、ファイルストレージとブロックストレージの両方に保存されています。さらに、仮想化された RedHat Enterprise Linux （ RHEL ）サーバにマルチパス機能も実装しています。DICOM オブジェクトは、 NFS 、 iSCSI を使用してマウントされた LUN 、および FC を使用してマウントされた LUN に保存しました。FIPS のセットアップと検証で、 FlexPod コンバージドインフラが期待以上のパフォーマンスをシームレスに実現したことがわかりました。

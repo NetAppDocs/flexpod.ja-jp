@@ -13,6 +13,7 @@ summary: このドキュメントに記載されている情報の詳細につ�
 :imagesdir: ./../media/
 
 
+[role="lead"]
 このドキュメントに記載されている情報の詳細については、次のドキュメントまたは Web サイトを参照してください。
 
 * FlexPod データセンターと FC の Cisco Validated Design の 2 つの機能があります

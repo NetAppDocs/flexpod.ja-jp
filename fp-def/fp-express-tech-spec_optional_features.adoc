@@ -13,6 +13,7 @@ summary: このセクションでは、 FlexPod Express のオプション機能
 :imagesdir: ./../media/
 
 
+[role="lead"]
 このセクションでは、 FlexPod Express のオプション機能について説明します。
 
 

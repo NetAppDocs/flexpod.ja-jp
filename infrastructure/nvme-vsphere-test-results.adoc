@@ -15,6 +15,7 @@ summary:
 
 link:nvme-vsphere-testing-approach.html["従来のテストアプローチ："]
 
+[role="lead"]
 テストでは、 FC / NVMe のパフォーマンスを IOPS とレイテンシの観点から測定する fio ワークロードを実行しました。
 
 次のグラフは、ブロックサイズ 8KB を使用して 100% ランダムリードワークロードを実行した場合の結果を示しています。

@@ -13,6 +13,7 @@ summary: オブジェクトストレージをアグリゲートに接続する�
 :imagesdir: ./../media/
 
 
+[role="lead"]
 オブジェクトストレージをアグリゲートに接続する前に、オブジェクトストレージを追加し、 ONTAP で識別する必要があります。このタスクは、 OnCommand システムマネージャまたは ONTAP CLI のどちらかで実行できます。
 
 FabricPool は、クラウド階層として Amazon S3 、 IBM Object Cloud Storage 、および Microsoft Azure Blob Storage オブジェクトストアをサポートしています。

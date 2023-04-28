@@ -13,6 +13,7 @@ summary: このセクションでは、 Cloud Insights で監視される NetApp
 :imagesdir: ./../media/
 
 
+[role="lead"]
 このセクションでは、 Cloud Insights で監視される NetApp AFF A800 システムを含む、 FlexPod データセンター統合インフラのアーキテクチャについて説明します。
 
 

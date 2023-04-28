@@ -13,6 +13,7 @@ summary:
 :imagesdir: ./../media/
 
 
+[role="lead"]
 このセクションでは、 FlexPod Express 環境で使用する Cisco Nexus 33108PC-V スイッチの構成について詳しく説明します。
 
 

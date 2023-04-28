@@ -8,6 +8,7 @@ summary: SPECviewperf 13を搭載したCisco UCS C240 M5およびB200 M5サー�
 :allow-uri-read: 
 
 
+[role="lead"]
 このドキュメントでは、SPECviewperf 13を搭載したCisco UCS C240 M5およびB200 M5サーバで、NVIDIA Tesla P4、P6、およびP40カードを搭載したCitrix XenServer上のCitrix XenDesktopのパフォーマンスについて説明します。
 
 link:https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/whitepaper-c11-741586.pdf["CitrixとNVIDIAによる3Dグラフィックスの視覚化-ホワイトペーパー"^]

@@ -8,6 +8,7 @@ summary: FlexPod Express は、混在仮想化ワークロードを実行する�
 :allow-uri-read: 
 
 
+[role="lead"]
 FlexPod Express は、混在仮想化ワークロードを実行するように設計されています。リモートオフィス、ブランチオフィス、中堅企業を対象としています。また、特定の目的に専用の解決策を実装したい大規模企業にも最適です。この新しい解決策 for FlexPod Express には、 NetApp ONTAP 9.4 、 NetApp AFF A220 、 VMware vSphere 6.7 などの新しいテクノロジが追加されています。
 
 次の図に、 FlexPod Express 解決策に含まれるハードウェアコンポーネントを示します。

@@ -8,6 +8,7 @@ summary:
 :allow-uri-read: 
 
 
+[role="lead"]
 このドキュメントでは、Cisco UCS C240 M5ラックサーバおよびB200 M5ブレードサーバ上で、NVIDIA Tesla P4、P6、P40解決策 を使用したVMware ESXiハイパーバイザとVMware Horizonのパフォーマンスについて説明します。
 
 link:https://www.cisco.com/c/dam/en/us/solutions/collateral/data-center-virtualization/desktop-virtualization-solutions-vmware-horizon-view/whitepaper-c11-741606.pdf["Cisco UCSでVMwareとNVIDIAを使用した3Dグラフィックスの可視化-ホワイトペーパー"^]

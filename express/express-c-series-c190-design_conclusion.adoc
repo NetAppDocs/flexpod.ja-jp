@@ -8,6 +8,7 @@ summary: FlexPod Express Validated Design は、業界をリードするコン�
 :allow-uri-read: 
 
 
+[role="lead"]
 FlexPod Express Validated Design は、業界をリードするコンポーネントを使用したシンプルで効果的な解決策です。拡張性に優れ、ハイパーバイザープラットフォームのオプションを提供する FlexPod Express は、特定のビジネスニーズに合わせてカスタマイズできます。FlexPod Express は、中堅企業、リモートオフィスやブランチオフィスなど、特定用途向けのソリューションを必要とする企業向けに設計されています。
 
 link:express-c-series-c190-design_where_to_find_additional_information.html["次へ：追加情報の検索場所。"]

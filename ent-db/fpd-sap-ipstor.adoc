@@ -10,6 +10,7 @@ summary: このドキュメントで詳述するリファレンスアーキテ�
 
 ネットアップShailendra Mruthunjaya、Cisco Ralf Klahr、Cisco Marco Schoen
 
+[role="lead"]
 このドキュメントで詳述するリファレンスアーキテクチャでは、IPベースのストレージ解決策 の耐障害性、コスト上のメリット、導入のしやすさを強調しています。1つのインターフェイスで複数のプロトコルを処理できるストレージシステムは、真に配線が不要なアーキテクチャであるため、お客様が選択して投資を保護できます。解決策 は、拡張性に優れたSAP HANAワークロードをホストするよう設計されています。
 
 link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_saphana_n9k_aff_ucsm.html["FlexPod AFF AシリーズとCisco UCS Manager 3.2を使用した、IPベースのストレージを備えたSAP解決策 用のDatacenter"^]

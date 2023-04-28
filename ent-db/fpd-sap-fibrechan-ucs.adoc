@@ -10,6 +10,7 @@ summary: '本ドキュメントでは、特にSAP HANA対応の第2世代Intel X
 
 Pramod Ramamurthy、Cisco Marco Schoen、ネットアップ
 
+[role="lead"]
 本ドキュメントでは、特にSAP HANA対応の第2世代Intel Xeonスケーラブルプロセッサを搭載した、NetApp AFF A400ストレージおよびCisco UCS Managerユニファイドソフトウェアリリース4.1(1)上で稼働するNetApp ONTAP 9.7を搭載したCiscoとNetApp FlexPod データセンターについて説明します。
 
 FlexPod データセンターとNetApp ONTAP 9.7およびCisco UCSユニファイドソフトウェアリリース4.1(1)は、Cisco Unified Computing System（Cisco UCS）、Cisco Nexus 9000スイッチファミリー、MDS 9000マルチレイヤファブリックスイッチ、 およびONTAP 9.7ストレージOSを実行するNetApp AFF Aシリーズストレージアレイ。

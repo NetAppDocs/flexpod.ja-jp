@@ -10,6 +10,7 @@ summary: このドキュメントでは、最新のハードウェアおよび�
 
 ネットアップGopu Narasimha Reddy、Cisco Sanjeev Naldurgkar、Cisco Atul Bhalodia
 
+[role="lead"]
 このドキュメントでは、最新のハードウェアおよびソフトウェア製品を使用したFlexPod リファレンスアーキテクチャについて説明し、VMware ESXi仮想環境でMicrosoft SQL Server 2019データベースをホストする場合の導入に関する推奨事項を示します。また、この解決策 では、Cisco Workload Optimization Manager（CWOM）も使用されています。CWOMは、SQLワークロードとインフラストラクチャの両方でリソースを最適かつ効率的に使用するための推奨事項を自動で提供します。
 
 解決策 は、Cisco UCS Bシリーズブレードサーバ、Cisco UCS 6400ファブリックインターコネクト、Cisco Nexus 9000シリーズスイッチ、NetApp AFF シリーズストレージアレイなどのCisco UCSハードウェアプラットフォームをサポートするために、Cisco Unified Computing System（Cisco UCS）上に構築されています。

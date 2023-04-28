@@ -13,6 +13,7 @@ summary: FlexPod Express のその他の要件を次に示します。
 :imagesdir: ./../media/
 
 
+[role="lead"]
 FlexPod Express のその他の要件は次のとおりです。
 
 * 次の項目を含むすべての機器について、有効なサポート契約が必要です。

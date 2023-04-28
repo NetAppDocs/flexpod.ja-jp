@@ -13,6 +13,7 @@ summary: このセクションでは、 FlexPod Express デザインの電源要
 :imagesdir: ./../media/
 
 
+[role="lead"]
 このセクションでは、 FlexPod Express デザインの電源要件および最小ケーブル要件について説明します。
 
 

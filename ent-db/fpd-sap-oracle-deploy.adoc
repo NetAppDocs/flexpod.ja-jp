@@ -10,6 +10,7 @@ summary: Cisco Validated Design（CVD）は、お客様の導入を促進およ�
 
 Tushar Patel、Cisco Hardikkumar Vyas、Cisco
 
+[role="lead"]
 Cisco Validated Design（CVD）は、お客様の導入を促進および改善するために設計、テスト、文書化されたシステムとソリューションで構成されています。このCVDドキュメントでは、可用性の高いOracle RACデータベース環境を導入するための検証済みのアプローチであるCiscoとNetApp FlexPod 解決策 について説明します。Ciscoとネットアップは、Cisco UCS DatacenterラボのOLTP（Online Transactional Processing）やData Warehouseなど、さまざまなデータベースワークロードでリファレンスアーキテクチャを検証しました。このドキュメントでは、関連するコンポーネントのハードウェアとソフトウェアの構成と、さまざまなテストの結果を示します。また、Cisco UCSとネットアップストレージシステムを使用してNVMe/FC上にOracle RACデータベースを実装するためのフレームワークも提供しています。
 
 link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_oracle_ucs_m5.html["FlexPod Datacenter with Oracle 19C RAC Databases on Cisco UCS and NetApp AFF with NVMe over FiberChannel"^]

@@ -10,6 +10,7 @@ summary: このドキュメントでは、NetApp All Flash FAS （AFF ）A300ス
 
 Vadim Lebedev、Cisco Chris Rodriguez、ネットアップ
 
+[role="lead"]
 このドキュメントでは、NetApp All Flash FAS （AFF ）A300ストレージとVMware vSphere ESXi 6.5ハイパーバイザープラットフォームを搭載したCisco UCS上に構築されたCitrix XenApp/XenDesktop 7.15を使用した仮想デスクトップおよびアプリケーションの設計のリファレンスアーキテクチャについて説明します。
 
 デスクトップとアプリケーションの仮想化の状況は絶えず変化しています。新しいM5高性能Cisco UCSブレードサーバとCisco UCSユニファイドファブリックは、FlexPod の実証済みインフラストラクチャの一部として統合されており、最新世代のNetApp AFF ストレージを使用することで、プラットフォームのコンパクト性、パフォーマンス、信頼性、効率性が向上します。

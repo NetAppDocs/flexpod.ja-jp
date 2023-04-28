@@ -19,6 +19,7 @@ summary:
 
 ネットアップ、 Savita Kumari とのパートナーシップ：image:cisco logo.png["エラー：グラフィックイメージがありません"]
 
+[role="lead"]
 業界のトレンドは、共有インフラとクラウドコンピューティングへの大規模なデータセンターの移行を示しています。さらに、リモートオフィスやブランチオフィスにもシンプルで効果的な解決策を導入し、データセンターで慣れ親しんでいるテクノロジを活用しています。
 
 FlexPod Express は、 Cisco Unified Computing System （ Cisco UCS ）、 Cisco Nexus ファミリースイッチ、および NetApp AFF を基盤とした、事前設計されたベストプラクティスのデータセンターアーキテクチャです。FlexPod Express のコンポーネントは、 FlexPod Datacenter と同様に、小規模な IT インフラ環境全体での管理面の相乗効果を実現します。FlexPod Datacenter と FlexPod Express は、仮想化に最適なプラットフォームで、ベアメタルのオペレーティングシステムやエンタープライズワークロードに最適です。
