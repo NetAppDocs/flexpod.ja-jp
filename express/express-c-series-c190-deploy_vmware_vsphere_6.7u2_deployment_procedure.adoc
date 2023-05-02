@@ -421,4 +421,4 @@ image:express-c-series-c190-deploy_image33.png["エラー：グラフィック�
 . [ 保存 ] をクリックします .
 
 
-link:express-c-series-c190-design_vmware_vcenter_server_6.7u2_installation_procedure.html["次の例： VMware vCenter Server 6.7U2 インストール手順"]
+link:express-c-series-c190-deploy_vmware_vcenter_server_6.7u2_installation_procedure.html["次の記事：VMware vCenter Server 6.7U2のインストール手順"]

@@ -105,4 +105,4 @@ NOTE: この検証で使用する「 IP_address_OF_CORE_DUMP_collector 」は、
 
 
 
-link:express-c-series-c190-design_netapp_virtual_storage_console_9.6_deployment_procedures.html["次： NetApp Virtual Storage Console 9.6 導入手順"]
+link:express-c-series-c190-deploy_netapp_virtual_storage_console_9.6_deployment_procedures.html["次の記事：NetApp Virtual Storage Console 9.6の導入手順"]

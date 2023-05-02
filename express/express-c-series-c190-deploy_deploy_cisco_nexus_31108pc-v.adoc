@@ -440,4 +440,4 @@ NOTE: Cisco UCS サーバを追加して解決策を拡張するには、新し�
 
 使用可能なネットワークインフラに応じて、 FlexPod 環境をアップリンクするためのいくつかの方法や機能があります。既存の Cisco Nexus 環境がある場合は、 vPC を使用して、 FlexPod 環境に含まれる Cisco Nexus 31108 スイッチをインフラにアップリンクすることを推奨します。必要に応じて、 10GbE インフラ解決策の場合は 10GbE アップリンク、 1GbE インフラ解決策の場合は 1GbE アップリンクがサポートされます。前述の手順を使用して、既存の環境へのアップリンク vPC を作成できます。設定が完了したら、 copy start を実行して各スイッチに設定を保存してください。
 
-link:express-c-series-c190-design_netapp_storage_deployment_procedure_@part_1@.html["次のセクション：ネットアップストレージ導入手順（パート 1 ）"]
+link:express-c-series-c190-deploy_netapp_storage_deployment_procedure_@part_1@.html["次の記事：ネットアップストレージ導入手順 （パート1）"]

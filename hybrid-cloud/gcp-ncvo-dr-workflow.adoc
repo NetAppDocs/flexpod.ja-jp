@@ -443,8 +443,8 @@ image:gcp-ncvo-image56.png["スクリーンショット"]
 
 . GitHubリポジトリについて、次の詳細情報を入力します。
 +
-.. [リポジトリ名*]に'セクションで詳細に説明したリポジトリの名前を入力します link:p-ncvo-automated-deployment-of-hybrid-cloud-netapp-storage.html#google-cloud#set-up-environment-prerequisites["「環境の前提条件の設定」"]。
-.. セクションの説明に従って、OAuthトークンIDを指定します link:p-ncvo-automated-deployment-of-hybrid-cloud-netapp-storage.html#google-cloud#set-up-environment-prerequisites["「環境の前提条件の設定」"]。
+.. [リポジトリ名*]に'セクションで詳細に説明したリポジトリの名前を入力します link:gcp-ncvo-automated-deployment-of-hybrid-cloud-netapp-storage.html#google-cloud#set-up-environment-prerequisites["「環境の前提条件の設定」"]。
+.. セクションの説明に従って、OAuthトークンIDを指定します link:gcp-ncvo-automated-deployment-of-hybrid-cloud-netapp-storage.html#google-cloud#set-up-environment-prerequisites["「環境の前提条件の設定」"]。
 .. [自動実行トリガー（* Automatic Run Triggering）]オプションを選択します。
 +
 image:gcp-ncvo-image57.png["スクリーンショット"]
@@ -624,7 +624,7 @@ image:gcp-ncvo-image66.png["スクリーンショット"]
 ** *概要 。*リフレッシュトークン。
 +
 
-NOTE: NetApp Cloud Manager API処理用の更新トークンの取得方法の詳細については、セクションを参照してください link:p-ncvo-automated-deployment-of-hybrid-cloud-netapp-storage.html#google-cloud#set-up-environment-prerequisites["「環境の前提条件を設定する」"]
+NOTE: NetApp Cloud Manager API処理用の更新トークンの取得方法の詳細については、セクションを参照してください link:gcp-ncvo-automated-deployment-of-hybrid-cloud-netapp-storage.html#google-cloud#set-up-environment-prerequisites["「環境の前提条件を設定する」"]
 
 +
 image:gcp-ncvo-image67.png["スクリーンショット"]

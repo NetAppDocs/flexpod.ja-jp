@@ -313,8 +313,6 @@
   <block id="1d6cb8d880e983c90f1b5fe9f10dec29" category="paragraph">次の表に、ネットアップがサポートする NetApp FAS のライセンスオプションを示します。</block>
   <block id="c453f553d73c506df5a01e3bd8ff03e0" category="cell">ネットアップサポートライセンス</block>
   <block id="13163c7b776f46d35bcf8a753d9e4c1b" category="cell">SupportEdge Premium4 時間オンサイト、月数 :36</block>
-  <block id="571bbc28568c2b00c6975b19fb5dd53b" category="inline-link-macro"><block ref="571bbc28568c2b00c6975b19fb5dd53b" category="inline-link-rx"></block></block>
-  <block id="09a6eadb4b8f87bcdef9f46ac5b0a651" category="cell"><block ref="09a6eadb4b8f87bcdef9f46ac5b0a651" category="inline-link-macro-rx"></block></block>
   <block id="813e53e7bb54b15e72348ce9fe93dbdc" category="paragraph">次の表に、 E シリーズストレージのネットアップサポートライセンスオプションを示します。</block>
   <block id="ef63debe35aa2ea907cf5d6ba93bbca3" category="cell">ハードウェアサポート Premium ： 4 時間以内（オンサイト）、月数： 36</block>
   <block id="3700267a6a1c84c57290ba35d60b6065" category="cell">SVC-O2-4HR-E</block>
@@ -1714,7 +1712,6 @@
   <block id="dd0abb5bf55fbf07bd4b6cbe25c9528e" category="paragraph">新しい ONTAP 9.5 以降のクラスタを購入すると、無料の 10TB 容量のタームベースの FabricPool ライセンスが付属しますが、追加のサポートコストが適用される場合があります。FabricPool ライセンス（既存のライセンスの追加容量を含む）は、 1TB 単位で購入できます。</block>
   <block id="8105972a850e9e688b4486ea7d2ed719" category="paragraph">FabricPool ライセンスは、 FabricPool アグリゲートを含まないクラスタからのみ削除できます。</block>
   <block id="55d00560611b7ac6ad1fbc07da675be3" category="inline-link">ネットアップナレッジベース</block>
-  <block id="99ad76c1f19beedce25d63008b6beed4" category="admonition">FabricPool ライセンスはクラスタ全体が対象です。ライセンスの購入時に UUID を用意しておく必要があります（ cluster identify show ）。追加のライセンス情報については、を参照してください<block ref="4a7942f67fe49d92d9fe4bec3f7e3903" category="inline-link-rx"></block>。</block>
   <block id="ec21ef39fb6060194db80831f391c610" category="summary">階層化の最小クーリング日数設定は、「自動」または「 Snapshot のみ」ポリシーを使用するボリューム内のアクセス頻度の低いデータがコールドとみなされて階層化の対象となるまでの日数を決定します。</block>
   <block id="488ec979d09344139650babc7a3f10e5" category="doc">ボリューム階層化の最小クーリング日数を設定します</block>
   <block id="71214fd2459729d014b0c750bb210c68" category="paragraph">「 tiering-minimum-cooling-days 」設定では、ボリューム内のアクセス頻度の低いデータがコールドとみなされて階層化の対象になるまでの日数を指定します。</block>
@@ -4043,8 +4040,6 @@
   <block id="9f2d14e6a1e3a8e76a5e5c913a338616" category="list-text">eth1 に手順 3 と 4 を繰り返し、アップリンクポートが eth1 に 1 に設定されていることを確認します。</block>
   <block id="59cf5e87e60bc8dac3259a7e875cc396" category="paragraph"><block ref="59cf5e87e60bc8dac3259a7e875cc396" category="inline-image-macro-rx" type="image"></block></block>
   <block id="89fc9ed38d4fd4f87870644db30e1dce" category="admonition">この手順は、最初の Cisco UCS サーバノードごと、および環境に追加する Cisco UCS サーバノードごとに繰り返す必要があります。</block>
-  <block id="4274bde26272a75e2e5256091306e24c" category="inline-link-macro">次のセクション： NetApp AFF ストレージ導入手順（パート 2 ）</block>
-  <block id="ef72a944184a2b0d5e5c18a1925f9f82" category="paragraph"><block ref="ef72a944184a2b0d5e5c18a1925f9f82" category="inline-link-macro-rx"></block></block>
   <block id="99ea43c773133a96b0d062cee6418bce" category="paragraph">選択したハイパーバイザーに関係なく、すべての FlexPod Express 構成で同じハードウェアが使用されます。そのため、ビジネス要件が変わっても、どちらのハイパーバイザーも同じ FlexPod Express ハードウェア上で実行できます。</block>
   <block id="a9dbd072d83cb337b01c311943422edf" category="paragraph">次の表に、すべての FlexPod 構成に必要なハードウェアコンポーネントを示します。</block>
   <block id="552af9e8da6a9815280b66afc66e9a40" category="cell">AFF A220 HA ペア</block>
@@ -4133,8 +4128,6 @@
   <block id="6b643406b1f5d5f8c203b27fe6e2440e" category="paragraph"><block ref="6b643406b1f5d5f8c203b27fe6e2440e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e6447ee2303eb27076059f12f3ae2506" category="admonition">FlexPod Express にホストを追加する場合は、このプロセスを完了する必要があります。</block>
   <block id="9456898bc9e0e275a5115029a91fe08b" category="admonition">この検証で使用する「 IP_address_OF_CORE_DUMP_collector 」は、 vCenter の IP です。</block>
-  <block id="b8aceddd74a5705bde51f5d406654c25" category="inline-link-macro">次： NetApp Virtual Storage Console 9.6 導入手順</block>
-  <block id="d996b7ec2bff23ae65c92ee64cb5289d" category="paragraph"><block ref="d996b7ec2bff23ae65c92ee64cb5289d" category="inline-link-macro-rx"></block></block>
   <block id="d593e9456b5b5cc924ea54481697ee69" category="summary">この参照検証は、次の図と表に示すようにケーブル接続されています。</block>
   <block id="fce5f960774fb71c0e5e23b53da5e4c7" category="doc">FlexPod エクスプレスケーブル接続情報</block>
   <block id="cabafb2dc6e19e4411e2375059862606" category="paragraph">この図は、リファレンス検証のケーブル配線を示しています。</block>
@@ -4465,8 +4458,6 @@
   <block id="b02716886961f592f3b40eb5ee24f3a7" category="admonition">Cisco UCS サーバを追加して解決策を拡張するには、新しく追加したサーバがスイッチ A および B に接続されているスイッチポートを使用して、上記のコマンドを実行します</block>
   <block id="ccafafe48cdce6143d7b8a0010cb0fca" category="section-title">既存のネットワークインフラへのアップリンク</block>
   <block id="2745234fb1e856e55967112d4b955056" category="paragraph">使用可能なネットワークインフラに応じて、 FlexPod 環境をアップリンクするためのいくつかの方法や機能があります。既存の Cisco Nexus 環境がある場合は、 vPC を使用して、 FlexPod 環境に含まれる Cisco Nexus 31108 スイッチをインフラにアップリンクすることを推奨します。必要に応じて、 10GbE インフラ解決策の場合は 10GbE アップリンク、 1GbE インフラ解決策の場合は 1GbE アップリンクがサポートされます。前述の手順を使用して、既存の環境へのアップリンク vPC を作成できます。設定が完了したら、 copy start を実行して各スイッチに設定を保存してください。</block>
-  <block id="247059a0bddaa322f546623f7644064e" category="inline-link-macro">次のセクション：ネットアップストレージ導入手順（パート 1 ）</block>
-  <block id="386f19251e645f33bc526e1a77e86b2a" category="paragraph"><block ref="386f19251e645f33bc526e1a77e86b2a" category="inline-link-macro-rx"></block></block>
   <block id="e45645eef6ccec7b7c30243e58df6f21" category="summary">FlexPod Express は、混在仮想化ワークロードを実行するように設計されています。リモートオフィス、ブランチオフィス、中堅企業を対象としています。また、特定の目的に専用の解決策を実装したい大規模企業にも最適です。新しい FlexPod Express 解決策の主なドライバは、 ONTAP 9.5 、 FAS27xx 、 AFF220 、 VMware vSphere 6.7U1 などの新しいテクノロジを FlexPod Express に追加することです。</block>
   <block id="52698dab5b8a1edc0e7edc6555a7c349" category="paragraph">FlexPod Express は、混在仮想化ワークロードを実行するように設計されています。リモートオフィス、ブランチオフィス、中堅企業を対象としています。また、特定の目的に専用の解決策を実装したい大規模企業にも最適です。新しい FlexPod Express 解決策の主なドライバは、 ONTAP 9.5 、 FAS27xx/AFF220 、 VMware vSphere 6.7U1 などの新しいテクノロジを FlexPod Express に追加することです。</block>
   <block id="8ca297509b2df5f9cdffacc6f1b874d9" category="paragraph"><block ref="8ca297509b2df5f9cdffacc6f1b874d9" category="inline-image-macro-rx" type="image"></block></block>
@@ -4485,8 +4476,6 @@
   <block id="c21e81c3aab0aab4acd336440fc7e817" category="doc">NetApp AFF ストレージ導入手順（パート 2 ）</block>
   <block id="3f7e69d024465486273ba92b509f7277" category="section-title">ONTAP SAN ブートストレージをセットアップします</block>
   <block id="3ae16a42048bad6c5b188bae7827a446" category="paragraph">igroup を作成するには、クラスタ管理ノードの SSH 接続から次のコマンドを実行します。この手順で作成した 3 つの igroup を表示するには、「 igroup show 」コマンドを実行します。</block>
-  <block id="bec21043b4f499ec8a85c4cfd7ed39e9" category="inline-link-macro">次の例： VMware vSphere 6.7U2 導入手順</block>
-  <block id="2906e22aba2f3403519d99d40550af4f" category="paragraph"><block ref="2906e22aba2f3403519d99d40550af4f" category="inline-link-macro-rx"></block></block>
   <block id="1b302e164cc42bd6107ca6042d03cc6a" category="summary">このセクションに記載されているテクノロジは、アーキテクチャ設計フェーズで採用されました。各テクノロジは、 FlexPod Express Infrastructure 解決策の特定の目的に使用されます。</block>
   <block id="1cb9d956e2cf5fcb066ad4125d13cd40" category="section-title">NetApp AFF ONTAP 9.6 搭載 C190 シリーズ</block>
   <block id="12bf8ceb59e0ad0e07097bbd3b65c9d5" category="paragraph">この解決策は、 NetApp AFF C190 システムと ONTAP 9.6 ソフトウェアの 2 つの最新ネットアップ製品を活用しています。</block>
@@ -5721,8 +5710,6 @@
   <block id="a0e23446a66b1f3b62c87542b03c4a0c" category="admonition">Cisco UCS C シリーズサーバを追加する場合は、追加のブート LUN を作成する必要があります。</block>
   <block id="b61ec8a6584e8053e237f93973f50289" category="section-title">インフラ SVM 管理者を追加</block>
   <block id="61035b7df4ae78c3b522047b643dc8f1" category="paragraph">次の表に、 SVM 管理者を追加するために必要な情報を示します。</block>
-  <block id="544704a08fc56ac416305629315b2dfb" category="inline-link-macro">次に、 Cisco UCS C シリーズラックサーバを導入します</block>
-  <block id="b2ccf3d51a0d36659f4cb4a6524fe4d2" category="paragraph"><block ref="b2ccf3d51a0d36659f4cb4a6524fe4d2" category="inline-link-macro-rx"></block></block>
   <block id="761ee624e67c1e4b0660ef1bf9c63f17" category="summary">リファレンス検証のケーブル接続については、次の表で説明します。</block>
   <block id="25ee1cbafd0f423ce204cbf237275cc5" category="doc">FlexPod エクスプレスケーブル接続情報</block>
   <block id="2bf52ce7c810ad0c8eced5e1e378d88f" category="paragraph">次の表に、 Cisco Nexus スイッチ 31108PCV A のケーブル接続情報を示します</block>
@@ -5783,8 +5770,6 @@
   <block id="bbb817b43cc97db2f84d05c59aab30f7" category="paragraph"><block ref="bbb817b43cc97db2f84d05c59aab30f7" category="inline-image-macro-rx" type="image"></block></block>
   <block id="c9eaceb67ff025ec33df198962a47e5c" category="paragraph"><block ref="c9eaceb67ff025ec33df198962a47e5c" category="inline-image-macro-rx" type="image"></block></block>
   <block id="c1ec08e67ce2ac0aaa8acbb806bdcb87" category="paragraph"><block ref="c1ec08e67ce2ac0aaa8acbb806bdcb87" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="84ccd33f0cf8671c91d0b35966cd4bfc" category="inline-link-macro">次の例： VMware vCenter Server 6.7U2 と vSphere クラスタリング構成</block>
-  <block id="b8267a82f6eba51e14c28c7809060c29" category="paragraph"><block ref="b8267a82f6eba51e14c28c7809060c29" category="inline-link-macro-rx"></block></block>
   <block id="f87ec1529e188aeb7b20b19b8dc2b7af" category="paragraph">次の表に、この FlexPod 構成に必要なハードウェアコンポーネントと、この解決策の実装に必要なハードウェアコンポーネントを示します。解決策の実装で使用されるハードウェアコンポーネントは、お客様の要件に応じて異なる場合があります。</block>
   <block id="4daa44c0b5a1deba40cad94db95dff90" category="cell">AFF C190 は 2 ノードクラスタです</block>
   <block id="a7c5f01e700bb3eb76f99ffe61ecbd8f" category="cell">Cisco UCS C220 M5 サーバ</block>
@@ -5923,8 +5908,6 @@
   <block id="1652c10523b89eeb824221f2ff92550c" category="paragraph">以下に、 VM スワップファイルの場所を移動する手順について説明します。</block>
   <block id="b6abbf0226ef43662dc3ba8758477628" category="paragraph"><block ref="b6abbf0226ef43662dc3ba8758477628" category="inline-image-macro-rx" type="image"></block></block>
   <block id="56eb1d06de3dc848cd5deb341ffb09cb" category="paragraph"><block ref="56eb1d06de3dc848cd5deb341ffb09cb" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="2a6def9cea619ed05c8a19762cb1f386" category="inline-link-macro">次の例： VMware vCenter Server 6.7U2 インストール手順</block>
-  <block id="3bfa8686431d666d40aa9d9633a22f8e" category="paragraph"><block ref="3bfa8686431d666d40aa9d9633a22f8e" category="inline-link-macro-rx"></block></block>
   <block id="fccf6882b91cb961a97a9187a8a54a3b" category="inline-link"><block ref="fccf6882b91cb961a97a9187a8a54a3b" category="inline-link-rx"></block></block>
   <block id="0856e6e8bd0cec5a876a3a0f2ae0e15e" category="paragraph"><block ref="0856e6e8bd0cec5a876a3a0f2ae0e15e" category="inline-link-rx"></block></block>
   <block id="29b8316a6a8c7730ddbf9b2199d89a13" category="list-text">AFF システムと FAS システムのドキュメントセンター</block>
@@ -6593,7 +6576,6 @@
   <block id="3939f796e36703e9db327c9570a95260" category="paragraph">Intersight の管理と FlexPod の拡張性に優れたアーキテクチャを活用することで、複数のゲノムワークロードを単一の FlexPod プラットフォームで実行できるようになり、利用率が向上し、総所有コスト（ TCO ）が削減されます。FlexPod では、ネットアップの小規模な FlexPod Express から始めて、大規模な FlexPod データセンター実装まで拡張できるため、柔軟なサイジングが可能です。Cisco Intersight に組み込まれているロールベースのアクセス制御機能により、医療機関は堅牢なアクセス制御メカニズムを実装して、個別のインフラスタックを必要としないようにすることができます。医療機関内の複数のビジネスユニットが、ゲノム研究を主要な中核コンピテンシーとして活用できます。</block>
   <block id="625631f3e07150b8b24d4b8387119edd" category="paragraph">最終的に FlexPod は、 IT 運用を簡易化し、運用コストを削減します。 IT インフラストラクチャ管理者は、臨床医の革新を支援するタスクに集中できるため、常に最新の状態に維持することはできません。</block>
   <block id="6706db4316a6632cb20d560fc933ceb1" category="list-text">* 検証済みの設計と保証された成果。 * FlexPod の設計および導入ガイドは、再現可能であることが検証されており、 FlexPod を確実に導入するために必要な包括的な構成の詳細と業界のベストプラクティスが記載されています。Cisco とネットアップの検証済み設計ガイド、導入ガイド、アーキテクチャを活用すれば、医療機関やライフサイエンス部門が、検証済みで信頼性の高いプラットフォームを最初から導入する際に推測に頼ることがなくなります。FlexPod を使用すると、導入時間を短縮し、コスト、複雑さ、リスクを軽減できます。FlexPod 検証済みの設計と導入ガイドでは、さまざまなゲノムワークロードに最適なプラットフォームとして FlexPod を確立しています。</block>
-  <block id="f59c589a8a56328d42c01fe4907799db" category="list-text">* 革新性と俊敏性。 * FlexPod は Epic 、 Cerner 、 Meditech 、 Agfa 、 GE 、 Philips などの画像処理システムなどの EHR によって理想的なプラットフォームとして推奨されています。詳細については、を参照してください<block ref="29fbfe5255d192aa57455db81ba41a3d" category="inline-link-rx"></block> ターゲットとなるプラットフォームアーキテクチャについては、 Epic userweb を参照してください。ゲノム解析の実行<block ref="24f2c347deb06bba4de59a5266702e7d" category="inline-link-rx"></block> 医療機関は、即応性を備えた革新的なビジネスを継続できます。FlexPod を導入することで、組織の変化を自然に実現できます。医療機関が FlexPod プラットフォームを標準化すると、 IT エキスパートは時間、労力、リソースをプロビジョニングしてイノベーションを推進できるようになり、エコシステムのニーズに合わせた即応性が実現します。</block>
   <block id="c7e8b95fdeca6082100682f1b89e8b20" category="list-text">* データの制約を解放。 * ONTAP コンバージドインフラプラットフォームと NetApp FlexPod ストレージシステムを使用すると、ゲノムデータを 1 つのプラットフォームから幅広いプロトコルで大規模に利用およびアクセスできます。FlexPod と NetApp ONTAP は、シンプルでわかりやすく、強力なハイブリッドクラウドプラットフォームです。NetApp ONTAP を基盤とするデータファブリックは、サイト間、物理的な境界を超え、アプリケーション間でデータを結び付けます。データファブリックは、 Data-Centric の世界におけるデータ主体の企業向けに構築されています。データは複数の場所に作成されて使用されるため、多くの場合、他の場所、アプリケーション、インフラとの利用や共有が必要になります。そのため、一貫性のある統合された管理方法が必要です。FlexPod を導入することで、 IT チームの管理が容易になり、増え続ける IT の複雑さが軽減されます。</block>
   <block id="7fcbd234b81a57e30b18381191dd1e46" category="list-text">* セキュアマルチテナンシー。 * FlexPod は FIPS 140-2 準拠の暗号モジュールを使用しているため、セキュリティを後からではなく基本要素として実装できます。FlexPod を使用すると、プラットフォームの規模に関係なく、単一のコンバージドインフラプラットフォームからセキュアマルチテナンシーを実装できます。マルチテナンシーと QoS で FlexPod を保護することで、ワークロードの分離と利用率の最大化を実現します。これにより、使用率の低い可能性のある特殊なプラットフォームに設備が固定され、管理に特殊なスキルセットが必要になるのを回避できます。</block>
   <block id="0e5a582d6f9c304c0a0fc9615b2a0860" category="list-text">* ストレージ効率化 * ゲノミクスには、基盤となるストレージに業界をリードするストレージ効率化機能が必要です。重複排除（インラインおよびオンデマンド）、データ圧縮、データコンパクション（など）などのネットアップの Storage Efficiency 機能を使用すると、ストレージコストを削減できます<block ref="2511e8b77417e5fdbc8e7e20b5b8e078" category="inline-link-rx"></block>）。ネットアップの重複排除機能は、 FlexVol ボリューム内でブロックレベルの重複排除を実行します。重複排除機能は、基本的に、重複ブロックを削除して、 FlexVol ボリューム内で一意のブロックのみを保存します。重複排除は非常にきめ細かな方法で機能し、 FlexVol ボリュームのアクティブファイルシステムで機能します。次の図に、ネットアップの重複排除機能の概要を示します。重複排除機能はアプリケーションに対して透過的です。したがって、ネットアップシステムを使用するすべてのアプリケーションのデータに対して重複排除を実行できます。ボリューム重複排除はインラインプロセスおよびバックグラウンドプロセスとして実行できます。CLI 、 NetApp ONTAP System Manager 、または NetApp Active IQ Unified Manager から自動で実行、スケジュール設定、または手動で実行するように設定することができます。</block>
@@ -6857,7 +6839,6 @@
   <block id="b88aeccf539f84628e5459c2a7e1d725" category="cell">UCSC-C245-M6</block>
   <block id="643ccfec845d77bd902162df9edcdcbf" category="paragraph">次の表に、 FlexPod アーキテクチャで使用できる Nexus クラスタインターコネクトスイッチを示します。また、導入する ONTAP のバージョンに互換性がある場合、 ONTAP は、他社製スイッチを含む FlexPod 対応のすべてのクラスタスイッチをサポートします。を参照してください<block ref="bb9c67b5a4c15a85b5e6aa6c9afd0285" category="inline-link-rx"></block> で、特定のスイッチモデルの互換性の詳細を確認できます。</block>
   <block id="0bc97a80630d922e5e5de8dd8689bcaa" category="inline-link">ネットアップのマニュアル： Cisco Nexus 9336C-FX2 switches</block>
-  <block id="1842d50bda8c8607d91b97316b2186a2" category="cell"><block ref="1842d50bda8c8607d91b97316b2186a2" category="inline-link-rx"></block></block>
   <block id="b9365bb9132d1eb8770275a763fc5d69" category="section-title">2022 年 1 月</block>
   <block id="c3c52ee83b368023b0bc4d56084cc12c" category="list-text">NetApp Active IQ Unified Manager 9.10 以降のイベントベースのサイト間アラームが追加されました。</block>
   <block id="3dd3b14e38a8724b67d519dfefeec2a4" category="admonition">今後のリリースとの互換性を確保し、すべての機能を利用できるようにするために、 NetApp Active IQ Unified Manager をバージョン 9.10 にアップグレードすることを推奨します。</block>
@@ -6978,8 +6959,6 @@
   <block id="2d817d24735f352fea82322ab2c9e621" category="paragraph"><block ref="2d817d24735f352fea82322ab2c9e621" category="inline-link-rx"></block></block>
   <block id="6770ff13f95abd8619a19519877aedf9" category="list-text">NetApp Cryptographic Security Module の略</block>
   <block id="02817beae9581784d8cd2f39ddda543b" category="paragraph"><block ref="02817beae9581784d8cd2f39ddda543b" category="inline-link-rx"></block></block>
-  <block id="846bf2df66c90e0dd774c49f7106f381" category="list-text">医療業界のサイバーセキュリティの実践：脅威の管理と患者の保護</block>
-  <block id="2902b923b2807abc94a366d08ff1bda6" category="paragraph"><block ref="2902b923b2807abc94a366d08ff1bda6" category="inline-link-rx"></block></block>
   <block id="bf7fa6fb49dfa01515f774f7a86c6270" category="list-text">中規模および大規模な医療機関向けのサイバーセキュリティの実践</block>
   <block id="d1bf3cb27e5807caa3600fcdce477355" category="paragraph"><block ref="d1bf3cb27e5807caa3600fcdce477355" category="inline-link-rx"></block></block>
   <block id="3f6b1e7f286b82aada2164eae419754f" category="list-text">Cisco and Cryptographic Module Validation Program （ CMVP ）</block>
@@ -8972,8 +8951,6 @@
   <block id="3c28f1f86cce7b9f6cccd84c353320aa" category="paragraph"><block ref="3c28f1f86cce7b9f6cccd84c353320aa" category="inline-image-macro-rx" type="image"></block></block>
   <block id="baf8ff06d7e7509dbb1525fc95dee350" category="list-text">GitHubリポジトリについて、次の詳細情報を入力します。</block>
   <block id="f00cb64c44901d8b140ee5334ba42392" category="inline-link-macro">「環境の前提条件の設定」</block>
-  <block id="4a470f461c007e22030142a71b593456" category="list-text">[リポジトリ名*]に'セクションで詳細に説明したリポジトリの名前を入力します <block ref="3bd0a1108a23c22c460b332b6044d46b" category="inline-link-macro-rx"></block>。</block>
-  <block id="7ad0c2df34976d7bd8b12ea9e4d942f5" category="list-text">セクションの説明に従って、OAuthトークンIDを指定します <block ref="3bd0a1108a23c22c460b332b6044d46b" category="inline-link-macro-rx"></block>。</block>
   <block id="cc52ae3c0b42500f9340757e4535abe9" category="list-text">[自動実行トリガー（* Automatic Run Triggering）]オプションを選択します。</block>
   <block id="7dc4834a62425cc62d13478addab1f09" category="paragraph"><block ref="7dc4834a62425cc62d13478addab1f09" category="inline-image-macro-rx" type="image"></block></block>
   <block id="51b0e138743de6b27eb2983b1e789a5d" category="paragraph">これで、Terraform Cloud for Businessアカウントでワークスペースを作成するタスクは完了です。</block>
@@ -9060,7 +9037,6 @@
   <block id="e97bbbb4aa99cae4a317dc1978ea02ce" category="list-text">*値。* NetApp Cloud Manager API処理の更新トークンを入力します。</block>
   <block id="c0635c122427dfcc192d6c29ee84e3fb" category="list-text">*概要 。*リフレッシュトークン。</block>
   <block id="253f26b8ee128a839e34d1b24a799e82" category="inline-link-macro">「環境の前提条件を設定する」</block>
-  <block id="0873f157a13b94ec2c2cb69ff4d2f25d" category="admonition">NetApp Cloud Manager API処理用の更新トークンの取得方法の詳細については、セクションを参照してください <block ref="e494838bdd9d1128badc766b5008a232" category="inline-link-macro-rx"></block></block>
   <block id="d05613edc0c7136089b620dec8c8d9de" category="paragraph"><block ref="d05613edc0c7136089b620dec8c8d9de" category="inline-image-macro-rx" type="image"></block></block>
   <block id="ca0fb47f75ab6fca4e951b8cbe658bdd" category="list-text">次の表に示すように、すべてのTerraform機密変数を追加します。デフォルト値を指定することもできます。</block>
   <block id="eb8e560b05e9ad296a7e85c8465ee698" category="cell">Terraformの変数名</block>
@@ -9779,4 +9755,26 @@
   <block id="33f06c93ff0e249c6d028973d21932bc" category="list-text">ユーザインターフェイスの[インベントリ]セクションの[階層]ページに[ローカル階層]タブと[クラウド階層]タブが追加されました。</block>
   <block id="cebb5bee9f2c3fd7a29eb3a7ad7f1530" category="list-text">ユーザインターフェイスの[Inventory]セクションの[Ports]ページの[Name]列のあとに[Node]列が表示されるようになりました。</block>
   <block id="59829409d4681e66c64ba39915db7b13" category="list-text">FQDNを使用してONTAP クラスタをAIQUMに追加すると、[Storage Inventory Checks]ページが表示されません。IPアドレスを使用してONTAP クラスタをAIQUMに追加する必要があります。</block>
+  <block id="d94305499731d4ac990a20b7cb6a6b4a" category="inline-link-macro">次の記事：ネットアップストレージ導入手順 （パート1）</block>
+  <block id="dd36bf94d255fd9e55d53f5078ad6906" category="paragraph"><block ref="dd36bf94d255fd9e55d53f5078ad6906" category="inline-link-macro-rx"></block></block>
+  <block id="3a968620de3cd9fc31efff82d9d2dd0d" category="inline-link-macro">次の記事：VMware vCenter Server 6.7U2のインストール手順</block>
+  <block id="91b9e7776b52469178a5fcad4f7049d4" category="paragraph"><block ref="91b9e7776b52469178a5fcad4f7049d4" category="inline-link-macro-rx"></block></block>
+  <block id="c31eb7dd2056b91419c41baff0842aaf" category="inline-link-macro">次の記事：Cisco UCS Cシリーズラックサーバの導入</block>
+  <block id="2a98494dbd4dedcebbd5a3476a698b17" category="paragraph"><block ref="2a98494dbd4dedcebbd5a3476a698b17" category="inline-link-macro-rx"></block></block>
+  <block id="45e53425d2653d2fd2ae777132d44bc3" category="inline-link-macro">次の記事：VMware vCenter Server 6.7U2とvSphereクラスタリング構成</block>
+  <block id="88dee804fe15990dd6758ede5645d123" category="paragraph"><block ref="88dee804fe15990dd6758ede5645d123" category="inline-link-macro-rx"></block></block>
+  <block id="2cbbb0371173c8b4294155288d3624cb" category="inline-link-macro">次の記事：VMware vSphere 6.7U2の導入手順</block>
+  <block id="b464058fe2eea54a63e15e6ffa6535a9" category="paragraph"><block ref="b464058fe2eea54a63e15e6ffa6535a9" category="inline-link-macro-rx"></block></block>
+  <block id="3c5de8afb134500847c2d82befc7f7fc" category="inline-link-macro">次の記事：NetApp AFF ストレージ導入手順 （パート2）</block>
+  <block id="df5c4529e338fe5628fc632a67bcf0b3" category="paragraph"><block ref="df5c4529e338fe5628fc632a67bcf0b3" category="inline-link-macro-rx"></block></block>
+  <block id="a604e2599b5650f99b6243a6cb88caad" category="inline-link-macro">次の記事：NetApp Virtual Storage Console 9.6の導入手順</block>
+  <block id="77ea3e0cb183c71de77cbce4440e970f" category="paragraph"><block ref="77ea3e0cb183c71de77cbce4440e970f" category="inline-link-macro-rx"></block></block>
+  <block id="79be172bb4d7292680bc827a6a2ed941" category="admonition">FabricPool ライセンスはクラスタ全体に適用されます。ライセンスの購入時にUUIDを用意しておく必要があります <block ref="97c6b1d9f961d2fb9b8a976962d5c444" prefix="(" category="inline-code"></block>）。追加のライセンス情報については、を参照してください<block ref="e79e2253f35b48ecc5164c2e28ca127e" category="inline-link-rx"></block>。</block>
+  <block id="6a2bfb8b978ae1e7f363e2c5bc9a3ac5" category="list-text">[リポジトリ名*]に'セクションで詳細に説明したリポジトリの名前を入力します <block ref="e4d59a400fe59f0e4cb4fc1d6c22c1f7" category="inline-link-macro-rx"></block>。</block>
+  <block id="f55293d2d6bdc95bcc1d0f10029daa94" category="list-text">セクションの説明に従って、OAuthトークンIDを指定します <block ref="e4d59a400fe59f0e4cb4fc1d6c22c1f7" category="inline-link-macro-rx"></block>。</block>
+  <block id="a998205fac8a4b4c95fce6d91339404d" category="admonition">NetApp Cloud Manager API処理用の更新トークンの取得方法の詳細については、セクションを参照してください <block ref="35d1f0e345aa61afd6d94e7e18e21e57" category="inline-link-macro-rx"></block></block>
+  <block id="7349a4a610dc5667a30d21a51a3ab405" category="inline-link-macro"><block ref="7349a4a610dc5667a30d21a51a3ab405" category="inline-link-rx"></block></block>
+  <block id="c5278a5ee46f3950c6449cea7119ca37" category="cell"><block ref="c5278a5ee46f3950c6449cea7119ca37" category="inline-link-macro-rx"></block></block>
+  <block id="040d804b2c70516766d21ab594bc39bb" category="cell"><block ref="040d804b2c70516766d21ab594bc39bb" category="inline-link-rx"></block></block>
+  <block id="0d9b0b32a4432dbeaa0425b3a43bf813" category="list-text">* 革新性と俊敏性。 * FlexPod は Epic 、 Cerner 、 Meditech 、 Agfa 、 GE 、 Philips などの画像処理システムなどの EHR によって理想的なプラットフォームとして推奨されています。詳細については、を参照してください<block ref="e3215a4a4d4097ca1d3d2b989f46a542" category="inline-link-rx"></block> ターゲットとなるプラットフォームアーキテクチャについては、 Epic userweb を参照してください。ゲノム解析の実行<block ref="24f2c347deb06bba4de59a5266702e7d" category="inline-link-rx"></block> 医療機関は、即応性を備えた革新的なビジネスを継続できます。FlexPod を導入することで、組織の変化を自然に実現できます。医療機関が FlexPod プラットフォームを標準化すると、 IT エキスパートは時間、労力、リソースをプロビジョニングしてイノベーションを推進できるようになり、エコシステムのニーズに合わせた即応性が実現します。</block>
 </blocks>

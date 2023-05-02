@@ -134,4 +134,4 @@ FabricPool ライセンスには恒久ライセンスとタームベースライ
 FabricPool ライセンスは、 FabricPool アグリゲートを含まないクラスタからのみ削除できます。
 
 
-NOTE: FabricPool ライセンスはクラスタ全体が対象です。ライセンスの購入時に UUID を用意しておく必要があります（ cluster identify show ）。追加のライセンス情報については、を参照してください https://kb.netapp.com/support/s/article/ka21A0000008qb3QAA/ONTAP-FabricPool-FP-Licensing-Overview["ネットアップナレッジベース"^]。
+NOTE: FabricPool ライセンスはクラスタ全体に適用されます。ライセンスの購入時にUUIDを用意しておく必要があります (`cluster identify show`）。追加のライセンス情報については、を参照してください https://kb.netapp.com/onprem/ontap/dm/FabricPool/ONTAP_FabricPool_(FP)_Licensing_Overview["ネットアップナレッジベース"^]。

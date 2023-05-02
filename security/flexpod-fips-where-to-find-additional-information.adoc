@@ -66,10 +66,6 @@ https://www.cisco.com/c/en/us/solutions/industries/government/global-government-
 +
 https://csrc.nist.gov/csrc/media/projects/cryptographic-module-validation-program/documents/security-policies/140sp2648.pdf[]
 
-* 医療業界のサイバーセキュリティの実践：脅威の管理と患者の保護
-+
-https://www.phe.gov/Preparedness/planning/405d/Pages/hic-practices.aspx[]
-
 * 中規模および大規模な医療機関向けのサイバーセキュリティの実践
 +
 https://www.phe.gov/Preparedness/planning/405d/Documents/tech-vol2-508.pdf[]

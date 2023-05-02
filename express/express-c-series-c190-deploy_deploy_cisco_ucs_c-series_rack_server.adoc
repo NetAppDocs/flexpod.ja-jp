@@ -399,4 +399,4 @@ NOTE: この手順は、最初の Cisco UCS サーバノードごと、および
 
 
 
-link:express-c-series-c190-design_netapp_aff_storage_deployment_procedure_@part_2@.html["次のセクション： NetApp AFF ストレージ導入手順（パート 2 ）"]
+link:express-c-series-c190-deploy_netapp_aff_storage_deployment_procedure_@part_2@.html["次の記事：NetApp AFF ストレージ導入手順 （パート2）"]

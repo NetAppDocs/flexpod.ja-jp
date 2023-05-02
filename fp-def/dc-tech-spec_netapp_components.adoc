@@ -53,7 +53,7 @@ FlexPod アーキテクチャには、冗長な NetApp FAS 、 AFF 、または 
 | Cisco Nexus 3132Q-V の 2 つのポートを設定します | https://mysupport.netapp.com/documentation/docweb/index.html?productID=62377&language=en-US["ネットアップのマニュアル： Cisco Nexus 3132Q-V switches"] 
 
 
-| Cisco Nexus 9336C-FX2 | https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336/9336-overview.html["ネットアップのマニュアル： Cisco Nexus 9336C-FX2 switches"] 
+| Cisco Nexus 9336C-FX2 | https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336c-fx2/["ネットアップのマニュアル： Cisco Nexus 9336C-FX2 switches"] 
 |===
 
 
