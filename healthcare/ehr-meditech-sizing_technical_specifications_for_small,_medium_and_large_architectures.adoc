@@ -104,7 +104,7 @@ NOTE: お客様の環境によっては、複数の MEDITECH 本番ワークロ�
 | Cisco UCS ブレードサーバ | B200 M5 × 4 | それぞれ 2 x 14 コア、 2.6GHz 以上のクロック速度、 384GB BIOS 3.2 （ 3# ） 
 
 
-| Cisco UCS 仮想インターフェイスカード | UCS 1440 × 4 | VMware ESXi fnic FC ドライバ： 1.0.47 VMware ESXi eNIC イーサネットドライバ： 1.0.27.0 （ Interoperability Matrix を参照： https://ucshcltool.cloudapps.cisco.com/public/)[] 
+| Cisco UCS 仮想インターフェイスカード | UCS 1440 × 4 | VMware ESXi fnic FC ドライバ： 1.0.47 VMware ESXi eNIC イーサネットドライバ： 1.0.27.0 （ Interoperability Matrix を参照： 
 
 
 | Cisco UCS ファブリックインターコネクト（ FI ） × 2 | UCS 6454 FI × 2 | 10 / 25 / 100Gb イーサネットおよび 32Gb FC をサポートする第 4 世代のファブリックインターコネクト 
@@ -180,7 +180,7 @@ NOTE: お客様の環境によっては、複数の MEDITECH 本番ワークロ�
 | Cisco UCS ブレードサーバ | B200 M5 × 8 | 各構成には、 2 x 24 コア、 2.7GHz および 768GB BIOS 3.2 （ 3# ）が搭載されています。 
 
 
-| Cisco UCS 仮想インターフェイスカード（ VIC ） | UCS 1440 VIC × 8 | VMware ESXi fnic FC ドライバ： 1.0.47 VMware ESXi eNIC イーサネットドライバ： 1.0.27.0 （ Interoperability Matrix を確認してください） https://ucshcltool.cloudapps.cisco.com/public/)[] 
+| Cisco UCS 仮想インターフェイスカード（ VIC ） | UCS 1440 VIC × 8 | VMware ESXi fnic FC ドライバ： 1.0.47 VMware ESXi eNIC イーサネットドライバ： 1.0.27.0 （ Interoperability Matrix を確認してください） 
 
 
 | Cisco UCS ファブリックインターコネクト（ FI ） × 2 | UCS 6454 FI × 2 | 10GB / 25Gb / 100Gb イーサネットおよび 32Gb FC をサポートする第 4 世代ファブリックインターコネクト 
