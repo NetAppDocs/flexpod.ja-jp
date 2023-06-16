@@ -79,52 +79,51 @@ summary: これらは、 Cisco Intersight のネットアップストレージ�
 Cisco Intersight には、次のネットアップストレージタスクが用意されています。
 
 +
-** ストレージエクスポートポリシーをボリュームに追加します
-** イニシエータをストレージホストに接続する
-** ボリュームからストレージエクスポートポリシーを切断します
-** Storage Virtual Machine のアグリゲートを編集します
-** ストレージエクスポートポリシールールを編集します
-** ストレージ Snapshot ポリシーを編集します
-** ストレージ Snapshot ポリシーのスケジュールを編集します
-** ストレージ LUN を展開します
-** [ ストレージボリューム ] を展開します
-** NetApp igroup LUN Map を探します
-** ID でストレージ LUN を検索します
-** ID でストレージボリュームを検索します
-** 新しいストレージエクスポートポリシー
-** 新しいストレージエクスポートポリシールール
-** 新しいネットアップストレージFibre Channelインターフェイス
-** 新しいストレージホスト
-** 新しいストレージIPインターフェイス
-** 新しいストレージLUN
-** 新しいストレージLUN ID
-** 新しいNetApp Storage NASスマートボリューム
-** 新しいNetApp Storage Smart LUN
-** 新しいストレージ Snapshot ポリシー
-** 新しいストレージ Snapshot ポリシースケジュール
-** 新しい Storage Virtual Machine
-** 新しいストレージボリューム
-** 新しいストレージボリューム Snapshot
-** ストレージエクスポートポリシーを削除します
-** ストレージエクスポートポリシールールを削除します
-** ストレージ FC インターフェイスを削除
-** ストレージホストを削除します
-** ストレージ IP インターフェイスを削除します
-** ストレージLUNを削除します
-** ストレージLUN IDを削除します
-** NetApp Storage Smart LUNを削除します
-** ストレージ Snapshot ポリシーを削除します
-** ストレージ Snapshot ポリシーのスケジュールを削除します
-** Storage Virtual Machine を削除してください
-** ストレージボリュームを削除する
-** ストレージボリュームの Snapshot を削除します
-** ストレージボリュームの Snapshot 名を変更します
+** NetAppボリュームにエクスポートポリシーを追加してください
+** NetAppイニシエータグループにイニシエータを追加します
+** NetAppエクスポートポリシーにルールを追加します
+** NetApp Snapshotポリシーにスケジュールを追加します
+** Storage Virtual MachineのNetAppアグリゲートを編集します
+** NetAppエクスポートポリシールールの編集
+** NetApp Snapshotポリシーを編集します
+** NetApp Snapshotポリシーのスケジュールを編集します
+** NetApp LUNを展開します
+** NetAppイニシエータグループのLUNマップを検索します
+** IDでNetApp LUNを検索します
+** IDでNetAppボリュームを検索します
+** 新しいNetAppエクスポートポリシー
+** 新しいNetApp FCデータインターフェイス
+** 新しいNetAppイニシエータグループ
+** 新しいNetApp iSCSIデータインターフェイス
+** 新しいNetApp LUN
+** 新しいNetApp LUNマップ
+** 新しいNetApp NASデータインターフェイス
+** 新しいNetApp NASスマートボリューム
+** 新しいNetAppスマートLUN
+** 新しいNetApp Snapshotポリシー
+** 新しいNetApp Storage Virtual Machineの略
+** 新しいNetAppボリューム
+** 新しいNetAppボリュームSnapshot
+** NetAppボリュームからエクスポートポリシーを削除します
+** NetAppエクスポートポリシーを削除します
+** NetApp FCデータインターフェイスを削除
+** NetAppイニシエータグループを削除します
+** NetApp IPインターフェイスを削除します
+** NetApp LUNを削除します
+** NetApp LUNマップを削除します
+** NetApp NASスマートボリュームを削除します
+** NetAppスマートLUNを削除します
+** NetApp Snapshotポリシーを削除します
+** NetApp Storage Virtual Machineを削除します
+** NetAppボリュームを削除します
+** NetAppボリュームSnapshotを削除します
+** NetAppエクスポートポリシーからルールを削除します
+** NetApp Snapshotポリシーからスケジュールを削除します
+** NetAppボリュームSnapshotの名前を変更します
+** NetAppボリュームの容量を更新します
 +
-
-NOTE: 新規ストレージ NAS スマートボリュームおよび新規ストレージスマート LUN タスクは、 ONTAP 9.8 以降でのみ機能します。ONTAP 9.7P1 は、現在、サポートされる最小バージョンです。
-
-
-
-
-
 ネットアップのストレージと仮想化タスクを使用したワークフローのカスタマイズの詳細については、ビデオをご覧ください https://tv.netapp.com/detail/video/6228095945001["Cisco Intersight の NetApp ONTAP ストレージオーケストレーション"^]。
+
+
+
+

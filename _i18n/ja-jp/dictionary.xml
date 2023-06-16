@@ -6602,7 +6602,6 @@
   <block id="33e4e289cefe243134e8d14e37181dd1" category="sidebar">ゲノム解析のための FlexPod</block>
   <block id="b913c1c1cde143cea45cb35af2f91d75" category="sidebar">./GATK スクリプトを使用して GATK を実行するための出力</block>
   <block id="c47b18a4d429299b996de436c91a4416" category="inline-link-macro">使用例 3 デザイナフリーフォームを使用したカスタムワークフロー</block>
-  <block id="7fd44dc2c5fafe252191e6ef332a6773" category="list-text">Cisco Intersight に含まれるネットアップストレージのタスクの最新リストを追加しました。を参照してください <block ref="026b254cc8ff2f5d36709bcf93418a5f" category="inline-link-macro-rx"></block> NetApp ストレージ・タスクの一覧を表示します。</block>
   <block id="4b6fb03e9a4a802c4ef171e5df2f924b" category="list-text">Storage Virtual Machine の General ページを含む新しい Sensors タブが追加されました。</block>
   <block id="3274a50ba9f0d3c0adefdfa11c5094be" category="doc">テスト結果</block>
   <block id="782ca8c3b3f6b85a20e7774ff589f789" category="inline-link-macro">従来のテストアプローチ：</block>
@@ -7173,32 +7172,6 @@
   <block id="b314d9c735aadb448d69a15f8a64d5dc" category="list-text">クラスタインベントリに AutoSupport を追加</block>
   <block id="b184dfcc61c7724494e910c3ecf1995d" category="list-text">ノードに cdpd .enable オプションを追加</block>
   <block id="6b2cd9fd5e6df687c3d2d950a0504cb2" category="list-text">CDP ネイバーのオブジェクトを追加しました</block>
-  <block id="1b178e202b7d2a2988fd16b3b67c6a9b" category="list-text">Cisco Intersight にネットアップワークフローのストレージタスクが追加されました。を参照してください <block ref="026b254cc8ff2f5d36709bcf93418a5f" category="inline-link-macro-rx"></block> NetApp ストレージ・タスクの一覧を表示します。</block>
-  <block id="054ea9c656473e275b7ae5b69269cc81" category="list-text">ストレージエクスポートポリシーをボリュームに追加します</block>
-  <block id="aa4edcb7e57123151162ef878a3a3bb4" category="list-text">ストレージ LUN を展開します</block>
-  <block id="cb036c70939fadc3637cbeb990d0a969" category="list-text">[ ストレージボリューム ] を展開します</block>
-  <block id="01b698a596504162b7fcdf910e9175db" category="list-text">NetApp igroup LUN Map を探します</block>
-  <block id="9e5d320b5556f2516f70b24e91d5f757" category="list-text">ID でストレージ LUN を検索します</block>
-  <block id="783d5727a583df3d75bb078907ef7716" category="list-text">ID でストレージボリュームを検索します</block>
-  <block id="f44bd35636cd69c25b2f240a770ab0a5" category="list-text">ストレージボリュームを削除する</block>
-  <block id="5cb81d48ffabbd08e273eb1371ff2113" category="list-text">新しいストレージ Snapshot ポリシー</block>
-  <block id="46c325550313b45bd974662a8ba5d5c5" category="list-text">新しいストレージ Snapshot ポリシースケジュール</block>
-  <block id="9b9d199f57b9023464de44d3dca11130" category="list-text">ストレージ Snapshot ポリシーを削除します</block>
-  <block id="7a1c4f4a4587adf0b4172f03a5a10160" category="list-text">ストレージ Snapshot ポリシーのスケジュールを削除します</block>
-  <block id="a61be198effbf7f1dc853d340112e634" category="list-text">ストレージ Snapshot ポリシーを編集します</block>
-  <block id="8078f3fdaf127a36179526d045fad2cc" category="list-text">ストレージ Snapshot ポリシーのスケジュールを編集します</block>
-  <block id="469a3f87c703625ad34e802940619510" category="list-text">新しいストレージボリューム Snapshot</block>
-  <block id="979a9d34e9735d1cf374866a119573d2" category="list-text">ストレージボリュームの Snapshot を削除します</block>
-  <block id="474a3e1f12f91f621ea325e1f70cc8e3" category="list-text">ストレージボリュームの Snapshot 名を変更します</block>
-  <block id="3fa3b03210322aa88ea23ab989f0bd00" category="list-text">新しいストレージエクスポートポリシールール</block>
-  <block id="2133699c47edcf42d3f21fca79b3cbc4" category="list-text">ストレージエクスポートポリシールールを編集します</block>
-  <block id="aebccc1ede7dceb6a8cb87a8f8ff76e7" category="list-text">ストレージエクスポートポリシールールを削除します</block>
-  <block id="4ff4c642392f4f69f68614bbc7a2a203" category="list-text">ボリュームからストレージエクスポートポリシーを切断します</block>
-  <block id="c6bda77442a097d5afa5bfaa2aa4e765" category="list-text">ストレージ FC インターフェイスを削除</block>
-  <block id="0027d78119d537368b4fd4055fdfdd69" category="list-text">ストレージ IP インターフェイスを削除します</block>
-  <block id="2205b729cc3612050bfabb80d4d267a0" category="list-text">Storage Virtual Machine を削除してください</block>
-  <block id="091e9fb66636892d6015097e15c3353a" category="list-text">Storage Virtual Machine のアグリゲートを編集します</block>
-  <block id="fc763aee087e01aba254202f6cfd6ba9" category="admonition">新規ストレージ NAS スマートボリュームおよび新規ストレージスマート LUN タスクは、 ONTAP 9.8 以降でのみ機能します。ONTAP 9.7P1 は、現在、サポートされる最小バージョンです。</block>
   <block id="d3723866fd8ed566ec4269ff8a1cde80" category="inline-link-macro">NetApp Active IQ Unified Manager のドキュメント</block>
   <block id="f2fe8cac791595f71f03311fed4e6b2f" category="admonition">NetApp AIQ UM ターゲットを要求すると、 Active IQ Unified Manager で管理されるすべてのクラスタが自動的にサイト間に追加されます。</block>
   <block id="07360078de4b958f771427531bf4153f" category="summary">SM-BC を備えた FlexPod データセンターは、アクティブ / アクティブのデータセンター設計を使用して、ビジネスクリティカルなワークロードのビジネス継続性とディザスタリカバリを実現します。解決策 は通常、地理的に分散した別々の場所に導入された 2 つのデータセンターをメトロエリア内で相互接続します。NetApp SM-BC 解決策 は、同期レプリケーションを使用して、ビジネスクリティカルなデータサービスをサイト障害から保護します。解決策 では、 2 つの FlexPod 配置サイトのラウンドトリップネットワークレイテンシが 10 ミリ秒未満である必要があります。</block>
@@ -7809,19 +7782,6 @@
   <block id="fa4af406aa8e6bea78d3f4f656f199fe" category="list-text">新しいストレージNASデータインタフェースと新しいストレージiSCSIデータインタフェースの下に、NASの「フェールオーバーポリシー」および「自動設定」パラメータを追加</block>
   <block id="5f5cca73b8e0b0dcf13ae37abd1b30a6" category="list-text">新規ストレージNASスマートボリュームのロールバックタスクで、他のボリュームが関連付けられていない場合にエクスポートポリシーが削除されるようになりました</block>
   <block id="85c1767724516ce4c530e386f6a8e04e" category="list-text">Smart VolumeとSmart LUNタスクの機能強化</block>
-  <block id="0de3d10d428301dc752a4aea634acb40" category="list-text">イニシエータをストレージホストに接続する</block>
-  <block id="9fc1d1408b035b5f699e246b36f2e395" category="list-text">新しいネットアップストレージFibre Channelインターフェイス</block>
-  <block id="a5df94fc588067cf92394a3554329601" category="list-text">新しいストレージIPインターフェイス</block>
-  <block id="d7e057b4be4f5aec2f39a363e6970a26" category="list-text">新しいストレージLUN</block>
-  <block id="4c807515ded4b2b7b3cea9068a98c67c" category="list-text">新しいストレージLUN ID</block>
-  <block id="c6751b7723c681fbbc53d1ece3f78e57" category="list-text">新しいNetApp Storage NASスマートボリューム</block>
-  <block id="8221f154a0cd2642f264529279893b96" category="list-text">新しいNetApp Storage Smart LUN</block>
-  <block id="e86a1c0d2603c82b6b81f234dae454af" category="list-text">新しいストレージボリューム</block>
-  <block id="40f53794e58186747b2ca794fc115708" category="list-text">ストレージエクスポートポリシーを削除します</block>
-  <block id="92deb106459eb050b785db2fe57cce48" category="list-text">ストレージホストを削除します</block>
-  <block id="bd400b36b257aae8e728e6440fee9fe6" category="list-text">ストレージLUNを削除します</block>
-  <block id="020226a8130f1d7d0a9df708c3d7b600" category="list-text">ストレージLUN IDを削除します</block>
-  <block id="93eafe4433d296a1dd07b95ce951c9a7" category="list-text">NetApp Storage Smart LUNを削除します</block>
   <block id="b8a3a6101b5ada36c1e5927fd398157d" category="list-text">導入後のプロセスで、次のオプションを選択します。</block>
   <block id="05b3bc98db36aa487224a23de09ab3be" category="admonition">「Intersight Assist」を選択する場合は、続行する前にデバイスIDと請求コードをメモしておきます。</block>
   <block id="fd7b91f0228fe4adf25f7fca76314e8d" category="list-text">「* Intersight Assist *」を選択し、次の手順を実行します。</block>
@@ -9118,8 +9078,6 @@
   <block id="ce93121f4d7265c3a12c10d3efa2733d" category="inline-link-macro">以前：&lt;block ref="c04f464a529d08398ebf630bf9c932ed" prefix="" category='inline-code"/&gt;スクリプトを使用したGATKの実行出力。</block>
   <block id="1b04071fa32de2cc62ba81ce722a80de" category="inline-link-macro">&lt;block ref="c04f464a529d08398ebf630bf9c932ed" prefix="" category='inline-code"/&gt;スクリプトを使用したGATKの実行に関する出力。</block>
   <block id="919bcacd06d9ba9c758783027661478b" category="inline-link-macro">次の例：&lt;block ref="c04f464a529d08398ebf630bf9c932ed" prefix="" category='inline-code"/&gt;スクリプトを使用したGATKの実行出力。</block>
-  <block id="4174da9caea2fe6cfb47e03b760a26b4" category="cell">最新バージョンのNetApp Active IQ Unified Manager が必要（現在は9.12 GA）</block>
-  <block id="1ad9d53c3fc2062cfb8cd9f962f46df0" category="paragraph">Active IQ Unified Manager をインストールまたはアップグレードしていない場合は（最新バージョンが必要、現在は9.12 GA）にアップグレードします。手順については、を参照してください <block ref="b713007c96ed5cceca9ab6b5776ab58a" category="inline-link-macro-rx"></block>。</block>
   <block id="30afe0cd8c37f4391553d8fb227f8dd4" category="paragraph">NetApp ONTAP ストレージでAIQ UM for Cisco Intersightのプロキシサーバを使用している場合は、Interoperability Matrix Toolサービス（IMT ）を利用するためにコマンドラインインターフェイス（CLI）を使用してセットアップを設定する必要があります。IMT サービスは、[Integrated Systems]ページの[*Interoperability *]タブで使用できます。Active IQ Unified Manager UMプロキシサーバの設定には、仮想マシン（OVA）診断シェルを使用する必要があります。</block>
   <block id="abb14d21829ba186172f6e1d0b64b55b" category="section-title">2023年1月</block>
   <block id="f58686065d77527c1d5e19130ba1ee62" category="admonition">最新リリースとの互換性を確保し、すべての機能を利用するには、NetApp Active IQ Unified Manager 9.12 GAへのアップグレードが必要です。このリリースに関連する既知の問題のリストについては、を参照してください <block ref="1e93e2dfe5ecbece98249e8c1a59713c" category="inline-xref-macro-rx"></block>。</block>
@@ -9777,4 +9735,53 @@
   <block id="c5278a5ee46f3950c6449cea7119ca37" category="cell"><block ref="c5278a5ee46f3950c6449cea7119ca37" category="inline-link-macro-rx"></block></block>
   <block id="040d804b2c70516766d21ab594bc39bb" category="cell"><block ref="040d804b2c70516766d21ab594bc39bb" category="inline-link-rx"></block></block>
   <block id="0d9b0b32a4432dbeaa0425b3a43bf813" category="list-text">* 革新性と俊敏性。 * FlexPod は Epic 、 Cerner 、 Meditech 、 Agfa 、 GE 、 Philips などの画像処理システムなどの EHR によって理想的なプラットフォームとして推奨されています。詳細については、を参照してください<block ref="e3215a4a4d4097ca1d3d2b989f46a542" category="inline-link-rx"></block> ターゲットとなるプラットフォームアーキテクチャについては、 Epic userweb を参照してください。ゲノム解析の実行<block ref="24f2c347deb06bba4de59a5266702e7d" category="inline-link-rx"></block> 医療機関は、即応性を備えた革新的なビジネスを継続できます。FlexPod を導入することで、組織の変化を自然に実現できます。医療機関が FlexPod プラットフォームを標準化すると、 IT エキスパートは時間、労力、リソースをプロビジョニングしてイノベーションを推進できるようになり、エコシステムのニーズに合わせた即応性が実現します。</block>
+  <block id="32c88669445a60f20d5c4768cafb4635" category="paragraph">Active IQ Unified Manager（最新バージョンが必要、現在は9.13RC1）をインストールまたはアップグレードしていない場合はインストールします。手順については、を参照してください <block ref="b713007c96ed5cceca9ab6b5776ab58a" category="inline-link-macro-rx"></block>。</block>
+  <block id="9944591da8cbd48d8dd6e6366955da50" category="list-text">NetAppボリュームにエクスポートポリシーを追加してください</block>
+  <block id="39fcfcb06d577fe28a1681ec59bd8813" category="list-text">NetAppイニシエータグループにイニシエータを追加します</block>
+  <block id="316ae23c10623d9e2fd5c26d0162e4e1" category="list-text">NetAppエクスポートポリシーにルールを追加します</block>
+  <block id="c1e75562a1ee05d4eb3bdd4ce416c7fe" category="list-text">NetApp Snapshotポリシーにスケジュールを追加します</block>
+  <block id="dcbe38495fab1770c2244fae824e4567" category="list-text">Storage Virtual MachineのNetAppアグリゲートを編集します</block>
+  <block id="a3e01372be0fd350672ec9026d00bfd1" category="list-text">NetAppエクスポートポリシールールの編集</block>
+  <block id="b2909ba12d7d2bd66cbc580aafe6b228" category="list-text">NetApp Snapshotポリシーを編集します</block>
+  <block id="5fa98424f4171475b37db60b2dc77260" category="list-text">NetApp Snapshotポリシーのスケジュールを編集します</block>
+  <block id="390a620db962909d07928ed78ef53204" category="list-text">NetApp LUNを展開します</block>
+  <block id="3183eade83f0193ab35b8970f2c68664" category="list-text">NetAppイニシエータグループのLUNマップを検索します</block>
+  <block id="1b746e0205a5cc7f2d0108c9ea93762d" category="list-text">IDでNetApp LUNを検索します</block>
+  <block id="8a80e56d5db5a1442049e0f62400b9ca" category="list-text">IDでNetAppボリュームを検索します</block>
+  <block id="e949897c1607f632d83cf0938dee40a7" category="list-text">新しいNetAppエクスポートポリシー</block>
+  <block id="f990c67abc9fb266464d487c346d3612" category="list-text">新しいNetApp FCデータインターフェイス</block>
+  <block id="61f173414a4053b33c1cfee676b76b4b" category="list-text">新しいNetAppイニシエータグループ</block>
+  <block id="63e40433e460c62f2accc6e3a45c06fb" category="list-text">新しいNetApp iSCSIデータインターフェイス</block>
+  <block id="fa78246b0e8c6de1cd52645f02831c86" category="list-text">新しいNetApp LUN</block>
+  <block id="087a2a891ca2a561f44d5917021c6689" category="list-text">新しいNetApp LUNマップ</block>
+  <block id="d73757020a56b91ae816c18a56f9c49d" category="list-text">新しいNetApp NASデータインターフェイス</block>
+  <block id="31cd130de62753275b838e4c22c01d0e" category="list-text">新しいNetApp NASスマートボリューム</block>
+  <block id="6cf2feff2e371abb80aba7e5aaea379a" category="list-text">新しいNetAppスマートLUN</block>
+  <block id="8b9572adccfac5fa05a86f00dbb8eab2" category="list-text">新しいNetApp Snapshotポリシー</block>
+  <block id="d0de55422275f1183147b3b00bf46341" category="list-text">新しいNetApp Storage Virtual Machineの略</block>
+  <block id="7205da2b815c287ae127a2a0759e3dc8" category="list-text">新しいNetAppボリューム</block>
+  <block id="c88e88f622d355fa885cd07b661181fa" category="list-text">新しいNetAppボリュームSnapshot</block>
+  <block id="c77322d3208fc6cc1fcbf66f2cff2064" category="list-text">NetAppボリュームからエクスポートポリシーを削除します</block>
+  <block id="08b4ef99dd90f65a917162dae5001a9b" category="list-text">NetAppエクスポートポリシーを削除します</block>
+  <block id="f1c19806910ec96f1866a311f4e2c040" category="list-text">NetApp FCデータインターフェイスを削除</block>
+  <block id="de9b0e25e74ef14a03e62f3d048bee50" category="list-text">NetAppイニシエータグループを削除します</block>
+  <block id="a6ba73691dd59717e2dd9c330b72c2ec" category="list-text">NetApp IPインターフェイスを削除します</block>
+  <block id="291f295b31590fc97f1bc8ba5251c2f8" category="list-text">NetApp LUNを削除します</block>
+  <block id="0fb99f556df156305cff85e0176d63ce" category="list-text">NetApp LUNマップを削除します</block>
+  <block id="0694de58ab2e822e387b823e51e54841" category="list-text">NetApp NASスマートボリュームを削除します</block>
+  <block id="a131b61917fb652a85f68945d920f91f" category="list-text">NetAppスマートLUNを削除します</block>
+  <block id="f227d28aa4a5d8fad82d2fed00d7aee1" category="list-text">NetApp Snapshotポリシーを削除します</block>
+  <block id="9f85cc47bf61f32b9cd68d5ff30afd1f" category="list-text">NetApp Storage Virtual Machineを削除します</block>
+  <block id="bbc2e677fd4417e3186aad3353a3f4a8" category="list-text">NetAppボリュームを削除します</block>
+  <block id="90e86a915d7d7728d267251ca74d65aa" category="list-text">NetAppボリュームSnapshotを削除します</block>
+  <block id="f31b13d8f87aef5c7ef5df3f708aa577" category="list-text">NetAppエクスポートポリシーからルールを削除します</block>
+  <block id="7d9b1145d4ddecd2b63b6017eb559a79" category="list-text">NetApp Snapshotポリシーからスケジュールを削除します</block>
+  <block id="fcfa83f92e088a38cb0b8b964782a825" category="list-text">NetAppボリュームSnapshotの名前を変更します</block>
+  <block id="cf1b3d281850307ef3dfced3bacedd94" category="list-text">NetAppボリュームの容量を更新します</block>
+  <block id="76d2b8dc750167185cbc6e1c83deac4f" category="cell">最新バージョンのNetApp Active IQ Unified Managerが必要（現在は9.13RC1）</block>
+  <block id="411d690288852abddc39378b2989bfda" category="section-title">2023年6月</block>
+  <block id="b4099ff97cb0b64945972224373faec4" category="admonition">最新リリースとの互換性とフル機能を確保するには、NetApp Active IQ Unified Manager 9.13RC1へのアップグレードが必要です。</block>
+  <block id="4afd182647adde3ae53ba9636f8ecd85" category="list-text">NetAppストレージタスクの名前が更新されました。を参照してください <block ref="7cee7c950e5c408827f960772194d4bb" category="inline-link-macro-rx"></block> は、名前を変更したタスクの完全なリストです。</block>
+  <block id="2d24bfd4ad96e334ad70f500b56563c3" category="list-text">Cisco Intersight にネットアップワークフローのストレージタスクが追加されました。を参照してください <block ref="7cee7c950e5c408827f960772194d4bb" category="inline-link-macro-rx"></block> NetApp ストレージ・タスクの一覧を表示します。</block>
+  <block id="c0d6fe9e8f745815653bfbc202c74e93" category="list-text">Cisco Intersight に含まれるネットアップストレージのタスクの最新リストを追加しました。を参照してください <block ref="7cee7c950e5c408827f960772194d4bb" category="inline-link-macro-rx"></block> NetApp ストレージ・タスクの一覧を表示します。</block>
 </blocks>
