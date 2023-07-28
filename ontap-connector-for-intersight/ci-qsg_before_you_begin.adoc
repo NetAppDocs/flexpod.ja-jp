@@ -20,7 +20,7 @@ summary: 開始する前に、 AIQ UM をインストールまたはアップグ
 
 == NetApp Active IQ Unified Manager をインストールまたはアップグレードします
 
-Active IQ Unified Manager（最新バージョンが必要、現在は9.13RC1）をインストールまたはアップグレードしていない場合はインストールします。手順については、を参照してください link:https://docs.netapp.com/us-en/active-iq-unified-manager/["NetApp Active IQ Unified Manager のドキュメント"]。
+Active IQ Unified Manager（最新バージョンが必要、現在は9.13GA）をインストールまたはアップグレードしていない場合はインストールします。手順については、を参照してください link:https://docs.netapp.com/us-en/active-iq-unified-manager/["NetApp Active IQ Unified Manager のドキュメント"]。
 
 
 

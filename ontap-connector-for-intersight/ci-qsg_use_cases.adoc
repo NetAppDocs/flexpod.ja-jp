@@ -79,15 +79,27 @@ summary: これらは、 Cisco Intersight のネットアップストレージ�
 Cisco Intersight には、次のネットアップストレージタスクが用意されています。
 
 +
+** NetApp CIFS共有へのACLの追加
+** NetAppエクスポートポリシールールへのクライアント一致の追加
 ** NetAppボリュームにエクスポートポリシーを追加してください
 ** NetAppイニシエータグループにイニシエータを追加します
 ** NetAppエクスポートポリシーにルールを追加します
 ** NetApp Snapshotポリシーにスケジュールを追加します
+** NetAppライセンスステータスの確認
+** NetApp Storage Virtual MachineのFCPプロトコルステータスの確認
 ** Storage Virtual MachineのNetAppアグリゲートを編集します
+** NetApp非同期SnapMirrorポリシーの編集
+** NetApp CIFS共有ACL権限の編集
 ** NetAppエクスポートポリシールールの編集
 ** NetApp Snapshotポリシーを編集します
 ** NetApp Snapshotポリシーのスケジュールを編集します
+** NetAppボリュームのセキュリティ形式の編集
+** NetAppボリュームのSnapshotポリシーの編集
+** NetApp CIFSサービスの有効化
 ** NetApp LUNを展開します
+** 新しいNetApp非同期SnapMirrorポリシー
+** 新しいNetApp CIFSサーバ
+** 新しいNetApp CIFS共有
 ** NetAppイニシエータグループのLUNマップを検索します
 ** IDでNetApp LUNを検索します
 ** IDでNetAppボリュームを検索します
@@ -95,24 +107,35 @@ Cisco Intersight には、次のネットアップストレージタスクが用
 ** 新しいNetApp FCデータインターフェイス
 ** 新しいNetAppイニシエータグループ
 ** 新しいNetApp iSCSIデータインターフェイス
+** SVMルートボリュームの新しいNetApp負荷共有ミラー
 ** 新しいNetApp LUN
 ** 新しいNetApp LUNマップ
 ** 新しいNetApp NASデータインターフェイス
 ** 新しいNetApp NASスマートボリューム
 ** 新しいNetAppスマートLUN
+** ボリュームの新しいNetApp SnapMirror関係
 ** 新しいNetApp Snapshotポリシー
 ** 新しいNetApp Storage Virtual Machineの略
 ** 新しいNetAppボリューム
 ** 新しいNetAppボリュームSnapshot
+** NetApp Storage Virtual MachineのDNSの登録
+** NetApp CIFS共有からACLを削除する
+** NetAppエクスポートポリシールールからクライアント一致を削除
 ** NetAppボリュームからエクスポートポリシーを削除します
+** NetAppイニシエータグループからイニシエータを削除
+** NetApp CIFSサーバの削除
+** NetApp CIFS共有の削除
 ** NetAppエクスポートポリシーを削除します
 ** NetApp FCデータインターフェイスを削除
 ** NetAppイニシエータグループを削除します
 ** NetApp IPインターフェイスを削除します
+** SVMルートボリュームのNetApp負荷共有ミラーの削除
 ** NetApp LUNを削除します
 ** NetApp LUNマップを削除します
 ** NetApp NASスマートボリュームを削除します
 ** NetAppスマートLUNを削除します
+** ボリュームのNetApp SnapMirror関係の削除
+** NetApp SnapMirrorポリシーを削除
 ** NetApp Snapshotポリシーを削除します
 ** NetApp Storage Virtual Machineを削除します
 ** NetAppボリュームを削除します
@@ -120,6 +143,7 @@ Cisco Intersight には、次のネットアップストレージタスクが用
 ** NetAppエクスポートポリシーからルールを削除します
 ** NetApp Snapshotポリシーからスケジュールを削除します
 ** NetAppボリュームSnapshotの名前を変更します
+** SVMルートボリュームのNetApp負荷共有ミラーの更新
 ** NetAppボリュームの容量を更新します
 +
 ネットアップのストレージと仮想化タスクを使用したワークフローのカスタマイズの詳細については、ビデオをご覧ください https://tv.netapp.com/detail/video/6228095945001["Cisco Intersight の NetApp ONTAP ストレージオーケストレーション"^]。

@@ -9735,7 +9735,6 @@
   <block id="c5278a5ee46f3950c6449cea7119ca37" category="cell"><block ref="c5278a5ee46f3950c6449cea7119ca37" category="inline-link-macro-rx"></block></block>
   <block id="040d804b2c70516766d21ab594bc39bb" category="cell"><block ref="040d804b2c70516766d21ab594bc39bb" category="inline-link-rx"></block></block>
   <block id="0d9b0b32a4432dbeaa0425b3a43bf813" category="list-text">* 革新性と俊敏性。 * FlexPod は Epic 、 Cerner 、 Meditech 、 Agfa 、 GE 、 Philips などの画像処理システムなどの EHR によって理想的なプラットフォームとして推奨されています。詳細については、を参照してください<block ref="e3215a4a4d4097ca1d3d2b989f46a542" category="inline-link-rx"></block> ターゲットとなるプラットフォームアーキテクチャについては、 Epic userweb を参照してください。ゲノム解析の実行<block ref="24f2c347deb06bba4de59a5266702e7d" category="inline-link-rx"></block> 医療機関は、即応性を備えた革新的なビジネスを継続できます。FlexPod を導入することで、組織の変化を自然に実現できます。医療機関が FlexPod プラットフォームを標準化すると、 IT エキスパートは時間、労力、リソースをプロビジョニングしてイノベーションを推進できるようになり、エコシステムのニーズに合わせた即応性が実現します。</block>
-  <block id="32c88669445a60f20d5c4768cafb4635" category="paragraph">Active IQ Unified Manager（最新バージョンが必要、現在は9.13RC1）をインストールまたはアップグレードしていない場合はインストールします。手順については、を参照してください <block ref="b713007c96ed5cceca9ab6b5776ab58a" category="inline-link-macro-rx"></block>。</block>
   <block id="9944591da8cbd48d8dd6e6366955da50" category="list-text">NetAppボリュームにエクスポートポリシーを追加してください</block>
   <block id="39fcfcb06d577fe28a1681ec59bd8813" category="list-text">NetAppイニシエータグループにイニシエータを追加します</block>
   <block id="316ae23c10623d9e2fd5c26d0162e4e1" category="list-text">NetAppエクスポートポリシーにルールを追加します</block>
@@ -9778,10 +9777,50 @@
   <block id="7d9b1145d4ddecd2b63b6017eb559a79" category="list-text">NetApp Snapshotポリシーからスケジュールを削除します</block>
   <block id="fcfa83f92e088a38cb0b8b964782a825" category="list-text">NetAppボリュームSnapshotの名前を変更します</block>
   <block id="cf1b3d281850307ef3dfced3bacedd94" category="list-text">NetAppボリュームの容量を更新します</block>
-  <block id="76d2b8dc750167185cbc6e1c83deac4f" category="cell">最新バージョンのNetApp Active IQ Unified Managerが必要（現在は9.13RC1）</block>
   <block id="411d690288852abddc39378b2989bfda" category="section-title">2023年6月</block>
   <block id="b4099ff97cb0b64945972224373faec4" category="admonition">最新リリースとの互換性とフル機能を確保するには、NetApp Active IQ Unified Manager 9.13RC1へのアップグレードが必要です。</block>
   <block id="4afd182647adde3ae53ba9636f8ecd85" category="list-text">NetAppストレージタスクの名前が更新されました。を参照してください <block ref="7cee7c950e5c408827f960772194d4bb" category="inline-link-macro-rx"></block> は、名前を変更したタスクの完全なリストです。</block>
   <block id="2d24bfd4ad96e334ad70f500b56563c3" category="list-text">Cisco Intersight にネットアップワークフローのストレージタスクが追加されました。を参照してください <block ref="7cee7c950e5c408827f960772194d4bb" category="inline-link-macro-rx"></block> NetApp ストレージ・タスクの一覧を表示します。</block>
   <block id="c0d6fe9e8f745815653bfbc202c74e93" category="list-text">Cisco Intersight に含まれるネットアップストレージのタスクの最新リストを追加しました。を参照してください <block ref="7cee7c950e5c408827f960772194d4bb" category="inline-link-macro-rx"></block> NetApp ストレージ・タスクの一覧を表示します。</block>
+  <block id="cef4011c89ea914920838c57c1277b96" category="cell">最新バージョンのNetApp Active IQ Unified Managerが必要（現在は9.13GA）</block>
+  <block id="fb5978407d362c06c4a1c8ab72f464f1" category="section-title">2023年7月</block>
+  <block id="f6134ed465dbb55c3531c607933bd957" category="admonition">NetApp Active IQ Unified Manager 9.13GAへのアップグレードは、最新リリースとの互換性とフル機能を確保するために必要です。</block>
+  <block id="4a743225a883b79a064e0fe794bed4bc" category="list-text">NetAppストレージタスクの名前が更新されました。名前を変更したタスクの完全なリストについては、ユースケース3デザイナフリーフォームを使用したカスタムワークフローを参照してください。</block>
+  <block id="ee3ed84cc0530093ff0cafb58fa20c87" category="list-text">NFSインターフェイスのIPアドレスが、新しいNetApp NASスマートボリュームタスクの出力として追加されました。</block>
+  <block id="9dda9b1a19688571959dbba112145ceb" category="list-text">ASUP転送がHTTPSであることが[Checks]タブに追加されました。</block>
+  <block id="71d5edf744a368462afa22987d57ce39" category="list-text">すべての階層の正しい階層タイプが、階層のユーザーインターフェイスに正しく表示されるようになりました。</block>
+  <block id="254d491c7abffdd56f4bbf1a450d16bd" category="list-text">すべての準拠ライセンスが[Licenses]ページに正しく表示されるようになりました。</block>
+  <block id="1ac60a3870a02f53c35001a558aa411b" category="list-text">ホームディレクトリがないかどうかに関係なく、CIFS共有について正確な値が[Shares]ページに表示されるようになりました。</block>
+  <block id="db6a99019304bf55663227604fa38d88" category="list-text">[LUNs]ページの[Mapped]列でソートとフィルタリングが有効になりました。</block>
+  <block id="bf8347272101ad3e5a1f5a7d4a1e1c3d" category="list-text">ソートとフィルタリングによって、[NTP Servers]ページの[Authentication Enabled]列が有効になりました。</block>
+  <block id="dd7a106f5abebdf1130d273be23edf53" category="list-text">[チェック（Checks）]タブに、新しいチェックと次の対応するカテゴリを追加しました。</block>
+  <block id="e6593966d8e9ac936d00c88ec980ca67" category="list-text">ランサムウェア対策</block>
+  <block id="faeaec9eda6bc4c8cb6e1a9156a858be" category="list-text">可用性</block>
+  <block id="6311ae17c1ee52b36e68aaf4ad066387" category="list-text">その他</block>
+  <block id="ccc2c146b1c8e887b8cb561649b51add" category="list-text">[Inventory]詳細ビューで、使用済み物理容量の代わりに使用済み容量をレポートします。</block>
+  <block id="a45b01faef5c490c90c647f2428032f0" category="paragraph">Active IQ Unified Manager（最新バージョンが必要、現在は9.13GA）をインストールまたはアップグレードしていない場合はインストールします。手順については、を参照してください <block ref="b713007c96ed5cceca9ab6b5776ab58a" category="inline-link-macro-rx"></block>。</block>
+  <block id="d3b7d0dfd7a4c0712106720b7a263dcc" category="list-text">NetApp CIFS共有へのACLの追加</block>
+  <block id="e38df0ad25eaed709eb4fc30b431f674" category="list-text">NetAppエクスポートポリシールールへのクライアント一致の追加</block>
+  <block id="c8750c2c8ef4365e348e3f2d6f7e0a60" category="list-text">NetAppライセンスステータスの確認</block>
+  <block id="ce2e9853e33335f3e809f3c2fbd4e78e" category="list-text">NetApp Storage Virtual MachineのFCPプロトコルステータスの確認</block>
+  <block id="d3e8f4c6bd53e8eacce2b51f384bcbd5" category="list-text">NetApp非同期SnapMirrorポリシーの編集</block>
+  <block id="c1aa3662728ce7708fedccdcb4affbf7" category="list-text">NetApp CIFS共有ACL権限の編集</block>
+  <block id="24d1f1e8d23b508ab9bf5d7afcf636f7" category="list-text">NetAppボリュームのセキュリティ形式の編集</block>
+  <block id="614b87abecdd3f70114678982ebbbb9f" category="list-text">NetAppボリュームのSnapshotポリシーの編集</block>
+  <block id="c6898dbc38b65e6a09c4b5997d317aeb" category="list-text">NetApp CIFSサービスの有効化</block>
+  <block id="50b2cba14f218a621d87273c301bbde0" category="list-text">新しいNetApp非同期SnapMirrorポリシー</block>
+  <block id="35e279bd6fe2769eca059a8faedc6f43" category="list-text">新しいNetApp CIFSサーバ</block>
+  <block id="d1d30c3a3d93e98e502928eaaca114bc" category="list-text">新しいNetApp CIFS共有</block>
+  <block id="bda45d06eebbcdeab16a923fd8fdd01d" category="list-text">SVMルートボリュームの新しいNetApp負荷共有ミラー</block>
+  <block id="6fc90f6f641bcbf5f0e70c9bba86b0a9" category="list-text">ボリュームの新しいNetApp SnapMirror関係</block>
+  <block id="28c1a1abaac15f55ead6b402d02df1c8" category="list-text">NetApp Storage Virtual MachineのDNSの登録</block>
+  <block id="8ad01dcf4f5fb308079c8c54b8393fac" category="list-text">NetApp CIFS共有からACLを削除する</block>
+  <block id="f58fa9ccd1ffe4112c82ac2f86a775bc" category="list-text">NetAppエクスポートポリシールールからクライアント一致を削除</block>
+  <block id="baed5857e762ed3ffc693f7c65215f5c" category="list-text">NetAppイニシエータグループからイニシエータを削除</block>
+  <block id="7fd0848e19c01ad760f8c9f13445e04a" category="list-text">NetApp CIFSサーバの削除</block>
+  <block id="ab79cf9b18a0947935193e49992783ea" category="list-text">NetApp CIFS共有の削除</block>
+  <block id="4a61f0238ebd321bf19f499a028504d8" category="list-text">SVMルートボリュームのNetApp負荷共有ミラーの削除</block>
+  <block id="6436adc56d37fa0f43192638e893196c" category="list-text">ボリュームのNetApp SnapMirror関係の削除</block>
+  <block id="26d4a176845d0e66ac5ee3e91c2d833e" category="list-text">NetApp SnapMirrorポリシーを削除</block>
+  <block id="55b6a7c6b2794c0f9cf3d79716818187" category="list-text">SVMルートボリュームのNetApp負荷共有ミラーの更新</block>
 </blocks>
