@@ -3853,15 +3853,10 @@
   <block id="0b88514460889fb4d63d054cbc6a3377" category="paragraph"><block ref="0b88514460889fb4d63d054cbc6a3377" category="inline-image-macro-rx" type="image"></block></block>
   <block id="9231861e6cf8a3a3f0a1fb34080319ba" category="paragraph"><block ref="9231861e6cf8a3a3f0a1fb34080319ba" category="inline-image-macro-rx" type="image"></block></block>
   <block id="2768b4482cd00414c484329aa02421fd" category="list-text">これらの設定を適用したら、 ESXi ホストをリブートします。</block>
-  <block id="fa09ec8bcc6ec901a841f373312569a0" category="paragraph">選択したハイパーバイザーに関係なく、すべての FlexPod Express 構成で同じハードウェアが使用されます。そのため、ビジネス要件が変わっても、どちらのハイパーバイザーも同じ FlexPod Express ハードウェア上で実行できます。</block>
   <block id="5a65dfc9b8877098de398e29aea7e690" category="paragraph">次の表に、すべての FlexPod 構成に必要なハードウェアコンポーネントを示します。</block>
-  <block id="31ea9666e692abe3feb5f8899d677f6c" category="cell">AFF A220 HA ペア</block>
   <block id="07d96eb58219180f66d5d903648dc9a6" category="cell">Cisco UCS B200 M5 サーバ</block>
   <block id="b2305903372f9fe1ad041ec9d4832ec3" category="cell">Cisco Nexus 31108PCV スイッチ</block>
-  <block id="f9017cb204acd69fcf08029e2ce280ff" category="cell">B200 M5 サーバの Cisco UCS Virtual Interface Card （ VIC ；仮想インターフェイスカード） 1440</block>
-  <block id="485ea27c18f0f52f1b499ba0528a6862" category="cell">2 つの統合 UCS-fi-M6324 ファブリックインターコネクトを備えた Cisco UCS Mini</block>
   <block id="c5d54e047720e604f7ad0e5197d49618" category="cell">4.0 （ 1b ）</block>
-  <block id="ab29a89dd74c91768ed4275191ac232b" category="cell">Cisco UCS ファブリックインターコネクト FI-6324UP の場合</block>
   <block id="6cd518371dda23826b8b3ff8864701fe" category="cell">Cisco Blade ソフトウェア</block>
   <block id="da87afcd4f6a015dcefcfc1d26321bae" category="cell">Cisco UCS B200 M5 サーバの場合</block>
   <block id="e15e12a3a6cff186b5e197574ceb8059" category="cell">1.0.25.0</block>
@@ -3873,7 +3868,6 @@
   <block id="beb9456af324db48fa76084e755d8d0b" category="cell">VMware vCenter Server Appliance の略</block>
   <block id="49c8a2fab2f3d19e210dab0ba008e69e" category="cell">6.7U1</block>
   <block id="f5af094c429d3c74cde8180b5ceb0219" category="inline-link-macro">次のステップ：設計の選択肢。</block>
-  <block id="3b5df09023ee3a2ec99ea3c35c3fe9ea" category="paragraph"><block ref="3b5df09023ee3a2ec99ea3c35c3fe9ea" category="inline-link-macro-rx"></block></block>
   <block id="9e98b6f0a57d9f777ea45fea460b01cb" category="summary">ここでは、手順 Express 構成で使用する Cisco UCS C シリーズスタンドアロンラックサーバを設定するための詳細な FlexPod について説明します。</block>
   <block id="e486c2a863d9fb65f07cf58d701b9991" category="doc">Cisco UCS C シリーズラックサーバを導入する</block>
   <block id="11af852a101de15640d1c20eb5900dc6" category="section-title">CIMC の Cisco UCS C シリーズスタンドアロンサーバの初期セットアップを実行します</block>
@@ -4056,12 +4050,8 @@
   <block id="4991f40c82f1b03bd2c3f6160d2aaf6f" category="paragraph">次の表に、 FlexPod Express でのすべての VMware vSphere の実装に必要なソフトウェアを示します。</block>
   <block id="c3e22f2ae1ddef844509890f97faa80b" category="cell">6.7</block>
   <block id="6091ca16495cdce90805252a1c12f4e6" category="doc">プログラムの概要</block>
-  <block id="a4a3871d8b3bf543cd7db5ec3c9ab72b" category="summary">FlexPod プログラムの基本原則に沿って、 FlexPod Express アーキテクチャは、 Cisco とネットアップのデータセンターのアーキテクトおよびエンジニアによって徹底的にテストされました。冗長性と可用性から個々の機能に至るまで、 FlexPod Express アーキテクチャ全体が検証され、お客様の信頼を獲得し、設計プロセスに信頼を築きます。</block>
   <block id="dc140913e754c7554bc598a02951fa66" category="doc">解決策の検証</block>
-  <block id="fc3f1e9c796a0a527093ad513cb99616" category="paragraph">Cisco とネットアップは、お客様にとって最高のインフラプラットフォームとして機能するように設計、構築された FlexPod Express を提供しています。業界をリードするコンポーネントを使用して設計されているため、お客様は FlexPod Express をインフラ基盤として信頼できます。FlexPod プログラムの基本原則に沿って、 FlexPod Express アーキテクチャは、 Cisco とネットアップのデータセンターのアーキテクトおよびエンジニアによって徹底的にテストされました。冗長性と可用性から個々の機能に至るまで、 FlexPod Express アーキテクチャ全体が検証され、お客様の信頼を獲得し、設計プロセスに信頼を築きます。</block>
-  <block id="5558ad67c2e9ea988825050415810b82" category="paragraph">VMware vSphere 6.7U1 ハイパーバイザーは、 FlexPod Express インフラコンポーネントで検証されました。この検証では、 10GbE 接続オプションを使用した iSCSI Direct Connect SAN ブート接続と NFS Direct Connect データストアを使用しました。</block>
   <block id="4b774a4819b60036fd16dae7b1618fe7" category="inline-link-macro">次は終わりです</block>
-  <block id="2174227024b97b8a29f3fdaed88f0ae2" category="paragraph"><block ref="2174227024b97b8a29f3fdaed88f0ae2" category="inline-link-macro-rx"></block></block>
   <block id="1f55a1943a0f00b8a59d1a9be4d5ebaf" category="summary">FlexPod Express は、 Cisco Unified Computing System （ Cisco UCS ）、 Cisco Nexus ファミリースイッチ、およびネットアップストレージテクノロジを基盤とした、事前設計されたベストプラクティスアーキテクチャです。FlexPod Datacenter と FlexPod Express は、仮想化、ベアメタル OS 、エンタープライズワークロードに最適なプラットフォームです。</block>
   <block id="d855a56776243671dcc8056be00ab1dc" category="doc">NVA-1131 - 導入： VMware vSphere 6.7U1 搭載の FlexPod Express と、直接接続型の IP ベースのストレージを搭載した NetApp AFF A220</block>
   <block id="920a1229ece64c4767f712716efcbe38" category="paragraph">ネットアップ、 Sree Lakshmi Lanka です</block>
@@ -4172,68 +4162,13 @@
   <block id="84dad5eac68671e99192ded16a6b45de" category="summary">このページに記載されているテクノロジは、この設計の設計プロセスで採用されています。各テクノロジは、 FlexPod Express Infrastructure 解決策の特定の目的に使用されます。</block>
   <block id="4b559551dbe9daaff7bfb7f8ddd57dc8" category="doc">設計の選択肢</block>
   <block id="aebe68ffc143aeddd9287594ca0a06ec" category="paragraph">この設計の設計プロセスでは、次のテクノロジが採用されました。各テクノロジは、 FlexPod Express Infrastructure 解決策の特定の目的に使用されます。</block>
-  <block id="6e30e3d78d08968b31eb6678203d2fc0" category="section-title">NetApp AFF A220 または FAS27xx シリーズは、 ONTAP 9.5 に対応しています</block>
-  <block id="b247ff523957611373b5a446ea9ee079" category="paragraph">解決策は、最新のネットアップ製品である FAS 2750 または FAS 2720 と、 ONTAP 9.5 を搭載した AFF A220 の 2 つを使用します。</block>
-  <block id="0b1df62fb1c0427a2b152a4075e86f86" category="section-title">FAS2750/FAS2720 システム</block>
-  <block id="230d20d84ae15d53310ab6281c9aa965" category="paragraph">NetApp FAS2700 シリーズは、より多くの IT ニーズに対応できるように設計されており、このクラスの他のシステムよりも高い価値を提供します。NetApp ONTAP ストレージソフトウェアを搭載した FAS2700 は、優れたパフォーマンスを提供し、業界をリードするクラウドとの統合を実現し、幅広いワークロードをサポートし、パフォーマンスと容量をシームレスに拡張することで、成長と複雑さの管理タスクを簡易化します。</block>
-  <block id="e1c31a069f02226b8ab9d47f53ec3624" category="inline-link">FAS2700 ハイブリッドストレージシステムの製品ページ</block>
-  <block id="4c28ea2433ec0b30514131edceae43ec" category="paragraph">FAS2700 ハードウェアシステムの詳細については、を参照してください<block ref="d64b69eb2f82f123a0f6197c09be65e3" category="inline-link-rx"></block>。</block>
   <block id="b7fd98415b49fad63bd1c70591fdfcf1" category="section-title">AFF A220 システム</block>
-  <block id="231155812e638254d25136e7c658b0b9" category="paragraph">小規模から中規模のエンタープライズ環境向けに新たに更新された AFF A220 プラットフォームは、前世代に比べてパフォーマンスが 30% 向上しており、ネットアップはこの分野で業界をリードしています。</block>
-  <block id="741dae1bdcf713a3a3360933b437f7c5" category="paragraph">NetApp AFF システムは、業界最高レベルのパフォーマンス、卓越した柔軟性、クラス最高のデータ管理とクラウド統合により、お客様のエンタープライズストレージ要件を満たすことができます。業界初のエンドツーエンド NVMe テクノロジと NetApp ONTAP データ管理ソフトウェアを組み合わせることで、 AFF システムはビジネスクリティカルなデータを高速化、管理、保護します。AFF システムを使用すれば、デジタル変革を実現するために、リスクのない簡単なフラッシュへの移行が可能になります。</block>
-  <block id="0d9dced465768611d4ca22fcfcd38fe8" category="paragraph"><block ref="0d9dced465768611d4ca22fcfcd38fe8" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="7dfa8d5abc505016f90204da97112673" category="inline-link">NetApp AFF データシート</block>
-  <block id="370adf8e455f5f20b31987996d04b276" category="paragraph">AFF A220 ハードウェアシステムの詳細については、を参照してください<block ref="7699692f9a18fa56740f3f1efa37559d" category="inline-link-rx"></block>。</block>
-  <block id="0fcf2ee62acd9eae83b609a0e7ecaa72" category="section-title">ONTAP 9.5</block>
-  <block id="1190d1a31ebaa2ca1ddb571b6dab5210" category="paragraph">この新しい NetApp ONTAP 9.5 ソフトウェアには、データセンターからクラウドへのシームレスなデータ管理を目的としたいくつかの重要な機能拡張が含まれています。</block>
-  <block id="20e9d66db8204f25263d84e7d3206bd7" category="paragraph">ONTAP 9.5 では、オンプレミスからクラウドに至るまで、データファブリックの基盤としてハイブリッドクラウドを構築できます。</block>
-  <block id="82bf0a957e72889ee56e68735c5d6992" category="paragraph">ONTAP 9.5 には、 FlexPod Express 解決策に適した機能がいくつかあります。何よりも、ストレージ効率化に対するネットアップのコミットメントが重要になります。これは、小規模環境で最も重要な機能の 1 つです。ONTAP 9.5 には、重複排除、圧縮、コンパクション、シンプロビジョニングなどのネットアップの Storage Efficiency 機能が、 NetApp Memory Accelerated Data 、 NVMe の新たなサポートとともに搭載されています。NetApp WAFL システムは常に 4KB ブロックを書き込むため、コンパクションでは、ブロックが割り当てられた 4KB のスペースを使用していない場合、複数のブロックが 4KB ブロックにまとめられます。</block>
   <block id="67aecab353cdb62ae537a3a6ef787df6" category="inline-link">ONTAP 9 データ管理ソフトウェアのデータシート</block>
-  <block id="9ed2361a5bb872f2de082d0ae274d3d4" category="paragraph">これらは、 FlexPod Express 解決策を補完するいくつかの主要機能です。ONTAP 9.5 のその他の機能の詳細については、を参照してください<block ref="77ef5399543fc3a1e70b98d04d6a8530" category="inline-link-rx"></block>。</block>
-  <block id="2a5fc4f27c0d6ff3a32a694675454582" category="paragraph">ONTAP 9.5 の詳細については、ネットアップを参照してください<block ref="acaccc868f6222e64c0f11237becafd9" category="inline-link-rx"></block>ONTAP 9.5 が追加されています。</block>
-  <block id="64697becc3436900e007a58747c6bcc5" category="section-title">Cisco Nexus 3000 シリーズ</block>
-  <block id="a7cbaeff192b5f9f6af88db4cb61057f" category="paragraph">Cisco Nexus 31108PC-V は、堅牢でコスト効率に優れたスイッチで、 1/10/40/100Gbps スイッチを搭載しています。48 個の 1 / 1 Gbps ポートと 40 / 100 Gbps アップリンクを搭載し、柔軟性を実現します。</block>
   <block id="65616b47a64dd1f2f0def7e9a8ba8095" category="paragraph">すべての Cisco Nexus シリーズモデルは、基盤となる同じオペレーティングシステムである NX-OS を実行するため、 FlexPod Express および FlexPod Datacenter ソリューションでは複数の Cisco Nexus モデルがサポートされます。</block>
-  <block id="7013d1d40a328711facf36da6fcae836" category="paragraph"><block ref="7013d1d40a328711facf36da6fcae836" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="42cd01c1558a7b36c81fabb73cea0392" category="paragraph">Cisco Nexus 31108 は、仮想 LAN （ VLAN ）、 IEEE 802.1Q トランキング、および Link Aggregation Control Protocol （ LACP ）を含む包括的なレイヤ 2 機能セットを提供します。システムにライセンスを追加することで、レイヤ 3 機能を追加できます。</block>
-  <block id="e724811e47a7141b174880660c645622" category="inline-link">Cisco Nexus 31108PC-V スイッチの製品情報</block>
-  <block id="fa363fe0707e6a492c5cd3367527eea5" category="paragraph">Cisco Nexus 3000 シリーズの詳細については、を参照してください<block ref="18ad85204da80d4264e7926ddf3372bd" category="inline-link-rx"></block>。</block>
   <block id="538d1e0a5689cf1d6c02da051f837ecb" category="section-title">Cisco UCS B-Series</block>
-  <block id="4a5ddb88cfb1fd0437ad551f21d7a1ea" category="inline-link">ユニファイドファブリック</block>
-  <block id="e29ffa47eb4a30db801bb470a66a44c0" category="paragraph">Cisco UCS 5108 ブレードサーバシャーシは、ブレードベースのシステムの使用と導入に革命をもたらします。を組み込むことによって<block ref="b4917c31979e198c746ea794693e6b5b" category="inline-link-rx"></block> また、ファブリックエクステンダテクノロジーにより、 Cisco Unified Computing System では次のことが可能になります。</block>
-  <block id="23153947dc03329fe3a6c264a87d4343" category="list-text">物理コンポーネントの数を減らします</block>
-  <block id="3d718d0c3ae11322cd34d34dbcabd480" category="list-text">独立した管理は不要です</block>
-  <block id="259a0f786e3a00ab652733583cd1d428" category="list-text">従来のブレードサーバシャーシよりもエネルギー効率が高い</block>
-  <block id="3469beb4dca4591b74f735db7d8eb485" category="paragraph">このシンプルさにより、専用のシャーシ管理とブレードスイッチが不要になり、ケーブル配線が削減され、複雑さを増すことなく 20 台のシャーシに拡張できるようになります。Cisco UCS 5108 ブレードサーバシャーシは、 Cisco Unified Computing System の一部として、データセンターのシンプルさと IT の応答性を実現するための重要なコンポーネントです。</block>
-  <block id="66e00ca76380206343be6f3a0d0f1d5a" category="paragraph">次の図に示す Cisco UCS B シリーズ B200M5 サーバは、 FlexPod Express 用に選択されました。多くの構成オプションがあるため、 FlexPod Express の導入に固有の要件に合わせて調整できます。</block>
-  <block id="11fa8668c913da0fac8fe2fd0fb91afe" category="paragraph"><block ref="11fa8668c913da0fac8fe2fd0fb91afe" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="d1ef7a2d808b7ba8d4d6c4f59cc69d07" category="paragraph">エンタープライズクラスの Cisco UCS B200 M5 ブレードサーバは、ハーフ幅のブレードフォームファクタで Cisco UCS ポートフォリオの機能を拡張します。Cisco UCS B200 M5 ブレードサーバは、最新の Intel Xeon プロセッサスケーラブルファミリ CPU のパワーを活用し、最大 3072 GB の RAM （ 128GB DIMM を使用）、 2 本のソリッドステートドライブ（ SSD ）または HDD 、最大 80 Gbps のスループット接続を実現します。</block>
-  <block id="f490824de02053a745564bdf49968bcc" category="inline-link">Cisco UCS B200 M5 ブレードサーバ仕様シート</block>
-  <block id="e63d3138bb002a22b2718550e4c90f78" category="paragraph">Cisco UCS B200 M5 ブレードサーバの詳細については、を参照してください<block ref="1cf2c09900a3362a6185f42c57ff1f7e" category="inline-link-rx"></block>。</block>
-  <block id="253104ef14ebb79e25290a8b2ebc01aa" category="section-title">Cisco UCS 仮想インターフェイスカード 1440/1480</block>
-  <block id="dd092054978fab3a1f80e0c46eff123a" category="paragraph">Cisco UCS VIC 1440 は、 M5 世代の Cisco UCS B シリーズブレードサーバ専用に設計された、デュアルポート 40 Gbps またはデュアル 4 x 10 Gbps イーサネット / FCoE 対応モジュラ LAN on Motherboard （ mLOM ）です。オプションのポートエクスパンダと組み合わせて使用すると、 Cisco UCS VIC 1440 機能が 2 つの 40Gbps イーサネットポートでイネーブルになります。Cisco UCS VIC 1440 では、ポリシーベースのステートレスで即応性に優れたサーバインフラストラクチャを実現できます。このインフラストラクチャは、 NIC または HBA として動的に設定できる PCIe 標準準拠のインターフェイスをホストに提供できます。</block>
-  <block id="96ddccafd32cbad360621ab2631443ba" category="paragraph">次の図に示す Cisco UCS VIC 1480 は、メザニンカードである点を除いて、 VIC 1440 に似ています。</block>
-  <block id="454400bcf7f3263327d2a922bb1e2c65" category="paragraph"><block ref="454400bcf7f3263327d2a922bb1e2c65" category="inline-image-macro-rx" type="image"></block></block>
   <block id="843cba364221d61db228a8077756b335" category="inline-link">Cisco UCS 仮想インターフェイスカード 1400 シリーズデータシート</block>
-  <block id="bdd289ff775d486e0c3aa90098267d5c" category="paragraph">Cisco VIC 140/1480 の詳細については、を参照してください<block ref="d707d369ea1f7f021ea02c53dc5e5dda" category="inline-link-rx"></block>。</block>
-  <block id="10a002328d32e241bc0792cf3b4346e4" category="section-title">VMware vSphere 6.7U1</block>
-  <block id="925db1346daa765d179e142830c945cd" category="paragraph">VMware vSphere 6.7U1 は、 FlexPod Express で使用するハイパーバイザーオプションの 1 つです。VMware vSphere を使用すると、購入したコンピューティング容量が十分に使用されていることを確認しながら、組織の電力および冷却のフットプリントを削減できます。また、 VMware vSphere を使用すると、ハードウェア障害からの保護（ VMware High Availability 、 VMware HA ）が可能になり、 vSphere ホストのクラスタ全体（ VMware Distributed Resource Scheduler 、 VMware DRS ）でリソースの負荷分散を計算できます。</block>
-  <block id="8a4768a722d7527cbe86721776d857b3" category="paragraph">VMware vSphere 6.7U1 には、 VMware の最新イノベーションが搭載されています。この設計で使用する VMware vCenter Server Appliance （ vCSA ）には、 VMware vSphere Update Manager の統合など、多数の新機能が追加されています。vCSA は、 vCenter の標準のハイアベイラビリティも初めて提供します。ホストにクラスタリング機能を追加し、 VMware HA や VMware DRS などの機能を使用するには、 VMware vCenter Server が必要です。</block>
-  <block id="f340477f92189f6652904c3add941918" category="paragraph">VMware vSphere 6.7U1 には、拡張されたコア機能もいくつかあります。VMware HA では、自動化された再起動が初めて導入されるため、 HA イベントの場合は仮想マシンが適切な順序で再起動されます。さらに、 DRS アルゴリズムが強化され、 vSphere 内のコンピューティングリソースをより詳細に制御するための構成オプションが追加されました。</block>
-  <block id="3c7ac568c47f7fc40b61f2b1fda55d72" category="paragraph">vSphere Web Client は、 VMware vSphere 環境に最適な管理ツールです。vSphere Web Client では、ホーム画面の再編成など、いくつかのユーザ機能が拡張されています。たとえば、ログイン時にインベントリツリーがデフォルトビューになります。</block>
-  <block id="02456b82e5a07caa3cc2f568e2b3e342" category="inline-link">vSphere ：ハイブリッドクラウド向けの効率性と安全性に優れたプラットフォームです</block>
-  <block id="9b1b5a1685b372f07c4f786abd40ef02" category="paragraph">VMware vSphere の詳細については、を参照してください<block ref="5a1eeb2a0fea5e52fd534f20cf64447e" category="inline-link-rx"></block>。</block>
-  <block id="12e744622815cbcc5b2278da824f6417" category="inline-link">VMware vSphere 6.7 の新機能</block>
-  <block id="a0d87d18e518149944b58f6d9cddf472" category="paragraph">VMware vSphere 6.7U1 の新機能の詳細については、を参照してください<block ref="d928ba2839f56e2ba82808437984a23e" category="inline-link-rx"></block></block>
   <block id="e08175c6fa64cba68719dea85ebd9d34" category="inline-link">VMware Compatibility Guide 』を参照してください</block>
-  <block id="1c2e68844c49b718af0d0ccb239a21dd" category="paragraph">VMware HCL がサポートされている ONTAP 9.5 については、を参照してください<block ref="45bfb35eaade6b56e4f31adaaa8e4220" category="inline-link-rx"></block>。</block>
-  <block id="ccefe13bb6474061826460a1ae7cc33b" category="section-title">VMware vSphere とネットアップの統合</block>
-  <block id="145b9c2e152c7223879864696f169c98" category="paragraph">VMware vSphere とネットアップの統合ポイントは 2 つあります。1 つ目は NetApp Virtual Storage Console （ VSC ）です。Virtual Storage Console は VMware vCenter のプラグインです。仮想化管理者は、使い慣れた vCenter 管理インターフェイスからストレージを管理できます。VMware データストアは、数回のクリックで複数のホストに導入できます。この緊密に統合された統合は、ブランチオフィスや小規模な組織で管理時間が重要になります。</block>
-  <block id="d8052967ab202a6129ec7f3d4711ff7b" category="paragraph">2 つ目は、 NetApp NFS Plug-in for VMware VAAI の統合です。VAAI はブロックプロトコルでネイティブにサポートされていますが、 NFS に VAAI を統合するためには、すべてのストレージアレイに VAAI プラグインが必要です。NFS VAAI の統合には、スペースリザベーションやコピーオフロードなどがあります。VAAI プラグインは VSC を使用してインストールできます。</block>
-  <block id="bc0607947d6fc29b8db9b3a462520461" category="inline-link">NetApp Virtual Infrastructure Management の製品ページ</block>
-  <block id="ffb3ae9234b082e3fc3ce7f85b569e77" category="paragraph">NetApp VSC for VMware vSphere の詳細については、を参照してください<block ref="aabb067f84c6d660aa72e6e3c8528716" category="inline-link-rx"></block>。</block>
   <block id="cc6b6b6f826cec578741b322169e9007" category="inline-link-macro">次：解決策の検証：</block>
-  <block id="0784dd9b5a3f95830355422859d104c1" category="paragraph"><block ref="0784dd9b5a3f95830355422859d104c1" category="inline-link-macro-rx"></block></block>
   <block id="c5c43289f1c1e02d9f46bf588a040b02" category="summary">このドキュメントの詳細については、ネットアップの Web サイト、および FlexPod Express with VMware vSphere 6.7 および NetApp AFF A220 Design Guide を参照してください。</block>
   <block id="345245c83d2b2c4c2a5eb9f2887da627" category="paragraph">このドキュメントに記載されている情報の詳細については、以下のドキュメントや Web サイトを参照してください。</block>
   <block id="8a50b6bdaf94893dc6822a612fca5a8a" category="inline-link"><block ref="8a50b6bdaf94893dc6822a612fca5a8a" category="inline-link-rx"></block></block>
@@ -4458,16 +4393,8 @@
   <block id="b02716886961f592f3b40eb5ee24f3a7" category="admonition">Cisco UCS サーバを追加して解決策を拡張するには、新しく追加したサーバがスイッチ A および B に接続されているスイッチポートを使用して、上記のコマンドを実行します</block>
   <block id="ccafafe48cdce6143d7b8a0010cb0fca" category="section-title">既存のネットワークインフラへのアップリンク</block>
   <block id="2745234fb1e856e55967112d4b955056" category="paragraph">使用可能なネットワークインフラに応じて、 FlexPod 環境をアップリンクするためのいくつかの方法や機能があります。既存の Cisco Nexus 環境がある場合は、 vPC を使用して、 FlexPod 環境に含まれる Cisco Nexus 31108 スイッチをインフラにアップリンクすることを推奨します。必要に応じて、 10GbE インフラ解決策の場合は 10GbE アップリンク、 1GbE インフラ解決策の場合は 1GbE アップリンクがサポートされます。前述の手順を使用して、既存の環境へのアップリンク vPC を作成できます。設定が完了したら、 copy start を実行して各スイッチに設定を保存してください。</block>
-  <block id="e45645eef6ccec7b7c30243e58df6f21" category="summary">FlexPod Express は、混在仮想化ワークロードを実行するように設計されています。リモートオフィス、ブランチオフィス、中堅企業を対象としています。また、特定の目的に専用の解決策を実装したい大規模企業にも最適です。新しい FlexPod Express 解決策の主なドライバは、 ONTAP 9.5 、 FAS27xx 、 AFF220 、 VMware vSphere 6.7U1 などの新しいテクノロジを FlexPod Express に追加することです。</block>
-  <block id="52698dab5b8a1edc0e7edc6555a7c349" category="paragraph">FlexPod Express は、混在仮想化ワークロードを実行するように設計されています。リモートオフィス、ブランチオフィス、中堅企業を対象としています。また、特定の目的に専用の解決策を実装したい大規模企業にも最適です。新しい FlexPod Express 解決策の主なドライバは、 ONTAP 9.5 、 FAS27xx/AFF220 、 VMware vSphere 6.7U1 などの新しいテクノロジを FlexPod Express に追加することです。</block>
-  <block id="8ca297509b2df5f9cdffacc6f1b874d9" category="paragraph"><block ref="8ca297509b2df5f9cdffacc6f1b874d9" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="7d72768d53613a119b71f82f423bf956" category="paragraph">本ドキュメントは、 IT の効率化と IT のイノベーションを実現するために構築されたインフラを活用したいと考えているユーザを対象としています。本ドキュメントが対象とする主な読者は、セールスエンジニア、フィールドコンサルタント、プロフェッショナルサービス担当者、 IT マネージャーなどです。 パートナー様のエンジニア、お客様</block>
-  <block id="24197b7f84d6dcb91a70d4590d6f0d4b" category="paragraph">この解決策では、ネットアップ、 Cisco 、 VMware の最新テクノロジを使用しています。ONTAP 9.5 を実行する NetApp AFF A220 、デュアル Cisco Nexus 31108PCV スイッチ、および VMware vSphere 6.7U1 を実行する Cisco UCS B200 M5 サーバを搭載しています。検証済みのこの解決策では、 10GbE テクノロジ経由で Direct Connect IP ストレージを使用します。</block>
   <block id="a0b3e8573a8aa6021ff3f10e3f501c91" category="paragraph">次の図は、 FlexPod Express と VMware vSphere 6.7U1 IP ベースの Direct Connect アーキテクチャを示しています。</block>
-  <block id="e2f737abf73f71e3ca6a669027e768e5" category="paragraph"><block ref="e2f737abf73f71e3ca6a669027e768e5" category="inline-image-macro-rx" type="image"></block></block>
   <block id="980eb96df5e5fc2a94a68ebcb2f66a49" category="list-text">ROBOs</block>
-  <block id="e668c208962da5c11986295dfc7aa09d" category="list-text">コスト効率に優れた専用の解決策 FlexPod Express を必要とする環境は、仮想ワークロードと混在ワークロードに最適です。</block>
-  <block id="4b672d0e02a93f988661ea77c1a6a42f" category="paragraph"><block ref="4b672d0e02a93f988661ea77c1a6a42f" category="inline-link-macro-rx"></block></block>
   <block id="3eee396b017b0462cc602c5c72ff9656" category="summary">冗長性と可用性から個々の機能に至るまで、 FlexPod Express アーキテクチャ全体が検証され、お客様の信頼を獲得し、設計プロセスに信頼を築きます。</block>
   <block id="c554b3ac4268ea1cd88a4362d2db6c8f" category="paragraph">Cisco とネットアップは、お客様にとって最高のインフラプラットフォームとして機能するように設計、構築された FlexPod Express を提供しています。業界をリードするコンポーネントで設計されているため、お客様は FlexPod Express をインフラ基盤として信頼できます。FlexPod ポートフォリオの基本原則に従い、 FlexPod Express アーキテクチャは、シスコおよびネットアップのデータセンターアーキテクトおよびエンジニアによって徹底的にテストされました。冗長性と可用性から個々の機能に至るまで、 FlexPod Express アーキテクチャ全体が検証され、お客様の信頼を獲得し、設計プロセスに信頼を築きます。</block>
   <block id="4ce180a6fe85705febf4c39a1cb6f6cf" category="paragraph">VMware vSphere 6.7 は、 FlexPod Express インフラコンポーネントで検証済みです。この検証では、ハイパーバイザー用の 10GbE アップリンク接続オプションを使用しました。</block>
@@ -4581,12 +4508,6 @@
   <block id="def5f4a236e43fc3ffd22d2f98f68d0c" category="cell">CVR-QSFP-SFP10G アダプタ搭載の MLOM2</block>
   <block id="49de891d3e8fbe37c2f472787ba299f0" category="paragraph">次の表に、 NetApp AFF A220 ストレージコントローラ A のケーブル接続情報を示します</block>
   <block id="d2b3df9893ba466bea4db889a8129e99" category="paragraph">次の表に、 NetApp AFF A220 ストレージコントローラ B のケーブル接続情報を示します</block>
-  <block id="3e60c613b0991005eeadc499a26027a4" category="summary">FlexPod Express は、 Cisco Unified Computing System 、 Cisco Nexus ファミリースイッチ、および NetApp AFF を基盤とした、事前設計されたベストプラクティスアーキテクチャです。FlexPod Express のコンポーネントは、 FlexPod Datacenter と同様に、小規模な IT インフラ環境全体での管理面の相乗効果を実現します。</block>
-  <block id="970814cc2c27a3ccef19f1a470046cb9" category="doc">NVA-1130-design ： FlexPod Express with VMware vSphere 6.7U1 and NetApp AFF A220 with Direct-Attached IP -based Storage</block>
-  <block id="cc0afb87ca78ab9a0bee6646cc15e370" category="paragraph">FlexPod Express は、 Cisco Unified Computing System （ Cisco UCS ）、 Cisco Nexus ファミリースイッチ、および NetApp AFF を基盤とした、事前設計されたベストプラクティスアーキテクチャです。FlexPod Express のコンポーネントは、 FlexPod Datacenter と同様に、小規模な IT インフラ環境全体での管理面の相乗効果を実現します。FlexPod Datacenter と FlexPod Express は、仮想化に最適なプラットフォームで、ベアメタルのオペレーティングシステムやエンタープライズワークロードに最適です。</block>
-  <block id="1c5a1040ac4cc4080420e7f328cf5c29" category="paragraph">FlexPod Datacenter と FlexPod Express は、ベースライン構成が可能で、多種多様なユースケースや要件に対応できるよう、サイジングと最適化が可能な汎用性を備えています。FlexPod データセンターを利用している既存のお客様は、使い慣れたツールを使用して FlexPod Express を管理できます。また、 FlexPod Express を利用している新しいお客様は、環境の拡大に合わせて FlexPod データセンターの管理に容易に対応できます。</block>
-  <block id="298ea17cac70cc060e022974ed4706ad" category="paragraph">FlexPod Express は、リモートオフィスやブランチオフィス（ ROBO ）、中堅企業向けの最適なインフラ基盤です。また、専用のワークロードにインフラを提供したいお客様にも最適な解決策です。</block>
-  <block id="d7037fdd0e1ba36ff788bcb6fb1e0c57" category="paragraph"><block ref="d7037fdd0e1ba36ff788bcb6fb1e0c57" category="inline-link-macro-rx"></block></block>
   <block id="94be9103e4f1d0a26e5c04bfca2bc66d" category="summary">このドキュメントでは、完全な冗長性と高可用性を備えた FlexPod Express システムの構成について詳しく説明します。</block>
   <block id="999ce0e328df4e1c2df630df48b855ea" category="doc">導入手順</block>
   <block id="c0526257158c581697511bb8cc272ac8" category="paragraph">このドキュメントでは、完全な冗長性と高可用性を備えた FlexPod Express システムの構成について詳しく説明します。この冗長性を反映するために、各手順で設定するコンポーネントをコンポーネント A またはコンポーネント B と呼びますたとえば、このドキュメントでプロビジョニングされている 2 台のネットアップストレージコントローラは、コントローラ A とコントローラ B で識別されます。スイッチ A とスイッチ B は Cisco Nexus スイッチのペアを表します。ファブリックインターコネクト A とファブリックインターコネクト B は、 2 つの統合 Nexus ファブリックインターコネクトです。</block>
@@ -5807,8 +5728,6 @@
   <block id="c39a8ddf74ecbc67c11d8f2fe7593a6a" category="cell">FlexPod - VCSA</block>
   <block id="07ebf6758b37ea462dcc5d3584639d46" category="cell">Virtual Storage Console の略</block>
   <block id="766c5c393d095e1429e98d9ad23fb98a" category="cell">Flexpo-VSC</block>
-  <block id="dcd4ef476939e3f77c51b0f7524f6790" category="paragraph">FlexPod Express は、業界をリードするコンポーネントを使用した検証済みの設計を提供することで、シンプルで効果的な解決策を実現します。拡張性を備え、ハイパーバイザープラットフォームのオプションを提供することで、 FlexPod Express は特定のビジネスニーズに合わせてカスタマイズできます。FlexPod Express は、中小規模の企業や、特定用途向けのソリューションを必要とする企業向けに設計されています。</block>
-  <block id="5bef22e5064667f4017bd5bd97792767" category="paragraph"><block ref="5bef22e5064667f4017bd5bd97792767" category="inline-link-macro-rx"></block></block>
   <block id="a72cd47c21c9d3780302fc3493a90796" category="summary">この FlexPod Express 解決策は、 FlexPod コンバージドインフラプログラムの一部です。</block>
   <block id="cb2418c01859c7704da751aa5a7d2421" category="doc">解決策の概要</block>
   <block id="14e8c66968869c3d8c6b7ba792194fd1" category="list-text">* FlexPod Express * は、 Cisco とネットアップが提供するテクノロジを搭載したエントリレベルの解決策をお客様に提供します。</block>
@@ -5908,21 +5827,10 @@
   <block id="1652c10523b89eeb824221f2ff92550c" category="paragraph">以下に、 VM スワップファイルの場所を移動する手順について説明します。</block>
   <block id="b6abbf0226ef43662dc3ba8758477628" category="paragraph"><block ref="b6abbf0226ef43662dc3ba8758477628" category="inline-image-macro-rx" type="image"></block></block>
   <block id="56eb1d06de3dc848cd5deb341ffb09cb" category="paragraph"><block ref="56eb1d06de3dc848cd5deb341ffb09cb" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="fccf6882b91cb961a97a9187a8a54a3b" category="inline-link"><block ref="fccf6882b91cb961a97a9187a8a54a3b" category="inline-link-rx"></block></block>
-  <block id="0856e6e8bd0cec5a876a3a0f2ae0e15e" category="paragraph"><block ref="0856e6e8bd0cec5a876a3a0f2ae0e15e" category="inline-link-rx"></block></block>
   <block id="29b8316a6a8c7730ddbf9b2199d89a13" category="list-text">AFF システムと FAS システムのドキュメントセンター</block>
   <block id="8d64b743b3b1bb1c3c0278d4a7583657" category="inline-link"><block ref="8d64b743b3b1bb1c3c0278d4a7583657" category="inline-link-rx"></block></block>
   <block id="4b10702d2661d5d0827098b5cbfe212c" category="paragraph"><block ref="4b10702d2661d5d0827098b5cbfe212c" category="inline-link-rx"></block></block>
-  <block id="2f52a417cf08962c5338f828bd55534e" category="summary">FlexPod リファレンスアーキテクチャは、 Cisco Validated Design または NetApp Verified Architectures として提供されます。これらのバリエーションでサポートされない構成が作成されない場合、特定の CVD または NVA からのお客様の要件に基づく差異は認められます。</block>
-  <block id="e00073f26b14e82128a1281359dc9142" category="paragraph">次の図に示すように、 FlexPod プログラムには、 FlexPod Express 、 FlexPod Datacenter 、 FlexPod Select の 3 つのソリューションが含まれています。</block>
-  <block id="ade96a6c8aea15bf0fc22bf711cfc77d" category="paragraph"><block ref="ade96a6c8aea15bf0fc22bf711cfc77d" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="3cff1065cfd26e5131b97009c9eadea0" category="paragraph">このガイドでは、ネットアップストレージが直接接続された FlexPod Express の設計について詳しく説明します。次のセクションでは、この解決策デザインで使用されるコンポーネントについて説明します。</block>
-  <block id="390f2f7e22320be8787c460218420df9" category="list-text">NetApp AFF A220 または FAS 2750/2720</block>
-  <block id="7cf66a30a1442044fb7752c9aee2b3f2" category="list-text">Cisco UCS VIC 1440/1480</block>
-  <block id="6bced0178c77b4913c30dccad8d04cab" category="list-text">Cisco UCS Manager 4.0(1b)</block>
-  <block id="b6851f63ac6c75841ca7a445ef6e2daa" category="list-text">Cisco NXOS ファームウェア 7.0(3) I6(1)</block>
   <block id="5cb451e1c66a533348d9c913d8c630e3" category="inline-link-macro">次の手順：解決策の概要</block>
-  <block id="0bc38c1b911cf68b934df2f00b07478c" category="paragraph"><block ref="0bc38c1b911cf68b934df2f00b07478c" category="inline-link-macro-rx"></block></block>
   <block id="0d4f52ab3825e474b7dc617451d93a84" category="summary">FlexPod リファレンスアーキテクチャは、 Cisco Validated Design または NetApp Verified Architectures として提供されます。CVD または NVA のお客様の要件に基づく差異は、それらの違いによってサポートされない構成が導入されない場合に許容されます。</block>
   <block id="0164ef13019afdd105f57a94f373730a" category="section-title">FlexPod コンバージドインフラのポートフォリオ</block>
   <block id="2727a7c39a35aa7db530c5e91b43108e" category="paragraph">FlexPod リファレンスアーキテクチャは、 Cisco Validated Design （ CVD ）または NetApp Verified Architectures （ NVA ）として提供されます。CVD または NVA のお客様の要件に基づく差異は、それらの違いによってサポートされない構成が導入されない場合に許容されます。</block>
@@ -6199,7 +6107,6 @@
   <block id="7e53631cecdaca27311853b3764c71cc" category="sidebar">FlexPod Express with Cisco UCS C シリーズおよび NetApp AFF C190 シリーズ導入ガイド</block>
   <block id="25bc6de1f2d2200763e7ace40aa93da8" category="sidebar">FlexPod Express with Cisco UCS C シリーズおよび AFF A220 シリーズ設計ガイド</block>
   <block id="de642bfe655fa5e4487b8fa7bf3108b6" category="sidebar">『 FlexPod Express with Cisco UCS C Series and AFF A220 Series Deployment Guide 』</block>
-  <block id="56c337b582442869dc983cd1c84cca9d" category="sidebar">FlexPod Express with VMware vSphere 6.7U1 and NetApp AFF A220 with Direct-Attached IP Based Storage Design Guide 』</block>
   <block id="acee2d26489d7279c997d8552933cebe" category="sidebar">FlexPod Express と VMware vSphere 6.7U1 、および直接接続型の IP ベースストレージを搭載した NetApp AFF A220</block>
   <block id="910af13beca7193218f534b5af1d8881" category="sidebar">テクノロジ要件</block>
   <block id="297a7eed88d20dbaf8b522f5c03ee1f9" category="sidebar">FlexPod とセキュリティ</block>
@@ -9704,7 +9611,6 @@
   <block id="b3e0099b048c24efc807f9dd8dad5387" category="sidebar">FlexPod Datacenter with IBM Cloud Private with Cisco UCS Manager、NetApp ONTAP 9.3 AFF 、およびVMware vSphere 6.5U1 -設計</block>
   <block id="2834c2489e66234d739bc68190c533f8" category="sidebar">FlexPod Datacenter for Hybrid Cloud with Cisco CloudCenter and NetApp Private Storage - Design</block>
   <block id="0a60298d1cecc2b46fc00c3b49fad269" category="sidebar">FlexPod Datacenter for Hybrid Cloud with Cisco CloudCenter and NetApp Private Storage - Deploy</block>
-  <block id="3684bd581345640f9a259d9a0657db7e" category="list-text">NVA-1131-deploy：FlexPod Express with VMware vSphere 6.7UI and NetApp AFF A220 with Direct Attached IP Based Storage NVA Deploy</block>
   <block id="904837c9cf9bc52a96ce17d051fddec9" category="section-title">2023年4月</block>
   <block id="4616e97717152ad6ebe9ea5b5148926e" category="list-text">ユーザインターフェイスの[Inventory]セクションの[Policies]ページに、[Protection Policies（SnapMirror）]タブと[Snapshot Policies]タブが追加されました。</block>
   <block id="70d106565a3a540dfd0f8bab83e76a38" category="list-text">ユーザインターフェイスの[Inventory]セクションに[NFS Clients]ページが追加されました。</block>
@@ -9823,4 +9729,8 @@
   <block id="6436adc56d37fa0f43192638e893196c" category="list-text">ボリュームのNetApp SnapMirror関係の削除</block>
   <block id="26d4a176845d0e66ac5ee3e91c2d833e" category="list-text">NetApp SnapMirrorポリシーを削除</block>
   <block id="55b6a7c6b2794c0f9cf3d79716818187" category="list-text">SVMルートボリュームのNetApp負荷共有ミラーの更新</block>
+  <block id="6d6bbe0ff14c220c87649b72d24ad927" category="section-title">2023年8月</block>
+  <block id="ee1a60bf8afd48f5c57ef8a62da497e2" category="list-text">[New NetApp SmartLUN]タスクが改善され、新しいイニシエータグループを作成する場合と既存のイニシエータグループを選択する場合の選択オプションが明確に表示されるようになりました。新しいイニシエータグループを作成するためのチェックボックスを選択すると、既存のイニシエータグループを選択するためのパラメータは使用できなくなります。新しいイニシエータグループを作成するためのチェックボックスをオフにすると、既存のイニシエータグループパラメータが使用可能になります。</block>
+  <block id="1223b61ead710c697d121bc4c8df6a60" category="list-text">[New NetApp LUN Map]および[Remove NetApp LUN Map]のタスクが強化されました。これで、LUNとイニシエータグループ間の新しい関係が更新されます。タスクの実行時に、LUNとイニシエータグループの両方のUIインベントリがただちに更新されます。</block>
+  <block id="cda91d963199f150b4c27541606d0790" category="list-text">[Checks]ページは、ユーザが初めてログインしたときに正しくロードされるようになり、更新が不要になりました。</block>
 </blocks>
