@@ -6059,14 +6059,7 @@
   <block id="e403653c249a7152da4a6d350c70119e" category="paragraph">Snapshot コピーのスケジュールは、目標復旧時点（ RPO ）を達成するように設定できます。Snapshot コピーベースのリストア処理は非常に高速なため、 RTO （目標復旧時間）は非常に低く抑えられます。</block>
   <block id="42765cfe10acfa745a983718ecb772a2" category="paragraph">何よりも、攻撃の結果として身代金を支払わなくても、通常の運用にすばやく戻ることができます。</block>
   <block id="17cfc2f2b50e58c93aaf0a477ff54037" category="sidebar">FlexPod ソリューションのドキュメント</block>
-  <block id="af0963a66759af7047416c9d85f32efe" category="sidebar">FlexPod - ここから始めます</block>
-  <block id="17c3771ed0b6c1ae15740eff715e9922" category="sidebar">ビデオとデモ</block>
-  <block id="d6b9ea32b921a9f56de32062ba4b94f3" category="sidebar">ブログ</block>
-  <block id="cfa345d8fdba7b2e9598cce9c0e3c744" category="sidebar">FlexPod で AI と最新のデータ分析を実現</block>
-  <block id="91770f038cd944a1d3b9b347edeb2b10" category="sidebar">新機能</block>
   <block id="e61ead4102c89a9758572df81301a1d2" category="sidebar">ハイブリッドクラウド</block>
-  <block id="7cb27dbb321a2dda7b1a59417ac87d24" category="sidebar">FlexPod for VDI の略</block>
-  <block id="e24bc29daa40702c050f7f3b61476c6f" category="sidebar">FlexPod による医療</block>
   <block id="b1b5d8cebde8af104d3749c7d984f391" category="sidebar">FlexPod の定義</block>
   <block id="1f1a6514305e31e63aa9ce9e1338aa48" category="sidebar">FlexPod Express 技術仕様</block>
   <block id="985a4a270fc5521f74f971f639acb4ba" category="sidebar">FlexPod プラットフォーム</block>
@@ -6114,8 +6107,6 @@
   <block id="a803c2a0103e234c57f3136b6ceb15bf" category="sidebar">ランサムウェア攻撃からの保護対策</block>
   <block id="57a36291f8c4c9ad21e7abcbc792caf5" category="sidebar">FlexPod 上のデータの保護とリカバリ</block>
   <block id="309d921b4e477874006fde9b0223cc7c" category="sidebar">身代金を支払うことなく業務を継続できます</block>
-  <block id="7d15915b1c0d83b2d07ba91bb371d99c" category="sidebar">FlexPod のビジネスアプリケーションとエンタープライズデータベース</block>
-  <block id="9651c3a3b7cbc999c2c50c39dbf61c04" category="sidebar">FlexPod を使用したハイブリッドクラウド</block>
   <block id="0466740965e7956f8fc2a734a83f5686" category="sidebar">FabricPool ソフトウェアのリビジョン</block>
   <block id="6cb34c048fceb40f7d64efc563d407f9" category="sidebar">ランサムウェアとは</block>
   <block id="fbebe2a055b4dcf362a0493004ef468f" category="paragraph">FlexPod アーキテクチャには、冗長な NetApp FAS 、 AFF 、または AFF ASA コントローラが必要です。コントローラは ONTAP ソフトウェアを実行します。ストレージコントローラを購入した場合は、優先バージョンのソフトウェアをコントローラにプリロードすることができます。ONTAP の場合は、クラスタ全体を発注した。クラスタ全体には、ストレージコントローラのペアとクラスタインターコネクト（スイッチまたはスイッチレス）が含まれます。</block>
@@ -9688,7 +9679,6 @@
   <block id="4afd182647adde3ae53ba9636f8ecd85" category="list-text">NetAppストレージタスクの名前が更新されました。を参照してください <block ref="7cee7c950e5c408827f960772194d4bb" category="inline-link-macro-rx"></block> は、名前を変更したタスクの完全なリストです。</block>
   <block id="2d24bfd4ad96e334ad70f500b56563c3" category="list-text">Cisco Intersight にネットアップワークフローのストレージタスクが追加されました。を参照してください <block ref="7cee7c950e5c408827f960772194d4bb" category="inline-link-macro-rx"></block> NetApp ストレージ・タスクの一覧を表示します。</block>
   <block id="c0d6fe9e8f745815653bfbc202c74e93" category="list-text">Cisco Intersight に含まれるネットアップストレージのタスクの最新リストを追加しました。を参照してください <block ref="7cee7c950e5c408827f960772194d4bb" category="inline-link-macro-rx"></block> NetApp ストレージ・タスクの一覧を表示します。</block>
-  <block id="cef4011c89ea914920838c57c1277b96" category="cell">最新バージョンのNetApp Active IQ Unified Managerが必要（現在は9.13GA）</block>
   <block id="fb5978407d362c06c4a1c8ab72f464f1" category="section-title">2023年7月</block>
   <block id="f6134ed465dbb55c3531c607933bd957" category="admonition">NetApp Active IQ Unified Manager 9.13GAへのアップグレードは、最新リリースとの互換性とフル機能を確保するために必要です。</block>
   <block id="4a743225a883b79a064e0fe794bed4bc" category="list-text">NetAppストレージタスクの名前が更新されました。名前を変更したタスクの完全なリストについては、ユースケース3デザイナフリーフォームを使用したカスタムワークフローを参照してください。</block>
@@ -9704,7 +9694,6 @@
   <block id="faeaec9eda6bc4c8cb6e1a9156a858be" category="list-text">可用性</block>
   <block id="6311ae17c1ee52b36e68aaf4ad066387" category="list-text">その他</block>
   <block id="ccc2c146b1c8e887b8cb561649b51add" category="list-text">[Inventory]詳細ビューで、使用済み物理容量の代わりに使用済み容量をレポートします。</block>
-  <block id="a45b01faef5c490c90c647f2428032f0" category="paragraph">Active IQ Unified Manager（最新バージョンが必要、現在は9.13GA）をインストールまたはアップグレードしていない場合はインストールします。手順については、を参照してください <block ref="b713007c96ed5cceca9ab6b5776ab58a" category="inline-link-macro-rx"></block>。</block>
   <block id="d3b7d0dfd7a4c0712106720b7a263dcc" category="list-text">NetApp CIFS共有へのACLの追加</block>
   <block id="e38df0ad25eaed709eb4fc30b431f674" category="list-text">NetAppエクスポートポリシールールへのクライアント一致の追加</block>
   <block id="c8750c2c8ef4365e348e3f2d6f7e0a60" category="list-text">NetAppライセンスステータスの確認</block>
@@ -9733,4 +9722,10 @@
   <block id="ee1a60bf8afd48f5c57ef8a62da497e2" category="list-text">[New NetApp SmartLUN]タスクが改善され、新しいイニシエータグループを作成する場合と既存のイニシエータグループを選択する場合の選択オプションが明確に表示されるようになりました。新しいイニシエータグループを作成するためのチェックボックスを選択すると、既存のイニシエータグループを選択するためのパラメータは使用できなくなります。新しいイニシエータグループを作成するためのチェックボックスをオフにすると、既存のイニシエータグループパラメータが使用可能になります。</block>
   <block id="1223b61ead710c697d121bc4c8df6a60" category="list-text">[New NetApp LUN Map]および[Remove NetApp LUN Map]のタスクが強化されました。これで、LUNとイニシエータグループ間の新しい関係が更新されます。タスクの実行時に、LUNとイニシエータグループの両方のUIインベントリがただちに更新されます。</block>
   <block id="cda91d963199f150b4c27541606d0790" category="list-text">[Checks]ページは、ユーザが初めてログインしたときに正しくロードされるようになり、更新が不要になりました。</block>
+  <block id="b58b1adee5f08a2f37b40ee17c3097e8" category="cell">最新バージョンのNetApp Active IQ Unified Managerが必要（現在は9.14RC1）</block>
+  <block id="b225002f4ba131c321e0dc8d89d5a8ad" category="paragraph">Active IQ Unified Manager（最新バージョンが必要、現在は9.14RC1）をインストールまたはアップグレードしていない場合はインストールします。手順については、を参照してください <block ref="b713007c96ed5cceca9ab6b5776ab58a" category="inline-link-macro-rx"></block>。</block>
+  <block id="e245b121672965eb5c120373beb6ebe2" category="image-alt">[Deploy OVF Template]画面のスクリーンショット</block>
+  <block id="fb784db76f57bc935639ba5340089d77" category="section-title">2023年11月</block>
+  <block id="0860efb25683aa716ffcd95186cf7353" category="admonition">NetApp Active IQ Unified Manager 9.14RC1へのアップグレードは、最新リリースとの互換性と完全な機能性を確保するために必要です。</block>
+  <block id="5c49c1696b71ecb277e29a00e385c986" category="list-text">ユーザインターフェイスの[Inventory]セクションに[NVMeネームスペース]ページが追加されました。</block>
 </blocks>
