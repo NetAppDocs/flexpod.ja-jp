@@ -18,10 +18,14 @@ summary: Cisco Intersight には、新機能、拡張機能、バグ修正を提
 
 
 
+== 2024年1月
+
+* リファレンスワークフローを使用したNetAppストレージオーケストレーションが、 https://github.com/ucs-compute-solutions/FlexPod-Intersight-Workflow["FlexPod Intersightワークフローリポジトリ"^]。GitHubの新しいリファレンスワークフローの詳細については、 link:ci-qsg_use_cases.html["ユースケース 2 ：リファレンスワークフローを使用したネットアップストレージのオーケストレーション"^]。
+
+
+
+
 == 2023年11月
-
-
-NOTE: NetApp Active IQ Unified Manager 9.14RC1へのアップグレードは、最新リリースとの互換性と完全な機能性を確保するために必要です。
 
 * ユーザインターフェイスの[Inventory]セクションに[NVMeネームスペース]ページが追加されました。
 
