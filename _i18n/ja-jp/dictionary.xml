@@ -1166,13 +1166,10 @@
   <block id="a13cc5afeaa62ed39840c636da4e69a8" category="list-text"><block ref="a13cc5afeaa62ed39840c636da4e69a8" category="inline-link-rx"></block></block>
   <block id="c38f85f1f24f1064b7379d7e2dcc56e1" category="inline-link">Cisco NX-OS ソフトウェア</block>
   <block id="7bf3f23054089d5e369cd3c3705f1519" category="list-text"><block ref="7bf3f23054089d5e369cd3c3705f1519" category="inline-link-rx"></block></block>
-  <block id="fa776a6d8035e935e3ca744e1a9a7d09" category="summary">詳細については、参考資料や Web サイトを参照してください。</block>
   <block id="d95867deadfe690e40f42068d6b59df8" category="doc">参考資料</block>
   <block id="937072d3e0f7b646b7f3f24a312489f8" category="paragraph">詳細については、次のドキュメントと Web サイトを参照してください。</block>
   <block id="3a45f44b03660232082dc152068990fd" category="inline-link">TR 4883 ：『 FlexPod Datacenter with ONTAP 9.8 』、『 ONTAP Storage Connector for Cisco Intersight 』、および『 Cisco Intersight Managed Mode 』</block>
   <block id="4c797a8e70e93514000fabd2051b5ddb" category="paragraph"><block ref="4c797a8e70e93514000fabd2051b5ddb" category="inline-link-rx"></block></block>
-  <block id="7b3308b95aec192d46bc92dd7fb02cb2" category="inline-link">FlexPod 用 Cisco Intersight 管理モード</block>
-  <block id="2155a8941fd728202c18dade730100d6" category="paragraph"><block ref="2155a8941fd728202c18dade730100d6" category="inline-link-rx"></block></block>
   <block id="0580772620331f949057ed6afbb098ea" category="inline-link">Cisco Intersight の概要</block>
   <block id="4d49c14c4afe96eb88aaef6d6588599b" category="inline-link">『 Intersight Appliance Install and Upgrade Guide 』を参照してください</block>
   <block id="5cce77ecfcdbd5857d67110262f7b5a9" category="paragraph"><block ref="5cce77ecfcdbd5857d67110262f7b5a9" category="inline-link-rx"></block></block>
@@ -1221,18 +1218,8 @@
   <block id="29d1db03b55072fc401d11d7d0750f61" category="cell">ONTAP 9.7P1 以降</block>
   <block id="45699291c017a65a90e4bb25860f4315" category="cell">NetApp Active IQ Unified Manager の略</block>
   <block id="5dc8e3707996259deb52abdfee00eac9" category="cell">ネットアップストレージアレイ</block>
-  <block id="00b515e766e1cba805399ff9eb813a8f" category="cell">ONTAP 9.7P1 以降では、 ONTAP ASA 、 AFF 、 FAS のすべてのストレージアレイがサポートされます</block>
   <block id="1f8e8bd6bc1c4895f936485882fbdf9d" category="cell">仮想化ハイパーバイザー</block>
-  <block id="4ca6768d140e70826f7716d07807dc17" category="cell">vSphere 6.7 以降</block>
-  <block id="72070c9ef3f94bc3718c44ba73d4ccc3" category="admonition">を参照してください<block ref="2c43cbcc5ede8fefeab295a68acd4cdb" category="inline-link-rx"></block> Cisco UCS Compute Components と UCSM バージョンの最小要件については、を参照してください。</block>
   <block id="4aa6cd6038c4fecb0c308ca4d3dcdea0" category="section-title">Cisco Intersight のライセンス要件</block>
-  <block id="679eff4aa4d3a357123f3400b7f819f4" category="paragraph">Cisco Intersight のライセンスは、サブスクリプションベースで複数のライセンスエディションから選択できます。ライセンスタイプによって機能が拡張されています。1 年、 3 年、または 5 年のサブスクリプション期間を購入し、選択したサブスクリプション期間に必要な Cisco UCS サーバボリューム階層を選択できます。Cisco Intersight ポータルにアクセスしてデバイスを要求すると、各 Cisco エンドポイントには Cisco Intersight Base が自動的に追加コストなしで含まれます。</block>
-  <block id="c4c01460eb0fd0e7d30ef65622dc7cb2" category="paragraph">シスコの発注ツールを使用すると、次のいずれかの高階層サイトライセンスを購入できます。</block>
-  <block id="fbd64fb1c56050f38cf0c2d9441004af" category="list-text">* Cisco Intersight Essentials.* Essentials には、 Cisco UCS Central および Cisco IMC Supervisor エンタイトルメント、サービスプロファイルを使用したポリシーベースの構成、ファームウェア管理、ハードウェア互換性リスト（ HCL ）との互換性評価など、基本層のすべての機能が含まれています。</block>
-  <block id="8a30fe4ae6d8d0310e0d329493bc21c3" category="list-text">* Cisco Intersight Advantage * は、 Base 層と Essentials 層のすべての機能を提供します。物理コンピューティング、物理ストレージ、仮想環境（ VMware ESXi ）のストレージウィジェット、ストレージインベントリ、ストレージ容量、ストレージ利用率の情報、ドメイン間でのインベントリの相関関係が含まれます。</block>
-  <block id="97f9beafe8a267c8b35e2fb7235394ab" category="list-text">* Cisco Intersight Premier は、 Advantage 層で提供される機能に加えて、 Cisco UCS 全体でプライベートクラウドインフラサービス（ IaaS ）オーケストレーションを提供します。これには仮想マシン（ VM ）や物理ストレージ（ネットアップストレージ）などのサードパーティシステムも含まれます。</block>
-  <block id="d4780504a816544f6e2645b57ea78a79" category="inline-link">シスコのライセンス</block>
-  <block id="926dfe010cd806b1815f2e2e910d07ee" category="paragraph">さまざまなライセンスレベルでサポートされる機能の詳細については、を参照してください<block ref="8697cd039441f6238fc2562e0fa792ae" category="inline-link-rx"></block>。</block>
   <block id="f870dce89b1a86f562fc0615d943bfa6" category="paragraph">協力：<block ref="4d9c1ec1584e887e0af42904bd173b15" category="inline-image-macro-rx" type="image"></block></block>
   <block id="efc7d87f859f5f426ae59b13b26a5e7f" category="summary">ターゲットへの請求が完了すると、 Advantage Tier ライセンスがある場合は、ネットアップストレージウィジェット、ストレージインベントリ、および仮想化の各タブを使用できるようになります。Premier Tier ライセンスがある場合は、オーケストレーションタブを使用できます。</block>
   <block id="c093ae35c304b80ba64b56e6cd80eccf" category="doc">Cisco Intersight からネットアップストレージを監視</block>
@@ -9731,4 +9718,19 @@
   <block id="eade77a2815c8954887e241cc8a7cdbd" category="list-text">NetAppスマートLUNを使用したVMFSデータストアの更新</block>
   <block id="efe846805e5476fec607bbf54e45dc44" category="section-title">2024年1月</block>
   <block id="1dbf0a61b61f004514eb71c762bdda23" category="list-text">リファレンスワークフローを使用したNetAppストレージオーケストレーションが、<block ref="dbef3ce40b045312da2d2a3590390d56" category="inline-link-rx"></block>。GitHubの新しいリファレンスワークフローの詳細については、 <block ref="603c2ccdc54cec25fe66c69c148f7dcb" category="inline-link-macro-rx"></block>。</block>
+  <block id="21fdbbe30d03ba60217ad219e4a43475" category="paragraph">NetApp ONTAPストレージとCisco Intersightを統合するためのハードウェア、ソフトウェア、ライセンスの要件を満たしていることを確認します。</block>
+  <block id="cf37c5cba207938e4c97f3bcf9ffabc9" category="cell">ONTAP 9.7P1以降でサポートされるすべてのONTAP ASA、AFF、FASストレージアレイ</block>
+  <block id="de19bc9421b3493cb471fb68d644f614" category="cell">vSphere 7.0以降</block>
+  <block id="2bab0c7a59bda4a6cf8bb732310f19d1" category="inline-link">Cisco Intersightでサポートされるシステム</block>
+  <block id="4583b551e49cf84018c42a34fc90472b" category="admonition">を参照してください<block ref="c301da257433e3b44d89736f9cb32482" category="inline-link-rx"></block> Cisco UCS Compute Components と UCSM バージョンの最小要件については、を参照してください。</block>
+  <block id="c6992d015712de0f9935c930f87d1e24" category="paragraph">Cisco Intersightは、物理ストレージ（NetAppストレージ）の管理、自動化、最適化を行うインフラサービスやクラウドオーケストレーションサービスなどのサービスを提供しています。これらのサービスを使用して、Cisco UCSサーバとCisco HyperFlexシステムを管理できます。インフラサービスとCloud Orchestratorサービスでは、複数の階層を含むサブスクリプションベースのライセンスモデルが使用されます。選択したサブスクリプション期間に必要なCisco UCSサーバボリューム階層を選択できます。</block>
+  <block id="73940e6c81db7305c6108d57163a6bd9" category="paragraph-title">ライセンスモデル</block>
+  <block id="0eeef496e6954ad0d16a059fafdc5e38" category="paragraph">Cisco Intersightインフラサービスのライセンスモデルが簡易化され、次の2つのティアが提供されるようになりました。</block>
+  <block id="cebf91fe773dd5685c20ef3bff0017f3" category="list-text">* Cisco Intersight Infrastructure Services Essentials *- Essentialsライセンスレベルは、グローバルヘルスモニタリング機能、インベントリ、Cisco TAC統合によるプロアクティブなサポート、多要素認証、SDKおよびAPIアクセスなどのサーバ管理を提供します。</block>
+  <block id="0ef1beaa09215da1b27e26da9c01b73b" category="list-text">* Cisco Intersight Infrastructure Services Advantage *- Advantageライセンスレベルでは、高度なサーバ管理と拡張された可視性、エコシステムの統合、シスコおよびサードパーティ製ハードウェアとソフトウェアの自動化、マルチドメインソリューションを提供します。</block>
+  <block id="f5e1db835ff4b10b4a6531770f9643e9" category="inline-link">Infrastructure Servicesライセンス</block>
+  <block id="2c355e53fd6c41fd8e75d57ff3e446e3" category="paragraph">さまざまなライセンスレベルでサポートされる機能の詳細については、を参照してください<block ref="b733a46c0b54e4d9837584b6621e33e9" category="inline-link-rx"></block>。</block>
+  <block id="30f60d67f457bb040dffde52197a54da" category="paragraph-title">関連情報</block>
+  <block id="cb2f26cdcb58be1d59a4186132027351" category="inline-link">Cisco Intersightヘルプセンター</block>
+  <block id="cbdd42cc134bfbfb08861472ec705bb4" category="paragraph"><block ref="cbdd42cc134bfbfb08861472ec705bb4" category="inline-link-rx"></block></block>
 </blocks>

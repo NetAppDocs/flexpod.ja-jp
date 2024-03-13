@@ -21,4 +21,13 @@ summary: ネットアップと Cisco は提携を通じて、 FlexPod エコシ�
 
 ネットアップと Cisco は提携を通じて、 FlexPod エコシステムの単一コンソールビューである Cisco Intersight を提供しています。このシンプルな統合により、 FlexPod インフラと FlexPod 解決策のすべてのコンポーネントを対象とした統合管理プラットフォームが実現します。Cisco Intersight を使用すると、ネットアップストレージ、 Cisco コンピューティング、 VMware のインベントリを監視できます。また、ワークフローをオーケストレーションまたは自動化して、ストレージと仮想化のタスクを並行して実行することもできます。
 
-詳細については、を参照してください https://www.netapp.com/pdf.html?item=/media/25001-tr-4883.pdf["TR 4883 ：『 FlexPod Datacenter with ONTAP 9.8 』、『 ONTAP Storage Connector for Cisco Intersight 』、および『 Cisco Intersight Managed Mode 』"^]。
+.関連情報
+詳細については、次のドキュメントと Web サイトを参照してください。
+
+https://www.netapp.com/pdf.html?item=/media/25001-tr-4883.pdf["TR 4883 ：『 FlexPod Datacenter with ONTAP 9.8 』、『 ONTAP Storage Connector for Cisco Intersight 』、および『 Cisco Intersight Managed Mode 』"^]
+
+https://intersight.com/help/saas["Cisco Intersightヘルプセンター"^]
+
+https://intersight.com/help/saas/getting_started/overview["Cisco Intersight の概要"^]
+
+https://www.cisco.com/c/en/us/td/docs/unified_computing/Intersight/b_Cisco_Intersight_Appliance_Getting_Started_Guide/b_Cisco_Intersight_Appliance_Install_and_Upgrade_Guide_chapter_00.html["『 Intersight Appliance Install and Upgrade Guide 』を参照してください"^]

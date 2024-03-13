@@ -14,7 +14,7 @@ summary: NetApp ONTAP ストレージと Cisco Intersight の統合に関する�
 
 
 [role="lead"]
-NetApp ONTAP ストレージと Cisco Intersight の統合に関するハードウェア、ソフトウェア、ライセンスの要件を満たしていることを確認します。
+NetApp ONTAPストレージとCisco Intersightを統合するためのハードウェア、ソフトウェア、ライセンスの要件を満たしていることを確認します。
 
 
 
@@ -32,25 +32,25 @@ NetApp ONTAP ストレージと Cisco Intersight の統合に関するハード�
 | NetApp Active IQ Unified Manager の略 | 最新バージョンのNetApp Active IQ Unified Managerが必要（現在は9.14RC1） 
 
 
-| ネットアップストレージアレイ | ONTAP 9.7P1 以降では、 ONTAP ASA 、 AFF 、 FAS のすべてのストレージアレイがサポートされます 
+| ネットアップストレージアレイ | ONTAP 9.7P1以降でサポートされるすべてのONTAP ASA、AFF、FASストレージアレイ 
 
 
-| 仮想化ハイパーバイザー | vSphere 6.7 以降 
+| 仮想化ハイパーバイザー | vSphere 7.0以降 
 |===
 
-NOTE: を参照してください https://www.cisco.com/c/en/us/solutions/collateral/data-center-virtualization/flexpod/cisco-imm-for-flexpod.html["FlexPod 用 Cisco Intersight 管理モード"^] Cisco UCS Compute Components と UCSM バージョンの最小要件については、を参照してください。
+NOTE: を参照してください https://intersight.com/help/saas/supported_systems["Cisco Intersightでサポートされるシステム"^] Cisco UCS Compute Components と UCSM バージョンの最小要件については、を参照してください。
 
 
 
 == Cisco Intersight のライセンス要件
 
-Cisco Intersight のライセンスは、サブスクリプションベースで複数のライセンスエディションから選択できます。ライセンスタイプによって機能が拡張されています。1 年、 3 年、または 5 年のサブスクリプション期間を購入し、選択したサブスクリプション期間に必要な Cisco UCS サーバボリューム階層を選択できます。Cisco Intersight ポータルにアクセスしてデバイスを要求すると、各 Cisco エンドポイントには Cisco Intersight Base が自動的に追加コストなしで含まれます。
+Cisco Intersightは、物理ストレージ（NetAppストレージ）の管理、自動化、最適化を行うインフラサービスやクラウドオーケストレーションサービスなどのサービスを提供しています。これらのサービスを使用して、Cisco UCSサーバとCisco HyperFlexシステムを管理できます。インフラサービスとCloud Orchestratorサービスでは、複数の階層を含むサブスクリプションベースのライセンスモデルが使用されます。選択したサブスクリプション期間に必要なCisco UCSサーバボリューム階層を選択できます。
 
-シスコの発注ツールを使用すると、次のいずれかの高階層サイトライセンスを購入できます。
+.ライセンスモデル
+Cisco Intersightインフラサービスのライセンスモデルが簡易化され、次の2つのティアが提供されるようになりました。
 
-* * Cisco Intersight Essentials.* Essentials には、 Cisco UCS Central および Cisco IMC Supervisor エンタイトルメント、サービスプロファイルを使用したポリシーベースの構成、ファームウェア管理、ハードウェア互換性リスト（ HCL ）との互換性評価など、基本層のすべての機能が含まれています。
-* * Cisco Intersight Advantage * は、 Base 層と Essentials 層のすべての機能を提供します。物理コンピューティング、物理ストレージ、仮想環境（ VMware ESXi ）のストレージウィジェット、ストレージインベントリ、ストレージ容量、ストレージ利用率の情報、ドメイン間でのインベントリの相関関係が含まれます。
-* * Cisco Intersight Premier は、 Advantage 層で提供される機能に加えて、 Cisco UCS 全体でプライベートクラウドインフラサービス（ IaaS ）オーケストレーションを提供します。これには仮想マシン（ VM ）や物理ストレージ（ネットアップストレージ）などのサードパーティシステムも含まれます。
+* * Cisco Intersight Infrastructure Services Essentials *- Essentialsライセンスレベルは、グローバルヘルスモニタリング機能、インベントリ、Cisco TAC統合によるプロアクティブなサポート、多要素認証、SDKおよびAPIアクセスなどのサーバ管理を提供します。
+* * Cisco Intersight Infrastructure Services Advantage *- Advantageライセンスレベルでは、高度なサーバ管理と拡張された可視性、エコシステムの統合、シスコおよびサードパーティ製ハードウェアとソフトウェアの自動化、マルチドメインソリューションを提供します。
 
 
-さまざまなライセンスレベルでサポートされる機能の詳細については、を参照してください https://intersight.com/help/getting_started#intersight_licensing["シスコのライセンス"]。
+さまざまなライセンスレベルでサポートされる機能の詳細については、を参照してください https://intersight.com/help/saas/getting_started/licensing_requirements/lic_infra#licensing_model["Infrastructure Servicesライセンス"^]。
