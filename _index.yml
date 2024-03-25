@@ -1,0 +1,53 @@
+---
+indexpage:
+  title: FlexPod ソリューション
+  summary: FlexPod ソリューションは、お客様の最も重要なビジネスニーズをサポートするためにネットアップの製品とサービスのポートフォリオを強調する、戦略的機能とテクノロジ機能のセットです。
+  keywords: flexpod, solutions, netapp, cisco, deployments, portfolio, cloud, ontap
+  lead: NetAppとシスコの革新的なテクノロジーに基づいて構築され、世界中の何千ものお客様から信頼されているFlexPodプラットフォームは、クラス最高のデータセンターアーキテクチャの導入を簡素化するという課題に対応し、それを超えています。事前検証済みのストレージ、ネットワーク、サーバテクノロジで構成されるFlexPodは、組織のニーズに対するITの即応性を高め、コンピューティングコストを削減し、アップタイムを最大限に高め、リスクを最小限に抑えるように設計されています。データとアプリケーションの提供を簡易化することで、エッジ、コア、クラウドで新しいサービスとワークロードを実行できるというメリットが得られます。
+  tiles:
+  - title: FlexPod - ここから始めます
+    links:
+    - title: 新機能
+      url: https://fieldportal.netapp.com/content/1668183
+    - title: ビデオとデモ
+      url: https://tv.netapp.com/search?q=FlexPod
+    - title: ブログ
+      url: https://blog.netapp.com/tag/Flexpod/
+  - title: FlexPod で AI と最新のデータ分析を実現
+    links:
+    - title: 新機能
+      url: https://www.flexpod.com/solutions/use-cases/machine-learning/
+    - title: ビデオとデモ
+      url: https://tv.netapp.com/search?q=FlexPod%20AI
+    - title: ブログ
+      url: https://blog.netapp.com/tag/Flexpod/
+  - title: FlexPod のビジネスアプリケーションとエンタープライズデータベース
+    links:
+    - title: ビデオとデモ
+      url: https://tv.netapp.com/search?q=FlexPod%20SAP
+    - title: ブログ
+      url: https://blog.netapp.com/tag/Flexpod/
+  - title: FlexPod を使用したハイブリッドクラウド
+    links:
+    - title: 新機能
+      url: https://flexpod.com/solutions/use-cases/hybrid-cloud/
+    - title: ビデオとデモ
+      url: https://tv.netapp.com/search?q=FlexPod%20Hybrid%20Cloud
+    - title: ブログ
+      url: https://blog.netapp.com/tag/Flexpod/
+  - title: FlexPod for VDI の略
+    links:
+    - title: 新機能
+      url: https://www.flexpod.com/solutions/use-cases/virtual-desktop-infrastructure/
+    - title: ビデオとデモ
+      url: https://tv.netapp.com/search?q=FlexPod%20VDI
+    - title: ブログ
+      url: https://blog.netapp.com/tag/Flexpod/
+  - title: FlexPod による医療
+    links:
+    - title: 新機能
+      url: https://flexpod.com/solutions/verticals/healthcare/
+    - title: ビデオとデモ
+      url: https://tv.netapp.com/search?q=FlexPod%20Healthcare
+    - title: ブログ
+      url: https://blog.netapp.com/tag/Healthcare/

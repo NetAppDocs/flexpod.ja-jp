@@ -1166,7 +1166,6 @@
   <block id="a13cc5afeaa62ed39840c636da4e69a8" category="list-text"><block ref="a13cc5afeaa62ed39840c636da4e69a8" category="inline-link-rx"></block></block>
   <block id="c38f85f1f24f1064b7379d7e2dcc56e1" category="inline-link">Cisco NX-OS ソフトウェア</block>
   <block id="7bf3f23054089d5e369cd3c3705f1519" category="list-text"><block ref="7bf3f23054089d5e369cd3c3705f1519" category="inline-link-rx"></block></block>
-  <block id="d95867deadfe690e40f42068d6b59df8" category="doc">参考資料</block>
   <block id="937072d3e0f7b646b7f3f24a312489f8" category="paragraph">詳細については、次のドキュメントと Web サイトを参照してください。</block>
   <block id="3a45f44b03660232082dc152068990fd" category="inline-link">TR 4883 ：『 FlexPod Datacenter with ONTAP 9.8 』、『 ONTAP Storage Connector for Cisco Intersight 』、および『 Cisco Intersight Managed Mode 』</block>
   <block id="4c797a8e70e93514000fabd2051b5ddb" category="paragraph"><block ref="4c797a8e70e93514000fabd2051b5ddb" category="inline-link-rx"></block></block>
@@ -9733,4 +9732,26 @@
   <block id="30f60d67f457bb040dffde52197a54da" category="paragraph-title">関連情報</block>
   <block id="cb2f26cdcb58be1d59a4186132027351" category="inline-link">Cisco Intersightヘルプセンター</block>
   <block id="cbdd42cc134bfbfb08861472ec705bb4" category="paragraph"><block ref="cbdd42cc134bfbfb08861472ec705bb4" category="inline-link-rx"></block></block>
+  <block id="e9c44bbfd795a5d63d74c6a77afee70d" category="summary">著作権に関する声明、商標、特許などにアクセスできます。</block>
+  <block id="30d965eef5ba25c6b9998ae38270b43e" category="doc">法的通知</block>
+  <block id="6016a2b341113bf496b719905398ecd2" category="section-title">著作権</block>
+  <block id="09e95b77ffe81fe465a83ba99efad5c8" category="paragraph"><block ref="09e95b77ffe81fe465a83ba99efad5c8" category="inline-link-rx"></block></block>
+  <block id="126a02652da6de02962cf1b654fd6376" category="section-title">商標</block>
+  <block id="c4ce4761e466527d26b3e3d5ed1006fd" category="paragraph">NetApp 、 NetApp のロゴ、および NetApp の商標ページに記載されているマークは、 NetApp, Inc. の商標です。その他の会社名および製品名は、それぞれの所有者の商標である場合があります。</block>
+  <block id="7aa531e9acfe2b98e34d2c92fe9846ff" category="paragraph"><block ref="7aa531e9acfe2b98e34d2c92fe9846ff" category="inline-link-rx"></block></block>
+  <block id="be89498d2f8a22ce47c02ba9795fe2af" category="section-title">特許</block>
+  <block id="d0b19d36be2c5f16e9aef46c8a452d3d" category="paragraph">ネットアップが所有する特許の最新リストは、次のサイトで入手できます。</block>
+  <block id="d7f1fbcf9ce4e42f705add574d262b2c" category="paragraph"><block ref="d7f1fbcf9ce4e42f705add574d262b2c" category="inline-link-rx"></block></block>
+  <block id="56c34c6410dd45c5cec44149ad0ce037" category="section-title">プライバシーポリシー</block>
+  <block id="fc248f74f5e36542f7f5627b8610e9a3" category="paragraph"><block ref="fc248f74f5e36542f7f5627b8610e9a3" category="inline-link-rx"></block></block>
+  <block id="6c5a2d8729b8ce5ae6b035791d668adb" category="sidebar">NetAppとシスコの革新的なテクノロジーに基づいて構築され、世界中の何千ものお客様から信頼されているFlexPodプラットフォームは、クラス最高のデータセンターアーキテクチャの導入を簡素化するという課題に対応し、それを超えています。事前検証済みのストレージ、ネットワーク、サーバテクノロジで構成されるFlexPodは、組織のニーズに対するITの即応性を高め、コンピューティングコストを削減し、アップタイムを最大限に高め、リスクを最小限に抑えるように設計されています。データとアプリケーションの提供を簡易化することで、エッジ、コア、クラウドで新しいサービスとワークロードを実行できるというメリットが得られます。</block>
+  <block id="af0963a66759af7047416c9d85f32efe" category="sidebar">FlexPod - ここから始めます</block>
+  <block id="91770f038cd944a1d3b9b347edeb2b10" category="sidebar">新機能</block>
+  <block id="17c3771ed0b6c1ae15740eff715e9922" category="sidebar">ビデオとデモ</block>
+  <block id="d6b9ea32b921a9f56de32062ba4b94f3" category="sidebar">ブログ</block>
+  <block id="cfa345d8fdba7b2e9598cce9c0e3c744" category="sidebar">FlexPod で AI と最新のデータ分析を実現</block>
+  <block id="7d15915b1c0d83b2d07ba91bb371d99c" category="sidebar">FlexPod のビジネスアプリケーションとエンタープライズデータベース</block>
+  <block id="9651c3a3b7cbc999c2c50c39dbf61c04" category="sidebar">FlexPod を使用したハイブリッドクラウド</block>
+  <block id="7cb27dbb321a2dda7b1a59417ac87d24" category="sidebar">FlexPod for VDI の略</block>
+  <block id="e24bc29daa40702c050f7f3b61476c6f" category="sidebar">FlexPod による医療</block>
 </blocks>
