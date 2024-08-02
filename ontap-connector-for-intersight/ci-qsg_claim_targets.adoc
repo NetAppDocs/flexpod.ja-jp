@@ -14,7 +14,7 @@ summary: Cisco Intersight Assist をインストールすると、ネットア�
 
 
 [role="lead"]
-Cisco Intersight Assist をインストールすると、ネットアップのストレージデバイスと仮想化デバイスを請求できます。「 * Intersight Targets * 」ページに戻り、 vCenter と NetApp Active IQ Unified Manager のターゲットを追加します。請求プロセスの詳細については、ビデオをご覧ください https://tv.netapp.com/detail/video/6228080442001["Cisco Intersight Assist を使用してターゲットを請求します。"^]
+Cisco Intersight Assist をインストールすると、ネットアップのストレージデバイスと仮想化デバイスを請求できます。「 * Intersight Targets * 」ページに戻り、 vCenter と NetApp Active IQ Unified Manager のターゲットを追加します。
 
 
 NOTE: NetApp Active IQ Unified Manager （ AIQ UM ） API ゲートウェイが有効になっていることを確認します。

@@ -26,9 +26,6 @@ summary: これらは、 Cisco Intersight のネットアップストレージ�
 . Intersight Assist に NetApp AIQ UM デバイスを追加します。
 . 「 * Storage * 」に移動して、ネットアップストレージインベントリをナビゲートします。
 . ネットアップストレージのウィジェット * を監視ダッシュボード * に追加します。
-+
-はです https://tv.netapp.com/detail/video/6228096841001["リンク"^] からビデオに、 ONTAP ストレージ監視機能を Cisco Intersight から紹介しています。
-
 
 
 
@@ -156,9 +153,6 @@ Cisco Intersight には、次のネットアップストレージタスクが用
 ** NetAppボリュームSnapshotの名前を変更します
 ** SVMルートボリュームのNetApp負荷共有ミラーの更新
 ** NetAppボリュームの容量を更新します
-+
-ネットアップのストレージと仮想化タスクを使用したワークフローのカスタマイズの詳細については、ビデオをご覧ください https://tv.netapp.com/detail/video/6228095945001["Cisco Intersight の NetApp ONTAP ストレージオーケストレーション"^]。
-
 
 
 
