@@ -51,4 +51,4 @@ image:fp-express-tech-spec_image2.png["エラー：グラフィックイメー�
 
 image:fp-express-tech-spec_image3.png["エラー：グラフィックイメージがありません"]
 
-この設定の詳細については、を参照してください https://www.netapp.com/us/media/nva-1131-deploy.pdf["FlexPod Express と VMware vSphere 6.7U1 、および直接接続型の IP ベースストレージを搭載した NetApp AFF A220"^]。
+この設定の詳細については、を参照してください https://docs.netapp.com/us-en/flexpod/express/express-direct-attach-aff220-deploy_program_summary.html["FlexPod Express と VMware vSphere 6.7U1 、および直接接続型の IP ベースストレージを搭載した NetApp AFF A220"^]。

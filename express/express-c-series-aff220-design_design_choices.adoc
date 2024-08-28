@@ -37,7 +37,7 @@ image:express-c-series-aff220-design_image5.png["エラー：グラフィック�
 
 image:express-c-series-aff220-design_image6.png["エラー：グラフィックイメージがありません"]
 
-これらは、 FlexPod Express 解決策を補完するいくつかの主要機能です。ONTAP 9.4 のその他の機能の詳細については、を参照してください https://www.netapp.com/us/media/ds-3231.pdf["ONTAP 9 データ管理ソフトウェアのデータシート"^]。また、ネットアップを参照してください http://docs.netapp.com/ontap-9/index.jsp["ONTAP 9 ドキュメンテーション・センター"^]ONTAP 9.4 用に更新されました。
+これらは、 FlexPod Express 解決策を補完するいくつかの主要機能です。ONTAP 9の追加機能の詳細については、を参照してください。4 https://www.netapp.com/pdf.html?item=/media/7413-ds-3231.pdf["ONTAP 9 データ管理ソフトウェアのデータシート"^]また、 http://docs.netapp.com/ontap-9/index.jsp["ONTAP 9 ドキュメンテーション・センター"^]ONTAP 9を含むように更新されたNetAppも参照してください。4.
 
 
 

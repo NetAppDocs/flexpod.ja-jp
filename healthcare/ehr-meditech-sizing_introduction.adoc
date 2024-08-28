@@ -78,8 +78,8 @@ Cisco とネットアップが提供する FlexPod 解決策は、パフォー�
 
 本テクニカルレポートに関連する次のテクニカルレポートやその他のドキュメントを参照して、 MEDITECH を FlexPod インフラにサイジング、設計、導入するために必要なドキュメントをすべてまとめてください。
 
-* https://www.netapp.com/us/media/tr-4753.pdf["TR-4753 ：『 FlexPod Datacenter for MEDITECH Deployment Guide 』"^]
-* https://www.netapp.com/us/media/tr-4190.pdf["TR-4190 ：『 NetApp Sizing Guidelines for MEDITECH Environments 』"^]
+* https://docs.netapp.com/us-en/flexpod/healthcare/ehr-meditech-deploy_overview.html["TR-4753 ：『 FlexPod Datacenter for MEDITECH Deployment Guide 』"^]
+* https://www.netapp.com/pdf.html?item=/media/19872-tr-4190.pdf["TR-4190 ：『 NetApp Sizing Guidelines for MEDITECH Environments 』"^]
 * https://fieldportal.netapp.com/content/248456["TR-4219 ：『 NetApp Deployment Guidelines for MEDITECH Environments 』"^]
 
 

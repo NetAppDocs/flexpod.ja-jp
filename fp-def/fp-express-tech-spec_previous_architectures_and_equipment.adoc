@@ -67,11 +67,11 @@ image:fp-express-tech-spec_image6.png["エラー：グラフィックイメー�
 
 以前の FlexPod Express 検証済みアーキテクチャも引き続きサポートされます。アーキテクチャと導入に関するドキュメントは、次のとおりです。
 
-* link:http://www.netapp.com/us/media/nva-0016-flexpod-express.pdf["FlexPod Express 、 Cisco UCS C シリーズおよび NetApp FAS2500 シリーズ"]
-* link:http://www.netapp.com/us/media/nva-0020-deploy.pdf["FlexPod Express with VMware vSphere 6.0 ：小規模および中規模構成"]
-* link:http://www.netapp.com/us/media/nva-0017-flexpod-express.pdf["FlexPod Express with VMware vSphere 6.0 ：大規模構成"]
-* link:http://www.netapp.com/us/media/nva-0021-deploy.pdf["FlexPod Express with Microsoft Windows Server 2012 R2 Hyper-V ：小規模および中規模構成"]
-* link:http://www.netapp.com/us/media/tr-4350.pdf["FlexPod Express with Microsoft Windows Server 2012 R2 Hyper-V ：大規模構成"]
+* link:https://www.netapp.com/pdf.html?item=/media/12441-nva-0016-flexpod-express.pdf["FlexPod Express 、 Cisco UCS C シリーズおよび NetApp FAS2500 シリーズ"^]
+* link:https://www.netapp.com/pdf.html?item=/media/12442-nva-0020-deploy.pdf["FlexPod Express with VMware vSphere 6.0 ：小規模および中規模構成"^]
+* link:https://www.netapp.com/pdf.html?item=/media/12443-nva-0017-flexpod-express.pdf["FlexPod Express with VMware vSphere 6.0 ：大規模構成"^]
+* link:https://www.netapp.com/pdf.html?item=/media/12444-nva-0021-deploypdf.pdf["FlexPod Express with Microsoft Windows Server 2012 R2 Hyper-V ：小規模および中規模構成"^]
+* link:https://www.netapp.com/pdf.html?item=/media/12445-tr-4350.pdf["FlexPod Express with Microsoft Windows Server 2012 R2 Hyper-V ：大規模構成"^]
 
 
 

@@ -26,7 +26,7 @@ https://fieldportal.netapp.com/content/248456["https://fieldportal.netapp.com/co
 
 * MEDITECH 環境向けのネットアップサイジングガイドライン
 +
-http://www.netapp.com/us/media/tr-4190.pdf["www.netapp.com/us/media/tr-4190.pdf"^]
+https://www.netapp.com/pdf.html?item=/media/19872-tr-4190.pdf["www.netapp.com/us/media/tr-4190.pdf"^]
 
 * Epic EHR 導入向け FlexPod データセンター
 +
