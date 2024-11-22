@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar 
-permalink: express/express-c-series-aff220-deploy_netapp_storage_deployment_procedure_@part_1@.html 
+permalink: express/express-c-series-aff220-deploy_netapp_storage_deployment_procedure_part_1.html 
 keywords: lif, vlans, snmp, nfsv3, lun, iscsi, configure, node, deployment, procedure 
 summary: NetApp AFF ストレージ導入手順を完了するには、次の手順を実行します。 
 ---
