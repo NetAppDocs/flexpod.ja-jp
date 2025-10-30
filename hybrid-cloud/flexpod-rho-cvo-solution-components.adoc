@@ -44,10 +44,6 @@ Astra Control は、 Kubernetes アプリケーションデータのライフサ
 
 Astra Controlを使用すると、Kubernetesクラスタで作成された関連リソースの情報を含む、コンテナ化されたアプリケーションを一元的に可視化できます。すべてのクラスタ、すべてのアプリケーション、すべてのクラウド、またはすべてのデータセンターを1つのポータルで表示できます。オンプレミスまたはパブリッククラウドのすべての環境でAstra Control APIを使用して、データ管理ワークフローを実装できます。
 
-次の図は、Astra Controlの機能を示しています。
-
-image:flexpod-rho-cvo-image4.png["エラー：グラフィックイメージがありません"]
-
 
 
 === Astra Control消費モデル
@@ -70,7 +66,7 @@ image:flexpod-rho-cvo-image5.png["エラー：グラフィックイメージが�
 
 Astra Tridentは、コンテナやKubernetesディストリビューション向けの、完全にサポートされているオープンソースのストレージオーケストレーションツールです。コンテナ化されたアプリケーションの永続性に対する要求を、業界標準のインターフェイス（など）を使用して満たすことができるように、最初から設計されています https://kubernetes-csi.github.io/docs/introduction.html["CSI（Container Storage Interface）"^]。Astra Tridentを使用すると、マイクロサービスやコンテナ化されたアプリケーションを利用して、ネットアップのストレージシステムポートフォリオが提供するエンタープライズクラスのストレージサービスを活用できます。
 
-Kubernetesクラスタにポッドとして導入されるAstra Tridentは、Kubernetesワークロードに動的なストレージオーケストレーションサービスを提供します。コンテナ化されたアプリケーションは、NetApp ONTAP （NetApp AFF 、NetApp FAS 、NetApp ONTAP Select 、Cloudなど）を含むネットアップの幅広いポートフォリオから、永続的ストレージをすばやく簡単に消費できます。 さらに、Amazon FSX for NetApp ONTAP ）、NetApp Element ソフトウェア（NetApp SolidFire ）、Azure NetApp Files サービス、Google Cloud上のクラウドボリュームサービス、AWS上のクラウドボリュームサービスも利用できます。FlexPod 環境では、Astra Tridentを使用して、ネットアップのFlexVol ボリュームをベースとするコンテナや、ONTAP AFF やFAS システム、Cloud Volumes ONTAP などのストレージプラットフォームでホストされるLUNに対応するコンテナの永続的ボリュームを動的にプロビジョニングおよび管理できます。Tridentは、Astra Controlが提供するアプリケーション保護スキームの実装においても重要な役割を果たします。Astra Tridentの詳細については、を参照してください https://docs.netapp.com/us-en/trident/index.html["Astra Tridentのドキュメント"^]
+Astra Trident は、 Kubernetes クラスターにポッドとしてデプロイされ、Kubernetes ワークロードに動的なストレージ オーケストレーション サービスを提供します。これにより、コンテナ化されたアプリケーションは、 NetApp ONTAP (NetApp AFF、 NetApp FAS、 NetApp ONTAP Select、クラウド、 Amazon FSx for NetApp ONTAP)、 NetApp Elementソフトウェア (NetApp SolidFire)、 Azure NetApp Filesサービスなど、NetApp の幅広いポートフォリオから永続ストレージを迅速かつ簡単に利用できるようになります。FlexPod環境では、 Astra Tridentを使用して、 NetApp AFFおよびFASシステムやCloud Volumes ONTAPなどのONTAPストレージ プラットフォームでホストされているNetApp FlexVolボリュームと LUN によってサポートされるコンテナの永続ボリュームを動的にプロビジョニングおよび管理します。Trident は、 Astra Control が提供するアプリケーション保護スキームの実装においても重要な役割を果たします。AstraTridentの詳細については、 https://docs.netapp.com/us-en/trident/index.html["Astra Tridentのドキュメント"^]
 
 
 
