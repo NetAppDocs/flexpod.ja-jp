@@ -221,7 +221,7 @@ tmpfs                       1620652       0   1620652   0% /run/user/0
 
 == データ生成
 
- `Dgen.pl` は、EHRのI/Oシミュレータ（GenerateIO）用のPerlスクリプトデータジェネレータです。LUN内のデータはEHRを使用して生成されます `Dgen.pl` スクリプト：スクリプトは、EHRデータベース内にあるものと同様のデータを作成するように設計されています。
+ `Dgen.pl`EHR の I/O シミュレータ (GenerateIO) 用の Perl スクリプト データ ジェネレータです。 LUN内のデータはEHRで生成される `Dgen.pl`スクリプト。このスクリプトは、EHR データベース内のデータに類似したデータを作成するように設計されています。
 
 ....
 [root@hc-cloud-secure-1 ~]# cd GenerateIO-1.17.3/
@@ -246,64 +246,29 @@ NetApp SnapMirror は、 LAN または WAN 経由でデータを高速でレプ�
 
 オンプレミスのONTAP システムとCVOの間にSnapMirrorレプリケーションを設定するには、次の手順を実行します。
 
-. ナビゲーションメニューから、*[ストレージ]*>*[キャンバス]*を選択します。
-. Canvasで、ソースボリュームが含まれている作業環境を選択し、ボリュームのレプリケート先となる作業環境にソースボリュームをドラッグして、*[レプリケーション]*を選択します。
-+
-image:fhc-cvoe-image8.jpeg["このスクリーンショットは、[BlueXP Canvas]画面を示しています。オンプレミスのONTAP インスタンスのドロップダウンで[Replication]が選択されています。"]
-
+. ナビゲーション メニューから、*ストレージ* > *システム* を選択します。
+. [システム] で、ソース ボリュームを含むシステムを選択し、ボリュームを複製するシステムにドラッグして、[レプリケーション] を選択します。
 +
 以降の手順では、Cloud Volumes ONTAP クラスタとオンプレミスのONTAP クラスタ間に同期関係を作成する方法について説明します。
 
 . *ソースとデスティネーションのピアリングのセットアップ。*このページが表示された場合は、クラスタピア関係に使用するすべてのクラスタ間LIFを選択します。
-+
-image:fhc-cvoe-image9.png["このスクリーンショットは、BlueXPの[Source Peering Setup]画面を示しています。"]
-
 . *ソースボリュームの選択。*レプリケートするボリュームを選択します。
-+
-image:fhc-cvoe-image10.jpeg["このスクリーンショットは、BlueXPの[Source Volume Selection]画面を示しています。1つのボリューム（14個）が表示されています。"]
-
 . *デスティネーションディスクの種類と階層化。*ターゲットがCloud Volumes ONTAP システムの場合は、デスティネーションディスクの種類を選択し、データ階層化を有効にするかどうかを選択します。
-+
-image:fhc-cvoe-image11.jpeg["このスクリーンショットは、汎用SSDを選択したBlueXPの[Destination Disk Type]画面を示しています。"]
-
 . *デスティネーションボリューム名：*デスティネーションボリュームの名前を指定し、デスティネーションアグリゲートを選択してください。デスティネーションが ONTAP クラスタの場合は、デスティネーション Storage VM も指定する必要があります。
-+
-image:fhc-cvoe-image12.jpeg["このスクリーンショットは、BlueXPの[Destination volume name]画面を示しています。関連する情報が入力されています。"]
-
 . *最大転送速度。*データを転送できる最大転送速度（1秒あたりのメガバイト数）を指定します。
-+
-image:fhc-cvoe-image13.jpeg["このスクリーンショットは、BlueXPの[Max Transfer Rate]画面を示しています。100MB/sが入力されています。"]
-
 . *レプリケーションポリシー。*デフォルトポリシーを選択するか*[その他のポリシー]*をクリックし、いずれかの高度なポリシーを選択します。ヘルプを表示するには、 https://docs.netapp.com/us-en/cloud-manager-replication/concept-replication-policies.html["レプリケーションポリシーについて説明します"^]。
-+
-image:fhc-cvoe-image14.jpeg["このスクリーンショットは、BlueXPの[Replication Policy]ページを示しています。デフォルトのポリシーである「Mirror」または「Mirror and Backup」が表示されています。"]
-
 . *スケジュール。* 1回限りのコピーまたは定期的なスケジュールを選択します。いくつかのデフォルトスケジュールを使用できます。別のスケジュールが必要な場合は、で新しいスケジュールを作成する必要があります `destination cluster` System Manager を使用
-+
-image:fhc-cvoe-image15.jpeg["このスクリーンショットは、BlueXPレプリケーションセットアップスケジュール画面を示しています。複数のタイミングオプションが表示されています。"]
-
 . *確認。*選択内容を確認し、*移動*をクリックします。
-+
-image:fhc-cvoe-image16.jpeg["このスクリーンショットは、BlueXPレプリケーションセットアップの[Review and Approve]画面を示しています。"]
-
 
 
 これらの設定手順の詳細については、を参照してください https://docs.netapp.com/us-en/cloud-manager-replication/task-replicating-data.html["こちらをご覧ください"^]。
 
-BlueXPがデータレプリケーションプロセスを開始しますオンプレミスのONTAP システムとCloud Volumes ONTAP の間に確立された*レプリケーション*サービスを確認できます。
-
-image:fhc-cvoe-image17.jpeg["このスクリーンショットは、BlueXPの[Canvas]画面を示しています。レプリケーションサービスはCVOインスタンスとオンプレミスのONTAP インスタンスを結ぶ線で示されています。"]
+コンソールはデータ複製プロセスを開始します。この段階では、オンプレミスのONTAPシステムとCloud Volumes ONTAPの間で確立された *レプリケーション* サービスを確認できます。
 
 Cloud Volumes ONTAP クラスタでは、新しく作成されたボリュームを確認できます。
 
-image:fhc-cvoe-image18.png["このスクリーンショットは、BlueXPの[Volumes]タブを示しています。新しいボリュームが表示されています。"]
-
 オンプレミスボリュームとクラウドボリュームの間にSnapMirror関係が確立されたことを確認することもできます。
 
-image:fhc-cvoe-image19.jpeg["このスクリーンショットは、[BlueXP Replications]タブを示しており、作成したレプリケーション関係に関する情報が表示されています。"]
-
 レプリケーションタスクの詳細については、*[レプリケーション]*タブを参照してください。
-
-image:fhc-cvoe-image20.png["このスクリーンショットは、[Replications]タブの下に詳細情報を示しています。"]
 
 link:fhc-cvoe-solution-validation.html["次の例は、解決策の検証です。"]

@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: hybrid-cloud/fhc-cvoe-solution-components.html 
-keywords: flexpod, epic, bluexp, connector, cvo, active iq, unified manager, cisco, intersight, vsphere, vcenter 
+keywords: flexpod, epic, netapp console, connector, cvo, active iq, unified manager, cisco, intersight, vsphere, vcenter 
 summary: このセクションでは、この解決策 に必要なさまざまなコンポーネントの概要を説明します。 
 ---
 = 解決策コンポーネント
@@ -47,21 +47,21 @@ FlexPod には次のようなメリットがあるため、医療ワークロー
 * 堅牢なデータ保護、バックアップ、リカバリ、ビジネス継続性
 
 
-FlexPod はEHR検証済みで、Intel Xeonプロセッサ搭載のCisco UCS、Red Hat Enterprise Linux（RHEL）、VMware ESXiによる仮想化を含むプラットフォームをサポートしています。このプラットフォームは、ONTAP を実行するネットアップストレージとしてEHRが評価している「High Comfort Level」と組み合わせることで、お客様は、FlexPod を介してフルマネージドのプライベートクラウドで医療アプリケーションを実行できます。このクラウドは、いずれのパブリッククラウドプロバイダにも接続できます。
+FlexPodは EHR 認定を受けており、Intel Xeon プロセッサを搭載したCisco UCS、Red Hat Enterprise Linux (RHEL)、および VMware ESXi による仮想化を含むプラットフォームをサポートします。このプラットフォームは、 ONTAP を実行するNetAppストレージに対する EHR の High Comfort Level ランキングと組み合わせることで、任意のパブリック クラウド プロバイダーに接続できるFlexPodを通じて、完全に管理されたプライベート クラウドで医療アプリケーションを実行できるようになります。
 
 
 
-== NetApp BlueXP
+== NetApp Console
 
-BlueXP（旧称NetApp Cloud Manager）は、エンタープライズクラスのSaaSベースの管理プラットフォームです。ITエキスパートやクラウドアーキテクトは、ネットアップのクラウドソリューションを使用してハイブリッドマルチクラウドインフラを一元管理できます。オンプレミスとクラウドのストレージを表示および管理する一元化されたシステムを提供し、ハイブリッドクラウド、複数のクラウドプロバイダ、アカウントをサポートします。詳細については、を参照してください https://docs.netapp.com/us-en/cloud-manager-family/index.html["BlueXP"^]。
+NetApp Consoleは、IT 専門家やクラウド アーキテクトがNetAppクラウド ソリューションを使用してハイブリッド マルチクラウド インフラストラクチャを集中管理できるようにする、エンタープライズ クラスの SaaS ベースの管理プラットフォームです。オンプレミスとクラウド ストレージを表示および管理するための集中システムを提供し、ハイブリッド、複数のクラウド プロバイダー、アカウントをサポートします。詳細については、 link:https://docs.netapp.com/us-en/console-family/index.html["NetApp Consoleのドキュメント"^]。
 
 
 
-== コネクタ
+== コンソールエージェント
 
-BlueXPはコネクタインスタンスを使用して、パブリッククラウド環境内のリソースとプロセスを管理できます。BlueXPで提供される機能の多くにはコネクタが必要であり、クラウドまたはオンプレミスのネットワークに導入できます。
+コンソール エージェント インスタンスにより、コンソールはパブリック クラウド環境内のリソースとプロセスを管理できるようになります。コンソールによって提供される多くの機能にはコンソール エージェントが必要であり、クラウドまたはオンプレミス ネットワークに展開できます。
 
-Connectorは次の場所でサポートされます。
+コンソール エージェントは次の場所でサポートされます。
 
 * Amazon Web Services の
 * Microsoft Azure
@@ -69,7 +69,7 @@ Connectorは次の場所でサポートされます。
 * オンプレミス
 
 
-コネクタの詳細については、を参照してください https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html["コネクタページ"^]。
+link:https://docs.netapp.com/us-en/console-setup-admin/concept-connectors.html["コンソールエージェントの詳細"^]。
 
 
 
@@ -88,7 +88,7 @@ NetApp Cloud Volumes ONTAP は、クラウドでONTAP データ管理ソフト�
 * *プライバシーコンプライアンス管理* Cloud Data Senseとの統合により、データのコンテキストを把握し、機密データを特定できます。
 
 
-詳細については、を参照してください https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/["Cloud Volumes ONTAP"^]。
+詳しい情報については、link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/["Cloud Volumes ONTAP"^] 。
 
 
 
@@ -98,7 +98,7 @@ NetApp Active IQ Unified Manager では、設計が刷新されたわかりや�
 
 一部のイベントには、問題 を修正するための対応策も用意されています。問題が発生したときにEメールやSNMPトラップで通知されるように、イベントにカスタムアラートを設定できます。Active IQ Unified Manager を使用すると、容量と使用状況の傾向を予測してユーザのストレージ要件を計画できます。これにより、問題が発生する前に対処できるようになり、長期的に新たな問題につながる可能性のある、短期的な事後的な判断を回避できます。
 
-詳細については、を参照してください https://docs.netapp.com/us-en/active-iq-unified-manager/["Active IQ Unified Manager"^]。
+詳細については、 link:https://docs.netapp.com/us-en/active-iq-unified-manager/["Active IQ Unified Manager"^]。
 
 
 
@@ -121,7 +121,7 @@ image:fhc-cvoe-image3.png["このスクリーンショットは、Cisco Intersig
 
 VMware vSphereは、大規模なインフラストラクチャ（CPU、ストレージ、ネットワークなど）をシームレスで汎用性の高い動的な運用環境として包括的に管理するための仮想化プラットフォームです。個 々 のマシンを管理する従来のオペレーティングシステムとは異なり、VMware vSphereはデータセンター全体のインフラストラクチャを集約して、必要なアプリケーションに迅速かつ動的に割り当てることができるリソースを備えた単一のパワーハウスを作成します。
 
-VMware vSphereとそのコンポーネントの詳細については、を参照してください https://www.vmware.com/products/vsphere.html["VMware vSphere の場合"^]。
+VMware vSphereとそのコンポーネントの詳細については、以下を参照してください。link:https://www.vmware.com/products/vsphere.html["VMware vSphere の場合"^] 。
 
 
 
@@ -129,13 +129,13 @@ VMware vSphereとそのコンポーネントの詳細については、を参照
 
 VMware vCenter Serverでは、1つのコンソールからすべてのホストとVMを統合的に管理でき、クラスタ、ホスト、およびVMのパフォーマンス監視を集約できます。VMware vCenter Serverを使用すると、管理者は、コンピューティングクラスタ、ホスト、VM、ストレージ、ゲストOS、 仮想インフラストラクチャのその他の重要なコンポーネントVMware vCenterは、VMware vSphere環境で使用できる豊富な機能を管理します。
 
-詳細については、を参照してください https://www.vmware.com/products/vcenter.html["VMware vCenter"^]。
+詳細については、link:https://www.vmware.com/products/vcenter.html["VMware vCenter"^] 。
 
 
 
 == ハードウェアおよびソフトウェアのリビジョン
 
-このハイブリッドクラウド解決策 は、で定義されている、サポート対象のバージョンのソフトウェア、ファームウェア、ハードウェアを実行している任意のFlexPod 環境に拡張できます http://support.netapp.com/matrix/["NetApp Interoperability Matrix Tool で確認できます"^]、 https://ucshcltool.cloudapps.cisco.com/public/["UCSハードウェアおよびソフトウェアの互換性"^]および https://www.vmware.com/resources/compatibility/search.php["VMware Compatibility Guide 』を参照してください"^]。
+このハイブリッドクラウドソリューションは、サポートされているバージョンのソフトウェア、ファームウェア、ハードウェアを実行しているFlexPod環境に拡張できます。link:http://support.netapp.com/matrix/["NetApp Interoperability Matrix Tool で確認できます"^] 、link:https://ucshcltool.cloudapps.cisco.com/public/["UCSハードウェアおよびソフトウェアの互換性"^] 、 そしてlink:https://www.vmware.com/resources/compatibility/search.php["VMware Compatibility Guide 』を参照してください"^]。
 
 次の表に、オンプレミスのFlexPod ハードウェアとソフトウェアのリビジョンを示します。
 
@@ -175,13 +175,13 @@ VMware vCenter Serverでは、1つのコンソールからすべてのホスト�
 
 |  | Cisco Intersight Assist仮想アプライアンス | 1.0.9-342 
 |===
-次の表に、NetApp BlueXPとCloud Volumes ONTAP のバージョンを示します。
+次の表は、コンソールとCloud Volumes ONTAP のバージョンを示しています。
 
 |===
 | ベンダー | プロダクト | バージョン 
 
 
-| ネットアップ | BlueXP | 3.9.24 
+| ネットアップ | コンソール | 3.9.24 
 
 
 |  | Cloud Volumes ONTAP | ONTAP 9.11 

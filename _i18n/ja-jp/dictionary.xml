@@ -82,14 +82,10 @@
   <block id="4b1234fb119f870ae733397538da4282" category="list-text">コントローラ 1 台につき、管理用のギガビットイーサネット（ 1GbE ）ケーブルが少なくとも 1 本必要です</block>
   <block id="6a6fca10310973678f96695890cec955" category="list-text">コントローラ 1 台につき 10GbE ケーブル 2 本以上（ iSCSI の場合）または FC ケーブル 2 本以上で、速度要件が同じです</block>
   <block id="3513ac514c822a260a1ddcc87e77a9d1" category="cell">ディスクシェルフ 1 台につき、 Mini-SAS HD ケーブル 2 本</block>
-  <block id="f851abbfc6782d860c83bc1a0125aab6" category="summary">FlexPod アーキテクチャは、本ドキュメントで説明する一連のルールによって定義されています。</block>
   <block id="fe82ba76fe70a6f0f9c5f3d28aeec7af" category="doc">サポート対象の FlexPod 構成と検証済みの 構成の比較</block>
   <block id="9c935488ffd9d690797737609e542dc0" category="inline-link">Cisco UCS ハードウェアおよびソフトウェア互換性リスト</block>
   <block id="697ea025ecb303d4f40d1bf3a8b4bde0" category="inline-link">ネットアップの Interoperability Matrix Tool （ IMT ）</block>
-  <block id="8a44cc5dad4aab86ca8e9bb04572e5d3" category="paragraph">FlexPod アーキテクチャは、本ドキュメントで説明する一連のルールによって定義されています。ハードウェアコンポーネントとソフトウェア構成がでサポートされている必要があります<block ref="61c091fce51d2baac5905f12dd7d74cc" category="inline-link-rx"></block> および<block ref="538106ddbedb569903f8e17bb643549d" category="inline-link-rx"></block>。</block>
   <block id="c5dcd35af16918a17ee9c3a5c153f0af" category="inline-link">IMT</block>
-  <block id="8cb6ab7daf5f6512c6c1289edc16c8b3" category="paragraph">各 Cisco Validated Design （ CVD ）または NetApp Verified Architecture （ NVA ）は、 FlexPod 構成の可能性があります。Cisco とネットアップは、これらの構成の組み合わせを文書化し、広範なエンドツーエンドのテストで検証しています。このドキュメントのガイドラインに従い、すべてのコンポーネントが Cisco UCS ハードウェアおよびソフトウェア互換性リストおよびネットアップに互換性があると記載されている場合、これらの構成から外れる FlexPod 環境は完全にサポートされます<block ref="af8f174925a8fa1af2321b8d8c2fd047" category="inline-link-rx"></block>。</block>
-  <block id="d89512b42806f0e10dc033c022ad8da0" category="paragraph">たとえば、ストレージコントローラや Cisco UCS サーバを追加し、ソフトウェアを新しいバージョンにアップグレードする場合、ソフトウェア、ハードウェア、構成がこのドキュメントで定義されているガイドラインを満たしていれば、それらが完全にサポートされます。</block>
   <block id="e88a70d67e9de42d391fd019f2d06484" category="summary">このドキュメントに記載されている情報の詳細については、以下のドキュメントや Web サイトを参照してください。</block>
   <block id="c673a1530232358f588ada362c289d7f" category="doc">追加情報の参照先</block>
   <block id="bf0f42271b1628d48d24ff9e96c0a40d" category="paragraph">このドキュメントに記載されている情報の詳細については、以下のドキュメントや Web サイトを参照してください。</block>
@@ -8913,13 +8909,7 @@
   <block id="3e77b8f2742f9c6c9e5431bb6a507cc0" category="list-text">EHRアプリケーションの高可用性</block>
   <block id="0bf306b1478661b1ec659d3d45732ce6" category="list-text">データセンターへのEHRの導入が容易</block>
   <block id="2104af181edd8195e9eacb28f07d9434" category="list-text">新しいEHRリリースやアプリケーションで成長を可能にする俊敏性と拡張性</block>
-  <block id="1273c8a63109161e6fd1f18d6998523f" category="section-title">NetApp BlueXP</block>
-  <block id="9b9477e579c3b44dd623d5a6e1ea8d78" category="inline-link">BlueXP</block>
-  <block id="86706cdade6ef7fa7ccfbed73633a085" category="paragraph">BlueXP（旧称NetApp Cloud Manager）は、エンタープライズクラスのSaaSベースの管理プラットフォームです。ITエキスパートやクラウドアーキテクトは、ネットアップのクラウドソリューションを使用してハイブリッドマルチクラウドインフラを一元管理できます。オンプレミスとクラウドのストレージを表示および管理する一元化されたシステムを提供し、ハイブリッドクラウド、複数のクラウドプロバイダ、アカウントをサポートします。詳細については、を参照してください<block ref="c49cacac9cbe82dcff36ada88ba62aa3" category="inline-link-rx"></block>。</block>
-  <block id="4a57221499144728a51c7c142151ff99" category="paragraph">BlueXPはコネクタインスタンスを使用して、パブリッククラウド環境内のリソースとプロセスを管理できます。BlueXPで提供される機能の多くにはコネクタが必要であり、クラウドまたはオンプレミスのネットワークに導入できます。</block>
   <block id="6beccc67ff905f7da0b29dece26b0485" category="list-text">Amazon Web Services の</block>
-  <block id="2b67002d6ae85695255d5b11d87ad4f9" category="inline-link">コネクタページ</block>
-  <block id="16ebdde355ef4d26be04b26ee6d7fa0b" category="paragraph">コネクタの詳細については、を参照してください<block ref="e42e7c023a6426e00bdab88e3da61750" category="inline-link-rx"></block>。</block>
   <block id="c60f68ec44b35a0517cbafe7674533a5" category="paragraph">NetApp Cloud Volumes ONTAP は、クラウドでONTAP データ管理ソフトウェアを実行し、ファイルワークロードとブロックワークロードに高度なデータ管理を提供するSoftware-Defined Storageソリューションです。Cloud Volumes ONTAP を使用すると、データ保護、セキュリティ、コンプライアンスを強化しながら、クラウドストレージのコストを最適化し、アプリケーションのパフォーマンスを向上させることができます。</block>
   <block id="4609b2ec221cd53f6393d4cb39d72e44" category="paragraph">主なメリットは次のとおりです。</block>
   <block id="e23903dbee02d0245e9e2a9925c0de7e" category="list-text">* Storage Efficiency。*組み込みのデータ重複排除、データ圧縮、シンプロビジョニング、瞬時のクローニングを活用して、ストレージコストを最小限に抑えます。</block>
@@ -8929,10 +8919,8 @@
   <block id="a5e354c191fac9e25f3c021fc8c26f95" category="list-text">*アプリケーションの整合性。* NetApp SnapCenter テクノロジを使用して、NetApp Snapshotコピーの整合性を提供します。</block>
   <block id="49ba707e38fab31302d74ed6035b7b6a" category="list-text">*データセキュリティ。* Cloud Volumes ONTAP はデータ暗号化をサポートし、ウイルスやランサムウェアからの保護を提供します。</block>
   <block id="fb7530359018c603d255f4166fac0989" category="list-text">*プライバシーコンプライアンス管理* Cloud Data Senseとの統合により、データのコンテキストを把握し、機密データを特定できます。</block>
-  <block id="7e99e6f3cec58f33634ade4a045940dd" category="paragraph">詳細については、を参照してください<block ref="033ab3fc8f9702cf5575035400051f3c" category="inline-link-rx"></block>。</block>
   <block id="d651c4691a6e4f3142e3285cf428be56" category="paragraph">NetApp Active IQ Unified Manager では、設計が刷新されたわかりやすい単一のインターフェイスからONTAP ストレージクラスタを監視でき、集合知とAI分析から得た情報を提供します。ストレージ環境とストレージ環境で実行されている仮想マシンに関する、運用面、パフォーマンス面、プロアクティブな分析情報を包括的に提供します。ストレージインフラで問題 が発生すると、Unified Managerから問題 の詳細情報を通知してルート原因 を特定できるようになります。仮想マシンダッシュボードではVMのパフォーマンス統計を確認でき、これにより、ネットワーク経由でダウンしているvSphereホストからストレージへのI/Oパス全体を調査できます。</block>
   <block id="3ec67a89c8d9bb619e61b959e0545b87" category="paragraph">一部のイベントには、問題 を修正するための対応策も用意されています。問題が発生したときにEメールやSNMPトラップで通知されるように、イベントにカスタムアラートを設定できます。Active IQ Unified Manager を使用すると、容量と使用状況の傾向を予測してユーザのストレージ要件を計画できます。これにより、問題が発生する前に対処できるようになり、長期的に新たな問題につながる可能性のある、短期的な事後的な判断を回避できます。</block>
-  <block id="741c1d29b00ec68cceea4339c66bdb0c" category="paragraph">詳細については、を参照してください<block ref="5ed6ecd932db92d4be0f0df08b269167" category="inline-link-rx"></block>。</block>
   <block id="5a981475ccbda636d6a9cb7217af26c6" category="list-text">*迅速な提供。* Intersightは、アジャイルベースのソフトウェア開発モデルにより、頻繁な更新と継続的なイノベーションにより、クラウドまたはお客様のデータセンターからサービスとして提供されます。このようにして、お客様は重要なビジネスニーズのサポートに集中できます。</block>
   <block id="e1b057d476283a101d41159976595d9b" category="list-text">*運用の簡易化。* Intersightは、SaaSで提供される単一のセキュアなツールと共通のインベントリ、認証、APIを使用してフルスタックとすべての場所で機能し、チーム間のサイロを解消することで、運用を簡易化します。これにより、オンプレミスの物理サーバとハイパーバイザー、VM、Kubernetes、サーバレス、自動化、 オンプレミスとパブリッククラウドの両方で最適化とコスト管理を実現します。</block>
   <block id="77b358ad4e140d740fa2599c8a7f62fa" category="list-text">*継続的な最適化。*すべてのレイヤおよびCisco TACが提供するCisco Intersightのインテリジェンスを使用して、環境を継続的に最適化できます。このインテリジェンスは推奨される自動化可能なアクションに変換されるため、ワークロードの移動や物理サーバの健全性の監視から、使用するパブリッククラウドのコスト削減の推奨まで、あらゆる変更にリアルタイムで適応できます。</block>
@@ -8940,21 +8928,16 @@
   <block id="a1e238eb5133f8ba9ef943d0ca1f4386" category="inline-image-macro">このスクリーンショットは、Cisco Intersightダッシュボードの[Servers]ページを示しています。</block>
   <block id="232db9801da9dbffd7813bb0d1da4932" category="paragraph"><block ref="232db9801da9dbffd7813bb0d1da4932" category="inline-image-macro-rx" type="image"></block></block>
   <block id="4d29934deaff2fa7ad8706b3bd343fc8" category="paragraph">VMware vSphereは、大規模なインフラストラクチャ（CPU、ストレージ、ネットワークなど）をシームレスで汎用性の高い動的な運用環境として包括的に管理するための仮想化プラットフォームです。個 々 のマシンを管理する従来のオペレーティングシステムとは異なり、VMware vSphereはデータセンター全体のインフラストラクチャを集約して、必要なアプリケーションに迅速かつ動的に割り当てることができるリソースを備えた単一のパワーハウスを作成します。</block>
-  <block id="14dd1fa2215e85083149ed9dbcaac36f" category="paragraph">VMware vSphereとそのコンポーネントの詳細については、を参照してください<block ref="132550c60ca513f9467cdf8b8e5be374" category="inline-link-rx"></block>。</block>
-  <block id="8177a4c659f3243b88184f64fdcf336f" category="paragraph">詳細については、を参照してください<block ref="c89de84f757c8786a48c9aa0b968e518" category="inline-link-rx"></block>。</block>
   <block id="8e49c91bd6e083400edaa7e4c4cbe004" category="inline-link">UCSハードウェアおよびソフトウェアの互換性</block>
-  <block id="4a21f9217be897575a9189e84bd0e081" category="paragraph">このハイブリッドクラウド解決策 は、で定義されている、サポート対象のバージョンのソフトウェア、ファームウェア、ハードウェアを実行している任意のFlexPod 環境に拡張できます<block ref="f0e87d28a2a99025f9c80d8d1bdd0531" category="inline-link-rx"></block>、<block ref="d5e89872bc8a01087e3135e29553f803" category="inline-link-rx"></block>および<block ref="45bfb35eaade6b56e4f31adaaa8e4220" category="inline-link-rx"></block>。</block>
   <block id="60a5da8ed4056c86f5aeb022fb68eba0" category="paragraph">次の表に、オンプレミスのFlexPod ハードウェアとソフトウェアのリビジョンを示します。</block>
   <block id="31c28e6832955fd4c45744375ac4359a" category="cell">9.3（9）</block>
   <block id="3beeed950a1dfde9ba566c9c665a6ced" category="cell">ONTAP 9.11.1P2</block>
   <block id="d139f97e5732d34a7e780cb587235560" category="cell">9.11P1</block>
-  <block id="9f4f07012506ae075214903c0f90d7ac" category="paragraph">次の表に、NetApp BlueXPとCloud Volumes ONTAP のバージョンを示します。</block>
   <block id="ec9ceefe0c19f4c029008c23e3c947b7" category="cell">ベンダー</block>
   <block id="378cba5c9b9583240c8818c6b5e8d353" category="cell">3.9.24</block>
   <block id="a7e58f7cec27a367b87b7b14facc4770" category="cell">ONTAP 9.11</block>
   <block id="3297b2d6f7954aaf186dde01d3bfaf89" category="inline-link-macro">次の記事：インストールと設定</block>
   <block id="2e855e8818bf9715d28c73608e612bb3" category="paragraph"><block ref="2e855e8818bf9715d28c73608e612bb3" category="inline-link-macro-rx"></block></block>
-  <block id="82bbf014db8c4200075a18b78d3e8157" category="summary">このセクションでは、Cloud Volumes ONTAP 、FlexPod 、ONTAP ストレージ、BlueXPをインストールして設定する方法について説明します。</block>
   <block id="3ae884df8a4c051e3c5bc2bfd2abb958" category="paragraph"><block ref="3ae884df8a4c051e3c5bc2bfd2abb958" category="inline-link-macro-rx"></block></block>
   <block id="5bab49ebc7307b18250d34ab49ad7d56" category="section-title">NetApp Cloud Volumes ONTAP の導入</block>
   <block id="c51f64e47355713b19b4b070f06cd89c" category="paragraph">Cloud Volumes ONTAP インスタンスを設定するには、次の手順を実行します。</block>
@@ -8962,18 +8945,11 @@
   <block id="e2d7265c104a3d2a653a9599f73803e5" category="paragraph">解決策 構成について、パブリッククラウドサービスプロバイダの環境の詳細を確認しておく必要があります。たとえば、Amazon Web Services（AWS）環境の準備では、AWSアクセスキー、AWSシークレットキー、およびその他のネットワークの詳細（リージョン、VPC、サブネットなど）が必要です。</block>
   <block id="b9b6f6047d12fc6eb5861a04c3391329" category="list-text">VPCエンドポイントゲートウェイを設定します。</block>
   <block id="9739c55ac13fd999cc773776ec6daccd" category="paragraph">VPCとAWS S3サービスの間の接続を有効にするには、VPCエンドポイントゲートウェイが必要です。これは、ゲートウェイタイプのエンドポイントであるCVOでバックアップを有効にするために使用されます。</block>
-  <block id="40e6332017647e19469becbeecd11965" category="list-text">NetApp BlueXPにアクセスします。</block>
-  <block id="bf685716d4823f2fa095e70ecb925d80" category="paragraph">NetApp BlueXPやその他のクラウドサービスにアクセスするには、に登録する必要があります<block ref="cb1fef2883a60666ba1c342fa03fa642" category="inline-link-rx"></block>。BlueXPアカウントでワークスペースとユーザを設定するには、をクリックします<block ref="4dcc9f157c326d4ba2daf9bed2a2d103" category="inline-link-rx"></block>。BlueXPからクラウドプロバイダにコネクタを直接導入する権限を持つアカウントが必要です。BlueXPポリシーはからダウンロードできます<block ref="eaf63e684016dad3d469ad538eb69a99" category="inline-link-rx"></block>。</block>
-  <block id="768248474884633840844012e1eb1297" category="list-text">コネクタを展開します。</block>
-  <block id="1a9262c286befb116396b1a42a77d07a" category="paragraph">Cloud Volume ONTAP 作業環境を追加する前に、コネクタを導入する必要があります。コネクタを配置せずに最初のCloud Volumes ONTAP 作業環境を作成しようとすると、プロンプトが表示されます。BlueXPからAWSにコネクタを導入する方法については、こちらを参照してください<block ref="2304b6526983a781df64b1f7373e5ed0" category="inline-link-rx"></block>。</block>
   <block id="fd70542ca3772813a4c7191cedbbfa1f" category="list-text">AWSでCloud Volumes ONTAP を起動します。</block>
   <block id="16a03230ebe4950ee9356150a20d672a" category="inline-link">ステップバイステップの手順をお読みください</block>
   <block id="3a4d750f50017d54614cf5d495abb92d" category="paragraph">Cloud Volumes ONTAP は単一システム構成で起動することも、 AWS で HA ペアとして起動することもできます。<block ref="5a6f6aea79f64db108e3d43d324900fc" category="inline-link-rx"></block>。</block>
   <block id="30c327439c4965f96cde1b8ad90d4fba" category="inline-link">AWSでのCloud Volumes ONTAP のクイックスタートガイド</block>
   <block id="83f216cc939bebc8b874bff64532526b" category="paragraph">これらの手順の詳細については、を参照してください<block ref="2001919d2275365d169803e8763b2360" category="inline-link-rx"></block>。</block>
-  <block id="e4ec9e71bec0a95630591cb6f88d13d1" category="paragraph">この解決策 では、AWSにシングルノードのCloud Volumes ONTAP システムを導入しました。次の図は、シングルノードCVOインスタンスを使用するNetApp BlueXPダッシュボードを示しています。</block>
-  <block id="b85833a46f6ccfc54ea1b46747ff9bda" category="inline-image-macro">このスクリーンショットは、NetApp BlueXPの[Canvas]画面と[My Working Environments]を示しています。</block>
-  <block id="e8a534ab37b00c97801c062906fa1909" category="paragraph"><block ref="e8a534ab37b00c97801c062906fa1909" category="inline-image-macro-rx" type="image"></block></block>
   <block id="6494739090e31c91779d5b1ae056881c" category="section-title">オンプレミスのFlexPod 環境</block>
   <block id="73a3588eac7abd3bbe0602fc71d7322a" category="paragraph">FlexPod とUCS Xシリーズ、VMware、およびNetApp ONTAP の設計の詳細については、を参照してください<block ref="35e9ae622703e5e9f707c46a163e0a74" category="inline-link-rx"></block> 設計ガイド：このドキュメントでは、Cisco Intersightが管理するUCS XシリーズプラットフォームをFlexPod データセンターインフラに組み込むための設計ガイダンスを提供します。</block>
   <block id="af2e955267eb0fc88e73f50acfba1bb8" category="inline-link">この導入ガイドを参照してください</block>
@@ -8998,20 +8974,9 @@
   <block id="ed28ab3e84850a9c5c8d45ed17c9cfce" category="list-text">igroupを作成します。</block>
   <block id="220a876b8e20111ad0a651acc95a55e6" category="paragraph">igroupは、サーバからLUNへのアクセスを許可するために使用されます。Linuxホストの場合、サーバIQNはファイルで確認できます<block ref="22565a44e8f73044eb2029acbb069639" prefix=" " category="inline-code"></block>。</block>
   <block id="d88adf3556471c5417cf8c83c9e875cf" category="list-text">LUN を igroup にマッピングします。</block>
-  <block id="185798efdc1b4079a60887e047bc6a23" category="section-title">オンプレミスのFlexPod ストレージをBlueXPに追加</block>
-  <block id="d10cc49484a078f7867c17c226f12db5" category="paragraph">NetApp BlueXPを使用してFlexPod ストレージを作業環境に追加するには、次の手順を実行します。</block>
-  <block id="242bcf24d0329e5d7dd2468b648d12e3" category="list-text">ナビゲーションメニューから、*[ストレージ]*&gt;*[キャンバス]*を選択します。</block>
-  <block id="7d613f340824eb9c65d2bc768aa43577" category="list-text">キャンバスページで、*作業環境の追加*をクリックし、*オンプレミス*を選択します。</block>
   <block id="c1ecb58d124bd18daa47a09a05244c42" category="list-text">オンプレミスONTAP *を選択します。「 * 次へ * 」をクリックします。</block>
-  <block id="2e58a9a8cdc9651ecad74d2f2bfdaf5c" category="inline-image-macro">このスクリーンショットは、BlueXPの[Add Working Group]ページを示しています。オンプレミスのONTAP が選択されています。</block>
-  <block id="6db4053e4bd84f28389116c8290b3d49" category="paragraph"><block ref="6db4053e4bd84f28389116c8290b3d49" category="inline-image-macro-rx" type="image"></block></block>
   <block id="b4b8e0998a4e5151e2188c1d096326d0" category="list-text">ONTAP のクラスタ詳細ページで、クラスタ管理 IP アドレスと admin ユーザアカウントのパスワードを入力します。次に*[追加]*をクリックします。</block>
-  <block id="335b8d730a2f0487e442f91ea9c84906" category="inline-image-macro">このスクリーンショットは、BlueXPの[Discover ONTAP Cluster]ページとONTAP の[Cluster Details]エントリを示しています。</block>
-  <block id="97c18388177f0f05359f2b12abccde9d" category="paragraph"><block ref="97c18388177f0f05359f2b12abccde9d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="3e7cf4927d323dbc38b104e2c251cb3b" category="list-text">[Details and Credentials]ページで、作業環境の名前と概要 を入力し、*[Go]*をクリックします。</block>
-  <block id="8ffad5c27dd53aaf492789494bb00774" category="paragraph">BlueXPがONTAP クラスタを検出し、Canvasの作業環境として追加します。</block>
-  <block id="5279c23924f3332fe1d8119a66f0140b" category="inline-image-macro">このスクリーンショットは、BlueXPの[Canvas]ページを示しています。最近追加した作業環境が右側に表示されます。</block>
-  <block id="e52fd2ebaf723448aaf9cbb1749fb0b0" category="paragraph"><block ref="e52fd2ebaf723448aaf9cbb1749fb0b0" category="inline-image-macro-rx" type="image"></block></block>
   <block id="c5fbee6586294d81141f8dd158707985" category="inline-link">オンプレミスのONTAP クラスタを検出</block>
   <block id="c0a677dd25d6582ecb21203c7091df2c" category="paragraph">詳細については、ページを参照してください<block ref="6585a34a169ce9e8b8f4633a3f458722" category="inline-link-rx"></block>。</block>
   <block id="c8188720796c445c231833759dc4c4df" category="inline-link-macro">次の記事：SANの構成</block>
@@ -9037,7 +9002,6 @@
   <block id="ad6c7399ef512bb120b90c0e854635b1" category="paragraph">このオプションは、ファイルシステムのフリーズを解除し、操作を続行できるようにするために使用します。フリーズによってブロックされたファイルシステムの変更はブロック解除され、完了することができます。</block>
   <block id="f2ddfe11dbb395a190d1396ae5aafb10" category="paragraph">アプリケーションと整合性のあるSnapshotは、前述のワークフローをSnapCenter の一部として完全にオーケストレーションしたNetApp SnapCenter を使用して実行することもできます。詳細については、を参照してください<block ref="9a5e2070b6e96d49a5b2b2037cad6de1" category="inline-link-rx"></block>。</block>
   <block id="e856e073c795e5296f084eb44fe5ec0b" category="list-text">SnapMirror更新処理を実行して、業務用システムとDRシステムの同期を維持します。</block>
-  <block id="323bc6842dd43908b96304e186c466c4" category="paragraph">BlueXPのGUIの*[Replication]*タブから、SnapMirrorの更新を実行することもできます。</block>
   <block id="f84f8db19826515d042a16c1c41844f3" category="list-text">前の手順で作成したアプリケーションSnapshotに基づいてFlexCloneインスタンスを作成します。</block>
   <block id="d29c32719375e3ddeb3a0fd915e4824e" category="paragraph">前のタスクでは、新しいSnapshotも作成できますが、アプリケーションの整合性を確保するには、上記と同じ手順を実行する必要があります。</block>
   <block id="024831ed0625c177829f55af8469b7c6" category="list-text">FlexCloneボリュームをアクティブ化して、クラウドでEHRインスタンスを起動します。</block>
@@ -9054,13 +9018,8 @@
   <block id="ea33c9d3c2f7386981446c49afecf7fd" category="inline-image-macro">このスクリーンショットは、[Storage VM]ドロップダウンにある[stop]オプションを示しています。</block>
   <block id="afa53371621859e17a9eef316a9dadc2" category="paragraph"><block ref="afa53371621859e17a9eef316a9dadc2" category="inline-image-macro-rx" type="image"></block></block>
   <block id="f55dfdff995ff8e99fbcf080cbdab8b3" category="paragraph">アプリケーションのSnapshotを頻繁に作成できるように、FlexPod インスタンスのオンプレミスONTAP とAWSのCloud Volumes ONTAP の間でSnapMirrorレプリケーションがすでに設定されていることを確認します。</block>
-  <block id="d001e5a48ff9eda2ff6ebe5a8f4ce599" category="paragraph">SVMが停止したあと、<block ref="d0f08a44974997af7b6852c24d0e3397" prefix=" " category="inline-code"></block> ボリュームはBlueXPに表示されません。</block>
-  <block id="f689c908b10788bf6784367f1c1cdaa7" category="inline-image-macro">これで、ボリュームの概要画面にボリュームが表示されます。</block>
-  <block id="644f592a21f22f1f8c1970739b40a3fb" category="paragraph"><block ref="644f592a21f22f1f8c1970739b40a3fb" category="inline-image-macro-rx" type="image"></block></block>
   <block id="cf076cd6cea48d6b14ef787dcb383803" category="list-text">CVOでDRをアクティブ化</block>
   <block id="934ddf12f1f595715bb64e253baf0e1c" category="list-text">オンプレミスのONTAP とCloud Volumes ONTAP の間のSnapMirrorレプリケーション関係を解除し、CVOのデスティネーションボリュームを昇格します <block ref="51756a7cd46039c313c68e20e7a0b665" prefix="(" category="inline-code"></block>）を本番環境に移行します。</block>
-  <block id="766193daf219e3b8b36da8fef00be705" category="inline-image-macro">関係の解除オプション画面が表示されます。</block>
-  <block id="d862b36512bb7760c45cdbac86a29142" category="paragraph"><block ref="d862b36512bb7760c45cdbac86a29142" category="inline-image-macro-rx" type="image"></block></block>
   <block id="d6d13bccc90b9d45570ea809fb5bb73e" category="paragraph">SnapMirror関係を解除すると、デスティネーションボリュームのタイプがデータ保護（DP）から読み書き可能（rw）に変わります。</block>
   <block id="f70740da9dc5ca03b70be6657203c689" category="list-text">Cloud Volumes ONTAP でデスティネーションボリュームをアクティブ化し、クラウド内のEC2インスタンスでEHRインスタンスを起動します。</block>
   <block id="b6fda559fae5076177688bc6a37bd296" category="list-text">クラウド内のEHRインスタンス上のデータとファイルシステムにアクセスするには、まずONTAP ストレージを検出し、マルチパスのステータスを確認します。</block>
@@ -9068,12 +9027,8 @@
   <block id="7eee0206d656107aaa9bf7ef120e3a6a" category="list-text">最後に、ファイルシステムをマウントし、ファイルシステム情報を表示します。</block>
   <block id="44082e3b46953d4812f448608d99c165" category="paragraph">この出力は、災害から本番サイトがリカバリされるまで、ユーザがネットワーク経由でレプリケートされたデータにアクセスできることを示しています。</block>
   <block id="5eb76e69410671397b51abb1486b04c5" category="list-text">SnapMirror関係を反転します。この処理では、ソースボリュームとデスティネーションボリュームの役割が入れ替わります。</block>
-  <block id="70de9e5727789fc80f8c267cee97857b" category="inline-image-macro">このスクリーンショットは、[Reverse Relationship Option]ボックスを示しています。</block>
-  <block id="c34c0a97ee9ae9befa95cac2eccbfce6" category="paragraph"><block ref="c34c0a97ee9ae9befa95cac2eccbfce6" category="inline-image-macro-rx" type="image"></block></block>
   <block id="36a647ac73bb4bdfebf7a153741b2776" category="paragraph">この処理を実行すると、元のソースボリュームの内容がデスティネーションボリュームの内容で上書きされます。これは、オフラインになったソースボリュームを再アクティブ化する場合に役立ちます。</block>
   <block id="63974febe7228f8947e403575b8a5be9" category="paragraph">CVOボリュームに移動します <block ref="51756a7cd46039c313c68e20e7a0b665" prefix="(" category="inline-code"></block>）がソースボリュームになり、オンプレミスボリュームになります <block ref="d0f08a44974997af7b6852c24d0e3397" prefix="(" category="inline-code"></block>）がデスティネーションボリュームになります。</block>
-  <block id="0b96f7e6a117dd76b8402d0d6f5ab1e3" category="inline-image-macro">このスクリーンショットは、BlueXPで作成されたボリュームレプリケーション関係を示しています。</block>
-  <block id="023e534a4542a35221ad8bdfd50410f8" category="paragraph"><block ref="023e534a4542a35221ad8bdfd50410f8" category="inline-image-macro-rx" type="image"></block></block>
   <block id="eed0aa95ddb1d5b18d3345619165fa48" category="paragraph">前回のデータレプリケーションからソースボリュームが無効になったまでの間に元のソースボリュームに書き込まれたデータは保持されません。</block>
   <block id="c733edd0a3b856f20a3450e503872404" category="list-text">CVOボリュームへの書き込みアクセスを確認するには、クラウドのEHRインスタンスに新しいファイルを作成します。</block>
   <block id="435cfa710838757baa56054c58eaa065" category="paragraph">業務用サイトが停止しても、クライアントは引き続きデータにアクセスし、Cloud Volumes ONTAP ボリューム（現在はソースボリューム）への書き込みも実行できます。</block>
@@ -9086,12 +9041,8 @@
   <block id="fa412d6f3ed1cdce0c9504a29ba1e705" category="inline-image-macro">このスクリーンショットは、[Storage VM]ページのドロップダウンメニューを使用して特定のVMを起動する方法を示しています。</block>
   <block id="6360291b5531c8cea4e3757f24ab6ee6" category="paragraph"><block ref="6360291b5531c8cea4e3757f24ab6ee6" category="inline-image-macro-rx" type="image"></block></block>
   <block id="505be9c431e7e6a3d9ab21aa9836e430" category="list-text">Cloud Volumes ONTAP とオンプレミスのONTAP 間のSnapMirrorレプリケーション関係を解除し、オンプレミスボリュームを昇格 <block ref="d0f08a44974997af7b6852c24d0e3397" prefix="(" category="inline-code"></block>）を本番環境に戻します。</block>
-  <block id="f8c5c8900560b7f5f88ad1a1b0452323" category="inline-image-macro">このスクリーンショットは、関係を解除する方法を示しています。</block>
-  <block id="60be8181bec8e1c79a51e6a775c1bd19" category="paragraph"><block ref="60be8181bec8e1c79a51e6a775c1bd19" category="inline-image-macro-rx" type="image"></block></block>
   <block id="dc7bbc0ee640af98c03d036df40f0d54" category="paragraph">SnapMirror関係を解除すると、オンプレミスのボリュームタイプがデータ保護（DP）から読み取り/書き込み（RW）に変わります。</block>
   <block id="623ebbbee4018b0d7cbdc8d8c6acebe8" category="list-text">SnapMirror関係を反転します。今度はオンプレミスのONTAP ボリュームです <block ref="d0f08a44974997af7b6852c24d0e3397" prefix="(" category="inline-code"></block>）がソースボリュームになり、Cloud Volumes ONTAP ボリュームになります <block ref="51756a7cd46039c313c68e20e7a0b665" prefix="(" category="inline-code"></block>）がデスティネーションボリュームになります。</block>
-  <block id="67125b7d0d392d3e4c04bfe907340005" category="inline-image-macro">このスクリーンショットは、関係を反転する方法を示しています。</block>
-  <block id="275cd7fafe6d9246b8d8f9fd0f7c5096" category="paragraph"><block ref="275cd7fafe6d9246b8d8f9fd0f7c5096" category="inline-image-macro-rx" type="image"></block></block>
   <block id="43904594c7f37138b8a6a7fbb0821f09" category="paragraph">これらの手順を実行することで、元の構成が正常に復元されました。</block>
   <block id="6f7d95f45cae151358074a51f8bda042" category="list-text">オンプレミスのEHRインスタンスをリブートします。ファイルシステムをマウントし、を確認します<block ref="a48d2779dabc70e43a053fc28dc9817c" prefix=" " category="inline-code"></block> 本番環境がダウンしていたときにクラウドのEHRインスタンスに作成したものもここに存在します。</block>
   <block id="9b48b9c9ec9d99fc619c2b4e9c3088e0" category="inline-image-macro">このスクリーンショットは、オンプレミスのEHRインスタンスでnewfileを検索する方法を示しています。</block>
@@ -9137,53 +9088,24 @@
   <block id="a60707f257f506c44c1e10144156d5e9" category="inline-link-macro">CLIコマンドを使用したLVM管理</block>
   <block id="d73dc830af99cfb8368789a4c3d84d86" category="paragraph">これらのタスクの詳細については、ページを参照してください <block ref="f7acd9c17b6c2b5bf77f636a82f0e1c2" category="inline-link-macro-rx"></block>。</block>
   <block id="87dc154a226feafc8c0f6636a4ea0662" category="section-title">データ生成</block>
-  <block id="cb5e12adb8d3d69bbc383a99257d07ad" category="paragraph"><block ref="dcab5c9276bd8f6380cf433d2dcedb15" prefix="" category="inline-code"></block> は、EHRのI/Oシミュレータ（GenerateIO）用のPerlスクリプトデータジェネレータです。LUN内のデータはEHRを使用して生成されます<block ref="dcab5c9276bd8f6380cf433d2dcedb15" prefix=" " category="inline-code"></block> スクリプト：スクリプトは、EHRデータベース内にあるものと同様のデータを作成するように設計されています。</block>
   <block id="319a752029e11f63c3140a62a53db058" category="paragraph">実行中は、<block ref="dcab5c9276bd8f6380cf433d2dcedb15" prefix=" " category="inline-code"></block> スクリプトは、デフォルトでファイルシステムの85%をデータ生成に使用します。</block>
   <block id="461de58baf1ddbd210b1035b18213197" category="section-title">オンプレミスのONTAP とCloud Volumes ONTAP の間にSnapMirrorレプリケーションを設定</block>
   <block id="aeeec0576922eb4490b5fabadc6c4e36" category="paragraph">NetApp SnapMirror は、 LAN または WAN 経由でデータを高速でレプリケートするため、仮想環境と従来の環境の両方で、高いデータ可用性と高速なデータレプリケーションを実現できます。ネットアップストレージシステムにデータをレプリケートし、セカンダリデータを継続的に更新することで、データを最新の状態に保ちながら、必要なときにいつでもデータを利用できるようになります。外部レプリケーションサーバは必要ありません。</block>
   <block id="43dc5858e7d75f61be0cbcf94cdd063a" category="paragraph">オンプレミスのONTAP システムとCVOの間にSnapMirrorレプリケーションを設定するには、次の手順を実行します。</block>
-  <block id="ed1ae78d9c48d41bec72a9c42dc93ab6" category="list-text">Canvasで、ソースボリュームが含まれている作業環境を選択し、ボリュームのレプリケート先となる作業環境にソースボリュームをドラッグして、*[レプリケーション]*を選択します。</block>
-  <block id="ced6bf0a07ab417ed245905cbb4fffdd" category="inline-image-macro">このスクリーンショットは、[BlueXP Canvas]画面を示しています。オンプレミスのONTAP インスタンスのドロップダウンで[Replication]が選択されています。</block>
-  <block id="8745ff3584d6c922dd10bb2e6e879388" category="paragraph"><block ref="8745ff3584d6c922dd10bb2e6e879388" category="inline-image-macro-rx" type="image"></block></block>
   <block id="f58a624f61e7a0b14fe75113e79b80e4" category="paragraph">以降の手順では、Cloud Volumes ONTAP クラスタとオンプレミスのONTAP クラスタ間に同期関係を作成する方法について説明します。</block>
   <block id="fb22d62f3618bb54d94521b93977ea24" category="list-text">*ソースとデスティネーションのピアリングのセットアップ。*このページが表示された場合は、クラスタピア関係に使用するすべてのクラスタ間LIFを選択します。</block>
-  <block id="8ad0d7eecc1850f9b0d7760d733eb445" category="inline-image-macro">このスクリーンショットは、BlueXPの[Source Peering Setup]画面を示しています。</block>
-  <block id="805d4e2b6be4d061cea83ff81e86ce3f" category="paragraph"><block ref="805d4e2b6be4d061cea83ff81e86ce3f" category="inline-image-macro-rx" type="image"></block></block>
   <block id="471316ca4a7c0b900d3e29454976b380" category="list-text">*ソースボリュームの選択。*レプリケートするボリュームを選択します。</block>
-  <block id="17b42b0578816d664354fe39dd36d9ec" category="inline-image-macro">このスクリーンショットは、BlueXPの[Source Volume Selection]画面を示しています。1つのボリューム（14個）が表示されています。</block>
-  <block id="fd7e53126c9c2f0d3d521224c240f2bb" category="paragraph"><block ref="fd7e53126c9c2f0d3d521224c240f2bb" category="inline-image-macro-rx" type="image"></block></block>
   <block id="eb3ca3a4bc2c65c65ad46e9da97cfa77" category="list-text">*デスティネーションディスクの種類と階層化。*ターゲットがCloud Volumes ONTAP システムの場合は、デスティネーションディスクの種類を選択し、データ階層化を有効にするかどうかを選択します。</block>
-  <block id="5e6f51795b917e63d0d64c2bbe446057" category="inline-image-macro">このスクリーンショットは、汎用SSDを選択したBlueXPの[Destination Disk Type]画面を示しています。</block>
-  <block id="d7f9eb49d72dd80d22af8195658ae1df" category="paragraph"><block ref="d7f9eb49d72dd80d22af8195658ae1df" category="inline-image-macro-rx" type="image"></block></block>
   <block id="61e1f5dff1c3c703419d8f9417353c10" category="list-text">*デスティネーションボリューム名：*デスティネーションボリュームの名前を指定し、デスティネーションアグリゲートを選択してください。デスティネーションが ONTAP クラスタの場合は、デスティネーション Storage VM も指定する必要があります。</block>
-  <block id="ffd54736aab02566f0aed4f26b6d451e" category="inline-image-macro">このスクリーンショットは、BlueXPの[Destination volume name]画面を示しています。関連する情報が入力されています。</block>
-  <block id="2e90fb57705348109b4c21ed96ed2d4d" category="paragraph"><block ref="2e90fb57705348109b4c21ed96ed2d4d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="5b939322583091b8a68286d2af517298" category="list-text">*最大転送速度。*データを転送できる最大転送速度（1秒あたりのメガバイト数）を指定します。</block>
-  <block id="db7a4259027bf60f3551baa3a7796bdd" category="inline-image-macro">このスクリーンショットは、BlueXPの[Max Transfer Rate]画面を示しています。100MB/sが入力されています。</block>
-  <block id="fec5ed9e5476a19f12514f55bb56df45" category="paragraph"><block ref="fec5ed9e5476a19f12514f55bb56df45" category="inline-image-macro-rx" type="image"></block></block>
   <block id="43b69288e2e4056e2603dc7b20958252" category="inline-link">レプリケーションポリシーについて説明します</block>
   <block id="005c5c7ed7587e61292456c462fac4f6" category="list-text">*レプリケーションポリシー。*デフォルトポリシーを選択するか*[その他のポリシー]*をクリックし、いずれかの高度なポリシーを選択します。ヘルプを表示するには、<block ref="9e8cabf6943ebb9704914b1bfc9f0945" category="inline-link-rx"></block>。</block>
-  <block id="5100273ef265c2d8671bda9f1665b34b" category="inline-image-macro">このスクリーンショットは、BlueXPの[Replication Policy]ページを示しています。デフォルトのポリシーである「Mirror」または「Mirror and Backup」が表示されています。</block>
-  <block id="61ddf602d164361a34a47fefce91b58d" category="paragraph"><block ref="61ddf602d164361a34a47fefce91b58d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="eb5df7c19fc4406009723468c0e62d1a" category="list-text">*スケジュール。* 1回限りのコピーまたは定期的なスケジュールを選択します。いくつかのデフォルトスケジュールを使用できます。別のスケジュールが必要な場合は、で新しいスケジュールを作成する必要があります<block ref="253a62e31bdaa8ecd365852c9c6f48bf" prefix=" " category="inline-code"></block> System Manager を使用</block>
-  <block id="23df5b4ceef0390eec3d131dbad9de9c" category="inline-image-macro">このスクリーンショットは、BlueXPレプリケーションセットアップスケジュール画面を示しています。複数のタイミングオプションが表示されています。</block>
-  <block id="52c012ee5512a15cbadd9fd508b9883d" category="paragraph"><block ref="52c012ee5512a15cbadd9fd508b9883d" category="inline-image-macro-rx" type="image"></block></block>
   <block id="681b9f7f2e3fb5823a548eaf46772740" category="list-text">*確認。*選択内容を確認し、*移動*をクリックします。</block>
-  <block id="bd032e5c50284e702a4cd13a09c21ed2" category="inline-image-macro">このスクリーンショットは、BlueXPレプリケーションセットアップの[Review and Approve]画面を示しています。</block>
-  <block id="09b478cd7d21f4268dd1bb3c20cebf08" category="paragraph"><block ref="09b478cd7d21f4268dd1bb3c20cebf08" category="inline-image-macro-rx" type="image"></block></block>
   <block id="8cbeafabda07bd5d65eb9aa0c0d2b357" category="paragraph">これらの設定手順の詳細については、を参照してください<block ref="31b0fd71dd59dff102791c5263ebe9d0" category="inline-link-rx"></block>。</block>
-  <block id="7dfc3e202f3b7ca9ec0050cbaf1e45ec" category="paragraph">BlueXPがデータレプリケーションプロセスを開始しますオンプレミスのONTAP システムとCloud Volumes ONTAP の間に確立された*レプリケーション*サービスを確認できます。</block>
-  <block id="d070f19e4b4354bb4c58d3987a88160b" category="inline-image-macro">このスクリーンショットは、BlueXPの[Canvas]画面を示しています。レプリケーションサービスはCVOインスタンスとオンプレミスのONTAP インスタンスを結ぶ線で示されています。</block>
-  <block id="5d5e1a4ee1a6e0ef804f3d348d06921b" category="paragraph"><block ref="5d5e1a4ee1a6e0ef804f3d348d06921b" category="inline-image-macro-rx" type="image"></block></block>
   <block id="5ae2434cdcfd33a5c2fe29bf123d2b92" category="paragraph">Cloud Volumes ONTAP クラスタでは、新しく作成されたボリュームを確認できます。</block>
-  <block id="4859f4cdec8e1861cb7a996b3c25d3bd" category="inline-image-macro">このスクリーンショットは、BlueXPの[Volumes]タブを示しています。新しいボリュームが表示されています。</block>
-  <block id="6aefe6c7a2813c1c3fcf4fbb7a05ccd6" category="paragraph"><block ref="6aefe6c7a2813c1c3fcf4fbb7a05ccd6" category="inline-image-macro-rx" type="image"></block></block>
   <block id="2cbdde181a38a501a583654789ddc62c" category="paragraph">オンプレミスボリュームとクラウドボリュームの間にSnapMirror関係が確立されたことを確認することもできます。</block>
-  <block id="f41eab09be0f98ef254a74ab0772de58" category="inline-image-macro">このスクリーンショットは、[BlueXP Replications]タブを示しており、作成したレプリケーション関係に関する情報が表示されています。</block>
-  <block id="b08a32ae423fad92a0a509c0cccade9f" category="paragraph"><block ref="b08a32ae423fad92a0a509c0cccade9f" category="inline-image-macro-rx" type="image"></block></block>
   <block id="e55baf8c5f94e26f12395e9c1bae6505" category="paragraph">レプリケーションタスクの詳細については、*[レプリケーション]*タブを参照してください。</block>
-  <block id="8ac544572f2ee9ec241cf2a7261f841d" category="inline-image-macro">このスクリーンショットは、[Replications]タブの下に詳細情報を示しています。</block>
-  <block id="aa7f3d4b43ec32726c63713b983c8b40" category="paragraph"><block ref="aa7f3d4b43ec32726c63713b983c8b40" category="inline-image-macro-rx" type="image"></block></block>
   <block id="87766c280f27a90ee12d6c50496cd8c4" category="paragraph"><block ref="87766c280f27a90ee12d6c50496cd8c4" category="inline-link-macro-rx"></block></block>
   <block id="1948f572a268d346b7127bd97bba5c72" category="summary">ネットアップは、ヘルスケアを含むエンタープライズアプリケーション向けに単一のデータ管理解決策 を提供しています。ネットアップは、病院のデジタル変革への道のりを支援することができます。NetApp Cloud Volumes ONTAP は、医療データ管理のための解決策 を提供します。FlexPod データセンターから、AWSなどのパブリッククラウドに導入されたCloud Volumes ONTAP にデータを効率的にレプリケートできます。</block>
   <block id="77ae9bf42d08b53b81e79bcd90939853" category="doc">TR-4960：『FlexPod Hybrid Cloud with Cloud Volumes ONTAP for Epic』</block>
@@ -9205,15 +9127,9 @@
   <block id="7007d499776b2bfa8941c62754598088" category="list-text">*カスタマイズされた保護。* Cloud Volumes ONTAP は、ONTAP からクラウドへのブロックレベルのデータレプリケーションを提供し、差分更新によってデスティネーションを最新の状態に維持します。同期スケジュールを指定して、ソースでの変更が転送されるタイミングを決定できます。これにより、あらゆる種類の医療データに対してカスタマイズされた保護が提供されます。</block>
   <block id="77bb4fcf677f48b0d8952ec06061ae73" category="list-text">*フェイルオーバーとフェイルバック*災害が発生した場合、ストレージ管理者はクラウドボリュームへのフェイルオーバーを迅速に設定できます。プライマリサイトがリカバリされると、DR環境で作成された新しいデータがソースボリュームに同期され、セカンダリデータレプリケーションが再確立されます。このようにして、システムを停止することなく医療データを簡単にリカバリできます。</block>
   <block id="dc7918d634ea584c506bbf88e388c7b8" category="list-text">*効率性。*セカンダリクラウドコピーのストレージスペースとコストは、データ圧縮、シンプロビジョニング、重複排除を使用して最適化されます。医療データは、圧縮と重複排除が適用された形式でブロックレベルで転送されるため、転送速度が向上します。また、データは低コストのオブジェクトストレージに自動的に階層化され、DRシナリオなどでアクセスされたときにのみハイパフォーマンスストレージに戻されます。これにより、継続的なストレージコストを大幅に削減できます。</block>
-  <block id="3da933609e167649418f9b96fc190f9b" category="list-text">*ランサムウェア対策。* NetApp BlueXPのランサムウェア対策は、オンプレミス環境とクラウド環境にわたってデータソースをスキャンし、セキュリティの脆弱性を検出し、現在のセキュリティステータスとリスクスコアリングを提供します。次に、さらに調査して修正できる実践的な推奨事項が提示されます。このようにして、医療機関の重要なデータをランサムウェア攻撃から保護できます。</block>
-  <block id="fe31b114e110e2af1fd930bf2da53e7a" category="paragraph">このセクションでは、解決策 の論理トポロジについて説明します。次の図は、FlexPod オンプレミス環境、Amazon Web Services（AWS）で実行されるNetApp Cloud Volumes ONTAP （CVO）、NetApp BlueXP SaaSプラットフォームで構成される解決策 トポロジを示しています。</block>
-  <block id="f0f63a1e62017f4c7d4b8fc95de5055d" category="inline-image-macro">この図は、ONTAP を実行しているFlexPod インスタンスとパブリッククラウドで実行されているNetApp Cloud Volumes ONTAP 間のSnapMirrorレプリケーションを示しています。</block>
-  <block id="59fdaa90d546a53d932ddc47fc4a4d12" category="paragraph"><block ref="59fdaa90d546a53d932ddc47fc4a4d12" category="inline-image-macro-rx" type="image"></block></block>
   <block id="96b3193f9bd9b4980fd69f862b8b0791" category="paragraph">コントロールプレーンとデータプレーンは、エンドポイント間で明確に示されます。データプレーンは、セキュアなサイト間VPN接続を利用して、FlexPod のオールフラッシュFAS で実行されるONTAP インスタンスとAWSのNetApp CVOインスタンスの間で実行されます。医療ワークロードのデータをオンプレミスのFlexPod データセンターからNetApp Cloud Volumes ONTAP にレプリケートするには、NetApp SnapMirrorレプリケーションを使用します。この解決策 では、NetApp CVOインスタンスにあるコールドデータのバックアップとAWS S3への階層化（オプション）もサポートされています。</block>
   <block id="69bfd0a80e68c85caea0b9999fc6ba41" category="paragraph"><block ref="69bfd0a80e68c85caea0b9999fc6ba41" category="inline-link-macro-rx"></block></block>
   <block id="0c308b16788e826f96a07e6a1d6c3629" category="paragraph"><block ref="0c308b16788e826f96a07e6a1d6c3629" category="inline-link-macro-rx"></block></block>
-  <block id="43e0b63bc072ee0888a5c27056246b4c" category="inline-link"><block ref="43e0b63bc072ee0888a5c27056246b4c" category="inline-link-rx"></block></block>
-  <block id="29ba8e8610e036b3f180753a1567b2de" category="paragraph"><block ref="29ba8e8610e036b3f180753a1567b2de" category="inline-link-rx"></block></block>
   <block id="695439b8fa8598673f34199f94044423" category="inline-link"><block ref="695439b8fa8598673f34199f94044423" category="inline-link-rx"></block></block>
   <block id="5d8b5cf0cf78cc9a93bb58b4d8b64c3b" category="paragraph"><block ref="5d8b5cf0cf78cc9a93bb58b4d8b64c3b" category="inline-link-rx"></block></block>
   <block id="486388bbe4cda183a0e74df6ada2a454" category="list-text">AWS での Cloud Volumes ONTAP のクイックスタート</block>
@@ -9235,7 +9151,6 @@
   <block id="c1138e31cf3bd66be11eeb4877babdd1" category="sidebar">FlexPod ハイブリッドクラウドとCloud Volumes ONTAP for Epic</block>
   <block id="1522a775ace254939b906658e7521ca9" category="section-title">EHR</block>
   <block id="ba8a69a3d262e3d66f6f5cdc83781213" category="paragraph">電子カルテ（EHR）は、中規模および大規模な医療グループ、病院、統合医療組織向けのソフトウェアを作成しています。顧客には、コミュニティ病院、学術施設、子供の組織、セーフティネットプロバイダー、マルチホスピタルシステムも含まれます。EHRに統合されたソフトウェアは、臨床、アクセス、収益の機能にまたがっており、家庭でも利用できます。</block>
-  <block id="df788b689025995ee4f69e5d3ecf444d" category="paragraph">FlexPod はEHR検証済みで、Intel Xeonプロセッサ搭載のCisco UCS、Red Hat Enterprise Linux（RHEL）、VMware ESXiによる仮想化を含むプラットフォームをサポートしています。このプラットフォームは、ONTAP を実行するネットアップストレージとしてEHRが評価している「High Comfort Level」と組み合わせることで、お客様は、FlexPod を介してフルマネージドのプライベートクラウドで医療アプリケーションを実行できます。このクラウドは、いずれのパブリッククラウドプロバイダにも接続できます。</block>
   <block id="53daffada2671da93073fbf613b0c7f6" category="summary">このドキュメントでは、最新のハードウェアおよびソフトウェア製品を使用したFlexPod リファレンスアーキテクチャについて説明し、VMware ESXi仮想環境でMicrosoft SQL Server 2019データベースをホストする場合の導入に関する推奨事項を示します。</block>
   <block id="ac8ab1f328e99fe87fc6a46ababbad87" category="paragraph">ネットアップGopu Narasimha Reddy、Cisco Sanjeev Naldurgkar、Cisco Atul Bhalodia</block>
   <block id="a3f5786e88d487e3db751ad3e2f32297" category="paragraph">このドキュメントでは、最新のハードウェアおよびソフトウェア製品を使用したFlexPod リファレンスアーキテクチャについて説明し、VMware ESXi仮想環境でMicrosoft SQL Server 2019データベースをホストする場合の導入に関する推奨事項を示します。また、この解決策 では、Cisco Workload Optimization Manager（CWOM）も使用されています。CWOMは、SQLワークロードとインフラストラクチャの両方でリソースを最適かつ効率的に使用するための推奨事項を自動で提供します。</block>
@@ -9751,4 +9666,48 @@
   <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
   <block id="43240d20188b8ece0dea0d19f25bca8e" category="paragraph">Astra Trident は、 Kubernetes クラスターにポッドとしてデプロイされ、Kubernetes ワークロードに動的なストレージ オーケストレーション サービスを提供します。これにより、コンテナ化されたアプリケーションは、 NetApp ONTAP (NetApp AFF、 NetApp FAS、 NetApp ONTAP Select、クラウド、 Amazon FSx for NetApp ONTAP)、 NetApp Elementソフトウェア (NetApp SolidFire)、 Azure NetApp Filesサービスなど、NetApp の幅広いポートフォリオから永続ストレージを迅速かつ簡単に利用できるようになります。FlexPod環境では、 Astra Tridentを使用して、 NetApp AFFおよびFASシステムやCloud Volumes ONTAPなどのONTAPストレージ プラットフォームでホストされているNetApp FlexVolボリュームと LUN によってサポートされるコンテナの永続ボリュームを動的にプロビジョニングおよび管理します。Trident は、 Astra Control が提供するアプリケーション保護スキームの実装においても重要な役割を果たします。AstraTridentの詳細については、<block ref="a4e84d4448e67c302cfd652fac18bef7" category="inline-link-rx"></block></block>
+  <block id="43876a7baad9b163422baffbc251343e" category="list-text">サポートする販売注文の関連販売属性:</block>
+  <block id="dd67a759871b4a5f3afa8f25d59b8886" category="list-text">FlexPodの権利</block>
+  <block id="05ca7330784d84200d4a867bf1e7f701" category="list-text">FlexPodソリューションのサポート資格</block>
+  <block id="0662382e873bd21e2208226491d8dde5" category="summary">このセクションでは、 Cloud Volumes ONTAP、 FlexPod、 ONTAPストレージ、およびNetApp Consoleをインストールして構成する方法について説明します。</block>
+  <block id="e1e90293550a157b4304d07e50558a74" category="list-text">NetApp Consoleにアクセスします。</block>
+  <block id="3c031b939f6ec312ee601d021e7a6644" category="inline-link">NetApp Console</block>
+  <block id="8bd88a6e146388c50931a9b4474ac68b" category="inline-link">NetApp Consoleのセットアップと管理</block>
+  <block id="da00efd9428c26d42c9c04886bd1dbae" category="inline-link">NetApp Consoleの権限の概要</block>
+  <block id="33d6154a2418074930f690d4b1724852" category="paragraph">コンソールやその他のクラウドサービスにアクセスするには、<block ref="05d5f8d1d49f7e89885d2707f683c4b6" category="inline-link-rx"></block> 。コンソールアカウントでワークスペースとユーザーを設定するには、<block ref="a904afc19eaeee2b40eab823cbda7f56" category="inline-link-rx"></block> 。コンソールから直接クラウド プロバイダーにコンソール エージェントを展開する権限を持つアカウントが必要です。必要な権限を取得するには、<block ref="ffebd836aecbd6850b7db8839f85486b" category="inline-link-rx"></block> 。</block>
+  <block id="5be7d5b5674442802785ccdef68829df" category="list-text">コンソール エージェントをデプロイします。</block>
+  <block id="7ff9f8e2467774df163161a38d2d5040" category="inline-link">AWS のコンソールエージェントのインストールオプション</block>
+  <block id="85dfb70b82a75be4f57b2a26e7d5718e" category="paragraph">Cloud Volume ONTAPシステムを追加する前に、コンソール エージェントを展開する必要があります。コンソール エージェントが配置されていない状態で最初のCloud Volumes ONTAPシステムを作成しようとすると、コンソールからプロンプトが表示されます。コンソールからAWSにコンソールエージェントを展開するには、<block ref="3a0091a78ac20a95fb375f609c255319" category="inline-link-rx"></block> 。</block>
+  <block id="1d1240bd548a4a1a867b70292eb1aeed" category="paragraph">このソリューションでは、AWS に単一ノードのCloud Volumes ONTAPシステムを導入しました。</block>
+  <block id="1316c5dcc0ef8a6f769bb78e02e5f9ac" category="section-title">オンプレミスのFlexPodストレージをNetApp Consoleに追加する</block>
+  <block id="518b5ab1b48ff0f4544aa74af3d40ce9" category="paragraph">コンソールを使用してFlexPodストレージをシステムに追加するには、次の手順を実行します。</block>
+  <block id="34ac0f69e71574f430e41994e4a0da31" category="list-text">ナビゲーション メニューから、*ストレージ* &gt; *システム* を選択します。</block>
+  <block id="32dcbcd0ce3b64308d2958a48ffdeb6b" category="list-text">「システム」ページで、「システムの追加」をクリックし、「オンプレミス」を選択します。</block>
+  <block id="bed271321bea87b15191f74d654222c7" category="paragraph">コンソールはONTAPクラスタを検出し、[システム] ページにシステムとして追加します。</block>
+  <block id="aea408788718a766aeaaec0678fa8dc6" category="paragraph"><block ref="dcab5c9276bd8f6380cf433d2dcedb15" prefix="" category="inline-code"></block>EHR の I/O シミュレータ (GenerateIO) 用の Perl スクリプト データ ジェネレータです。 LUN内のデータはEHRで生成される<block ref="dcab5c9276bd8f6380cf433d2dcedb15" prefix=" " category="inline-code"></block>スクリプト。このスクリプトは、EHR データベース内のデータに類似したデータを作成するように設計されています。</block>
+  <block id="6cf426082c7adab94ff07f99dd09a2ae" category="list-text">[システム] で、ソース ボリュームを含むシステムを選択し、ボリュームを複製するシステムにドラッグして、[レプリケーション] を選択します。</block>
+  <block id="b68c7714983d2dc7aff474dc403e9041" category="paragraph">コンソールはデータ複製プロセスを開始します。この段階では、オンプレミスのONTAPシステムとCloud Volumes ONTAPの間で確立された *レプリケーション* サービスを確認できます。</block>
+  <block id="5a5aa5dac0e47ab81b175a57d39b2dfd" category="paragraph">FlexPodは EHR 認定を受けており、Intel Xeon プロセッサを搭載したCisco UCS、Red Hat Enterprise Linux (RHEL)、および VMware ESXi による仮想化を含むプラットフォームをサポートします。このプラットフォームは、 ONTAP を実行するNetAppストレージに対する EHR の High Comfort Level ランキングと組み合わせることで、任意のパブリック クラウド プロバイダーに接続できるFlexPodを通じて、完全に管理されたプライベート クラウドで医療アプリケーションを実行できるようになります。</block>
+  <block id="454bb1110d6093b9ef29fd01d063b03f" category="inline-link-macro">NetApp Consoleのドキュメント</block>
+  <block id="b983bfbe5ec8438db9fb9f19759e3f18" category="paragraph">NetApp Consoleは、IT 専門家やクラウド アーキテクトがNetAppクラウド ソリューションを使用してハイブリッド マルチクラウド インフラストラクチャを集中管理できるようにする、エンタープライズ クラスの SaaS ベースの管理プラットフォームです。オンプレミスとクラウド ストレージを表示および管理するための集中システムを提供し、ハイブリッド、複数のクラウド プロバイダー、アカウントをサポートします。詳細については、 <block ref="b36082d025a157f945bec9c31f710a3a" category="inline-link-macro-rx"></block>。</block>
+  <block id="e76758412e5a64841b8710e5fb81ab0c" category="section-title">コンソールエージェント</block>
+  <block id="01374633e0b85e5293668e1923426944" category="paragraph">コンソール エージェント インスタンスにより、コンソールはパブリック クラウド環境内のリソースとプロセスを管理できるようになります。コンソールによって提供される多くの機能にはコンソール エージェントが必要であり、クラウドまたはオンプレミス ネットワークに展開できます。</block>
+  <block id="c91f8697394a7fb28c9a83b44582be31" category="paragraph">コンソール エージェントは次の場所でサポートされます。</block>
+  <block id="919907c49b488683fa1ddd5c9088c12b" category="inline-link-macro">コンソールエージェントの詳細</block>
+  <block id="ee89ef5b55c2a87a184f43025decfd81" category="paragraph"><block ref="68dba57e2e701d62034c5f00a445ccac" category="inline-link-macro-rx"></block>。</block>
+  <block id="3cf6200e8b00427c9442b10b8f274da7" category="paragraph">詳しい情報については、<block ref="a3566b6709d68a3a1029f44b325eadaa" category="inline-link-macro-rx"></block> 。</block>
+  <block id="824ae54596b9693994b0149193fdad01" category="paragraph">詳細については、 <block ref="72c51d15f00a20805275a2725e33f916" category="inline-link-macro-rx"></block>。</block>
+  <block id="c65f23ce2d02c64e04c3c7376ef78b2e" category="paragraph">VMware vSphereとそのコンポーネントの詳細については、以下を参照してください。<block ref="1f73295bb656325bbd336b162a02c12d" category="inline-link-macro-rx"></block> 。</block>
+  <block id="9279f26780ded18d0540905e2f4c2443" category="paragraph">詳細については、<block ref="fc0491c933cd37e813a120bdaa5242bb" category="inline-link-macro-rx"></block> 。</block>
+  <block id="a000b140fe824ced4237ae63f1c6e298" category="paragraph">このハイブリッドクラウドソリューションは、サポートされているバージョンのソフトウェア、ファームウェア、ハードウェアを実行しているFlexPod環境に拡張できます。<block ref="d81b4b28c891206234cb1654e6016fc1" category="inline-link-macro-rx"></block> 、<block ref="a20168bfee610ed2009269dc61511d00" category="inline-link-macro-rx"></block> 、 そして<block ref="cbb6475bbf94049e4e0384caf6c1ee3e" category="inline-link-macro-rx"></block>。</block>
+  <block id="e560e67994c1662218988a427804df78" category="paragraph">次の表は、コンソールとCloud Volumes ONTAP のバージョンを示しています。</block>
+  <block id="bccaa4aa80831b76c11240a16447975f" category="cell">コンソール</block>
+  <block id="1e4a345000c59774abe93a846772304d" category="list-text">*ランサムウェア保護* NetApp Consoleのランサムウェア保護は、オンプレミスとクラウド環境全体のデータ ソースをスキャンし、セキュリティの脆弱性を検出し、現在のセキュリティ ステータスとリスク スコアを提供します。次に、さらに調査して修復するための実用的な推奨事項を提供します。これにより、重要な医療データをランサムウェア攻撃から保護できます。</block>
+  <block id="9d5f4724eb780613e5541d9d830a30e3" category="paragraph">このセクションでは、ソリューションの論理トポロジについて説明します。次の図は、 FlexPodオンプレミス環境、Amazon Web Services (AWS) 上で実行されるNetApp Cloud Volumes ONTAP (CVO)、およびNetApp Console SaaS プラットフォームで構成されるソリューション トポロジを表しています。</block>
+  <block id="41b0131c2b3a5dcd8f82bebcbf9ffabf" category="inline-image-macro">この画像は、 ONTAPを実行しているFlexPodインスタンスとパブリック クラウドで実行されているNetApp Cloud Volumes ONTAP間のSnapMirrorレプリケーションを示しています。</block>
+  <block id="6d1c1ae7e8b364338a632417548ce94f" category="paragraph"><block ref="6d1c1ae7e8b364338a632417548ce94f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="83c3fc170ad6edab0bc095c039e09aeb" category="paragraph">SnapMirror の更新は、 NetApp ConsoleGUI の *レプリケーション* タブから実行することもできます。</block>
+  <block id="1ae823e8252cefe82659e80378adf180" category="paragraph">SVMが停止した後、<block ref="d0f08a44974997af7b6852c24d0e3397" prefix=" " category="inline-code"></block>ボリュームはコンソールに表示されません。</block>
+  <block id="0d6e5faf80b288a1d3277954d0b55ae8" category="inline-link"><block ref="0d6e5faf80b288a1d3277954d0b55ae8" category="inline-link-rx"></block></block>
+  <block id="17a7b956a1673e2b7eed84e47e417df1" category="paragraph"><block ref="17a7b956a1673e2b7eed84e47e417df1" category="inline-link-rx"></block></block>
 </blocks>

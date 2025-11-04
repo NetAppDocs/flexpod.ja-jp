@@ -23,6 +23,12 @@ FlexPod アーキテクチャには、相互運用性とサポート関連の次
 ** ネットアップ機器に対する SupportEdge Advisor または SupportEdge Premium のサポート
 
 
+* サポートする販売注文の関連販売属性:
++
+** FlexPodの権利
+** FlexPodソリューションのサポート資格
+
+
 
 
 詳細については、ネットアップを参照してください http://mysupport.netapp.com/matrix["IMT"^]。

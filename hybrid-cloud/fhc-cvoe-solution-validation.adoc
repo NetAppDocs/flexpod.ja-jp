@@ -72,7 +72,7 @@ singlecvoaws::> snapmirror update -destination-path svm_singlecvoaws:hc_iscsi_vo
 Operation is queued: snapmirror update of destination “svm_singlecvoaws:hc_iscsi_vol_copy”.
 ....
 +
-BlueXPのGUIの*[Replication]*タブから、SnapMirrorの更新を実行することもできます。
+SnapMirror の更新は、 NetApp ConsoleGUI の *レプリケーション* タブから実行することもできます。
 
 . 前の手順で作成したアプリケーションSnapshotに基づいてFlexCloneインスタンスを作成します。
 +
@@ -87,7 +87,7 @@ singlecvoaws::> volume clone create -flexclone kamini_clone -type RW -parent-vse
 . FlexCloneボリュームをアクティブ化して、クラウドでEHRインスタンスを起動します。
 +
 ....
-singlecvoaws::> lun mapping create –vserver svm_singlecvoaws –path /vol/kamini_clone/iscsi_lun1 -igroup ehr-igroup –lun-id 0
+singlecvoaws::> lun mapping create -vserver svm_singlecvoaws -path /vol/kamini_clone/iscsi_lun1 -igroup ehr-igroup -lun-id 0
 
 singlecvoaws::> lun mapping show
 Vserver     Path                                  Igroup    LUN ID  Protocol
@@ -162,17 +162,11 @@ image:fhc-cvoe-image21.png["このスクリーンショットは、[Storage VM]�
 アプリケーションのSnapshotを頻繁に作成できるように、FlexPod インスタンスのオンプレミスONTAP とAWSのCloud Volumes ONTAP の間でSnapMirrorレプリケーションがすでに設定されていることを確認します。
 
 +
-SVMが停止したあと、 `hc_iscsi_vol` ボリュームはBlueXPに表示されません。
-
-+
-image:fhc-cvoe-image22.png["これで、ボリュームの概要画面にボリュームが表示されます。"]
+SVMが停止した後、 `hc_iscsi_vol`ボリュームはコンソールに表示されません。
 
 . CVOでDRをアクティブ化
 +
 .. オンプレミスのONTAP とCloud Volumes ONTAP の間のSnapMirrorレプリケーション関係を解除し、CVOのデスティネーションボリュームを昇格します (`hc_iscsi_vol_copy`）を本番環境に移行します。
-+
-image:fhc-cvoe-image23.png["関係の解除オプション画面が表示されます。"]
-
 +
 SnapMirror関係を解除すると、デスティネーションボリュームのタイプがデータ保護（DP）から読み書き可能（rw）に変わります。
 
@@ -186,7 +180,7 @@ svm_singlecvoaws hc_iscsi_vol_copy RW
 .. Cloud Volumes ONTAP でデスティネーションボリュームをアクティブ化し、クラウド内のEC2インスタンスでEHRインスタンスを起動します。
 +
 ....
-singlecvoaws::> lun mapping create –vserver svm_singlecvoaws –path /vol/hc_iscsi_vol_copy/iscsi_lun1 -igroup ehr-igroup –lun-id 0
+singlecvoaws::> lun mapping create -vserver svm_singlecvoaws -path /vol/hc_iscsi_vol_copy/iscsi_lun1 -igroup ehr-igroup -lun-id 0
 
 singlecvoaws::> lun mapping show
 Vserver     Path                                Igroup   LUN ID  Protocol
@@ -237,16 +231,10 @@ Filesystem                 1K-blocks  Used      Available  Use%  Mounted on
 
 .. SnapMirror関係を反転します。この処理では、ソースボリュームとデスティネーションボリュームの役割が入れ替わります。
 +
-image:fhc-cvoe-image24.png["このスクリーンショットは、[Reverse Relationship Option]ボックスを示しています。"]
-
-+
 この処理を実行すると、元のソースボリュームの内容がデスティネーションボリュームの内容で上書きされます。これは、オフラインになったソースボリュームを再アクティブ化する場合に役立ちます。
 
 +
 CVOボリュームに移動します (`hc_iscsi_vol_copy`）がソースボリュームになり、オンプレミスボリュームになります (`hc_iscsi_vol`）がデスティネーションボリュームになります。
-
-+
-image:fhc-cvoe-image25.png["このスクリーンショットは、BlueXPで作成されたボリュームレプリケーション関係を示しています。"]
 
 +
 前回のデータレプリケーションからソースボリュームが無効になったまでの間に元のソースボリュームに書き込まれたデータは保持されません。
@@ -283,9 +271,6 @@ image:fhc-cvoe-image26.png["このスクリーンショットは、[Storage VM]�
 
 . Cloud Volumes ONTAP とオンプレミスのONTAP 間のSnapMirrorレプリケーション関係を解除し、オンプレミスボリュームを昇格 (`hc_iscsi_vol`）を本番環境に戻します。
 +
-image:fhc-cvoe-image27.png["このスクリーンショットは、関係を解除する方法を示しています。"]
-
-+
 SnapMirror関係を解除すると、オンプレミスのボリュームタイプがデータ保護（DP）から読み取り/書き込み（RW）に変わります。
 
 +
@@ -296,9 +281,6 @@ vserver        volume       type
 Healthcare_SVM hc_iscsi_vol RW
 ....
 . SnapMirror関係を反転します。今度はオンプレミスのONTAP ボリュームです (`hc_iscsi_vol`）がソースボリュームになり、Cloud Volumes ONTAP ボリュームになります (`hc_iscsi_vol_copy`）がデスティネーションボリュームになります。
-+
-image:fhc-cvoe-image28.png["このスクリーンショットは、関係を反転する方法を示しています。"]
-
 +
 これらの手順を実行することで、元の構成が正常に復元されました。
 

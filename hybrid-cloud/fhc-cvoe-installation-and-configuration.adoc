@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar 
 permalink: hybrid-cloud/fhc-cvoe-installation-and-configuration.html 
-keywords: cloud volumes ontap, flexpod, ontap bluexp, installation, configuration 
-summary: このセクションでは、Cloud Volumes ONTAP 、FlexPod 、ONTAP ストレージ、BlueXPをインストールして設定する方法について説明します。 
+keywords: cloud volumes ontap, flexpod, ontap netapp console, installation, configuration 
+summary: このセクションでは、 Cloud Volumes ONTAP、 FlexPod、 ONTAPストレージ、およびNetApp Consoleをインストールして構成する方法について説明します。 
 ---
 = インストールと設定
 :hardbreaks:
@@ -29,13 +29,13 @@ Cloud Volumes ONTAP インスタンスを設定するには、次の手順を実
 +
 VPCとAWS S3サービスの間の接続を有効にするには、VPCエンドポイントゲートウェイが必要です。これは、ゲートウェイタイプのエンドポイントであるCVOでバックアップを有効にするために使用されます。
 
-. NetApp BlueXPにアクセスします。
+. NetApp Consoleにアクセスします。
 +
-NetApp BlueXPやその他のクラウドサービスにアクセスするには、に登録する必要があります https://cloudmanager.netapp.com/["NetApp BlueXP"^]。BlueXPアカウントでワークスペースとユーザを設定するには、をクリックします https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-setting-up-netapp-accounts.html["こちらをご覧ください"^]。BlueXPからクラウドプロバイダにコネクタを直接導入する権限を持つアカウントが必要です。BlueXPポリシーはからダウンロードできます https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions.html["こちらをご覧ください"^]。
+コンソールやその他のクラウドサービスにアクセスするには、 https://cloudmanager.netapp.com/["NetApp Console"^] 。コンソールアカウントでワークスペースとユーザーを設定するには、 https://docs.netapp.com/us-en/console-setup-admin/index.html["NetApp Consoleのセットアップと管理"^] 。コンソールから直接クラウド プロバイダーにコンソール エージェントを展開する権限を持つアカウントが必要です。必要な権限を取得するには、 https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions.html["NetApp Consoleの権限の概要"^] 。
 
-. コネクタを展開します。
+. コンソール エージェントをデプロイします。
 +
-Cloud Volume ONTAP 作業環境を追加する前に、コネクタを導入する必要があります。コネクタを配置せずに最初のCloud Volumes ONTAP 作業環境を作成しようとすると、プロンプトが表示されます。BlueXPからAWSにコネクタを導入する方法については、こちらを参照してください https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-aws.html["リンク"^]。
+Cloud Volume ONTAPシステムを追加する前に、コンソール エージェントを展開する必要があります。コンソール エージェントが配置されていない状態で最初のCloud Volumes ONTAPシステムを作成しようとすると、コンソールからプロンプトが表示されます。コンソールからAWSにコンソールエージェントを展開するには、 https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-aws.html["AWS のコンソールエージェントのインストールオプション"^] 。
 
 . AWSでCloud Volumes ONTAP を起動します。
 +
@@ -45,11 +45,9 @@ Cloud Volumes ONTAP は単一システム構成で起動することも、 AWS �
 これらの手順の詳細については、を参照してください https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-getting-started-aws.html["AWSでのCloud Volumes ONTAP のクイックスタートガイド"^]。
 
 +
-この解決策 では、AWSにシングルノードのCloud Volumes ONTAP システムを導入しました。次の図は、シングルノードCVOインスタンスを使用するNetApp BlueXPダッシュボードを示しています。
+このソリューションでは、AWS に単一ノードのCloud Volumes ONTAPシステムを導入しました。
 
 
-
-image:fhc-cvoe-image4.jpeg["このスクリーンショットは、NetApp BlueXPの[Canvas]画面と[My Working Environments]を示しています。"]
 
 
 
@@ -78,7 +76,7 @@ FlexPod の導入は、Ansibleを使用してコードとしてインフラを�
 . iSCSIサービスを実行しているSVMを設定します。
 +
 ....
-1. vserver create –vserver Healthcare_SVM –rootvolume Healthcare_SVM_root –aggregate aggr1_A400_G0312_01 –rootvolume-security-style unix
+1. vserver create -vserver Healthcare_SVM -rootvolume Healthcare_SVM_root -aggregate aggr1_A400_G0312_01 -rootvolume-security-style unix
 2. vserver add-protocols -vserver Healthcare_SVM -protocols iscsi
 3. vserver iscsi create -vserver Healthcare_SVM
 
@@ -102,10 +100,10 @@ FlexPod の導入は、Ansibleを使用してコードとしてインフラを�
 . iSCSIアクセス用のインターフェイスを追加します。
 +
 ....
-1. network interface create -vserver Healthcare_SVM -lif iscsi-lif-01a -service-policy default-data-iscsi -home-node <st-node01> -home-port a0a-<infra-iscsi-a-vlan-id> -address <st-node01-infra-iscsi-a–ip> -netmask <infra-iscsi-a-mask> -status-admin up
-2. network interface create -vserver Healthcare_SVM -lif iscsi-lif-01b -service-policy default-data-iscsi -home-node <st-node01> -home-port a0a-<infra-iscsi-b-vlan-id> -address <st-node01-infra-iscsi-b–ip> -netmask <infra-iscsi-b-mask> –status-admin up
-3. network interface create -vserver Healthcare_SVM -lif iscsi-lif-02a -service-policy default-data-iscsi -home-node <st-node02> -home-port a0a-<infra-iscsi-a-vlan-id> -address <st-node02-infra-iscsi-a–ip> -netmask <infra-iscsi-a-mask> –status-admin up
-4. network interface create -vserver Healthcare_SVM -lif iscsi-lif-02b -service-policy default-data-iscsi -home-node <st-node02> -home-port a0a-<infra-iscsi-b-vlan-id> -address <st-node02-infra-iscsi-b–ip> -netmask <infra-iscsi-b-mask> –status-admin up
+1. network interface create -vserver Healthcare_SVM -lif iscsi-lif-01a -service-policy default-data-iscsi -home-node <st-node01> -home-port a0a-<infra-iscsi-a-vlan-id> -address <st-node01-infra-iscsi-a-ip> -netmask <infra-iscsi-a-mask> -status-admin up
+2. network interface create -vserver Healthcare_SVM -lif iscsi-lif-01b -service-policy default-data-iscsi -home-node <st-node01> -home-port a0a-<infra-iscsi-b-vlan-id> -address <st-node01-infra-iscsi-b-ip> -netmask <infra-iscsi-b-mask> -status-admin up
+3. network interface create -vserver Healthcare_SVM -lif iscsi-lif-02a -service-policy default-data-iscsi -home-node <st-node02> -home-port a0a-<infra-iscsi-a-vlan-id> -address <st-node02-infra-iscsi-a-ip> -netmask <infra-iscsi-a-mask> -status-admin up
+4. network interface create -vserver Healthcare_SVM -lif iscsi-lif-02b -service-policy default-data-iscsi -home-node <st-node02> -home-port a0a-<infra-iscsi-b-vlan-id> -address <st-node02-infra-iscsi-b-ip> -netmask <infra-iscsi-b-mask> -status-admin up
 ....
 +
 この解決策 では、4つのiSCSI論理インターフェイス（LIF）を作成しました（各ノードに2つずつ）。
@@ -124,7 +122,7 @@ EHR Operational Database（ODB；EHR運用データベース）、ジャーナ�
 . igroupを作成します。
 +
 ....
-1. igroup create –vserver Healthcare_SVM –igroup ehr –protocol iscsi –ostype linux –initiator iqn.1994-05.com.redhat:8e91e9769336
+1. igroup create -vserver Healthcare_SVM -igroup ehr -protocol iscsi -ostype linux -initiator iqn.1994-05.com.redhat:8e91e9769336
 ....
 +
 igroupは、サーバからLUNへのアクセスを許可するために使用されます。Linuxホストの場合、サーバIQNはファイルで確認できます `/etc/iscsi/initiatorname.iscsi`。
@@ -132,32 +130,23 @@ igroupは、サーバからLUNへのアクセスを許可するために使用�
 . LUN を igroup にマッピングします。
 +
 ....
-1. lun mapping create –vserver Healthcare_SVM –path /vol/hc_iscsi_vol/iscsi_lun1 –igroup ehr –lun-id 0
+1. lun mapping create -vserver Healthcare_SVM -path /vol/hc_iscsi_vol/iscsi_lun1 -igroup ehr -lun-id 0
 ....
 
 
 
 
-== オンプレミスのFlexPod ストレージをBlueXPに追加
+== オンプレミスのFlexPodストレージをNetApp Consoleに追加する
 
-NetApp BlueXPを使用してFlexPod ストレージを作業環境に追加するには、次の手順を実行します。
+コンソールを使用してFlexPodストレージをシステムに追加するには、次の手順を実行します。
 
-. ナビゲーションメニューから、*[ストレージ]*>*[キャンバス]*を選択します。
-. キャンバスページで、*作業環境の追加*をクリックし、*オンプレミス*を選択します。
+. ナビゲーション メニューから、*ストレージ* > *システム* を選択します。
+. 「システム」ページで、「システムの追加」をクリックし、「オンプレミス」を選択します。
 . オンプレミスONTAP *を選択します。「 * 次へ * 」をクリックします。
-+
-image:fhc-cvoe-image5.jpeg["このスクリーンショットは、BlueXPの[Add Working Group]ページを示しています。オンプレミスのONTAP が選択されています。"]
-
 . ONTAP のクラスタ詳細ページで、クラスタ管理 IP アドレスと admin ユーザアカウントのパスワードを入力します。次に*[追加]*をクリックします。
-+
-image:fhc-cvoe-image6.png["このスクリーンショットは、BlueXPの[Discover ONTAP Cluster]ページとONTAP の[Cluster Details]エントリを示しています。"]
-
 . [Details and Credentials]ページで、作業環境の名前と概要 を入力し、*[Go]*をクリックします。
 +
-BlueXPがONTAP クラスタを検出し、Canvasの作業環境として追加します。
-
-+
-image:fhc-cvoe-image7.jpeg["このスクリーンショットは、BlueXPの[Canvas]ページを示しています。最近追加した作業環境が右側に表示されます。"]
+コンソールはONTAPクラスタを検出し、[システム] ページにシステムとして追加します。
 
 
 
