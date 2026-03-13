@@ -5,7 +5,6 @@
   <block id="9fa25f8311910b1006f80d391d0a3536" category="paragraph">FlexPod 構成には、次の接続要件があります。</block>
   <block id="e795892d600814d6840b0ee7736d41f5" category="list-text">すべてのコンポーネントに対し、 100Mbps イーサネット / 1Gb イーサネットアウトオブバンド管理ネットワークがそれぞれ必要です。</block>
   <block id="5b779adbc97d83ba730345c0da406e99" category="list-text">環境全体でジャンボフレームのサポートを有効にすることを推奨しますが、必須ではありません。</block>
-  <block id="9751fb7a1c932f1a507e6bc465e97861" category="list-text">Cisco UCS ファブリックインターコネクトアプライアンスのポートは、 iSCSI 接続と NAS 接続にのみ使用することを推奨します。</block>
   <block id="402b72870e5c312873b1fff0d32a5515" category="list-text">FlexPod のコアコンポーネント間に他の機器を配置することはできません。</block>
   <block id="36f60790070b535bbd9bc08abb34d9ac" category="paragraph">アップリンク接続：</block>
   <block id="489d802b7e6f447e30c1735cd6577bac" category="list-text">仮想ポートチャネル（ vPC ）をサポートするには、ネットアップストレージコントローラのポートを Cisco Nexus 5000 、 7000 、または 9000 シリーズスイッチに接続する必要があります。</block>
@@ -658,7 +657,6 @@
   <block id="ab2679ebd7bb85b68b87dac6f34ef516" category="section-title">エンドツーエンドの FC-NVMe</block>
   <block id="2ab8f358a48c3adedd1b97e6666780f8" category="paragraph">エンドツーエンドの FC-NVMe は、リアルタイムアプリケーション向けにお客様の既存の SAN インフラストラクチャをシームレスに拡張しながら、同時に、遅延を低減しながら IOPS とスループットを向上させます。</block>
   <block id="8dd9321868b043ece197778143e64bbf" category="paragraph">既存の 32G FC SAN 転送を使用して、 NVMe と SCSI の両方のワークロードを同時に転送できます。</block>
-  <block id="fd0ff70a9cca8bfe56248a07829be7a8" category="paragraph">次の図に、 FlexPod MDS を使用した FC の データセンターを示します。</block>
   <block id="a152d851b543a6ecd1fe98d32802053d" category="inline-link">ホワイトペーパー『 Introducing End-to-End NVMe for FlexPod 』</block>
   <block id="866ad53e2454a700c7d99a0f7dec80e8" category="paragraph">FlexPod の構成とパフォーマンスのメリットの詳細については、を参照してください<block ref="04abdacba4c78c835f0c4c4ee5dcd30c" category="inline-link-rx"></block></block>
   <block id="37baea605e04392e4eb7f7acb8348221" category="inline-link">TR-4684 『 Implementing and Configuring Modern SANs with NVMe 』</block>
@@ -9710,4 +9708,6 @@
   <block id="1ae823e8252cefe82659e80378adf180" category="paragraph">SVMが停止した後、<block ref="d0f08a44974997af7b6852c24d0e3397" prefix=" " category="inline-code"></block>ボリュームはコンソールに表示されません。</block>
   <block id="0d6e5faf80b288a1d3277954d0b55ae8" category="inline-link"><block ref="0d6e5faf80b288a1d3277954d0b55ae8" category="inline-link-rx"></block></block>
   <block id="17a7b956a1673e2b7eed84e47e417df1" category="paragraph"><block ref="17a7b956a1673e2b7eed84e47e417df1" category="inline-link-rx"></block></block>
+  <block id="f1c50a66fa0c1697f61a708311b1b73c" category="list-text">スタンドアロンCisco UCS Fabric Interconnectアプライアンスのポートは、iSCSI接続にのみ使用することを推奨します。アプライアンスポートでNAS接続を使用する場合、特定の障害シナリオに対応するため、追加のNexus / 準拠スイッチが必要になります。</block>
+  <block id="fefa97ce70467bf33d6e5e77d6b7e1ce" category="paragraph">次の図は、Cisco MDS を使用した FC 用の FlexPod データセンターを示しています。</block>
 </blocks>

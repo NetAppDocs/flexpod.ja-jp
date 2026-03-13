@@ -56,7 +56,7 @@ image:dc-tech-spec_image12.png["エラー：グラフィックイメージがあ
 
 既存の 32G FC SAN 転送を使用して、 NVMe と SCSI の両方のワークロードを同時に転送できます。
 
-次の図に、 FlexPod MDS を使用した FC の データセンターを示します。
+次の図は、Cisco MDS を使用した FC 用の FlexPod データセンターを示しています。
 
 FlexPod の構成とパフォーマンスのメリットの詳細については、を参照してください https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/whitepaper-c11-741907.html["ホワイトペーパー『 Introducing End-to-End NVMe for FlexPod 』"^]
 
