@@ -41,11 +41,6 @@ FabricPool は、次のプラットフォームでサポートされます。
 ** FAS2650 、 FAS2620
 
 
-
-
-
-NOTE: FabricPool を使用できるのは、 FAS プラットフォーム上の SSD アグリゲートのみです。
-
 * クラウド階層
 +
 ** Alibaba Cloud Object Storage Service （標準、低頻度アクセス）
