@@ -9245,8 +9245,6 @@
   <block id="f63c99bc92f7bc3f7b439ecf41cac3e8" category="paragraph">FabricPoolには ONTAP 9.2 以降が必要です。追加の FabricPool 要件は、使用されている ONTAP のバージョンと接続されているクラウド階層によって異なります。ONTAP 9.8 より前のリリースでは、FabricPool は SSD ローカル階層でのみサポートされています。HDD アグリゲートのサポートは ONTAP 9.8 で追加されました。NetApp AFF C190 など、固定された比較的小容量のエントリーレベル AFF プラットフォームの場合、FabricPool は非アクティブなデータをクラウド階層に移動する際に非常に効果的です。</block>
   <block id="d468c66669ca3541addf2625862a45c3" category="list-text">NetApp FAS FabricPoolは、ONTAP 9.2を実行可能なすべてのプラットフォームでサポートされていますが、以下の場合は除きます：</block>
   <block id="0ef00e20c875ece8831080e8f1bbb3c2" category="list-text">FAS2554、FAS2552、FAS2520</block>
-  <block id="8e772168b909da1192f1390eefebf46a" category="admonition"><block ref="4a10a242abfc417db8b7f541b42667ce" category="inline-link-rx"></block>[NetApp Hardware Universe^]で、FabricPoolでサポートされているプラットフォームの最新情報を参照してください。</block>
-  <block id="b4175dd799877e6f2e03c951f0c6669e" category="list-text">NetApp ONTAP Select [注記] NetAppでは、オールSSD FabricPoolローカル階層の使用を推奨しています。</block>
   <block id="cace94490e6f78c8158ef33aaf3690a1" category="list-text">Amazon S3（Standard、Standard-IA、One Zone-IA、Intelligent-Tiering、Glacier Instant Retrieval）</block>
   <block id="2ef43a2bc7cabeb4a5df5a73553f38d9" category="list-text">Google Cloud Storage（Multi-Regional、Regional、Nearline、Coldline、Archive）</block>
   <block id="ab53c57de26665bffe42f38b84a1dcf1" category="list-text">NetApp StorageGRID 10.3以降</block>
@@ -9257,4 +9255,8 @@
   <block id="744133334e4697a948297d67bcb2b599" category="list-text">Google Cloud 用 NetApp Cloud Volumes</block>
   <block id="0c16ab47cc76c62a7a3f488898b16c5f" category="list-text">NetApp Cloud Volumes ONTAP for AWS</block>
   <block id="82b968b6479bb7577ee3b6f333ea4527" category="list-text">NetApp Cloud Volumes ONTAP for Azure</block>
+  <block id="653e35b244515da6e28d0b4768efb3b4" category="cell">2 x C19/C20または2 x C14/C19</block>
+  <block id="9c731b980c2b703bfdb439c7056b1bfd" category="admonition"><block ref="c4dd6ba7b5ae102345b7377110dc849b" category="inline-link-rx"></block>で、FabricPoolでサポートされているプラットフォームの最新情報を参照してください。</block>
+  <block id="00ae925249b1dcd734cdb679b48bf8f7" category="list-text">NetApp ONTAP Select</block>
+  <block id="9044f591b913b8cf0cc25f90afe3223c" category="admonition">NetAppでは、オールSSDのFabricPoolローカル階層を使用することを推奨しています。</block>
 </blocks>

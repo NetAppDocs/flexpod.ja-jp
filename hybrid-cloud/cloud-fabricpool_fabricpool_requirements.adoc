@@ -32,9 +32,13 @@ FabricPool は、次のプラットフォームでサポートされます。
 
 
 
-NOTE:  https://hwu.netapp.com/DetailViews/Home.aspx[][NetApp Hardware Universe^]で、FabricPoolでサポートされているプラットフォームの最新情報を参照してください。
+NOTE:  https://hwu.netapp.com/DetailViews/Home.aspx["NetApp Hardware Universe の略"^]で、FabricPoolでサポートされているプラットフォームの最新情報を参照してください。
 
-* NetApp ONTAP Select [注記] NetAppでは、オールSSD FabricPoolローカル階層の使用を推奨しています。
+* NetApp ONTAP Select
++
+
+NOTE: NetAppでは、オールSSDのFabricPoolローカル階層を使用することを推奨しています。
+
 * クラウド階層
 +
 ** Alibaba Cloud Object Storage Service （標準、低頻度アクセス）
