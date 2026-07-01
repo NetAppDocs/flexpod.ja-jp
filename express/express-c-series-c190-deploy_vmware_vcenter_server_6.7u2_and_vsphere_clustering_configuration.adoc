@@ -16,7 +16,7 @@ summary: VMware vCenter Server 6.7 および vSphere クラスタリングを設
 [role="lead"]
 VMware vCenter Server 6.7 および vSphere クラスタリングを設定するには、次の手順を実行します。
 
-. 「 \ https://\<<FQDN 」または「 vCenter の IP >>/vsphere-client/` 」に移動します。
+.  `https://<<FQDN or IP of vCenter>>/vsphere-client/`に移動します。
 . vSphere Client の起動をクリックします。
 . vCSA のセットアッププロセスで入力したユーザ名 mailto ： administrator@vspehre.loca l [administrator^] @vsphere.local および SSO パスワードを使用してログインします。
 . vCenter 名を右クリックし、 New Datacenter を選択します。
@@ -77,7 +77,7 @@ NOTE: FlexPod 構成にホストを追加する場合は、この手順を実行
 
 ESXi ホストにコアダンプを設定するには、次の手順を実行します。
 
-. https ： // にログインします https://172.21.181.105:5480/ui/services["vCenter"^] IP:5480/ の場合は、ユーザ名に root を入力し、 root パスワードを入力します。
+.  `https://<vCenter IP>:5480`にログインし、ユーザー名に「root」と入力して、rootパスワードを入力してください。
 . services をクリックして、 VMware vSphere ESXi Dump Collector を選択します。
 . VMware vSphere ESXi Dump コレクタサービスを開始します。
 +

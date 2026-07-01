@@ -34,7 +34,7 @@ image:sm-bcs-image16.png["エラー：グラフィックイメージがありま
 
 次の表に、解決策 の検証に使用したハードウェアとソフトウェアを示します。Cisco 、ネットアップ、 VMware は、 FlexPod の具体的な実装のサポートを判断するために相互運用性マトリックスを使用します。
 
-* http://support.netapp.com/matrix/["http://support.netapp.com/matrix/"^]
+* http://mysupport.netapp.com/matrix["http://mysupport.netapp.com/matrix"^]
 * http://www.cisco.com/web/techdoc/ucs/interoperability/matrix/matrix.html["Cisco UCS ハードウェアおよびソフトウェア相互運用性ツール"^]
 * http://www.vmware.com/resources/compatibility/search.php["http://www.vmware.com/resources/compatibility/search.php"^]
 

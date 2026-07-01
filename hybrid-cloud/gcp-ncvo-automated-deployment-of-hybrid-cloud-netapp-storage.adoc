@@ -75,7 +75,7 @@ Cloud Volumes ONTAP クラスタの自動作成、オンプレミスボリュー
 
 TerraformコードをホストするにはGitHubアカウントが必要です。Intersight Orchestratorは、Terraform Cloud for Businessアカウントに新しいワークスペースを作成します。このワークスペースには、バージョン管理ワークフローが設定されています。そのためには、Terraformの構成をGitHubリポジトリに保持し、ワークスペースの作成時に入力として提供する必要があります。
 
-https://github.com/NetApp-Automation/FlexPod-hybrid-cloud-for-GCP-with-Intersight-and-CVO["このGitHubリンク"^] は、さまざまなリソースを使用したTerraformの構成を提供します。このリポジトリを作成し、GitHubアカウントにコピーを作成できます。
+https://github.com/ucs-compute-solutions/cvo_snapmirror["このGitHubリンク"^]は、Terraform構成にさまざまなリソースを提供します。このリポジトリをフォークして、自分のGitHubアカウントにコピーを作成できます。
 
 このリポジトリでは'providator.tf'は'必要なTerraformプロバイダの定義を持っていますNetApp Cloud ManagerのTerraformプロバイダが使用されています。
 
