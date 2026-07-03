@@ -1,0 +1,23 @@
+---
+sidebar: sidebar 
+permalink: fp-def/fp-express-tech-spec_automation.html 
+keywords: flexpod express, automation, IaC, GitHub repository, Ansible 
+summary: FlexPod Express の自動展開は、Ansible プレイブックおよび関連するインフラストラクチャをコード資産として含む GitHub リポジトリを通じて利用できます。 
+---
+= FlexPod Express 自動デプロイメント
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+FlexPod Express の自動展開は、FlexPod Express GitHub リポジトリから利用できます。これらのリポジトリには、Ansible プレイブックと関連ファイルが含まれており、FlexPod Express インフラストラクチャをコード（IaC）としてデプロイするために使用されます。
+
+GitHub リポジトリは、FlexPod Express 構成を展開するための体系的なアプローチを提供し、ユーザーがインフラストラクチャのセットアップと管理を自動化できるようにします。これらには、FlexPod Express 設計のさまざまなコンポーネント向けのプレイブックが含まれており、ユーザーが一貫性と信頼性を持って環境を効率的に展開・保守できるようになっています。
+
+Cisco UCS C シリーズサーバー、Cisco Nexus スイッチ、および ONTAP を使用した FlexPod Express の自動展開については、link:https://github.com/ucs-compute-solutions/FlexPod-Express-Intersight["このGitHubリポジトリ"^] および対応する link:https://www.netapp.com/media/91691-flex-pod-express-nva-ia-c.pdf["NVA"^] を参照してください。リポジトリ内の VMware ロールを使用して、VMware ベースの環境をデプロイすることもできます。
+
+Cisco UCS X-Series Directサーバー、Cisco Nexusスイッチ、およびNetApp ONTAPを使用したFlexPod Expressの自動デプロイについては、link:https://github.com/ucs-compute-solutions/FlexPod-IMM-OpenShift["このGitHubリポジトリ"^]を参照してください。このリポジトリのプレイブックを使用してFlexPod Expressインフラを立ち上げてから、このlink:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_rh_openshift_bm_iac_deploy.html.["CVD"^]を使用してその上にOpenShiftをデプロイできます。

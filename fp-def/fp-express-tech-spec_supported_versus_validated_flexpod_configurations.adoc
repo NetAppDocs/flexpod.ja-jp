@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: fp-def/fp-express-tech-spec_supported_versus_validated_flexpod_configurations.html 
-keywords: supported, cersus, validated, flexpod, express, configurations, imt 
+keywords: supported, versus, validated, flexpod, express, configurations, imt 
 summary: FlexPod のアーキテクチャは、本ドキュメントで説明する一連のルールで定義されています。ハードウェアコンポーネントとソフトウェア構成は、 Cisco Hardware Compatibility List （ HCL ；ハードウェア互換性リスト）とネットアップの IMT でサポートされている必要があります。 
 ---
 = サポート対象の FlexPod 構成と検証済みの 構成の比較
@@ -14,8 +14,8 @@ summary: FlexPod のアーキテクチャは、本ドキュメントで説明す
 
 
 [role="lead"]
-FlexPod のアーキテクチャは、本ドキュメントで説明する一連のルールで定義されています。ハードウェアコンポーネントとソフトウェアの設定は、 Cisco Hardware Compatibility List （ HCL ；ハードウェア互換性リスト）およびでサポートされている必要があります http://mysupport.netapp.com/matrix["ネットアップの Interoperability Matrix Tool （ IMT ）"^]。
+FlexPodアーキテクチャは、本書に記載されている一連の規則によって定義されます。ハードウェア コンポーネントとソフトウェア構成は、 https://ucshcltool.cloudapps.cisco.com/public/hcl["シスコハードウェア互換性リスト（ HCL ）"^]および http://mysupport.netapp.com/matrix["ネットアップの Interoperability Matrix Tool （ IMT ）"^]によってサポートされている必要があります。
 
-各 Cisco Validated Design （ CVD ）または NetApp Verified Architecture （ NVA ）は、 FlexPod 構成の可能性があります。Cisco とネットアップは、これらの構成の組み合わせを文書化し、広範なエンドツーエンドのテストで検証しています。このドキュメントのガイドラインに従っている場合、 FlexPod の導入は完全にサポートされており、すべてのコンポーネントが Cisco HCL とネットアップで互換性があると記載されています http://mysupport.netapp.com/matrix["IMT"^]。
+各Cisco Validated Design（CVD）またはNetApp検証済みアーキテクチャ（NVA）は、検証済みのFlexPod構成を表します。CiscoとNetAppは、これらの構成の組み合わせを文書化し、広範なエンドツーエンドテストによって検証しています。これらの構成から逸脱するFlexPodの展開も、このドキュメントのガイドラインに従い、すべてのコンポーネントがCisco HCLおよびNetApp IMTに互換性があると記載されている場合は、完全にサポートされます。
 
 たとえば、ストレージコントローラや Cisco UCS サーバを追加し、ソフトウェア、ハードウェア、構成がこのドキュメントで定義されているガイドラインを満たしている場合は、ソフトウェアを新しいバージョンにアップグレードすることが完全にサポートされます。

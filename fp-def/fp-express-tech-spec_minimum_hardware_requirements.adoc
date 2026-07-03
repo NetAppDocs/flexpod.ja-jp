@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: fp-def/fp-express-tech-spec_minimum_hardware_requirements.html 
-keywords: minimum, hardware, requirements, fas, cimc, configuration, rack, servers, ucs 
+keywords: minimum, hardware, requirements, aff, asa, fas, cimc, configuration, rack, servers, ucs 
 summary: ここでは、 FlexPod Express の各バージョンに必要なハードウェアの最小要件について説明します。 
 ---
 = ハードウェアの最小要件
@@ -18,45 +18,13 @@ summary: ここでは、 FlexPod Express の各バージョンに必要なハー
 
 
 
-== FlexPod Express と NetApp FAS
+== FlexPod Express（NetApp AFF/ ASA/ FAS搭載）
 
-基盤ストレージにNetApp FASコントローラを使用するFlexPod Expressソリューションのハードウェア要件には、このセクションで説明する構成が含まれます。
+基盤となるストレージにNetApp AFF、ASA、またはFASコントローラを使用するFlexPod Expressソリューションのハードウェア要件には、本セクションで説明する構成が含まれます。
 
+FlexPod Express の最小ハードウェア要件は次のとおりです：
 
+* 冗長構成の 2 台の 10Gbps 標準イーサネット スイッチ（Cisco Nexus 9200 および 9300 モデル）
+* CIMC ベースのスタンドアロン ラック サーバー構成または Intersight スタンドアロン構成を備えた Cisco UCS C シリーズ スタンドアロン ラック サーバー、または Cisco Intersight 管理構成（IMM）を備えた Cisco UCS X シリーズ ダイレクト。
+* ハイアベイラビリティ（HA）ペア構成で2ノードクラスタとして導入される、エントリーレベルのNetApp AFF（A20、A30、またはC30）、NetApp ASA（A20、A30、またはC30）、またはNetApp FAS（2750または2820）シリーズコントローラ2台
 
-=== CIMCベースの構成（スタンドアロン ラック サーバ）
-
-Cisco Integrated Management Controller（CIMC）の構成には、以下のハードウェアコンポーネントが含まれます。
-
-* 冗長構成の 2 台の 10Gbps 標準イーサネット スイッチ（Cisco Nexus 31108 を推奨、Cisco Nexus 3000 および 9000 モデルをサポート）
-* Cisco UCS C シリーズ スタンドアロン ラック サーバ
-* AFF C190、AFF A250、FAS2600、またはFAS 2700シリーズのコントローラ2台を高可用性（HA）ペア構成の2ノードクラスタとして導入
-
-
-
-
-=== Cisco UCS管理構成
-
-Cisco UCS管理による確認には、以下のハードウェアコンポーネントが含まれます：
-
-* 冗長構成の 2 台の 10Gbps 標準イーサネット スイッチ（Cisco Nexus 3524 を推奨）
-* Cisco UCS 5108 交流（AC）ブレード サーバ シャーシ×1
-* Cisco UCS 6324 ファブリック インターコネクト ×2
-* Cisco UCS Bシリーズ サーバ（少なくとも4台の Cisco UCS B200 M5 ブレード サーバ）
-* HA ペア構成の AFF C190、AFF A250、FAS2750、または FAS2720 コントローラー 2 台（コントローラーあたり 2 つの使用可能な統合ターゲット アダプタ 2 [UTA2] ポートが必要）
-
-
-
-
-== FlexPod Express と Eシリーズ
-
-FlexPod Express の Eシリーズ スターター構成のハードウェア要件は次のとおりです：
-
-* Cisco UCS 6324 ファブリック インターコネクト ×2
-* Cisco UCS Mini シャーシ 5108 AC2 または DC2 が 1 台（Cisco UCS 6324 ファブリック インターコネクトは、AC2 および DC2 シャーシでのみサポートされています）
-* Cisco UCS Bシリーズ サーバ（少なくとも2台の Cisco UCS B200 M4 ブレード サーバ）
-* 最小12台のディスクドライブが搭載されたEシリーズ E2824 ストレージ システムの HA ペア構成1つ
-* 冗長構成の10Gbps標準イーサネットスイッチ2台（データセンター内の既存スイッチを使用可）
-
-
-これらのハードウェア コンポーネントは、ソリューションのスターター構成を構築するために必要です。必要に応じて、ブレード サーバやディスク ドライブを追加できます。Eシリーズ E2824 ストレージ システムは上位プラットフォームに交換可能で、オールフラッシュ システムとして実行することもできます。

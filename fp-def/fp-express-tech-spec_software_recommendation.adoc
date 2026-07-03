@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: fp-def/fp-express-tech-spec_software_recommendation.html 
+keywords: software, requirements, flexpod, express, aff, fas, asa, cisco, nx-os, ontap 
+summary: このセクションでは、さまざまなバージョンの FlexPod Express に推奨されるソフトウェア要件について説明します。 
+---
+= ソフトウェアバージョンの推奨事項
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+このセクションでは、FlexPod Express のソフトウェア バージョンの推奨事項について説明します。
+
+* ONTAP バージョン：最新の ONTAP バージョンは、すべての FlexPod Express 構成に推奨されます。最新の ONTAP バージョンについては、link:https://docs.netapp.com/us-en/ontap/release-notes/index.html["ONTAP Release Notes"^] を参照してください。
+* Cisco NX-OS バージョン：Cisco 9000 シリーズ スイッチの Cisco NX-OS バージョンの一般的な推奨事項については、link:https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus9000/sw/recommended_release/b_Minimum_and_Recommended_Cisco_NX-OS_Releases_for_Cisco_Nexus_9000_Series_Switches.html["Cisco Nexus 9000 シリーズ スイッチ向け推奨 Cisco NX-OS リリース"^]を参照してください。
+* Cisco UCS ファームウェア バージョン：
++
+** 最新バージョンについては、こちらのリンクを参照してください link:https://www.cisco.com/c/en/us/support/servers-unified-computing/intersight/products-release-notes-list.html["Cisco Intersight マネージドモード インフラストラクチャおよびサーバー ファームウェア、シャーシ ファームウェア、PCIe ノード ファームウェア"^]
+** 最新バージョンについては、こちらのリンクを参照してください。link:https://intersight.com/help/saas/supported_systems/Intersight_Standalone_Mode["Cisco Intersight スタンドアロン モードと CIMC ファームウェア"^]
+
+
+
+
+
+NOTE: すべてのソフトウェアコンポーネントは http://support.netapp.com/matrix/["NetApp IMT"^]に記載されサポートされている必要があり、すべての NetApp ハードウェアコンポーネントおよび ONTAP バージョンは https://hwu.netapp.com/Home/Index["NetApp Hardware Universe の略"^]に記載されサポートされている必要があり、すべての Cisco ハードウェアコンポーネントは https://ucshcltool.cloudapps.cisco.com/public/["Cisco HCL"^]に記載されサポートされている必要があります。

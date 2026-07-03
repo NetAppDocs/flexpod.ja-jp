@@ -1,0 +1,72 @@
+---
+sidebar: sidebar 
+permalink: fp-def/fp-express-tech-spec_flexpod_express_topologies.html 
+keywords: topologies, iSCSI boot, Cisco UCS X-Series Direct, direct-attached ASA, FC boot, IP-based SAN, FC-based SAN 
+summary: このセクションでは、FlexPod Express のトポロジーの例について説明します。 
+---
+= FlexPod Express トポロジー
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+このセクションでは、FlexPod Express のトポロジーの例について説明します。
+
+
+
+== UCS X-Series Direct（FCおよびIPベースSANを直接接続）
+
+次の図は、IP ベースおよび FC ベースの SAN 向けの UCS X-Series Direct と直接接続された ASA のサンプルトポロジーを示しています。
+
+image:fp-express-tech-spec_image11.png["UCS X-Series ダイレクトおよびダイレクトアタッチ ASA の IP ベースおよび FC ベースの SAN トポロジー"]
+
+このトポロジーの接続要件は次のとおりです：
+
+* ASA クラスタ接続性：2 ノードの ASA クラスター構成の場合、クラスタースイッチを使用せずに、コントローラーをケーブルで直接接続できます。
+* ストレージイーサネット接続：NetAppストレージコントローラは、組み込みのファブリックインターコネクトに直接接続できます。ASA の 2 つのストレージコントローラは、FI A および FI B によって提供される 2 つの独立した IP SAN ファブリックに接続されています。
+* FIネットワークのアップリンク接続：IPベースのSAN接続の場合、アップリンクNexusスイッチはSANデータパスには関与しません。SAN IOは、FI AまたはFI Bへの接続を使用して、UCS ComputeノードからASAストレージへ直接送信されます。その結果、VLANとvPCをサポートする既存のトップオブラックスイッチを使用して、FlexPod SANソリューション環境への外部ネットワーク アクセスを提供できます。
+* FCベースのSAN接続の場合、UCS FI（FC）ポートをブレークアウトポートとして構成する必要があります。
+* Cisco UCS を FC ベースの SAN ソリューションで使用する場合は、FC スイッチング モードに設定する必要があります。
+
+
+Cisco UCS X-Series Directは、外部ファブリックインターコネクトではなく内蔵ファブリックインターコネクトを使用することで、通常のX-Seriesと同様にスイッチ接続ストレージを利用することもできます。
+
+この構成の詳細については、 https://www.netapp.com/pdf.html?item=/media/135828-flexpod-san-ucs-xdirect-asa-nva-deploy-guide.pdf["Cisco UCS X-Series DirectおよびNetApp ASAを使用したFlexPod SAN解決策"^]を参照してください。
+
+[NOTE]
+====
+上記のサンプルトポロジーは、NetApp ASA を使用した直接接続ストレージの解決策を示しています。ただし、同じトポロジーは NetApp AFF および FAS にも使用できます。
+
+IPベースの直接接続型NASストレージ構成でNetApp AFFまたはFASストレージを使用する場合、アップリンクのNexusスイッチは、特定の障害シナリオに対応できるように適切に構成する必要があります。詳細な設定情報については、下記のリンクを参照してください。
+
+https://www.netapp.com/pdf.html?item=/media/22621-nva-1154-DESIGN.pdf[]
+
+https://www.netapp.com/pdf.html?item=/media/21938-nva-1154-DEPLOY.pdf[]
+
+====
+
+
+== UCS C-Series サーバー、スイッチ接続型 IP ベースストレージ
+
+次の図は、Cisco UCS C シリーズのスタンドアロンと NetApp AFF を示しています。
+
+image:fp-express-tech-spec_image12.png["Cisco UCS CシリーズスタンドアロンサーバーとNetApp AFF"]
+
+このトポロジーの接続要件は次のとおりです：
+
+* AFF クラスタ接続性：2 ノード AFF クラスタ構成の場合、クラスタスイッチを使用せずに、コントローラをケーブルで直接接続できます。
+* ストレージイーサネット接続：NetApp ストレージコントローラは、Cisco Nexus スイッチに直接接続する必要があります。
+* 仮想ポートチャネル（vPC）は、Cisco Nexus スイッチをNetAppストレージコントローラに接続するために必要です。
+* この解決策は、最大5台のUCS Cシリーズスタンドアロンサーバーまで拡張可能で、サーバー1台あたり各スイッチに2つのスイッチポートが必要です。
+
+
+Cisco UCS C シリーズは、CIMC または Cisco Intersight スタンドアロン管理を使用して管理できます。
+
+
+NOTE: 上記のサンプルトポロジーは、NetApp AFF を使用した直接接続ストレージソリューションを示しています。ただし、同じトポロジーは NetApp ASA および FAS にも使用できます。
+
+この構成の詳細については、 https://www.netapp.com/pdf.html?item=/media/88340-NVA-FlexpodExpress_C220_A250_NexusFinal.pdf["FlexPod Express for VMware vSphere 8.0（Cisco UCS C-Series スタンドアロンおよびNetApp AFF）"^]を参照してください。

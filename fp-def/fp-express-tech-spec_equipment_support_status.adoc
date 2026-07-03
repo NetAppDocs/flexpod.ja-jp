@@ -1,0 +1,63 @@
+---
+sidebar: sidebar 
+permalink: fp-def/fp-express-tech-spec_equipment_support_status.html 
+keywords: equipment, support status, end of life, end of support, verification 
+summary: このセクションでは、Cisco および NetApp コンポーネントの機器サポートステータスを確認する方法について説明します。 
+---
+= 機器サポート状況
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+解決策は、 Cisco とネットアップが現在販売している既存の機器と新しい機器の両方を使用できる柔軟な FlexPod です。場合によっては、 Cisco とネットアップの両モデルの機器の販売終了が決まっています。
+
+これらのモデルの機器は提供されなくなりましたが、販売終了日までにこれらのモデルのいずれかを購入したお客様は、 FlexPod 構成でその機器を使用できます。
+
+さらに、FlexPod Expressアーキテクチャは定期的に刷新され、CiscoおよびNetAppの最新のハードウェアとソフトウェアがFlexPod Express解決策に導入されます。
+
+FlexPod Express の機器を導入または保守する前に、すべてのコンポーネントがベンダーによって引き続きサポートされていることを確認してください。このセクションでは、Cisco および NetApp コンポーネントの販売終了およびサポート終了情報を確認する方法について説明します。
+
+
+
+== NetApp機器サポートの確認
+
+NetAppは、Hardware Universe（HWU）を通じてサポート情報を提供しています。
+
+link:https://hwu.netapp.com["NetApp Hardware Universe の略"^]に移動します。
+
+* *製品 > プラットフォーム* を選択し、次にプラットフォーム（例：*AFF A-Series*）およびモデル（例：*AFF A220*）を選択します。
+
+
+
+NOTE: すべてのプラットフォームを表示するには、*Platform Lifecycle* フィルターを *Show All* に変更してください。デフォルトでは、*Hide EOA* が選択されています。
+
+* *ONTAP* バージョンを選択し、*結果を表示*をクリックします。
+* 「システムの可用性とサポート」セクションで、お使いの機器のサポート終了日を確認してください。
+
+
+
+
+== Cisco機器サポートの確認
+
+Cisco は、Cisco 製品サポートページで販売終了日とサポート終了日を提供しています。
+
+
+
+==== Cisco UCS サーバーの販売終了およびサポート終了に関する情報
+
+* link:https://www.cisco.com/c/en/us/support/eol/index.html["Cisco製品サポートページ"]に移動します。
+* 「製品カテゴリ」で「サーバー - UCS および HCI」を選択し、サーバーの種類（例：「UCS C-Series Rack Servers」）をクリックしてください。ご使用の機種（例：「UCS C220 M5」）を特定し、販売終了日とサポート終了日を確認してください。
+
+
+
+
+==== Cisco Nexus スイッチの販売終了およびサポート終了に関する情報
+
+* link:https://www.cisco.com/c/en/us/support/eol/index.html["Cisco製品サポートページ"]に移動します。
+* 「製品カテゴリ」で「スイッチ」を選択し、お使いのスイッチの種類（例：Nexus 9000）をクリックしてください。お使いの機種（例：9236C）を特定し、販売終了日とサポート終了日を確認してください。
+

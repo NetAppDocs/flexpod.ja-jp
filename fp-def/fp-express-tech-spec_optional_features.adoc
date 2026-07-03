@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: fp-def/fp-express-tech-spec_optional_features.html 
-keywords: optional, features, iscsi, boot, option, flexpod, express configuration, cisco, mini, aff, fas 
+keywords: optional, features, iscsi, boot, option, flexpod, express configuration, cisco, mini, aff, fas, asa, x-series-direct, direct-attached, topology, ip-based, fc-based, san 
 summary: このセクションでは、 FlexPod Express のオプション機能について説明します。 
 ---
 = オプション機能
@@ -17,10 +17,13 @@ summary: このセクションでは、 FlexPod Express のオプション機能
 このセクションでは、 FlexPod Express のオプション機能について説明します。
 
 
+NOTE: SAN ブートはオプションですが、ハードウェアのアップグレードや交換時にサーバー プロファイルを移動できるため、強く推奨されます。
+
+
 
 == iSCSI ブートオプション
 
-FlexPod Express アーキテクチャは iSCSI ブートを使用します。iSCSI ブートオプションの最小要件は次のとおりです。
+iSCSIブートオプションの最小要件は以下のとおりです：
 
 * ネットアップストレージコントローラでアクティブ化された iSCSI ライセンス / 機能
 * ネットアップストレージコントローラ HA ペアの各ノードに、 2 ポート 10Gbps イーサネットアダプタを搭載します
@@ -29,26 +32,38 @@ FlexPod Express アーキテクチャは iSCSI ブートを使用します。iSC
 
 
 
-== 設定オプション
+== Cisco UCS X シリーズ ダイレクトおよびダイレクトアタッチ AFF/ASA/FAS オプション
 
-このセクションでは、 FlexPod エクスプレスアーキテクチャで必要とされる設定と検証済みの設定について詳しく説明します。
+NetApp ストレージ コントローラは、上流の SAN スイッチを必要とせずに、Cisco UCS ファブリック インターコネクトに直接接続できます。FlexPod Express は、UCS X-Series Direct との FC ブートおよび iSCSI ブートの両方をサポートしています。
 
+ライセンスとハードウェアの要件は次のとおりです。
 
-
-=== FlexPod Express と Cisco UCS C シリーズおよび AFF C190 シリーズ
-
-次の図に、 Cisco UCS C シリーズおよび AFF C190 シリーズ解決策を使用した FlexPod Express を示します。この解決策は、両方の 10GbE アップリンクをサポートします。
-
-image:fp-express-tech-spec_image2.png["エラー：グラフィックイメージがありません"]
-
-この構成の詳細については、『 FlexPod Express with VMware vSphere 6.7 』および『 NetApp AFF C190 NVA 導入ガイド』（現在）を参照してください。
+* ネットアップストレージコントローラにはプロトコルライセンスが必要です。
+* サーバには Cisco UCS アダプタ（イニシエータ）が必要です。サポートされている Cisco UCS アダプタの一覧については、ネットアップを参照してください http://mysupport.netapp.com/matrix["IMT"^]。
+* ネットアップストレージコントローラにはターゲットアダプタが必要です。
 
 
+次の図は、IPベースSAN向けのUCS X-Series Directおよび直接接続されたASAトポロジーを示しています。
 
-=== Cisco UCS Mini と AFF A220 および FAS 2750/2720 を使用した FlexPod Express
+image:fp-express-tech-spec_image10.png["UCS X-Series ダイレクトおよびダイレクトアタッチ ASA IPベース SAN のトポロジー"]
 
-次の図に、 FlexPod Express と Cisco UCS で管理される構成を示します。
+* 注： *
 
-image:fp-express-tech-spec_image3.png["エラー：グラフィックイメージがありません"]
+* Cisco UCS はイーサネットスイッチングモードで設定されます。
+* ターゲットからファブリックインターコネクトへの iSCSI ポートは、 iSCSI データ用のイーサネットストレージポートとして構成されます。
 
-この設定の詳細については、を参照してください https://docs.netapp.com/us-en/flexpod/express/express-direct-attach-aff220-deploy_program_summary.html["FlexPod Express と VMware vSphere 6.7U1 、および直接接続型の IP ベースストレージを搭載した NetApp AFF A220"^]。
+
+次の図は、IPベースおよびFCベースのSAN向けのUCS X-Series DirectおよびASA直接接続トポロジーを示しています。
+
+image:fp-express-tech-spec_image11.png["UCS X-Series ダイレクトおよびダイレクトアタッチ ASA の IP ベースおよび FC ベースの SAN トポロジー"]
+
+* 注： *
+
+* Cisco UCS は FC スイッチングモードで設定されます。
+* ターゲットからファブリックインターコネクトへの FC ポートは、 FC ストレージポートとして構成されます。
+
+
+この構成の詳細については、 https://www.netapp.com/pdf.html?item=/media/135828-flexpod-san-ucs-xdirect-asa-nva-deploy-guide.pdf["Cisco UCS X-Series DirectおよびNetApp ASAを使用したFlexPod SAN解決策"^]を参照してください。
+
+
+NOTE: 上記の例では NetApp ASA ストレージコントローラーを使用していますが、同じ構成は NetApp AFF および FAS ストレージコントローラーでもサポートされています。

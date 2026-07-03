@@ -17,10 +17,12 @@ entries:
     url: "/fp-def/fp-express-tech-spec_storage_software.html"
   - title: 最小ハードウェア要件
     url: "/fp-def/fp-express-tech-spec_minimum_hardware_requirements.html"
-  - title: 最小ソフトウェア要件
-    url: "/fp-def/fp-express-tech-spec_minimum_software_requirements.html"
+  - title: ソフトウェアバージョンの推奨事項
+    url: "/fp-def/fp-express-tech-spec_software_recommendation.html"
   - title: 接続要件
     url: "/fp-def/fp-express-tech-spec_connectivity_requirements.html"
+  - title: FlexPod Express トポロジー
+    url: "/fp-def/fp-express-tech-spec_flexpod_express_topologies.html"
   - title: その他の要件
     url: "/fp-def/fp-express-tech-spec_other_requirements.html"
   - title: オプション機能
@@ -33,10 +35,10 @@ entries:
     url: "/fp-def/fp-express-tech-spec_power_and_cabling_requirements.html"
   - title: 技術仕様と参考資料
     url: "/fp-def/fp-express-tech-spec_technical_specifications_and_references.html"
-  - title: 従来のアーキテクチャと機器
-    url: "/fp-def/fp-express-tech-spec_previous_architectures_and_equipment.html"
-  - title: レガシー機器
-    url: "/fp-def/fp-express-tech-spec_legacy_equipment.html"
+  - title: 機器サポート状況
+    url: "/fp-def/fp-express-tech-spec_equipment_support_status.html"
+  - title: 自動デプロイ
+    url: "/fp-def/fp-express-tech-spec_automation.html"
   - title: 追加情報
     url: "/fp-def/fp-express-tech-spec_additional_information.html"
 - title: FlexPod データセンター技術仕様

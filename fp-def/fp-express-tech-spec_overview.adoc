@@ -1,10 +1,10 @@
 ---
 sidebar: sidebar 
 permalink: fp-def/fp-express-tech-spec_overview.html 
-keywords: flexpod, express, technical, specifications, architecture, cisco, ucs 
-summary: FlexPod Expressは、Cisco Unified Computing System（Cisco UCS）とCisco Nexusファミリーのスイッチをベースに構築されたベストプラクティスに基づく事前設計のアーキテクチャであり、ストレージ レイヤはNetApp FASまたはNetApp Eシリーズ ストレージを使用して構築されています。 
+keywords: flexpod, express, technical, specifications, architecture, cisco, ucs, netapp, aff, asa, fas 
+summary: FlexPod Expressは、Cisco Unified Computing System（Cisco UCS）とCisco Nexusファミリのスイッチを基盤として構築された、事前設計されたベストプラクティスアーキテクチャであり、ストレージ レイヤはNetApp AFF、ASA、またはFASストレージシステムを使用して構築されます。 
 ---
-= TR-4293: FlexPod Express 技術仕様概要
+= FlexPod Express 技術仕様
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -13,9 +13,7 @@ summary: FlexPod Expressは、Cisco Unified Computing System（Cisco UCS）とCi
 :imagesdir: ./../media/
 
 
-カーシック・ラダクリシュナン、アルビンド・ラマクリシュナン、リンジー・ストリート、サビタ・クマリ、NetApp
-
 [role="lead"]
-FlexPod Expressは、Cisco統合コンピューティングシステム（Cisco UCS）とCisco Nexusファミリーのスイッチをベースに構築された、ベストプラクティスに基づく事前設計のアーキテクチャであり、ストレージ レイヤはNetApp FASまたはNetApp Eシリーズ ストレージを使用して構築されています。FlexPod Expressは、さまざまな仮想化ハイパーバイザーやベアメタルオペレーティングシステム（OS）、エンタープライズワークロードを実行するのに適したプラットフォームです。
+FlexPod Express は、Cisco Unified Computing System （Cisco UCS）と Cisco Nexus ファミリーのスイッチをベースに構築された、ベストプラクティスに基づく事前設計のアーキテクチャです。ストレージ レイヤは、NetApp AFF、ASA、または FAS エントリーレベルのストレージ システムを使用して構築されています。FlexPod Express は、中小規模の環境、リモートオフィスおよびブランチオフィス （ROBO） の展開、エッジロケーションにおいて、さまざまな仮想化ハイパーバイザー、ベアメタルオペレーティングシステム （OS）、およびエンタープライズワークロードを実行するのに適したプラットフォームです。
 
-FlexPod Expressは、ベースライン構成を提供するだけでなく、さまざまなユースケースや要件に合わせて拡張および最適化できる柔軟性も備えています。本書では、使用するストレージ システムに基づいて、FlexPod Express with NetApp FASおよびFlexPod Express with Eシリーズの構成に分類して説明します。
+FlexPod Expressは、ベースライン構成を提供するだけでなく、さまざまなユースケースや要件に合わせて拡張および最適化できる柔軟性も備えています。
