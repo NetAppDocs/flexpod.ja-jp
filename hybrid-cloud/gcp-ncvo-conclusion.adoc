@@ -26,12 +26,14 @@ link:gcp-ncvo-solution-validation.html["前のバージョン：解決策 の検
 
 
 
+[[where-to-find-additional-information]]
 == 追加情報の参照先
 
 このドキュメントに記載されている情報の詳細については、以下のドキュメントや Web サイトを参照してください。
 
 
 
+[[github]]
 === GitHub
 
 * 使用されているすべてのTerraform設定
@@ -46,6 +48,7 @@ https://github.com/ucs-compute-solutions/FlexPod_DR_Workflows["https://github.co
 
 
 
+[[cisco-intersight]]
 === Cisco Intersightの
 
 * Cisco Intersightのヘルプセンター
@@ -76,6 +79,7 @@ https://www.cisco.com/c/en/us/products/collateral/cloud-systems-management/inter
 
 
 
+[[flexpod]]
 === FlexPod
 
 * FlexPod ホームページ
@@ -94,6 +98,7 @@ https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_xse
 
 
 
+[[interoperability]]
 === 相互運用性
 
 * NetApp Interoperability Matrix Tool で確認できます
@@ -112,6 +117,7 @@ http://www.vmware.com/resources/compatibility/search.php["http://www.vmware.com/
 
 
 
+[[netapp-cloud-volumes-ontap-reference-documents]]
 === NetApp Cloud Volumes ONTAP の参考資料
 
 * NetApp Console ドキュメント：
@@ -146,12 +152,14 @@ https://docs.netapp.com/us-en/occm/reference_infrastructure_as_code.html["https:
 
 
 
+[[troubleshooting-issues]]
 === 問題のトラブルシューティング
 
 https://kb.netapp.com/Cloud/ncds/nds/cvo/cvo_kbs["https://kb.netapp.com/Cloud/ncds/nds/cvo/cvo_kbs"^]
 
 
 
+[[terraform]]
 === テラフォーム
 
 * クラウドをテラフォーム
@@ -170,6 +178,7 @@ https://registry.terraform.io/providers/NetApp/netapp-cloudmanager/lates["https:
 
 
 
+[[gcp]]
 === GCP
 
 * GCPのONTAP ハイアベイラビリティ

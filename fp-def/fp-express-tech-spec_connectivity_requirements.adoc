@@ -18,6 +18,7 @@ summary: ここでは、 FlexPod Express の各バージョンの接続要件に
 
 
 
+[[connectivity-requirements-for-flexpod-express-with-netapp-aff-asa-fas]]
 == NetApp AFF/ ASA/ FASを搭載したFlexPod Expressの接続要件
 
 NetApp AFF/ ASA/ FASを搭載したFlexPod Expressの接続要件は、一般的に次のとおりです：

@@ -20,6 +20,7 @@ link:sm-bcs-conclusion.html["前へ：終わりに。"]
 
 
 
+[[flexpod]]
 == FlexPod
 
 * FlexPod ホームページ
@@ -78,6 +79,7 @@ https://github.com/NetApp/harvest/releases["https://github.com/NetApp/harvest/re
 
 
 
+[[sm-bc]]
 == SM-BC です
 
 * SM-BC です
@@ -112,6 +114,7 @@ https://docs.netapp.com/us-en/ontap/mediator/index.html["https://docs.netapp.com
 
 
 
+[[vmware-vsphere-ha-and-vsphere-metro-storage-cluster]]
 == 『 VMware vSphere HA and vSphere Metro Storage Cluster 』を参照してください
 
 * vSphere HA クラスタを作成および使用する
@@ -138,6 +141,7 @@ https://community.netapp.com/t5/Tech-ONTAP-Blogs/Protect-tier-1-applications-and
 
 
 
+[[microsoft-sql-and-hammerdb]]
 == Microsoft SQL と HammerDB
 
 * Microsoft SQL Server 2019
@@ -156,6 +160,7 @@ https://www.hammerdb.com["https://www.hammerdb.com"^]
 
 
 
+[[compatibility-matrix]]
 == 互換性マトリックス
 
 * Cisco UCS ハードウェア互換性マトリックス
@@ -178,6 +183,7 @@ http://www.vmware.com/resources/compatibility/search.php["http://www.vmware.com/
 
 
 
+[[version-history]]
 == バージョン履歴
 
 |===

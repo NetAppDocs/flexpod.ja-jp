@@ -28,6 +28,7 @@ image:cloud-fabricpool_image8.png["エラー：グラフィックイメージが
 
 
 
+[[license-capacity]]
 == ライセンス容量
 
 ライセンス容量を表示するには、 ONTAP CLI または OnCommand System Manager を使用します。ライセンス容量を確認するには、 ONTAP CLI で次のコマンドを実行します。

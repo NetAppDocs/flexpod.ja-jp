@@ -22,6 +22,7 @@ FlexPod ソリューションは構成に柔軟性があるため、サポート
 
 
 
+[[validation-topology]]
 == 検証トポロジ
 
 FlexPod SM-BC 解決策 の検証には、ネットアップ、 Cisco 、 VMware が提供するサポート対象のテクノロジコンポーネントを使用します。解決策 には、 ONTAP 9.10.1 を実行する NetApp AFF A250 HA ペア、サイト A にデュアル Cisco Nexus 9336C-FX2 スイッチ、サイト B にデュアル Cisco Nexus 3232C スイッチ、両方のサイトに Cisco UCS 6454 FI が搭載されています。 VMware vSphere 7.0u2 を実行し、 UCS Manager および VMware vCenter サーバによって管理される各サイトの 3 台の Cisco UCS B200 M5 サーバ次の図は、 2 つの FlexPod システムをサイト A で実行し、サイト B は拡張レイヤ 2 サイト間リンクで接続し、 ONTAP メディエーターはサイト C で実行しているコンポーネントレベルの解決策 検証トポロジを示しています
@@ -30,6 +31,7 @@ image:sm-bcs-image16.png["エラー：グラフィックイメージがありま
 
 
 
+[[hardware-and-software]]
 == ハードウェアとソフトウェア：
 
 次の表に、解決策 の検証に使用したハードウェアとソフトウェアを示します。Cisco 、ネットアップ、 VMware は、 FlexPod の具体的な実装のサポートを判断するために相互運用性マトリックスを使用します。

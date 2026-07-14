@@ -15,6 +15,7 @@ summary: FlexPod は、仮想化ソリューションと非仮想化ソリュー
 
 
 
+[[flexpod-overview]]
 == FlexPod の概要
 
 FlexPod は、仮想化ソリューションと非仮想化ソリューションの両方の統合基盤となるハードウェアとソフトウェアの定義済みセットです。FlexPod には、 NetApp AFF ストレージ、 Cisco Nexus ネットワーク、 Cisco MDS ストレージネットワーク、 Cisco Unified Computing System （ Cisco UCS ）、 VMware vSphere ソフトウェアが 1 つのパッケージに含まれています。この設計は柔軟性に優れており、ネットワーク、コンピューティング、ストレージを 1 つのデータセンターラックに収容することも、お客様のデータセンター設計に従って導入することもできます。ポート密度を使用すると、ネットワークコンポーネントは複数の構成に対応できます。
@@ -25,6 +26,7 @@ image:cloud-fabricpool_image2.png["エラー：グラフィックイメージが
 
 
 
+[[flexpod-architecture]]
 == FlexPod アーキテクチャ
 
 次の図に、 VMware vSphere と FlexPod 解決策のコンポーネントと、 Cisco UCS 6454 ファブリックインターコネクトに必要なネットワーク接続を示します。この設計には、次のコンポーネントがあります。

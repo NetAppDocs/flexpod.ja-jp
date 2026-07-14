@@ -18,6 +18,7 @@ summary: ここでは、 FlexPod Express の各バージョンに必要なハー
 
 
 
+[[flexpod-express-with-netapp-aff-asa-fas]]
 == FlexPod Express（NetApp AFF/ ASA/ FAS搭載）
 
 基盤となるストレージにNetApp AFF、ASA、またはFASコントローラを使用するFlexPod Expressソリューションのハードウェア要件には、本セクションで説明する構成が含まれます。
@@ -26,5 +27,5 @@ FlexPod Express の最小ハードウェア要件は次のとおりです：
 
 * 冗長構成の 2 台の 10Gbps 標準イーサネット スイッチ（Cisco Nexus 9200 および 9300 モデル）
 * CIMC ベースのスタンドアロン ラック サーバー構成または Intersight スタンドアロン構成を備えた Cisco UCS C シリーズ スタンドアロン ラック サーバー、または Cisco Intersight 管理構成（IMM）を備えた Cisco UCS X シリーズ ダイレクト。
-* ハイアベイラビリティ（HA）ペア構成で2ノードクラスタとして導入される、エントリーレベルのNetApp AFF（A20、A30、またはC30）、NetApp ASA（A20、A30、またはC30）、またはNetApp FAS（2750または2820）シリーズコントローラ2台
+* 2ノードクラスタとして導入された、ハイアベイラビリティ（HA）ペア構成の2台のエントリーレベルNetApp AFF（A20、A30、またはC30）、NetApp ASA（A20、A30、またはC30）、またはNetApp FAS（2750、2820、またはFAS 50）シリーズコントローラ
 

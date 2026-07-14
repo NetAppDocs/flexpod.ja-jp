@@ -17,6 +17,7 @@ link:flexpod-fips-flexpod-cisco-ucs-compute-and-fips-140-2.html["前のリリー
 
 
 
+[[cisco-mds]]
 == Cisco MDS
 
 ソフトウェア 8.4.x を搭載した Cisco MDS 9000 シリーズプラットフォームは、です https://www.cisco.com/c/en/us/solutions/industries/government/global-government-certifications/fips-140.html?flt0_general-table0=mds["FIPS 140-2 に準拠しています"^]。Cisco MDS は、 SNMPv3 および SSH 用の暗号モジュールおよび次のサービスを実装しています。
@@ -114,6 +115,7 @@ Switch(config)# show fips status
 
 
 
+[[cisco-nexus]]
 == Cisco Nexus の場合
 
 Cisco Nexus 9000 シリーズスイッチ（バージョン 9.3 ）はです https://www.cisco.com/c/en/us/solutions/industries/government/global-government-certifications/fips-140.html?flt0_general-table0=nexus["FIPS 140-2 に準拠しています"^]。Cisco Nexus は、 SNMPv3 および SSH の暗号モジュールと次のサービスを実装します。

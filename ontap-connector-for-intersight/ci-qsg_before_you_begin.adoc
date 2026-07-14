@@ -18,12 +18,14 @@ summary: 開始する前に、 AIQ UM をインストールまたはアップグ
 
 
 
+[[install-or-upgrade-netapp-active-iq-unified-manager]]
 == NetApp Active IQ Unified Manager をインストールまたはアップグレードします
 
 Active IQ Unified Manager（最新バージョンが必要、現在は9.14RC1）をインストールまたはアップグレードしていない場合はインストールします。手順については、を参照してください link:https://docs.netapp.com/us-en/active-iq-unified-manager/["NetApp Active IQ Unified Manager のドキュメント"]。
 
 
 
+[[install-cisco-intersight-assist-virtual-appliance]]
 == Cisco Intersight Assist Virtual Appliance をインストールします
 
 がを満たしていることを確認します https://www.cisco.com/c/en/us/td/docs/unified_computing/Intersight/b_Cisco_Intersight_Appliance_Getting_Started_Guide/b_Cisco_Intersight_Appliance_Getting_Started_Guide_chapter_0111.html?referring_site=RE&pos=1&page=https://www.cisco.com/c/en/us/td/docs/unified_computing/Intersight/b_Cisco_Intersight_Appliance_Getting_Started_Guide.html["Cisco Intersight Virtual Appliance のライセンス、システム、ネットワークの要件"^]。

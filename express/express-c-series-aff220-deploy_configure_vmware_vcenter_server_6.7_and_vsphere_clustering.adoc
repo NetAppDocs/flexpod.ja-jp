@@ -25,6 +25,7 @@ VMware vCenter Server 6.7 および vSphere クラスタリングを設定する
 
 
 
+[[create-vsphere-cluster]]
 == vSphere クラスタを作成します
 
 vSphere クラスタを作成するには、次の手順を実行します。
@@ -40,6 +41,7 @@ image:express-c-series-aff220-deploy_image49.png["エラー：グラフィック
 
 
 
+[[add-esxi-hosts-to-cluster]]
 == ESXi ホストをクラスタに追加
 
 . クラスタを右クリックし、 Add Host （ホストの追加）を選択します。
@@ -67,6 +69,7 @@ NOTE: この手順は、必要に応じてあとで実行できます。
 
 
 
+[[configure-coredump-on-esxi-hosts]]
 == ESXi ホストにコアダンプを設定します
 
 . SSH を使用して管理 IP ESXi ホストに接続し、ユーザ名に「 root 」と入力して、 root パスワードを入力します。
