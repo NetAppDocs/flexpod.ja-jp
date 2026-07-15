@@ -3,7 +3,6 @@ section: fp-def
 title: FlexPod の定義
 entries:
 - title: FlexPod Express 技術仕様
-  type: solutions
   entries:
   - title: 概要
     url: "/fp-def/fp-express-tech-spec_overview.html"
@@ -42,7 +41,6 @@ entries:
   - title: 追加情報
     url: "/fp-def/fp-express-tech-spec_additional_information.html"
 - title: FlexPod データセンター技術仕様
-  type: solutions
   entries:
   - title: 概要
     url: "/fp-def/dc-tech-spec_solution_overview.html"

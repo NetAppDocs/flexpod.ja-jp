@@ -35,7 +35,7 @@ vSphere クラスタを作成するには、次の手順を実行します。
 . チェックボックスをオンにして DR と vSphere HA を有効にします。
 . [OK] をクリックします。
 +
-image:express-c-series-c190-deploy_image45.png["エラー：グラフィックイメージがありません"]
+image:express-c-series-c190-deploy_image45.png[""]
 
 
 
@@ -48,7 +48,7 @@ ESXi ホストをクラスタに追加するには、次の手順を実行しま
 
 . クラスタを右クリックし、 Add Host （ホストの追加）を選択します。
 +
-image:express-c-series-c190-deploy_image46.png["エラー：グラフィックイメージがありません"]
+image:express-c-series-c190-deploy_image46.png[""]
 
 . ESXi ホストをクラスタに追加するには、次の手順を実行します。
 +
@@ -84,7 +84,7 @@ ESXi ホストにコアダンプを設定するには、次の手順を実行し
 . services をクリックして、 VMware vSphere ESXi Dump Collector を選択します。
 . VMware vSphere ESXi Dump コレクタサービスを開始します。
 +
-image:express-c-series-c190-deploy_image47.png["エラー：グラフィックイメージがありません"]
+image:express-c-series-c190-deploy_image47.png[""]
 
 . SSH を使用して管理 IP ESXi ホストに接続し、ユーザ名に「 root 」と入力して、 root パスワードを入力します。
 . 次のコマンドを実行します。
@@ -96,7 +96,7 @@ esxcli system coredump network check
 ....
 . 最終コマンドを入力すると、「 Verified the configured netdump server is running 」というメッセージが表示されます。
 +
-image:express-c-series-c190-deploy_image48.png["エラー：グラフィックイメージがありません"]
+image:express-c-series-c190-deploy_image48.png[""]
 
 +
 

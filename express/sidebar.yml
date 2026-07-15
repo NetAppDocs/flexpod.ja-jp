@@ -3,7 +3,6 @@ section: express
 title: FlexPod エクスプレスの略
 entries:
 - title: FlexPod Express with Cisco UCS C シリーズおよび NetApp AFF C190 シリーズ設計ガイド
-  type: solutions
   entries:
   - title: 概要
     url: "/express/express-c-series-c190-design_executive_summary.html"
@@ -18,7 +17,6 @@ entries:
   - title: 追加情報の参照先
     url: "/express/express-c-series-c190-design_where_to_find_additional_information.html"
 - title: FlexPod Express with Cisco UCS C シリーズおよび NetApp AFF C190 シリーズ導入ガイド
-  type: solutions
   entries:
   - title: 概要
     url: "/express/express-c-series-c190-deploy_program_summary_overview.html"
@@ -57,7 +55,6 @@ entries:
   - title: バージョン履歴
     url: "/express/express-c-series-c190-deploy_version_history.html"
 - title: FlexPod Express with Cisco UCS C シリーズおよび AFF A220 シリーズ設計ガイド
-  type: solutions
   entries:
   - title: 概要
     url: "/express/express-c-series-aff220-design_executive_summary.html"
@@ -77,7 +74,6 @@ entries:
     url: "/express/express-c-series-aff220-design_where_to_find_additional_information.html"
 - title: "『 FlexPod Express with Cisco UCS C Series and AFF A220 Series Deployment
     Guide 』"
-  type: solutions
   entries:
   - title: 概要
     url: "/express/express-c-series-aff220-deploy_program_summary.html"
@@ -110,7 +106,6 @@ entries:
     url: "/express/express-c-series-aff220-deploy_where_to_find_additional_information.html"
 - title: FlexPod Express と VMware vSphere 6.7U1 、および直接接続型の IP ベースストレージを搭載した NetApp
     AFF A220
-  type: solutions
   entries:
   - title: 概要
     url: "/express/express-direct-attach-aff220-deploy_program_summary.html"

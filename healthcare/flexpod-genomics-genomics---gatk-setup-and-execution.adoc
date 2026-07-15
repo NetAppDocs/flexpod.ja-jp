@@ -46,7 +46,7 @@ link:flexpod-genomics-solution-infrastructure-hardware-and-software-components.h
 
 次の図に、サンプリングからバリアントの識別、注釈、および予測までのプロセスを示します。
 
-image:flexpod-genomics-image8.png["エラー：グラフィックイメージがありません"]
+image:flexpod-genomics-image8.png[""]
 
 ヒトゲノム計画は 2003 年 4 月に完成し、このプロジェクトは、パブリックドメインで利用可能なヒトゲノム配列を非常に高品質でシミュレーションしました。このリファレンスゲノムは、ゲノム機能の研究開発で爆発的に増加しました。事実上すべての人間の病気にその人間の遺伝子の署名がある。最近まで、医師は、単一遺伝子の変化によって発生した特定の相続パターンによって引き起こされる、鎌状赤血球貧血などの出生異常を予測し、判定するために遺伝子を利用していた。ヒトゲノムプロジェクトで収集された膨大なデータがゲノム機能の最新状態に登場しました。
 
@@ -95,40 +95,40 @@ FlexPod のラボセットアップを実行するには、次の手順を実行
 
 . FlexPod ラボのセットアップと検証では、次の IP4 予約と VLAN を使用します。
 +
-image:flexpod-genomics-image10.png["エラー：グラフィックイメージがありません"]
+image:flexpod-genomics-image10.png[""]
 
 . ONTAP SVM で iSCSI ベースのブート LUN を設定
 +
-image:flexpod-genomics-image9.png["エラー：グラフィックイメージがありません"]
+image:flexpod-genomics-image9.png[""]
 
 . LUN を iSCSI イニシエータグループにマッピングします。
 +
-image:flexpod-genomics-image11.png["エラー：グラフィックイメージがありません"]
+image:flexpod-genomics-image11.png[""]
 
 +
-image:flexpod-genomics-image12.png["エラー：グラフィックイメージがありません"]
+image:flexpod-genomics-image12.png[""]
 
 . iSCSI ブートを使用して vSphere 7.0 をインストールします。
 . ESXi ホストを vCenter に登録します。
 +
-image:flexpod-genomics-image13.png["エラー：グラフィックイメージがありません"]
+image:flexpod-genomics-image13.png[""]
 
 . ONTAP ストレージ上で NFS データストア「 infra_datastore_nfs 」をプロビジョニングします。
 +
-image:flexpod-genomics-image14.png["エラー：グラフィックイメージがありません"]
+image:flexpod-genomics-image14.png[""]
 
 . vCenter にデータストアを追加します。
 +
-image:flexpod-genomics-image16.png["エラー：グラフィックイメージがありません"]
+image:flexpod-genomics-image16.png[""]
 
 . vCenter を使用して、 ESXi ホストに NFS データストアを追加します。
 +
-image:flexpod-genomics-image15.png["エラー：グラフィックイメージがありません"]
+image:flexpod-genomics-image15.png[""]
 
 . vCenter を使用して、 GATK を実行する Red Hat Enterprise Linux （ RHEL ） 8.3 VM を作成します。
 . NFS データストアが VM に提供され、「 /mnt/ゲノミクス 」でマウントされます。これは、 GATK 実行可能ファイル、スクリプト、 BAM （バイナリ・アライメント・マップ）ファイル、参照ファイル、インデックスファイル、辞書ファイル、およびバリアント呼び出し用の出力ファイルを格納するために使用されます。
 +
-image:flexpod-genomics-image17.png["エラー：グラフィックイメージがありません"]
+image:flexpod-genomics-image17.png[""]
 
 
 

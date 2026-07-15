@@ -3,7 +3,6 @@ section: healthcare
 title: 医療機関
 entries:
 - title: ゲノム解析のための FlexPod
-  type: solutions
   entries:
   - title: はじめに
     url: "/healthcare/flexpod-genomics-introduction.html"
@@ -24,7 +23,6 @@ entries:
   - title: まとめ
     url: "/healthcare/flexpod-genomics-conclusion.html"
 - title: FlexPod for Medical Imaging の略
-  type: solutions
   entries:
   - title: 概要
     url: "/healthcare/medical-imaging_introduction.html"

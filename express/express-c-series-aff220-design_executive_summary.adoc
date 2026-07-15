@@ -17,7 +17,7 @@ summary:
 :imagesdir: ./../media/
 
 
-ネットアップ、 Savita Kumari とのパートナーシップ：image:cisco logo.png["エラー：グラフィックイメージがありません"]
+Savita Kumari、NetApp 提携先：image:cisco logo.png[""]
 
 [role="lead"]
 業界のトレンドは、共有インフラとクラウドコンピューティングへの大規模なデータセンターの移行を示しています。さらに、リモートオフィスやブランチオフィスにもシンプルで効果的な解決策を導入し、データセンターで慣れ親しんでいるテクノロジを活用しています。

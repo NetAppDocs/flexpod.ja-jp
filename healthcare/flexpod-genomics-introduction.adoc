@@ -62,6 +62,6 @@ FlexPod コンバージドインフラプラットフォームを使用すると
 
 一般的な病院には IT システムが多様化しています。このようなシステムの大半はベンダーから購入されますが、社内の病院システムによって構築されるものはほとんどありません。そのため、病院システムはデータセンターの多様なインフラ環境を管理する必要があります。病院がシステムを FlexPod などの統合インフラプラットフォームに統合すれば、データセンターの運用を標準化できます。FlexPod を使用すると、医療機関は臨床システムと非臨床システムを同じプラットフォームに実装できるため、データセンターの運用を統合できます。
 
-image:flexpod-genomics-image2.png["エラー：グラフィックイメージがありません"]
+image:flexpod-genomics-image2.png[""]
 
 link:flexpod-genomics-benefits-of-deploying-genomic-workloads-on-flexpod.html["次は、ゲノムワークロードを FlexPod に導入するメリットです。"]

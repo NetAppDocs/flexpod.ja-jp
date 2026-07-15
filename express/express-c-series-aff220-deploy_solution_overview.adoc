@@ -30,7 +30,7 @@ FlexPod リファレンスアーキテクチャは、 Cisco Validated Design （
 * * FlexPod Select * は、 FlexPod データセンターの最良の側面を組み込み、特定のアプリケーションにインフラストラクチャを調整します。
 
 
-image:express-c-series-aff220-deploy_image3.png["エラー：グラフィックイメージがありません"]
+image:express-c-series-aff220-deploy_image3.png[""]
 
 
 
@@ -56,7 +56,7 @@ NetApp Verified Architecture プログラムは、ネットアップソリュー
 
 次の図は、 FlexPod Express と VMware vSphere 10GbE アーキテクチャを示しています。
 
-image:express-c-series-aff220-deploy_image4.png["エラー：グラフィックイメージがありません"]
+image:express-c-series-aff220-deploy_image4.png[""]
 
 
 NOTE: この検証では、 10GbE 接続と、 40GbE である Cisco UCS VIC 1387 を使用します。10GbE 接続を実現するために、 CVR-QSFP-SFP10G アダプタを使用します。

@@ -22,7 +22,7 @@ FIPS のセットアップとワークロードの検証では、典型的な医
 
 次の図は、 FIPS のセットアップと検証に使用される FlexPod システムを示しています。ネットアップはを活用しました https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/fp_vmware_vsphere_7_0_ontap_9_7.html["FlexPod データセンターと VMware vSphere 7.0 および NetApp ONTAP 9.7 Cisco Validated Design （ CVD ）"^] セットアッププロセスの実行中です。
 
-image:flexpod-fips-image6.png["エラー：グラフィックイメージがありません"]
+image:flexpod-fips-image6.png[""]
 
 
 

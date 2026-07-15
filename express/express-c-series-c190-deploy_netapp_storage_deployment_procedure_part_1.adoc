@@ -315,7 +315,7 @@ NOTE: 代替 NTP サーバを入力することもできます。「 \\<<var_ntp
 NOTE: 続行するには、少なくともイベント通知方式を設定する必要があります。いずれかの方法を選択できます。
 
 +
-image:express-c-series-c190-deploy_image4.png["エラー：グラフィックイメージがありません"]
+image:express-c-series-c190-deploy_image4.png[""]
 
 +
 クラスタ構成が完了したことを示すメッセージが表示されたら、 Manage Your Cluster （クラスタの管理）をクリックしてストレージを構成します。

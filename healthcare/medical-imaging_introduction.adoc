@@ -103,7 +103,7 @@ FlexPod 共同サポートは、医療機関がビジネスクリティカルな
 
 
 
-image:medical-imaging_image2.png["エラー：グラフィックイメージがありません"]
+image:medical-imaging_image2.png[""]
 
 
 

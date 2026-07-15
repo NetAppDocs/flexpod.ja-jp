@@ -3,7 +3,6 @@ section: flexpod-dc
 title: FlexPod データセンター
 entries:
 - title: ネットアップの SnapMirror によるビジネス継続性機能と ONTAP 9.10 を使用した FlexPod データセンター
-  type: solutions
   entries:
   - title: はじめに
     url: "/flexpod-dc/sm-bcs-introduction.html"

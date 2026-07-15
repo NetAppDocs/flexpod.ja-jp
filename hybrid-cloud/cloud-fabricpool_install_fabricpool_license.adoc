@@ -24,7 +24,7 @@ summary: ネットアップライセンスファイルを取得したら、 OnCo
 . 追加をクリックします。
 
 
-image:cloud-fabricpool_image8.png["エラー：グラフィックイメージがありません"]
+image:cloud-fabricpool_image8.png[""]
 
 
 
@@ -43,7 +43,7 @@ OnCommand システムマネージャで、次の手順を実行します。
 . [ 詳細 ] タブをクリックします。
 
 
-image:cloud-fabricpool_image9.png["エラー：グラフィックイメージがありません"]
+image:cloud-fabricpool_image9.png[""]
 
 FabricPool ライセンスの行には、最大容量と現在の容量が表示されます。
 

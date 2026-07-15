@@ -35,7 +35,7 @@ vSphere クラスタを作成するには、次の手順を実行します。
 . チェックボックスをオンにして DR と vSphere HA を有効にします。
 . [OK] をクリックします。
 +
-image:express-c-series-aff220-deploy_image49.png["エラー：グラフィックイメージがありません"]
+image:express-c-series-aff220-deploy_image49.png[""]
 
 
 
@@ -46,7 +46,7 @@ image:express-c-series-aff220-deploy_image49.png["エラー：グラフィック
 
 . クラスタを右クリックし、 Add Host （ホストの追加）を選択します。
 +
-image:express-c-series-aff220-deploy_image50.png["エラー：グラフィックイメージがありません"]
+image:express-c-series-aff220-deploy_image50.png[""]
 
 . ESXi ホストをクラスタに追加するには、次の手順を実行します。
 +
