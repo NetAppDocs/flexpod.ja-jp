@@ -7386,11 +7386,6 @@
   <block id="91770f038cd944a1d3b9b347edeb2b10" category="sidebar">新機能</block>
   <block id="17c3771ed0b6c1ae15740eff715e9922" category="sidebar">ビデオとデモ</block>
   <block id="d6b9ea32b921a9f56de32062ba4b94f3" category="sidebar">ブログ</block>
-  <block id="cfa345d8fdba7b2e9598cce9c0e3c744" category="sidebar">FlexPod で AI と最新のデータ分析を実現</block>
-  <block id="7d15915b1c0d83b2d07ba91bb371d99c" category="sidebar">FlexPod のビジネスアプリケーションとエンタープライズデータベース</block>
-  <block id="9651c3a3b7cbc999c2c50c39dbf61c04" category="sidebar">FlexPod を使用したハイブリッドクラウド</block>
-  <block id="7cb27dbb321a2dda7b1a59417ac87d24" category="sidebar">FlexPod for VDI の略</block>
-  <block id="e24bc29daa40702c050f7f3b61476c6f" category="sidebar">FlexPod による医療</block>
   <block id="da1ad8cf23727f17cd3ee56b1280c387" category="paragraph">Cisco Intersight Assist をインストールすると、ネットアップのストレージデバイスと仮想化デバイスを請求できます。「 * Intersight Targets * 」ページに戻り、 vCenter と NetApp Active IQ Unified Manager のターゲットを追加します。</block>
   <block id="2e5893c243d41c5a61c4efaa83f3a294" category="paragraph"><block ref="2e5893c243d41c5a61c4efaa83f3a294" category="inline-link-rx"></block></block>
   <block id="19829de524ac9c6ea351e3ffc56ea16e" category="paragraph">これらは、 FlexPod Express 解決策を補完するいくつかの主要機能です。ONTAP 9の追加機能の詳細については、を参照してください。4<block ref="c633298bec990e426b7e2b06b94ab53d" category="inline-link-rx"></block>また、<block ref="acaccc868f6222e64c0f11237becafd9" category="inline-link-rx"></block>ONTAP 9を含むように更新されたNetAppも参照してください。4.</block>
@@ -7755,7 +7750,6 @@
   <block id="7013f56669c02dbe795614370d0c956e" category="list-text">冗長構成の 2 台の 10Gbps 標準イーサネット スイッチ（Cisco Nexus 9200 および 9300 モデル）</block>
   <block id="5f7768fa622b0c0e0bf05d27d8097e12" category="list-text">CIMC ベースのスタンドアロン ラック サーバー構成または Intersight スタンドアロン構成を備えた Cisco UCS C シリーズ スタンドアロン ラック サーバー、または Cisco Intersight 管理構成（IMM）を備えた Cisco UCS X シリーズ ダイレクト。</block>
   <block id="8cf756e67e6fe3a58a1405610ba75ad9" category="paragraph">FlexPod Expressアーキテクチャには、冗長化されたAFF、ASA、またはFASシリーズコントローラが必要です。コントローラはONTAPソフトウェアを実行します。ストレージコントローラを注文する際、希望するソフトウェアバージョンをコントローラにプリロードすることができます。ONTAPの場合、クラスタはクラスタ インターコネクトスイッチのペアを使用してデプロイするか、スイッチレスクラスタ構成でデプロイすることができます。</block>
-  <block id="d5c565b8a9c9c59fa0b692c9cbf65edd" category="admonition">スイッチレスクラスタ構成は、2ノード構成の場合のみサポートされます。クラスタ インターコネクト スイッチは、4ノードを超える構成では必須であり、2ノード構成ではオプションです。</block>
   <block id="230b6be042c6a9e09ceea70fd8e2f108" category="paragraph">選択したストレージ プラットフォームに応じて、さまざまなオプションと構成が利用可能です。これらの追加部品の詳細については、担当の営業担当者にお問い合わせください。</block>
   <block id="ee65a1f1b80c1d59eba7dc665cc831bc" category="paragraph">下記の表に記載されているコントローラファミリは、Cisco Nexusスイッチへの接続がシームレスであるため、FlexPodソリューションでの使用に適しています。各コントローラモデルの具体的な互換性の詳細については、<block ref="0012c2b4de81607ee8d0f71acdd6c9ab" category="inline-link-rx"></block>を参照してください。</block>
   <block id="b77cf317a6bb3b0806632ae61052e3ed" category="cell">NetAppのFlexPod Express向けエントリレベル ストレージ ファミリ</block>
@@ -8351,4 +8345,8 @@
   <block id="111f4df7e87e518570ab7b1b197da1ff" category="paragraph"><block ref="111f4df7e87e518570ab7b1b197da1ff" category="inline-image-macro-rx" type="image"></block></block>
   <block id="3f8b76f392fdab66088707ea680cdf9c" category="paragraph"><block ref="3f8b76f392fdab66088707ea680cdf9c" category="inline-image-macro-rx" type="image"></block></block>
   <block id="01d78a1cc76d70d71c21461704721f1f" category="paragraph"><block ref="01d78a1cc76d70d71c21461704721f1f" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="d31ed23a1faa3e74607a17176c090e5e" category="admonition">スイッチレスクラスタ構成は、2ノード構成の場合のみサポートされます。クラスタ相互接続スイッチは、4ノード以上の構成では必須であり、2ノード構成ではオプションです。</block>
+  <block id="29d1fb15319805edca77b8cc05b35dfb" category="sidebar">FlexPod デザインガイド</block>
+  <block id="26672345b32420d3708cd3bd0f7b1e88" category="sidebar">FlexPod 検証済み設計ガイド</block>
+  <block id="21b29303b1c3acf1c3bbd54b69cf697d" category="sidebar">FlexPod 技術仕様</block>
 </blocks>
