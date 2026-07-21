@@ -27,4 +27,4 @@ summary: このセクションでは、さまざまなバージョンの FlexPod
 
 
 
-NOTE: すべてのソフトウェアコンポーネントは http://support.netapp.com/matrix/["NetApp IMT"^]に記載されサポートされている必要があり、すべての NetApp ハードウェアコンポーネントおよび ONTAP バージョンは https://hwu.netapp.com/Home/Index["NetApp Hardware Universe の略"^]に記載されサポートされている必要があり、すべての Cisco ハードウェアコンポーネントは https://ucshcltool.cloudapps.cisco.com/public/["Cisco HCL"^]に記載されサポートされている必要があります。
+NOTE: すべてのソフトウェアコンポーネントは https://imt.netapp.com/imt/#welcome["NetApp IMT"^]に記載されサポートされている必要があり、すべての NetApp ハードウェアコンポーネントおよび ONTAP バージョンは https://hwu.netapp.com/Home/Index["NetApp Hardware Universe の略"^]に記載されサポートされている必要があり、すべての Cisco ハードウェアコンポーネントは https://ucshcltool.cloudapps.cisco.com/public/["Cisco HCL"^]に記載されサポートされている必要があります。
