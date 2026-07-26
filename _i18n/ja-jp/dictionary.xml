@@ -7586,8 +7586,6 @@
   <block id="611f2f2f4feb7733fb592961b7ca409c" category="paragraph"><block ref="611f2f2f4feb7733fb592961b7ca409c" category="inline-link-rx"></block></block>
   <block id="eccbfb8e55244ced2c05dead60816337" category="inline-link"><block ref="eccbfb8e55244ced2c05dead60816337" category="inline-link-rx"></block></block>
   <block id="2485bc6384a0018bf9378518acc91743" category="paragraph"><block ref="2485bc6384a0018bf9378518acc91743" category="inline-link-rx"></block></block>
-  <block id="39c90ea315f24fb17b3b30ec1987e361" category="inline-link"><block ref="39c90ea315f24fb17b3b30ec1987e361" category="inline-link-rx"></block></block>
-  <block id="1adcadc2d283b69776aea48ef9ef3f4b" category="paragraph"><block ref="1adcadc2d283b69776aea48ef9ef3f4b" category="inline-link-rx"></block></block>
   <block id="6ae13600af8af9b0e91f83cbd7d1e186" category="summary">FlexPod Express の自動展開は、Ansible プレイブックおよび関連するインフラストラクチャをコード資産として含む GitHub リポジトリを通じて利用できます。</block>
   <block id="503b44fa5032230b9ac6ce1b24df86ba" category="doc">FlexPod Express 自動デプロイメント</block>
   <block id="6fb06132bd7acd3aa4dd1b6ded239401" category="paragraph">FlexPod Express の自動展開は、FlexPod Express GitHub リポジトリから利用できます。これらのリポジトリには、Ansible プレイブックと関連ファイルが含まれており、FlexPod Express インフラストラクチャをコード（IaC）としてデプロイするために使用されます。</block>
@@ -7823,7 +7821,6 @@
   <block id="2a409f1fa2a150f2253ac127248488e4" category="paragraph">FlexPod Expressは、NetApp ONTAPオペレーティングシステムを実行するストレージシステムをサポートしています。</block>
   <block id="ef7609bdef2cdaafd40275f9e5433c35" category="paragraph">NetApp ONTAP ソフトウェアは、AFF、ASA、および FAS ストレージ システム上で動作するオペレーティング システムです。ONTAP は、拡張性の高いストレージ アーキテクチャを提供し、無停止運用、無停止アップグレード、および俊敏なデータ インフラストラクチャを実現します。ONTAP One ライセンス モデルにより、すべてのエンタープライズ データ サービスが単一のパッケージに含まれ、導入と管理が簡素化されるとともに、高度な機能への完全なアクセスが提供されます。ONTAP は、レプリケーションおよびディザスタ リカバリのための SnapMirror、アプリケーション整合性のあるバックアップとリストアのための SnapCenter などのテクノロジーを通じて、堅牢なデータ保護を提供します。また、自律型ランサムウェア対策や暗号化などの組み込みのセキュリティ機能を備え、現代の脅威からデータを保護します。さらに、ONTAP は SnapMirror Cloud や S3 ベースのレプリケーションなどの機能により、シームレスなハイブリッド クラウド統合を実現し、一貫性と制御を維持しながらオンプレミスとクラウド環境間のデータ移動を可能にします。</block>
   <block id="bf0ebcdca54fe8f97b947c021c0fc6ba" category="paragraph">ONTAP の詳細については、<block ref="1438085fbc66bc2984b1f8fc6f5a6806" category="inline-link-rx"></block>を参照してください。</block>
-  <block id="e52bcb3065e40f2076e69b19a9e4ce5e" category="paragraph">FlexPodアーキテクチャは、本書に記載されている一連の規則によって定義されます。ハードウェア コンポーネントとソフトウェア構成は、<block ref="725fce943efeaeb2cbdfd24ce0e99c5b" category="inline-link-rx"></block>および<block ref="538106ddbedb569903f8e17bb643549d" category="inline-link-rx"></block>によってサポートされている必要があります。</block>
   <block id="db63719d1199768760c155c55421c914" category="paragraph">各Cisco Validated Design（CVD）またはNetApp検証済みアーキテクチャ（NVA）は、検証済みのFlexPod構成を表します。CiscoとNetAppは、これらの構成の組み合わせを文書化し、広範なエンドツーエンドテストによって検証しています。これらの構成から逸脱するFlexPodの展開も、このドキュメントのガイドラインに従い、すべてのコンポーネントがCisco HCLおよびNetApp IMTに互換性があると記載されている場合は、完全にサポートされます。</block>
   <block id="45588e4cce1d335ead36f0585e8b630c" category="section-title">Cisco UCS X シリーズ ダイレクト シャーシ</block>
   <block id="fcb60e469fe66f96f526ecaec4c2ae36" category="paragraph">以下の表に示すように、Cisco UCS X-Series Direct シャーシの技術仕様には次のコンポーネントが含まれています：</block>
@@ -8349,4 +8346,7 @@
   <block id="503753b7cfdba11f6ff233c6f8d878b2" category="paragraph"><block ref="503753b7cfdba11f6ff233c6f8d878b2" category="inline-link-rx"></block></block>
   <block id="f4bf1ab74cf7b6fb7a56eaa53745e1ae" category="paragraph">Cisco UCS C シリーズラックサーバーは、1U、2U、4U のラックユニット（RU）構成があり、CPU、メモリ、I/O のオプションも豊富に用意されています。以下の表に記載されている部品番号は、基本サーバーのものです。これには、CPU、メモリ、ドライブ、PCIe（Peripheral Component Interconnect Express）カードは含まれません。複数の構成オプションが利用可能で、FlexPod アーキテクチャでサポートされています。</block>
   <block id="a60ddb965dcf6f25c87e72a37c8252c4" category="admonition">すべてのソフトウェアコンポーネントは<block ref="8058bb2e300c0b28cc61110596fbc6e0" category="inline-link-rx"></block>に記載されサポートされている必要があり、すべての NetApp ハードウェアコンポーネントおよび ONTAP バージョンは<block ref="6a8cef5b71adde6301ea0984592ea5c1" category="inline-link-rx"></block>に記載されサポートされている必要があり、すべての Cisco ハードウェアコンポーネントは<block ref="243ee419838ead03039b3c014c885e78" category="inline-link-rx"></block>に記載されサポートされている必要があります。</block>
+  <block id="d4be789c0896e734a89e386a8d00f187" category="inline-link"><block ref="d4be789c0896e734a89e386a8d00f187" category="inline-link-rx"></block></block>
+  <block id="c1ba01aa51a8fc173d6a9dd15d8b5d42" category="paragraph"><block ref="c1ba01aa51a8fc173d6a9dd15d8b5d42" category="inline-link-rx"></block></block>
+  <block id="9b1dcc158dd4f463eff8e0ecc95e1c0f" category="paragraph">FlexPodアーキテクチャは、本書に記載されている一連の規則によって定義されます。ハードウェア コンポーネントとソフトウェア構成は、<block ref="55be3385fd2442b96520f981204722ea" category="inline-link-rx"></block>および<block ref="538106ddbedb569903f8e17bb643549d" category="inline-link-rx"></block>によってサポートされている必要があります。</block>
 </blocks>
