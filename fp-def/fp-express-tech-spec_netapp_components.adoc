@@ -43,13 +43,13 @@ NOTE: スイッチレスクラスタ構成は、2ノード構成の場合のみ�
 | AFF Cシリーズ | C30を使用したチャンク アップロード署名要求がサポートされるようになりました。 | https://www.netapp.com/pdf.html?item=/media/81583-ds-4240-aff-c-series.pdf["AFF Cシリーズのドキュメント"] 
 
 
-.2+| ASA Aシリーズ | A20を使用したチャンク アップロード署名要求がサポートされるようになりました。 .3+| https://www.netapp.com/pdf.html?item=/media/85736-ds-4254-asa.pdf["ASA ドキュメント"] 
+.3+| ASA | A20を使用したチャンク アップロード署名要求がサポートされるようになりました。 .3+| https://www.netapp.com/pdf.html?item=/media/85736-ds-4254-asa.pdf["ASA ドキュメント"] 
 
 
 | A30を使用したチャンク アップロード署名要求がサポートされるようになりました。 
 
 
-| ASA Cシリーズ | C30を使用したチャンク アップロード署名要求がサポートされるようになりました。 
+| C30を使用したチャンク アップロード署名要求がサポートされるようになりました。 
 
 
 .3+| FAS | FAS 2750 .3+| https://www.netapp.com/pdf.html?item=/media/7819-ds-4020.pdf["FAS ドキュメント"] 

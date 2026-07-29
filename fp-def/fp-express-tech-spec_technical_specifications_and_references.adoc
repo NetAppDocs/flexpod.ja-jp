@@ -235,29 +235,19 @@ NetApp ストレージ コントローラの技術仕様には、プラットフ
 |===
 
 
-[[netapp-asa-a-series]]
-=== NetApp ASA A-Series
+[[netapp-asa]]
+=== NetApp ASA
 
-NetApp ASA A シリーズ ストレージ コントローラのエントリーレベル モデルは、FlexPod Express での使用がサポートされています。詳細については、 https://www.netapp.com/pdf.html?item=/media/85736-ds-4254-asa.pdf["NetApp ASA A シリーズの技術仕様"^] データシートおよび https://hwu.netapp.com/["NetApp Hardware Universe の略"^]を参照してください。特定の ASA モデルの詳細については、次の表に記載されているプラットフォーム固有のドキュメントを参照してください。
+NetApp ASA ストレージコントローラのエントリーレベルモデルは、FlexPod Express での使用がサポートされています。追加情報は https://www.netapp.com/pdf.html?item=/media/85736-ds-4254-asa.pdf["NetApp ASA テクニカル仕様"^] データシートおよび https://hwu.netapp.com/["NetApp Hardware Universe の略"^]に記載されています。特定の ASA モデルの詳細については、次の表に記載されているプラットフォーム固有のドキュメントを参照してください。
 
 |===
-| コンポーネント | NetApp ASA A シリーズ コントローラ プラットフォームのドキュメント 
+| コンポーネント | NetApp ASAコントローラープラットフォームのドキュメント 
 
 
 | NetApp ASA A20 | https://docs.netapp.com/us-en/ontap-systems/asa-r2-key-specifications/asa-a20-key-specifications.html["ASA A20の主な仕様"] 
 
 
 | NetApp ASA A30 | https://docs.netapp.com/us-en/ontap-systems/asa-r2-key-specifications/asa-a30-key-specifications.html["ASA A30の主な仕様"] 
-|===
-
-
-[[netapp-asa-c-series]]
-=== NetApp ASA C-Series
-
-NetApp ASA C シリーズ ストレージ コントローラのエントリーレベル モデルは、FlexPod Express での使用がサポートされています。追加情報は https://www.netapp.com/pdf.html?item=/media/85736-ds-4254-asa.pdf["NetApp ASA C-Series 技術仕様"^]データシートおよび https://hwu.netapp.com/["NetApp Hardware Universe の略"^]に記載されています。特定の ASA モデルの詳細については、次の表に記載されているプラットフォーム固有のドキュメントを参照してください。
-
-|===
-| コンポーネント | NetApp ASA C-Series コントローラ プラットフォームのドキュメント 
 
 
 | NetApp ASA C30 | https://www.netapp.com/pdf.html?item=/media/85736-ds-4254-asa.pdf["ASA C30の主な仕様"] 
