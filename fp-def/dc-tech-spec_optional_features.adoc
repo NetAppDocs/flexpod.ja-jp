@@ -62,7 +62,7 @@ image:dc-tech-spec_image12.png[""]
 
 FlexPod の構成とパフォーマンスのメリットの詳細については、を参照してください https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/whitepaper-c11-741907.html["ホワイトペーパー『 Introducing End-to-End NVMe for FlexPod 』"^]
 
-ONTAP実装の詳細については、を参照してください https://www.netapp.com/pdf.html?item=/media/10681-tr4684pdf.pdf["TR-4684 『 Implementing and Configuring Modern SANs with NVMe 』"^]。
+ONTAP の実装の詳細については、 https://www.netapp.com/pdf.html?item=/media/10681-tr4684.pdf["TR-4684 『 Implementing and Configuring Modern SANs with NVMe 』"^]を参照してください。
 
 image:dc-tech-spec_image3.png[""]
 

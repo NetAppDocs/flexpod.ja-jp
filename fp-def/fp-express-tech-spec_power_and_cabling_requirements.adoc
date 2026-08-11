@@ -25,7 +25,7 @@ FlexPod Express の電力要件は、FlexPod Express 構成がインストール
 
 必要な最大電力に関するデータやその他の詳細な電力情報については、各ハードウェア コンポーネントのlink:https://docs.netapp.com/us-en/flexpod/fp-def/fp-express-tech-spec_technical_specifications_and_references.html["技術仕様"^]を参照してください。
 
-Cisco UCS の電力データの詳細については、を参照してください http://www.cisco.com/assets/cdc_content_elements/flash/dataCenter/cisco_ucs_power_calculator/["Cisco UCS Power Calculator"^]。
+Cisco UCS の詳細な電力データについては、 https://ucspowercalculator.cisco.com/["Cisco UCS Power Calculator"^]を参照してください。
 
 NetAppストレージコントローラの電源データについては、 http://hwu.netapp.com/Controller/Index?platformTypeId=6780858["NetApp Hardware Universe の略"^]を参照してください。*Platforms* で、使用するストレージ プラットフォーム（例：AFF A20）を選択し、ONTAP バージョンを選択して、*Show Results* をクリックします。電源コードのデータは *Supported Power Cords* セクションに記載されています。サイズ、重量、ワット数などの詳細については、*Size, Weight, Acoustic, Power* セクションを参照してください。
 

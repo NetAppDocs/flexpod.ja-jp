@@ -16,7 +16,7 @@ summary: VMware vCenter Server 6.7 および vSphere クラスタリングを設
 [role="lead"]
 VMware vCenter Server 6.7 および vSphere クラスタリングを設定するには、次の手順を実行します。
 
-.  `https://<<FQDN or IP of vCenter>>/vsphere-client/`に移動します。
+.  `+https://<<FQDN or IP of vCenter>>/vsphere-client/+`に移動します。
 . vSphere Client の起動をクリックします。
 . vCSA のセットアッププロセスで入力したユーザ名 mailto ： administrator@vspehre.loca l [administrator^] @vsphere.local および SSO パスワードを使用してログインします。
 . vCenter 名を右クリックし、 New Datacenter を選択します。

@@ -69,6 +69,6 @@ image:fp-express-tech-spec_image12.png["Cisco UCS Cシリーズスタンドア�
 Cisco UCS C シリーズは、CIMC または Cisco Intersight スタンドアロン管理を使用して管理できます。
 
 
-NOTE: 上記のサンプルトポロジーは、NetApp AFF を使用した直接接続ストレージソリューションを示しています。ただし、同じトポロジーは NetApp ASA および FAS にも使用できます。
+NOTE: 上記のサンプルトポロジーは、NetApp AFF を使用したストレージソリューションを示しています。ただし、同じトポロジーを NetApp ASA および FAS にも使用できます。
 
 この構成の詳細については、 https://www.netapp.com/pdf.html?item=/media/88340-NVA-FlexpodExpress_C220_A250_NexusFinal.pdf["FlexPod Express for VMware vSphere 8.0（Cisco UCS C-Series スタンドアロンおよびNetApp AFF）"^]を参照してください。

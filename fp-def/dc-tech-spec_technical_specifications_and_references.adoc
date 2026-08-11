@@ -451,7 +451,7 @@ FAS データセンターでは、使用可能な FlexPod ストレージコン�
 [[netapp-disk-shelves]]
 === NetApp ディスクシェルフ
 
-ネットアップのディスクシェルフの技術仕様には、フォームファクタサイズ、エンクロージャあたりのドライブ数、シェルフ I/O モジュールなどが含まれます。このドキュメントは、次の表に記載されています。詳細については、を参照してください http://www.netapp.com/us/products/storage-systems/disk-shelves-and-storage-media/disk-shelves-tech-specs.aspx["ネットアップのディスクシェルフとストレージメディア技術仕様"^] および https://hwu.netapp.com/["NetApp Hardware Universe の略"^]。
+NetAppディスクシェルフの技術仕様には、フォームファクタサイズ、エンクロージャあたりのドライブ数、およびシェルフI/Oモジュールが含まれます。これらの情報は、以下の表に記載されています。詳細については、 https://www.netapp.com/data-storage/disk-shelves-storage-media/["ネットアップのディスクシェルフとストレージメディア技術仕様"^]および https://hwu.netapp.com/["NetApp Hardware Universe の略"^]を参照してください。
 
 |===
 | コンポーネント | NetApp FAS / AFF ディスクシェルフのドキュメント 

@@ -527,10 +527,10 @@ NOTE: このシステムは、 2 ノードスイッチレスクラスタ構成�
 | DNS サーバ IP （複数入力できます） | \<<var_dns_server_ip>> 
 
 
-| NTP サーバ A の IP | <switch-A-ntp-ip>> 
+| NTP サーバ A の IP | +<< switch-a-ntp-ip >>+ 
 
 
-| NTP サーバ B の IP | <switch-b-ntp-ip>> 
+| NTP サーバ B の IP | +<< switch-b-ntp-ip >>+ 
 |===
 
 

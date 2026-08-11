@@ -62,7 +62,7 @@ FlexPod を使用すると、 1 つのプラットフォームで FC 、 FCoE �
 * ACO 医療機関全体で画像およびメディア管理を行う場合は、画像の記録システムに関係なく、 Digital Imaging や Communications in Medicine などのプロトコルを使用して、単一のプラットフォームを使用できます（ https://www.dicomstandard.org/about/["DICOM"^]）および DICOM 永続オブジェクトへの Web アクセス（ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3447090/["WADO"^])
 * ヘルス情報交換（ https://www.healthit.gov/topic/health-it-and-health-information-exchange-basics/what-hie["HIE"^]) メッセージに埋め込まれた画像を含みます。
 * ハンドヘルド、ワイヤレススキャンデバイスなどのモバイルモダリティは、 DoD レベルのセキュリティ、信頼性、遅延を持つ堅牢なネットワークインフラストラクチャを必要とします。このインフラストラクチャは、デバイス、ワイヤレススキャンデバイス（携帯電話に接続されているポケットハンドヘルド超音波スキャナなど）のエッジ、コア、クラウドに必要です。 https://www.netapp.com/us/data-fabric.aspx["ネットアップが実現するデータファブリック"^] 大規模な組織にこの機能を提供します。
-* 新しいモダリティには急激なストレージニーズがあります。たとえば、 CT や MRI ではモダリティごとに数百 MB 必要ですが、デジタル病理画像（スライド全体のイメージングを含む）のサイズは数 GB になります。FlexPodはで設計されてい https://www.netapp.com/pdf.html?item=/media/16926-sb-flexpod-advantage-performance-agility-economicspdf.pdf["基本的な特性としてのパフォーマンス、信頼性、拡張性"^]ます。
+* 新しいモダリティでは、ストレージ容量の必要性が飛躍的に増加します。例えば、CTやMRIはそれぞれ数百MBの容量を必要としますが、デジタル病理画像（全スライド画像を含む）は数GBにもなることがあります。FlexPodは https://www.netapp.com/pdf.html?item=/media/16926-sb-flexpod-advantage-performance-agility-economics.pdf["基本的な特性としてのパフォーマンス、信頼性、拡張性"^]を考慮して設計されています。
 
 
 適切に設計された医療画像システムプラットフォームは、イノベーションの中心にあります。FlexPod アーキテクチャは、業界をリードする Storage Efficiency 機能を備えた、柔軟なコンピューティング機能とストレージ機能を提供します。
