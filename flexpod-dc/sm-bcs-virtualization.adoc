@@ -94,6 +94,6 @@ image:sm-bcs-image45.png[""]
 
 image:sm-bcs-image46.png[""]
 
-VMware HA Cluster および VMware vSphere Metro ストレージクラスタのその他のベストプラクティスおよび設定については、を参照してください https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.avail.doc/GUID-5432CA24-14F1-44E3-87FB-61D937831CF6.html["vSphere HA クラスタを作成および使用する"^]、 https://core.vmware.com/resource/vmware-vsphere-metro-storage-cluster-vmsc["VMware vSphere Metro Storage Cluster （ vMSC ）"^] およびの VMware KB です https://kb.vmware.com/s/article/83370["NetApp ONTAP と NetApp SnapMirror のビジネス継続性（ SM-BC ）および VMware vSphere Metro Storage Cluster （ vMSC ）"^]。
+VMware HA Cluster および VMware vSphere メトロストレージクラスターのその他のベストプラクティスと構成については、 https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.avail.doc/GUID-5432CA24-14F1-44E3-87FB-61D937831CF6.html["vSphere HA クラスタを作成および使用する"^]、 https://core.vmware.com/resource/vmware-vsphere-metro-storage-cluster-vmsc["VMware vSphere Metro Storage Cluster （ vMSC ）"^]、および https://docs.netapp.com/us-en/netapp-solutions-virtualization/vmware/vmw-vmsc-with-smas.html["NetApp ONTAP と SnapMirror active sync （旧 SM-BC）および VMware vSphere Metro Storage Cluster （vMSC）"^]を参照してください。
 
 link:sm-bcs-validated-scenarios.html["次：解決策 の検証済みのシナリオ"]

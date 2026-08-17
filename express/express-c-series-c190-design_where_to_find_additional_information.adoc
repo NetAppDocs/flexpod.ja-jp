@@ -15,9 +15,9 @@ summary: このドキュメントに記載されている情報の詳細につ�
 +
 https://docs.netapp.com/platstor/index.jsp["https://docs.netapp.com/platstor/index.jsp"^]
 
-* AFF ドキュメントのリソースページ
+* AFF C-Series システムドキュメント
 +
-https://www.netapp.com/us/documentation/all-flash-fas.aspx["https://www.netapp.com/us/documentation/all-flash-fas.aspx"^]
+https://docs.netapp.com/us-en/ontap-systems/aff-cseries/["https://docs.netapp.com/us-en/ontap-systems/aff-cseries/"^]
 
 * FlexPod Express with VMware vSphere 6.7 and NetApp AFF C190 Deployment Guide （現在のリリース）
 * NetApp のドキュメント

@@ -69,13 +69,13 @@ FlexPod アーキテクチャには、冗長な NetApp FAS 、 AFF 、または 
 
 NOTE: すべてのディスクシェルフとディスクのパーツ番号については、営業担当者にお問い合わせください。
 
-サポートされているドライブの詳細については、次の表の「 NetApp Hardware Universe 」リンクをクリックし、サポートされているドライブを選択してください。
+ディスクシェルフとストレージ メディアの詳細については、以下の表の「ディスクシェルフおよびストレージ メディアの技術仕様」リンクを参照してください。
 
 |===
 | ディスクシェルフ | 技術仕様 
 
 
-| DS224C .4+| http://www.netapp.com/us/products/storage-systems/disk-shelves-and-storage-media/disk-shelves-tech-specs.aspx["NetApp Hardware Universe でサポートされているディスクシェルフとストレージメディアドライブ"] 
+| DS224C .4+| https://www.netapp.com/data-storage/disk-shelves-storage-media/["ディスクシェルフおよびストレージ メディアの技術仕様"] 
 
 
 | DS212C 

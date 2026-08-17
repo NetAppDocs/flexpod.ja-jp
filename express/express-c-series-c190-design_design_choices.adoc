@@ -57,7 +57,7 @@ AFF C190 システムは、 960GB SSD のみで構成されます。拡張には
 * 24X 960GB
 
 
-AFF C190 ハードウェアシステムの詳細については、を参照してください https://www.netapp.com/us/products/entry-level-aff.aspx["NetApp AFF C190 オールフラッシュアレイのページ"^]。
+AFF C190ハードウェアシステムの詳細については、 https://docs.netapp.com/us-en/ontap-systems/c190/install-setup.html["NetApp AFF C190ドキュメント"^]を参照してください。
 
 
 

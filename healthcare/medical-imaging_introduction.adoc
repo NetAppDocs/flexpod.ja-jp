@@ -61,7 +61,7 @@ FlexPod を使用すると、 1 つのプラットフォームで FC 、 FCoE �
 * 画像を評価する場合、組織全体の放射線科医間でリアルタイムのコラボレーションを行うには、エンドユーザーコンピューティングデバイスで高性能なグラフィックス処理が必要です。ネットアップは、ハイエンドグラフィックスのユースケースに特化して設計され実証された、業界をリードする VDI ソリューションを提供しています。詳細については、を参照してください https://flexpod.com/solutions/use-cases/virtual-desktop-infrastructure/["こちらをご覧ください"^]。
 * ACO 医療機関全体で画像およびメディア管理を行う場合は、画像の記録システムに関係なく、 Digital Imaging や Communications in Medicine などのプロトコルを使用して、単一のプラットフォームを使用できます（ https://www.dicomstandard.org/about/["DICOM"^]）および DICOM 永続オブジェクトへの Web アクセス（ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3447090/["WADO"^])
 * ヘルス情報交換（ https://www.healthit.gov/topic/health-it-and-health-information-exchange-basics/what-hie["HIE"^]) メッセージに埋め込まれた画像を含みます。
-* ハンドヘルド、ワイヤレススキャンデバイスなどのモバイルモダリティは、 DoD レベルのセキュリティ、信頼性、遅延を持つ堅牢なネットワークインフラストラクチャを必要とします。このインフラストラクチャは、デバイス、ワイヤレススキャンデバイス（携帯電話に接続されているポケットハンドヘルド超音波スキャナなど）のエッジ、コア、クラウドに必要です。 https://www.netapp.com/us/data-fabric.aspx["ネットアップが実現するデータファブリック"^] 大規模な組織にこの機能を提供します。
+* 携帯型ワイヤレススキャン装置（例えば、スマートフォンに接続されたポケットサイズの携帯型超音波スキャナー）などのモバイル機器には、エッジ、コア、クラウドにおいて、国防総省レベルのセキュリティ、信頼性、低遅延を備えた堅牢なネットワーク インフラが必要です。 https://www.netapp.com/blog/medical-imaging-cloud-disaster-recovery-meets-ai/["ネットアップが実現するデータファブリック"^]は、この機能を大規模に組織へ提供します。
 * 新しいモダリティでは、ストレージ容量の必要性が飛躍的に増加します。例えば、CTやMRIはそれぞれ数百MBの容量を必要としますが、デジタル病理画像（全スライド画像を含む）は数GBにもなることがあります。FlexPodは https://www.netapp.com/pdf.html?item=/media/16926-sb-flexpod-advantage-performance-agility-economics.pdf["基本的な特性としてのパフォーマンス、信頼性、拡張性"^]を考慮して設計されています。
 
 
