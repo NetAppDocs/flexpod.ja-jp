@@ -14,7 +14,7 @@ summary: FlexPod のアーキテクチャは、本ドキュメントで説明す
 
 
 [role="lead"]
-FlexPodアーキテクチャは、本書に記載されている一連の規則によって定義されます。ハードウェア コンポーネントとソフトウェア構成は、 https://ucshcltool.cloudapps.cisco.com/public["シスコハードウェア互換性リスト（ HCL ）"^]および http://mysupport.netapp.com/matrix["ネットアップの Interoperability Matrix Tool （ IMT ）"^]によってサポートされている必要があります。
+FlexPodアーキテクチャは、本書に記載されている一連の規則によって定義されます。ハードウェア コンポーネントとソフトウェア構成は、 https://ucshcltool.cloudapps.cisco.com/public["シスコハードウェア互換性リスト（ HCL ）"^]および https://imt.netapp.com["ネットアップの Interoperability Matrix Tool （ IMT ）"^]によってサポートされている必要があります。
 
 各Cisco Validated Design（CVD）またはNetApp検証済みアーキテクチャ（NVA）は、検証済みのFlexPod構成を表します。CiscoとNetAppは、これらの構成の組み合わせを文書化し、広範なエンドツーエンドテストによって検証しています。これらの構成から逸脱するFlexPodの展開も、このドキュメントのガイドラインに従い、すべてのコンポーネントがCisco HCLおよびNetApp IMTに互換性があると記載されている場合は、完全にサポートされます。
 

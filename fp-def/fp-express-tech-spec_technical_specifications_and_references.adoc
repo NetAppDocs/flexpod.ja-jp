@@ -153,7 +153,7 @@ Cisco Unified Edge 向け Cisco UCS コンピューティングノードの技�
 [[cisco-ucs-c-series-rack-servers]]
 == Cisco UCS C シリーズラックサーバ
 
-Cisco UCS C シリーズ ラック サーバーの技術仕様には、プロセッサのサポート、最大メモリ容量、PCIe スロット数、およびフォーム ファクタが含まれます。互換性のある UCS サーバー モデルの詳細については、 https://ucshcltool.cloudapps.cisco.com/public/["Cisco Hardware Compatibility の略"^]リストを参照してください。
+Cisco UCS C シリーズ ラック サーバーの技術仕様には、プロセッサのサポート、最大メモリ容量、PCIe スロット数、およびフォーム ファクタが含まれます。互換性のある UCS サーバー モデルの詳細については、 https://ucshcltool.cloudapps.cisco.com/public["Cisco Hardware Compatibility の略"^]リストを参照してください。
 
 Cisco UCS C シリーズ ラックサーバーの技術仕様については、以下の表を参照してください。
 
@@ -298,4 +298,4 @@ NetAppディスクシェルフの技術仕様には、フォームファクタ�
 [[netapp-drives]]
 === ネットアップのドライブ
 
-ネットアップドライブの技術仕様には、フォームファクタサイズ、ディスク容量、ディスク rpm 、サポートするコントローラ、 ONTAP のバージョンなどがあります。これらの仕様は、の「ドライブ」セクションに記載されています http://hwu.netapp.com/Drives/Index?queryId=1581392["NetApp Hardware Universe の略"^]。
+NetAppドライブの技術仕様には、フォームファクタサイズ、ディスク容量、ディスクRPM、サポートコントローラ、およびONTAPバージョン要件が含まれます。これらの仕様は、 http://hwu.netapp.com["NetApp Hardware Universe の略"^]のドライブセクションに記載されています。
