@@ -1,0 +1,47 @@
+---
+sidebar: sidebar 
+permalink: fp-def/dc-tech-spec_automation.html 
+keywords: flexpod datacenter, automation, IaC, GitHub repository, Ansible 
+summary: FlexPod データセンターの自動展開は、Ansible プレイブックおよび関連するコードとしてのインフラストラクチャアセットを含む GitHub リポジトリから利用できます。 
+---
+= 自動展開
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./../media/
+
+
+[role="lead"]
+FlexPod データセンターの自動展開は、FlexPod データセンター link:https://github.com/ucs-compute-solutions["GitHub リポジトリ"^] から利用できます。これらのリポジトリには、Ansible プレイブックと関連ファイルが含まれており、FlexPod データセンターのインフラストラクチャをコード（IaC）としてデプロイすることができます。
+
+GitHubリポジトリは、FlexPodデータセンター構成を展開するための体系的なアプローチを提供し、ユーザーがインフラストラクチャのセットアップと管理を自動化できるようにします。これらには、FlexPodデータセンター設計のさまざまなコンポーネント向けのプレイブックが含まれており、ユーザーが一貫性と信頼性をもって環境を効率的に展開・維持できるよう支援します。
+
+* FlexPod データセンターの基本構成による自動導入
++
+** Cisco Nexusスイッチ、Cisco UCS C-Seriesサーバ、またはIMMを搭載したCisco UCS X-Series DirectとNetApp ONTAPを使用したベースFlexPod Datacenter構成の自動デプロイについては、link:https://github.com/ucs-compute-solutions/FlexPod-Base-IMM["FlexPod データセンター基本構成（Cisco IMM と NetApp ONTAP GitHub リポジトリ）"^]および対応するlink:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_base_imm_m7_iac.html["CVD"^]を参照してください。
+** このリポジトリには、ベース FlexPod データセンター構成のデプロイを容易にするための Ansible プレイブックと関連ファイルが含まれています。さまざまなハイパーバイザー、ベアメタル OS、およびアプリケーションのテナントは、FlexPod Base の上に構成できます。
+
+
+* VMware vSphereおよびCisco IMMを使用したFlexPod Datacenterの自動デプロイ
++
+** Cisco Nexusスイッチ、Cisco UCS C-Seriesサーバ、またはIMMを搭載したCisco UCS X-Series Direct、およびNetApp ONTAPとVMware vSphereを使用したFlexPod Datacenter構成の自動デプロイについては、link:https://github.com/ucs-compute-solutions/FlexPod-IMM-VMware["FlexPod Datacenter with VMware vSphere and Cisco IMM GitHub リポジトリ"^]および対応するlink:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_imm_m7_iac.html["CVD"^]を参照してください。
+** Ansibleプレイブックで定義されたVMwareロールは、VMware関連の設定に使用できます。
+
+
+
+
+
+NOTE: このリポジトリでは、変数ファイル内でデフォルトでFC-NVMeおよびNFSを使用したFCブートが設定されていますが、iSCSIブートおよびNFSを使用したNVMe-TCPも使用できます。
+
+* Red Hat OpenShiftおよびCisco IMMを使用したFlexPod Datacenterの自動デプロイ
++
+** Cisco Nexusスイッチ、IMM搭載Cisco UCS X-Series Direct、およびRed Hat OpenShift搭載NetApp ONTAPを使用したFlexPod Datacenter構成の自動デプロイについては、link:https://github.com/ucs-compute-solutions/FlexPod-IMM-OpenShift["FlexPod Datacenter with Red Hat OpenShift and Cisco IMM GitHub リポジトリ"^]を参照してください。
+** このリポジトリは、link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_rh_openshift_bm_iac_deploy.html["CVD"^]で説明されているRed Hat OpenShiftのインストールに向けた準備として、CiscoデバイスおよびNetApp ONTAPストレージをセットアップするために使用できます。
+
+
+
+
+
+NOTE: このリポジトリには、NFS、iSCSI、NVMe-TCP、および ONTAP S3 ストレージプロトコルを使用したローカルブートを構成するオプションがあります。

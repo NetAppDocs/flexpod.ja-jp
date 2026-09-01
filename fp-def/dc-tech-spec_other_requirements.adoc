@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: fp-def/dc-tech-spec_other_requirements.html 
-keywords: flexpod, datacenter, technical, specifications, requirements, interoperability 
+keywords: flexpod, datacenter, technical, specifications, requirements, broadcom, vmware, openshift 
 summary: FlexPod アーキテクチャには、相互運用性とサポート関連の次の要件が追加で含まれています 
 ---
 = その他の要件
@@ -14,21 +14,8 @@ summary: FlexPod アーキテクチャには、相互運用性とサポート関
 
 
 [role="lead"]
-FlexPod アーキテクチャには、相互運用性とサポート関連の次の要件が追加で含まれています。
+FlexPod データセンターの追加要件は次のとおりです：
 
-* すべてのハードウェアコンポーネントとソフトウェアコンポーネントがネットアップに記載され、サポートされている必要があります http://mysupport.netapp.com/matrix["IMT"^]、 https://ucshcltool.cloudapps.cisco.com/public/["Cisco UCS ハードウェアおよびソフトウェア互換性リスト"^]、および Cisco UCS Hardware and Software Interoperability Matrix Tool を参照してください。
-* 次の項目を含むすべての機器について、有効なサポート契約が必要です。
-+
-** シスコ機器の Smart Net Total Care （ SmartNet ）サポート
-** ネットアップ機器に対する SupportEdge Advisor または SupportEdge Premium のサポート
+* VMware ESXi をハイパーバイザーとして使用する場合は、link:https://compatibilityguide.broadcom.com/["Broadcom互換性ガイド"] を参照して、ハードウェアおよびソフトウェアコンポーネントがサポートされていることを確認してください。
+* OpenShiftベースのデプロイメントの場合は、OpenShiftと互換性のある必要なハードウェアおよびソフトウェアコンポーネントが揃っていることを確認してください。詳細については、link:https://catalog.redhat.com/en/search["OpenShift カタログ"]を参照してください。
 
-
-* サポートする販売注文の関連販売属性:
-+
-** FlexPodの権利
-** FlexPodソリューションのサポート資格
-
-
-
-
-詳細については、ネットアップを参照してください http://mysupport.netapp.com/matrix["IMT"^]。

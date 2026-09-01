@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar 
 permalink: fp-def/dc-tech-spec_netapp_components.html 
-keywords: storage, controllers, cluster, interconnect, switches, drives, disk, shelves, licensing, options 
+keywords: storage, controllers, cluster, aff, asa, fas, afx, ontap, interconnect switches, drives, disk, shelves, licensing, options 
 summary: ネットアップのストレージコントローラは、ブートとアプリケーションデータストレージの両方に関して、 FlexPod アーキテクチャのストレージ基盤を提供します。ネットアップのコンポーネントには、ストレージコントローラ、クラスタインターコネクトスイッチ、ドライブとディスクシェルフ、ライセンスオプションがあります。 
 ---
 = NetApp コンポーネント
@@ -21,38 +21,100 @@ summary: ネットアップのストレージコントローラは、ブート�
 [[netapp-storage-controller-options]]
 == ネットアップストレージコントローラのオプション
 
-FlexPod アーキテクチャには、冗長な NetApp FAS 、 AFF 、または AFF ASA コントローラが必要です。コントローラは ONTAP ソフトウェアを実行します。ストレージコントローラを購入した場合は、優先バージョンのソフトウェアをコントローラにプリロードすることができます。ONTAP の場合は、クラスタ全体を発注した。クラスタ全体には、ストレージコントローラのペアとクラスタインターコネクト（スイッチまたはスイッチレス）が含まれます。
+FlexPodアーキテクチャでは、冗長構成のNetApp FAS、AFF、ASA、またはAFXコントローラが必要です。コントローラはONTAPソフトウェアを実行します。ストレージコントローラの注文時に、推奨されるソフトウェアバージョンをコントローラにプリロードできます。ONTAPの場合、完全なクラスタが注文されます。完全なクラスタには、一対のストレージコントローラとクラスタ インターコネクト（スイッチありまたはスイッチレス）が含まれます。
+
+
+NOTE: スイッチレスクラスタ構成は、2ノード構成の場合のみサポートされます。クラスタ インターコネクト スイッチは、4ノード以上の構成では必須であり、2ノード構成ではオプションです。
 
 選択したストレージプラットフォームに応じて、さまざまなオプションや設定を使用できます。これらの追加コンポーネントの詳細については、営業担当者にお問い合わせください。
 
 次の表に示すコントローラファミリーは、解決策データセンター FlexPod での使用に適しています。 Cisco Nexus スイッチへの接続はシームレスであるためです。を参照してください https://hwu.netapp.com/["NetApp Hardware Universe の略"^] 各コントローラモデルの互換性の詳細については、を参照してください。
 
 |===
-| ストレージコントローラファミリー | 技術仕様 
+| NetApp ストレージファミリー（FlexPod データセンター向け） | モデル | 技術仕様 
 
 
-| AFF A シリーズ | https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62247["AFF A-Series のドキュメント"] 
+.6+| AFF A シリーズ | AFF A20用 .6+| https://www.netapp.com/pdf.html?item=/media/7828-ds-3582-aff-a-series-ai-era.pdf["AFF A-Series データシート"] 
 
 
-| AFF ASA A シリーズ | https://www.netapp.com/data-storage/san-storage-area-network/documentation/["AFF ASA A シリーズのドキュメント"] 
+| AFF A30用 
 
 
-| FAS シリーズ | https://mysupport.netapp.com/documentation/productsatoz/index.html#F["FAS シリーズのドキュメント"] 
+| AFF A50 
+
+
+| AFF A70 
+
+
+| AFF A90 
+
+
+| AFF A1K 
+
+
+.3+| AFF Cシリーズ | AFF C30 .3+| https://www.netapp.com/pdf.html?item=/media/81583-ds-4240-aff-c-series.pdf["AFF C-Series データシート"] 
+
+
+| AFF C60用 
+
+
+| AFF C80 
+
+
+.7+| ASA | ASA A20 .7+| https://www.netapp.com/pdf.html?item=/media/85736-ds-4254-asa.pdf["ASAデータシート"] 
+
+
+| ASA A30 
+
+
+| ASA C30 
+
+
+| ASA A50 
+
+
+| ASA A70 
+
+
+| ASA A90 
+
+
+| ASA A1K 
+
+
+.5+| FAS | FAS2750を使用したチャンク アップロード署名要求がサポートされるようになりました。 .5+| https://www.netapp.com/pdf.html?item=/media/7819-ds-4020.pdf["FASデータシート"] 
+
+
+| FAS2820を使用したチャンク アップロード署名要求がサポートされるようになりました。 
+
+
+| FAS50 
+
+
+| FAS70 
+
+
+| FAS90 
+
+
+.2+| AFX | AFX 1K .2+| https://www.netapp.com/pdf.html?item=/media/142853-ds-3466-netapp-afx-datasheet.pdf["AFXデータシート"] 
+
+
+| AFX 2K 
 |===
 
 
 [[cluster-interconnect-switch-options]]
 == クラスタインターコネクトスイッチのオプション
 
-次の表に、 FlexPod アーキテクチャで使用できる Nexus クラスタインターコネクトスイッチを示します。また、導入する ONTAP のバージョンに互換性がある場合、 ONTAP は、他社製スイッチを含む FlexPod 対応のすべてのクラスタスイッチをサポートします。を参照してください https://hwu.netapp.com/["NetApp Hardware Universe の略"^] で、特定のスイッチモデルの互換性の詳細を確認できます。
+次の表に、FlexPod アーキテクチャで使用可能な Nexus クラスタ インターコネクト スイッチを示します。FlexPod は、Cisco 以外のスイッチを含む、ONTAP がサポートするすべてのクラスタ スイッチをサポートします。ただし、導入する ONTAP のバージョンと互換性があることが条件です。
+
+サポートされているクラスタ インターコネクト スイッチのリストについては、 https://hwu.netapp.com/["NetApp Hardware Universe の略"^] にアクセスし、「Products」>「Networking」>「Switches」をクリックして、「Cluster InterConnect Switch」を選択してください。ベンダーの種類で絞り込み、スイッチを選択して「Show results」をクリックすると、スイッチの詳細情報が表示されます。
+
+以下の表に、クラスタ インターコネクト スイッチとして使用できる Cisco スイッチを示します。
 
 |===
-
-
 | クラスタインターコネクトスイッチ | 技術仕様 
-
-
-| Cisco Nexus 3132Q-V の 2 つのポートを設定します | https://mysupport.netapp.com/documentation/docweb/index.html?productID=62377&language=en-US["ネットアップのマニュアル： Cisco Nexus 3132Q-V switches"] 
 
 
 | Cisco Nexus 9336C-FX2 | https://docs.netapp.com/us-en/ontap-systems-switches/switch-cisco-9336c-fx2/configure-switch-overview-9336c-cluster.html["ネットアップのマニュアル： Cisco Nexus 9336C-FX2 switches"^] 
@@ -62,56 +124,66 @@ FlexPod アーキテクチャには、冗長な NetApp FAS 、 AFF 、または 
 [[netapp-disk-shelf-and-drive-options]]
 == ネットアップのディスクシェルフとドライブのオプション
 
-すべてのストレージコントローラに、少なくとも 1 台のネットアップディスクシェルフが必要です。
-
-選択したネットアップシェルフタイプによって、そのシェルフ内で使用可能なドライブタイプが決まります。
+内蔵ディスク シェルフを持たないストレージコントローラには、最低1つの NetApp ディスク シェルフが必要です。選択された NetApp ディスク シェルフのタイプによって、そのシェルフ内で使用可能なドライブの種類が決まります。
 
 
 NOTE: すべてのディスクシェルフとディスクのパーツ番号については、営業担当者にお問い合わせください。
 
-ディスクシェルフとストレージ メディアの詳細については、以下の表の「ディスクシェルフおよびストレージ メディアの技術仕様」リンクを参照してください。
+次の表に、NetApp のFlexPod データセンター向けディスク シェルフ オプションと、各製品の技術仕様へのリンクを示します。
+
+お使いのディスク シェルフでサポートされているドライブの一覧を確認するには、link:https://hwu.netapp.com/["NetApp Hardware Universe の略"^] にアクセスし、*Products > Storage > Shelves* で *ONTAP (AFF, ASA, FAS) または ONTAP (AFX)* を選択し、使用している ONTAP のバージョンを選択して、シェルフのタイプ（例：*DS212C*）を選択し、*Show Results* をクリックします。*Supported Drives* をクリックすると、特定のバージョンの ONTAP およびディスク シェルフでサポートされているドライブを確認できます。
 
 |===
 | ディスクシェルフ | 技術仕様 
 
 
-| DS224C .4+| https://www.netapp.com/data-storage/disk-shelves-storage-media/["ディスクシェルフおよびストレージ メディアの技術仕様"] 
+| DS212C .6+| https://www.netapp.com/data-storage/disk-shelves-storage-media/["ディスク シェルフとストレージ メディア"] 
 
 
-| DS212C 
+| DS224C 
 
 
 | DS460C 
 
 
 | NS224 
+
+
+| NS224 w/NSM100B 
+
+
+| NX224を使用したチャンク アップロード署名要求がサポートされるようになりました。 
 |===
 
 
 [[netapp-software-licensing-options]]
 == ネットアップのソフトウェアライセンスオプション
 
-次の表に、 FlexPod データセンターアーキテクチャで使用できるネットアップのソフトウェアライセンスオプションを示します。ネットアップソフトウェアのライセンスは、 FAS および AFF のコントローラレベルで提供されます。
+以下の表は、NetAppソフトウェアライセンスのオプションを示しています。
 
 |===
-| ネットアップソフトウェアライセンス | パーツ番号 | 技術仕様 
+| ネットアップソフトウェアライセンス | 技術仕様 
 
 
-| SW 、完全 NDL （コントローラ）、 -C | SW-8XXX-COMP-BNDL-C .2+| http://mysupport.netapp.com/documentation/productsatoz/index.html["Product Library A-Z"] 
+| AFF、FAS、およびAFX向けONTAP One .2+| ライセンスについて詳しくは、ネットアップの営業チームにお問い合わせください。 
 
 
-| SW 、 ONTAP Essentials （コントローラ）、 -C | sw-8XXX-ONTAP9-C 
+| ASA用ONTAP One for SAN 
 |===
+NetAppソフトウェアライセンスの詳細については、次のリンクを参照してください： https://docs.netapp.com/us-en/ontap/system-admin/manage-licenses-concept.html#licenses-included-with-ontap-one["ネットアップソフトウェアライセンス"^]。
+
 
 
 [[netapp-support-licensing-options]]
-== ネットアップはライセンスオプションをサポートしています
+== ネットアップサポートのライセンスオプション
 
-SupportEdge Premium アーキテクチャには NetApp FlexPod ライセンスが必要ですが、これらのライセンスのパーツ番号は FlexPod 設計で選択したオプションによって異なります。たとえば、ソフトウェアライセンスのパーツ番号は、選択する FAS コントローラによって異なります。個々のサポートライセンスの正確なパーツ番号については、営業担当者にお問い合わせください。次の表に、 SupportEdge ライセンスの例を示します。
+SupportEdge Premium ライセンスが必要で、それらのライセンスの部品番号は、FlexPod Datacenter の設計で選択したオプションによって異なります。
+
+以下の表は、NetApp AFF、ASA、FAS、およびAFXストレージシステムに対するNetAppサポートライセンスオプションの一覧です。
 
 |===
-| ネットアップサポートライセンス | パーツ番号 | 技術仕様 
+| ネットアップサポートライセンス | 技術仕様 
 
 
-| SupportEdge Premium 4 時間オンサイト—月数： 36 | ： cs -O2-4HR | https://www.netapp.com/pdf.html?item=/media/8745-supportedge-premium-product-description.pdf["NetApp SupportEdge Premium の略"^] 
+| NetApp SupportEdge | https://www.netapp.com/netapp-services/[] 
 |===

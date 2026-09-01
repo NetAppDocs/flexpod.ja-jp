@@ -16,24 +16,44 @@ summary: このドキュメントに記載されている情報の詳細につ�
 [role="lead"]
 このドキュメントに記載されている情報の詳細については、以下のドキュメントや Web サイトを参照してください。
 
+* NetApp FlexPod ホームページ
++
+https://www.netapp.com/flexpod/["https://www.netapp.com/flexpod/"^]
+
+* Cisco FlexPod ホームページ
++
+https://www.cisco.com/site/us/en/solutions/computing/converged-infrastructure/flexpod/index.html["https://www.cisco.com/site/us/en/solutions/computing/converged-infrastructure/flexpod/index.html"^]
+
 * ネットアップの製品マニュアル
 +
 https://docs.netapp.com/["https://docs.netapp.com/"^]
 
-* ネットアップサポートコミュニケーション
+* ONTAP製品ドキュメント
 +
-https://mysupport.netapp.com/info/communications/index.html["https://mysupport.netapp.com/info/communications/index.html"^]
+https://docs.netapp.com/us-en/ontap-family/index.html["https://docs.netapp.com/us-en/ontap-family/index.html"^]
+
+* ONTAP ハードウェアシステムドキュメント
++
+https://docs.netapp.com/us-en/ontap-systems-family/index.html["https://docs.netapp.com/us-en/ontap-systems-family/index.html"^]
 
 * ネットアップの Interoperability Matrix Tool （ IMT ）
 +
-https://mysupport.netapp.com/matrix/["https://mysupport.netapp.com/matrix/#welcome"^]
+https://imt.netapp.com["https://imt.netapp.com"^]
 
 * NetApp Hardware Universe の略
 +
-https://hwu.netapp.com/["https://hwu.netapp.com/"^]
+https://hwu.netapp.com["https://hwu.netapp.com"^]
+
+* Cisco HCL
++
+https://ucshcltool.cloudapps.cisco.com/public["https://ucshcltool.cloudapps.cisco.com/public"^]
 
 * ネットアップサポート
 +
 https://mysupport.netapp.com/["https://mysupport.netapp.com/"^]
+
+* ネットアップサポートコミュニケーション
++
+https://mysupport.netapp.com/info/communications/index.html["https://mysupport.netapp.com/info/communications/index.html"^]
 
 

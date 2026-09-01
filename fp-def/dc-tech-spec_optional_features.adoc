@@ -17,176 +17,154 @@ summary: ネットアップは、 FlexPod データセンターのアーキテ�
 ネットアップは、 FlexPod データセンターのアーキテクチャをさらに強化するために、いくつかのオプションコンポーネントをサポートしてオプションコンポーネントについては、以降のサブセクションで説明します。
 
 
-
-[[metrocluster]]
-== MetroCluster
-
-FlexPod は、 2 ノードまたは 4 ノードのどちらのクラスタ構成でも、継続的可用性を実現する NetApp MetroCluster ソフトウェアのどちらかのバリエーションをサポートします。MetroCluster は、重要なワークロード向けに同期レプリケーションを提供します。Cisco スイッチに接続されたデュアルサイト構成が必要です。サイト間でサポートされる最大距離は、 MetroCluster FC の場合は約 186 マイル（ 300km ）、 MetroCluster IP の場合は約 435 マイル（ 700km ）に増加します。次の図は、 FlexPod Datacenter with NetApp MetroCluster Architecture と FlexPod Datacenter with NetApp MetroCluster IP Architecture をそれぞれ示しています。
-
-次の図は、ネットアップの MetroCluster アーキテクチャを備えた FlexPod データセンターを示しています。
-
-image:dc-tech-spec_image1.png[""]
-
-次の図は、ネットアップの MetroCluster IP アーキテクチャを備えた FlexPod データセンターを示しています。
-
-image:dc-tech-spec_image2.png[""]
-
-ONTAP 9.8 以降では、 MetroCluster メディエーターを第 3 のサイトに導入して解決策 IP ONTAP を監視し、サイト障害の発生時に自動計画外スイッチオーバーを実施できます。
-
-拡張レイヤ 2 サイト間接続を使用する FlexPod MetroCluster IP 解決策環境では、次の図に示す要件を満たしている場合、 ISL を共有し、 MetroCluster スイッチを準拠 FlexPod IP スイッチとして使用することで、コストを削減できます。 この図は、解決策 IP FlexPod MetroCluster と ISL 共有および準拠スイッチを示しています。
-
-image:dc-tech-spec_image10.png[""]
-
-次の 2 つの図は、 VXLAN マルチサイトファブリックと、解決策 IP FlexPod MetroCluster と VXLAN マルチサイトファブリック導入のための MetroCluster IP ストレージファブリックを示しています。
-
-* FlexPod MetroCluster IP 解決策用の VXLAN マルチサイトファブリック
-
-
-image:dc-tech-spec_image11.png[""]
-
-* FlexPod MetroCluster IP 解決策用の MetroCluster IP ストレージファブリック
-
-
-image:dc-tech-spec_image12.png[""]
-
-
-
-[[end-to-end-fc-nvme]]
-== エンドツーエンドの FC-NVMe
-
-エンドツーエンドの FC-NVMe は、リアルタイムアプリケーション向けにお客様の既存の SAN インフラストラクチャをシームレスに拡張しながら、同時に、遅延を低減しながら IOPS とスループットを向上させます。
-
-既存の 32G FC SAN 転送を使用して、 NVMe と SCSI の両方のワークロードを同時に転送できます。
-
-次の図は、Cisco MDS を使用した FC 用の FlexPod データセンターを示しています。
-
-FlexPod の構成とパフォーマンスのメリットの詳細については、を参照してください https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-b-series-blade-servers/whitepaper-c11-741907.html["ホワイトペーパー『 Introducing End-to-End NVMe for FlexPod 』"^]
-
-ONTAP の実装の詳細については、 https://www.netapp.com/pdf.html?item=/media/10681-tr4684.pdf["TR-4684 『 Implementing and Configuring Modern SANs with NVMe 』"^]を参照してください。
-
-image:dc-tech-spec_image3.png[""]
-
-
-
-[[fc-san-boot-through-cisco-mds]]
-== Cisco MDS を介した FC SAN ブート
-
-専用の SAN ネットワークを使用して拡張性を向上させるために、 FlexPod は Cisco MDS スイッチ経由で FC をサポートし、 Cisco Nexus 93108TC-FX などの FC スイッチをサポートしています。Cisco MDS の FC SAN ブートオプションには、次のライセンスおよびハードウェア要件があります。
-
-* ネットアップストレージコントローラごとに少なくとも 2 つの FC ポート。 SAN ファブリックごとに 1 つのポート
-* 各ネットアップストレージコントローラに FC ライセンスが必要です
-* ネットアップでサポートされている Cisco MDS スイッチおよびファームウェアのバージョン http://mysupport.netapp.com/matrix["IMT"^]
-
-
-MDS ベースの設計の詳細については、 CVD を参照してください https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_datacenter_vmware_netappaffa.html["『 FlexPod Datacenter with VMware vSphere 6.7U1 Fibre Channel and iSCSI Deployment Guide 』を参照してください"^]。
-
-次の図は、 MDS 接続を備えた FlexPod Datacenter for FC と、 Cisco Nexus 93180YC-FX を使用した FlexPod Datacenter for FC のそれぞれの例を示しています。
-
-image:dc-tech-spec_image4.jpg[""]
-
-image:dc-tech-spec_image5.png[""]
-
-
-
-[[fc-san-boot-with-cisco-nexus]]
-== Cisco Nexus を使用した FC SAN ブート
-
-従来の FC SAN ブートオプションには、ライセンスとハードウェアに関する次の要件があります。
-
-* Cisco Nexus 5000 シリーズスイッチで FC ゾーニングを実行する場合は、 Cisco Nexus 5000 シリーズスイッチのストレージプロトコルサービスパッケージライセンス（ FC_FEATURES_PKG ）が必要です。
-* Cisco Nexus 5000 シリーズスイッチで FC ゾーニングを実行する場合は、ファブリックインターコネクトと Cisco Nexus 5000 シリーズスイッチの間に SAN リンクが必要です。さらに冗長性を確保するため、リンク間に SAN ポートチャネルを配置することを推奨します。
-* Cisco Nexus 5010 、 5020 、および 5548P スイッチには、 Cisco UCS ファブリックインターコネクトとネットアップストレージコントローラとの接続用に、個別の FC またはユニバーサルポート（ UP ）モジュールが必要です。
-* Cisco Nexus 93180YC-FX で FC を有効にするには、 FC 機能のライセンスが必要です。
-* ネットアップストレージコントローラごとに、接続用に少なくとも 2 つの 8 / 16 / 32Gb FC ポートが必要です。
-* ネットアップストレージコントローラに FC ライセンスが必要です。
-+
-
-NOTE: Cisco Nexus 7000 または 9000 ファミリーのスイッチを使用すると、ファブリックインターコネクトで FC ゾーニングを実行しないかぎり、従来の FC を使用することはできません。この場合、スイッチへの SAN アップリンクはサポートされません。
-
-
-
-次の図に、 FC 接続の構成を示します。
-
-image:dc-tech-spec_image6.png[""]
-
-
-
-[[fcoe-san-boot-option]]
-== FCoE SAN ブートオプション
-
-FCoE SAN ブートオプションには、ライセンスとハードウェアに関する次の要件があります。
-
-* スイッチで FC ゾーニングを実行する場合は、 Cisco Nexus 5000 または 7000 シリーズスイッチ「（ FC_FEATURES_PKG ）」のストレージプロトコルサービスパッケージライセンスが必要です。
-* スイッチで FC ゾーニングを実行する場合は、ファブリックインターコネクトと Cisco Nexus 5000 または 7000 シリーズスイッチ間に FCoE アップリンクが必要です。さらに冗長性を確保するために、リンク間で FCoE ポートチャネルを使用することも推奨されます。
-* オンボードのユニファイドターゲットアダプタ 2 （ UTA2 ）ポートがないかぎり、各ネットアップストレージコントローラに、 FCoE 接続用のデュアルポートユニファイドターゲットアダプタ（ UTA ）アドオンカードが少なくとも 1 枚必要です。
-* このオプションを使用するには、ネットアップストレージコントローラに FC ライセンスが必要です。
-* Cisco Nexus 7000 シリーズスイッチを使用し、 FC ゾーニングをスイッチで実行する場合は、 FCoE に対応したラインカードが必要です。
-+
-
-NOTE: Cisco Nexus 9000 シリーズスイッチを使用すると、ファブリックインターコネクトで FC ゾーニングを実行し、アプライアンスポートでファブリックインターコネクトにストレージを接続していないかぎり、 FCoE を使用できなくなります。この場合、スイッチへの FCoE アップリンクはサポートされません。
-
-
-
-次の図に、 FCoE ブートのシナリオを示します。
-
-image:dc-tech-spec_image7.png[""]
+NOTE: SAN ブートはオプションですが、ハードウェアのアップグレードや交換時にサーバー プロファイルを移動できるため、強く推奨されます。
 
 
 
 [[iscsi-boot-option]]
 == iSCSI ブートオプション
 
-iSCSI ブートオプションには、ライセンスとハードウェアに関する次の要件があります。
+iSCSIブートオプションの最小要件は以下のとおりです：
 
-* ネットアップストレージコントローラに iSCSI ライセンスが必要です。
-* iSCSI ブートに対応した Cisco UCS サーバのアダプタが必要です。
-* ネットアップストレージコントローラには、 2 ポート 10Gbps イーサネットアダプタが必要です。
-
-
-次の図は、 iSCSI でブートされるイーサネットのみの構成を示しています。
-
-image:dc-tech-spec_image8.png[""]
+* ネットアップストレージコントローラでアクティブ化された iSCSI ライセンス / 機能
+* ネットアップストレージコントローラ HA ペアの各ノードに、 2 ポート 10Gbps イーサネットアダプタを搭載します
+* iSCSI ブートに対応した Cisco UCS サーバ内のアダプタ
 
 
+以下の図は、IPベースのiSCSI構成向けのXシリーズモジュラーシステムとCシリーズラックサーバーを備えたFlexPod データセンターの例を示しています。
 
-[[cisco-ucs-direct-connect-with-netapp-storage]]
-== Cisco UCS はネットアップストレージと直接接続
+image:dc-tech-spec_image15.png["FlexPod IPベースのiSCSI接続のためのデータセンター"]
 
-NetApp AFF コントローラと FAS コントローラは、アップストリームの SAN スイッチを使用せずに、 Cisco UCS ファブリックインターコネクトに直接接続できます。
+この構成の詳細については、link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_m7_imm_vmware_design.html#PhysicalTopology["FlexPod データセンター（Cisco UCS M7 IMM、VMware vSphere 8.0、NetApp ONTAP 9.12）設計ガイド"^]を参照してください。
 
-ネットアップストレージに直接接続する場合は、 Cisco UCS の次の 4 つのポートタイプを使用できます。
 
-* * ストレージ FC ポート。 * ネットアップストレージの FC ポートに直接接続します。
-* * ストレージ FCoE ポート。 * ネットアップストレージの FCoE ポートにこのポートを直接接続します。
-* * アプライアンス・ポート。 * ネットアップ・ストレージ上の 10GbE ポートに、このポートを直接接続します。
-* * ユニファイドストレージポート。 * このポートを NetApp UTA に直接接続できます。
 
+[[fc-boot-with-cisco-mds]]
+== Cisco MDSを使用したFCブート
+
+専用SANネットワークを使用することで拡張性を向上させるため、FlexPod は Cisco MDS スイッチを通じて FC をサポートしています。Cisco MDS を経由した FC SAN ブートオプションには、以下のライセンスおよびハードウェア要件があります：
+
+* ネットアップストレージコントローラごとに少なくとも 2 つの FC ポート。 SAN ファブリックごとに 1 つのポート
+* 各 NetApp ストレージコントローラのFCライセンス。
+* FC ブートに対応した Cisco UCS サーバーのアダプター。
+
+
+次の図は、MDSスイッチを使用したFCベースのSAN構成向けに、XシリーズモジュラーシステムとCシリーズラックサーバーを備えたFlexPod データセンターの例を示しています。
+
+image:dc-tech-spec_image16.png["FlexPod FCベースのSAN接続に対応したデータセンター"]
+
+この構成の詳細については、link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_m7_imm_vmware_design.html#PhysicalTopology["FlexPod データセンター（Cisco UCS M7 IMM、VMware vSphere 8.0、NetApp ONTAP 9.12）設計ガイド"^]を参照してください。
+
+
+
+[[fc-san-boot-with-cisco-nexus]]
+== Cisco Nexus を使用した FC SAN ブート
+
+Cisco Nexus 93180YC-FX、93360YC-FX2、または9336C-FX2-Eスイッチは、LANとSANの両方のスイッチング ファブリックを提供するために使用できます。
+
+次の図は、Cisco Nexus SANスイッチングを使用したFCベースのSAN構成向けに、XシリーズモジュラーシステムとCシリーズラックサーバーを備えたFlexPod データセンターの例を示しています。
+
+
+NOTE: FC SAN 接続に Cisco Nexus スイッチを使用するには、Cisco Nexus スイッチにストレージ アドオン ライセンスが必要です。
+
+image:dc-tech-spec_image17.png["FlexPod Cisco NexusによるFCベースのSAN接続のデータセンター"]
+
+この構成の詳細については、link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_m7_imm_vmware_design.html#PhysicalTopology["FlexPod データセンター（Cisco UCS M7 IMM、VMware vSphere 8.0、NetApp ONTAP 9.12）設計ガイド"^]を参照してください。
+
+
+
+[[end-to-end-fc-nvme]]
+== エンドツーエンドの FC-NVMe
+
+エンドツーエンドFC-NVMeは、お客様の既存のSANインフラストラクチャをリアルタイムアプリケーション向けにシームレスに拡張しながら、同時にIOPSとスループットを向上させ、レイテンシを低減します。既存の32G FC SANトランスポートを使用することで、NVMeとSCSIの両方のワークロードを同時に転送できます。
+
+この構成の詳細については、link:https://www.cisco.com/c/en/us/td/docs/unified_computing/ucs/UCS_CVDs/flexpod_m7_imm_vmware_design.html#PhysicalTopology["FlexPod データセンター（Cisco UCS M7 IMM、VMware vSphere 8.0、NetApp ONTAP 9.12）設計ガイド"^]を参照してください。
+
+
+
+[[cisco-ucs-x-series-direct-and-direct-attached-aff-asa-fas-for-fc-and-ip-based-san]]
+== Cisco UCS X シリーズ ダイレクトおよびダイレクトアタッチ AFF/ASA/FAS の FC および IP ベースの SAN 向け
+
+NetAppストレージコントローラは、上流のSANスイッチを必要とせずに、Cisco UCSファブリック インターコネクトに直接接続できます。FlexPodは、UCS X-Series DirectでFCおよびiSCSIブートの両方をサポートします。
 
 ライセンスとハードウェアの要件は次のとおりです。
 
 * ネットアップストレージコントローラにはプロトコルライセンスが必要です。
-* サーバには Cisco UCS アダプタ（イニシエータ）が必要です。サポートされている Cisco UCS アダプタの一覧については、ネットアップを参照してください http://mysupport.netapp.com/matrix["IMT"^]。
+* サーバーには Cisco UCS アダプタ（イニシエータ）が必要です。サポートされている Cisco UCS アダプタの一覧については、NetApp https://imt.netapp.com["IMT"^]を参照してください。
 * ネットアップストレージコントローラにはターゲットアダプタが必要です。
 
 
-次の図に、 FC 直接接続構成を示します。
+次の図は、IPベースSAN向けのUCS X-Series Directおよび直接接続されたASAトポロジーを示しています。
 
-image:dc-tech-spec_image9.png[""]
-
-* 注： *
-
-* Cisco UCS は FC スイッチングモードで設定されます。
-* ターゲットからファブリックインターコネクトへの FCoE ポートは、 FCoE ストレージポートとして構成されます。
-* ターゲットからファブリックインターコネクトへの FC ポートは、 FC ストレージポートとして構成されます。
-
-
-次の図に、 iSCSI / ユニファイド IP の直接接続構成を示します。
-
-image:dc-tech-spec_image10.png[""]
+image:dc-tech-spec_image13.png["UCS X-Series ダイレクトおよびダイレクトアタッチ ASA IPベース SAN のトポロジー"]
 
 * 注： *
 
 * Cisco UCS はイーサネットスイッチングモードで設定されます。
 * ターゲットからファブリックインターコネクトへの iSCSI ポートは、 iSCSI データ用のイーサネットストレージポートとして構成されます。
-* ターゲットからファブリックインターコネクトへのイーサネットポートは、 CIFS / NFS データ用のイーサネットストレージポートとして構成されます。
 
+
+次の図は、IPベースおよびFCベースのSAN向けのUCS X-Series DirectおよびASA直接接続トポロジーを示しています。
+
+image:dc-tech-spec_image14.png["UCS X-Series ダイレクトおよびダイレクトアタッチ ASA の IP ベースおよび FC ベースの SAN トポロジー"]
+
+* 注： *
+
+* Cisco UCS は FC スイッチングモードで設定されます。
+* ターゲットからファブリックインターコネクトへの FC ポートは、 FC ストレージポートとして構成されます。
+
+
+この構成の詳細については、 https://www.netapp.com/pdf.html?item=/media/135828-flexpod-san-ucs-xdirect-asa-nva-deploy-guide.pdf["Cisco UCS X-Series DirectおよびNetApp ASAを使用したFlexPod SAN解決策"^]を参照してください。
+
+
+NOTE: 上記の例では NetApp ASA ストレージコントローラーを使用していますが、同じ構成は NetApp AFF および FAS ストレージコントローラーでもサポートされています。
+
+
+
+[[metrocluster]]
+== MetroCluster
+
+FlexPod MetroCluster IP with VXLAN マルチサイトファブリックソリューションは、2つのサイトに配置された2つのFlexPodsで構成されており、一定の距離を隔てていますが、接続されてペアリングされることで、サイト障害が発生してもビジネス継続性を提供できる、可用性、柔軟性、信頼性に優れたデータセンターソリューションを実現します。サイト間の最大サポート距離は約435マイル（700km）です。
+
+FlexPod MetroCluster IPソリューションでは、Cisco VXLANマルチサイトソリューションを使用することで、地理的に分散した複数のデータセンターに展開されたVXLANファブリックを相互接続し、一元的に管理できます。NetApp MetroCluster IPは、2つのNetAppストレージクラスタ間の同期レプリケーションソリューションを提供し、キャンパスや都市圏においてストレージの高可用性とディザスタリカバリを実現します。このソリューションにより、分散統合インフラストラクチャ上にVMware vSphereベースのプライベートクラウドを設計し、複数のサイトが単一サイトとほぼ同じように動作できる統合ソリューションを提供すると同時に、完全なサイト障害を含むさまざまな単一障害点シナリオからデータサービスを保護することができます。
+
+次の 2 つの図は、 VXLAN マルチサイトファブリックと、解決策 IP FlexPod MetroCluster と VXLAN マルチサイトファブリック導入のための MetroCluster IP ストレージファブリックを示しています。
+
+* FlexPod MetroCluster IP 解決策用の VXLAN マルチサイトファブリック
+
+
+image:dc-tech-spec_image11.png["FlexPod MetroCluster IP 解決策用の VXLAN マルチサイトファブリック"]
+
+* FlexPod MetroCluster IP 解決策用の MetroCluster IP ストレージファブリック
+
+
+image:dc-tech-spec_image12.png["FlexPod MetroCluster IP 解決策用の MetroCluster IP ストレージファブリック"]
+
+この構成の詳細については、 https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/flexpod-metrocluster-ip-vxlan-multi-site-wp.pdf["VXLANマルチサイトFrontendFabricを備えたFlexPod MetroCluster IP"^]を参照してください。
+
+
+
+[[snapmirror-active-sync-solution-for-flexpod-metrocluster-ip-solution]]
+=== SnapMirror アクティブ同期ソリューション（FlexPod MetroCluster IP ソリューション向け）
+
+NetApp ONTAPソフトウェアのNetApp Snapshotテクノロジを使用することで、ミッションクリティカルなSANデータサービスをSnapshotベースのバックアップのデータから迅速に復旧できます。
+
+* 2つの異なるサイトに展開された2つのONTAPクラスタは、同期データレプリケーションとディザスタリカバリのために、ピアリングされ、SnapMirrorアクティブ同期で設定されています。
+* ONTAP メディエーターは、下図に示すように、第 3 障害ドメインに展開されます。クラスターとともに、ONTAP メディエーターはSnapMirrorアクティブ同期ソリューションのクォーラムを完成させます。
+* ONTAP メディエーターは、ピアリングされた ONTAP クラスタとノードからヘルス情報を受け取り、それらの間を調整してステータスを判断します。ヘルスデータは、クラスタがさまざまな種類の障害を区別し、自動フェイルオーバーを実行するかどうかを判断するのに役立ちます。
+
+
+image:dc-tech-spec_image18.png["SnapMirror アクティブ同期ソリューションコンポーネント（FlexPod MetroCluster IP ソリューション）"]
+
+
+
+[[symmetric-active-active-multi-path-support-for-flexpod-metrocluster-ip-solution]]
+=== FlexPod MetroCluster IPソリューションの対称アクティブ / アクティブマルチパスサポート
+
+ホスト/クライアントが複製された LUN を使用できるようにするには、リモート クラスタで igroup を作成し、複製された LUN を対応する igroup に割り当て、ホスト/クライアントがiSCSIターゲットとリモート クラスタから利用可能な LUN を追加パスとして見つけられるように設定します。
+
+下図に示すように、エンタープライズアプリケーションは、サイト間の同期データレプリケーション用に設定された 2 つの ONTAP ASA クラスターによってホストされる iSCSI ベースの LUN を使用して、ストレージクライアントに展開できます。図に示す整合性グループには 3 つのアプリケーション固有の LUN が含まれており、データは SnapMirror アクティブ同期によってピアリングされたクラスタに同期的にレプリケートされます。
+
+image:dc-tech-spec_image19.png["SnapMirror アクティブ同期対称アクティブ / アクティブ SAN マルチパス"]
+
+詳細については、 https://community.netapp.com/community/discussion/465452/level-up-flexpod-san-solution-storage-resiliency-with-snapmirror-active-sync["SnapMirror active syncを使用して、FlexPod SANソリューションのストレージ耐障害性をレベルアップします"^]を参照してください。

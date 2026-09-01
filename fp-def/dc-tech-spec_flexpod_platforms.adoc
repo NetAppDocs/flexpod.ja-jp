@@ -16,8 +16,8 @@ summary:
 [role="lead"]
 FlexPod プラットフォームには、次の 2 つがあります。
 
-* * FlexPod データセンター。 * このプラットフォームは、ワークロードエンタープライズアプリケーション、仮想化、仮想デスクトップインフラ（ VDI ）、パブリック、プライベート、ハイブリッドのクラウドワークロードに適した、拡張性にきわめて優れた仮想データセンターインフラストラクチャです。
-* * FlexPod Express*このプラットフォームは、リモートオフィスやエッジのユースケースを対象としたコンパクトな統合インフラです。FlexPod Expressには独自の仕様があり、次のドキュメントに記載されています。 https://docs.netapp.com/us-en/flexpod/fp-def/fp-express-tech-spec_overview.html["FlexPod Express 技術仕様。"^]
+* *FlexPod データセンター。*このプラットフォームは、エンタープライズワークロードとアプリケーション、仮想化、AI/ML、データベース、SAP HANA、仮想デスクトップ インフラ（VDI）、およびパブリッククラウド、プライベートクラウド、ハイブリッドクラウドのワークロードに適した、拡張性の高いデータセンターインフラストラクチャです。
+* *FlexPod Express*このプラットフォームは、リモートオフィスやエッジのユースケースを対象としたコンパクトなコンバージドインフラです。FlexPod Expressには独自の仕様があり、 https://docs.netapp.com/us-en/flexpod/fp-def/fp-express-tech-spec_overview.html["FlexPod Express 技術仕様"^]に記載されています。
 
 
 本ドキュメントでは、 FlexPod データセンタープラットフォームの技術仕様について説明します。
