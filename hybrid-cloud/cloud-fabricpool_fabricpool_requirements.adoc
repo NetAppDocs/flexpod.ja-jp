@@ -10,7 +10,7 @@ summary: FabricPool を使用するには、 ONTAP 9.2 以降と、このセク�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

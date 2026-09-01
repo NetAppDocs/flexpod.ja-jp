@@ -10,7 +10,7 @@ summary: シスコとネットアップは、 FlexPod を使用して、さま�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./..media/
+:imagesdir: ../media/
 
 
 link:nvme-vsphere-test-results.html["前へ：テスト結果。"]

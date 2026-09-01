@@ -10,7 +10,7 @@ summary: SM-BC を備えた FlexPod データセンターは、アクティブ /
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:sm-bcs-validated-scenarios.html["前のバージョン：解決策 の検証済みのシナリオ"]

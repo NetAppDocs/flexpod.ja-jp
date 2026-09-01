@@ -10,7 +10,7 @@ summary: 次のセクションでは、 FlexPod Express 環境で使用する Ci
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

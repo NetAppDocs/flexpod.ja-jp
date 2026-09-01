@@ -10,7 +10,7 @@ summary: コントローラを使用してTerraformプランを実行できま�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:gcp-ncvo-dr-workflow.html["前の手順：DRワークフロー"]

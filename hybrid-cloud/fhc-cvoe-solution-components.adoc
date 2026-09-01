@@ -10,7 +10,7 @@ summary: このセクションでは、この解決策 に必要なさまざま�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:fhc-cvoe-solution-overview.html["前のページ：解決策 の概要"]

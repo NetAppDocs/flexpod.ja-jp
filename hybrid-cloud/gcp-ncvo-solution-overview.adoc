@@ -10,7 +10,7 @@ summary: 'このテクニカルレポートでは、FlexPod コンバージド�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 Ruchika Lahoti、ネットアップ

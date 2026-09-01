@@ -10,7 +10,7 @@ summary: 世界中の多くの医療機関が、 FlexPod を共通のプラッ�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:flexpod-genomics-appendix-d-gpu-setup.html["前のバージョン： GPU セットアップ。"]

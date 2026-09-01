@@ -10,7 +10,7 @@ summary: このページでは、サンプルのデータレプリケーショ�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:gcp-ncvo-terraform-execution-from-controller.html["前のバージョン：コントローラからのTerraformの実行。"]

@@ -10,7 +10,7 @@ summary: FlexPod Express は、業界をリードするコンポーネントを�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

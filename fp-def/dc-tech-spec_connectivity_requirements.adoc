@@ -10,7 +10,7 @@ summary: FlexPod 構成の接続要件は次のとおりです。
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

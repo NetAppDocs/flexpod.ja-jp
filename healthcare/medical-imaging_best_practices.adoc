@@ -10,7 +10,7 @@ summary: このセクションでは、 NetApp FlexPod Express ストレージ�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 

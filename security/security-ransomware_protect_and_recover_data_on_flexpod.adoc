@@ -10,7 +10,7 @@ summary: このセクションでは、攻撃が発生した場合にエンド�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

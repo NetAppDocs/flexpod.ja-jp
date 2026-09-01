@@ -10,7 +10,7 @@ summary: このセクションに記載されているストレージオペレ�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

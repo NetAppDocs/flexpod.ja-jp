@@ -10,7 +10,7 @@ summary: このセクションでは、 Cisco Nexus スイッチ 3172P A およ�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

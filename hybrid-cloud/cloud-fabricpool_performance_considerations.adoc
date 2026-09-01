@@ -10,7 +10,7 @@ summary: サイジングを検討する際は、次の点を評価する必要�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 

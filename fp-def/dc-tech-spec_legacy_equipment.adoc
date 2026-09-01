@@ -10,7 +10,7 @@ summary: FlexPod は、 Cisco とネットアップが現在販売している�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

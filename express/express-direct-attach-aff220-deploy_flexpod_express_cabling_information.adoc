@@ -10,7 +10,7 @@ summary: リファレンス検証のケーブル接続については、次の�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

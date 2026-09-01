@@ -10,7 +10,7 @@ summary: プロキシサーバを設定するAIQ UMは、IMT サービスを利�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

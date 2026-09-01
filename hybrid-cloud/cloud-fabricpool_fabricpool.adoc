@@ -10,7 +10,7 @@ summary: FabricPool は、オールフラッシュ（ SSD ）アグリゲート�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 

@@ -10,7 +10,7 @@ summary: このドキュメントのバージョン履歴を次に示します�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 |===

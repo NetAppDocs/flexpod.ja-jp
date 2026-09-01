@@ -10,7 +10,7 @@ summary: このセクションでは、 NetApp Virtual Storage Console （ VSC �
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

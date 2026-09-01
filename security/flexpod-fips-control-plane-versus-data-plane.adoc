@@ -10,7 +10,7 @@ summary: FIPS 140-2 戦略を実装する場合は、保護対象を理解する
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:flexpod-fips-overview-of-fips-140-2.html["以前： FIPS 140-2 の概要。"]

@@ -10,7 +10,7 @@ summary: FlexPod コンバージドインフラプラットフォームを使用
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 ネットアップ、 JayaKishore Esankula

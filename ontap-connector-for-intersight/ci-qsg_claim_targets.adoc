@@ -10,7 +10,7 @@ summary: Cisco Intersight Assist をインストールすると、ネットア�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: igroup を作成するには、クラスタ管理ノードの SSH 接�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 

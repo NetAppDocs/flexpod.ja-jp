@@ -10,7 +10,7 @@ summary: ここでは、 FlexPod Express の各バージョンに必要なハー
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

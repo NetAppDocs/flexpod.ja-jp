@@ -10,7 +10,7 @@ summary: この解決策を適用する対象となる対象となる対象と�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

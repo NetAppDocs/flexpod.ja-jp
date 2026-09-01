@@ -10,7 +10,7 @@ summary: FlexPod アーキテクチャには、相互運用性とサポート関
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

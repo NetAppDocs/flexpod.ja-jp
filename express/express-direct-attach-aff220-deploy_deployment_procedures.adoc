@@ -10,7 +10,7 @@ summary: このドキュメントでは、完全な冗長性と高可用性を�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: このセクションでは、 FlexPod Express 構成に VMware ESXi 6.
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

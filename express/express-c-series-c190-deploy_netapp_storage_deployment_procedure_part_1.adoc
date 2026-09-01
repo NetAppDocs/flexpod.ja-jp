@@ -10,7 +10,7 @@ summary: このセクションでは、 NetApp AFF ストレージ導入手順�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

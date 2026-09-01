@@ -10,7 +10,7 @@ summary: このセクションでは、EHRがネットアップストレージ�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:fhc-cvoe-installation-and-configuration.html["前の手順：インストールと設定"]

@@ -10,7 +10,7 @@ summary: バケットは、データを保持するオブジェクトストレ�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

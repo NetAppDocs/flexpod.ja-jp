@@ -10,7 +10,7 @@ summary: NetApp ONTAP ソフトウェアは、すべての NetApp FAS システ�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

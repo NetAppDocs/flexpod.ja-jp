@@ -10,7 +10,7 @@ summary: このセクションでは、この解決策で使用する解決策�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:flexpod-genomics-benefits-of-deploying-genomic-workloads-on-flexpod.html["従来：ゲノムワークロードを FlexPod に導入するメリット"]

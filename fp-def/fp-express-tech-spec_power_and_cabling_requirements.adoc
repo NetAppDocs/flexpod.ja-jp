@@ -10,7 +10,7 @@ summary: このセクションでは、FlexPod Express 設計の電源要件と�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

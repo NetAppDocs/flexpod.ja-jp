@@ -10,7 +10,7 @@ summary: クラウドへの移行は、組織ごと、ビジネスユニット�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

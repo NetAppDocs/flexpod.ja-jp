@@ -10,7 +10,7 @@ summary: このドキュメントの詳細については、ネットアップ�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

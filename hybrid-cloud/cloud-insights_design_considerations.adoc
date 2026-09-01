@@ -10,7 +10,7 @@ summary: FlexPod Datacenter 解決策は、シスコとネットアップが設�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: FlexPod 設計には、電源とケーブル配線の最小要件があ
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

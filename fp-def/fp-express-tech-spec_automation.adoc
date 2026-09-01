@@ -10,7 +10,7 @@ summary: FlexPod Express の自動展開は、Ansible プレイブックおよ�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

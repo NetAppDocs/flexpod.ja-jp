@@ -10,7 +10,7 @@ summary: FlexPod プラットフォームは、 Cisco Unified Computing System �
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 ネットアップ、 Arvind Ramakrishnan 氏、 Jyh Shing Chen 氏

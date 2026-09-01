@@ -10,7 +10,7 @@ summary: FlexPod SM-BC 解決策 のストレージ構成は、各サイトで�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:sm-bcs-network.html["前のバージョン：解決策 の検証 - ネットワーク。"]

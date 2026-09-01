@@ -10,7 +10,7 @@ summary: 次の表に、検証済みのハードウェアとソフトウェア�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: FlexPod で医療画像処理環境を実行することで、医療機
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

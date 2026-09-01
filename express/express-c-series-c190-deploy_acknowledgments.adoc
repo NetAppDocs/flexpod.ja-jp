@@ -10,7 +10,7 @@ summary: 著者はジョンジョージをこの設計への彼のサポート�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

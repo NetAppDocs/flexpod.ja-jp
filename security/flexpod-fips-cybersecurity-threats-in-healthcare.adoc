@@ -10,7 +10,7 @@ summary: 医療への脅威は、本質的に多次元的なものであり、�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:flexpod-fips-introduction.html["前へ：はじめに。"]

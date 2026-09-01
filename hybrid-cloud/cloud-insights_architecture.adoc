@@ -10,7 +10,7 @@ summary: このセクションでは、 Cloud Insights で監視される NetApp
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

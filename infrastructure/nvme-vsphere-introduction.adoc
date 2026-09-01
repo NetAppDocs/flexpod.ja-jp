@@ -10,7 +10,7 @@ summary: この解決策は、 FlexPod 上の VMware vSphere 7 における FC-N
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 ネットアップ Chris Schmitt と Kamini Singh

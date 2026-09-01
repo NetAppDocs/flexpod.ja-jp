@@ -10,7 +10,7 @@ summary: 階層化の最小クーリング日数設定は、「自動」また�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

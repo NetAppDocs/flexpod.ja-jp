@@ -10,7 +10,7 @@ summary: ここでは、手順 Express 構成で使用する Cisco UCS C シリ�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

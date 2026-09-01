@@ -10,7 +10,7 @@ summary: このページでは、NetApp Cloud Managerにアクセスする方法
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:gcp-ncvo-terraform-cloud-integration-with-ico-prerequisite.html["前：Terraform Cloud Integration with ICOの前提条件"]

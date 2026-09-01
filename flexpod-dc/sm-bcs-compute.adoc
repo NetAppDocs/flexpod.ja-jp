@@ -10,7 +10,7 @@ summary: FlexPod SM-BC 解決策 のコンピューティング設定は、一�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:sm-bcs-solution-validation_overview.html["事前定義：解決策 の検証 - 概要。"]

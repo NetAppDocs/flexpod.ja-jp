@@ -10,7 +10,7 @@ summary: FlexPod SM-BC 解決策 は、高いレベルで 2 つの FlexPod シ�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:sm-bcs-introduction.html["前へ：はじめに。"]

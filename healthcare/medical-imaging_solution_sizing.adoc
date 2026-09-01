@@ -10,7 +10,7 @@ summary: このセクションでは、スタディの数と、対応するイ�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 

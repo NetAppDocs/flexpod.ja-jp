@@ -10,7 +10,7 @@ summary: オブジェクトストレージをアグリゲートに接続する�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

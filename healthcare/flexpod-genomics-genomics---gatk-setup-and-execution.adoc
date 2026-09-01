@@ -10,7 +10,7 @@ summary: このセクションでは、 FlexPod および GATK のセットア�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:flexpod-genomics-solution-infrastructure-hardware-and-software-components.html["以前：解決策インフラのハードウェアコンポーネントとソフトウェアコンポーネント。"]

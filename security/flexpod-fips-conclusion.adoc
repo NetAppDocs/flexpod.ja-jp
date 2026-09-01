@@ -10,7 +10,7 @@ summary: 医療アプリケーションを FlexPod プラットフォームで�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:flexpod-fips-additional-flexpod-security-consideration.html["Previous ： FlexPod のセキュリティに関するその他の考慮事項。"]

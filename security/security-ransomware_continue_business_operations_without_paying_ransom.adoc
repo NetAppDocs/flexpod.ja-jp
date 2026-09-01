@@ -10,7 +10,7 @@ summary: 本ドキュメントで説明しているネットアップの機能�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

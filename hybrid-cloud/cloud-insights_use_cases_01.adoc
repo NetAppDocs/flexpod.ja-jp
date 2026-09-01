@@ -10,7 +10,7 @@ summary: FlexPod をセットアップし、解決策 Datacenter Cloud Insights 
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

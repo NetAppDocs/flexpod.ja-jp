@@ -10,7 +10,7 @@ summary: ネットアップと Cisco は提携を通じて、 FlexPod エコシ�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 提携先：image:cisco logo.png[""]

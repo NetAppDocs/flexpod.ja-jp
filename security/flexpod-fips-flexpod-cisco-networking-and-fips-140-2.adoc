@@ -10,7 +10,7 @@ summary: ソフトウェア 8.4.x を搭載した Cisco MDS 9000 シリーズプ
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:flexpod-fips-flexpod-cisco-ucs-compute-and-fips-140-2.html["前のリリース： FlexPod Cisco UCS のコンピューティングと FIPS 140-2"]

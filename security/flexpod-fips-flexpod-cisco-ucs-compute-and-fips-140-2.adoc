@@ -10,7 +10,7 @@ summary: FlexPod アーキテクチャは、 FIPS 140-2 に準拠した Cisco UC
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:flexpod-fips-control-plane-versus-data-plane.html["前：コントロールプレーンとデータプレーンの比較。"]

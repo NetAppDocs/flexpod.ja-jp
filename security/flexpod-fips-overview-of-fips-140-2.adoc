@@ -10,7 +10,7 @@ summary: FIPS 140-2 は、コンピュータや通信システムの機密情報
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:flexpod-fips-cybersecurity-threats-in-healthcare.html["前の記事：医療業界におけるサイバーセキュリティの脅威。"]

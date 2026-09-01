@@ -10,7 +10,7 @@ summary: Cisco Intersight には、新機能、拡張機能、バグ修正を提
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

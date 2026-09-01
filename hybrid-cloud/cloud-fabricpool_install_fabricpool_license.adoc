@@ -10,7 +10,7 @@ summary: ネットアップライセンスファイルを取得したら、 OnCo
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

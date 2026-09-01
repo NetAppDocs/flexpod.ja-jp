@@ -10,7 +10,7 @@ summary: ここでは、 FlexPod Express 構成で使用する Cisco UCS C シ�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

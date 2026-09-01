@@ -10,7 +10,7 @@ summary: FlexPod Express は、 Cisco Unified Computing System （ Cisco UCS ）
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 ネットアップ、 Sree Lakshmi Lanka です

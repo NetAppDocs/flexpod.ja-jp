@@ -10,7 +10,7 @@ summary: FlexPod は、仮想化ソリューションと非仮想化ソリュー
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 

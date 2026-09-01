@@ -10,7 +10,7 @@ summary: このページには、FlexPod インスタンスの導入に必要な
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:gcp-ncvo-solution-components.html["前の図：解決策 コンポーネント。"]

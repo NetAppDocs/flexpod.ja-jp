@@ -10,7 +10,7 @@ summary: FlexPod Express では、選択したハイパーバイザーとネッ�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

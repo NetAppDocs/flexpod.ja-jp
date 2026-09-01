@@ -10,7 +10,7 @@ summary: このページには、ディザスタリカバリワークフロー�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:gcp-ncvo-automated-deployment-of-hybrid-cloud-netapp-storage.html["前：ハイブリッドクラウドネットアップストレージの自動導入。"]

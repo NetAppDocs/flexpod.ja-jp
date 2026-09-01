@@ -10,7 +10,7 @@ summary: このページでは、ネットアップの SnapMirror ビジネス�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 Jyh - ネットアップの陳氏をたたきます

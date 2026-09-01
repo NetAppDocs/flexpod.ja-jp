@@ -10,7 +10,7 @@ summary: このセクションでは、 Cloud Volumes ONTAP、 FlexPod、 ONTAP�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:fhc-cvoe-solution-components.html["前の図：解決策 コンポーネント。"]

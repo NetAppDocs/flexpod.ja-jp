@@ -10,7 +10,7 @@ summary: 特定の FlexPod 環境のスイッチングコンポーネントと�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

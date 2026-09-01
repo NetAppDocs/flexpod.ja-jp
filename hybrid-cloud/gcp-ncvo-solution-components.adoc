@@ -10,7 +10,7 @@ summary: このセクションでは、この解決策 の実装に必要なす�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:gcp-ncvo-solution-overview.html["Previous ：解決策の概要を示します。"]

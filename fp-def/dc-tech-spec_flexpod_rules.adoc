@@ -10,7 +10,7 @@ summary: FlexPod の設計により、多数の異なるコンポーネントと
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

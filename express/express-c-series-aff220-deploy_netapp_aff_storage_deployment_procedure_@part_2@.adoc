@@ -10,7 +10,7 @@ summary: igroup を作成するには、 iSCSI イニシエータの IQN が必�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 

@@ -10,7 +10,7 @@ summary: ここでは、 NetApp ONTAP データ管理ソフトウェアの主な
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

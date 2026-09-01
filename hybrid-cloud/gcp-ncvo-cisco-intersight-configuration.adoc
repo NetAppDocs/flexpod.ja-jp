@@ -10,7 +10,7 @@ summary: このページには、FlexPod を使用したCisco Intersightの設�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:gcp-ncvo-deploy-flexpod.html["前の手順：FlexPod を導入します。"]

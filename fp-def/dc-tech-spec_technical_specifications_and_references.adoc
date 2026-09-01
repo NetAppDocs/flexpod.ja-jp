@@ -10,7 +10,7 @@ summary: 技術仕様は、シャーシ、 FEX 、サーバ、スイッチなど
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

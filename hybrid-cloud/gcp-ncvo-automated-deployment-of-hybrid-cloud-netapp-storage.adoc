@@ -10,7 +10,7 @@ summary: このセクションでは、ハイブリッドクラウドネット�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:gcp-ncvo-configure-public-cloud-service-provider.html["前のページ：パブリッククラウドサービスプロバイダを設定"]

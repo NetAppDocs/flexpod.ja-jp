@@ -10,7 +10,7 @@ summary: 次の情報は、 FlexPod 構成のソフトウェアの最小要件�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: 攻撃が発生した場合に身代金を支払わないことを著�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

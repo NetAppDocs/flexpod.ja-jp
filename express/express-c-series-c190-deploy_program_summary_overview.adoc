@@ -10,7 +10,7 @@ summary: FlexPod Datacenter と FlexPod Express は、ベースライン構成�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 ネットアップ、 Savita Kumari 氏

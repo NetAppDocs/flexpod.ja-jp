@@ -10,7 +10,7 @@ summary: この解決策 では、ネットアップのクラウドデータサ�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:gcp-ncvo-solution-validation.html["前のバージョン：解決策 の検証。"]

@@ -10,7 +10,7 @@ summary: 次の表に、医用画像システム用 FlexPod インフラスト�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

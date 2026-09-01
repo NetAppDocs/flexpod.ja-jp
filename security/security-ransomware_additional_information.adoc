@@ -10,7 +10,7 @@ summary: このドキュメントに記載されている情報の詳細につ�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 このドキュメントに記載されている情報の詳細については、以下のドキュメントや Web サイトを参照してください。

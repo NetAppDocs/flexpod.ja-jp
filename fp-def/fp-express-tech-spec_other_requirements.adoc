@@ -10,7 +10,7 @@ summary: FlexPod Express のその他の要件を次に示します。
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

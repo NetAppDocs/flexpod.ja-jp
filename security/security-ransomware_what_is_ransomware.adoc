@@ -10,7 +10,7 @@ summary: ランサムウェアは、暗号化を使用して悪意のあるソ�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 ネットアップ、 Arvind Ramakrinan 氏

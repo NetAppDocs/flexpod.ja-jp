@@ -10,7 +10,7 @@ summary: 作成者は、特定の個人のサポートとこの設計への貢�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

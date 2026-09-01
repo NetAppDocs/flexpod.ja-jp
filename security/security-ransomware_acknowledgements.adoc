@@ -10,7 +10,7 @@ summary: 本ガイドの作成にご協力いただいたことに、以下の�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

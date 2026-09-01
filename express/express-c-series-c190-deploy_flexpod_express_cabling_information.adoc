@@ -10,7 +10,7 @@ summary: この参照検証は、次の図と表に示すようにケーブル�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

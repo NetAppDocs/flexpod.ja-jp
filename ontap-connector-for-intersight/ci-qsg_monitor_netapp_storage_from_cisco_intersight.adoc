@@ -10,7 +10,7 @@ summary: ターゲットへの請求が完了すると、 Advantage Tier ライ�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -10,7 +10,7 @@ summary: FlexPod インフラは、モジュラ型の統合型で、必要に応
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:flexpod-fips-solution-benefits-of-flexpod-converged-infrastructure.html["前のスライド：解決策 が FlexPod コンバージドインフラのメリットを提供"]

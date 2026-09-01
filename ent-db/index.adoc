@@ -10,7 +10,7 @@ summary: このページでは、 SAP HANA などの SAP アプリケーショ�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 FlexPod プラットフォームは、 Cisco Unified Computing System （ Cisco UCS ）、 Cisco Nexus ファミリースイッチ、およびネットアップストレージコントローラを基盤として構築された、事前設計されたベストプラクティスのデータセンターアーキテクチャです。

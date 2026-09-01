@@ -10,7 +10,7 @@ summary: このセクションでは、いくつかのユースケースを使�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:fhc-cvoe-san-configuration.html["前の手順：SAN構成"]

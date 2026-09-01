@@ -10,7 +10,7 @@ summary: FlexPod Expressは、Cisco Unified Computing System（Cisco UCS）とCi
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

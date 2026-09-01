@@ -10,7 +10,7 @@ summary: ネットアップは、ヘルスケアを含むエンタープライ�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 Kamini Singh、ネットアップ

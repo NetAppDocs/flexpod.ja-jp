@@ -10,7 +10,7 @@ summary: FlexPod は、 Cisco Unified Computing System （ Cisco UCS ）サー�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

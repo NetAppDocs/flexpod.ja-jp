@@ -10,7 +10,7 @@ summary: 本ドキュメントは、 FIPS 140-2 のセキュリティコンプ�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 Cisco 、 NetApp John McAbel 、 JayaKishore Esanakula 氏

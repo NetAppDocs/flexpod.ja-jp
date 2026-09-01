@@ -10,7 +10,7 @@ summary: FlexPod SM-BC 解決策 のネットワーク設定は、各サイト�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:sm-bcs-compute.html["前のバージョン：解決策 の検証 - コンピューティング。"]

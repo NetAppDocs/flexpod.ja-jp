@@ -10,7 +10,7 @@ summary: シスコは、解決策の設計とアーキテクチャに大きく�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

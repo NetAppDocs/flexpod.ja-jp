@@ -10,7 +10,7 @@ summary: シスコは、 FlexPod Express の設計およびアーキテクチャ
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

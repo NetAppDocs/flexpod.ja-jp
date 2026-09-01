@@ -10,7 +10,7 @@ summary: ここでは、 FC-NVMe on FlexPod の検証テストの概要を示し
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 link:nvme-vsphere-introduction.html["前へ：はじめに。"]

@@ -10,7 +10,7 @@ summary: 本ドキュメントでは、 FlexPod Express プラットフォーム
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

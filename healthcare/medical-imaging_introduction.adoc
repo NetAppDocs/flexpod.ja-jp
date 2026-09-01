@@ -10,7 +10,7 @@ summary: FlexPod を使用すると、 1 つのプラットフォームで FC �
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 NetApp 、 Jaya Kishore Esanakula 、 Atul Bhalodia
