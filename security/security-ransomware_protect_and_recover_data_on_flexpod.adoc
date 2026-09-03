@@ -34,15 +34,15 @@ NetApp ONTAP ソフトウェアの CIFS 共有を提供していた Windows 2016
 
 VM の Documents フォルダには、 WannaCry マルウェアによってまだ暗号化されていない PDF ファイルのセットがありました。
 
-image:security-ransomware_image3.png[""]
+image:security-ransomware_image3.png["暗号化されていない WorkDoc PDF ファイルが一覧表示された Windows ドキュメントフォルダーのスクリーンショット"]
 
 次のスクリーンショットは、 VM にマッピングされている CIFS 共有を示しています。
 
-image:security-ransomware_image4.png[""]
+image:security-ransomware_image4.png["fpolicy_share CIFSネットワークドライブがWindowsファイルエクスプローラーでドライブZ：としてマッピングされていることを示すスクリーンショット"]
 
 次のスクリーンショットは、 WannaCry マルウェアによってまだ暗号化されていない CIFS 共有 'fpolicy_share' 上のファイルを示しています。
 
-image:security-ransomware_image5.png[""]
+image:security-ransomware_image5.png["fpolicy_share CIFS共有をドライブZとしてマッピングした状態で、暗号化されていないファイルを表示しているファイルエクスプローラーのスクリーンショット"]
 
 
 
@@ -53,19 +53,19 @@ image:security-ransomware_image5.png[""]
 
 VM をホストするボリュームで重複排除を実行すると、ストレージを 19% 削減できました。
 
-image:security-ransomware_image6.png[""]
+image:security-ransomware_image6.png["infra_datastore1 のストレージ効率のスクリーンショット（5.84 GB （19%）の重複排除による節約を表示）"]
 
 CIFS 共有「 fpolicy_share 」の重複排除により、 45% のストレージ節約を達成しました。
 
-image:security-ransomware_image7.png[""]
+image:security-ransomware_image7.png["cifS_volumeのストレージ効率を示すスクリーンショット。重複排除により5.05 GB（45%）の節約を達成しています。"]
 
 VM をホストしているボリュームの Snapshot コピーサイズとして、 456KB が観察されました。
 
-image:security-ransomware_image8.png[""]
+image:security-ransomware_image8.png["infra_datastore1 のスナップショットコピーのスクリーンショット（合計サイズ 456 KB の before_attack を表示）"]
 
 CIFS 共有「 fpolicy_share 」に対しては、 160KB の Snapshot コピー・サイズが検出されました。
 
-image:security-ransomware_image9.png[""]
+image:security-ransomware_image9.png["cifS_volumeのスナップショットコピータブのスクリーンショット。合計サイズ160 KBのbefore_attack_cifsスナップショットが表示されています。"]
 
 
 
@@ -78,11 +78,11 @@ image:security-ransomware_image9.png[""]
 
 . 保護されたマルウェアが抽出されました。
 +
-image:security-ransomware_image10.png[""]
+image:security-ransomware_image10.png["Ransomware.WannaCryという名前の圧縮フォルダのアイコン。"]
 
 . バイナリが実行されました。
 +
-image:security-ransomware_image11.png[""]
+image:security-ransomware_image11.png["Windows ファイル エクスプローラーで選択した WannaCry の実行可能ファイルと「管理者として実行」メニューオプションを示すスクリーンショット"]
 
 
 
@@ -95,11 +95,11 @@ image:security-ransomware_image11.png[""]
 
 マルウェアは WNCRY 拡張子でファイルを暗号化し始めます。
 
-image:security-ransomware_image12.png[""]
+image:security-ransomware_image12.png["Windows ファイルエクスプローラーのスクリーンショット。ドキュメントフォルダに PDF ファイルと暗号化された WNCRY ファイルが表示されています。"]
 
 マルウェアは、ローカル VM およびマッピングされた共有内のすべてのファイルを暗号化します。
 
-image:security-ransomware_image13.png[""]
+image:security-ransomware_image13.png["WNCRY拡張子で暗号化されたローカルおよびマップされたCIFS共有ファイルを示すスクリーンショット"]
 
 
 
@@ -109,15 +109,15 @@ image:security-ransomware_image13.png[""]
 
 攻撃中に CIFS 共有をホストしているボリュームの Snapshot サイズが 820.98MB に急増していることが検出されました。
 
-image:security-ransomware_image14.png[""]
+image:security-ransomware_image14.png["cifs_volumeのスナップショットコピータブにスナップショットサイズ820.98 MBが表示されているスクリーンショット"]
 
 VM をホストしているボリュームの Snapshot コピーサイズが 404.3MB に増加していることが検出されました。
 
-image:security-ransomware_image15.png[""]
+image:security-ransomware_image15.png["404.3 MB の before_attack スナップショットコピーが表示されている infra_datastore1 の「スナップショットコピー」タブのスクリーンショット"]
 
 CIFS 共有をホストしているボリュームのストレージ効率は 34% に低下しています。
 
-image:security-ransomware_image16.png[""]
+image:security-ransomware_image16.png["cifsv_volumeのストレージ効率を示すスクリーンショット（合計5 GBの節約、34%）"]
 
 
 
@@ -131,23 +131,23 @@ VM をリストアするには、次の手順を実行します。
 
 . SnapCenter で作成した Snapshot コピーを使用して、 VM をリストアします。
 +
-image:security-ransomware_image17.png[""]
+image:security-ransomware_image17.png["NetApp SnapCenterのリストアが選択された状態の、WannaCry-2016-1に対するvSphereのアクションメニューのスクリーンショット"]
 
 . リストアに使用する VMware 整合性のある Snapshot コピーを選択します。
 +
-image:security-ransomware_image18.png[""]
+image:security-ransomware_image18.png["利用可能な VMware Snapshot バックアップの一覧が表示され、1つが選択されているリストアウィザードのスクリーンショット"]
 
 . VM 全体がリストアされて再起動されます。
 +
-image:security-ransomware_image19.png[""]
+image:security-ransomware_image19.png["WannaCry-2016-1 仮想マシン全体を選択し、ESXi ホスト上で再起動する復元ウィザード"]
 
 . [ 完了 ] をクリックして、復元プロセスを開始します。
 +
-image:security-ransomware_image20.png[""]
+image:security-ransomware_image20.png["仮想マシン WannaCry-2016-1 の復元ウィザードの概要（完了ボタンと電源オフ警告付き）"]
 
 . VM とそのファイルがリストアされます。
 +
-image:security-ransomware_image21.png[""]
+image:security-ransomware_image21.png["ドキュメントフォルダーに復元されたPDFファイルを表示しているWindows ファイルエクスプローラーのスクリーンショット"]
 
 
 
@@ -157,15 +157,15 @@ CIFS 共有をリストアするには、次の手順を実行します。
 
 . 攻撃の前に作成されたボリュームの Snapshot コピーを使用して、共有をリストアします。
 +
-image:security-ransomware_image22.png[""]
+image:security-ransomware_image22.png["cifs_volume のスナップショットコピータブで復元アクションが選択されている状態を示すスクリーンショット"]
 
 . [OK] をクリックしてリストア処理を開始します。
 +
-image:security-ransomware_image23.png[""]
+image:security-ransomware_image23.png["スナップショットコピーから cif_volume を復元するための、OK ボタンとキャンセルボタンを備えたボリューム復元確認ダイアログ"]
 
 . リストア後に CIFS 共有を表示する
 +
-image:security-ransomware_image24.png[""]
+image:security-ransomware_image24.png["fpolicy_shareにマッピングされたCIFSドライブと、フォルダー、ディスクイメージ、PDFファイルを表示したWindows ファイルエクスプローラーのスクリーンショット"]
 
 
 
@@ -192,8 +192,8 @@ vserver fpolicy enable -vserver infra_svm -policy-name Ransomware_policy -sequen
 
 攻撃前のファイルのステータスを表示します。ファイルは暗号化されておらず、クリーンなシステムにあります。
 
-image:security-ransomware_image25.png[""]
+image:security-ransomware_image25.png["Documents フォルダと fpolicy_share ドライブに保存されている暗号化されていない WorkDoc PDF ファイルを示すスクリーンショット"]
 
 VM 上のファイルが暗号化されます。WannaCry マルウェアは CIFS 共有内のファイルの暗号化を試みますが、 FPolicy はファイルへの影響を防ぎます。
 
-image:security-ransomware_image26.png[""]
+image:security-ransomware_image26.png["FPolicy CIFS共有内の影響を受けていないPDFファイルと並んで暗号化されたVMファイルのスクリーンショット"]

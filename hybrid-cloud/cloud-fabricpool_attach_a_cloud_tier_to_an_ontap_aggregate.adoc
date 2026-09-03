@@ -31,13 +31,13 @@ OnCommand System Manager を使用してクラウド階層をアグリゲート�
 . OnCommand System Manager を起動します。
 . [ アプリケーションと階層 ] をクリックします。
 +
-image:cloud-fabricpool_image14.png[""]
+image:cloud-fabricpool_image14.png["OnCommand System Manager のナビゲーションメニューで「アプリケーションと階層」が選択されているスクリーンショット"]
 
 . [ ストレージ階層 ] をクリックします。
 . アグリゲートをクリックします。
 . アクションをクリックし、クラウド階層の接続を選択します。
 +
-image:cloud-fabricpool_image15.png[""]
+image:cloud-fabricpool_image15.png["「クラウドティアを添付」が選択された状態の「その他の操作」メニューを示すスクリーンショット"]
 
 . クラウド階層を選択します。
 . アグリゲート上のボリュームの階層化ポリシーを表示および更新します（オプション）。デフォルトでは、ボリューム階層化ポリシーは「 Snapshot のみ」に設定されています。

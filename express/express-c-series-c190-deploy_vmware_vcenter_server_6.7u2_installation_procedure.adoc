@@ -34,11 +34,11 @@ VMware vCenter Server Appliance （ VCSA ）をダウンロードするには、
 . [ インストール ] をクリックします
 . [ はじめに ] ページで [ 次へ ] をクリックします。
 +
-image:express-c-series-c190-deploy_image34.png[""]
+image:express-c-series-c190-deploy_image34.png["vCenter Server Appliance インストーラーのエンドユーザーライセンス契約ページのスクリーンショット（同意を選択済み）"]
 
 . 展開タイプとして、 Embedded Platform Services Controller を選択します。
 +
-image:express-c-series-c190-deploy_image35.png[""]
+image:express-c-series-c190-deploy_image35.png["vCenter Server Appliance Installer の展開タイプページで「Embedded Platform Services Controller」が選択されているスクリーンショット"]
 
 +
 
@@ -46,15 +46,15 @@ NOTE: 必要に応じて、 FlexPod Express 解決策の一部として、外部
 
 . アプライアンス導入ターゲットで、導入した ESXi ホストの IP アドレス、ルートユーザ名、および root パスワードを入力します。
 +
-image:express-c-series-c190-deploy_image36.png[""]
+image:express-c-series-c190-deploy_image36.png["ESXiホスト認証情報を含むアプライアンス展開ターゲットフォームが表示されたvCenter Server Appliance Installer のスクリーンショット"]
 
 . vCSA に VM 名および root パスワードとして入力し、 vCSA に使用するアプライアンス VM を設定します。
 +
-image:express-c-series-c190-deploy_image37.png[""]
+image:express-c-series-c190-deploy_image37.png["vCenter Server Appliance インストーラーの「アプライアンス VM の設定」ページのスクリーンショット（VM 名と root パスワードのフィールドを表示）"]
 
 . 環境に最も適した導入サイズを選択してください。次へをクリックします。
 +
-image:express-c-series-c190-deploy_image38.png[""]
+image:express-c-series-c190-deploy_image38.png["vCenter Server Appliance インストーラーの「展開サイズの選択」ページで「Tiny」が選択されているスクリーンショット"]
 
 . 「 infra_datastore 」データストアを選択します。次へをクリックします。
 . Configure network settings （ネットワーク設定の設定）ページで次の情報を入力し、 Next （次へ）をクリックします。
@@ -69,11 +69,11 @@ image:express-c-series-c190-deploy_image38.png[""]
 
 . 「ステージ 1 を完了する準備ができました」ページで、入力した設定が正しいことを確認します。完了をクリックします。
 +
-image:express-c-series-c190-deploy_image39.png[""]
+image:express-c-series-c190-deploy_image39.png["vCenter Server Appliance インストーラーの「ネットワーク設定の構成」ページで MGMT-Network が選択されているスクリーンショット"]
 
 . アプライアンスの導入を開始する前に、第 1 段階の設定を確認してください。
 +
-image:express-c-series-c190-deploy_image40.png[""]
+image:express-c-series-c190-deploy_image40.png["vCenter Server Appliance インストーラーの「ステージ1の設定確認（完了の準備ができました）」ページのスクリーンショット"]
 
 +
 vCSA がインストールされます。このプロセスには数分かかります。
@@ -81,13 +81,13 @@ vCSA がインストールされます。このプロセスには数分かかり
 . ステージ 1 が完了すると、完了したことを示すメッセージが表示されます。「続行」をクリックしてステージ 2 の設定を開始します。
 . 「ステージ 2 の紹介」ページで、「次へ」をクリックします。
 +
-image:express-c-series-c190-deploy_image41.png[""]
+image:express-c-series-c190-deploy_image41.png["vCenter Server Appliance インストーラーのステージ 2 の「はじめに」ページのスクリーンショット（「次へ」ボタン付き）"]
 
 . NTP サーバのアドレスとして「 \\<<var_ntp_id>> 」と入力します。複数の NTP IP アドレスを入力できます。
 . vCenter Server High Availability （ HA ；高可用性）を使用する場合は、 SSH アクセスが有効になっていることを確認してください。
 . SSO ドメイン名、パスワード、およびサイト名を設定します。次へをクリックします。
 +
-image:express-c-series-c190-deploy_image42.png[""]
+image:express-c-series-c190-deploy_image42.png["新しい SSO ドメインが選択された状態の vCenter Server Appliance インストーラー ステージ 2 の SSO 構成のスクリーンショット"]
 
 +
 
@@ -95,12 +95,12 @@ NOTE: 特に 'vSpher.local' ドメイン名から外れる場合は ' これら�
 
 . 必要に応じて、 VMware カスタマーエクスペリエンスプログラムに参加します。次へをクリックします。
 +
-image:express-c-series-c190-deploy_image43.png[""]
+image:express-c-series-c190-deploy_image43.png["vCenter Server Appliance インストーラーの「CEIP の設定」ページで CEIP オプションが選択された状態のスクリーンショット"]
 
 . 設定の概要を確認します。[ 完了 ] をクリックするか、 [ 戻る ] ボタンを使用して設定を編集します。
 . インストールの開始後に、インストールを一時停止または終了できないことを示すメッセージが表示されます。[OK] をクリックして続行します。
 +
-image:express-c-series-c190-deploy_image44.png[""]
+image:express-c-series-c190-deploy_image44.png["インストールを一時停止または停止できないことを警告する vCenter Server Appliance インストーラーのスクリーンショット（「キャンセル」ボタンと「OK」ボタンが表示されています）"]
 
 +
 アプライアンスの設定が続行されます。これには数分かかります。

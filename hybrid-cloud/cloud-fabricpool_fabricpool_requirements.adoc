@@ -90,7 +90,7 @@ FabricPool 読み取りレイテンシは、クラウド階層への接続機能
 
 NOTE: 低パフォーマンスの環境で FabricPool を使用する場合は、クライアントアプリケーションの最小パフォーマンス要件を引き続き満たし、それに応じてリカバリ時間の目標を調整する必要があります。
 
-image:cloud-fabricpool_image6.png[""]
+image:cloud-fabricpool_image6.png["2つのNetApp AFF A300コントローラーがクラスター間LIFをAWS S3に接続していることを示す図"]
 
 
 
@@ -114,7 +114,7 @@ storage aggregate object-store profiler show
 ....
 クラウド階層では、パフォーマンス階層のようなパフォーマンスは提供されません（通常は毎秒 GB ）。FabricPool アグリゲートは、 SATA のようなパフォーマンスを簡単に提供できますが、 SATA のようなパフォーマンスを必要としない階層化ソリューションでは、 10 秒という高いレイテンシと低いスループットも許容できます。
 
-image:cloud-fabricpool_image7.png[""]
+image:cloud-fabricpool_image7.png["ONTAP CLI オブジェクトストアプロファイラの結果（PUT および GET のレイテンシとスループットを示す）のスクリーンショット"]
 
 
 

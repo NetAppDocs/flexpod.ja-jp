@@ -21,7 +21,7 @@ FlexPod リファレンスアーキテクチャは、 Cisco Validated Design （
 * * FlexPod Datacenter * は、さまざまなワークロードやアプリケーションに最適な多目的基盤を提供します。
 
 
-image:express-c-series-c190-design_image1.png[""]
+image:express-c-series-c190-design_image1.png["FlexPod Expressの部門別デプロイメントとFlexPod Datacenterのミッションクリティカルなワークロードを比較した図"]
 
 
 
@@ -47,7 +47,7 @@ FlexPod Express は、混在仮想化ワークロードを実行するように�
 
 次の図に、 FlexPod Express 解決策に含まれるハードウェアコンポーネントを示します。
 
-image:express-c-series-c190-design_image2.png[""]
+image:express-c-series-c190-design_image2.png["FlexPod Express のストレージ、スイッチ、およびサーバーハードウェアオプションを示す図"]
 
 
 
@@ -63,6 +63,6 @@ image:express-c-series-c190-design_image2.png[""]
 
 この解決策は、ネットアップ、 Cisco 、 VMware の最新テクノロジを活用しています。このシステムには、 ONTAP 9.6 ソフトウェア、 Cisco Nexus 31108 デュアルスイッチ、および VMware vSphere 6.7U2 を実行する Cisco UCS C220 M5 ラックサーバを実行する、新しい NetApp AFF C190 システムが搭載されています。この検証済み解決策は、次の図に示すように、 10 ギガビットイーサネット（ 10GbE ）テクノロジを使用しています。また、 FlexPod Express アーキテクチャが組織の進化するビジネスニーズに適応できるように、 2 つのハイパーバイザーノードを一度に追加して拡張する方法についても説明します。
 
-image:express-c-series-c190-design_image3.png[""]
+image:express-c-series-c190-design_image3.png["FlexPod Express スイッチ、C220 M5 サーバー、および AFF C190 ストレージ接続を示す図"]
 
 link:express-c-series-c190-design_technology_requirements.html["次のステップ：テクノロジの要件"]

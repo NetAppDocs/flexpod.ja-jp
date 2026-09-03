@@ -39,15 +39,15 @@ Cloud Insights ダッシュボードから Digital Advisor の情報にアクセ
 
 . 左側の Admin メニューの下にある Data Collector オプションをクリックします。
 +
-image:cloud-insights_image13.png[""]
+image:cloud-insights_image13.png["Cloud Insights でデータコレクターが選択された管理メニューを示すスクリーンショット"]
 
 . 環境内の特定の Data Collector にフィルタを適用します。この例では、 FlexPod でフィルタリングしています。
 +
-image:cloud-insights_image23.png[""]
+image:cloud-insights_image23.png["FlexPod Datacenter用にフィルタリングされたData Collectorsページのスクリーンショット"]
 
 . Data Collector をクリックして、その Collector によって監視されている環境とデバイスの概要を取得します。
 +
-image:cloud-insights_image24.png[""]
+image:cloud-insights_image24.png["FlexPod Datacenter データコレクターの概要（イベントタイムラインとレポートされたストレージデバイスを含む）のスクリーンショット"]
 
 +
 下部のデバイスリストで、監視対象の ONTAP ストレージシステムの名前をクリックします。システムに関して収集された情報を示すダッシュボードが表示されます。これには次の情報が含まれます。
@@ -61,19 +61,19 @@ image:cloud-insights_image24.png[""]
 ** 平均レイテンシ
 ** 平均スループット
 +
-image:cloud-insights_image25.png[""]
+image:cloud-insights_image25.png["aa14-a800ストレージダッシュボードの概要、リスク、ユーザーデータ、およびレイテンシチャートを示すスクリーンショット"]
 
 +
 また、このページの「パフォーマンス ポリシー」セクションには、NetApp Digital Advisor へのリンクがあります。
 
 +
-image:cloud-insights_image26.png[""]
+image:cloud-insights_image26.png["Active IQ によって35のリスクが検出されたパフォーマンスポリシーと外部リンクアイコンを示すスクリーンショット"]
 
 
 
 . 新しいブラウザタブを開いてリスク軽減ページに移動するには、Digital Advisor のリンクをクリックしてください。このページには、影響を受けるノード、リスクの重大度、および特定された問題を修正するために取るべき適切なアクションが表示されます。
 +
-image:cloud-insights_image27.png[""]
+image:cloud-insights_image27.png["ストレージシステムの健全性リスクと是正措置を一覧表示するActive IQ Digital Advisorのスクリーンショット"]
 
 
 
@@ -90,15 +90,15 @@ Cloud Insights では、 FlexPod データセンター解決策に導入され�
 
 ストレージ・システムのダッシュボードから 'Data Collector が情報を最後に更新した時刻を確認できますこの例を次の図に示します。
 
-image:cloud-insights_image28.png[""]
+image:cloud-insights_image28.png["Cloud Insights データコレクターの詳細を示すスクリーンショット（午後1：21、3分前に取得成功）"]
 
 デフォルトでは、ストレージシステムダッシュボードのエキスパートビューセクションに、ポーリング対象のストレージシステム、または個々のノードからのシステム全体の指標（レイテンシ、 IOPS 、スループットなど）を示す対話型グラフがいくつか表示されます。これらのデフォルトのグラフの例を次の図に示します。
 
-image:cloud-insights_image29.png[""]
+image:cloud-insights_image29.png["レイテンシ、IOPS、スループットのグラフとリソースの詳細を表示する Cloud Insights エキスパートビューのスクリーンショット"]
 
 デフォルトでは、過去 3 時間の情報がグラフに表示されますが、ストレージシステムダッシュボードの右上にあるドロップダウンリストからさまざまな値またはカスタム値に設定できます。これを次の図に示します。
 
-image:cloud-insights_image30.png[""]
+image:cloud-insights_image30.png["時間範囲ドロップダウンに「過去15分」から「カスタム」までが表示されているストレージダッシュボードのスクリーンショット。"]
 
 
 
@@ -115,21 +115,21 @@ image:cloud-insights_image30.png[""]
 
 . カスタマイズされたダッシュボードを作成するには、 Cloud Insights のメインメニューの [Dashboards] にカーソルを合わせ、ドロップダウンリストで [+] [New Dashboard] をクリックします。
 +
-image:cloud-insights_image31.png[""]
+image:cloud-insights_image31.png["「+ New Dashboard」がハイライト表示された Cloud Insights のダッシュボードメニューのスクリーンショット"]
 
 +
 [ 新しいダッシュボード ] ウィンドウが開きます。
 
 . ダッシュボードに名前を付け、データの表示に使用するウィジェットのタイプを選択します。収集したデータを表示するグラフの種類を選択することも、メモやテーブルの種類を選択することもできます。
 +
-image:cloud-insights_image32.png[""]
+image:cloud-insights_image32.png["新しいダッシュボードウィジェットタイプの選択タイル（チャート、ゲージ、メモ、テーブルなどを含む）のスクリーンショット"]
 
 . [ 変数の追加 ] メニューから [ カスタマイズされた変数 ] を選択します。
 +
 これにより、提示されるデータに集中して、より具体的な、または特殊な要因を表示できます。
 
 +
-image:cloud-insights_image33.png[""]
+image:cloud-insights_image33.png["新しいダッシュボードに検索フィールドと変数リストを含む「変数の追加」メニューを示すスクリーンショット"]
 
 . カスタムダッシュボードを作成するには、使用するウィジェットタイプを選択します。たとえば、円グラフでボリューム別のストレージ利用率を表示します。
 +
@@ -140,13 +140,13 @@ image:cloud-insights_image33.png[""]
 .. 表示する情報をカスタマイズします。デフォルトでは、 ONTAP データボリュームが表示され、上位 10 個のが表示されます。
 .. カスタマイズしたダッシュボードを保存するには、 [ 保存 ] をクリックします。
 +
-image:cloud-insights_image34.png[""]
+image:cloud-insights_image34.png["ストレージボリュームの使用容量を表示するように構成された「使用容量」円グラフウィジェットを示すスクリーンショット"]
 
 +
 カスタムウィジェットを保存すると、ブラウザは新しいダッシュボードページに戻ります。このページには、新しく作成したウィジェットが表示され、データポーリング期間の変更などの対話型アクションを実行できます。
 
 +
-image:cloud-insights_image35.png[""]
+image:cloud-insights_image35.png["Cloud Insights のダッシュボードに容量使用状況の円グラフウィジェットが表示されているスクリーンショット"]
 
 
 

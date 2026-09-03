@@ -44,7 +44,7 @@ VMware VM を作成して Acquisition Unit として設定するには、次の�
 . Web ブラウザを起動して VMware vSphere にログインし、 VM をホストするクラスタを選択します。
 . そのクラスタを右クリックし、メニューから [ 仮想マシンの作成 ] を選択します。
 +
-image:cloud-insights_image3.png[""]
+image:cloud-insights_image3.png["vSphereコンテキストメニューで、クラスタ操作の中に「新規仮想マシン」がハイライト表示されている"]
 
 . 新規仮想マシンウィザードで、次へをクリックします。
 . VM の名前を指定し、インストール先のデータセンターを選択して、 Next （次へ）をクリックします。
@@ -53,7 +53,7 @@ image:cloud-insights_image3.png[""]
 . VM の互換性モードが ESXi 6.7 以降に設定されていることを確認し '[ 次へ ] をクリックします
 . [Guest OS Family Linux, Guest OS Version: Red Hat Enterprise Linux 7 (64 bit)] を選択します。
 +
-image:cloud-insights_image4.png[""]
+image:cloud-insights_image4.png["Linux と Red Hat Enterprise Linux 7（64 ビット）が選択された状態のゲスト OS の選択ウィザードのスクリーンショット"]
 
 . 次のページでは、 VM のハードウェアリソースをカスタマイズできます。Cloud Insights Acquisition Unit には、次のリソースが必要です。リソースを選択したら、 [ 次へ ] をクリックします。
 +
@@ -63,7 +63,7 @@ image:cloud-insights_image4.png[""]
 .. ポート 443 で SSL 接続を介して FlexPod データセンターおよび Cloud Insights サーバのリソースにアクセスできるネットワーク。
 .. 選択した Linux ディストリビューション（ Red Hat Enterprise Linux ）の ISO イメージをブート元として指定します。
 +
-image:cloud-insights_image5.png[""]
+image:cloud-insights_image5.png["VMware の CPU、メモリ、ディスク、ネットワーク、および CD/DVD ドライブが設定された「ハードウェアのカスタマイズ」設定のスクリーンショット"]
 
 
 
@@ -79,7 +79,7 @@ Red Hat Enterprise Linux をインストールするには、次の手順を実�
 
 . VM の電源をオンにし、ウィンドウをクリックして仮想コンソールを起動し、 Red Hat Enterprise Linux 7.6 をインストールするオプションを選択します。
 +
-image:cloud-insights_image6.png[""]
+image:cloud-insights_image6.png["Red Hat Enterprise Linux 7.6 のブートメニューで「インストール」が選択されているスクリーンショット"]
 
 . 使用する言語を選択し、 [ 続行 ] をクリックします。
 +
@@ -90,14 +90,14 @@ image:cloud-insights_image6.png[""]
 .. サーバのパーティションをカスタマイズするには、インストール先をクリックします。
 .. VMware 仮想ディスク 100GiB がブラックチェックマークで選択されていることを確認し、 [I will Configure Partitioning （パーティションの設定） ] オプションボタンを選択します。
 +
-image:cloud-insights_image7.png[""]
+image:cloud-insights_image7.png["選択された100 GiB VMware仮想ディスクと手動パーティショニングオプションを示すスクリーンショット"]
 
 .. 完了をクリックします。
 +
 新しいメニューが表示され、パーティションテーブルをカスタマイズできます。それぞれ 25 GB を '/opt/NetApp' と '/var/log/netapp' 専用にします残りのストレージをシステムに自動的に割り当てることができます。
 
 +
-image:cloud-insights_image8.png[""]
+image:cloud-insights_image8.png["Red Hat Enterprise Linux の手動パーティショニングのスクリーンショット（25 GiB の /opt/netapp および /var/log/netapp ボリューム）"]
 
 .. [ インストールの概要 ] に戻るには、 [ 完了 ] をクリックします。
 
@@ -107,7 +107,7 @@ image:cloud-insights_image8.png[""]
 .. サーバのホスト名を入力します。
 .. スライダボタンをクリックして、ネットワークアダプタの電源をオンにします。ネットワークに Dynamic Host Configuration Protocol （ DHCP ；動的ホスト構成プロトコル）が設定されている場合は、 IP アドレスが割り当てられます。表示されない場合は、 Configure （設定）をクリックし、アドレスを手動で割り当てます。
 +
-image:cloud-insights_image9.png[""]
+image:cloud-insights_image9.png["イーサネットが有効になり、ホスト名が入力された Red Hat Enterprise Linux のネットワークとホスト名の画面のスクリーンショット"]
 
 .. 。[ 完了 ] をクリックして、 [ インストールの概要 ] に戻ります。
 
@@ -115,15 +115,15 @@ image:cloud-insights_image9.png[""]
 . [ インストールの概要 ] ページで、 [ インストールの開始 ] をクリックします。
 . インストールの進行状況ページで、 root パスワードを設定するか、ローカルユーザーアカウントを作成できます。インストールが完了したら、 Reboot （再起動）をクリックしてサーバを再起動します。
 +
-image:cloud-insights_image10.png[""]
+image:cloud-insights_image10.png["Red Hat Enterprise Linux のインストール完了画面と再起動ボタンが表示されたスクリーンショット"]
 
 . システムが再起動したら、サーバにログインし、 Red Hat Subscription Manager に登録します。
 +
-image:cloud-insights_image11.png[""]
+image:cloud-insights_image11.png["Netapp-AUシステムへのRed Hat Subscription Manager登録が成功したことを示すターミナル画面"]
 
 . Red Hat Enterprise Linux のサブスクリプションを追加します。
 +
-image:cloud-insights_image12.png[""]
+image:cloud-insights_image12.png["Red Hat Enterprise Linuxサブスクリプションの正常な接続を示すターミナル画面"]
 
 
 
@@ -136,32 +136,32 @@ Cloud Insights ポータルで Acquisition Unit インスタンスを作成し�
 
 . Cloud Insights のホームページで、左側のメインメニューの Admin エントリにカーソルを合わせ、メニューから Data Collectors を選択します。
 +
-image:cloud-insights_image13.png[""]
+image:cloud-insights_image13.png["Cloud Insights でデータコレクターが選択された管理メニューを示すスクリーンショット"]
 
 . データコレクタページの上部中央で、 Acquisition Unit のリンクをクリックします。
 +
-image:cloud-insights_image14.png[""]
+image:cloud-insights_image14.png["データコレクターと取得ユニットのタブが表示され、取得ユニットが選択されている状態のスクリーンショット"]
 
 . 新しい Acquisition Unit を作成するには、右側のボタンをクリックします。
 +
-image:cloud-insights_image15.png[""]
+image:cloud-insights_image15.png["「取得ユニットの追加」ボタンとフィルターフィールドが表示されたスクリーンショット"]
 
 . Acquisition Unit のホストとして使用するオペレーティングシステムを選択し、 Web ページからインストールスクリプトをコピーする手順に従います。
 +
 この例では、 Linux サーバを使用しています。これは、スニペットとトークンを提供し、ホストの CLI に貼り付けます。Web ページは Acquisition Unit への接続を待機します。
 
 +
-image:cloud-insights_image16.png[""]
+image:cloud-insights_image16.png["Cloud Insights Linux Acquisition Unitのインストール手順とインストーラーのスニペットを示すスクリーンショット"]
 
 . プロビジョニングされた Red Hat Enterprise Linux マシンの CLI にスニペットを貼り付け、 Enter キーを押します。
 +
-image:cloud-insights_image17.png[""]
+image:cloud-insights_image17.png["Linux 上に Cloud Insights 取得ユニットをインストールするためのトークンコマンドを表示するターミナルウィンドウ"]
 
 +
 インストールプログラムは、圧縮パッケージをダウンロードしてインストールを開始します。インストールが完了すると、 Acquisition Unit が NetApp Cloud Insights に登録されたことを示すメッセージが表示されます。
 
 +
-image:cloud-insights_image18.png[""]
+image:cloud-insights_image18.png["NetApp Cloud Insights Acquisition Unitのインストールと登録が正常に完了したことを示すターミナル"]
 
 
 
@@ -174,24 +174,24 @@ FlexPod 環境から ONTAP ストレージシステムを追加するには、�
 
 . Cloud Insights ポータルの Acquisition Unit ページに戻り、新たに登録されたユニットを探します。ユニットのサマリーを表示するには、ユニットをクリックします。
 +
-image:cloud-insights_image19.png[""]
+image:cloud-insights_image19.png["NetApp-AU 取得ユニットの概要（IP、OK ステータス、最終報告時刻を表示）のスクリーンショット"]
 
 . ストレージシステムを追加するウィザードを開始するには、概要ページでデータコレクタを作成するボタンをクリックします。最初のページには、データの収集元となるすべてのシステムが表示されます。検索バーを使用して ONTAP を検索します。
 +
-image:cloud-insights_image20.png[""]
+image:cloud-insights_image20.png["「データコレクターの追加」ページでフィルタリングされた ONTAP データコレクターのオプションを示すスクリーンショット"]
 
 . ONTAP データ管理ソフトウェアを選択します。
 +
 導入環境の名前を指定し、使用する Acquisition Unit を選択するためのページが表示されます。ONTAP システムの接続情報とクレデンシャルを指定し、接続をテストして確認できます。
 
 +
-image:cloud-insights_image21.png[""]
+image:cloud-insights_image21.png["検証済みの ONTAP 認証情報と Acquisition Unit 設定が表示された「コレクターの設定」ページのスクリーンショット"]
 
 . [ セットアップの完了 ] をクリックします
 +
 ポータルが Data Collectors ページに戻り、 Data Collector は最初のポーリングを開始して、 FlexPod データセンターの ONTAP ストレージシステムからデータを収集します。
 
 +
-image:cloud-insights_image22.png[""]
+image:cloud-insights_image22.png["Cloud Insights データコレクター行に FlexPod データセンターのポーリングステータスを表示したスクリーンショット"]
 
 

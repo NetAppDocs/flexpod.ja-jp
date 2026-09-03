@@ -50,7 +50,7 @@ NOTE: この検証で使用されている CIMC のバージョンは CIMC 4.4.0
 サーバの電源を入れ、 CIMC 設定を開始するかどうか確認するプロンプトが表示されたら F8 キーを押します。
 
 +
-image:express-c-series-c190-deploy_image5.png[""]
+image:express-c-series-c190-deploy_image5.png["Cisco サーバーの起動画面で CIMC Setup のために F8 キーを押すよう求めるスクリーンショット"]
 
 . CIMC 設定ユーティリティで、次のオプションを設定します。
 +
@@ -82,7 +82,7 @@ NIC の冗長性
 なし :[X]`
 
 +
-image:express-c-series-c190-deploy_image6.png[""]
+image:express-c-series-c190-deploy_image6.png["Cisco IMC Configuration Utility の NIC プロパティのスクリーンショット（専用 NIC および冗長性なしが選択されている）"]
 
 
 
@@ -181,7 +181,7 @@ NOTE: 斜体のフォントは、 ESXi ホストごとに一意の変数を示�
 . CIMC インターフェイスのブラウザウィンドウで、 [Compute] タブをクリックし、 BIOS を選択します。
 . Configure Boot Order （起動順序の設定）をクリックし、 OK をクリックします。
 +
-image:express-c-series-c190-deploy_image7.png[""]
+image:express-c-series-c190-deploy_image7.png["Cisco Integrated Management Controller BIOS ブート順序設定ページのスクリーンショット"]
 
 . Add Boot Device の下のデバイスをクリックし、 Advanced タブに移動して、次のデバイスを設定します。
 +
@@ -235,7 +235,7 @@ image:express-c-series-c190-deploy_image7.png[""]
 . Add Device をクリックします。
 . [ 変更の保存 ] をクリックし、 [ 閉じる ] をクリックします。
 +
-image:express-c-series-c190-deploy_image8.png[""]
+image:express-c-series-c190-deploy_image8.png["KVM-MAPPED-DVD、iSCSI-A、iSCSI-Bが有効になっている「Advanced Boot Order Configuration」のスクリーンショット"]
 
 . サーバをリブートして、新しいブート順序でブートします。
 
@@ -252,7 +252,7 @@ C シリーズサーバに RAID コントローラが搭載されている場合
 . 下にスクロールして [PCIe Slot:HBA Option ROM] を表示します。
 . 値が無効になっていない場合は、 disabled に設定します。
 +
-image:express-c-series-c190-deploy_image9.png[""]
+image:express-c-series-c190-deploy_image9.png["PCIeスロット1とスロット2のオプションROMが無効になっているCIMC BIOS設定を示すスクリーンショット"]
 
 
 
@@ -270,7 +270,7 @@ NOTE: ポート 0 、 1 、 2 、および 3 間のデフォルトのポート�
 . General タブで、ポートチャネルのチェックを外します。
 . 変更を保存し、 CIMC をリブートします。
 +
-image:express-c-series-c190-deploy_image10.png[""]
+image:express-c-series-c190-deploy_image10.png["Cisco Integrated Management Controller アダプタカード MLOM の「一般」タブで「ポートチャネル」のチェックが外れている状態のスクリーンショット"]
 
 
 
@@ -301,13 +301,13 @@ iSCSI vNIC を作成するには、次の手順を実行します。
 ** VLAN として「 \<<var_iscsi_vlan_b>> 」と入力します。
 ** アップリンクポートを 3 に設定します。
 +
-image:express-c-series-c190-deploy_image11.png[""]
+image:express-c-series-c190-deploy_image11.png["VLAN 3439 およびアップリンクポート 1 を使用した iSCSI vNIC eth1 の一般設定を示すスクリーンショット"]
 
 
 
 . 左側の vNIC eth1 を選択します。
 +
-image:express-c-series-c190-deploy_image12.png[""]
+image:express-c-series-c190-deploy_image12.png["vNIC eth1 の iSCSI ブートプロパティのイニシエータ設定を示すスクリーンショット"]
 
 . iSCSI Boot Properties （ iSCSI 起動プロパティ）で、イニシエータの詳細を入力します。
 +
@@ -316,7 +316,7 @@ image:express-c-series-c190-deploy_image12.png[""]
 ** サブネットマスク : `\<<var_esxi_hosta_iscsia_mask>>
 ** ゲートウェイ :`\<<var_esxi_hosta_iscsia_gateway>>
 +
-image:express-c-series-c190-deploy_image13.png[""]
+image:express-c-series-c190-deploy_image13.png["イニシエータ、プライマリターゲット、セカンダリターゲットの詳細を含む iSCSI ブートプロパティのスクリーンショット"]
 
 
 
@@ -352,7 +352,7 @@ NOTE: 各 vNIC の IQN 名を必ず記録してください。これらのファ
 ** サブネットマスク： `\<<var_esxi_HostB_iSCSIb_mask>>
 ** ゲートウェイ : `\<<var_esxi_HostB_iSCSIb_gateway>>
 +
-image:express-c-series-c190-deploy_image14.png[""]
+image:express-c-series-c190-deploy_image14.png["イニシエータとターゲット設定を含むvNIC eth3のiSCSIブートプロパティを示すスクリーンショット"]
 
 
 
@@ -395,11 +395,11 @@ ESXi の vNIC を設定するには、次の手順を実行します。
 . MTU を 9000 に設定します。[Save Changes] をクリックします。
 . VLAN をネイティブ VLAN 2 に設定します。
 +
-image:express-c-series-c190-deploy_image15.png[""]
+image:express-c-series-c190-deploy_image15.png["MTU 9000 およびデフォルト VLAN 2 が設定された Cisco Integrated Management Controller vNIC eth0 プロパティのスクリーンショット"]
 
 . eth1 に手順 3 と 4 を繰り返し、アップリンクポートが eth1 に 1 に設定されていることを確認します。
 +
-image:express-c-series-c190-deploy_image16.png[""]
+image:express-c-series-c190-deploy_image16.png["Cisco Integrated Management Controller のvNIC一覧（eth0～eth3、MTU、アップリンクポート、VLAN設定を含む）のスクリーンショット"]
 
 +
 

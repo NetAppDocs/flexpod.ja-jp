@@ -26,7 +26,7 @@ FlexPod は、 Cisco Unified Computing System （ Cisco UCS ）、 Cisco Nexus �
 
 次の図に、 FlexPod コンポーネントファミリーを示します。
 
-image:nvme-vsphere-image1.png[""]
+image:nvme-vsphere-image1.png["FlexPodのストレージ、スイッチ、およびサポート対象製品シリーズを含む Cisco UCS コンポーネントファミリーを示す図"]
 
 FlexPod は FC-NVMe を導入するための理想的なプラットフォームです。既存の Cisco UCS B200 M5 サーバまたは M6 サーバ、または Cisco UCS C シリーズ M5 または M6 ラックサーバに Cisco UCS VIC 1400 シリーズおよびポートエクスパンダを追加し、 Cisco UCS システム、 Cisco MDS 32Gbps スイッチへの無停止でのシンプルなソフトウェアアップグレードをサポートします。 および NetApp AFF ストレージアレイで使用できます。サポート対象のハードウェアとソフトウェアを導入したあとの FC-NVMe 設定は、 FCP の設定と似ています。
 

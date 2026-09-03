@@ -26,7 +26,7 @@ SM-BC 解決策 ストレージは、災害やダウンタイムを避けるた�
 
 次の図は、 FlexPod SM-BC 解決策 の仮想化ビューの概要を示しています。このビューには、 VMware HA と vMSC の両方の機能が含まれており、コンピューティングサービスとストレージサービスの高可用性を実現します。アクティブ / アクティブのデータセンター解決策 アーキテクチャにより、サイト間でのワークロードの移動が可能になり、 DR / BC 保護が提供されます。
 
-image:sm-bcs-image39.png[""]
+image:sm-bcs-image39.png["マルチサイト ファブリックを介した、FlexPod サイト A および B にわたる VMware HA および vSphere Metro Storage Cluster を示す図"]
 
 
 
@@ -35,7 +35,7 @@ image:sm-bcs-image39.png[""]
 
 FlexPod SM-BC 解決策 には、各サイトに FlexPod インフラストラクチャ、サイト間のネットワーク接続、および 3 番目のサイトに導入された ONTAP メディエーターが含まれており、必要な RPO と RTO の目標を達成します。次の図に、各サイトの Cisco UCS B200M5 サーバと、サイト内およびサイト間の SM-BC 機能を備えたネットアップストレージとのエンドツーエンドのネットワーク接続を示します。
 
-image:sm-bcs-image40.png[""]
+image:sm-bcs-image40.png["Cisco UCS B200 M5サーバーとAFF A250ストレージがサイトAとBに配置され、NexusスイッチとサイトCのONTAP Mediatorを介して接続されていることを示す図"]
 
 FlexPod の導入アーキテクチャは、この解決策 検証で各サイトで同じです。ただし、解決策 は非対称型の導入をサポートしており、要件を満たす既存の FlexPod ソリューションに追加することもできます。
 
@@ -50,7 +50,7 @@ FlexPod の導入アーキテクチャは、この解決策 検証で各サイ�
 
 仮想スイッチ（ vSwitch 、 vDS ）は、仮想スイッチごとに 2 つのアップリンクで展開されます。 ESXi ハイパーバイザーレベルのアップリンクは、 Cisco UCS ソフトウェアでは vmnic および仮想 NIC （ vNIC ）と呼ばれます。vNIC は、 Cisco UCS サービスプロファイルを使用して、各サーバの Cisco UCS VIC アダプタ上に作成されます。次の図に示すように、 6 つの vNIC が定義され、 vSwitch0 に 2 つ、 vDS0 に 2 つ、 vSwitch1 に 2 つ、 iSCSI アップリンクに 2 つです。
 
-image:sm-bcs-image41.png[""]
+image:sm-bcs-image41.png["vSwitch0、vDS0、iSCSI-A、iSCSI-Bスイッチと6つのvNICアップリンクを示す図"]
 
 vSwitch0 は VMware ESXi ホストの設定中に定義され、管理用に FlexPod インフラ管理 VLAN と ESXi ホスト VMkernel （ VMK ）ポートが含まれています。インフラ管理仮想マシンポートグループも、必要な重要なインフラ管理仮想マシン用の vSwitch0 に配置されます。
 
@@ -71,13 +71,13 @@ VM とホストのアフィニティメカニズムを使用すると、 VM / �
 
 次のスクリーンショットは、サイト A とサイト B のホストおよび VM について、 2 つのホストグループと 2 つの VM グループが作成されたことを示しています
 
-image:sm-bcs-image42.png[""]
+image:sm-bcs-image42.png["サイトAとサイトBのホストとVMのVM/ホストグループを示す vSphere のスクリーンショット"]
 
 さらに、次の 2 つの図は、「グループ内のホストで実行する必要があります」ポリシーを使用して、サイト A およびサイト B の VM がそれぞれのサイトのホストで実行されるように作成された VM/ ホストルールを示しています。
 
-image:sm-bcs-image43.png[""]
+image:sm-bcs-image43.png["サイト A のホスト上でサイト A の VM を実行するように設定する「VM/ホストルールの編集」ダイアログのスクリーンショット"]
 
-image:sm-bcs-image44.png[""]
+image:sm-bcs-image44.png["サイト B の VM およびホストに対して「グループ内のホスト上で実行する必要がある」ポリシーが設定された「VM/ホストルールの編集」ダイアログのスクリーンショット"]
 
 
 
@@ -88,11 +88,11 @@ VMware vSphere HA は、ホストの状態を検証するためのハートビ�
 
 解決策 の検証では、 2 つの ONTAP クラスタ管理 IP アドレスを隔離アドレスとして使用します。また、次の図に示すように、推奨される vSphere HA の詳細オプション「 DS.heartbeatDsPerHost 」の値が 4 に追加されました。
 
-image:sm-bcs-image45.png[""]
+image:sm-bcs-image45.png["4つのハートビートデータストアと2つの分離アドレスが設定されたvSphere HAの詳細オプションのスクリーンショット"]
 
 ハートビートデータストアの場合、クラスタから 4 つの共有データストアを指定し、次の図に示すようにそれを補完します。
 
-image:sm-bcs-image46.png[""]
+image:sm-bcs-image46.png["4つのデータストアが選択されたvSphere HA ハートビートデータストア設定のスクリーンショット"]
 
 VMware HA Cluster および VMware vSphere メトロストレージクラスターのその他のベストプラクティスと構成については、 https://docs.vmware.com/en/VMware-vSphere/7.0/com.vmware.vsphere.avail.doc/GUID-5432CA24-14F1-44E3-87FB-61D937831CF6.html["vSphere HA クラスタを作成および使用する"^]、 https://core.vmware.com/resource/vmware-vsphere-metro-storage-cluster-vmsc["VMware vSphere Metro Storage Cluster （ vMSC ）"^]、および https://docs.netapp.com/us-en/netapp-solutions-virtualization/vmware/vmw-vmsc-with-smas.html["NetApp ONTAP と SnapMirror active sync （旧 SM-BC）および VMware vSphere Metro Storage Cluster （vMSC）"^]を参照してください。
 

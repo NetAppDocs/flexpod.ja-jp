@@ -26,7 +26,7 @@ NOTE: FlexPod Express では、 VMware vCenter Server Appliance （ VCSA ）を�
 
 . vCSA をダウンロードします。ESXi ホストの管理時に Get vCenter Server アイコンをクリックして、ダウンロードリンクにアクセスします。
 +
-image:express-c-series-aff220-deploy_image41.png[""]
+image:express-c-series-aff220-deploy_image41.png["VMware ESXi ホスト ページのスクリーンショット。「Get vCenter Server」ボタンがハイライト表示されています"]
 
 . vCSA を VMware サイトからダウンロードします。
 +
@@ -40,7 +40,7 @@ NOTE: インストール可能な Microsoft Windows vCenter Server がサポー�
 . エンドユーザライセンス契約に同意します。
 . 展開タイプとして、 Embedded Platform Services Controller を選択します。
 +
-image:express-c-series-aff220-deploy_image42.png[""]
+image:express-c-series-aff220-deploy_image42.png["Embedded Platform Services Controller が選択された状態での vCenter Server Appliance の展開タイプ選択のスクリーンショット"]
 
 +
 
@@ -48,19 +48,19 @@ NOTE: 必要に応じて、 FlexPod Express 解決策の一部として、外部
 
 . アプライアンス導入ターゲットで、導入した ESXi ホストの IP アドレス、および root ユーザ名と root パスワードを入力します。
 +
-image:express-c-series-aff220-deploy_image43.png[""]
+image:express-c-series-aff220-deploy_image43.png["vCenter Server アプライアンスのデプロイメントターゲットページのスクリーンショット（ESXi ホスト、ポート、root ユーザー、パスワードの各フィールドを含む）"]
 
 . VCSA を VM 名として「 VCSA 」に入力し、 VCSA に使用するルート・パスワードを設定します。
 +
-image:express-c-series-aff220-deploy_image44.png[""]
+image:express-c-series-aff220-deploy_image44.png["VM 名と root パスワードのフィールドを含むアプライアンス VM セットアップページのスクリーンショット"]
 
 . 環境に最も適した導入サイズを選択してください。次へをクリックします。
 +
-image:express-c-series-aff220-deploy_image45.png[""]
+image:express-c-series-aff220-deploy_image45.png["vCenter Server の展開サイズページのスクリーンショット（Tiny と Default ストレージが選択された状態）"]
 
 . infra_datastore_1 データストアを選択します。次へをクリックします。
 +
-image:express-c-series-aff220-deploy_image46.png[""]
+image:express-c-series-aff220-deploy_image46.png["vCenter Server インストーラーの「データストアの選択」ページで infra_datastore_1 が選択されているスクリーンショット"]
 
 . Configure network settings （ネットワーク設定の設定）ページで次の情報を入力し、 Next （次へ）をクリックします。
 +
@@ -74,7 +74,7 @@ image:express-c-series-aff220-deploy_image46.png[""]
 
 . 「ステージ 1 を完了する準備ができました」ページで、入力した設定が正しいことを確認します。完了をクリックします。
 +
-image:express-c-series-aff220-deploy_image47.png[""]
+image:express-c-series-aff220-deploy_image47.png["vCenter Server Appliance インストーラーの静的 IPv4 フィールドが入力されたネットワーク設定の構成画面のスクリーンショット"]
 
 +
 vCSA がインストールされます。このプロセスには数分かかります。
@@ -82,7 +82,7 @@ vCSA がインストールされます。このプロセスには数分かかり
 . ステージ 1 が完了すると、完了したことを示すメッセージが表示されます。「続行」をクリックしてステージ 2 の設定を開始します。
 . 「ステージ 2 の紹介」ページで、「次へ」をクリックします。
 +
-image:express-c-series-aff220-deploy_image48.png[""]
+image:express-c-series-aff220-deploy_image48.png["vCenter Server Appliance のステージ 2 の概要ページのスクリーンショット（「次へ」ボタン付き）"]
 
 . NTP サーバのアドレスとして「 \\<<var_ntp_id>> 」と入力します。複数の NTP IP アドレスを入力できます。
 +

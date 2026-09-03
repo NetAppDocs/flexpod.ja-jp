@@ -23,7 +23,7 @@ NOTE: バケットは、 OnCommand システムマネージャ、 OnCommand Unif
 
 ストレージアーキテクチャを計画する際は、バケットとアグリゲートの関係がパフォーマンスにどのように影響するかを検討してください。多くのオブジェクトストレージプロバイダは、サポートされる IOPS の最大数をバケットレベルまたはコンテナレベルで設定しています。最大のパフォーマンスを必要とする環境では、複数のバケットを使用して、オブジェクトストレージの IOPS 制限が複数の FabricPool アグリゲートのパフォーマンスに影響する可能性を軽減する必要があります。クラスタ内のすべての FabricPool アグリゲートに単一のバケットまたはコンテナを接続すると、クラウド階層のパフォーマンスよりも管理性の高い環境が有利になることがあります。
 
-image:cloud-fabricpool_image10.png[""]
+image:cloud-fabricpool_image10.png["有効および無効な FabricPool アグリゲートとバケットのアタッチメント構成を示す図"]
 
 
 
@@ -33,12 +33,12 @@ image:cloud-fabricpool_image10.png[""]
 . ホームページから AWS 管理コンソールの検索バーに「 S3 」と入力します。
 . クラウドで S3 Scalable Storage を選択します。
 +
-image:cloud-fabricpool_image11.png[""]
+image:cloud-fabricpool_image11.png["AWS コンソールの検索画面のスクリーンショット。クラウド内の S3 スケーラブルストレージの結果がハイライト表示されている。"]
 
 . S3 ホームページで、バケットの作成を選択します。
 . DNS 準拠の名前を入力し、バケットを作成するリージョンを選択します。
 +
-image:cloud-fabricpool_image12.png[""]
+image:cloud-fabricpool_image12.png["AWSのバケット作成ダイアログのスクリーンショット（バケット名、リージョン、作成ボタンを含む）"]
 
 . Create をクリックしてオブジェクトストアバケットを作成します。
 

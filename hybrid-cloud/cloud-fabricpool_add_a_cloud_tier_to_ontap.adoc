@@ -45,7 +45,7 @@ Container Name フィールドに、オブジェクトストアのバケット�
 . アグリゲートを保存して接続をクリックします。
 
 
-image:cloud-fabricpool_image13.png[""]
+image:cloud-fabricpool_image13.png["Amazon S3 クラウド層プロバイダー向けに設定されたクラウド層の追加フォームのスクリーンショット"]
 
 
 

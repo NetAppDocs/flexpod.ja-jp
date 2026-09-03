@@ -13,7 +13,7 @@ FlexPod Express は、混在仮想化ワークロードを実行するように�
 
 次の図に、 FlexPod Express 解決策に含まれるハードウェアコンポーネントを示します。
 
-image:express-c-series-aff220-design_image3.png[""]
+image:express-c-series-aff220-design_image3.png["FlexPod Express ストレージ、スイッチング、およびコンピューティングハードウェアファミリと構成オプションを示す図"]
 
 
 
@@ -29,7 +29,7 @@ image:express-c-series-aff220-design_image3.png[""]
 
 この解決策は、ネットアップ、 Cisco 、 VMware の最新テクノロジを活用しています。この解決策には、 ONTAP 9.4 ソフトウェア、デュアル Cisco Nexus 3172P スイッチ、 VMware vSphere 6.7 を実行する Cisco UCS C220 M5 ラックサーバを実行する新しい NetApp AFF A220 システムが搭載されています。この検証済み解決策では、 10 ギガビットイーサネット（ 10GbE ）テクノロジを使用しています。次の図は概要を示しています。また、 FlexPod Express アーキテクチャが組織の進化するビジネスニーズに適応できるように、 2 つのハイパーバイザーノードを一度に追加して拡張する方法についても説明します。
 
-image:express-c-series-aff220-design_image4.png[""]
+image:express-c-series-aff220-design_image4.png["Cisco Nexus 3172P スイッチ、UCS C220 M5 サーバー、および AFF A220 ストレージ接続を示す図"]
 
 
 NOTE: 40GbE は検証されていませんが、サポートされるインフラです。

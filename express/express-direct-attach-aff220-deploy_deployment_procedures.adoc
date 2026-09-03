@@ -1653,7 +1653,7 @@ Cisco UCS 環境で帯域内サーバのキーボード、ビデオ、マウス�
 . [IP Pool ext-mgmt] を右クリックし、 [Create Block of IPv4 Addresses] を選択します。
 . ブロックの開始 IP アドレス、必要な IP アドレスの数、およびサブネットマスクとゲートウェイの情報を入力します。
 +
-image:express-direct-attach-aff220-deploy_image7.png[""]
+image:express-direct-attach-aff220-deploy_image7.png["IPv4アドレスブロックの作成ダイアログのスクリーンショット（IPアドレス、サブネット、ゲートウェイ、DNSフィールドを含む）"]
 
 . [OK] をクリックして、ブロックを作成する。
 . 確認メッセージで [OK] をクリックします。
@@ -1674,12 +1674,12 @@ Cisco UCS 環境を Nexus スイッチの NTP サーバと同期させるには�
 . Add NTP Server をクリックします。
 . 「 <switch-a-ntp-ip> 」または「 <nexus-a-mgmt-ip>` 」と入力し、 [OK] をクリックします。[OK] をクリックします。
 +
-image:express-direct-attach-aff220-deploy_image8.png[""]
+image:express-direct-attach-aff220-deploy_image8.png["NTPサーバーを10.1.156.4に設定した「NTPサーバーの追加」ダイアログのスクリーンショット"]
 
 . Add NTP Server をクリックします。
 . 「 <switch-b-ntp-ip>`` 」または「 <nexus-B-mgmt-ip>` 」と入力し、 [OK] をクリックします。確認の [OK] をクリックします。
 +
-image:express-direct-attach-aff220-deploy_image9.png[""]
+image:express-direct-attach-aff220-deploy_image9.png["Cisco UCS Manager のNTP設定のスクリーンショット。2つのNTPサーバーがリストされ、タイムゾーンとしてAmerica/New_Yorkが選択されています。"]
 
 
 
@@ -1717,7 +1717,7 @@ image:express-direct-attach-aff220-deploy_image9.png[""]
 . 左側のペインで、 Fabric Interconnect A の Fixed Module を選択します 
 . [Ethernet Ports] タブで、 [If Role] カラムにポートが正しく設定されていることを確認します。スケーラビリティポートにポート C シリーズサーバが設定されている場合は、そのサーバをクリックしてポート接続を確認します。
 +
-image:express-direct-attach-aff220-deploy_image10.png[""]
+image:express-direct-attach-aff220-deploy_image10.png["アップリンクとアプライアンスストレージの役割が構成された Fabric Interconnect A の Ethernet ポートを示すスクリーンショット"]
 
 . Equipment > Fabric Interconnects > Fabric Interconnect B > Fixed Module の順に展開します。
 . [Ethernet ポート ] を展開します。
@@ -1730,7 +1730,7 @@ image:express-direct-attach-aff220-deploy_image10.png[""]
 . 左側のペインで、 Fabric Interconnect B の Fixed Module を選択します 
 . [Ethernet Ports] タブで、 [If Role] カラムにポートが正しく設定されていることを確認します。スケーラビリティポートにポート C シリーズサーバが設定されている場合は、そのサーバをクリックしてポート接続を確認します。
 +
-image:express-direct-attach-aff220-deploy_image11.png[""]
+image:express-direct-attach-aff220-deploy_image11.png["ネットワークおよびアプライアンス ストレージのロールが設定されたFabric Interconnect BのEthernetポートを示すスクリーンショット"]
 
 
 
@@ -1753,7 +1753,7 @@ NOTE: この手順では、 2 つのポートチャネルが作成されます�
 . ポートチャネルの名前として「 vPC-13-Nexus 」と入力します。
 . 次へをクリックします。
 +
-image:express-direct-attach-aff220-deploy_image12.png[""]
+image:express-direct-attach-aff220-deploy_image12.png["ID 1、名前 vPC-13-Nexus を入力した「ポートチャネルの作成」ダイアログのスクリーンショット"]
 
 . ポートチャネルに追加する次のポートを選択します。
 +
@@ -1818,7 +1818,7 @@ Cisco UCS 環境で組織を設定するには、次の手順を実行します�
 . VLAN ID として「 \<<var_nfs_vlan_id>> 」と入力します。
 . [ 共有タイプ ] は [ なし ] のままにします。
 +
-image:express-direct-attach-aff220-deploy_image13.jpeg[""]
+image:express-direct-attach-aff220-deploy_image13.jpeg["NFS-VLANとVLAN ID 3170が入力されたVLAN作成ダイアログのスクリーンショット"]
 
 . [OK] をクリックし、もう一度 [OK] をクリックして VLAN を作成します。
 . アプライアンスクラウドの下の VLAN を右クリックします。
@@ -1840,14 +1840,14 @@ image:express-direct-attach-aff220-deploy_image13.jpeg[""]
 . VLAN ID として「 \<<var_native_vlan_id>> 」と入力します。
 . [OK] をクリックし、もう一度 [OK] をクリックして VLAN を作成します。
 +
-image:express-direct-attach-aff220-deploy_image14.png[""]
+image:express-direct-attach-aff220-deploy_image14.png["Cisco UCS Manager の VLAN 名と ID を含む VLAN テーブルを示すスクリーンショット"]
 
 . ナビゲーションペインで、 [LAN] > [Policies] の下の [Appliances] を展開し、 [Network Control Policies] を右クリックします。
 . Create Network Control Policy を選択します。
 . ポリシーに「 Enable_cdp_LLPD 」という名前を付け、 CDP の横にある [ 有効 ] を選択します。
 . LLDP の送受信機能を有効にします。
 +
-image:express-direct-attach-aff220-deploy_image15.png[""]
+image:express-direct-attach-aff220-deploy_image15.png["CDP と LLDP の送受信が有効になっている Enable_CDP ネットワーク制御ポリシーを示すスクリーンショット"]
 
 . [OK] をクリックし、もう一度 [OK] をクリックしてポリシーを作成します。
 . ナビゲーションペインの [LAN] > [Appliances Cloud] で、 [Fabric A tree] を展開します。
@@ -1858,7 +1858,7 @@ image:express-direct-attach-aff220-deploy_image15.png[""]
 . [VLANs] で、 iSCSI-A VLAN 、 NFS VLAN 、およびネイティブ VLAN を選択します。ネイティブ VLAN をネイティブ VLAN として設定します。デフォルトの VLAN 選択をクリアします。
 . [ 変更を保存して OK ] をクリックします。
 +
-image:express-direct-attach-aff220-deploy_image16.png[""]
+image:express-direct-attach-aff220-deploy_image16.png["CDPが有効でストレージVLANが選択されているアプライアンスインターフェイス1/3のプロパティのスクリーンショット"]
 
 . [Fabric A] の下にある [Appliance Interface] 1/4 を選択します
 . [User Label] フィールドに、「 <storage_controller_02_name> ： e0e 」など、ストレージコントローラポートを示す情報を入力します。[ 変更を保存して OK ] をクリックします。
@@ -1874,7 +1874,7 @@ image:express-direct-attach-aff220-deploy_image16.png[""]
 . Enable_CDP Network Control Policy を選択し、 Save Changes and OK を選択します。
 . [VLANs] で、 [iSCSI-B-VLAN] 、 [NFS VLAN] 、および [ ネイティブ VLAN] を選択します。ネイティブ VLAN をネイティブ VLAN として設定します。デフォルト VLAN の選択を解除します。
 +
-image:express-direct-attach-aff220-deploy_image17.png[""]
+image:express-direct-attach-aff220-deploy_image17.png["アプライアンスインターフェイス1/3のVLAN設定でiSCSI-B、NFS、およびネイティブVLANが選択されているスクリーンショット"]
 
 . [ 変更を保存して OK ] をクリックします。
 . [Fabric B] の下にある [Appliance Interface] 1/4 を選択します
@@ -1896,7 +1896,7 @@ Cisco UCS ファブリックでジャンボフレームを設定して QoS を�
 . 右側のペインで、 [ 全般 ] タブをクリックします。
 . [ ベストエフォート ] 行で、 [MTU] 列の下のボックスに 9216 と入力します。
 +
-image:express-direct-attach-aff220-deploy_image18.png[""]
+image:express-direct-attach-aff220-deploy_image18.png["Cisco UCS Manager QoS システムクラス設定のスクリーンショット（ベストエフォート MTU を 9216 に設定）"]
 
 . [Save Changes] をクリックします。
 . [OK] をクリックします。
@@ -1939,7 +1939,7 @@ Cisco UCS 環境で特定のサーバ設定のファームウェア管理ポリ�
 . アクションペインで、パッケージバージョンの変更を選択します。
 . 両方のブレードパッケージのバージョン 4.0(1b) を選択します。
 +
-image:express-direct-attach-aff220-deploy_image19.png[""]
+image:express-direct-attach-aff220-deploy_image19.png["Blade Package 4.0(1b)B が選択された状態の「パッケージバージョンの変更」ダイアログのスクリーンショット"]
 
 . [OK] をクリックし、もう一度 [OK] をクリックして、ホストファームウェアパッケージを変更します。
 
@@ -1969,7 +1969,7 @@ NOTE: FlexPod 解決策では、開始 MAC アドレスの最後のオクテッ�
 
 . 使用可能なブレードまたはサーバリソースをサポートするのに十分な MAC アドレスプールのサイズを指定します。[OK] をクリックします。
 +
-image:express-direct-attach-aff220-deploy_image20.png[""]
+image:express-direct-attach-aff220-deploy_image20.png["MACアドレス 00:25:B5:32:0A:00、サイズ 64 の「MACアドレスブロックの作成」ダイアログのスクリーンショット"]
 
 . 完了をクリックします。
 . 確認メッセージが表示されたら、 [OK] をクリックします。
@@ -2013,7 +2013,7 @@ NOTE: 複数の Cisco UCS ドメインを使用している場合は、さらに
 . [From] フィールドに 1 を入力します。
 . 使用可能なサーバリソースを十分にサポートできる IQN ブロックのサイズを指定してください。[OK] をクリックします。
 +
-image:express-direct-attach-aff220-deploy_image21.png[""]
+image:express-direct-attach-aff220-deploy_image21.png["「IQNサフィックスのブロックを作成」ダイアログのスクリーンショット（サフィックス：ucs-host、開始番号：1、サイズ：16）"]
 
 . 完了をクリックします。
 
@@ -2109,7 +2109,7 @@ Cisco Discovery Protocol （ CDP ）および Link Layer Discovery Protocol （ 
 . LLDP の場合は、下にスクロールして、送信と受信の両方で有効を選択します。
 . [OK] をクリックして、ネットワーク制御ポリシーを作成します。[OK] をクリックします。
 +
-image:express-direct-attach-aff220-deploy_image22.png[""]
+image:express-direct-attach-aff220-deploy_image22.png["CDP と LLDP が有効になっている「ネットワーク制御ポリシーの作成」ダイアログのスクリーンショット"]
 
 
 
@@ -2128,7 +2128,7 @@ Cisco UCS 環境の電源制御ポリシーを作成するには、次の手順�
 . 電力上限設定を [No Cap]( キャップなし ) に変更します
 . [OK] をクリックして、電源制御ポリシーを作成します。[OK] をクリックします。
 +
-image:express-direct-attach-aff220-deploy_image23.png[""]
+image:express-direct-attach-aff220-deploy_image23.png["「電力制御ポリシーの作成」ダイアログで「No-Power-Cap」と「No Cap」が選択されている状態のスクリーンショット"]
 
 
 
@@ -2153,7 +2153,7 @@ NOTE: この例では、 Intel E2660 v4 Xeon Broadwell プロセッサを搭載�
 . [OK] をクリックして、 CPU/ コアの資格情報を作成します。
 . [OK] をクリックしてポリシーを作成し、 [OK] をクリックして確認します。
 +
-image:express-direct-attach-aff220-deploy_image24.png[""]
+image:express-direct-attach-aff220-deploy_image24.png["Cisco UCS Manager の「CPU/コア認定の作成」ダイアログのスクリーンショット（Xeon プロセッサアーキテクチャと CPU PID フィールドを含む）"]
 
 
 
@@ -2172,7 +2172,7 @@ Cisco UCS 環境のサーバ BIOS ポリシーを作成するには、次の手�
 . Quiet Boot 設定を disabled に変更します。
 . 一貫したデバイス名を有効に変更します。
 +
-image:express-direct-attach-aff220-deploy_image25.png[""]
+image:express-direct-attach-aff220-deploy_image25.png["VM ホスト名と一貫性のあるデバイス命名が有効になっている BIOS ポリシー作成ダイアログのスクリーンショット"]
 
 . [ プロセッサ ] タブを選択し、次のパラメータを設定します。
 +
@@ -2181,7 +2181,7 @@ image:express-direct-attach-aff220-deploy_image25.png[""]
 ** プロセッサ C3 レポート : 無効
 ** プロセッサ C7 レポート：無効
 +
-image:express-direct-attach-aff220-deploy_image26.png[""]
+image:express-direct-attach-aff220-deploy_image26.png["プロセッサ C ステートと C1E が無効になっている BIOS ポリシーの作成プロセッサタブのスクリーンショット"]
 
 
 
@@ -2191,7 +2191,7 @@ image:express-direct-attach-aff220-deploy_image26.png[""]
 ** 周波数下限のオーバーライド：有効
 ** DRAM Clock Throttling ：パフォーマンス
 +
-image:express-direct-attach-aff220-deploy_image27.png[""]
+image:express-direct-attach-aff220-deploy_image27.png["Energy Performance と DRAM Clock Throttling がパフォーマンスに設定された BIOS プロセッサオプションを示すスクリーンショット"]
 
 
 
@@ -2199,7 +2199,7 @@ image:express-direct-attach-aff220-deploy_image27.png[""]
 +
 ** LV DDR モード：パフォーマンスモード
 +
-image:express-direct-attach-aff220-deploy_image28.png[""]
+image:express-direct-attach-aff220-deploy_image28.png["LV DDR モードをパフォーマンスモードに設定した「BIOS ポリシー RAS メモリの作成」ページのスクリーンショット"]
 
 
 
@@ -2220,7 +2220,7 @@ image:express-direct-attach-aff220-deploy_image28.png[""]
 . Reboot Policy を User Ack に変更します
 . [ 次のブート時 ] を選択して、メンテナンス時間をサーバー管理者に委任します。
 +
-image:express-direct-attach-aff220-deploy_image29.png[""]
+image:express-direct-attach-aff220-deploy_image29.png["User Ack と On Next Boot が選択された Cisco UCS Manager のデフォルトメンテナンスポリシーのスクリーンショット"]
 
 . [Save Changes] をクリックします。
 . [OK] をクリックして変更を確定します。
@@ -2264,7 +2264,7 @@ NOTE: 合計 4 つの vNIC テンプレートが作成されます。
 . [OK] をクリックして、 vNIC テンプレートを作成します。
 . [OK] をクリックします。
 +
-image:express-direct-attach-aff220-deploy_image30.png[""]
+image:express-direct-attach-aff220-deploy_image30.png["Fabric A 上の vNIC_Template_A の Cisco UCS Manager vNIC テンプレートプロパティのスクリーンショット"]
 
 
 
@@ -2296,7 +2296,7 @@ NOTE: フェールオーバーを選択することは、ハードウェアレ�
 . [OK] をクリックして、 vNIC テンプレートを作成します。
 . [OK] をクリックします。
 +
-image:express-direct-attach-aff220-deploy_image31.png[""]
+image:express-direct-attach-aff220-deploy_image31.png["Cisco UCS Manager vNIC テンプレート B の設定（ファブリック B、MTU 9000、MAC プール B を選択）のスクリーンショット"]
 
 
 
@@ -2324,7 +2324,7 @@ iSCSI vNIC を作成するには、次の手順を実行します。
 . [OK] をクリックして、 vNIC テンプレートの作成を完了します。
 . [OK] をクリックします。
 +
-image:express-direct-attach-aff220-deploy_image32.png[""]
+image:express-direct-attach-aff220-deploy_image32.png["Site_01_iSCSI-A vNIC テンプレートのスクリーンショット（Fabric A、MTU 9000、および MAC Pool A56/64 を選択）"]
 
 . 左側の [LAN] を選択します。
 . [ ポリシー ]>[ ルート ] を選択します。
@@ -2344,7 +2344,7 @@ image:express-direct-attach-aff220-deploy_image32.png[""]
 . [OK] をクリックして、 vNIC テンプレートの作成を完了します。
 . [OK] をクリックします。
 +
-image:express-direct-attach-aff220-deploy_image33.png[""]
+image:express-direct-attach-aff220-deploy_image33.png["Fabric B、MTU 9000 の Cisco UCS Manager vNIC テンプレート Site_01_iSCSI-B 設定のスクリーンショット"]
 
 
 
@@ -2369,7 +2369,7 @@ image:express-direct-attach-aff220-deploy_image33.png[""]
 . [Adapter Policy] ドロップダウンリストから [VMware] を選択します。
 . [OK] をクリックして、この vNIC をポリシーに追加します。
 +
-image:express-direct-attach-aff220-deploy_image34.png[""]
+image:express-direct-attach-aff220-deploy_image34.png["vNIC_Template_A と VMware アダプタポリシーを使用した Site-01-vNIC-A の vNIC 変更ダイアログを示すスクリーンショット"]
 
 . vNIC を追加するには、上部の Add オプションをクリックします。
 . [Create vNIC] ダイアログボックスで、 vNIC の名前として「 S`it-01-vNIC-B` 」と入力します。
@@ -2398,7 +2398,7 @@ image:express-direct-attach-aff220-deploy_image34.png[""]
 . MAC アドレスの割り当てとして、 None （なし）（デフォルトで使用）を選択します。
 . [OK] をクリックして、 iSCSI vNIC をポリシーに追加します。
 +
-image:express-direct-attach-aff220-deploy_image35.png[""]
+image:express-direct-attach-aff220-deploy_image35.png["Site-01-iSCSI-A の VLAN および MAC アドレス設定を含む iSCSI vNIC の変更ダイアログのスクリーンショット"]
 
 . [Add iSCSI vNICs] スペースの下側の [Add] オプションをクリックして、 iSCSI vNIC を追加します。
 . [Create iSCSI vNIC] ダイアログボックスで、 vNIC の名前として「 `Site-01-iSCSI-B 」を入力します。
@@ -2409,7 +2409,7 @@ image:express-direct-attach-aff220-deploy_image35.png[""]
 . [OK] をクリックして、 iSCSI vNIC をポリシーに追加します。
 . [Save Changes] をクリックします。
 +
-image:express-direct-attach-aff220-deploy_image36.png[""]
+image:express-direct-attach-aff220-deploy_image36.png["Site-01-iSCSIBoot LAN接続ポリシーに2つのiSCSI vNICが表示されたスクリーンショット"]
 
 
 
@@ -2446,7 +2446,7 @@ NOTE: DNS サーバの IP は KVM IP に入力されていなかったため、�
 Cisco UCS 環境に追加された新しいサーバでは、 vMedia サービスプロファイルテンプレートを使用して ESXi ホストをインストールできます。SAN でマウントされたディスクが空の場合、初回ブート時に ESXi インストーラでホストがブートします。ESXi のインストール後、起動ディスクがアクセス可能である限り、 vMedia は参照されません。
 
 +
-image:express-direct-attach-aff220-deploy_image37.png[""]
+image:express-direct-attach-aff220-deploy_image37.png["HTTP ESXiインストーラーISOリモートファイルとパスで設定されたvMediaマウントダイアログの作成のスクリーンショット"]
 
 
 
@@ -2477,7 +2477,7 @@ Cisco UCS 環境のブートポリシーを作成するには、次の手順を�
 . [Add iSCSI Boot] ダイアログボックスに「 'Site-01-iSCSI-B' 」と入力します。[OK] をクリックします。
 . [OK] をクリックして、ポリシーを作成します。
 +
-image:express-direct-attach-aff220-deploy_image38.png[""]
+image:express-direct-attach-aff220-deploy_image38.png["2つのiSCSIブートエントリが設定されたCisco UCS Manager ブートポリシー「Site-01-Fabric-A」のスクリーンショット"]
 
 
 
@@ -2498,7 +2498,7 @@ image:express-direct-attach-aff220-deploy_image38.png[""]
 . [ テンプレートの更新 ] オプションを選択します。
 . [UUID] で、 [UUID_Pool] を UUID プールとして選択します。次へをクリックします。
 +
-image:express-direct-attach-aff220-deploy_image39.png[""]
+image:express-direct-attach-aff220-deploy_image39.png["サービスプロファイルテンプレートの作成ウィザードのスクリーンショット（名前、更新テンプレート、UUID プールフィールドが表示されています）"]
 
 
 
@@ -2523,7 +2523,7 @@ image:express-direct-attach-aff220-deploy_image39.png[""]
 . [LAN Connectivity Policy] ドロップダウンメニューから [iSCSI-Boot] を選択します。
 . [ イニシエータ名の割り当て ] で [IQN_Pool] を選択します次へをクリックします。
 +
-image:express-direct-attach-aff220-deploy_image40.png[""]
+image:express-direct-attach-aff220-deploy_image40.png["iSCSI-Boot接続とIQN_Poolが選択された状態でのサービスプロファイルテンプレートのネットワーク設定の作成のスクリーンショット"]
 
 
 
@@ -2571,7 +2571,7 @@ vMedia ポリシーを設定するには、次の手順を実行します。
 
 . ブート・ポリシーに [Boot - Fabric-a] を選択します
 +
-image:express-direct-attach-aff220-deploy_image41.png[""]
+image:express-direct-attach-aff220-deploy_image41.png["Boot-Fabric-A が選択された状態の「サービスプロファイルテンプレートの作成」サーバブート順序ページのスクリーンショット"]
 
 . Boor 注文で、「ライト -01-iSCSI-A 」を選択します。
 . iSCSI 起動パラメータの設定をクリックします。
@@ -2582,22 +2582,22 @@ image:express-direct-attach-aff220-deploy_image41.png[""]
 . 追加をクリックします。
 . iSCSI ターゲット名を入力します。Infra-SVM の iSCSI ターゲット名を取得するには ' ストレージ・クラスタ管理インタフェースにログインして 'iSCSI show コマンドを実行します
 +
-image:express-direct-attach-aff220-deploy_image42.png[""]
+image:express-direct-attach-aff220-deploy_image42.png["Infra-SVMターゲットのIQN、エイリアス、および稼働状況が一覧表示されたiscsi showコマンド出力のスクリーンショット"]
 
 . IPv4 Address フィールドに「 iSCSI_LIF_02a 」の IP アドレスを入力します。
 +
-image:express-direct-attach-aff220-deploy_image43.png[""]
+image:express-direct-attach-aff220-deploy_image43.png["IPv4アドレス192.168.10.62が入力された「iSCSI静的ターゲットの作成」ダイアログのスクリーンショット"]
 
 . OK をクリックして、 iSCSI 静的ターゲットを追加します。
 . 追加をクリックします。
 . iSCSI ターゲット名を入力します。
 . IPv4 Address フィールドに 'iSCSI_LIF_01a' の IP アドレスを入力します
 +
-image:express-direct-attach-aff220-deploy_image44.png[""]
+image:express-direct-attach-aff220-deploy_image44.png["IPv4アドレス192.168.10.61およびLUN ID 0を指定したiSCSI静的ターゲットの作成ダイアログのスクリーンショット"]
 
 . OK をクリックして、 iSCSI 静的ターゲットを追加します。
 +
-image:express-direct-attach-aff220-deploy_image45.png[""]
+image:express-direct-attach-aff220-deploy_image45.png["iSCSI 静的ターゲット インターフェイスを選択した状態での「iSCSI ブート パラメーターの設定」ダイアログのスクリーンショット"]
 
 +
 
@@ -2612,22 +2612,22 @@ NOTE: ストレージノード 02 の IP を最初に、ストレージノード
 . 追加をクリックします。
 . iSCSI ターゲット名を入力します。Infra-SVM の iSCSI ターゲット名を取得するには ' ストレージ・クラスタ管理インタフェースにログインして 'iSCSI show コマンドを実行します
 +
-image:express-direct-attach-aff220-deploy_image42.png[""]
+image:express-direct-attach-aff220-deploy_image42.png["Infra-SVMターゲットのIQN、エイリアス、および稼働状況が一覧表示されたiscsi showコマンド出力のスクリーンショット"]
 
 . IPv4 Address フィールドに 'iSCSI_LIF_02b' の IP アドレスを入力します
 +
-image:express-direct-attach-aff220-deploy_image46.png[""]
+image:express-direct-attach-aff220-deploy_image46.png["IPv4アドレスを192.168.20.62に設定したiSCSI静的ターゲットの作成ダイアログのスクリーンショット"]
 
 . OK をクリックして、 iSCSI 静的ターゲットを追加します。
 . 追加をクリックします。
 . iSCSI ターゲット名を入力します。
 . IPv4 Address フィールドに 'iSCSI_LIF_01b' の IP アドレスを入力します
 +
-image:express-direct-attach-aff220-deploy_image47.png[""]
+image:express-direct-attach-aff220-deploy_image47.png["IPv4アドレス192.168.20.61およびLUN ID 0を指定したiSCSI静的ターゲットの作成ダイアログのスクリーンショット"]
 
 . OK をクリックして、 iSCSI 静的ターゲットを追加します。
 +
-image:express-direct-attach-aff220-deploy_image48.png[""]
+image:express-direct-attach-aff220-deploy_image48.png["「iSCSIブートパラメータの設定」で2つのiSCSIスタティックターゲットインターフェイスが選択されていることを示すスクリーンショット"]
 
 . 次へをクリックします。
 
@@ -2640,7 +2640,7 @@ image:express-direct-attach-aff220-deploy_image48.png[""]
 
 . メンテナンスポリシーをデフォルトに変更します。
 +
-image:express-direct-attach-aff220-deploy_image49.png[""]
+image:express-direct-attach-aff220-deploy_image49.png["デフォルトポリシーを選択した状態での「サービスプロファイルテンプレート保守ポリシーの作成」ステップのスクリーンショット"]
 
 . 次へをクリックします。
 
@@ -2655,7 +2655,7 @@ image:express-direct-attach-aff220-deploy_image49.png[""]
 . プロファイルがサーバーに関連付けられている場合に適用する電源状態として、 ［ Down ］ を選択します。
 . ページ下部のファームウェア管理を展開し、デフォルトポリシーを選択します。
 +
-image:express-direct-attach-aff220-deploy_image50.png[""]
+image:express-direct-attach-aff220-deploy_image50.png["Infra-Pool、Down電源状態、およびデフォルトのファームウェアパッケージが選択された状態の「Create Service Profile Template Server Assignment」のスクリーンショット"]
 
 . 次へをクリックします。
 
@@ -2669,7 +2669,7 @@ image:express-direct-attach-aff220-deploy_image50.png[""]
 . BIOS Policy ドロップダウンリストから VM-Host を選択します。
 . Power Control Policy Configuration （電源制御ポリシーの設定）を展開し、 Power Control Policy （電源制御ポリシー）ドロップダウンリストから No-Power-Cap （電源なし - 電力上限）を選択します。
 +
-image:express-direct-attach-aff220-deploy_image51.png[""]
+image:express-direct-attach-aff220-deploy_image51.png["VM-Host BIOSとNo-Power-Capが選択された状態の「サービスプロファイルテンプレートの作成」運用ポリシーページのスクリーンショット"]
 
 . [ 完了 ] をクリックして、サービスプロファイルテンプレートを作成します。
 . 確認メッセージで [OK] をクリックします。
@@ -2708,7 +2708,7 @@ vMedia を有効にしてサービスプロファイルテンプレートを作�
 .. ルートを組織として選択します。
 .. [OK] をクリックして、サービスプロファイルを作成します。
 +
-image:express-direct-attach-aff220-deploy_image52.png[""]
+image:express-direct-attach-aff220-deploy_image52.png["プレフィックス Site-01-Infra-0、番号 2、ルート組織を持つ「テンプレートからサービスプロファイルを作成」ダイアログのスクリーンショット"]
 
 
 
@@ -2867,7 +2867,7 @@ ESXi ホスト VM-Host-Infra-01 と VM-Host-Infra-02
 . [ ハードウェアラベル ] フィールドの番号が [ デバイス名 ] フィールドの番号と一致していることを確認します。
 . Enter キーを押します。
 +
-image:express-direct-attach-aff220-deploy_image53.png[""]
+image:express-direct-attach-aff220-deploy_image53.png["vmnic0とvmnic1が選択され接続されているESXiネットワークアダプタ画面のスクリーンショット"]
 
 . VLAN （オプション）オプションを選択し、 Enter キーを押します。
 . 「 <ib-mgmt-vlan-id> 」を入力し、 Enter キーを押します。
@@ -3054,11 +3054,11 @@ NOTE: IP アドレスの競合を避けるため、 Cisco UCS iSCSI IP プール
 . Create をクリックします。 .
 . 仮想スイッチタブを選択して、 vSwitch0 を選択します。vSwitch0 VMkernel NIC のプロパティは、次の例のように設定します。
 +
-image:express-direct-attach-aff220-deploy_image54.png[""]
+image:express-direct-attach-aff220-deploy_image54.png["VMkernelアダプタと2つの物理アダプタを含むvSwitch0の詳細とトポロジーを示すスクリーンショット"]
 
 . [VMkernel NICs] タブを選択して、設定済みの仮想アダプタを確認します。次の例のようなアダプタが表示されます。
 +
-image:express-direct-attach-aff220-deploy_image55.png[""]
+image:express-direct-attach-aff220-deploy_image55.png["ESXi VMkernel NICタブに5つのVMkernelアダプタとそのポートグループが一覧表示されているスクリーンショット"]
 
 
 
@@ -3074,14 +3074,14 @@ ESXi ホスト VM-Host-Infra-01 および VM-Host-Infra-02 で iSCSI マルチ�
 . 中央のペインで、 [ アダプタ ] をクリックします。
 . iSCSI ソフトウェアアダプタを選択し、 Configure iSCSI （ iSCSI の設定）をクリックします。
 +
-image:express-direct-attach-aff220-deploy_image56.png[""]
+image:express-direct-attach-aff220-deploy_image56.png["iSCSIソフトウェアアダプタ vmhba64 が選択された ESXi のストレージアダプタタブのスクリーンショット"]
 
 . [ 動的ターゲット ] で、 [ 動的ターゲットの追加 ] をクリックします。
 . IP アドレスに「 iscsi_dlif01a 」と入力します。
 . これらの IP アドレスの入力を繰り返します： 'iSCSI_lif01b'iSCSI_lif02a'iSCSI_lif02b'
 . [Save Configuration] をクリックします。
 +
-image:express-direct-attach-aff220-deploy_image57.png[""]
+image:express-direct-attach-aff220-deploy_image57.png["ポート3260上の4つの動的および静的iSCSIターゲットを示すiSCSI設定ダイアログのスクリーンショット"]
 
 +
 「 iscsi_lif 」の IP アドレスをすべて取得するには、 NetApp ストレージ・クラスタ管理インターフェイスにログインし、「 network interface show 」コマンドを実行します。
@@ -3105,7 +3105,7 @@ ESXi は VM-Host-Infra-01 と VM-Host-Infra-02 をホストします
 . 中央のペインで、 New Datastore （新規データストア）を選択して新しいデータストアを追加します。
 . [ 新規データストア ] ダイアログボックスで、 [ NFS データストアのマウント ] を選択し、 [ 次へ ] をクリックします。
 +
-image:express-direct-attach-aff220-deploy_image58.png[""]
+image:express-direct-attach-aff220-deploy_image58.png["新規データストアウィザードで作成タイプとして「マウント NFS データストア」が選択されているスクリーンショット"]
 
 . [Provide NFS Mount Details] ページで、次の手順を実行します。
 +
@@ -3115,7 +3115,7 @@ image:express-direct-attach-aff220-deploy_image58.png[""]
 .. NFS のバージョンは NFS 3 のままにします。
 .. 次へをクリックします。
 +
-image:express-direct-attach-aff220-deploy_image59.png[""]
+image:express-direct-attach-aff220-deploy_image59.png["infra_datastore_1 および NFSサーバ 192.168.104.3 を使用した「NFS マウントの詳細を入力」ページのスクリーンショット"]
 
 
 
@@ -3133,7 +3133,7 @@ image:express-direct-attach-aff220-deploy_image59.png[""]
 
 . 完了をクリックします。これで、データストアがデータストアのリストに表示されます。
 +
-image:express-direct-attach-aff220-deploy_image60.jpeg[""]
+image:express-direct-attach-aff220-deploy_image60.jpeg["infra_datastore_2 が NFS データストアとしてマウントされていることを示す ESXi ストレージデータストアリストのスクリーンショット"]
 
 . 両方の ESXi ホストに両方のデータストアをマウントします。
 
@@ -3153,7 +3153,7 @@ ESXi ホストで NTP を設定するには、各ホストで次の手順を実�
 . ドロップダウンメニューを使用して、 Start （開始）および Stop with Host （ホストで停止）を選択します。
 . 2 つの Nexus スイッチの NTP アドレスを、カンマで区切って NTP サーバボックスに入力します。
 +
-image:express-direct-attach-aff220-deploy_image61.png[""]
+image:express-direct-attach-aff220-deploy_image61.png["NTPが有効になっており、2つのNTPサーバーアドレスが入力された状態の時刻設定の編集ダイアログのスクリーンショット"]
 
 . Save をクリックして、設定の変更を保存します。
 . Actions > NTP service > Start の順に選択します。
@@ -3174,11 +3174,11 @@ ESXi ホストでホストのスワップを設定するには、各ホストで
 
 . 左側のナビゲーションペインで、 [ 管理 ] をクリックします。右側のペインで System （システム）を選択し、 Swap （交換）をクリックします。
 +
-image:express-direct-attach-aff220-deploy_image62.png[""]
+image:express-direct-attach-aff220-deploy_image62.png["VMware ESXi のシステムスワップ管理ページのスクリーンショット。スワップ設定と設定の編集を表示しています。"]
 
 . 設定の編集をクリックします。データストアのオプションから 'infra_swap' を選択します
 +
-image:express-direct-attach-aff220-deploy_image63.png[""]
+image:express-direct-attach-aff220-deploy_image63.png["スワップ構成の編集ダイアログのスクリーンショット（infra_swapデータストアが選択された状態で、「保存」ボタンと「キャンセル」ボタンが表示されている）"]
 
 . [ 保存 ] をクリックします .
 
@@ -3221,7 +3221,7 @@ vCSA をインストールするには、次の手順を実行します。
 
 . vCSA をダウンロードします。ESXi ホストの管理時に Get vCenter Server アイコンをクリックして、ダウンロードリンクにアクセスします。
 +
-image:express-direct-attach-aff220-deploy_image64.png[""]
+image:express-direct-attach-aff220-deploy_image64.png["ESXiホストナビゲーターのスクリーンショット（「Get vCenter Server」ボタンがハイライト表示されています）"]
 
 . vCSA を VMware サイトからダウンロードします。
 +
@@ -3235,26 +3235,26 @@ NOTE: インストール可能な Microsoft Windows vCenter Server がサポー�
 . EULA に同意します。
 . 展開タイプとして、 Embedded Platform Services Controller を選択します。
 +
-image:express-direct-attach-aff220-deploy_image65.png[""]
+image:express-direct-attach-aff220-deploy_image65.png["vCenter Server Appliance インストーラーの「展開タイプの選択」ページで「Embedded Platform Services Controller」が選択されているスクリーンショット"]
 
 +
 必要に応じて、 FlexPod Express 解決策の一部として、外部プラットフォームサービスコントローラの導入もサポートされます。
 
 . アプライアンス導入ターゲットページで、導入した ESXi ホストの IP アドレス、ルートユーザ名、および root パスワードを入力します。次へをクリックします。
 +
-image:express-direct-attach-aff220-deploy_image66.png[""]
+image:express-direct-attach-aff220-deploy_image66.png["ESXiホストの認証情報を入力したVCenter Server Appliance Installerのアプライアンス展開ターゲットページのスクリーンショット"]
 
 . vCSA に VM 名および vCSA に使用するルートパスワードとして VCSA を入力して、アプライアンス VM を設定します。次へをクリックします。
 +
-image:express-direct-attach-aff220-deploy_image67.png[""]
+image:express-direct-attach-aff220-deploy_image67.png["vCenter Server Appliance インストーラーの「アプライアンス VM の設定」ページのスクリーンショット（VM 名と root パスワードのフィールドを表示）"]
 
 . 環境に最も適した導入サイズを選択してください。次へをクリックします。
 +
-image:express-direct-attach-aff220-deploy_image68.png[""]
+image:express-direct-attach-aff220-deploy_image68.png["vCenter Server Appliance インストーラーの「展開サイズの選択」ページで「Tiny」が選択されているスクリーンショット"]
 
 . 「 infra_datastore_1' 」データストアを選択します。次へをクリックします。
 +
-image:express-direct-attach-aff220-deploy_image69.png[""]
+image:express-direct-attach-aff220-deploy_image69.png["vCenter Server Appliance インストーラーの「データストアの選択」ページのスクリーンショット。3つのデータストアの中に infra_datastore_1 が表示されています。"]
 
 . [Configure Network Settings] ページで次の情報を入力し、 [Next] をクリックします。
 +
@@ -3265,7 +3265,7 @@ image:express-direct-attach-aff220-deploy_image69.png[""]
 .. デフォルトゲートウェイを入力します。
 .. DNS サーバを入力します。
 +
-image:express-direct-attach-aff220-deploy_image70.png[""]
+image:express-direct-attach-aff220-deploy_image70.png["静的IPv4の詳細を含むvCenter Server Applianceインストーラーのネットワーク設定構成ページのスクリーンショット"]
 
 
 
@@ -3275,7 +3275,7 @@ vCSA がインストールされます。このプロセスには数分かかり
 
 . ステージ 1 が完了すると、完了したことを示すメッセージが表示されます。「続行」をクリックしてステージ 2 の設定を開始します。
 +
-image:express-direct-attach-aff220-deploy_image71.png[""]
+image:express-direct-attach-aff220-deploy_image71.png["ステージ1のvCenter Serverの導入が成功したことを示すスクリーンショット（「続行」ボタン付き）"]
 
 . 「ステージ 2 の紹介」ページで、「次へ」をクリックします。
 . NTP サーバのアドレスとして「 \\<<var_ntp_id>> 」と入力します。複数の NTP IP アドレスを入力できます。
@@ -3323,7 +3323,7 @@ vSphere クラスタを作成するには、次の手順を実行します。
 . DRS と vSphere HA のオプションを選択して有効にします。
 . [OK] をクリックします。
 +
-image:express-direct-attach-aff220-deploy_image72.png[""]
+image:express-direct-attach-aff220-deploy_image72.png["Express クラスタで DRS と vSphere HA が有効になっている新しいクラスタダイアログのスクリーンショット"]
 
 
 
@@ -3333,7 +3333,7 @@ ESXi ホストをクラスタに追加するには、次の手順を実行しま
 
 . クラスタの Actions （アクション）メニューで Add Host （ホストの追加）を選択します。
 +
-image:express-direct-attach-aff220-deploy_image73.png[""]
+image:express-direct-attach-aff220-deploy_image73.png["vSphere Client のアクションメニューで「ホストの追加」が選択されている Express クラスタのスクリーンショット"]
 
 . ESXi ホストをクラスタに追加するには、次の手順を実行します。
 +

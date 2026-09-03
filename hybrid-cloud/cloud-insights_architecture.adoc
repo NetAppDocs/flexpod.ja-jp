@@ -68,7 +68,7 @@ Cloud Insights でデータを収集するには、 FlexPod データセンタ�
 
 次の図に、解決策のアーキテクチャを示します。
 
-image:cloud-insights_image2.png[""]
+image:cloud-insights_image2.png["Cisco UCS、Nexus スイッチ、NetApp AFF A800 コントローラ、および MDS スイッチがネットワークリンクで相互接続されていることを示す図"]
 
 
 

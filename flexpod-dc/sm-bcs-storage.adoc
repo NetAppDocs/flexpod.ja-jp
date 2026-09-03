@@ -25,7 +25,7 @@ FlexPod SM-BC 解決策 のストレージ構成は、各サイトでの一般�
 
 ローカル UCS FI およびブレードサーバへのストレージ接続は、ローカルサイトの Nexus スイッチによって提供されます。サイト間の Nexus スイッチ接続を介して、リモートの UCS ブレードサーバからストレージにアクセスすることもできます。次の図と表は、各サイトのストレージ接続図とストレージコントローラの接続リストを示しています。
 
-image:sm-bcs-image22.png[""]
+image:sm-bcs-image22.png["2つのサイトでNexus AおよびNexus BスイッチにAFF A250が接続されていることを示す図"]
 
 |===
 | ローカルデバイス | ローカルポート | リモートデバイス | リモートポート 
@@ -75,7 +75,7 @@ image:sm-bcs-image22.png[""]
 
 インバンド管理、クラスタ間、および NFS / iSCSI データストレージプロトコルでは、 VLAN を使用します。インターフェイスグループに VLAN ポートが作成され、さまざまなタイプのトラフィックを分離します。それぞれの機能に対応する LIF が、対応する VLAN ポートの上に作成されます。次の図は、物理接続、インターフェイスグループ、 VLAN ポート、および論理インターフェイスの関係を示しています。
 
-image:sm-bcs-image23.png[""]
+image:sm-bcs-image23.png["Nexusに接続された AFF A250 コントローラポート、インターフェースグループ、VLANポート、および LIF を示す図"]
 
 
 
@@ -88,7 +88,7 @@ FlexPod 解決策 で Cisco UCS サーバの SAN ブートを実装すること�
 
 各 iSCSI ブート LUN は、ブート LUN と、そのブート igroup 内のサーバの iSCSI Qualified Names （ IQNs ）を関連付けて、 iSCSI LIF を介して起動するサーバにマッピングされます。サーバのブート igroup には、各 vNIC-SAN ファブリックに対して 1 つずつ、 2 つの IQN が含まれています。この機能を使用すると、許可されたサーバだけが、そのサーバ専用に作成されたブート LUN にアクセスできます。
 
-image:sm-bcs-image24.png[""]
+image:sm-bcs-image24.png["B200 M5サーバーからAFF A250コントローラーへの冗長iSCSI SANブート接続を示す図"]
 
 
 
@@ -97,21 +97,21 @@ image:sm-bcs-image24.png[""]
 
 ONTAP クラスタピアは、クラスタ間 LIF を介して通信します。2 つのクラスタで ONTAP System Manager を使用すると、 Protection > Overview ペインに、必要なクラスタ間 LIF を作成できます。
 
-image:sm-bcs-image25.png[""]
+image:sm-bcs-image25.png["2つのIPアドレスフィールドを含むONTAP System Managerの「クラスタ間インターフェースの追加」ダイアログのスクリーンショット"]
 
 2 つのクラスタ間にピア関係を設定するには、次の手順を実行します。
 
 . 1 つ目のクラスタでクラスタピアパスフレーズを生成
 +
-image:sm-bcs-image26.png[""]
+image:sm-bcs-image26.png["クラスター ピアの権限、有効性、およびコピーされたパスフレーズを含むパスフレーズ生成ダイアログのスクリーンショット"]
 
 . 2 番目のクラスタで Peer Cluster オプションを呼び出し、パスフレーズとクラスタ間 LIF の情報を指定します。
 +
-image:sm-bcs-image27.png[""]
+image:sm-bcs-image27.png["ONTAP System Manager のピア クラスタダイアログにパスフレーズとクラスタ間 LIF アドレスが表示されているスクリーンショット"]
 
 . System Manager Protection > Overview ペインには、クラスタピアの情報が表示されます。
 +
-image:sm-bcs-image28.png[""]
+image:sm-bcs-image28.png["クラスタ ピアとメディエーターのステータスを示す ONTAP System Manager の保護概要のスクリーンショット"]
 
 
 
@@ -126,11 +126,11 @@ ONTAP メディエーターをインストールする前に、を確認しま�
 
 ONTAP メディエーターをインストールしたら、 ONTAP メディエーターのセキュリティ証明書を ONTAP クラスタに追加し、 System Manager の Protection > Overview ペインで ONTAP メディエーターを設定できます。次のスクリーンショットは、 ONTAP メディエーターの設定 GUI を示しています。
 
-image:sm-bcs-image29.png[""]
+image:sm-bcs-image29.png["ONTAP System Manager のメディエーター接続フィールドを含むメディエーター設定ダイアログのスクリーンショット"]
 
 必要な情報を入力すると、設定された ONTAP メディエーターが System Manager の Protection > Overview ペインに表示されます。
 
-image:sm-bcs-image30.png[""]
+image:sm-bcs-image30.png["構成済みのメディエーターのステータスが表示されているONTAP System Manager の保護概要ペインのスクリーンショット"]
 
 
 
@@ -148,7 +148,7 @@ image:sm-bcs-image30.png[""]
 
 検証構成では、 ONTAP System Manager を使用して整合グループを作成し、両方のサイトの ESXi ブート LUN と共有データストア LUN の両方を保護しました。コンシステンシ・グループの作成ダイアログにアクセスするには '[ 保護 ] ＞ [ 概要 ] ＞ [ ビジネス継続性の保護 ] ＞ [ コンシステンシ・グループの保護 ] を選択します整合グループを作成するには、作成に必要なソースボリューム、デスティネーションクラスタ、およびデスティネーション SVM の情報を指定します。
 
-image:sm-bcs-image31.png[""]
+image:sm-bcs-image31.png["ソースボリューム esxi_a とデスティネーション クラスタ aff-a250-b を使用した Protect Consistency Group ダイアログのスクリーンショット"]
 
 次の表に、検証テストで作成される 4 つの整合グループと各整合グループに含まれるボリュームを示します。
 
@@ -171,15 +171,15 @@ image:sm-bcs-image31.png[""]
 
 このスクリーンショットは、サイト A の整合グループ関係を示しています
 
-image:sm-bcs-image32.png[""]
+image:sm-bcs-image32.png["サイト A における 2 つの正常な同期済み整合性グループを示す ONTAP System Manager 関係のスクリーンショット"]
 
 このスクリーンショットは、サイト B における整合グループ関係を示しています
 
-image:sm-bcs-image33.png[""]
+image:sm-bcs-image33.png["サイト B における ONTAP System Manager の関係を示すスクリーンショット。正常で同期されている 2 つの整合性グループが表示されています。"]
 
 次のスクリーンショットは、 cg_infra_datastore_b グループの整合グループ関係の詳細を示しています。
 
-image:sm-bcs-image34.png[""]
+image:sm-bcs-image34.png["cg_infra_datastore_bの整合グループ関係の詳細を表示するONTAP System Managerのスクリーンショット"]
 
 
 
@@ -190,20 +190,20 @@ image:sm-bcs-image34.png[""]
 
 このスクリーンショットは、サイト A のボリューム情報を示しています
 
-image:sm-bcs-image35.png[""]
+image:sm-bcs-image35.png["Infra-SVM-a の ONTAP ボリューム情報のスクリーンショット（RW、DP、LS ボリュームを含む）"]
 
 このスクリーンショットは、サイト B のボリューム情報を示しています
 
-image:sm-bcs-image36.png[""]
+image:sm-bcs-image36.png["Infra-SVM-b の ONTAP ボリューム表示出力のスクリーンショット（デスティネーション DP ボリュームを含む 9 つのボリュームが表示されています）"]
 
 透過的なアプリケーションフェイルオーバーを可能にするには、ミラーリングされた SM-BC LUN もデスティネーションクラスタからホストにマッピングする必要があります。これにより、ホストは、ソースとデスティネーションの両方のクラスタから LUN へのパスを適切に認識できます。サイト A とサイト B の両方の「 igroup show 」出力と「 lun show 」出力は、次の 2 つのスクリーンショットでキャプチャされています。作成されたマッピングでは、クラスタ内の各 ESXi ホストが自身の SAN ブート LUN を ID 0 、 4 つすべての共有 iSCSI データストア LUN として認識します。
 
 このスクリーンショットは、サイト A のクラスタのホスト igroup と LUN マッピングを示しています。
 
-image:sm-bcs-image37.png[""]
+image:sm-bcs-image37.png["サイト A の iSCSI igroup と LUN マッピングを示す ONTAP CLI 出力のスクリーンショット"]
 
 このスクリーンショットは、サイト B のクラスタのホスト igroup と LUN マッピングを示しています。
 
-image:sm-bcs-image38.png[""]
+image:sm-bcs-image38.png["サイト B の igroup および iSCSI VMware ホストの LUN マッピング コマンド出力のスクリーンショット"]
 
 link:sm-bcs-virtualization.html["次に、解決策 の検証と仮想化を行います。"]

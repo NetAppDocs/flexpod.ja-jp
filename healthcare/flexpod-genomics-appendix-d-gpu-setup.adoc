@@ -27,10 +27,10 @@ GATK ツールは、公開時点で、オンプレミスでの GPU ベースの�
 
 . UCS B200 M5 サーバのメザニンスロットに PCIe NVIDIA Tesla P6 GPU を使用しました。
 +
-image:flexpod-genomics-image18.png[""]
+image:flexpod-genomics-image18.png["Cisco UCS Manager インベントリの GPU タブに Compute モードの P6 グラフィックカードが表示されているスクリーンショット"]
 
 +
-image:flexpod-genomics-image19.png[""]
+image:flexpod-genomics-image19.png["Compute モードの UCSB-GPU-P6-R を含む GPU インベントリを表示している Cisco UCS Manager のスクリーンショット"]
 
 . このセットアップでは、 NVIDIA パートナーポータルに登録し、コンピューティングモードで GPU を使用できる評価用ライセンス（使用権）を取得しました。
 . NVIDIA パートナーの Web サイトから、必要な NVIDIA vGPU ソフトウェアをダウンロードしました。
@@ -75,32 +75,32 @@ Wed Aug 18 21:37:19 2021
 ....
 . vCenter を使用 https://blogs.vmware.com/apps/2018/09/using-gpus-with-virtual-machines-on-vsphere-part-2-vmdirectpath-i-o.html["設定"^] グラフィックデバイスの設定は「 Shared Direct 」になります。
 +
-image:flexpod-genomics-image20.png[""]
+image:flexpod-genomics-image20.png["vSphere Client で Shared Direct 用に構成された NVIDIA Tesla P6 グラフィックスデバイスを示すスクリーンショット"]
 
 +
-image:flexpod-genomics-image21.png[""]
+image:flexpod-genomics-image21.png["「共有ダイレクト」が選択され、「X.Orgサーバーを再起動」にチェックが入った状態の「グラフィックデバイス設定の編集」のスクリーンショット"]
 
 . RedHat VM のセキュアブートが無効になっていることを確認します。
 . VM 起動オプションファームウェアが EFI （ https://docs.vmware.com/en/VMware-vSphere-Bitfusion/3.0/Install-Guide/GUID-2005A8C6-4FDC-46DF-BB6B-989F6E91F3E2.html["参照（ Ref ）"^]）。
 +
-image:flexpod-genomics-image22.png[""]
+image:flexpod-genomics-image22.png["EFIファームウェアとセキュアブートが無効になっているvCenter VMブートオプションのスクリーンショット"]
 
 . 次のパラメータが VM オプションの詳細編集設定に追加されていることを確認します。「 pciPassthru.64bitMMIOSizeGB 」パラメータの値は、 VM に割り当てられた GPU のメモリと数によって異なります。例：
 +
 .. VM に 32GB V100 GPU が 4 つ割り当てられている場合は、この値を 128 にします。
 .. VM に 16GB P6 GPU が 4 つ割り当てられている場合、この値は 64 である必要があります。
 +
-image:flexpod-genomics-image23.png[""]
+image:flexpod-genomics-image23.png["vCenter の「設定の編集」詳細セクションと「構成の編集」リンクを示すスクリーンショット"]
 
 +
-image:flexpod-genomics-image24.png[""]
+image:flexpod-genomics-image24.png["pciPassthru.64bitMMIOSizeGB および pciPassthru.use64bitMMIO の値を一覧表示する「Configuration Parameters」ダイアログのスクリーンショット"]
 
 
 
 . vCenter で新しい PCI デバイスとして vGPU を仮想マシンに追加する場合は、 PCI デバイスタイプとして NVIDIA GRID vGPU を選択してください。
 . 使用している GPU 、 GPU メモリ、および使用目的を調整する適切な GPU プロファイルを選択します。たとえば、グラフィックスとコンピューティングです。
 +
-image:flexpod-genomics-image25.png[""]
+image:flexpod-genomics-image25.png["vCenter の「Edit Settings」のスクリーンショット。PCIデバイスに対して NVIDIA GRID vGPU プロファイル grid_p6-16c が選択されている状態を示しています。"]
 
 . Red Hat Linux VM で、次のコマンドを実行して NVIDIA ドライバをインストールできます。
 +
@@ -159,7 +159,7 @@ Wed Aug 18 20:30:56 2021
 
 . VM を再起動すると、次のように、ライセンスサーバーのライセンスクライアントの下にエントリが表示されます。
 +
-image:flexpod-genomics-image26.png[""]
+image:flexpod-genomics-image26.png["NVIDIA License Server のライセンスクライアントページに仮想イーサネットクライアントが1つ表示されているスクリーンショット"]
 
 . GATK および Cromwell ソフトウェアのダウンロードの詳細については、「 Solutions Setup 」セクションを参照してください。
 . GATK がオンプレミスで GPU を使用できるようになると、ワークフロー概要言語は「 * 」になります。wdl には、次に示すランタイム属性があります。

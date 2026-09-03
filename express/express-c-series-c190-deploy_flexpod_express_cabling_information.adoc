@@ -18,7 +18,7 @@ summary: この参照検証は、次の図と表に示すようにケーブル�
 
 この図は、リファレンス検証のケーブル配線を示しています。
 
-image:express-c-series-c190-deploy_image3.png[""]
+image:express-c-series-c190-deploy_image3.png["2 つの Nexus スイッチ、2 つの Cisco UCS サーバー、および AFF C190 コントローラーの背面図を示す図"]
 
 次の表に、 Cisco Nexus スイッチ 31108PCV-A のケーブル接続情報を示します
 

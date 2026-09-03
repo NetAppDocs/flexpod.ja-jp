@@ -103,7 +103,7 @@ FlexPod 共同サポートは、医療機関がビジネスクリティカルな
 
 
 
-image:medical-imaging_image2.png[""]
+image:medical-imaging_image2.png["お客様、Cisco、およびNetAppの間におけるFlexPod協調サポートモデルを示す図"]
 
 
 

@@ -40,11 +40,11 @@ summary: このセクションに記載されているテクノロジは、ア�
 
 次の図は、 SFP+ モジュールを挿入できる UTA 2 ポートを示しています。
 
-image:express-c-series-c190-design_image4.png[""]
+image:express-c-series-c190-design_image4.png["SFP+モジュール用のUTA 2ポートを備えた2台のAFF C190コントローラの背面図を示す図"]
 
 次の図に、従来の RJ-45 イーサネットケーブルを介した接続用の 10GBASE-T ポートを示します。
 
-image:express-c-series-c190-design_image5.png[""]
+image:express-c-series-c190-design_image5.png["10GBASE-T RJ-45ポートを備えたAFF C190システムの背面パネルを示す図"]
 
 
 NOTE: 10GBASE-T ポートオプションの場合、 10GBASE-T ベースのアップリンクスイッチが必要です。
@@ -68,7 +68,7 @@ NetApp AFF C190 システムでは、新しい ONTAP 9.6 データ管理ソフ�
 
 ONTAP 9.6 には、 FlexPod Express 解決策に最適ないくつかの機能があります。最も重要なのは、ストレージ効率化に対するネットアップの取り組みです。これは、小規模環境で最も重要な機能の 1 つです。ONTAP 9.6 では、重複排除、圧縮、コンパクション、シンプロビジョニングなどのネットアップの Storage Efficiency 機能が特徴です。NetApp WAFL システムは、常に 4KB ブロックを書き込みます。したがって、コンパクションでは、ブロックが割り当てられた 4KB のスペースを使用していない場合、複数のブロックが 4KB ブロックにまとめられます。次の図に、このプロセスを示します。
 
-image:express-c-series-c190-design_image6.png[""]
+image:express-c-series-c190-design_image6.png["複数の4KB論理ブロックを1つの4KB物理ブロックに圧縮した図"]
 
 ONTAP 9.6 では、 NVMe ボリューム用のオプションの 512 バイトブロックサイズがサポートされるようになりました。この機能は、 512 バイトのブロックをネイティブで使用する VMware Virtual Machine File System （ VMFS ）と連携します。デフォルトの 4K サイズをそのまま使用することも、必要に応じて 512 バイトのブロックサイズを設定することもできます。
 
@@ -95,7 +95,7 @@ Cisco Nexus 31108PC-V 仕様には、次のコンポーネントが含まれて�
 
 次の図に、 Cisco Nexus 31108PC-V スイッチを示します。
 
-image:express-c-series-c190-design_image7.png[""]
+image:express-c-series-c190-design_image7.png["Cisco Nexus 31108PC-V スイッチの正面図（48 個の SFP+ ポートと 6 個の QSFP28 ポートを備える）"]
 
 Cisco Nexus 31108PC-V スイッチの詳細については、を参照してください https://www.cisco.com/c/en/us/products/collateral/switches/nexus-3000-series-switches/data_sheet_c78-729483.html["Cisco Nexus 3172PQ 、 3172TQ 、 3172TQ-32T 、 3172PQ-XL 、および 3172TQ-XL スイッチのデータシート"^]。
 
@@ -116,7 +116,7 @@ Cisco UCS C シリーズラックサーバには、次のようなメリット�
 * 使い慣れたラックパッケージに独自のメリットをもたらし、お客様の選択肢を拡大
 
 
-image:express-c-series-c190-design_image8.png[""]
+image:express-c-series-c190-design_image8.png["Cisco UCS C220 M5 ラックサーバー（デュアルドライブベイ付き、Cisco ブランディング）の正面図"]
 
 Cisco UCS C220 M5 ラックサーバは、この図のように、業界で最も汎用性の高い汎用エンタープライズインフラおよびアプリケーションサーバの 1 つです。高密度の 2 ソケットラックサーバで、仮想化、コラボレーション、ベアメタルなど、さまざまなワークロードに業界最高レベルのパフォーマンスと効率性を提供します。Cisco UCS C シリーズラックサーバは、スタンドアロンサーバとして導入することも、 Cisco UCS の一部として導入することもできます。これにより、シスコの標準ベースのユニファイドコンピューティングの革新的な技術を活用して、お客様の TCO を削減し、ビジネスの俊敏性を高めることができます。
 
@@ -129,7 +129,7 @@ C220 M5 サーバの詳細については、を参照してください https://
 
 次の図に示す Cisco UCS VIC 1457 アダプタは、 M5 世代の Cisco UCS C シリーズサーバ用に設計された、クアッドポート Small Form-Factor Pluggable （ SFP28 ） Modular LAN on Motherboard （ mLOM ）カードです。このカードは 10/25Gbps のイーサネットまたは FCoE をサポートしています。このカードは、 PCIe 標準準拠のインタフェースをホストに提供でき、 NIC または HBA として動的に構成できます。
 
-image:express-c-series-c190-design_image9.png[""]
+image:express-c-series-c190-design_image9.png["Cisco UCS VIC 1457アダプター（SFP28ポート4個と冷却ファン搭載）のスクリーンショット"]
 
 Cisco UCS VIC 1457 アダプタの詳細については、を参照してください https://www.cisco.com/c/en/us/products/collateral/interfaces-modules/unified-computing-system-adapters/datasheet-c78-741130.html["Cisco UCS 仮想インターフェイスカード 1400 シリーズデータシート"^]。
 
@@ -186,6 +186,6 @@ Cisco UCS VIC 1457 には 4 つの物理ポートがあります。この解決�
 
 iSCSI ブート実装では、 iSCSI ブートには個別の Virtual Network Interface Card （ vNIC; 仮想ネットワークインターフェイスカード）が必要です。これらの vNIC は、次の図に示すように、適切なファブリックの iSCSI VLAN をネイティブ VLAN として使用し、 iSCSI ブート vSwitch に接続します。
 
-image:express-c-series-c190-design_image10.png[""]
+image:express-c-series-c190-design_image10.png["VMware ESXi 6.7 U2 ホスト上の FlexPod および iSCSI ブート vSwitches に接続された 4 つの vNIC を示す図"]
 
 link:express-c-series-c190-design_conclusion.html["次は終わりです"]

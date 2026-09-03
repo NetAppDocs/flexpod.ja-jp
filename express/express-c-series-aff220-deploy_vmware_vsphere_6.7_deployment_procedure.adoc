@@ -40,7 +40,7 @@ NOTE: この手順は、 Cisco UCS サーバ A および Cisco UCS サーバ B �
 . メインメニューで、サーバータブを選択します。
 . Launch KVM Console をクリックします。
 +
-image:express-c-series-aff220-deploy_image21.png[""]
+image:express-c-series-aff220-deploy_image21.png["Cisco CIMC サーバーの BIOS ページのスクリーンショット（上部メニューに「KVM を起動」リンクあり）"]
 
 . 仮想 KVM コンソールから、 [Virtual Media]( 仮想メディア ) タブを選択します。
 . [CD/DVD のマップ ] を選択します。
@@ -83,7 +83,7 @@ NOTE: 最初に [ 仮想デバイスのアクティブ化 ] をクリックす�
 . エンドユーザライセンス契約を読んだ後、同意して F11 キーを押してインストールを続行します。
 . ESXi のインストールディスクとして設定した NetApp LUN を選択し、 Enter キーを押してインストールを続行します。
 +
-image:express-c-series-aff220-deploy_image22.png[""]
+image:express-c-series-aff220-deploy_image22.png["容量15.00 GiBのNETAPP LUN C-Modeストレージデバイスを選択しているESXiインストーラーのスクリーンショット"]
 
 . 適切なキーボードレイアウトを選択し、 Enter キーを押します。
 . ルートパスワードを入力して確定し、 Enter キーを押します。
@@ -112,7 +112,7 @@ image:express-c-series-aff220-deploy_image22.png[""]
 NOTE: CIMC の eth0 および eth1 に対応するポートを選択します。
 
 +
-image:express-c-series-aff220-deploy_image23.png[""]
+image:express-c-series-aff220-deploy_image23.png["vSwitch0用にvmnic0とvmnic1が選択されたESXi ネットワークアダプタメニューのスクリーンショット"]
 
 . VLAN （オプション）を選択し、 Enter キーを押します。
 . VLAN ID 「 \<mgmt_vlan_id>` 」を入力します。Enter キーを押します。
@@ -211,7 +211,7 @@ image:express-c-series-aff220-deploy_image23.png[""]
 . 左側の [ ネットワーク ] を選択します。
 . 右側の [Virtual Switches] タブを選択します。
 +
-image:express-c-series-aff220-deploy_image24.png[""]
+image:express-c-series-aff220-deploy_image24.png["ESXi ネットワーク仮想スイッチタブに vSwitch0 と iScsiBootvSwitch が表示されているスクリーンショット"]
 
 . iScsiBootvSwitch をクリックします。
 . [ 設定の編集 ] を選択します
@@ -242,7 +242,7 @@ NOTE: この構成では、 vmnic2 と vmnic3 が iSCSI ブートに使用され
 ** Subnet Mask には「 \\<<var_hosta_iSCSIb_mask>> 」と入力します。
 ** Create をクリックします。 .
 +
-image:express-c-series-aff220-deploy_image25.png[""]
+image:express-c-series-aff220-deploy_image25.png["静的IPv4設定とMTU 9000でiScsiBootPG-Bを構成する「VMkernel NICの追加」フォームのスクリーンショット"]
 
 +
 
@@ -262,18 +262,18 @@ ESXi ホストで iSCSI マルチパスを設定するには、次の手順を�
 . 左側のナビゲーションペインで Storage （ストレージ）を選択します。アダプタをクリックします。
 . iSCSI ソフトウェアアダプタを選択し、 Configure iSCSI （ iSCSI の設定）をクリックします。
 +
-image:express-c-series-aff220-deploy_image26.png[""]
+image:express-c-series-aff220-deploy_image26.png["iSCSIソフトウェアアダプタvmhba64が選択されたVMware ESXiストレージアダプタページのスクリーンショット"]
 
 . [ 動的ターゲット ] で、 [ 動的ターゲットの追加 ] をクリックします。
 +
-image:express-c-series-aff220-deploy_image27.png[""]
+image:express-c-series-aff220-deploy_image27.png["「動的ターゲット」の下に「動的ターゲットの追加」が表示された iSCSI の設定ダイアログのスクリーンショット"]
 
 . IP アドレス「 iscsi_dlif01a 」を入力します。
 +
 ** IP アドレス 'iSCSI_lif01b'iSCSI_lif02a'iSCSI_lif02b' で繰り返します
 ** [Save Configuration] をクリックします。
 +
-image:express-c-series-aff220-deploy_image28.png[""]
+image:express-c-series-aff220-deploy_image28.png["4つのiSCSI動的ターゲットIPアドレスがそれぞれポート3260を使用していることを示すスクリーンショット"]
 
 
 
@@ -290,7 +290,7 @@ NOTE: iSCSI LIF の IP アドレスは、ネットアップクラスタで「 ne
 . 左側のナビゲーションペインで、 [ ネットワーク ] を選択します。
 . vSwitch0 を選択します。
 +
-image:express-c-series-aff220-deploy_image29.png[""]
+image:express-c-series-aff220-deploy_image29.png["VMware ESXi の vSwitch0 ページのスクリーンショット。MTU 1500 と 2 つのアクティブな物理アダプタが表示されています。"]
 
 . 設定の編集を選択します。
 . MTU を 9000 に変更します。
@@ -305,7 +305,7 @@ image:express-c-series-aff220-deploy_image29.png[""]
 . 左側のナビゲーションペインで、 [ ネットワーク ] を選択します。
 . Port Groups タブを右クリックします。
 +
-image:express-c-series-aff220-deploy_image30.png[""]
+image:express-c-series-aff220-deploy_image30.png["ESXi のネットワークページで「ポートグループ」タブが選択され、「ポートグループの追加」が使用可能な状態のスクリーンショット"]
 
 . [VM Network] を右クリックし、 [Edit] を選択します。VLAN ID を「 \<<var_vm_traffic_vlan>> 」に変更します。
 . [Add Port Group] をクリックします。
@@ -318,7 +318,7 @@ image:express-c-series-aff220-deploy_image30.png[""]
 
 . [VMkernel NICs] タブをクリックします。
 +
-image:express-c-series-aff220-deploy_image31.png[""]
+image:express-c-series-aff220-deploy_image31.png["ESXi ネットワーク VMkernel NIC タブに vmk0 と vmk1 アダプタが表示されているスクリーンショット"]
 
 . Add VMkernel NIC を選択します。
 +
@@ -332,7 +332,7 @@ image:express-c-series-aff220-deploy_image31.png[""]
 ** [ サブネットマスク ] に「 \\<<var_hosta_nfs_mask>> 」と入力します。
 ** Create をクリックします。 .
 +
-image:express-c-series-aff220-deploy_image32.png[""]
+image:express-c-series-aff220-deploy_image32.png["NFS ネットワーク ポート グループを静的 IPv4 設定で構成する VMkernel NIC の追加フォームのスクリーンショット"]
 
 
 
@@ -349,7 +349,7 @@ image:express-c-series-aff220-deploy_image32.png[""]
 .. Subnet Mask には「 \\<<var_hosta_vMotion mask>> 」と入力します。
 .. IPv4 の設定後に vMotion チェックボックスが選択されていることを確認します。
 +
-image:express-c-series-aff220-deploy_image33.png[""]
+image:express-c-series-aff220-deploy_image33.png["静的 IPv4 設定と vMotion が選択された状態の「VMkernel NIC の追加」ダイアログのスクリーンショット"]
 
 +
 
@@ -367,11 +367,11 @@ NOTE: ESXi ネットワークの設定には、ライセンスで許可されて
 
 . 左側のナビゲーションペインで [ ストレージ ] をクリックし、 [ 新しいデータストア ] をクリックします。
 +
-image:express-c-series-aff220-deploy_image34.png[""]
+image:express-c-series-aff220-deploy_image34.png["VMware ESXi のストレージページのスクリーンショット。「新しいデータストア」ボタンが表示されている状態"]
 
 . マウント NFS データストアを選択します。
 +
-image:express-c-series-aff220-deploy_image35.png[""]
+image:express-c-series-aff220-deploy_image35.png["新規データストアウィザードで作成タイプとして「マウント NFS データストア」が選択されているスクリーンショット"]
 
 . 次に、 Provide NFS Mount Details （ NFS マウントの詳細の提供）ページに次の情報を入力します。
 +
@@ -401,14 +401,14 @@ ESXi ホストの NTP を設定するには、次の手順を実行します。
 
 . 左側のナビゲーションペインで、 [ 管理 ] をクリックします。右側のペインで [ システム ] を選択し、 [ 時刻と日付 ] をクリックします。
 +
-image:express-c-series-aff220-deploy_image36.png[""]
+image:express-c-series-aff220-deploy_image36.png["ESXi の「システム時刻と日付の管理」ページのスクリーンショット（NTP クライアントのステータスと NTP サーバーが表示されています）"]
 
 . Use Network Time Protocol （ NTP クライアントを有効にする）を選択します。
 . NTP サービスのスタートアップポリシーとして、 Start and Stop With Host を選択します。
 . NTP サーバとして「 \<<var_ntp>> 」と入力します。複数の NTP サーバを設定できます。
 . [ 保存 ] をクリックします .
 +
-image:express-c-series-aff220-deploy_image37.png[""]
+image:express-c-series-aff220-deploy_image37.png["NTPが有効になっていてNTPサーバーが入力された時刻設定編集ダイアログのスクリーンショット"]
 
 
 
@@ -421,11 +421,11 @@ image:express-c-series-aff220-deploy_image37.png[""]
 
 . 左側のナビゲーションペインで、 [ 管理 ] をクリックします。右側のペインでシステムを選択し、スワップをクリックします。
 +
-image:express-c-series-aff220-deploy_image38.png[""]
+image:express-c-series-aff220-deploy_image38.png["VMware ESXi のシステムスワップ管理ページのスクリーンショット（スワップ設定が表示されている）"]
 
 . 設定の編集をクリックします。データストアのオプションから infra_swap を選択します。
 +
-image:express-c-series-aff220-deploy_image39.png[""]
+image:express-c-series-aff220-deploy_image39.png["infra_swapをデータストアとして選択した編集スワップ構成ダイアログと保存ボタンおよびキャンセルボタンのスクリーンショット"]
 
 . [ 保存 ] をクリックします .
 
@@ -480,7 +480,7 @@ Value of HardwareAcceleratedMove is 1
 . ESX CLI を使用して、 ESXi ホストにプラグインをインストールします。
 . ESXi ホストをリブートします。
 +
-image:express-c-series-aff220-deploy_image40.png[""]
+image:express-c-series-aff220-deploy_image40.png["ターミナルに NetApp NFS プラグイン VIB のインストール成功と再起動が必要なメッセージが表示されている"]
 
 
 

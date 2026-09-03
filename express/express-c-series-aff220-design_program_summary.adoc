@@ -27,7 +27,7 @@ FlexPod リファレンスアーキテクチャは、 Cisco Validated Design （
 * * FlexPod Select * は、 FlexPod データセンターの最良の側面を組み込み、特定のアプリケーションにインフラストラクチャを調整します。
 
 
-image:express-c-series-aff220-design_image2.png[""]
+image:express-c-series-aff220-design_image2.png["FlexPod Express、Datacenter、および Select プラットフォームの対象デプロイメントとコンポーネントを示す図"]
 
 
 

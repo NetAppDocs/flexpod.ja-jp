@@ -32,7 +32,7 @@ FlexPod リファレンスアーキテクチャは、 Cisco Validated Design （
 
 次の図に、解決策の技術コンポーネントを示します。
 
-image:express-direct-attach-aff220-deploy_image2.png[""]
+image:express-direct-attach-aff220-deploy_image2.png["FlexPod Express、FlexPod Datacenter、および FlexPod Select ソリューションを比較した図"]
 
 
 
@@ -81,7 +81,7 @@ NVA プログラムは、ネットアップソリューションの検証済み�
 
 次の図は、 FlexPod Express と VMware vSphere 6.7U1 IP ベースの Direct Connect アーキテクチャを示しています。
 
-image:express-direct-attach-aff220-deploy_image3.png[""]
+image:express-direct-attach-aff220-deploy_image3.png["管理、データ、IP、クラスタ インターコネクト、およびvPCピアネットワーク用のFlexPod Expressサーバ、Nexusスイッチ、およびAFFストレージケーブル接続を示す図"]
 
 
 

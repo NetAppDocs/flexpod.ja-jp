@@ -29,7 +29,7 @@ FlexPod プログラムには、 FlexPod Express と FlexPod Datacenter の 2 �
 * * FlexPod * Datacenter * は、さまざまなワークロードやアプリケーションに最適な多目的基盤を提供します。
 
 
-image:express-c-series-c190-deploy_image1.png[""]
+image:express-c-series-c190-deploy_image1.png["FlexPod Express と FlexPod Datacenter のポートフォリオオプションとユースケースを示す図"]
 
 
 
@@ -53,7 +53,7 @@ NetApp Verified Architecture プログラムは、ネットアップソリュー
 
 この解決策は、ネットアップ、 Cisco 、 VMware の最新テクノロジを活用しています。この解決策は、 ONTAP 9.6 を実行する新しい NetApp AFF C190 、 Cisco Nexus 31108 スイッチを 2 台使用する Cisco UCS C220 M5 ラックサーバ、 VMware vSphere 6.7U2 を実行する Cisco UCS C220 M5 ラックサーバを特長としています。この検証済み解決策は 10GbE テクノロジを使用しています。また、 FlexPod Express アーキテクチャが組織の進化するビジネスニーズに適応できるように、 2 つのハイパーバイザノードを一度に追加することでコンピューティング容量を拡張する方法についても説明します。
 
-image:express-c-series-c190-deploy_image2.png[""]
+image:express-c-series-c190-deploy_image2.png["FlexPod Express スイッチ、C220 M5 サーバー、および AFF C190 ストレージ接続を示す図"]
 
 
 NOTE: VIC 1457 で 4 つの物理 10GbE ポートを効率的に使用するには、各サーバから上部ラックスイッチへのリンクを 2 つ追加で作成します。
