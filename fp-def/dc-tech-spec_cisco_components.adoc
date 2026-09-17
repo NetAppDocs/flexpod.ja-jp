@@ -232,7 +232,7 @@ Cisco UCS Cシリーズラックサーバーは、1U、2U、4Uのラックユニ
 [[cisco-apic-options]]
 == Cisco APIC オプション
 
-Cisco APIC は、Cisco ACI の主要なアーキテクチャ コンポーネントです。これは、Cisco ACI ファブリックの自動化と管理の統合ポイントです。
+Cisco APICは、Cisco ACIの主要なアーキテクチャコンポーネントです。Cisco ACIファブリックに対して、集中管理、ポリシー制御、および自動化を提供します。
 
 APIC製品の仕様に関する詳細については、 https://www.cisco.com/c/en/us/products/collateral/cloud-systems-management/application-policy-infrastructure-controller-apic/datasheet-c78-739715.html["Cisco Application Policy Infrastructure Controller データシート"^]の表1から表3を参照してください。
 

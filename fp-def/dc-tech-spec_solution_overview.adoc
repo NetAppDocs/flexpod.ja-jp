@@ -16,9 +16,9 @@ summary: FlexPodプラットフォームは、Cisco統合コンピューティ�
 [role="lead"]
 FlexPodプラットフォームは、ベストプラクティスに基づいた事前設計済みのデータセンターアーキテクチャであり、Cisco Unified Computing System（Cisco UCS）、Cisco NexusおよびMDS（FC用）ファミリーのスイッチ、およびNetAppストレージコントローラ（AFF、ASA、FAS、またはAFXシステム）上に構築されています。
 
-FlexPod は、さまざまな仮想ハイパーバイザーや、ベアメタルのオペレーティングシステム、エンタープライズワークロードを実行するのに適したプラットフォームです。FlexPod は、ベースライン構成だけでなく、さまざまなユースケースや要件に対応できるよう、サイズ設定と最適化が可能な柔軟性も備えています。
+FlexPodは、さまざまな仮想化ハイパーバイザー、ベアメタルオペレーティングシステム、コンテナ化環境、およびエンタープライズワークロードを実行するのに適したプラットフォームです。FlexPodは、ベースライン構成を提供するだけでなく、さまざまなユースケースや要件に対応できるよう、柔軟にサイズ調整と最適化を行える利点も備えています。
 
 
-NOTE: 完全な FlexPod 構成を注文する前に、これらの技術仕様の最新バージョンについては、 http://www.netapp.com/us/technology/flexpod["NetApp FlexPod ホームページ"^] ページを参照してください。
+NOTE: 完全な FlexPod 構成を注文する前に、これらの技術仕様の最新バージョンについては http://www.netapp.com/us/technology/flexpod["NetApp FlexPod ホームページ"^]を参照してください。
 
 link:dc-tech-spec_flexpod_platforms.html["次の例は、 FlexPod プラットフォームです。"]

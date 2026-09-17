@@ -25,12 +25,12 @@ FlexPod 構成には、ハードウェアに関する次の最小要件があり
 NOTE: ACIアーキテクチャをデプロイする場合は、次の追加要件を遵守する必要があります。* リーフスパイン型トポロジーを採用した Cisco Nexus 9000 シリーズスイッチをデプロイしてください。* 3つの Cisco Application Policy Infrastructure Controllers （APICs）を使用してください。
 
 * UCS C-Series Rack ServersまたはX-Series Modularシステムを使用する場合は、冗長構成の2台のCisco UCS 6400、6500、または6600 Series Fabric Interconnectが必要です。
-* Intersight管理構成（IMM）を備えたFI接続の2台のCisco UCS C シリーズラックサーバー、またはCisco IMM搭載のCisco UCS X シリーズ Direct、またはCisco Intersight管理構成（IMM）搭載のCisco UCS X シリーズ Modular。
+* Intersight Managed Mode （IMM） 構成の FI 接続を備えた 2 台の Cisco UCS C シリーズ ラック サーバー、または Cisco IMM を搭載した Cisco UCS X シリーズ ダイレクト、または Cisco IMM を搭載した Cisco UCS X シリーズ モジュラー。
 
 
 
-NOTE: UCSラックサーバーをFI接続なしで使用している場合は、管理にCIMCまたはIntersightスタンドアロンモードを使用できます。
+NOTE: UCSラックサーバーをFI接続なしで使用している場合は、管理にCIMCまたはIntersightスタンドアロンモード（ISM）を使用できます。
 
-* 高可用性（HA）ペア構成の NetApp AFF、NetApp ASA、または NetApp FAS コントローラ 2 台を 2ノードクラスタとして導入します。NetApp AFX を使用する場合、最低 4 台の NetApp AFX コントローラが必要であり、1 ペアのクラスタ インターコネクト スイッチとともに 4 ノード HA クラスタとして導入します。
+* 高可用性（HA）ペア構成のNetApp AFF、NetApp ASA、またはNetApp FASコントローラ2台を2ノードクラスタとして導入します。NetApp AFXを使用する場合は、最低4台のNetApp AFXコントローラが必要であり、2つのHAペアとクラスタ インターコネクトスイッチのペアを備えた4ノードクラスタとして導入する必要があります。
 * 内蔵ディスク シェルフを持たないストレージコントローラには、最低1つの NetApp ディスク シェルフが必要です。
 

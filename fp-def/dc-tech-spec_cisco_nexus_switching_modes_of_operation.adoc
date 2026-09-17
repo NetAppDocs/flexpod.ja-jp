@@ -18,9 +18,12 @@ summary: さまざまな Cisco Nexus 製品を、特定の FlexPod 展開のス�
 
 Ciscoのソフトウェアで定義されるネットワーキング分野における製品は、Application Centric Infrastructure（ACI）と呼ばれます。ACIモード（ファブリックモード）をサポートするCisco Nexus製品ラインは、NX-OSモードでも展開できます。
 
+
+NOTE: すべての Cisco Nexus スイッチが ACI モードをサポートしているわけではありません。導入する特定のモデルが、運用上の要件を満たしていることを確認してください。
+
 Cisco ACI は、特定のアプリケーションの要件に重点を置いたデータセンター導入をターゲットとしています。アプリケーションは、ホストまたは仮想マシン（ VM ）からネットワーク経由でストレージに接続できる一連のプロファイルと契約を通じてインスタンス化されます。
 
-FlexPod データセンターは、Cisco Nexus スイッチの両方の動作モードで検証済みです。ACI モードと NX-OS モードの詳細については、以下の Cisco ページを参照してください：
+FlexPod データセンターは、NX-OSモードとACIモードの両方で動作するCisco Nexusスイッチで検証済みです。お客様は、自社のネットワークアーキテクチャ、運用モデル、および自動化要件に最適な運用モードを選択できます。ACIモードとNX-OSモードの詳細については、以下のCiscoページを参照してください：
 
 * http://www.cisco.com/c/en/us/solutions/data-center-virtualization/application-centric-infrastructure/index.html["Cisco Application Centric Infrastructure の場合"^]
 * https://www.cisco.com/site/us/en/products/networking/cloud-networking/nx-os/index.html["Cisco NX-OS ソフトウェア"^]
