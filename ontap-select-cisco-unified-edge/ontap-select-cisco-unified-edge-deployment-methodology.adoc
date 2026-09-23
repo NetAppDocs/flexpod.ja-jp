@@ -1,0 +1,56 @@
+---
+sidebar: sidebar 
+permalink: ontap-select-cisco-unified-edge/ontap-select-cisco-unified-edge-deployment-methodology.html 
+keywords: ontap select, cisco unified edge, deployment, methodology, flexpod 
+summary: Cisco Unified Edge での ONTAP Select のライセンス取得、サイジング、ローカルストレージの構成、およびデプロイの概要手順について説明します。 
+---
+= 概要導入方法論
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ../media/
+
+
+[role="lead"]
+このセクションでは、Cisco Unified Edge でのライセンス取得、サイジング、ローカルストレージの構成、および ONTAP Select のデプロイに関する概要手順について説明します。
+
+
+
+[[1-ontap-select-licensing]]
+== 1.ONTAP Select ライセンス
+
+NVMeドライブを使用する場合は、Premium XLライセンスが必要です。お客様は、複数のサイト間で容量を共有する柔軟な容量プールライセンスと、特定のノードに紐づく永久ライセンスのいずれかを選択できます。詳細については、link:https://docs.netapp.com/us-en/ontap-select/concept_lic_workflow.html["ONTAP Select のライセンス購入ワークフロー"]を参照してください。
+
+
+
+[[2-obtain-ontap-select-deploy-software]]
+== 2.ONTAP Select Deploy ソフトウェアを入手する
+
+ONTAP Select Deployは、ONTAP Select クラスターのデプロイと管理に使用される管理ユーティリティです。Deploy は Linux 仮想マシンとしてパッケージ化されており、ONTAP Select クラスターを作成する前にインストールする必要があります。link:https://stackautomation.cisco.com/["Cisco スタック オートメーション"] からインストールするか、link:https://mysupport.netapp.com/site/["NetAppサポート サイト"] から .ova としてダウンロードできます。
+
+
+
+[[3-choose-ontap-select-virtual-machine-size]]
+== 3.ONTAP Select 仮想マシンのサイズを選択する
+
+ONTAP Select Premium XL ライセンスを使用すると、ストレージ パフォーマンス要件を満たすために、小規模、中規模、または大規模な仮想マシン インスタンス サイズとして展開できます。12 コアを搭載した XE130c または XE150c コンピューティング ノードは、小規模または中規模のインスタンス サイズをサポートできますが、大規模なインスタンスには 20 コアまたは 32 コアのノードが必要です。インスタンス サイズ要件の詳細については、link:https://docs.netapp.com/us-en/ontap-select/reference_plan_ots_hardware.html#basic-hardware-requirements["ONTAP Select VMwareハイパーバイザーとハードウェアに関する考慮事項"]を参照してください。
+
+
+
+[[4-prepare-local-storage]]
+== 4.ローカルストレージを準備する
+
+VMDirectPath I/Oパススルーは、NVMeドライブで効率を最大化するために使用されます。この設定により、ドライブが仮想マシンに公開され、ONTAPがデバイスへの直接的なPCIアクセスを持つことができます。NVMeパススルーを有効にする方法の詳細については、link:https://docs.netapp.com/us-en/ontap-select/task_chk_nvme_configure.html["NVMe ドライブを使用するように ONTAP Select ホストを設定する"]を参照してください。
+
+4 つの NVMe ドライブのうちの 1 つは、仮想マシンのブート ドライブ、コア、および NVRAM を含むシステム ディスクとして使用されます。残りの 3 台のドライブは、個々のドライブの障害に対するパリティ ベースの保護を提供するために、ソフトウェア RAID 4 を使用したデータ ディスクとして構成されています。各データ ディスクは、小さなルート パーティションと同じサイズの 2 つのパーティションの合計 3 つのパーティションに分割され、ONTAP Select VM 内で認識される 2 つのデータ ディスクが作成されます。詳細については、link:https://docs.netapp.com/us-en/ontap-select/concept_stor_swraid_local.html#ontap-select-virtual-and-physical-disks["ローカル接続ストレージ用のONTAP Selectソフトウェア RAID 構成サービス"] を参照してください。
+
+システムディスクの記憶容量は、3つのデータディスクよりも小さく設定することで、ソリューション全体の記憶コストを削減できます。1.6TB のハイパフォーマンス高耐久性ドライブ（UCSXE-NVE11T6K1P）で十分です。
+
+
+
+[[5-deploy-the-ontap-select-instance]]
+== 5.ONTAP Select インスタンスを導入する
+
+ONTAP Select は、ONTAP Select Deploy ツールとサポートされているハイパーバイザー環境を使用して、仮想マシンとしてデプロイされます。デプロイ時に、管理者はノード、管理インターフェース、データインターフェース、容量、およびローカルディスクの割り当てを定義します。ONTAP Select の実行後、管理者はローカルアプリケーション用にボリュームまたは LUN を作成し、適切なポリシー、共有、イニシエータグループ、またはアクセス制御を適用する必要があります。

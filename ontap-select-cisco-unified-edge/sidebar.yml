@@ -1,0 +1,10 @@
+---
+section: ontap-select-cisco-unified-edge
+title: Cisco Unified Edge 上の ONTAP Select
+entries:
+- title: 概要
+  url: "/ontap-select-cisco-unified-edge/ontap-select-cisco-unified-edge-overview.html"
+- title: 概要導入方法論
+  url: "/ontap-select-cisco-unified-edge/ontap-select-cisco-unified-edge-deployment-methodology.html"
+- title: まとめ
+  url: "/ontap-select-cisco-unified-edge/ontap-select-cisco-unified-edge-conclusion.html"
