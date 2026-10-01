@@ -174,7 +174,7 @@ image:sm-bcs-image11.png["NetApp AFF および ASA コントローラと DS 224C
 | AFF シリーズ | link:https://mysupport.netapp.com/documentation/productlibrary/index.html?productID=62247["AFF シリーズのドキュメント"^] 
 
 
-| ASA シリーズ | link:https://docs.netapp.com/allsan/index.jsp["ASA シリーズのドキュメント"^] 
+| ASA r2システム | link:https://docs.netapp.com/us-en/ontap-systems/asa-r2/index.html["ASA r2システムドキュメント"^] 
 |===
 を参照してください https://www.netapp.com/data-storage/disk-shelves-storage-media/["ネットアップのディスクシェルフとストレージメディアのドキュメント"^] および https://hwu.netapp.com/["NetApp Hardware Universe の略"^] ディスクシェルフ、および各ストレージコントローラモデルでサポートされているディスクシェルフの詳細については、を参照してください。
 
