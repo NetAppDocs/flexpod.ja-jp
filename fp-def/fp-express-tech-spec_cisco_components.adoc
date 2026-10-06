@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: fp-def/fp-express-tech-spec_cisco_components.html 
 keywords: cisco, components, server, options, rack, ucs, nexus, switches, x-series-direct, c-series 
-summary: シスコは、 FlexPod Express の設計およびアーキテクチャに大きく貢献しており、解決策のコンピューティングおよびネットワーキングレイヤに貢献しています。 
+summary: Ciscoは、UCSサーバーやNexusスイッチを含む、FlexPod Expressの設計とアーキテクチャのコンピューティング層およびネットワーク層を提供します。 
 ---
 = シスコのコンポーネント
 :hardbreaks:

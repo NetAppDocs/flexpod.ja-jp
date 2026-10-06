@@ -10,7 +10,7 @@ summary: このセクションでは、Cisco および NetApp コンポーネン
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

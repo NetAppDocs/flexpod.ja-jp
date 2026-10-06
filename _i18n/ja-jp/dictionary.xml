@@ -53,7 +53,6 @@
   <block id="0a10ffb3d8f2b29b2aed44120c4b52ee" category="cell">NS224</block>
   <block id="391fe0d4864f4c09c2d64335983c2f05" category="section-title">ネットアップのソフトウェアライセンスオプション</block>
   <block id="b8d29742df41ef40fca1e44a7b490835" category="cell">パーツ番号</block>
-  <block id="767945ca8f676ff25ce389fce1df6c41" category="summary">シスコは、 FlexPod Express の設計およびアーキテクチャに大きく貢献しており、解決策のコンピューティングおよびネットワーキングレイヤに貢献しています。</block>
   <block id="db9522af2119f167ded30369ddb56248" category="doc">シスコのコンポーネント</block>
   <block id="ae19f05a830d151c2615c3f564dbf6e4" category="paragraph">シスコは、 FlexPod Express の設計およびアーキテクチャに大きく貢献しており、解決策のコンピューティングおよびネットワーキングレイヤに貢献しています。ここでは、 FlexPod Express で使用できる Cisco UCS および Cisco Nexus コンポーネントについて説明します。</block>
   <block id="0adca13cab777a69d4b054794aadc650" category="section-title">Cisco UCS C シリーズラックサーバのオプション</block>
@@ -8564,4 +8563,6 @@
   <block id="22d05c38a6e8032e35e9ff8d6b826ee0" category="inline-link-macro">ASA r2システムドキュメント</block>
   <block id="5a043bdfd29a9c2a632078901fc0d525" category="cell"><block ref="5a043bdfd29a9c2a632078901fc0d525" category="inline-link-macro-rx"></block></block>
   <block id="a04fde0f303f9cefcbd34e8be1810d1e" category="paragraph">大学病院をはじめとする医療・生命科学関連機関は、ゲノム科学における卓越研究拠点（COE）の設立に向けて着実に歩みを進めています。デューク大学のCharlie Gersbach博士、Greg Crawford博士、Tim E Reddy博士によると、「遺伝子は単純な二値スイッチでオン・オフされるのではなく、複数の遺伝子制御スイッチが連携して機能することで制御されることがわかっています。」また、「ゲノムのこれらの部分はどれも単独では機能しない」ことも明らかにしています。ゲノムは進化が織り上げた非常に複雑な網である」（<block ref="7e5e4c153f3bad20a8e4230a913e554e" category="inline-link-rx"></block>）。</block>
+  <block id="a9100704d09dc0243e72fa3e969a3376" category="doc">展開手順の概要</block>
+  <block id="c94f9bfe6b4fcd272eb296a929c3be2f" category="summary">Ciscoは、UCSサーバーやNexusスイッチを含む、FlexPod Expressの設計とアーキテクチャのコンピューティング層およびネットワーク層を提供します。</block>
 </blocks>

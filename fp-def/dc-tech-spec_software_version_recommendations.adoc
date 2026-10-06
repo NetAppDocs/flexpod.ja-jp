@@ -10,7 +10,7 @@ summary: 以下の情報は、FlexPod構成のソフトウェア バージョン
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

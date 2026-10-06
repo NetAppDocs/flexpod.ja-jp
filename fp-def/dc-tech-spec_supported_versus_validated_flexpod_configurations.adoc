@@ -10,7 +10,7 @@ summary: FlexPod のアーキテクチャは、本ドキュメントで説明す
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]

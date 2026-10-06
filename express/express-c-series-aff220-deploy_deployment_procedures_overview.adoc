@@ -4,7 +4,7 @@ permalink: express/express-c-series-aff220-deploy_deployment_procedures_overview
 keywords: vmware, vcenter, server, appliance, download 
 summary: このドキュメントでは、完全な冗長性と高可用性を備えた FlexPod Express システムの構成方法、および複数の Cisco UCS ホストのプロビジョニング方法について詳しく説明します。 
 ---
-= 導入手順
+= 展開手順の概要
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

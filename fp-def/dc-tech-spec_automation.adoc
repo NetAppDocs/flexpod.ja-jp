@@ -10,7 +10,7 @@ summary: FlexPod データセンターの自動展開は、Ansible プレイブ�
 :nofooter: 
 :icons: font
 :linkattrs: 
-:imagesdir: ./../media/
+:imagesdir: ../media/
 
 
 [role="lead"]
