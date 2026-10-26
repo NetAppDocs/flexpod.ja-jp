@@ -4102,7 +4102,6 @@
   <block id="3455b050e251b7f98e02276cf4e610a6" category="inline-link">クロムウェルエンジンコンフィギュレーションファイル</block>
   <block id="8a4170eb5a6a7d35029828115b79e670" category="paragraph">Cromwell は、ワークフロー管理を可能にする科学的なワークフローを対象としたオープンソースエンジンです。クロムウェルエンジンは 2 つの方法で作動できます<block ref="83a23f9446eddc4053d457126818d444" category="inline-link-rx"></block>、サーバーモード、または単一ワークフローの実行モード。クロムウェルエンジンの動作は、を使用して制御できます<block ref="fd25519784a12a9c420aa9ee89025851" category="inline-link-rx"></block>。</block>
   <block id="10901892610e8878b38acfa47b965517" category="inline-link">RESTful なホテル</block>
-  <block id="5c21c1c0292363dbb8e48a016e417842" category="list-text">* サーバーモード。 * 有効にします<block ref="3d88e61f0ef99b49adc5b48c9547ff37" category="inline-link-rx"></block> クロムウェルエンジンでのワークフローの実行。</block>
   <block id="18389a4a9ad5795744699cff0ba66c15" category="inline-link">参照（ Ref ）</block>
   <block id="78fd1f9f6e4339d078a801e271c443e8" category="list-text">* 実行モード。 * 実行モードはクロムウェルで単一のワークフローを実行する場合に最適です。<block ref="bec7f6b49d367b38ddeb9c15495dd799" category="inline-link-rx"></block> 実行モードで使用可能なすべてのオプションを表示します。</block>
   <block id="303789c78fc99914ca9d353a7cfd1892" category="inline-link">Workflow 概要の言語</block>
@@ -8565,4 +8564,5 @@
   <block id="a04fde0f303f9cefcbd34e8be1810d1e" category="paragraph">大学病院をはじめとする医療・生命科学関連機関は、ゲノム科学における卓越研究拠点（COE）の設立に向けて着実に歩みを進めています。デューク大学のCharlie Gersbach博士、Greg Crawford博士、Tim E Reddy博士によると、「遺伝子は単純な二値スイッチでオン・オフされるのではなく、複数の遺伝子制御スイッチが連携して機能することで制御されることがわかっています。」また、「ゲノムのこれらの部分はどれも単独では機能しない」ことも明らかにしています。ゲノムは進化が織り上げた非常に複雑な網である」（<block ref="7e5e4c153f3bad20a8e4230a913e554e" category="inline-link-rx"></block>）。</block>
   <block id="a9100704d09dc0243e72fa3e969a3376" category="doc">展開手順の概要</block>
   <block id="c94f9bfe6b4fcd272eb296a929c3be2f" category="summary">Ciscoは、UCSサーバーやNexusスイッチを含む、FlexPod Expressの設計とアーキテクチャのコンピューティング層およびネットワーク層を提供します。</block>
+  <block id="ee30ff13e36cbab9bf29c33fd526cd18" category="list-text">*サーバーモード。*Cromwellエンジンでのワークフローの実行を有効にします<block ref="623098b3a5eec7dedbf57209eff0066d" category="inline-link-rx"></block>。</block>
 </blocks>

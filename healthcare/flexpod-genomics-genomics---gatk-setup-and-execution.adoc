@@ -158,7 +158,7 @@ Red Hat Enterprise 8.3 Linux VM に次の前提条件をインストールしま
 
 Cromwell は、ワークフロー管理を可能にする科学的なワークフローを対象としたオープンソースエンジンです。クロムウェルエンジンは 2 つの方法で作動できます https://cromwell.readthedocs.io/en/stable/Modes/["モード"^]、サーバーモード、または単一ワークフローの実行モード。クロムウェルエンジンの動作は、を使用して制御できます https://github.com/broadinstitute/cromwell/blob/develop/cromwell.example.backends/cromwell.examples.conf["クロムウェルエンジンコンフィギュレーションファイル"^]。
 
-* * サーバーモード。 * 有効にします https://cromwell.readthedocs.io/en/stable/api/RESTAPI/["RESTful なホテル"^] クロムウェルエンジンでのワークフローの実行。
+* *サーバーモード。*Cromwellエンジンでのワークフローの実行を有効にします https://cromwell.readthedocs.io/en/stable/Modes/["RESTful なホテル"^]。
 * * 実行モード。 * 実行モードはクロムウェルで単一のワークフローを実行する場合に最適です。 https://cromwell.readthedocs.io/en/stable/CommandLine/["参照（ Ref ）"^] 実行モードで使用可能なすべてのオプションを表示します。
 
 
